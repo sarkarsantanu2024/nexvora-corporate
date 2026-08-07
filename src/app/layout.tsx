@@ -4,7 +4,10 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-const SITE = "https://nexvoratechnologies.co.in";
+// www is the canonical host: the apex 308-redirects to it in Vercel. Keep this
+// in sync with the redirect direction, or the canonical tag points at a URL
+// that redirects.
+const SITE = "https://www.nexvoratechnologies.co.in";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
