@@ -176,27 +176,26 @@ export default function Home() {
           </p>
           <div className="mt-9 grid gap-4 sm:grid-cols-3">
             <a
-              href="mailto:info@nexvoratechnologies.co.in"
+              href="mailto:sarkarsantanu69@gmail.com"
               className="flex items-start gap-3 rounded-2xl border border-slate-200 p-5 transition hover:border-brand-300"
             >
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
               <span>
                 <span className="block text-sm font-semibold">Email</span>
                 <span className="mt-0.5 block break-all text-sm text-slate-600">
-                  info@nexvoratechnologies.co.in
+                  sarkarsantanu69@gmail.com
                 </span>
               </span>
             </a>
-            {/* TODO: replace with the real number, or delete this card. */}
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+919804243159"
               className="flex items-start gap-3 rounded-2xl border border-slate-200 p-5 transition hover:border-brand-300"
             >
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
               <span>
                 <span className="block text-sm font-semibold">Phone</span>
                 <span className="mt-0.5 block text-sm text-slate-600">
-                  +91 XXXXX XXXXX
+                  +91 98042 43159
                 </span>
               </span>
             </a>
