@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
+import { SERVICES } from "@/lib/services";
 
 const YEAR = 2026;
 
@@ -7,18 +9,23 @@ export default function Home() {
   return (
     <>
       <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/85 backdrop-blur">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="/" className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-brand-500 text-base font-bold text-white">
-              N
-            </span>
-            <span className="text-lg font-semibold tracking-tight">
-              Nexvora Technologies
-            </span>
+        <nav className="shell flex items-center justify-between py-4">
+          <a href="/" aria-label="Nexvora Technologies — home">
+            <Image
+              src="/logo-wordmark.png"
+              alt="Nexvora Technologies"
+              width={720}
+              height={145}
+              priority
+              className="h-8 w-auto sm:h-9"
+            />
           </a>
-          <div className="hidden gap-7 text-sm font-medium text-slate-600 sm:flex">
+          <div className="hidden gap-8 text-sm font-medium text-slate-600 sm:flex lg:gap-10">
             <a href="#products" className="hover:text-brand-600">
               Products
+            </a>
+            <a href="#services" className="hover:text-brand-600">
+              Services
             </a>
             <a href="#about" className="hover:text-brand-600">
               About
@@ -33,16 +40,16 @@ export default function Home() {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-brand-50 to-white">
-          <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
+          <div className="shell py-20 sm:py-28 2xl:py-36">
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-brand-600">
               Nexvora Technologies
             </p>
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
+            <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl 2xl:max-w-5xl 2xl:text-7xl">
               Software that does the{" "}
               <span className="text-brand-600">unglamorous work</span> for
               growing businesses.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 2xl:max-w-3xl 2xl:text-xl">
               We build focused products for Indian businesses — social media
               automation, school management, health records and more. Each one
               solves a job somebody was doing by hand.
@@ -65,7 +72,7 @@ export default function Home() {
         </section>
 
         {/* Products */}
-        <section id="products" className="mx-auto max-w-6xl px-5 py-20">
+        <section id="products" className="shell scroll-mt-20 py-20 2xl:py-28">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Our products
           </h2>
@@ -74,7 +81,7 @@ export default function Home() {
             data. Nothing is shared between them.
           </p>
 
-          <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {PRODUCTS.map((p) => {
               const card = (
                 <>
@@ -122,18 +129,65 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Services */}
+        <section
+          id="services"
+          className="scroll-mt-20 border-y border-slate-200 bg-slate-50"
+        >
+          <div className="shell py-20 2xl:py-28">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                What we take on for clients
+              </h2>
+              <p className="mt-3 text-slate-600">
+                Alongside our own products we do a limited amount of build work
+                for other companies. This is the sort we say yes to — and the
+                same team that ships our products does it.
+              </p>
+            </div>
+
+            <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((s, i) => (
+                <div
+                  key={s.title}
+                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-1 hover:border-brand-300 hover:shadow-md 2xl:p-8"
+                >
+                  <span className="pointer-events-none absolute right-5 top-4 text-4xl font-bold tabular-nums text-slate-100 transition group-hover:text-brand-50">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-50 text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white">
+                    <span
+                      aria-hidden="true"
+                      className="material-symbols-rounded text-[26px]"
+                    >
+                      {s.icon}
+                    </span>
+                  </span>
+                  <h3 className="mt-5 text-lg font-semibold tracking-tight">
+                    {s.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {s.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* About */}
-        <section id="about" className="border-y border-slate-200 bg-slate-50">
-          <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 lg:grid-cols-2">
+        <section id="about" className="scroll-mt-20 border-b border-slate-200">
+          <div className="shell grid gap-12 py-20 lg:grid-cols-2 lg:gap-16 2xl:py-28">
             <div>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                 About Nexvora
               </h2>
               <p className="mt-5 leading-relaxed text-slate-600">
                 Nexvora Technologies is a product company based in West Bengal,
-                India. We build and operate our own software rather than taking
-                on client projects — which means every product gets maintained,
-                supported and improved long after launch.
+                India. Our own software comes first — every product we launch
+                keeps getting maintained, supported and improved long after
+                launch — and we take on a limited amount of client work
+                alongside it.
               </p>
               <p className="mt-4 leading-relaxed text-slate-600">
                 Our customers are schools, coaching centres, clinics, print
@@ -166,7 +220,7 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mx-auto max-w-6xl px-5 py-20">
+        <section id="contact" className="shell scroll-mt-20 py-20 2xl:py-28">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Get in touch
           </h2>
@@ -213,10 +267,17 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {YEAR} Nexvora Technologies. All rights reserved.
-          </p>
+        <div className="shell flex flex-col gap-4 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo-mark.png"
+              alt=""
+              width={512}
+              height={512}
+              className="h-8 w-8"
+            />
+            <p>© {YEAR} Nexvora Technologies. All rights reserved.</p>
+          </div>
           <p>Udyam UDYAM-WB-10-021416</p>
         </div>
       </footer>

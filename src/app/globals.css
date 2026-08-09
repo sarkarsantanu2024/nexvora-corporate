@@ -9,3 +9,30 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
 }
+
+@layer components {
+  /* Every section is measured by this one class. 1600px keeps four cards on a
+     1920 monitor without the text lines getting too long to read. */
+  .shell {
+    @apply mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12 2xl:px-16;
+  }
+}
+
+/* Material Symbols ships one variable font for every icon; these axes pick the
+   weight/fill we use. Without the font-variation-settings the glyphs render at
+   the wrong optical size. */
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -37,6 +37,8 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE },
 };
 
+export const viewport: Viewport = { themeColor: "#2f4ac0" };
+
 export default function RootLayout({
   children,
 }: {
@@ -44,6 +46,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        {/* Material Symbols is an icon font, not a text font, so next/font
+            cannot subset it — link the variable font directly and let the
+            browser cache it. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </head>
       <body className="bg-white font-sans text-ink antialiased">{children}</body>
     </html>
   );
