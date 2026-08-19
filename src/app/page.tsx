@@ -1,9 +1,22 @@
 import Image from "next/image";
-import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
 
 const YEAR = 2026;
+
+// The shorthand people search for and scan for. Kept in the hero so nobody
+// has to read three paragraphs to find out whether we do the thing they want.
+const CAPABILITIES = [
+  "Website",
+  "Web app",
+  "SaaS",
+  "PWA",
+  "Database",
+  "AI",
+  "Web design",
+  "Graphic design",
+];
 
 export default function Home() {
   return (
@@ -54,20 +67,63 @@ export default function Home() {
               automation, school management, health records and more. Each one
               solves a job somebody was doing by hand.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            {/* The two calls to action the whole page is built around: our
+                flagship product, and everything else we build to order. */}
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href="#products"
-                className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-700"
+                href="https://eduflow.nexvoratechnologies.co.in"
+                className="group inline-flex items-center gap-3 rounded-xl bg-brand-600 px-6 py-4 text-white shadow-sm transition hover:bg-brand-700 hover:shadow-md"
               >
-                Explore our products
+                <span
+                  aria-hidden="true"
+                  className="material-symbols-rounded text-[26px]"
+                >
+                  school
+                </span>
+                <span className="text-left">
+                  <span className="block text-base font-semibold leading-tight">
+                    EduFlow
+                  </span>
+                  <span className="block text-sm text-brand-100">
+                    Student management software
+                  </span>
+                </span>
+                <ArrowUpRight className="h-5 w-5 shrink-0 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
               <a
                 href="#contact"
-                className="rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400"
+                className="group inline-flex items-center gap-3 rounded-xl border border-slate-300 bg-white px-6 py-4 text-slate-800 transition hover:border-brand-300 hover:shadow-md"
               >
-                Talk to us
+                <span
+                  aria-hidden="true"
+                  className="material-symbols-rounded text-[26px] text-brand-600"
+                >
+                  handyman
+                </span>
+                <span className="text-left">
+                  <span className="block text-base font-semibold leading-tight">
+                    Need custom software?
+                  </span>
+                  <span className="block text-sm text-slate-500">
+                    Tell us what you are stuck with
+                  </span>
+                </span>
+                <ArrowRight className="h-5 w-5 shrink-0 text-slate-400 transition group-hover:translate-x-0.5 group-hover:text-brand-600" />
               </a>
             </div>
+
+            {/* What we actually build, said plainly — people scan this line
+                before they read anything else on the page. */}
+            <ul className="mt-10 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm font-medium text-slate-700">
+              {CAPABILITIES.map((c) => (
+                <li
+                  key={c}
+                  className="rounded-full border border-slate-200 bg-white/70 px-4 py-1.5 backdrop-blur transition hover:border-brand-300 hover:text-brand-700"
+                >
+                  {c}
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -267,6 +323,20 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-slate-200 bg-slate-50">
+        <div className="shell border-b border-slate-200 py-7">
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-slate-600">
+            {CAPABILITIES.map((c, i) => (
+              <span key={c} className="flex items-center gap-3">
+                {i > 0 && (
+                  <span aria-hidden="true" className="text-slate-300">
+                    |
+                  </span>
+                )}
+                {c}
+              </span>
+            ))}
+          </p>
+        </div>
         <div className="shell flex flex-col gap-4 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <Image
