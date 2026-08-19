@@ -16,13 +16,21 @@ export const metadata: Metadata = {
     template: "%s · Nexvora Technologies",
   },
   description:
-    "Nexvora Technologies builds practical software products for Indian businesses — social media automation, school management, health records, exam platforms and more.",
+    "Nexvora Technologies builds websites, web apps, SaaS platforms, PWAs, databases, AI features, web design and graphic design — plus our own products including EduFlow student management software.",
   keywords: [
     "Nexvora Technologies",
     "SocialPilot AI",
     "EduFlow",
+    "student management software",
     "software company India",
     "SaaS Kolkata",
+    "website development",
+    "web app development",
+    "PWA development",
+    "database design",
+    "AI development",
+    "web design",
+    "graphic design",
   ],
   openGraph: {
     title: "Nexvora Technologies",
