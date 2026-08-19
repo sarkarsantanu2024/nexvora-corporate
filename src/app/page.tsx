@@ -16,6 +16,8 @@ const CAPABILITIES = [
   "AI",
   "Web design",
   "Graphic design",
+  "Domain and hosting",
+  "Digital marketing",
 ];
 
 export default function Home() {
@@ -275,6 +277,134 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Who you are actually dealing with. A company page with no face on
+            it reads as a shell, so this one names the person and shows how to
+            check him out elsewhere. */}
+        <section
+          id="founder"
+          className="scroll-mt-20 border-b border-slate-200 bg-slate-50"
+        >
+          <div className="shell grid items-start gap-12 py-20 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-16 2xl:py-28">
+            <div className="max-w-[320px]">
+              <Image
+                src="/santanu-sarkar.jpg"
+                alt="Santanu Sarkar, founder of Nexvora Technologies"
+                width={640}
+                height={640}
+                className="w-full rounded-2xl border border-slate-200 object-cover shadow-sm"
+              />
+              <p className="mt-5 text-lg font-semibold tracking-tight">
+                Santanu Sarkar
+              </p>
+              <p className="text-sm text-slate-600">
+                Founder · Frontend architect
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2 text-sm">
+                {[
+                  {
+                    label: "Portfolio",
+                    href: "https://santanu-portfolio-frontend.vercel.app/",
+                  },
+                  {
+                    label: "LinkedIn",
+                    href: "https://www.linkedin.com/in/santanusarkar86/",
+                  },
+                  {
+                    label: "GitHub",
+                    href: "https://github.com/sarkarsantanu2024",
+                  },
+                ].map((l) => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-slate-300 bg-white px-3.5 py-1.5 font-medium text-slate-700 transition hover:border-brand-300 hover:text-brand-700"
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                The person you will be dealing with
+              </h2>
+              <p className="mt-5 leading-relaxed text-slate-600">
+                I am Santanu Sarkar, and Nexvora is mine. Thirteen years of
+                building for the web, most of them at Webspiders working on
+                React, Vue and Next.js front-ends over headless Drupal. That is
+                the background everything here gets built on.
+              </p>
+              <p className="mt-4 leading-relaxed text-slate-600">
+                There is no account manager in the middle. Whoever writes your
+                quotation is the person writing the code, and the same person
+                answers the phone when something breaks at an inconvenient hour.
+                It is a small outfit, and that is rather the point.
+              </p>
+              <p className="mt-4 leading-relaxed text-slate-600">
+                Come and check before you commit — the portfolio, the GitHub
+                account, the products already running on this page. Call the
+                number below and you will get me, not a queue.
+              </p>
+
+              <dl className="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2">
+                {[
+                  {
+                    icon: "call",
+                    term: "Phone and WhatsApp",
+                    value: "+91 98042 43159",
+                    href: "https://wa.me/919804243159",
+                  },
+                  {
+                    icon: "mail",
+                    term: "Email",
+                    value: "sarkarsantanu69@gmail.com",
+                    href: "mailto:sarkarsantanu69@gmail.com",
+                  },
+                  {
+                    icon: "location_on",
+                    term: "Based in",
+                    value: "Kolkata, West Bengal, India",
+                    href: null,
+                  },
+                  {
+                    icon: "verified_user",
+                    term: "Registered MSME",
+                    value: "Udyam UDYAM-WB-10-021416",
+                    href: null,
+                  },
+                ].map((row) => (
+                  <div key={row.term} className="flex items-start gap-3">
+                    <span
+                      aria-hidden="true"
+                      className="material-symbols-rounded mt-0.5 text-[22px] text-brand-600"
+                    >
+                      {row.icon}
+                    </span>
+                    <div>
+                      <dt className="text-sm font-semibold">{row.term}</dt>
+                      <dd className="mt-0.5 break-all text-sm text-slate-600">
+                        {row.href ? (
+                          <a
+                            href={row.href}
+                            className="hover:text-brand-600 hover:underline"
+                          >
+                            {row.value}
+                          </a>
+                        ) : (
+                          row.value
+                        )}
+                      </dd>
+                    </div>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </section>
+
         {/* Contact */}
         <section id="contact" className="shell scroll-mt-20 py-20 2xl:py-28">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -314,7 +444,7 @@ export default function Home() {
               <span>
                 <span className="block text-sm font-semibold">Location</span>
                 <span className="mt-0.5 block text-sm text-slate-600">
-                  West Bengal, India
+                  Kolkata, West Bengal, India
                 </span>
               </span>
             </div>
