@@ -36,10 +36,13 @@ export const CAPABILITIES: { icon: string; label: string }[] = [
   { icon: "campaign", label: "Digital marketing" },
   { icon: "description", label: "Excel, PPT, bio-data" },
   { icon: "local_shipping", label: "Print and delivery" },
+  { icon: "movie", label: "Video and reels" },
+  { icon: "translate", label: "Content writing" },
 ];
 
 export const NAV_LINKS = [
   { href: "#mission", label: "Why us" },
+  { href: "#promise", label: "Our promise" },
   { href: "#products", label: "Products" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },

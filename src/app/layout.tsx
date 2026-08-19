@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     url: SITE,
     siteName: "Nexvora Technologies",
     title:
-      "Nexvora Technologies — Getting your business online should not cost a fortune",
+      "Nexvora Technologies — Website, store and marketing at a small-business price",
     description: DESCRIPTION,
     locale: "en_IN",
   },
@@ -138,6 +138,12 @@ const JSON_LD = {
           "SEO and performance optimisation",
           "Digital marketing and lead generation",
           "Graphic design and brand identity",
+          "Social media posts and creatives",
+          "Product and marketing images",
+          "Short promotional videos",
+          "Content writing and translation",
+          "Printing and delivery",
+          "Excel, PowerPoint, bio-data and document work",
         ].map((name) => ({
           "@type": "Offer",
           itemOffered: { "@type": "Service", name },

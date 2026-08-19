@@ -24,8 +24,8 @@ Registered MSME · Udyam UDYAM-WB-10-021416
 
 | Length | Text |
 |---|---|
-| Primary | Getting your business online should not cost a fortune. |
-| Short | Websites, stores and marketing priced for small business. |
+| Primary | Bring your business online. Fast, and for less money. |
+| Short | Website, shop, design and ads — one price, half to start. |
 | Very short | Online, affordably. |
 | For a sign board | Website · Online store · Design · Printing · Marketing |
 | WhatsApp Business "about" (139 char limit) | Affordable websites, online stores, design, printing and marketing for small businesses. Kolkata. Send your requirement here. |
@@ -96,7 +96,7 @@ We get small Indian businesses online, at a price they can actually afford.
 
 ## 4. Services
 
-The website carries all seventeen, in this order. Google Business Profile allows a name plus roughly 300
+The website carries all twenty-one, in this order. Google Business Profile allows a name plus roughly 300
 characters each, so each one below has a long version and a short version.
 
 ### 1. Custom website development
@@ -193,24 +193,90 @@ records. We take one task first, count the hours it saves, and widen the scope o
 **Short (GBP).** AI for one task at a time — writing posts, reading documents, answering from your
 own records — measured by the hours it actually saves.
 
-### 15. Cloud setup and deployment
+### 15. Social media posts and creatives
+**Long.** A month of posts prepared in one go — festival greetings, offer creatives, new-arrival
+cards — in your colours and your language, sized for Facebook, Instagram and WhatsApp status.
+Usually back in two or three days.
+**Short (GBP).** A month of posts in one go — festivals, offers, new arrivals — in your colours and
+language, sized for Facebook, Instagram and WhatsApp.
+
+### 16. Product and marketing images
+**Long.** Clean product pictures for your catalogue, banners, hoardings and menu boards, without
+booking a studio or waiting on a photographer. Send what you have and we work from that.
+**Short (GBP).** Catalogue pictures, banners, hoardings and menu boards without booking a studio.
+Send what you have and we work from it.
+
+### 17. Short promotional videos
+**Long.** Thirty to sixty seconds for Reels, YouTube Shorts or WhatsApp status, with a voiceover in
+Bengali, Hindi or English. Good enough to run as an advertisement, cheap enough to make one a
+month.
+**Short (GBP).** Thirty to sixty second videos for Reels, Shorts and WhatsApp status, with a
+voiceover in Bengali, Hindi or English.
+
+### 18. Content writing and translation
+**Long.** Website copy, product descriptions, brochure text and Google Business posts, written in
+plain language and translated between Bengali, Hindi and English. Rewrites until you are happy.
+**Short (GBP).** Website copy, product descriptions and brochure text in plain language, translated
+between Bengali, Hindi and English.
+
+### 19. Cloud setup and deployment
 **Long.** Deploys in about two minutes, rollbacks in one. Backups that have been restored at least
 once on purpose, alerts that reach a person, and a hosting bill you can read line by line.
 **Short (GBP).** Deployment, monitoring and backups that have actually been restored at least once,
 with a hosting bill you can read line by line.
 
-### 16. Interface design
+### 20. Interface design
 **Long.** Screens are drawn in Figma and shown to whoever will open them forty times a day — the
 front desk, the teacher, the store clerk — before any code gets written. Fewer clicks beats a
 prettier gradient.
 **Short (GBP).** Screens designed in Figma and tested with the people who will use them daily,
 before any code is written. Fewer clicks beats a prettier gradient.
 
-### 17. Support and maintenance
+### 21. Support and maintenance
 **Long.** Someone picks up. Security patches, framework upgrades and the small stuff — a new column
 in a report, one more field on a form — without a fresh quotation each time.
 **Short (GBP).** Someone picks up. Patches, upgrades and small changes without a fresh quotation
 every time.
+
+---
+
+## 4b. The promise, in six languages
+
+This is the statement on the home page. Use it in WhatsApp replies, on the Google profile, and
+under any advertisement. Send the version that matches the customer.
+
+**English.** Tell me on WhatsApp what you need. Pay half to start. Then relax — I will tell you when
+I begin, when it is ready to see, and when it goes online. I will never tell you a lie. If it will
+take longer, you will hear it from me the same day.
+
+**বাংলা.** হোয়াটসঅ্যাপে আমাকে বলুন আপনার কী দরকার। শুরু করতে অর্ধেক টাকা দিন। তারপর নিশ্চিন্তে থাকুন — কাজ শুরু
+করলে, তৈরি হলে আর অনলাইনে এলে আমি নিজে জানাব। আমি কখনও মিথ্যা বলব না। দেরি হলে সেই দিনই আপনাকে বলে দেব।
+
+**हिन्दी.** व्हाट्सएप पर मुझे बताइए कि आपको क्या चाहिए। शुरू करने के लिए आधा पैसा दीजिए। फिर निश्चिंत रहिए — काम शुरू
+होने पर, तैयार होने पर और ऑनलाइन आने पर मैं खुद बताऊँगा। मैं कभी झूठ नहीं बोलूँगा। देर होगी तो उसी दिन बता दूँगा।
+
+**தமிழ்.** உங்களுக்கு என்ன வேண்டும் என்று வாட்ஸ்அப்பில் சொல்லுங்கள். தொடங்குவதற்கு பாதி பணம் கொடுங்கள். பிறகு
+நிம்மதியாக இருங்கள் — வேலையைத் தொடங்கும்போது, தயாராகும்போது, இணையத்தில் வரும்போது நானே சொல்வேன். நான் ஒருபோதும்
+பொய் சொல்ல மாட்டேன். தாமதம் ஆனால் அன்றைக்கே உங்களிடம் சொல்லிவிடுவேன்.
+
+**తెలుగు.** మీకు ఏమి కావాలో వాట్సాప్‌లో చెప్పండి. మొదలుపెట్టడానికి సగం డబ్బు ఇవ్వండి. తరువాత నిశ్చింతగా ఉండండి — పని
+మొదలైనప్పుడు, సిద్ధమైనప్పుడు, ఆన్‌లైన్‌లోకి వచ్చినప్పుడు నేనే చెబుతాను. నేను ఎప్పుడూ అబద్ధం చెప్పను. ఆలస్యం అయితే ఆ రోజే
+మీకు చెప్పేస్తాను.
+
+**ਪੰਜਾਬੀ.** ਵਟਸਐਪ ਉੱਤੇ ਮੈਨੂੰ ਦੱਸੋ ਕਿ ਤੁਹਾਨੂੰ ਕੀ ਚਾਹੀਦਾ ਹੈ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅੱਧੇ ਪੈਸੇ ਦਿਓ। ਫਿਰ ਬੇਫ਼ਿਕਰ ਰਹੋ — ਕੰਮ ਸ਼ੁਰੂ ਹੋਣ
+ਵੇਲੇ, ਤਿਆਰ ਹੋਣ ਵੇਲੇ ਅਤੇ ਆਨਲਾਈਨ ਆਉਣ ਵੇਲੇ ਮੈਂ ਆਪ ਦੱਸਾਂਗਾ। ਮੈਂ ਕਦੇ ਝੂਠ ਨਹੀਂ ਬੋਲਾਂਗਾ। ਦੇਰ ਹੋਈ ਤਾਂ ਉਸੇ ਦਿਨ ਦੱਸ ਦਿਆਂਗਾ।
+
+Get a native speaker to read each one before an advertisement leans on it. A translation that is
+merely correct still sounds foreign; these are meant to sound like a person talking.
+
+### On describing how the work gets made
+
+Nothing here says which tools we use, and nothing here needs to. No agency lists its software.
+But do not claim the opposite either — never write "hand-crafted by our designers" or "no AI
+used" about work that was not made that way. If a customer asks outright, tell them plainly: we
+use whatever lets us charge less, and we stand behind the result. That answer sells better than a
+denial, and unlike a denial it cannot come apart later. The promise above is on the home page in
+six languages; contradicting it in a sales message would cost more than any single job is worth.
 
 ---
 

@@ -111,6 +111,16 @@ body {
     @apply bg-gradient-to-br from-brand-500 to-violet-600 text-white ring-white/25;
   }
 
+  /* Indian scripts render from the system: Android and iOS ship the Noto
+     family, Windows ships Nirmala UI. Downloading five more webfonts onto a
+     cheap handset to say the same sentence is not a trade worth making. */
+  .indic {
+    font-family:
+      var(--font-sans), "Noto Sans", "Noto Sans Bengali", "Noto Sans Devanagari",
+      "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Gurmukhi", "Nirmala UI",
+      system-ui, sans-serif;
+  }
+
   /* Faint engineering grid, used behind pale sections so they are not blank
      white rectangles. */
   .bg-grid {
