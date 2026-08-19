@@ -10,17 +10,127 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Scroll-in animation used by <Reveal>. Kept in CSS rather than a library so
+   there is no runtime cost beyond one IntersectionObserver per block. */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, -3%, 0) scale(1.06);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+/* Anyone who has asked their system for less motion gets none of it. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-float-slow,
+  .animate-drift {
+    animation: none;
+  }
+}
+
 @layer components {
   /* Every section is measured by this one class. 1600px keeps four cards on a
      1920 monitor without the text lines getting too long to read. */
   .shell {
     @apply mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12 2xl:px-16;
   }
+
+  /* Nav link with an underline that grows from the left on hover. */
+  .nav-link {
+    @apply relative text-[0.95rem] font-medium text-slate-600 transition hover:text-brand-700;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1.5 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-gradient-to-r from-brand-600 to-violet-500 transition-transform duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
+  /* The house icon tile: a gradient slab with a soft ring, deliberately
+     larger than the usual 40px chip so the icons carry a section on their
+     own. Hover tilts it and fills the glyph. */
+  .icon-tile {
+    @apply grid shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300;
+  }
+
+  .group:hover .icon-tile {
+    @apply -translate-y-0.5 rotate-[-6deg] scale-105;
+  }
+
+  .icon-tile-soft {
+    @apply grid shrink-0 place-items-center rounded-2xl bg-brand-50 text-brand-600 ring-1 ring-inset ring-brand-100 transition duration-300;
+  }
+
+  .group:hover .icon-tile-soft {
+    @apply -translate-y-0.5 bg-gradient-to-br from-brand-500 to-violet-600 text-white ring-white/25;
+  }
+
+  /* Faint engineering grid, used behind pale sections so they are not blank
+     white rectangles. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(10, 17, 40, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 17, 40, 0.045) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
 }
 
 /* Material Symbols ships one variable font for every icon; these axes pick the
    weight/fill we use. Without the font-variation-settings the glyphs render at
-   the wrong optical size. */
+   the wrong optical size. The transition animates the FILL axis on hover. */
 .material-symbols-rounded {
   font-family: "Material Symbols Rounded";
   font-weight: normal;
@@ -34,5 +144,18 @@ body {
   direction: ltr;
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 48;
+  transition: font-variation-settings 0.35s ease;
+}
+
+.group:hover .material-symbols-rounded {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
 }
