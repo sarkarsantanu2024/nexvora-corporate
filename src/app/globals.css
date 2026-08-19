@@ -92,15 +92,15 @@ body {
     @apply scale-x-100;
   }
 
-  /* The house icon tile: a gradient slab with a soft ring, deliberately
-     larger than the usual 40px chip so the icons carry a section on their
-     own. Hover tilts it and fills the glyph. */
+  /* The house icon tile: a gradient slab with a soft ring. Hover only
+     brightens it and fills the glyph — nothing on this page moves under the
+     cursor, which reads as jumpy on a long page of cards. */
   .icon-tile {
     @apply grid shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300;
   }
 
   .group:hover .icon-tile {
-    @apply -translate-y-0.5 rotate-[-6deg] scale-105;
+    @apply shadow-lift brightness-110;
   }
 
   .icon-tile-soft {
@@ -108,7 +108,7 @@ body {
   }
 
   .group:hover .icon-tile-soft {
-    @apply -translate-y-0.5 bg-gradient-to-br from-brand-500 to-violet-600 text-white ring-white/25;
+    @apply bg-gradient-to-br from-brand-500 to-violet-600 text-white ring-white/25;
   }
 
   /* Faint engineering grid, used behind pale sections so they are not blank
