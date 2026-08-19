@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 // editing the wording here is the only step needed to change it.
 export const runtime = "edge";
 export const alt =
-  "Nexvora Technologies — getting your business online should not cost a fortune";
+  "Nexvora Technologies — website, store and marketing at a price a small business can pay";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -51,14 +51,14 @@ export default async function Image() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: 74,
+              fontSize: 62,
               lineHeight: 1.08,
               fontWeight: 700,
               letterSpacing: -2,
               maxWidth: 940,
             }}
           >
-            Getting your business online should not cost a fortune.
+            Website, store and marketing — ready in days, at a price a small business can pay.
           </div>
           <div
             style={{
@@ -68,7 +68,7 @@ export default async function Image() {
               maxWidth: 900,
             }}
           >
-            Websites · Online stores · Portfolios · Hosting · Digital marketing
+            Websites · Stores · Design · Printing · Hosting · Marketing · Fixed price
           </div>
         </div>
 

@@ -79,6 +79,26 @@ export const SERVICES: Service[] = [
     body: "Shared space or a VPS, sized to what you actually use rather than the package the reseller wants to sell. Company mailboxes on your own domain, storage, and backups kept off the same machine.",
   },
   {
+    icon: "auto_awesome_motion",
+    title: "Social media posts and creatives",
+    body: "A month of posts prepared in one go — festival greetings, offer creatives, new-arrival cards — in your colours and your language, sized for Facebook, Instagram and WhatsApp status. Usually back in two or three days.",
+  },
+  {
+    icon: "photo_camera",
+    title: "Product and marketing images",
+    body: "Clean product pictures for your catalogue, banners, hoardings and menu boards, without booking a studio or waiting on a photographer. Send what you have and we work from that.",
+  },
+  {
+    icon: "movie",
+    title: "Short promotional videos",
+    body: "Thirty to sixty seconds for Reels, YouTube Shorts or WhatsApp status, with a voiceover in Bengali, Hindi or English. Good enough to run as an advertisement, cheap enough to make one a month.",
+  },
+  {
+    icon: "translate",
+    title: "Content writing and translation",
+    body: "Website copy, product descriptions, brochure text and Google Business posts, written in plain language and translated between Bengali, Hindi and English. Rewrites until you are happy with it.",
+  },
+  {
     icon: "description",
     title: "Documents, sheets and presentations",
     body: "Excel sheets that calculate correctly and do not break when somebody sorts a column, PowerPoint decks for a pitch or a class, bio-data and CVs, letterheads, quotation and bill formats. Small jobs, usually back within the week.",
