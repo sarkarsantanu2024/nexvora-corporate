@@ -14,6 +14,16 @@ export const SERVICES: Service[] = [
     body: "Hand-written sites, not a bought theme you end up fighting six months later. You get the repository, the hosting setup, and pages that still open quickly on a three-year-old Android phone.",
   },
   {
+    icon: "badge",
+    title: "Portfolio and personal sites",
+    body: "For freelancers, photographers, tutors and consultants who currently turn up nowhere when a client searches their name. Your work, your rates if you want them shown, and a contact form that reaches your phone.",
+  },
+  {
+    icon: "thumb_up",
+    title: "Facebook page and YouTube channel",
+    body: "Set up properly the first time: correct category, cover art, contact button, channel banner and the first few posts written with you. Handed over in your own account, never ours.",
+  },
+  {
     icon: "code",
     title: "Custom software development",
     body: "Most of what we build started life as a spreadsheet somebody outgrew. We sit with the people doing the work, write down what actually happens, then shape the software around that instead of around a template.",

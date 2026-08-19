@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { CONTACT } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -9,43 +11,140 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 // that redirects.
 const SITE = "https://www.nexvoratechnologies.co.in";
 
+// Set NEXT_PUBLIC_GA_ID in Vercel to switch analytics on. Absent — in local
+// development, in previews, or before the property exists — nothing is
+// injected and no requests are made.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
+const DESCRIPTION =
+  "Affordable website, online store, portfolio, web app, hosting and digital marketing services for Indian small businesses. Kolkata-based Nexvora Technologies also builds EduFlow school management software.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "Nexvora Technologies — Software for growing businesses",
+    default:
+      "Nexvora Technologies — Affordable Website, Web App & Digital Marketing in Kolkata",
     template: "%s · Nexvora Technologies",
   },
-  description:
-    "Nexvora Technologies builds websites, web apps, SaaS platforms, PWAs, databases, AI features, web design and graphic design — plus our own products including EduFlow student management software.",
+  description: DESCRIPTION,
+  applicationName: "Nexvora Technologies",
+  authors: [{ name: "Santanu Sarkar" }],
+  creator: "Nexvora Technologies",
+  publisher: "Nexvora Technologies",
+  category: "technology",
   keywords: [
     "Nexvora Technologies",
-    "SocialPilot AI",
-    "EduFlow",
-    "student management software",
-    "software company India",
-    "SaaS Kolkata",
-    "website development",
-    "web app development",
+    "website design company Kolkata",
+    "affordable website development India",
+    "small business website Kolkata",
+    "e-commerce website development",
+    "portfolio website design",
+    "web application development",
     "PWA development",
-    "database design",
-    "AI development",
-    "web design",
-    "graphic design",
+    "domain and hosting India",
+    "digital marketing Kolkata",
+    "Facebook page setup",
+    "YouTube channel setup",
+    "SEO services Kolkata",
+    "graphic design Kolkata",
+    "EduFlow school management software",
+    "SocialPilot AI",
   ],
   openGraph: {
-    title: "Nexvora Technologies",
-    description:
-      "Practical software products for Indian businesses — social media automation, school management, health records and more.",
+    type: "website",
     url: SITE,
     siteName: "Nexvora Technologies",
+    title:
+      "Nexvora Technologies — Getting your business online should not cost a fortune",
+    description: DESCRIPTION,
     locale: "en_IN",
-    type: "website",
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nexvora Technologies — Affordable web, store and marketing services",
+    description: DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { canonical: SITE },
+  formatDetection: { telephone: true, address: true, email: true },
 };
 
-export const viewport: Viewport = { themeColor: "#2f4ac0" };
+export const viewport: Viewport = { themeColor: "#0a1128" };
+
+// Structured data. LocalBusiness (rather than plain Organization) is what puts
+// the address, phone and opening details into a Google knowledge panel.
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "LocalBusiness"],
+      "@id": `${SITE}#business`,
+      name: "Nexvora Technologies",
+      url: SITE,
+      image: `${SITE}/logo-mark.png`,
+      logo: `${SITE}/logo-mark.png`,
+      description: DESCRIPTION,
+      telephone: "+91-98042-43159",
+      email: CONTACT.email,
+      priceRange: "₹₹",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: CONTACT.street,
+        addressLocality: CONTACT.city,
+        addressRegion: CONTACT.state,
+        postalCode: CONTACT.pincode,
+        addressCountry: "IN",
+      },
+      areaServed: { "@type": "Country", name: "India" },
+      founder: {
+        "@type": "Person",
+        name: "Santanu Sarkar",
+        jobTitle: "Founder",
+      },
+      sameAs: [
+        "https://www.facebook.com/sarkarsantanu69",
+        "https://www.linkedin.com/in/santanusarkar86/",
+      ],
+      identifier: `Udyam ${CONTACT.udyam}`,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Services",
+        itemListElement: [
+          "Custom website development",
+          "Portfolio and personal websites",
+          "E-commerce and online stores",
+          "Web and mobile application development",
+          "Domain, hosting and business email",
+          "Facebook page and YouTube channel setup",
+          "SEO and performance optimisation",
+          "Digital marketing and lead generation",
+          "Graphic design and brand identity",
+        ].map((name) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name },
+        })),
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE}#website`,
+      url: SITE,
+      name: "Nexvora Technologies",
+      publisher: { "@id": `${SITE}#business` },
+      inLanguage: "en-IN",
+    },
+  ],
+};
 
 export default function RootLayout({
   children,
@@ -53,7 +152,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en-IN" className={inter.variable}>
       <head>
         {/* Material Symbols is an icon font, not a text font, so next/font
             cannot subset it — link the variable font directly and let the
@@ -68,8 +167,15 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+        />
       </head>
-      <body className="bg-white font-sans text-ink antialiased">{children}</body>
+      <body className="bg-white font-sans text-ink antialiased">
+        {children}
+        {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+      </body>
     </html>
   );
 }
