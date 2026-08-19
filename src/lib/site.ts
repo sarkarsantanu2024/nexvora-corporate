@@ -34,6 +34,8 @@ export const CAPABILITIES: { icon: string; label: string }[] = [
   { icon: "shopping_bag", label: "Online store" },
   { icon: "thumb_up", label: "Social media" },
   { icon: "campaign", label: "Digital marketing" },
+  { icon: "description", label: "Excel, PPT, bio-data" },
+  { icon: "local_shipping", label: "Print and delivery" },
 ];
 
 export const NAV_LINKS = [

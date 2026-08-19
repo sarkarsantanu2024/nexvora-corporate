@@ -10,22 +10,27 @@ import { CAPABILITIES, CONTACT } from "@/lib/site";
 
 const YEAR = 2026;
 
-// The four things a cautious buyer wants settled before they will read on.
+// The things a cautious buyer wants settled before they will read on.
 const PROMISES = [
   {
     icon: "receipt_long",
-    title: "Fixed price, agreed first",
-    body: "One number in writing before work starts. No hourly meter, no revised estimate halfway.",
+    title: "Fixed price, half to start",
+    body: "One number agreed in writing, 50% advance to begin and the rest on delivery. No hourly meter, no revised estimate halfway.",
+  },
+  {
+    icon: "handshake",
+    title: "We will not lie to you",
+    body: "If a date is going to slip, or something cannot be done the way you want, you hear it the same day. We would rather lose the job than tell you a comfortable lie.",
+  },
+  {
+    icon: "notifications_active",
+    title: "You are told at every step",
+    body: "A message when work starts, when it is ready for your review, and when it goes live. You never have to ring and ask what is happening.",
   },
   {
     icon: "key",
     title: "Everything in your name",
     body: "Domain, hosting, Google and social accounts are registered to you, not to us. You can walk away with all of it.",
-  },
-  {
-    icon: "schedule",
-    title: "A reply within a day",
-    body: "Call, WhatsApp or email reaches one person who answers, not a ticket queue.",
   },
   {
     icon: "verified_user",
@@ -37,19 +42,19 @@ const PROMISES = [
 // Reading the money question in the order a customer actually asks it.
 const STEPS = [
   {
-    icon: "forum",
-    title: "Tell us what you need",
-    body: "A call or a WhatsApp message. No form with fourteen mandatory fields, no discovery workshop billed by the hour.",
+    icon: "chat",
+    title: "Send it on WhatsApp",
+    body: "A voice note, a photograph of something you have written down, or two lines of text. Whatever is easiest. No form with fourteen mandatory fields.",
   },
   {
     icon: "request_quote",
-    title: "Get one honest number",
-    body: "A fixed price for a fixed scope, in writing, with whatever is not included spelled out so nothing lands on you later.",
+    title: "Agree the price, pay half",
+    body: "One fixed number for a fixed scope, with whatever is not included spelled out. Half up front to start the work, the balance when it is delivered.",
   },
   {
-    icon: "rocket_launch",
-    title: "We build and hand over",
-    body: "Domain, hosting and accounts stay in your name. When it is live you own all of it, and we stay on for support if you want us.",
+    icon: "bedtime",
+    title: "Then put the phone down",
+    body: "You get a message when the work starts, when it is ready to look at, and when it goes live. Chasing us for an update is not part of your job.",
   },
 ];
 
@@ -251,7 +256,7 @@ export default function Home() {
             What you are promised, before anything is sold
         ------------------------------------------------------------------- */}
         <section className="border-b border-slate-200 bg-white">
-          <div className="shell grid gap-5 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-4">
+          <div className="shell grid gap-6 py-12 sm:grid-cols-2 sm:py-14 lg:grid-cols-3 xl:grid-cols-5">
             {PROMISES.map((p, i) => (
               <Reveal key={p.title} delay={70 * i} className="h-full">
                 <div className="group flex h-full gap-4">

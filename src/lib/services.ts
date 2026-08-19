@@ -69,6 +69,16 @@ export const SERVICES: Service[] = [
     body: "Shared space or a VPS, sized to what you actually use rather than the package the reseller wants to sell. Company mailboxes on your own domain, storage, and backups kept off the same machine.",
   },
   {
+    icon: "description",
+    title: "Documents, sheets and presentations",
+    body: "Excel sheets that calculate correctly and do not break when somebody sorts a column, PowerPoint decks for a pitch or a class, bio-data and CVs, letterheads, quotation and bill formats. Small jobs, usually back within the week.",
+  },
+  {
+    icon: "local_shipping",
+    title: "Printing and delivery",
+    body: "Anything we design can be printed and sent to you — visiting cards, brochures, flyers, banners, sign boards, wedding and event cards. You approve the proof, we deal with the press and the courier.",
+  },
+  {
     icon: "support_agent",
     title: "Support and maintenance",
     body: "Someone picks up. Security patches, framework upgrades and the small stuff — a new column in a report, one more field on a form — without a fresh quotation each time.",
