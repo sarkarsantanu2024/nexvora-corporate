@@ -11,10 +11,19 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 // that redirects.
 const SITE = "https://www.nexvoratechnologies.co.in";
 
-// Set NEXT_PUBLIC_GA_ID in Vercel to switch analytics on. Absent — in local
-// development, in previews, or before the property exists — nothing is
-// injected and no requests are made.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 property for www.nexvoratechnologies.co.in. Hard-coded rather than
+// left to an environment variable alone: a measurement ID is public by
+// definition (it ships in the page source), and the site should not silently
+// stop measuring because a variable went missing from a project setting.
+// NEXT_PUBLIC_GA_ID still overrides it, which is what a second property or a
+// staging site would use.
+//
+// Only production builds report. Local development and `next start` on a
+// laptop would otherwise pollute the figures with our own page views.
+const GA_ID =
+  process.env.NODE_ENV === "production"
+    ? (process.env.NEXT_PUBLIC_GA_ID ?? "G-202QYT01PV")
+    : undefined;
 
 const DESCRIPTION =
   "Affordable website, online store, portfolio, web app, hosting and digital marketing services for Indian small businesses. Kolkata-based Nexvora Technologies also builds EduFlow school management software.";
