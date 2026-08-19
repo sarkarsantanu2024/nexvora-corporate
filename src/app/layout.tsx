@@ -11,7 +11,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 // that redirects.
 const SITE = "https://www.nexvoratechnologies.co.in";
 
-// GA4 property for www.nexvoratechnologies.co.in. Hard-coded rather than
+// GA4 property for www.nexvoratechnologies.co.in, in the owner's personal
+// Google account rather than an employer's. Hard-coded rather than
 // left to an environment variable alone: a measurement ID is public by
 // definition (it ships in the page source), and the site should not silently
 // stop measuring because a variable went missing from a project setting.
@@ -22,7 +23,7 @@ const SITE = "https://www.nexvoratechnologies.co.in";
 // laptop would otherwise pollute the figures with our own page views.
 const GA_ID =
   process.env.NODE_ENV === "production"
-    ? (process.env.NEXT_PUBLIC_GA_ID ?? "G-202QYT01PV")
+    ? (process.env.NEXT_PUBLIC_GA_ID ?? "G-06RYPVJNB3")
     : undefined;
 
 const DESCRIPTION =
