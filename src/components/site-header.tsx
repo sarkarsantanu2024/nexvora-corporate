@@ -124,7 +124,7 @@ export function SiteHeader() {
               href={CONTACT.phoneHref}
               aria-label={`Call ${CONTACT.phoneDisplay}`}
               title={`Call ${CONTACT.phoneDisplay}`}
-              className="group grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300 hover:-translate-y-0.5 hover:rotate-[-6deg]"
+              className="group grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300"
             >
               <span
                 aria-hidden="true"
@@ -139,7 +139,7 @@ export function SiteHeader() {
               rel="noopener noreferrer"
               aria-label="Message us on WhatsApp"
               title="Message us on WhatsApp"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-[#25D366] text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300 hover:-translate-y-0.5 hover:rotate-[6deg]"
+              className="grid h-11 w-11 place-items-center rounded-xl bg-[#25D366] text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300"
             >
               <svg
                 viewBox="0 0 24 24"

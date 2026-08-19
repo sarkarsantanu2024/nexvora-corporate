@@ -134,7 +134,7 @@ export default function Home() {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
                   href="https://eduflow.nexvoratechnologies.co.in"
-                  className="group inline-flex items-center gap-3.5 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lift sm:px-6"
+                  className="group inline-flex items-center gap-3.5 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:px-6"
                 >
                   <span className="icon-tile h-12 w-12">
                     <span
@@ -152,11 +152,11 @@ export default function Home() {
                       Student management software
                     </span>
                   </span>
-                  <ArrowUpRight className="h-5 w-5 shrink-0 text-slate-400 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-600" />
+                  <ArrowUpRight className="h-5 w-5 shrink-0 text-slate-400 transition group-hover:text-brand-600" />
                 </a>
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-3.5 rounded-2xl bg-gradient-to-br from-brand-600 to-violet-600 px-5 py-4 text-white shadow-lift transition duration-300 hover:-translate-y-0.5 sm:px-6"
+                  className="group inline-flex items-center gap-3.5 rounded-2xl bg-gradient-to-br from-brand-600 to-violet-600 px-5 py-4 text-white shadow-lift transition duration-300 hover:brightness-110 sm:px-6"
                 >
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-white/15 ring-1 ring-inset ring-white/25">
                     <span
@@ -174,7 +174,7 @@ export default function Home() {
                       Tell us what you are stuck with
                     </span>
                   </span>
-                  <ArrowRight className="h-5 w-5 shrink-0 transition group-hover:translate-x-0.5" />
+                  <ArrowRight className="h-5 w-5 shrink-0" />
                 </a>
               </div>
             </Reveal>
@@ -229,7 +229,7 @@ export default function Home() {
                 {CAPABILITIES.map((c) => (
                   <li
                     key={c.label}
-                    className="group inline-flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-white py-2 pl-2 pr-4 text-sm font-medium text-slate-700 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
+                    className="group inline-flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-white py-2 pl-2 pr-4 text-sm font-medium text-slate-700 shadow-sm transition duration-300 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
                   >
                     <span className="icon-tile-soft h-9 w-9 rounded-xl">
                       <span
@@ -331,7 +331,7 @@ export default function Home() {
             <ul className="grid gap-4 self-start sm:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2">
               {MISSION_CASES.map((row, i) => (
                 <Reveal as="li" key={row.title} delay={80 * i}>
-                  <div className="group flex h-full gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift sm:p-6">
+                  <div className="group flex h-full gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-6">
                     <span className="icon-tile h-12 w-12">
                       <span
                         aria-hidden="true"
@@ -377,7 +377,7 @@ export default function Home() {
               />
               {STEPS.map((s, i) => (
                 <Reveal key={s.title} delay={100 * i} className="relative">
-                  <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift sm:p-7">
+                  <div className="group h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-7">
                     <div className="flex items-center gap-4">
                       <span className="icon-tile h-12 w-12">
                         <span
@@ -434,12 +434,12 @@ export default function Home() {
                           reads as seven distinct things rather than seven
                           identical boxes. */}
                       <span
-                        className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${p.accent} text-lg font-bold text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300 group-hover:-translate-y-0.5 group-hover:rotate-[-6deg]`}
+                        className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${p.accent} text-lg font-bold text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300`}
                       >
                         {p.name.charAt(0)}
                       </span>
                       {p.href ? (
-                        <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-slate-300 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-600" />
+                        <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-slate-300 transition group-hover:text-brand-600" />
                       ) : (
                         <span className="mt-1 shrink-0 rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
                           Coming soon
@@ -469,7 +469,7 @@ export default function Home() {
                     {p.href ? (
                       <a
                         href={p.href}
-                        className={`${base} hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-lift`}
+                        className={`${base} hover:border-brand-300 hover:shadow-lift`}
                       >
                         {card}
                       </a>
@@ -512,7 +512,7 @@ export default function Home() {
             <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
               {SERVICES.map((s, i) => (
                 <Reveal key={s.title} delay={(i % 4) * 70} className="h-full">
-                  <div className="group relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-lift sm:p-7">
+                  <div className="group relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-7">
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-gradient-to-br from-brand-100 to-violet-400/20 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100"
@@ -587,7 +587,7 @@ export default function Home() {
                 ["13 yrs", "on the keyboard", "schedule"],
               ].map(([stat, label, icon], i) => (
                 <Reveal key={label} delay={70 * i}>
-                  <div className="group h-full rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift sm:p-6">
+                  <div className="group h-full rounded-2xl border border-slate-200 bg-white p-5 transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-6">
                     <span className="icon-tile-soft h-11 w-11">
                       <span
                         aria-hidden="true"
@@ -783,7 +783,7 @@ export default function Home() {
                       {...(row.href.startsWith("http")
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className="group flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-lift"
+                      className="group flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift"
                     >
                       <span className="icon-tile-soft h-12 w-12">
                         <span
