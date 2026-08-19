@@ -49,6 +49,16 @@ export const SERVICES: Service[] = [
     body: "Screens are drawn in Figma and shown to whoever will open them forty times a day — the front desk, the teacher, the store clerk — before any code gets written. Fewer clicks beats a prettier gradient.",
   },
   {
+    icon: "dns",
+    title: "Domain and hosting",
+    body: "We buy or transfer the domain, point the DNS, fit the SSL and put the renewal dates in a calendar somebody watches. No site of ours goes dark because an invoice was missed.",
+  },
+  {
+    icon: "storage",
+    title: "Server space and email",
+    body: "Shared space or a VPS, sized to what you actually use rather than the package the reseller wants to sell. Company mailboxes on your own domain, storage, and backups kept off the same machine.",
+  },
+  {
     icon: "support_agent",
     title: "Support and maintenance",
     body: "Someone picks up. Security patches, framework upgrades and the small stuff — a new column in a report, one more field on a form — without a fresh quotation each time.",
