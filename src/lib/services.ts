@@ -24,6 +24,16 @@ export const SERVICES: Service[] = [
     body: "Set up properly the first time: correct category, cover art, contact button, channel banner and the first few posts written with you. Handed over in your own account, never ours.",
   },
   {
+    icon: "shopping_bag",
+    title: "E-commerce and online stores",
+    body: "Catalogue, UPI and card checkout through Razorpay or Stripe, GST-compliant invoices, courier tracking, and a stock count that agrees with what is on the shelf. Shopify when that fits, custom when it genuinely does not.",
+  },
+  {
+    icon: "trending_up",
+    title: "SEO and performance",
+    body: "Technical repairs first — load time, crawl errors, broken markup, duplicate pages — then the content that actually earns a ranking. You see the search terms, your position on them, and what moved since last month.",
+  },
+  {
     icon: "code",
     title: "Custom software development",
     body: "Most of what we build started life as a spreadsheet somebody outgrew. We sit with the people doing the work, write down what actually happens, then shape the software around that instead of around a template.",
