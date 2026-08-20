@@ -63,9 +63,9 @@ export const PRODUCTS: Product[] = [
   },
   {
     name: "Tirupati Balaji Hospital",
-    tagline: "Hospital website and enquiries",
+    tagline: "Demo hospital website",
     blurb:
-      "Departments, doctor profiles, appointment enquiries and patient information for a multi-speciality hospital.",
+      "A demonstration site rather than a client's, built to show what a multi-speciality hospital could have: departments, doctor profiles, appointment enquiries and patient information.",
     href: null,
     accent: "from-slate-500 to-slate-700",
   },

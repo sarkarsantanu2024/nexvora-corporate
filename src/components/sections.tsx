@@ -1574,7 +1574,7 @@ export function Founder() {
             },
             {
               icon: "location_on",
-              term: "Address",
+              term: "Registered address",
               value: `${CONTACT.street}, ${CONTACT.city} ${CONTACT.pincode}`,
               href: null,
             },
@@ -1804,7 +1804,7 @@ export function Contact() {
             },
             {
               icon: "location_on",
-              term: "Address",
+              term: "Registered address",
               value: CONTACT.addressLines.join(", "),
               href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                 CONTACT.mapQuery,
