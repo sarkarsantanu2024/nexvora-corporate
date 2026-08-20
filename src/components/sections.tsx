@@ -7,6 +7,9 @@ import { SocialLinks } from "@/components/social-links";
 import { FAQS } from "@/lib/faq";
 import { HELP_GROUPS } from "@/lib/help";
 import {
+  CARE_INCLUDED,
+  CARE_NOT_INCLUDED,
+  CARE_PLANS,
   NOT_INCLUDED,
   PACKAGES,
   PRICE_GROUPS,
@@ -1113,6 +1116,8 @@ export function Pricing() {
         </div>
       </Reveal>
 
+      <CarePlans />
+
       {/* The running costs, said out loud rather than buried. */}
       <Reveal delay={140}>
         <div className="mt-12 rounded-2xl border border-amber-200 bg-amber-50 p-6 sm:p-8">
@@ -1157,6 +1162,166 @@ export function Pricing() {
       </Reveal>
     </div>
   </section>
+  );
+}
+
+/**
+ * Nexvora Care — the monthly plans, sold as peace of mind rather than as
+ * hosting.
+ *
+ * The heading asks a question the customer already has, instead of announcing
+ * a product they have not asked for. The paragraph under it lists the ordinary
+ * things that go wrong — a number changes, a price changes, something stops
+ * working — because that is the argument. Nobody buys "maintenance"; they buy
+ * not having to deal with any of that themselves.
+ *
+ * Every card states its time allowance in the same place, at the same size as
+ * the price. That is the honest part: a plan that says "minor updates
+ * included" and means thirty minutes is a disagreement waiting to happen.
+ */
+function CarePlans() {
+  return (
+    <Reveal delay={120}>
+      <div id="care" className="mt-12 scroll-mt-32">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+          Nexvora Care
+        </p>
+        <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
+          Want someone to look after your website every month?
+        </h2>
+        <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
+          Building the website is only the beginning. Your phone number
+          changes. Your prices change. A new offer comes. Photographs need
+          replacing. Sometimes a site simply stops working properly and you
+          have no idea why. You do not need to learn any of that — this is
+          me looking after the technical side for you, month by month.
+        </p>
+        <p className="mt-3 max-w-3xl font-medium text-slate-800">
+          Optional, always. Nothing here is bundled into the price of a
+          website, and you can stop it whenever you like.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {CARE_PLANS.map((plan) => (
+            <div
+              key={plan.id}
+              className={`flex h-full flex-col rounded-2xl border p-5 shadow-sm sm:p-6 ${
+                plan.featured
+                  ? "border-brand-500 bg-white ring-1 ring-brand-500"
+                  : "border-slate-200 bg-white"
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-bold tracking-tight">{plan.name}</h3>
+                {plan.featured && (
+                  <span className="whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                    Most taken
+                  </span>
+                )}
+              </div>
+
+              <p className="mt-3 flex items-baseline gap-1">
+                <span className="text-3xl font-bold tracking-tight">
+                  {rupees(plan.monthly)}
+                </span>
+                <span className="text-sm text-slate-500">/month</span>
+              </p>
+              <p className="mt-1 text-sm text-slate-500">
+                or {rupees(plan.yearly)} for the year — {rupees(plan.monthly * 12 - plan.yearly)} less
+              </p>
+
+              <p className="mt-3 text-sm leading-snug text-slate-600">
+                {plan.who}
+              </p>
+
+              {/* Stated at price size, because it is as much a part of the
+                  offer as the price is. */}
+              <p className="mt-4 rounded-xl bg-brand-50 px-3 py-2 text-sm font-semibold text-brand-800">
+                {plan.allowance}
+              </p>
+
+              <ul className="mt-5 flex-1 space-y-2 border-t border-slate-100 pt-5 text-sm text-slate-700">
+                {plan.includes.map((line) => (
+                  <li key={line} className="flex gap-2">
+                    <span
+                      aria-hidden="true"
+                      className="material-symbols-rounded mt-px shrink-0 text-[17px] text-brand-500"
+                    >
+                      check
+                    </span>
+                    <span className="leading-snug">{line}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={CONTACT.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-6 inline-flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition ${
+                  plan.featured
+                    ? "bg-gradient-to-br from-brand-600 to-violet-600 text-white shadow-lift hover:brightness-110"
+                    : "border border-slate-300 bg-white text-slate-800 hover:border-brand-400 hover:text-brand-700"
+                }`}
+              >
+                Ask about {plan.name}
+              </a>
+            </div>
+          ))}
+        </div>
+
+        {/* The line between looking after and building. Printed, because it is
+            the only thing that keeps a ₹299 plan from turning into a booking
+            system somebody expected for free. */}
+        <div className="mt-6 grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7 lg:grid-cols-2">
+          <div>
+            <h3 className="flex items-center gap-2 font-semibold tracking-tight text-slate-900">
+              <span
+                aria-hidden="true"
+                className="material-symbols-rounded text-[20px] text-brand-600"
+              >
+                check_circle
+              </span>
+              What a plan covers
+            </h3>
+            <ul className="mt-3 space-y-1.5 text-sm text-slate-600">
+              {CARE_INCLUDED.map((line) => (
+                <li key={line} className="leading-snug">
+                  {line}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="lg:border-l lg:border-slate-200 lg:pl-6">
+            <h3 className="flex items-center gap-2 font-semibold tracking-tight text-slate-900">
+              <span
+                aria-hidden="true"
+                className="material-symbols-rounded text-[20px] text-slate-400"
+              >
+                info
+              </span>
+              What is a separate job
+            </h3>
+            <ul className="mt-3 space-y-1.5 text-sm text-slate-600">
+              {CARE_NOT_INCLUDED.map((line) => (
+                <li key={line} className="leading-snug">
+                  {line}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 text-sm leading-relaxed text-slate-500">
+              None of these are refused — they are quoted as their own job,
+              with their own number, the same way everything else here is.
+            </p>
+          </div>
+        </div>
+
+        <p className="mt-6 rounded-2xl border-l-4 border-brand-500 bg-white px-5 py-4 font-medium text-slate-800 shadow-sm">
+          You do not have to remember how your website works. Just WhatsApp
+          me when you need something.
+        </p>
+      </div>
+    </Reveal>
   );
 }
 
@@ -1574,8 +1739,8 @@ export function Founder() {
             },
             {
               icon: "location_on",
-              term: "Registered address",
-              value: `${CONTACT.street}, ${CONTACT.city} ${CONTACT.pincode}`,
+              term: "Based in",
+              value: CONTACT.location,
               href: null,
             },
             {
@@ -1804,21 +1969,16 @@ export function Contact() {
             },
             {
               icon: "location_on",
-              term: "Registered address",
-              value: CONTACT.addressLines.join(", "),
-              href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                CONTACT.mapQuery,
-              )}`,
+              term: "Based in",
+              value: CONTACT.location,
+              href: null,
             },
-          ].map((row, i) => (
-            <Reveal key={row.term} delay={60 * i} className="h-full">
-              <a
-                href={row.href}
-                {...(row.href.startsWith("http")
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
-                className="group flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift"
-              >
+          ].map((row, i) => {
+            // "Based in" is the one row with nowhere to go — there is no
+            // address to open in a map — so it renders as a plain card rather
+            // than as a link that does nothing.
+            const inner = (
+              <>
                 <span className="icon-tile-soft h-12 w-12">
                   <span
                     aria-hidden="true"
@@ -1835,9 +1995,29 @@ export function Contact() {
                     {row.value}
                   </span>
                 </span>
-              </a>
-            </Reveal>
-          ))}
+              </>
+            );
+            const shell =
+              "group flex h-full items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm";
+
+            return (
+              <Reveal key={row.term} delay={60 * i} className="h-full">
+                {row.href ? (
+                  <a
+                    href={row.href}
+                    {...(row.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className={`${shell} transition duration-300 hover:border-brand-300 hover:shadow-lift`}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div className={shell}>{inner}</div>
+                )}
+              </Reveal>
+            );
+          })}
 
           <Reveal delay={260} className="sm:col-span-2">
             <p className="rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600 shadow-sm">
@@ -1850,17 +2030,44 @@ export function Contact() {
           </Reveal>
         </div>
 
+        {/* There was an embedded map here, pinned to a private address, for a
+            business with no premises anyone can visit. A map is only worth the
+            space when the reader can act on it. */}
         <Reveal delay={120}>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-lift">
-            <iframe
-              title="Nexvora Technologies office location on Google Maps"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(
-                CONTACT.mapQuery,
-              )}&output=embed`}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="h-[320px] w-full rounded-xl border-0 sm:h-[420px] lg:h-full lg:min-h-[420px]"
-            />
+          <div className="flex h-full flex-col justify-center rounded-2xl border border-slate-200 bg-white p-8 shadow-lift">
+            <span className="icon-tile h-14 w-14">
+              <span
+                aria-hidden="true"
+                className="material-symbols-rounded text-[28px]"
+              >
+                schedule
+              </span>
+            </span>
+            <p className="mt-5 text-xl font-bold tracking-tight sm:text-2xl">
+              Message any time. I reply the same working day.
+            </p>
+            <p className="mt-3 leading-relaxed text-slate-600">
+              There is no form to fill in and no office hours to catch. Send a
+              message, a voice note or a photograph of something you have
+              written down, and you will hear back from me — not from an
+              assistant, and not next week.
+            </p>
+            <a
+              href={CONTACT.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex w-max items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lift transition hover:brightness-105"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                className="h-5 w-5 shrink-0"
+                fill="currentColor"
+              >
+                <path d={WHATSAPP_PATH} />
+              </svg>
+              Tell me what you need
+            </a>
           </div>
         </Reveal>
       </div>

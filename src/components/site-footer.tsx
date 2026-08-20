@@ -89,14 +89,10 @@ export function SiteFooter() {
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">
-          Registered address
+          Get in touch
         </p>
-        <address className="mt-4 space-y-1 text-sm not-italic text-slate-400">
-          {CONTACT.addressLines.map((line) => (
-            <span key={line} className="block">
-              {line}
-            </span>
-          ))}
+        <address className="mt-4 text-sm not-italic text-slate-400">
+          {CONTACT.location}
         </address>
         <div className="mt-4 space-y-2 text-sm">
           <a
@@ -112,14 +108,12 @@ export function SiteFooter() {
             {CONTACT.email}
           </a>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              CONTACT.mapQuery,
-            )}`}
+            href={CONTACT.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 font-medium text-brand-300 transition hover:text-white"
           >
-            Open in Google Maps
+            Message me on WhatsApp
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>

@@ -6,12 +6,12 @@ import { Pricing } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Price — Small Jobs From ₹499, Websites From ₹4,499",
-  description: "Real numbers, written down. Small digital jobs from ₹499, business websites from ₹4,499, and bigger custom projects quoted on what they need. Plus a plain list of the running costs — domain, hosting, printing, ad budget — that are never inside any of those figures.",
+  description: "Real numbers, written down. Small digital jobs from ₹499, business websites from ₹4,499, and bigger custom projects quoted on what they need. Optional monthly care from ₹299. Plus a plain list of the running costs — domain, hosting, printing, ad budget — that are never inside any of those figures.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/price" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/price",
     title: "Price — Small Jobs From ₹499, Websites From ₹4,499",
-    description: "Real numbers, written down. Small digital jobs from ₹499, business websites from ₹4,499, and bigger custom projects quoted on what they need. Plus a plain list of the running costs — domain, hosting, printing, ad budget — that are never inside any of those figures.",
+    description: "Real numbers, written down. Small digital jobs from ₹499, business websites from ₹4,499, and bigger custom projects quoted on what they need. Optional monthly care from ₹299. Plus a plain list of the running costs — domain, hosting, printing, ad budget — that are never inside any of those figures.",
     images: [OG_IMAGE],
   },
   twitter: { images: [OG_IMAGE.url] },
