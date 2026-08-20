@@ -55,7 +55,7 @@ small, the price fixed, and every account in your own name. Call or WhatsApp +91
 ```
 Nexvora Technologies builds affordable websites, online stores, portfolios, web and mobile apps
 for small businesses across India — plus domain, hosting, email, graphic design, printing,
-Facebook and YouTube setup, SEO and digital marketing. Fixed price, everything in your name.
+Facebook and YouTube setup, SEO and digital marketing. One agreed price, and your accounts stay yours.
 Kolkata. WhatsApp +91 98042 43159.
 ```
 
@@ -80,17 +80,18 @@ We get small Indian businesses online, at a price they can actually afford.
    or two lines of text. Whatever is easiest.
 2. **Agree the price.** One fixed number for a fixed scope, with whatever is not included
    spelled out, and the payment settled at the same time. Nothing starts before you agree it.
-3. **Then put the phone down.** You get a message when the work starts, when it is ready to look
-   at, and when it goes live. Chasing us for an update is not your job.
+3. **Then you can relax.** You do not need to keep calling for updates. I will tell you when the
+   work starts, when it is ready to review, and when it goes live.
 
 **What we promise**
 
 - Fixed price, agreed in writing before work starts. No hourly meter.
-- We will not lie to you. If a date is going to slip, or something cannot be done the way you
-  want, you hear it the same day. We would rather lose the job than tell you a comfortable lie.
+- If something changes, you will hear it from me — even when the news is not good. A date that is
+  going to slip, or something that cannot be done the way you want, reaches you the same day I know.
 - You are told at every step, without asking.
-- Domain, hosting, Google and social accounts are registered in your name, not ours.
-- Registered MSME, with a GST invoice for every rupee.
+- Your domain, hosting, Google and social accounts stay under your control wherever practical —
+  registered in your name, not ours.
+- Registered MSME, with a proper invoice for every job.
 - The person you message is the person who does the work. Extra hands are brought in only when a
   job genuinely needs them, and they are never between you and me.
 
@@ -116,10 +117,10 @@ that reaches your phone.
 instead of nothing. Enquiries reach your phone directly.
 
 ### 3. E-commerce and online stores
-**Long.** Catalogue, Razorpay or Stripe checkout, GST-compliant invoices, courier tracking, and a
+**Long.** Catalogue, Razorpay or Stripe checkout, invoices carrying your own GST details, courier tracking, and a
 stock count that agrees with what is on the shelf. Shopify when that fits the business, custom
 when it genuinely does not.
-**Short (GBP).** Online store with UPI and card payment, GST invoices, courier tracking and
+**Short (GBP).** Online store with UPI and card payment, your own GST invoices, courier tracking and
 accurate stock. Shopify or custom, whichever suits you.
 
 ### 4. Facebook page and YouTube channel setup
@@ -326,18 +327,18 @@ Post one a week. Each is under the 1,500 character limit.
 > **Send it on WhatsApp, agree the price, then forget about it**
 > No enquiry form with fourteen mandatory fields. Send a voice note, a photo of something you have
 > written down, or two lines of text. We agree one fixed price before anything starts, and you get a
-> message when work begins, when it is ready to review, and when it goes live. Chasing us for an
+> message when work begins, when it is ready to review, and when it goes live. Chasing me for an
 > update is not your job. +91 98042 43159
 
-> **Everything stays in your name**
+> **Your accounts stay under your control**
 > Your domain, your hosting, your Google listing, your Facebook page, your YouTube channel — all
 > registered to you, not to us. If you ever want to leave, you take the lot with you and nothing
 > breaks. That is how it should have been all along.
 
-> **We will not lie to you**
-> If a date is going to slip, or something cannot be done the way you want it, you hear it from us
-> the same day. We would rather lose the job than tell you a comfortable lie. Registered MSME,
-> Udyam UDYAM-WB-10-021416, GST invoice for every rupee.
+> **If something changes, you hear it from me**
+> If a date is going to slip, or something cannot be done the way you want it, you hear it from me
+> the same day — even when the news is not good. Registered MSME,
+> Udyam UDYAM-WB-10-021416, and a proper invoice for every job.
 
 > **Not just websites**
 > Excel sheets that calculate properly. PowerPoint decks for a pitch or a class. Bio-data and CVs.
@@ -353,7 +354,7 @@ Post one a week. Each is under the 1,500 character limit.
 
 ```
 Affordable websites, online stores, portfolios, apps, graphic design, printing, hosting and
-digital marketing for small businesses across India. Fixed price, everything in your name.
+digital marketing for small businesses across India. One agreed price, and your accounts stay yours.
 Kolkata. WhatsApp +91 98042 43159.
 ```
 

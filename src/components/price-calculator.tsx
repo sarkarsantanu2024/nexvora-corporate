@@ -159,10 +159,65 @@ export function PriceCalculator() {
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-6 sm:px-7">
-              {/* Packages first. They cost less than the same things ticked one
-                  by one, so burying them below the list would be dishonest. */}
+              {/* The individual jobs come first. Most people open this to
+                  cost one thing they already have in mind, not to be sold a
+                  bundle — so the list they came for is the first thing under
+                  their thumb, and the packages sit underneath as the answer
+                  to "that is adding up". */}
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Packages — cheaper than buying the pieces
+                Pick jobs one by one
+              </p>
+              {PRICE_GROUPS.map((g) => (
+                <div key={g.id} className="mt-6">
+                  <div className="flex items-center gap-3">
+                    <span className="icon-tile-soft h-10 w-10">
+                      <span
+                        aria-hidden="true"
+                        className="material-symbols-rounded text-[20px]"
+                      >
+                        {g.icon}
+                      </span>
+                    </span>
+                    <h3 className="font-semibold tracking-tight">{g.title}</h3>
+                  </div>
+                  <ul className="mt-3 space-y-1">
+                    {g.items.map((item) => {
+                      const active = picked.includes(item.id);
+                      return (
+                        <li key={item.id}>
+                          <label
+                            className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-3 transition ${
+                              active
+                                ? "border-brand-500 bg-brand-50"
+                                : "border-transparent hover:bg-slate-50"
+                            }`}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={active}
+                              onChange={() => toggle(item.id)}
+                              className="h-4 w-4 shrink-0 accent-brand-600"
+                            />
+                            <span className="min-w-0 flex-1 text-sm leading-snug text-slate-700">
+                              {item.label}
+                            </span>
+                            <span className="shrink-0 text-sm font-semibold tabular-nums">
+                              {rupees(item.price)}
+                            </span>
+                          </label>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+
+              {/* Packages after the list, not before it. They genuinely cost
+                  less than the same things ticked one by one, and this is the
+                  moment that lands: the reader has just watched their own
+                  total climb. */}
+              <p className="mt-9 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                Or take a package — cheaper than buying the pieces
               </p>
               <div className="mt-4 space-y-3">
                 {PACKAGES.map((p) => {
@@ -216,54 +271,6 @@ export function PriceCalculator() {
                   );
                 })}
               </div>
-
-              <p className="mt-9 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Or pick jobs one by one
-              </p>
-              {PRICE_GROUPS.map((g) => (
-                <div key={g.id} className="mt-6">
-                  <div className="flex items-center gap-3">
-                    <span className="icon-tile-soft h-10 w-10">
-                      <span
-                        aria-hidden="true"
-                        className="material-symbols-rounded text-[20px]"
-                      >
-                        {g.icon}
-                      </span>
-                    </span>
-                    <h3 className="font-semibold tracking-tight">{g.title}</h3>
-                  </div>
-                  <ul className="mt-3 space-y-1">
-                    {g.items.map((item) => {
-                      const active = picked.includes(item.id);
-                      return (
-                        <li key={item.id}>
-                          <label
-                            className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-3 transition ${
-                              active
-                                ? "border-brand-500 bg-brand-50"
-                                : "border-transparent hover:bg-slate-50"
-                            }`}
-                          >
-                            <input
-                              type="checkbox"
-                              checked={active}
-                              onChange={() => toggle(item.id)}
-                              className="h-4 w-4 shrink-0 accent-brand-600"
-                            />
-                            <span className="min-w-0 flex-1 text-sm leading-snug text-slate-700">
-                              {item.label}
-                            </span>
-                            <span className="shrink-0 text-sm font-semibold tabular-nums">
-                              {rupees(item.price)}
-                            </span>
-                          </label>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
 
               {/* The part nobody else prints. */}
               <div className="mt-9 rounded-2xl border border-amber-200 bg-amber-50 p-5">

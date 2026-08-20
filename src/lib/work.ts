@@ -59,7 +59,7 @@ export const WORK: WorkItem[] = [
     name: "Health Locker",
     kind: "My own product",
     blurb:
-      "Prescriptions, lab reports, medicines and vaccinations for a whole family in one place — shared with a doctor only when the family says so.",
+      "Prescriptions, lab reports, medicines and vaccinations for a whole family in one place. Nothing goes to a doctor unless somebody in the family sends it.",
     image: "/work/healthlocker.png",
     alt: "The Health Locker home page, showing a family medical records app",
     href: "https://health-locker-chi.vercel.app/",

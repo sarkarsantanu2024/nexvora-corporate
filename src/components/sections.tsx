@@ -92,7 +92,7 @@ const PROMISES = [
   {
     icon: "receipt_long",
     title: "I tell you the price first",
-    body: "One number, agreed before the work starts. No hourly meter running in the background, and no revised estimate halfway through.",
+    body: "One number for the work we agreed, settled before it starts. No hourly meter running in the background, and the price does not move because the job turned out harder than I thought. If you ask for something extra later, I tell you what it costs before I build it.",
   },
   {
     icon: "handshake",
@@ -127,7 +127,7 @@ const PROMISES = [
   {
     icon: "verified_user",
     title: "A registered business, not a stranger",
-    body: `Udyam ${CONTACT.udyam}, a GST invoice for every rupee, and an office in Kolkata you can walk into.`,
+    body: `A registered MSME — Udyam ${CONTACT.udyam} — based in Kolkata, with a proper invoice for every job.`,
   },
 ];
 
@@ -300,10 +300,10 @@ export function Hero() {
         {/* The four terms a first-time buyer is quietly checking for. */}
         <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5 text-sm font-medium text-slate-700">
           {[
-            "One price, told to you first",
-            "Small jobs ₹499 – ₹12,999",
+            "One agreed price for the agreed work",
+            "Small jobs from ₹499, websites from ₹4,499",
             "Payment agreed before work starts",
-            "Everything stays in your name",
+            "Your accounts stay under your control",
             "Registered MSME",
           ].map((t) => (
             <li key={t} className="inline-flex items-center gap-2">
@@ -342,9 +342,12 @@ export function Hero() {
         ability to actually read a name. */}
     <div className="relative overflow-hidden border-y border-slate-200 bg-white/70 py-7 backdrop-blur sm:py-9">
       <div className="shell">
+        {/* A bare list of everything reads as a business with no speciality.
+            Naming the four areas and then saying what it saves the customer
+            is the same breadth, argued rather than announced. */}
         <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-          Website · Online store · Web app · Google · Facebook · Design ·
-          Marketing
+          Websites, software, design and digital services — without dealing
+          with five different people
         </p>
       </div>
 
@@ -432,7 +435,7 @@ export function PuttingOff() {
         </p>
         <p className="mt-5 rounded-2xl border-l-4 border-brand-500 bg-white px-5 py-4 font-medium text-slate-800 shadow-sm">
           You hear the price before any work starts, the domain and hosting
-          are registered in your name, and you talk to the person doing the
+          stay under your control wherever practical, and you talk to the person doing the
           work — not to a sales desk.
         </p>
       </Reveal>
@@ -861,7 +864,7 @@ export function Pricing() {
             For suitable projects
           </p>
           <p className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
-            One price, agreed first.
+            One agreed price for the agreed work.
           </p>
           <p className="mt-1 text-2xl font-bold tracking-tight text-slate-500 sm:text-3xl">
             Payment on the terms we settle with it.
@@ -871,7 +874,7 @@ export function Pricing() {
               "You know the price before the work begins.",
               "What is included and what is not are both written down.",
               "Changes within what we agreed are not a fresh bill.",
-              "A GST invoice for every rupee.",
+              "A proper invoice for every job.",
             ].map((line) => (
               <li key={line} className="flex gap-2.5">
                 <span
@@ -946,7 +949,7 @@ export function Pricing() {
                   "You are told the price before I touch it.",
                   "Nothing in this range needs an advance conversation — pay when you are happy with it.",
                   "Design files can be printed and couriered to you — printing and courier paid by you, at cost.",
-                  "Anything bigger than ₹12,999 gets a proper look and its own number.",
+                  "₹12,999 is where this band ends, not where the work does — a web application, a database, an online shop or a mobile app gets a proper look and its own number.",
                   "Domain, hosting and any advertising budget are separate, and never inside these figures.",
                 ].map((line) => (
                   <li key={line} className="flex gap-2.5">
@@ -1497,7 +1500,7 @@ export function Founder() {
           back, and you deal only with me.
         </p>
         <p className="mt-4 leading-relaxed text-slate-600">
-          I have spent thirteen years building websites and web
+          I have 13+ years of hands-on experience building websites and web
           applications professionally, most of them at Webspiders. But you
           do not need to know any of my technical background to work with
           me. What matters more is this: if you call or message Nexvora,
