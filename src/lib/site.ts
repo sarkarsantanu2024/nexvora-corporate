@@ -1,3 +1,18 @@
+// www is the canonical host: the apex 308-redirects to it in Vercel.
+export const SITE_URL = "https://www.nexvoratechnologies.co.in";
+
+// The card WhatsApp, Facebook and LinkedIn draw when the URL is pasted. It is
+// a real 1200x630 file in public/ rather than a generated image, so what gets
+// shared is exactly what was approved — and every route spreads this same
+// object, because a page that sets its own `openGraph` replaces the parent's
+// wholesale rather than inheriting the image from it.
+export const OG_IMAGE = {
+  url: `${SITE_URL}/og-cover.png`,
+  width: 1200,
+  height: 630,
+  alt: "Nexvora Technologies — need a website for your business? You don't need a big company budget.",
+};
+
 // Contact details and capability shorthand live here because they appear in
 // three or four places each — header, hero, footer, contact section — and a
 // phone number that disagrees with itself across a page is worse than none.
@@ -40,12 +55,21 @@ export const CAPABILITIES: { icon: string; label: string }[] = [
   { icon: "translate", label: "Content writing" },
 ];
 
+// Deliberately short, and in the order a nervous first-time buyer wants it:
+// what can you do for me, how does this work, what does it cost, who are you,
+// and the questions I am too embarrassed to ask. Anything that reads like a
+// corporate software catalogue has been left off.
+// Real routes rather than anchors on one long page: each of these is a page
+// Google can rank on its own terms, which a single scrolling document cannot
+// be. Order is the one a nervous first-time buyer wants — what can you do for
+// me, how does this work, what does it cost, can I see it, who are you, and
+// the questions I am too embarrassed to ask.
 export const NAV_LINKS = [
-  { href: "#mission", label: "Why us" },
-  { href: "#promise", label: "Our promise" },
-  { href: "#products", label: "Products" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#founder", label: "Who we are" },
-  { href: "#contact", label: "Contact" },
+  { href: "/what-i-can-do", label: "What I can do" },
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/price", label: "Price" },
+  { href: "/examples", label: "Examples" },
+  { href: "/about", label: "About me" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];

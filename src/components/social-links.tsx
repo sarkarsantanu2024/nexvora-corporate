@@ -30,7 +30,7 @@ const SOCIALS: Social[] = [
   },
 ];
 
-type Tone = "light" | "dark";
+type Tone = "light" | "dark" | "footer";
 
 const TONES: Record<Tone, { wrap: string; icon: string }> = {
   // On white sections: outlined circles that fill with brand on hover.
@@ -38,10 +38,19 @@ const TONES: Record<Tone, { wrap: string; icon: string }> = {
     wrap: "h-10 w-10 border border-slate-300 bg-white text-slate-600 hover:border-brand-600 hover:bg-brand-600 hover:text-white",
     icon: "h-[18px] w-[18px]",
   },
-  // On the navy bar: no borders, just the marks, brightening on hover.
+  // On the narrow navy bar at the very top. These used to be dim grey marks on
+  // a purple gradient, which read as disabled rather than clickable — so they
+  // now sit in their own tinted chips at full white, which is legible against
+  // every stop of the gradient behind them.
   dark: {
-    wrap: "h-8 w-8 text-slate-400 hover:bg-white/10 hover:text-white",
-    icon: "h-[16px] w-[16px]",
+    wrap: "h-8 w-8 bg-white/15 text-white ring-1 ring-inset ring-white/25 hover:bg-white hover:text-brand-700",
+    icon: "h-[17px] w-[17px]",
+  },
+  // On the dark footer: full-size targets like the light tone, but outlined in
+  // white rather than slate so they read against near-black.
+  footer: {
+    wrap: "h-10 w-10 border border-white/20 bg-white/5 text-slate-300 hover:border-brand-400 hover:bg-brand-500 hover:text-white",
+    icon: "h-[18px] w-[18px]",
   },
 };
 

@@ -106,7 +106,7 @@ export const SERVICES: Service[] = [
   {
     icon: "local_shipping",
     title: "Printing and delivery",
-    body: "Anything we design can be printed and sent to you — visiting cards, brochures, flyers, banners, sign boards, wedding and event cards. You approve the proof, we deal with the press and the courier.",
+    body: "Anything we design can be printed and sent to you — visiting cards, brochures, flyers, banners, sign boards, wedding and event cards. You approve the proof and we deal with the press and the courier for you. The printing bill and the courier charge are yours, at what they cost; nothing is added on top.",
   },
   {
     icon: "support_agent",

@@ -1,15 +1,39 @@
 import type { MetadataRoute } from "next";
+import { NAV_LINKS, SITE_URL } from "@/lib/site";
 
-const SITE = "https://www.nexvoratechnologies.co.in";
+const SITE = SITE_URL;
 
-// One page site for now; the product subdomains carry their own sitemaps.
+// Driven off NAV_LINKS so a new route cannot be added to the menu and then
+// quietly left out of the sitemap. The product subdomains carry their own.
+const UPDATED = new Date("2026-08-20");
+
+// Priority says what a crawler should spend its budget on. Price and What I
+// can do are the two pages people actually search for, so they sit above the
+// rest; contact and FAQ are useful but nobody arrives on the site looking for
+// them first.
+const PRIORITY: Record<string, number> = {
+  "/what-i-can-do": 0.9,
+  "/price": 0.9,
+  "/examples": 0.8,
+  "/how-it-works": 0.8,
+  "/about": 0.7,
+  "/faq": 0.7,
+  "/contact": 0.6,
+};
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE,
-      lastModified: new Date("2026-08-19"),
+      lastModified: UPDATED,
       changeFrequency: "monthly",
       priority: 1,
     },
+    ...NAV_LINKS.map((l) => ({
+      url: `${SITE}${l.href}`,
+      lastModified: UPDATED,
+      changeFrequency: "monthly" as const,
+      priority: PRIORITY[l.href] ?? 0.6,
+    })),
   ];
 }

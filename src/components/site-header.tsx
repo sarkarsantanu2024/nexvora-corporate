@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { SocialLinks } from "@/components/social-links";
 import { CONTACT, NAV_LINKS } from "@/lib/site";
@@ -12,6 +14,7 @@ const WHATSAPP_PATH =
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   // The bar tightens and gains a shadow once the reader leaves the top, which
   // is the cheapest way to make a sticky header feel deliberate rather than
@@ -22,6 +25,10 @@ export function SiteHeader() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Navigating away must close the mobile menu, or the new page opens with
+  // the old menu still covering it.
+  useEffect(() => setOpen(false), [pathname]);
 
   // A menu left open behind a resize into desktop layout is a classic
   // mobile-nav bug; close it when the viewport crosses the breakpoint.
@@ -87,11 +94,11 @@ export function SiteHeader() {
         }`}
       >
         <nav
-          className={`shell flex items-center justify-between gap-6 transition-all duration-300 ${
+          className={`shell flex items-center justify-between gap-3 transition-all duration-300 sm:gap-6 ${
             scrolled ? "h-16 sm:h-[68px]" : "h-[68px] sm:h-20"
           }`}
         >
-          <a
+          <Link
             href="/"
             aria-label="Nexvora Technologies — home"
             className="shrink-0"
@@ -102,35 +109,47 @@ export function SiteHeader() {
               width={720}
               height={145}
               priority
-              className={`w-auto transition-all duration-300 ${
-                scrolled ? "h-7 sm:h-8" : "h-8 sm:h-10"
+              // max-w keeps the wordmark from squeezing the two contact
+              // buttons off a 320px screen; it is the widest thing in the bar
+              // and the only one that can afford to give ground.
+              className={`w-auto max-w-[40vw] transition-all duration-300 sm:max-w-none ${
+                scrolled ? "h-6 sm:h-8" : "h-7 sm:h-10"
               }`}
             />
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-8 lg:flex xl:gap-10">
             {NAV_LINKS.map((l) => (
-              <a key={l.href} href={l.href} className="nav-link">
+              <Link
+                key={l.href}
+                href={l.href}
+                aria-current={pathname === l.href ? "page" : undefined}
+                className={`nav-link ${pathname === l.href ? "is-current" : ""}`}
+              >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Call and WhatsApp as icons rather than buttons — most enquiries
-                arrive on one of these two, so they sit within thumb reach at
-                every screen size. */}
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
+            {/* Nearly every enquiry arrives on one of these two, so they are
+                the only buttons in the bar. They carry their labels wherever
+                the row has the width for them, and fall back to the icon alone
+                at the sizes where the nav links are competing for space. */}
             <a
               href={CONTACT.phoneHref}
               aria-label={`Call ${CONTACT.phoneDisplay}`}
               title={`Call ${CONTACT.phoneDisplay}`}
-              className="group grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300"
+              className="group flex h-11 items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-2.5 sm:px-3 text-sm font-semibold text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300 hover:brightness-110"
             >
               <span
                 aria-hidden="true"
                 className="material-symbols-rounded text-[22px]"
               >
                 call
+              </span>
+              <span className="hidden pr-1 sm:inline lg:hidden 2xl:inline">
+                Call
               </span>
             </a>
             <a
@@ -139,16 +158,19 @@ export function SiteHeader() {
               rel="noopener noreferrer"
               aria-label="Message us on WhatsApp"
               title="Message us on WhatsApp"
-              className="grid h-11 w-11 place-items-center rounded-xl bg-[#25D366] text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300"
+              className="flex h-11 items-center gap-2 rounded-xl bg-[#25D366] px-2.5 sm:px-3 text-sm font-semibold text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300 hover:brightness-105"
             >
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                className="h-[21px] w-[21px]"
+                className="h-[21px] w-[21px] shrink-0"
                 fill="currentColor"
               >
                 <path d={WHATSAPP_PATH} />
               </svg>
+              <span className="hidden pr-1 sm:inline lg:hidden 2xl:inline">
+                WhatsApp
+              </span>
             </a>
             <button
               type="button"
@@ -170,11 +192,14 @@ export function SiteHeader() {
           >
             <div className="shell flex flex-col py-2">
               {NAV_LINKS.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="group flex items-center justify-between border-b border-slate-100 py-3.5 text-base font-medium text-slate-700 last:border-0"
+                  aria-current={pathname === l.href ? "page" : undefined}
+                  className={`group flex items-center justify-between border-b border-slate-100 py-3.5 text-base font-medium last:border-0 ${
+                    pathname === l.href ? "text-brand-700" : "text-slate-700"
+                  }`}
                 >
                   {l.label}
                   <span
@@ -183,7 +208,7 @@ export function SiteHeader() {
                   >
                     chevron_right
                   </span>
-                </a>
+                </Link>
               ))}
               <a
                 href={CONTACT.whatsappHref}

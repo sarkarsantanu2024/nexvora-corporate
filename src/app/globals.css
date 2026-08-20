@@ -92,6 +92,16 @@ body {
     @apply scale-x-100;
   }
 
+  /* The page you are already on, kept underlined so the nav says where you
+     are rather than only where you could go. */
+  .nav-link.is-current {
+    @apply text-brand-700;
+  }
+
+  .nav-link.is-current::after {
+    @apply scale-x-100;
+  }
+
   /* The house icon tile: a gradient slab with a soft ring. Hover only
      brightens it and fills the glyph — nothing on this page moves under the
      cursor, which reads as jumpy on a long page of cards. */

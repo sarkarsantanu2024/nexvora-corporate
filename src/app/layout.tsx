@@ -1,15 +1,20 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { CONTACT } from "@/lib/site";
+import { BackToTop } from "@/components/back-to-top";
+import { ContactDock } from "@/components/contact-dock";
+import { PriceCalculator } from "@/components/price-calculator";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { CONTACT, NAV_LINKS, OG_IMAGE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-// www is the canonical host: the apex 308-redirects to it in Vercel. Keep this
-// in sync with the redirect direction, or the canonical tag points at a URL
-// that redirects.
-const SITE = "https://www.nexvoratechnologies.co.in";
+// www is the canonical host: the apex 308-redirects to it in Vercel. Defined
+// once in lib/site so the canonical tag, the sitemap and the OG image URL
+// cannot disagree about which host is the real one.
+const SITE = SITE_URL;
 
 // GA4 property for www.nexvoratechnologies.co.in, in the owner's personal
 // Google account rather than an employer's. Hard-coded rather than
@@ -26,14 +31,17 @@ const GA_ID =
     ? (process.env.NEXT_PUBLIC_GA_ID ?? "G-06RYPVJNB3")
     : undefined;
 
+// Written for the person, not the crawler — but the words a person would
+// actually search for are still in it. Tell me what you need is the whole
+// proposition; everything else on the page is detail.
 const DESCRIPTION =
-  "Affordable website, online store, portfolio, web app, hosting and digital marketing services for Indian small businesses. Kolkata-based Nexvora Technologies also builds EduFlow school management software.";
+  "You don't need to understand technology, or a big company budget. Tell me on WhatsApp what your business needs and I'll tell you what it costs before we start. Websites, online stores, web apps, Google and Facebook setup, design and marketing for small businesses across India. Kolkata-based Nexvora Technologies also builds EduFlow school management software.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
     default:
-      "Nexvora Technologies — Affordable Website, Web App & Digital Marketing in Kolkata",
+      "Nexvora Technologies — Website for Your Business Without a Big Company Budget",
     template: "%s · Nexvora Technologies",
   },
   description: DESCRIPTION,
@@ -65,14 +73,17 @@ export const metadata: Metadata = {
     url: SITE,
     siteName: "Nexvora Technologies",
     title:
-      "Nexvora Technologies — Website, store and marketing at a small-business price",
+      "Need a website for your business? You don't need a big company budget.",
     description: DESCRIPTION,
     locale: "en_IN",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexvora Technologies — Affordable web, store and marketing services",
+    title:
+      "Need a website for your business? You don't need a big company budget.",
     description: DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -151,6 +162,14 @@ const JSON_LD = {
         })),
       },
     },
+    // The routes, declared once. FAQPage markup lives on /faq itself, beside
+    // the questions it describes, rather than being asserted from every page.
+    {
+      "@type": "SiteNavigationElement",
+      "@id": `${SITE}#nav`,
+      name: NAV_LINKS.map((l) => l.label),
+      url: NAV_LINKS.map((l) => `${SITE}${l.href}`),
+    },
     {
       "@type": "WebSite",
       "@id": `${SITE}#website`,
@@ -189,7 +208,14 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white font-sans text-ink antialiased">
-        {children}
+        {/* Chrome lives here rather than in each page, so a new route cannot
+            ship without the header, the footer or the two contact buttons. */}
+        <SiteHeader />
+        <main>{children}</main>
+        <SiteFooter />
+        <PriceCalculator />
+        <ContactDock />
+        <BackToTop />
         {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
       </body>
     </html>

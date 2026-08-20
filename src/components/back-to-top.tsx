@@ -21,7 +21,9 @@ export function BackToTop() {
       aria-label="Back to top"
       title="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-brand-600 text-white shadow-lg transition duration-200 hover:bg-brand-700 sm:bottom-8 sm:right-8 ${
+      // Sits above the WhatsApp/call bar on a phone, and diagonally opposite
+      // the floating pair from the small breakpoint up.
+      className={`fixed bottom-[5.5rem] right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-brand-600 text-white shadow-lg transition duration-200 hover:bg-brand-700 sm:bottom-8 sm:right-8 ${
         show
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
