@@ -6,3 +6,6 @@ out
 .DS_Store
 *.tsbuildinfo
 next-env.d.ts
+
+# Isolated output for verification builds run alongside a live dev server.
+.next-verify
