@@ -197,9 +197,6 @@ export function PriceCalculator() {
                           <p className="text-lg font-bold tracking-tight">
                             {rupees(p.price)}
                           </p>
-                          <p className="text-xs text-slate-500 line-through">
-                            {rupees(p.worth)}
-                          </p>
                         </div>
                       </div>
                       <ul className="mt-3 space-y-1.5 border-t border-slate-200 pt-3 text-sm text-slate-700">

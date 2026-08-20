@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { BackToTop } from "@/components/back-to-top";
 import { ContactDock } from "@/components/contact-dock";
@@ -8,8 +7,6 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { CONTACT, NAV_LINKS, OG_IMAGE, SITE_URL } from "@/lib/site";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 // www is the canonical host: the apex 308-redirects to it in Vercel. Defined
 // once in lib/site so the canonical tag, the sitemap and the OG image URL
@@ -187,16 +184,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={inter.variable}>
+    <html lang="en-IN">
       <head>
-        {/* Material Symbols is an icon font, not a text font, so next/font
-            cannot subset it — link the variable font directly and let the
-            browser cache it. */}
+        {/* One stylesheet for all three faces: Poppins for headings, Inter for
+            reading text, and Material Symbols for the icons. Linked rather than
+            fetched through next/font because the build machine cannot reach
+            Google Fonts, and an icon font cannot be subset by next/font
+            anyway. display=swap so the text is readable while they load. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         />
         <link
           rel="stylesheet"

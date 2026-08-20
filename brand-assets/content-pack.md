@@ -25,7 +25,7 @@ Registered MSME · Udyam UDYAM-WB-10-021416
 | Length | Text |
 |---|---|
 | Primary | Bring your business online. Fast, and for less money. |
-| Short | Website, shop, design and ads — one price, half to start. |
+| Short | Website, shop, design and ads — one price, agreed before we start. |
 | Very short | Online, affordably. |
 | For a sign board | Website · Online store · Design · Printing · Marketing |
 | WhatsApp Business "about" (139 char limit) | Affordable websites, online stores, design, printing and marketing for small businesses. Kolkata. Send your requirement here. |
@@ -44,7 +44,7 @@ domain, hosting, business email, Facebook page and YouTube channel setup, Google
 and digital marketing.
 
 We also build and run our own products, including EduFlow school and coaching management
-software, used by 300+ centres.
+software, used by 40+ centres.
 
 Most small businesses are quoted far more than a simple website should cost. We keep the work
 small, the price fixed, and every account in your own name. Call or WhatsApp +91 98042 43159.
@@ -78,8 +78,8 @@ We get small Indian businesses online, at a price they can actually afford.
 
 1. **Send the requirement on WhatsApp.** A voice note, a photograph of something written down,
    or two lines of text. Whatever is easiest.
-2. **Agree the price, pay half.** One fixed number for a fixed scope, with whatever is not
-   included spelled out. 50% advance to start, the balance on delivery.
+2. **Agree the price.** One fixed number for a fixed scope, with whatever is not included
+   spelled out, and the payment settled at the same time. Nothing starts before you agree it.
 3. **Then put the phone down.** You get a message when the work starts, when it is ready to look
    at, and when it goes live. Chasing us for an update is not your job.
 
@@ -90,7 +90,9 @@ We get small Indian businesses online, at a price they can actually afford.
   want, you hear it the same day. We would rather lose the job than tell you a comfortable lie.
 - You are told at every step, without asking.
 - Domain, hosting, Google and social accounts are registered in your name, not ours.
-- Registered MSME, GST invoice for every rupee, and an office you can visit.
+- Registered MSME, with a GST invoice for every rupee.
+- The person you message is the person who does the work. Extra hands are brought in only when a
+  job genuinely needs them, and they are never between you and me.
 
 ---
 
@@ -240,31 +242,28 @@ every time.
 
 ---
 
-## 4b. The promise, in six languages
+## 4b. The promise, in three languages
 
 This is the statement on the home page. Use it in WhatsApp replies, on the Google profile, and
 under any advertisement. Send the version that matches the customer.
 
-**English.** Tell me on WhatsApp what you need. Pay half to start. Then relax — I will tell you when
-I begin, when it is ready to see, and when it goes online. I will never tell you a lie. If it will
-take longer, you will hear it from me the same day.
+Tamil, Telugu and Punjabi were dropped on 2026-08-21. Nobody had checked them, they were the ones
+most likely to read as machine translation to a native speaker, and three languages written well
+say more about the business than six written uncertainly. Add one back only when somebody who
+speaks it has read the words.
 
-**বাংলা.** হোয়াটসঅ্যাপে আমাকে বলুন আপনার কী দরকার। শুরু করতে অর্ধেক টাকা দিন। তারপর নিশ্চিন্তে থাকুন — কাজ শুরু
-করলে, তৈরি হলে আর অনলাইনে এলে আমি নিজে জানাব। আমি কখনও মিথ্যা বলব না। দেরি হলে সেই দিনই আপনাকে বলে দেব।
+**English.** You don't need to know anything about websites. Just tell me what you need on
+WhatsApp. Send me a message, a voice note, photos, or even a rough idea. I will explain what can
+be done, how much it will cost, and what is included — in simple language. No confusing quotation.
+No surprise price in the middle.
 
-**हिन्दी.** व्हाट्सएप पर मुझे बताइए कि आपको क्या चाहिए। शुरू करने के लिए आधा पैसा दीजिए। फिर निश्चिंत रहिए — काम शुरू
-होने पर, तैयार होने पर और ऑनलाइन आने पर मैं खुद बताऊँगा। मैं कभी झूठ नहीं बोलूँगा। देर होगी तो उसी दिन बता दूँगा।
+**বাংলা.** ওয়েবসাইটের ব্যাপারে আপনার কিছু জানার দরকার নেই। শুধু WhatsApp-এ বলুন আপনার কী দরকার। একটা মেসেজ, ভয়েস নোট,
+ছবি, এমনকি একটা মোটামুটি ধারণা হলেই চলবে। কী কী করা সম্ভব, কত খরচ হবে আর তার মধ্যে কী কী থাকছে — সহজ ভাষায় বুঝিয়ে দেব।
+জটিল কোটেশন নেই। মাঝপথে হঠাৎ দাম বাড়ার ব্যাপারও নেই।
 
-**தமிழ்.** உங்களுக்கு என்ன வேண்டும் என்று வாட்ஸ்அப்பில் சொல்லுங்கள். தொடங்குவதற்கு பாதி பணம் கொடுங்கள். பிறகு
-நிம்மதியாக இருங்கள் — வேலையைத் தொடங்கும்போது, தயாராகும்போது, இணையத்தில் வரும்போது நானே சொல்வேன். நான் ஒருபோதும்
-பொய் சொல்ல மாட்டேன். தாமதம் ஆனால் அன்றைக்கே உங்களிடம் சொல்லிவிடுவேன்.
-
-**తెలుగు.** మీకు ఏమి కావాలో వాట్సాప్‌లో చెప్పండి. మొదలుపెట్టడానికి సగం డబ్బు ఇవ్వండి. తరువాత నిశ్చింతగా ఉండండి — పని
-మొదలైనప్పుడు, సిద్ధమైనప్పుడు, ఆన్‌లైన్‌లోకి వచ్చినప్పుడు నేనే చెబుతాను. నేను ఎప్పుడూ అబద్ధం చెప్పను. ఆలస్యం అయితే ఆ రోజే
-మీకు చెప్పేస్తాను.
-
-**ਪੰਜਾਬੀ.** ਵਟਸਐਪ ਉੱਤੇ ਮੈਨੂੰ ਦੱਸੋ ਕਿ ਤੁਹਾਨੂੰ ਕੀ ਚਾਹੀਦਾ ਹੈ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਅੱਧੇ ਪੈਸੇ ਦਿਓ। ਫਿਰ ਬੇਫ਼ਿਕਰ ਰਹੋ — ਕੰਮ ਸ਼ੁਰੂ ਹੋਣ
-ਵੇਲੇ, ਤਿਆਰ ਹੋਣ ਵੇਲੇ ਅਤੇ ਆਨਲਾਈਨ ਆਉਣ ਵੇਲੇ ਮੈਂ ਆਪ ਦੱਸਾਂਗਾ। ਮੈਂ ਕਦੇ ਝੂਠ ਨਹੀਂ ਬੋਲਾਂਗਾ। ਦੇਰ ਹੋਈ ਤਾਂ ਉਸੇ ਦਿਨ ਦੱਸ ਦਿਆਂਗਾ।
+**हिन्दी.** वेबसाइट के बारे में आपको कुछ जानने की ज़रूरत नहीं है। बस WhatsApp पर बता दीजिए कि आपको क्या चाहिए। एक मैसेज, वॉइस नोट,
+तस्वीरें, या बस एक मोटा-मोटा खयाल भी काफी है। क्या-क्या हो सकता है, कितना खर्च आएगा और उसमें क्या-क्या शामिल है — सब आसान भाषा में
+समझा दूँगा। उलझाने वाला कोटेशन नहीं। बीच में अचानक दाम बढ़ने वाली बात नहीं।
 
 Get a native speaker to read each one before an advertisement leans on it. A translation that is
 merely correct still sounds foreign; these are meant to sound like a person talking.
@@ -276,7 +275,7 @@ But do not claim the opposite either — never write "hand-crafted by our design
 used" about work that was not made that way. If a customer asks outright, tell them plainly: we
 use whatever lets us charge less, and we stand behind the result. That answer sells better than a
 denial, and unlike a denial it cannot come apart later. The promise above is on the home page in
-six languages; contradicting it in a sales message would cost more than any single job is worth.
+three languages; contradicting it in a sales message would cost more than any single job is worth.
 
 ---
 
@@ -284,7 +283,7 @@ six languages; contradicting it in a sales message would cost more than any sing
 
 | Product | One line | Status |
 |---|---|---|
-| EduFlow | School and coaching management — admissions, attendance, fees, exams, parent communication | Live, 300+ centres |
+| EduFlow | School and coaching management — admissions, attendance, fees, exams, parent communication | Live, 40+ centres |
 | SocialPilot AI | Facebook marketing on autopilot — generate, schedule and publish posts with AI | Live |
 | Dekhao Apna Talent | Talent discovery platform for performers and organisers | Live |
 | Health Locker | Personal medical records, shareable with any doctor in seconds | Coming soon |
@@ -324,9 +323,9 @@ Post one a week. Each is under the 1,500 character limit.
 > keep the work small, reuse what we have already built, and set the price for the business in
 > front of us. WhatsApp +91 98042 43159 and ask what yours would cost.
 
-> **Send it on WhatsApp, pay half, then forget about it**
+> **Send it on WhatsApp, agree the price, then forget about it**
 > No enquiry form with fourteen mandatory fields. Send a voice note, a photo of something you have
-> written down, or two lines of text. We agree one fixed price, you pay 50% to start, and you get a
+> written down, or two lines of text. We agree one fixed price before anything starts, and you get a
 > message when work begins, when it is ready to review, and when it goes live. Chasing us for an
 > update is not your job. +91 98042 43159
 
@@ -371,10 +370,10 @@ Nexvora Technologies builds and runs its own software products, and takes on web
 hosting, design, printing and marketing work for small businesses that have been quoted too much
 elsewhere.
 
-Our own products include EduFlow school and coaching management software, used by more than 300
+Our own products include EduFlow school and coaching management software, used by more than 40
 centres, along with SocialPilot AI and Dekhao Apna Talent.
 
-How we work: send the requirement on WhatsApp, agree one fixed price, pay 50% to start. You are
+How we work: send the requirement on WhatsApp and agree one fixed price before anything starts. You are
 told when work begins, when it is ready to review and when it goes live. Domain, hosting and every
 account is registered in your name, not ours.
 

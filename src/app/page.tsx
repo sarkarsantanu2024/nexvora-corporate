@@ -33,7 +33,7 @@ const NEXT_STEPS = [
     href: "/price",
     icon: "sell",
     title: "What it costs",
-    body: "Real numbers. Small jobs from ₹999, packages from ₹7,999, and the running costs that are never inside either.",
+    body: "Real numbers. Small jobs from ₹499, packages from ₹4,499, and the running costs that are never inside either.",
   },
   {
     href: "/examples",

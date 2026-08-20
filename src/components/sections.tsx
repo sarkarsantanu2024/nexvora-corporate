@@ -14,23 +14,32 @@ import {
 } from "@/lib/pricing";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
+import { HeroChat } from "@/components/hero-chat";
+import { HeroHeading } from "@/components/hero-heading";
 import { CAPABILITIES, CONTACT } from "@/lib/site";
 import { WORK } from "@/lib/work";
 
 const WHATSAPP_PATH =
   "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z";
 
-// The lines somebody has already been told, which is usually why the website
-// never happened. Set as speech bubbles rather than bullets, because that is
-// how they were heard.
+// What people say happened to them last time, which is usually why the
+// website never happened again. Set as speech bubbles rather than bullets,
+// because that is how they were said.
+//
+// These are complaints about how the work was done, not about the work
+// itself. An earlier version of this list used "you will need hosting" and
+// "you will need a domain" as scare lines, which was dishonest twice over:
+// both are genuinely needed, and both are things I charge for. Every line
+// here is answered by something stated elsewhere on this site — one price
+// told first, everything in your own name, a reply the same working day.
 const EXCUSES = [
-  "Website will cost thirty thousand.",
-  "Maintenance is extra every year.",
-  "You will need hosting.",
-  "You will need a domain.",
-  "You will need SEO.",
-  "You will need an app as well.",
-  "And digital marketing on top.",
+  "Website will cost ₹30,000.",
+  "The price went up after the work started.",
+  "Nobody told me what I was actually paying for.",
+  "They stopped replying once the payment was made.",
+  "The domain is in their company's name, not mine.",
+  "I still cannot change my own phone number on it.",
+  "It has been 4 months and it is still not live.",
 ];
 
 // Who this is actually for, said as the person rather than the industry.
@@ -87,8 +96,8 @@ const PROMISES = [
   },
   {
     icon: "handshake",
-    title: "I don't disappear after the advance",
-    body: "Half the money starts the work, it does not end the conversation. You will always know what is happening with your job.",
+    title: "I don't go quiet once work starts",
+    body: "You keep messaging the same WhatsApp number you started on. While the work is going on, and long after the site is live, you get a reply from me — not from an office.",
   },
   {
     icon: "notifications_active",
@@ -136,8 +145,8 @@ const STEPS = [
   },
   {
     icon: "payments",
-    title: "Pay half and I start",
-    body: "Once we agree the work and the price, half starts it. The rest is paid on the delivery terms we agreed at the same time.",
+    title: "You agree it, and I start",
+    body: "Nothing begins until you have the price and have said yes to it. How and when you pay is settled in that same conversation, in writing, so there is never a figure you did not expect.",
   },
   {
     icon: "notifications_active",
@@ -202,6 +211,13 @@ const RIGHT_FOR = [
 ];
 
 
+// Split down the middle for the two ticker rows, in the order they are
+// declared in lib/site — the order there is deliberate, so it is kept.
+const CAPABILITY_ROWS = [
+  CAPABILITIES.slice(0, Math.ceil(CAPABILITIES.length / 2)),
+  CAPABILITIES.slice(Math.ceil(CAPABILITIES.length / 2)),
+];
+
 export function Hero() {
   return (
   <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white">
@@ -219,29 +235,7 @@ export function Hero() {
           </span>
           Kolkata · working with people all over India
         </p>
-        <h1 className="mt-6 text-[2.1rem] font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl 2xl:text-[4.2rem]">
-          Need a website for your business?{" "}
-          <span className="relative whitespace-nowrap">
-            <span className="relative z-10 bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-transparent">
-              You don&apos;t need
-            </span>
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 320 14"
-              preserveAspectRatio="none"
-              className="absolute -bottom-1 left-0 h-2.5 w-full text-brand-300"
-            >
-              <path
-                d="M2 9c60-6 120-8 180-6 46 1 92 4 136 8"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="4"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>{" "}
-          a big company budget.
-        </h1>
+        <HeroHeading />
         <p className="mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg 2xl:text-xl">
           I build simple, professional websites and online services for
           shops, tutors, teachers, photographers, clinics, freelancers,
@@ -307,8 +301,8 @@ export function Hero() {
         <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5 text-sm font-medium text-slate-700">
           {[
             "One price, told to you first",
-            "Small jobs ₹1,000 – ₹15,000",
-            "Half to start",
+            "Small jobs ₹499 – ₹12,999",
+            "Payment agreed before work starts",
             "Everything stays in your name",
             "Registered MSME",
           ].map((t) => (
@@ -325,73 +319,74 @@ export function Hero() {
         </ul>
       </Reveal>
 
-      {/* Photo, framed and offset, with the two numbers worth knowing
-          pinned to its corner. */}
-      <Reveal delay={120} className="relative">
-        <div
-          aria-hidden="true"
-          className="absolute -right-3 -top-3 hidden h-full w-full rounded-[2rem] border-2 border-brand-200 sm:block"
-        />
-        <div className="animate-float-slow relative overflow-hidden rounded-[2rem] bg-white p-2 shadow-lift ring-1 ring-slate-200">
-          <Image
-            src="/hero-team.jpg"
-            alt="A project team reviewing work together in an office"
-            width={1200}
-            height={900}
-            priority
-            className="h-full w-full rounded-[1.6rem] object-cover"
-          />
-        </div>
-
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:absolute sm:-bottom-6 sm:-left-5 sm:mt-0 sm:w-[17.5rem] sm:grid-cols-1 sm:gap-0 sm:rounded-2xl sm:border sm:border-slate-200 sm:bg-white sm:p-5 sm:shadow-lift lg:-left-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:rounded-none sm:border-0 sm:p-0">
-            <p className="bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">
-              300+
-            </p>
-            <p className="mt-0.5 text-xs leading-snug text-slate-600 sm:text-sm">
-              centres already running software I built
-            </p>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:mt-4 sm:rounded-none sm:border-0 sm:border-t sm:border-slate-200 sm:p-0 sm:pt-4">
-            <p className="bg-gradient-to-r from-brand-600 to-violet-600 bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">
-              13 yrs
-            </p>
-            <p className="mt-0.5 text-xs leading-snug text-slate-600 sm:text-sm">
-              building for the web, hands on the keyboard
-            </p>
-          </div>
-        </div>
+      {/* Not a photograph.
+          There is no office and no team, so a picture of either would be the
+          first thing on the page that is not true — and not doing that is
+          what this site is selling. What goes here instead is the transaction
+          itself, playing live: the enquiry arrives, the dots appear, the
+          answer goes back. See hero-chat for why it quotes no price. */}
+      <Reveal delay={120}>
+        <HeroChat />
       </Reveal>
     </div>
 
     {/* The shorthand, on a band of its own. It stays because people scan
         for the word they came looking for — but it sits below the plain
-        sentence, not above it. */}
-    <div className="relative border-y border-slate-200 bg-white/70 backdrop-blur">
-      <div className="shell py-7 sm:py-9">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+        sentence, not above it.
+
+        Two rows drifting in opposite directions rather than a static block of
+        chips: a wall of eighteen identical pills reads as a price list nobody
+        finishes, whereas something moving gets looked at, and the row that
+        moves the other way stops the pair reading as one sliding sheet. It
+        pauses under the cursor, so the movement never costs anyone the
+        ability to actually read a name. */}
+    <div className="relative overflow-hidden border-y border-slate-200 bg-white/70 py-7 backdrop-blur sm:py-9">
+      <div className="shell">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
           Website · Online store · Web app · Google · Facebook · Design ·
           Marketing
         </p>
-        <ul className="mt-5 flex flex-wrap gap-2.5">
-          {CAPABILITIES.map((c) => (
-            <li
-              key={c.label}
-              className="group inline-flex items-center gap-2.5 rounded-2xl border border-slate-200 bg-white py-2 pl-2 pr-4 text-sm font-medium text-slate-700 shadow-sm transition duration-300 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
-            >
-              <span className="icon-tile-soft h-9 w-9 rounded-xl">
-                <span
-                  aria-hidden="true"
-                  className="material-symbols-rounded text-[20px]"
-                >
-                  {c.icon}
-                </span>
-              </span>
-              {c.label}
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-600">
+      </div>
+
+      <div className="marquee relative mt-5 space-y-3">
+        {[CAPABILITY_ROWS[0], CAPABILITY_ROWS[1]].map((row, r) => (
+          <div
+            key={r}
+            style={{ ["--marquee-duration" as string]: r === 0 ? "52s" : "64s" }}
+            className={`marquee-track gap-3 ${r === 1 ? "is-reverse" : ""}`}
+          >
+            {/* The list twice over: the first copy is the real one, the
+                second exists only to fill the gap the first leaves behind. */}
+            {[0, 1].map((copy) => (
+              <ul
+                key={copy}
+                aria-hidden={copy === 1 || undefined}
+                className="flex shrink-0 gap-3 pr-3"
+              >
+                {row.map((c) => (
+                  <li
+                    key={c.label}
+                    className="group inline-flex shrink-0 items-center gap-2.5 rounded-2xl border border-slate-200 bg-white py-2 pl-2 pr-4 text-sm font-medium text-slate-700 shadow-sm transition duration-300 hover:border-brand-300 hover:text-brand-700 hover:shadow-lift"
+                  >
+                    <span className="icon-tile-soft h-9 w-9 rounded-xl">
+                      <span
+                        aria-hidden="true"
+                        className="material-symbols-rounded text-[20px]"
+                      >
+                        {c.icon}
+                      </span>
+                    </span>
+                    {c.label}
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div className="shell">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-slate-600">
           <span className="font-semibold text-slate-800">
             Starting small is fine.
           </span>{" "}
@@ -406,7 +401,7 @@ export function Hero() {
 
 export function PuttingOff() {
   return (
-  <section className="relative overflow-hidden border-b border-slate-200 bg-slate-50">
+  <section className="relative overflow-hidden band band-tint">
     <div
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(60rem_40rem_at_30%_0%,black,transparent)]"
@@ -420,9 +415,10 @@ export function PuttingOff() {
           Maybe you have been putting off your website
         </h2>
         <p className="mt-5 leading-relaxed text-slate-600">
-          Because at some point somebody told you all of this at once, and
-          a simple website suddenly felt like a huge project with no end
-          to the bills.
+          Because of how it went last time, or how it went for somebody you
+          know. The problem is rarely the website itself. It is not being
+          told the real number, not being able to reach anyone afterwards,
+          and not owning the thing you paid for.
         </p>
         <p className="mt-4 text-lg font-semibold text-slate-900">
           It does not have to be.
@@ -435,8 +431,9 @@ export function PuttingOff() {
           can be built too.
         </p>
         <p className="mt-5 rounded-2xl border-l-4 border-brand-500 bg-white px-5 py-4 font-medium text-slate-800 shadow-sm">
-          Start with what your business actually needs. Not with what a
-          software company wants to sell you.
+          You hear the price before any work starts, the domain and hosting
+          are registered in your name, and you talk to the person doing the
+          work — not to a sales desk.
         </p>
       </Reveal>
 
@@ -463,7 +460,7 @@ export function PuttingOff() {
 
 export function WhoIsItFor() {
   return (
-  <section className="border-b border-slate-200 bg-white">
+  <section className="band band-plain">
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
@@ -509,7 +506,7 @@ export function WhatICanDo() {
   return (
   <section
     id="help"
-    className="relative scroll-mt-32 overflow-hidden border-b border-slate-200 bg-slate-50"
+    className="relative scroll-mt-32 overflow-hidden band band-tint"
   >
     <div
       aria-hidden="true"
@@ -598,7 +595,7 @@ export function MyPromise() {
   return (
   <section
     id="promise"
-    className="scroll-mt-32 border-b border-slate-200 bg-white"
+    className="scroll-mt-32 band band-plain"
   >
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
@@ -716,7 +713,7 @@ export function HowItWorks() {
   return (
   <section
     id="how"
-    className="scroll-mt-32 border-b border-slate-200 bg-white"
+    className="scroll-mt-32 band band-plain"
   >
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
@@ -769,7 +766,7 @@ export function HowItWorks() {
 
 export function NoTechNeeded() {
   return (
-  <section className="relative overflow-hidden border-b border-slate-200 bg-slate-50">
+  <section className="relative overflow-hidden band band-tint">
     <div
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(55rem_35rem_at_20%_0%,black,transparent)]"
@@ -829,7 +826,7 @@ export function Pricing() {
   return (
   <section
     id="price"
-    className="scroll-mt-32 border-b border-slate-200 bg-white"
+    className="scroll-mt-32 band band-plain"
   >
     <div className="shell grid gap-12 pb-12 pt-16 sm:pt-20 lg:grid-cols-2 lg:gap-16 2xl:pt-24">
       <Reveal className="max-w-2xl">
@@ -864,10 +861,10 @@ export function Pricing() {
             For suitable projects
           </p>
           <p className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
-            50% to start.
+            One price, agreed first.
           </p>
           <p className="mt-1 text-2xl font-bold tracking-tight text-slate-500 sm:text-3xl">
-            The rest on the agreed delivery terms.
+            Payment on the terms we settle with it.
           </p>
           <ul className="mt-7 space-y-3 border-t border-slate-200 pt-6 text-sm text-slate-700">
             {[
@@ -924,7 +921,7 @@ export function Pricing() {
                 Small jobs
               </p>
               <h2 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl 2xl:text-4xl">
-                Small job? ₹999 to ₹14,999, and usually back the same day.
+                Small job? ₹499 to ₹12,999, and usually back the same day.
               </h2>
               <p className="mt-4 leading-relaxed text-slate-700">
                 Not everything is a website. Sometimes you need one poster
@@ -949,7 +946,7 @@ export function Pricing() {
                   "You are told the price before I touch it.",
                   "Nothing in this range needs an advance conversation — pay when you are happy with it.",
                   "Design files can be printed and couriered to you — printing and courier paid by you, at cost.",
-                  "Anything bigger than ₹14,999 gets a proper look and its own number.",
+                  "Anything bigger than ₹12,999 gets a proper look and its own number.",
                   "Domain, hosting and any advertising budget are separate, and never inside these figures.",
                 ].map((line) => (
                   <li key={line} className="flex gap-2.5">
@@ -1031,9 +1028,14 @@ export function Pricing() {
         </div>
       </Reveal>
 
-      {/* Packages. Cheaper than ticking the same things one by one, and
-          the `worth` figure is the honest sum of those parts, so anybody
-          who wants to check the saving can add it up themselves. */}
+      {/* Packages. Cheaper than ticking the same things one by one, but the
+          struck-through total and the "you keep" line are deliberately not
+          shown. A crossed-out price is the oldest trick on a sales page, and
+          on a site whose whole argument is that it does not do sales tricks,
+          it costs more trust than the saving it advertises. The parts are all
+          priced above; anyone who wants to check the arithmetic can. The
+          `worth` figure is still computed in lib/pricing — it fails the build
+          on a bad item id, which is worth keeping on its own. */}
       <Reveal delay={100}>
         <div className="mt-12">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
@@ -1074,13 +1076,7 @@ export function Pricing() {
                   <span className="text-4xl font-bold tracking-tight">
                     {rupees(p.price)}
                   </span>
-                  <span className="text-lg text-slate-400 line-through">
-                    {rupees(p.worth)}
-                  </span>
                 </div>
-                <p className="mt-1 text-sm font-medium text-brand-700">
-                  You keep {rupees(p.worth - p.price)}
-                </p>
 
                 <ul className="mt-6 flex-1 space-y-2.5 border-t border-slate-100 pt-6 text-sm text-slate-700">
                   {p.includes.map((line) => (
@@ -1165,7 +1161,7 @@ export function Examples() {
   return (
   <section
     id="examples"
-    className="scroll-mt-32 border-b border-slate-200 bg-white"
+    className="scroll-mt-32 band band-plain"
   >
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
@@ -1192,7 +1188,7 @@ export function Examples() {
                   alt={w.alt}
                   fill
                   sizes="(min-width: 1024px) 33vw, 100vw"
-                  className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="mt-5 flex items-start justify-between gap-3">
@@ -1252,7 +1248,7 @@ export function Products() {
   return (
   <section
     id="products"
-    className="scroll-mt-32 border-b border-slate-200 bg-slate-50"
+    className="scroll-mt-32 band band-tint"
   >
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
@@ -1334,7 +1330,7 @@ export function ServicesDetail() {
   return (
   <section
     id="services"
-    className="relative scroll-mt-32 overflow-hidden border-b border-slate-200 bg-white"
+    className="relative scroll-mt-32 overflow-hidden band band-plain"
   >
     <div
       aria-hidden="true"
@@ -1392,7 +1388,7 @@ export function WhyIStarted() {
   return (
   <section
     id="mission"
-    className="relative scroll-mt-32 overflow-hidden border-b border-slate-200 bg-slate-50"
+    className="relative scroll-mt-32 overflow-hidden band band-tint"
   >
     <div
       aria-hidden="true"
@@ -1453,7 +1449,7 @@ export function Founder() {
   return (
   <section
     id="founder"
-    className="relative scroll-mt-32 overflow-hidden border-b border-slate-200 bg-white"
+    className="relative scroll-mt-32 overflow-hidden band band-plain"
   >
     <div
       aria-hidden="true"
@@ -1492,9 +1488,13 @@ export function Founder() {
         </h2>
         <p className="mt-5 leading-relaxed text-slate-600">
           I am Santanu. Nexvora is a small technology business based in
-          Kolkata, and it is mine. I handle the jobs I take on myself —
-          from working out what you need, to building the website or the
-          software, to helping you get it online.
+          Kolkata, and it is mine. I do the work myself — from working out
+          what you need, to building the website or the software, to
+          helping you get it online. When a job genuinely needs another
+          pair of hands, a photographer, a printer, someone for a language
+          I do not write, I bring that person in for that piece of it. Your
+          job stays mine either way: I choose them, I check what they hand
+          back, and you deal only with me.
         </p>
         <p className="mt-4 leading-relaxed text-slate-600">
           I have spent thirteen years building websites and web
@@ -1529,8 +1529,8 @@ export function Founder() {
             <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
               Phone, WhatsApp and video call handle almost every job, in
               Bengali, Hindi or English. It is quicker for you, and it
-              keeps your cost down. My office in Kolkata is open to you if
-              you would rather sit across a table.
+              keeps your cost down. If you would rather sit across a table,
+              say so and we will find somewhere in Kolkata to meet.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -1543,13 +1543,14 @@ export function Founder() {
               </span>
             </span>
             <h3 className="mt-4 font-semibold tracking-tight">
-              And I will come to you if the job needs it
+              Meeting in person, if I agree it is needed
             </h3>
             <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
-              If the work genuinely needs me at your place, I will travel
-              anywhere in India. For that you arrange the travel, the stay
-              and the food — and I do not add a charge on top for the trip
-              itself.
+              Some jobs are better done face to face, and for those I will
+              travel. Whether a job is one of them is my decision, and I
+              will say yes or no plainly rather than leave you waiting. If
+              I do travel, you arrange the travel, the stay and the food —
+              and I add no charge on top for the trip itself.
             </p>
           </div>
         </div>
@@ -1570,7 +1571,7 @@ export function Founder() {
             },
             {
               icon: "location_on",
-              term: "Office",
+              term: "Address",
               value: `${CONTACT.street}, ${CONTACT.city} ${CONTACT.pincode}`,
               href: null,
             },
@@ -1616,7 +1617,7 @@ export function Founder() {
 
 export function NotRightForYou() {
   return (
-  <section className="border-b border-slate-200 bg-slate-50">
+  <section className="band band-tint">
     <div className="shell py-16 sm:py-20 2xl:py-24">
       <Reveal className="max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
@@ -1683,7 +1684,7 @@ export function Faq() {
   return (
   <section
     id="faq"
-    className="scroll-mt-32 border-b border-slate-200 bg-white"
+    className="scroll-mt-32 band band-plain"
   >
     <div className="shell grid gap-10 py-16 sm:py-20 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-16 2xl:py-24">
       <Reveal>
@@ -1744,7 +1745,7 @@ export function Contact() {
   return (
   <section
     id="contact"
-    className="scroll-mt-32 bg-slate-50 py-16 sm:py-20 2xl:py-24"
+    className="band band-tint scroll-mt-32 py-16 sm:py-20 2xl:py-24"
   >
     <div className="shell">
       <Reveal className="max-w-3xl">
@@ -1800,7 +1801,7 @@ export function Contact() {
             },
             {
               icon: "location_on",
-              term: "Office",
+              term: "Address",
               value: CONTACT.addressLines.join(", "),
               href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                 CONTACT.mapQuery,
@@ -1837,10 +1838,11 @@ export function Contact() {
 
           <Reveal delay={260} className="sm:col-span-2">
             <p className="rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600 shadow-sm">
-              Most of the work runs on WhatsApp and video call. If your
-              job needs me there in person, I travel anywhere in India —
-              you cover the travel, stay and food, and there is no extra
-              charge for the trip.
+              Most of the work runs on WhatsApp and video call. Some jobs
+              are better done face to face, and for those I will travel —
+              whether yours is one of them is my decision, and you will get
+              a plain yes or no. If I do come, you cover the travel, stay
+              and food, and there is no extra charge for the trip.
             </p>
           </Reveal>
         </div>
