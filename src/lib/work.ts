@@ -9,9 +9,16 @@
 // The three below were captured from the live sites with a headless browser.
 // To refresh them, re-run that capture rather than cropping by hand — a
 // screenshot that disagrees with the live site is worse than no screenshot.
+// "Demo I built to show what is possible" exists because one of these is not a
+// client site. Labelling it anything vaguer would let a reader assume a
+// hospital chose us, and a healthcare name carries more implied endorsement
+// than any other kind. A demo is still worth showing — it just has to say so.
 export type WorkItem = {
   name: string;
-  kind: "My own product" | "Built for a client";
+  kind:
+    | "My own product"
+    | "Built for a client"
+    | "Demo I built to show what is possible";
   blurb: string;
   image: string;
   alt: string;
@@ -39,11 +46,11 @@ export const WORK: WorkItem[] = [
   },
   {
     name: "Tirupati Balaji Health Care Group",
-    kind: "Built for a client",
+    kind: "Demo I built to show what is possible",
     blurb:
-      "A multi-speciality hospital site: departments, doctor profiles, diagnostics, gallery and appointment enquiries, with the emergency numbers reachable from every page.",
+      "A demonstration hospital site, not a client's — built to show what a multi-speciality hospital could have: departments, doctor profiles, diagnostics, gallery and appointment enquiries, with the emergency numbers reachable from every page.",
     image: "/work/tirupati-balaji.png",
-    alt: "The Tirupati Balaji Health Care Group hospital website home page",
+    alt: "A demonstration hospital website home page, built to show what is possible",
     href: "https://tirupati-balaji-hospital.vercel.app/",
   },
   {

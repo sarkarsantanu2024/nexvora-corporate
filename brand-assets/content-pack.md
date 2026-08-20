@@ -290,7 +290,7 @@ three languages; contradicting it in a sales message would cost more than any si
 | Health Locker | Personal medical records, shareable with any doctor in seconds | Coming soon |
 | Abacus Exam | Timed online abacus and mental-maths exams with automatic scoring | Coming soon |
 | Print Ready | Print job management from order to production to delivery | Coming soon |
-| Tirupati Balaji Hospital | Hospital website, departments, doctors and appointment enquiries | Coming soon |
+| Tirupati Balaji Hospital | Demo hospital website — departments, doctors and appointment enquiries. Never describe this as a client; it is a demonstration build | Demo |
 
 ---
 
