@@ -233,7 +233,7 @@ export function Hero() {
           <span className="grid h-6 w-6 place-items-center rounded-full bg-brand-50">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-600" />
           </span>
-          Kolkata · working with people all over India
+          Based in Kolkata, working with small businesses across India
         </p>
         <HeroHeading />
         <p className="mt-7 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg 2xl:text-xl">
