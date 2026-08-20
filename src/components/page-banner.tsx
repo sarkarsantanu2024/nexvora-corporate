@@ -16,6 +16,11 @@ export type Banner = {
   motif: string[];
   /** A real photograph or screenshot, where one exists for this page. */
   image?: { src: string; alt: string };
+  /**
+   * Set on /price itself. The second button sends people to the price page,
+   * which is nothing but a step backwards for someone already reading it.
+   */
+  onPricePage?: boolean;
 };
 
 /**
@@ -24,34 +29,64 @@ export type Banner = {
  * It carries the page's h1, so the section beneath it keeps its own heading at
  * h2 and the document has exactly one h1 per route.
  *
- * The artwork is built from the same icon set the rest of the site uses rather
- * than from a photograph. That is deliberate: there are no honest photographs
- * of "a pricing page", and buying stock images of models pretending to be
- * Indian shopkeepers would undo the thing this site is trying to be. Pages
- * that do have something real to show — a face, a screenshot — pass `image`
- * and get that instead.
+ * Deliberately built as a different object from the home hero. The home page is
+ * a tall, pale, two-column split with a framed photograph and figures pinned to
+ * it — it is the shop window and it is allowed the space. An inner page is
+ * somewhere you arrived on purpose, so this is a short dark band: the words on
+ * a single wide column, the photograph bled into the right edge behind them
+ * rather than framed beside them, and a coloured rule closing the band off.
+ * A reader can tell which kind of page they are on before reading a word, and
+ * the fold arrives sooner so the actual content of the page is visible.
  *
- * Sizing is fluid rather than stepped: the heading uses clamp() so it scales
- * continuously from a 320px phone to a 4K monitor instead of jumping at
- * breakpoints, and the motif is hidden below `lg` where the text needs the
- * full width more than the decoration does.
+ * The photograph is decorative here — the same subject is described in the
+ * heading and intro beside it — so it is marked aria-hidden rather than
+ * repeating itself to a screen reader. Pages with no photograph get the icon
+ * motif instead, ghosted into the same corner.
  */
-export function PageBanner({ eyebrow, title, intro, icon, motif, image }: Banner) {
+export function PageBanner({
+  eyebrow,
+  title,
+  intro,
+  icon,
+  motif,
+  image,
+  onPricePage,
+}: Banner) {
   return (
-    <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-brand-50 via-white to-white">
+    <section className="relative isolate overflow-hidden bg-ink text-white">
+      {/* The photograph, bled into the right edge and faded into the band
+          rather than sitting in a frame of its own. Hidden below lg, where
+          there is no width to bleed into. */}
+      {image ? (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] lg:block"
+        >
+          <Image
+            src={image.src}
+            alt=""
+            fill
+            sizes="52vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/50" />
+        </div>
+      ) : null}
+
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-grid [mask-image:radial-gradient(45rem_28rem_at_50%_0%,black,transparent)]" />
-        <div className="animate-drift absolute -left-40 -top-48 h-[26rem] w-[26rem] rounded-full bg-brand-300/30 blur-[110px]" />
-        <div className="animate-drift absolute -right-28 -top-10 h-[22rem] w-[22rem] rounded-full bg-violet-400/20 blur-[110px] [animation-delay:-6s]" />
+        <div className="absolute inset-0 bg-grid-dark [mask-image:linear-gradient(to_right,black,transparent_70%)]" />
+        <div className="animate-drift absolute -left-32 -top-40 h-[24rem] w-[24rem] rounded-full bg-brand-500/30 blur-[110px]" />
+        <div className="animate-drift absolute -bottom-32 left-1/3 h-[20rem] w-[20rem] rounded-full bg-violet-500/20 blur-[110px] [animation-delay:-6s]" />
       </div>
 
-      <div className="shell relative grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,38%)] lg:gap-14 lg:py-20 2xl:py-24">
-        <Reveal className="min-w-0">
-          <p className="inline-flex items-center gap-2.5 rounded-full border border-brand-100 bg-white py-1.5 pl-2 pr-4 text-[0.7rem] font-semibold uppercase tracking-widest text-brand-700 shadow-sm sm:text-xs">
-            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-50">
+      <div className="shell relative py-11 sm:py-14 lg:py-16">
+        <Reveal className="max-w-3xl">
+          <p className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/10 py-1.5 pl-2 pr-4 text-[0.7rem] font-semibold uppercase tracking-widest text-brand-100 backdrop-blur-sm sm:text-xs">
+            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/15">
               <span
                 aria-hidden="true"
-                className="material-symbols-rounded text-[16px] text-brand-600"
+                className="material-symbols-rounded text-[16px] text-white"
               >
                 {icon}
               </span>
@@ -59,14 +94,13 @@ export function PageBanner({ eyebrow, title, intro, icon, motif, image }: Banner
             {eyebrow}
           </p>
 
-          {/* clamp() rather than breakpoints: no width between 320px and 4K
-              gets a heading that is too big for its line or too small for the
-              column it sits in. */}
-          <h1 className="mt-5 text-[clamp(1.9rem,5.2vw,4rem)] font-bold leading-[1.1] tracking-tight">
+          {/* Smaller than the home h1 on purpose: this one introduces a
+              section, it does not have to sell the whole business. */}
+          <h1 className="mt-4 text-[clamp(1.7rem,3.6vw,3rem)] font-bold leading-[1.12] tracking-tight">
             {title}
           </h1>
 
-          <p className="mt-5 max-w-2xl text-[clamp(0.98rem,1.4vw,1.2rem)] leading-relaxed text-slate-600">
+          <p className="mt-4 max-w-2xl text-[clamp(0.95rem,1.15vw,1.1rem)] leading-relaxed text-slate-300">
             {intro}
           </p>
 
@@ -75,7 +109,7 @@ export function PageBanner({ eyebrow, title, intro, icon, motif, image }: Banner
               href={CONTACT.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-5 py-3.5 text-sm font-semibold text-white shadow-lift transition hover:brightness-105"
+              className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lift transition hover:brightness-105"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -87,70 +121,43 @@ export function PageBanner({ eyebrow, title, intro, icon, motif, image }: Banner
               </svg>
               Tell me what you need
             </a>
-            <Link
-              href="/price"
-              className="group inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3.5 text-sm font-semibold text-slate-800 transition hover:border-brand-400 hover:text-brand-700"
-            >
-              See what it costs
-              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-            </Link>
+            {onPricePage ? null : (
+              <Link
+                href="/price"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/50 hover:bg-white/10"
+              >
+                See what it costs
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              </Link>
+            )}
           </div>
         </Reveal>
 
-        {/* A real photograph earns its place at every width. The decorative
-            icon motif does not, so it stands down below lg where the words
-            matter more and vertical space is expensive. */}
-        <Reveal delay={120} className={image ? "min-w-0" : "hidden lg:block"}>
-          {image ? (
-            <div className="relative overflow-hidden rounded-[1.75rem] bg-white p-2 shadow-lift ring-1 ring-slate-200">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[1.4rem] sm:aspect-[2/1] lg:aspect-[4/3]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(min-width: 1024px) 38vw, 100vw"
-                  className="object-cover object-center"
-                />
-              </div>
-            </div>
-          ) : (
-            <div
-              aria-hidden="true"
-              className="relative mx-auto aspect-square w-full max-w-[22rem]"
-            >
-              {/* One large tile for the page's own subject, with the related
-                  ideas orbiting it. */}
-              <div className="animate-float-slow absolute inset-[18%] grid place-items-center rounded-[2rem] bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25">
-                <span className="material-symbols-rounded text-[clamp(3rem,5vw,4.5rem)]">
-                  {icon}
-                </span>
-              </div>
-
-              {motif.slice(0, 6).map((m, i) => {
-                // Evenly spaced around the centre tile, starting at the top.
-                const angle = (i / Math.min(motif.length, 6)) * 2 * Math.PI - Math.PI / 2;
-                const left = 50 + 42 * Math.cos(angle);
-                const top = 50 + 42 * Math.sin(angle);
-                return (
-                  <span
-                    key={m}
-                    style={{
-                      left: `${left}%`,
-                      top: `${top}%`,
-                      animationDelay: `${i * -1.3}s`,
-                    }}
-                    className="animate-float-slow absolute grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-2xl border border-slate-200 bg-white text-brand-600 shadow-sm"
-                  >
-                    <span className="material-symbols-rounded text-[24px]">
-                      {m}
-                    </span>
-                  </span>
-                );
-              })}
-            </div>
-          )}
-        </Reveal>
+        {/* No photograph for this page: the icon motif takes the same corner,
+            ghosted back so it stays behind the words. */}
+        {image ? null : (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute bottom-0 right-0 hidden items-end gap-3 pr-8 lg:flex 2xl:pr-14"
+          >
+            {motif.slice(0, 5).map((m, i) => (
+              <span
+                key={m}
+                style={{ animationDelay: `${i * -1.3}s` }}
+                className="animate-float-slow grid h-16 w-16 translate-y-4 place-items-center rounded-2xl border border-white/10 bg-white/5 text-white/40 backdrop-blur-sm"
+              >
+                <span className="material-symbols-rounded text-[26px]">{m}</span>
+              </span>
+            ))}
+          </div>
+        )}
       </div>
+
+      {/* Closes the band off and picks up the logo's blue-into-violet. */}
+      <div
+        aria-hidden="true"
+        className="h-1 bg-gradient-to-r from-brand-500 via-violet-500 to-brand-500"
+      />
     </section>
   );
 }

@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { PROMISE_TEXTS } from "@/lib/promise";
 
-const INTERVAL = 7000;
+// Six sentences at a slow reading pace, in a script that may not be the
+// reader's first, plus a moment to sit with it before it changes. Erring long
+// costs nothing — the switcher is right underneath, and hovering stops the
+// rotation entirely.
+const INTERVAL = 22000;
 
 export function PromiseCarousel() {
   const [index, setIndex] = useState(0);
@@ -42,7 +46,7 @@ export function PromiseCarousel() {
             key={t.code}
             lang={t.lang}
             aria-hidden={i !== index}
-            className={`indic absolute inset-0 flex items-center justify-center text-xl font-semibold leading-snug tracking-tight transition-opacity duration-700 sm:text-2xl lg:text-[2.1rem] lg:leading-[1.35] ${
+            className={`indic absolute inset-0 flex items-center justify-center text-xl font-semibold leading-snug tracking-tight transition-opacity duration-[1800ms] ease-in-out sm:text-2xl lg:text-[2.1rem] lg:leading-[1.35] ${
               i === index ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
           >

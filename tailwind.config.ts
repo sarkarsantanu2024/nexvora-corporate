@@ -25,6 +25,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
       },
       boxShadow: {
         lift: "0 18px 40px -18px rgba(10, 17, 40, 0.35)",

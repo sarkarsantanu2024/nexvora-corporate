@@ -59,9 +59,14 @@ export function SiteHeader() {
               </span>
               <span>{CONTACT.phoneDisplay}</span>
             </a>
+            {/* All three are spelled out. An icon alone cannot say a phone
+                number, an address or an email address — and this bar is where
+                someone checks whether the business is near them before they
+                read anything else. They drop out by width, not by preference:
+                the email below sm, the address below lg. */}
             <a
               href={CONTACT.emailHref}
-              className="group hidden items-center gap-2 transition hover:text-white sm:flex"
+              className="hidden items-center gap-2 transition hover:text-white sm:flex"
             >
               <span
                 aria-hidden="true"
@@ -71,7 +76,7 @@ export function SiteHeader() {
               </span>
               <span>{CONTACT.email}</span>
             </a>
-            <span className="group hidden items-center gap-2 lg:flex">
+            <span className="hidden items-center gap-2 lg:flex">
               <span
                 aria-hidden="true"
                 className="material-symbols-rounded text-[19px] text-white/80"
@@ -133,14 +138,16 @@ export function SiteHeader() {
 
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
             {/* Nearly every enquiry arrives on one of these two, so they are
-                the only buttons in the bar. They carry their labels wherever
-                the row has the width for them, and fall back to the icon alone
-                at the sizes where the nav links are competing for space. */}
+                the only buttons in the bar. The handset and the WhatsApp mark
+                are the two symbols an Indian phone user reads without being
+                told, so the words come off and the tooltip carries them for
+                anyone who hesitates. The aria-label stays regardless: the
+                tooltip is a pseudo-element and a touch screen never hovers. */}
             <a
               href={CONTACT.phoneHref}
               aria-label={`Call ${CONTACT.phoneDisplay}`}
-              title={`Call ${CONTACT.phoneDisplay}`}
-              className="group flex h-11 items-center gap-2 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 px-2.5 sm:px-3 text-sm font-semibold text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300 hover:brightness-110"
+              data-tip={`Call ${CONTACT.phoneDisplay}`}
+              className="tip grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 text-white shadow-lift ring-1 ring-inset ring-white/25 transition duration-300 hover:brightness-110"
             >
               <span
                 aria-hidden="true"
@@ -148,17 +155,14 @@ export function SiteHeader() {
               >
                 call
               </span>
-              <span className="hidden pr-1 sm:inline lg:hidden 2xl:inline">
-                Call
-              </span>
             </a>
             <a
               href={CONTACT.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Message us on WhatsApp"
-              title="Message us on WhatsApp"
-              className="flex h-11 items-center gap-2 rounded-xl bg-[#25D366] px-2.5 sm:px-3 text-sm font-semibold text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300 hover:brightness-105"
+              data-tip="Message us on WhatsApp"
+              className="tip grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-[#25D366] text-white shadow-lift ring-1 ring-inset ring-white/30 transition duration-300 hover:brightness-105"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -168,9 +172,6 @@ export function SiteHeader() {
               >
                 <path d={WHATSAPP_PATH} />
               </svg>
-              <span className="hidden pr-1 sm:inline lg:hidden 2xl:inline">
-                WhatsApp
-              </span>
             </a>
             <button
               type="button"

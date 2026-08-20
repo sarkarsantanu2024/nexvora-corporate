@@ -38,39 +38,47 @@ export function ContactDock() {
             : "sm:pointer-events-none sm:translate-y-4 sm:opacity-0"
         }`}
       >
+        {/* Two shapes for two situations. On a phone this is a labelled bar
+            under the thumb — there is no hover on a touch screen, so a bare
+            icon there would have nothing to fall back on. From sm up, where a
+            cursor exists, each one becomes a plain round button and the words
+            move into the tooltip. */}
         <a
           href={CONTACT.whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2.5 bg-[#25D366] py-4 text-[0.95rem] font-semibold text-white transition sm:flex-none sm:rounded-full sm:py-3.5 sm:pl-4 sm:pr-6 sm:shadow-lift sm:ring-1 sm:ring-inset sm:ring-white/30 sm:hover:brightness-105"
+          aria-label="Message me on WhatsApp"
+          data-tip="WhatsApp me"
+          className="tip tip-right flex flex-1 items-center justify-center gap-2.5 bg-[#25D366] py-4 text-[0.95rem] font-semibold text-white transition sm:h-14 sm:w-14 sm:flex-none sm:gap-0 sm:rounded-full sm:py-0 sm:shadow-lift sm:ring-1 sm:ring-inset sm:ring-white/30 sm:hover:brightness-105"
         >
-          <span className="grid h-6 w-6 shrink-0 place-items-center sm:h-8 sm:w-8 sm:rounded-full sm:bg-white/20">
+          <span className="grid h-6 w-6 shrink-0 place-items-center sm:h-7 sm:w-7">
             <svg
               viewBox="0 0 24 24"
               aria-hidden="true"
-              className="h-[22px] w-[22px] sm:h-5 sm:w-5"
+              className="h-[22px] w-[22px] sm:h-7 sm:w-7"
               fill="currentColor"
             >
               <path d={WHATSAPP_PATH} />
             </svg>
           </span>
-          WhatsApp me
+          <span className="sm:hidden">WhatsApp me</span>
         </a>
 
         <a
           href={CONTACT.phoneHref}
-          className="flex flex-1 items-center justify-center gap-2.5 bg-gradient-to-br from-brand-600 to-violet-600 py-4 text-[0.95rem] font-semibold text-white transition sm:flex-none sm:rounded-full sm:py-3.5 sm:pl-4 sm:pr-6 sm:shadow-lift sm:ring-1 sm:ring-inset sm:ring-white/25 sm:hover:brightness-110"
+          aria-label={`Call ${CONTACT.phoneDisplay}`}
+          data-tip={CONTACT.phoneDisplay}
+          className="tip tip-right flex flex-1 items-center justify-center gap-2.5 bg-gradient-to-br from-brand-600 to-violet-600 py-4 text-[0.95rem] font-semibold text-white transition sm:h-14 sm:w-14 sm:flex-none sm:gap-0 sm:rounded-full sm:py-0 sm:shadow-lift sm:ring-1 sm:ring-inset sm:ring-white/25 sm:hover:brightness-110"
         >
-          <span className="grid h-6 w-6 shrink-0 place-items-center sm:h-8 sm:w-8 sm:rounded-full sm:bg-white/20">
+          <span className="grid h-6 w-6 shrink-0 place-items-center sm:h-7 sm:w-7">
             <span
               aria-hidden="true"
-              className="material-symbols-rounded text-[22px] sm:text-[20px]"
+              className="material-symbols-rounded text-[22px] sm:text-[26px]"
             >
               call
             </span>
           </span>
           <span className="sm:hidden">Call me</span>
-          <span className="hidden sm:inline">{CONTACT.phoneDisplay}</span>
         </a>
       </div>
     </>

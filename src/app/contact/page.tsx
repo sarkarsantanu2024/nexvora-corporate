@@ -7,12 +7,12 @@ import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Contact — Message Me on WhatsApp",
-  description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Office in Kolkata, and I travel across India when a job needs it.",
+  description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Based in Kolkata, and I travel to meet you when the job calls for it.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/contact" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/contact",
     title: "Contact — Message Me on WhatsApp",
-    description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Office in Kolkata, and I travel across India when a job needs it.",
+    description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Based in Kolkata, and I travel to meet you when the job calls for it.",
     images: [OG_IMAGE],
   },
   twitter: { images: [OG_IMAGE.url] },
@@ -25,7 +25,7 @@ export default function Page() {
         {...{
         "eyebrow": "Contact",
         "title": "Send me a message. That is genuinely enough to start.",
-        "intro": "Text, a photograph of something you wrote on paper, or a voice note in Bengali, Hindi or English. I reply the same working day. My office is in Kolkata, and I travel across India when a job needs it.",
+        "intro": "Text, a photograph of something you wrote on paper, or a voice note in Bengali, Hindi or English. I reply the same working day. I am based in Kolkata, and I travel to meet you when the job calls for it.",
         "icon": "chat",
         "motif": [
           "call",

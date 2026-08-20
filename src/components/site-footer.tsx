@@ -89,7 +89,7 @@ export function SiteFooter() {
 
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-300">
-          Office
+          Address
         </p>
         <address className="mt-4 space-y-1 text-sm not-italic text-slate-400">
           {CONTACT.addressLines.map((line) => (

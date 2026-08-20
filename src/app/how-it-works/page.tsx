@@ -6,12 +6,12 @@ import { HowItWorks, NoTechNeeded, MyPromise } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "How It Works — Six Steps, and No Surprises on the Bill",
-  description: "Message me on WhatsApp, agree the price, pay half, and I keep you updated until it goes live. No technical knowledge needed, and everything ends up registered in your name.",
+  description: "Message me on WhatsApp and agree the price before anything starts, then I keep you updated until it goes live. No technical knowledge needed, and everything ends up registered in your name.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/how-it-works" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/how-it-works",
     title: "How It Works — Six Steps, and No Surprises on the Bill",
-    description: "Message me on WhatsApp, agree the price, pay half, and I keep you updated until it goes live. No technical knowledge needed, and everything ends up registered in your name.",
+    description: "Message me on WhatsApp and agree the price before anything starts, then I keep you updated until it goes live. No technical knowledge needed, and everything ends up registered in your name.",
     images: [OG_IMAGE],
   },
   twitter: { images: [OG_IMAGE.url] },

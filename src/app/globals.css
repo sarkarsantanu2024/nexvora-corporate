@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The text faces are linked from Google Fonts in layout.tsx rather than fetched
+   by next/font, because the build-time download is blocked on this network and
+   a missing --font-sans is worse than it sounds: var() with no fallback makes
+   the whole font-family declaration invalid, so the page silently drops to the
+   browser's default serif. Declared here with real fallbacks — if Google Fonts
+   is unreachable the page lands on Segoe UI, never on Times. */
+:root {
+  --font-sans: "Inter", "Segoe UI", Roboto, Arial;
+  --font-display: "Poppins", "Inter", "Segoe UI", Arial;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+/* Poppins carries the headings, Inter the reading text. Set here rather than
+   on every heading so a new page cannot ship in the wrong face. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
 }
 
 /* Scroll-in animation used by <Reveal>. Kept in CSS rather than a library so
@@ -33,6 +55,79 @@ body {
   50% {
     transform: translateY(-12px);
   }
+}
+
+/* Two identical copies of the same list sit inside .marquee-track, so moving
+   the track exactly half its own width lands the second copy where the first
+   one started and the loop is seamless with no JavaScript. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  /* Fade both ends so chips arrive and leave rather than being cut off. */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 46s) linear infinite;
+}
+
+.marquee-track.is-reverse {
+  animation-direction: reverse;
+}
+
+/* Stop it under the cursor so a name can actually be read. */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* A message landing: it rises a little and settles. Short and once only —
+   nothing in the hero is allowed to keep bouncing. */
+@keyframes chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.chat-in {
+  animation: chat-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* The three typing dots. This one does repeat, because that is the whole
+   point of it — but it only fades, it does not move anything. */
+@keyframes chat-dot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+.chat-dot {
+  animation: chat-dot 1.2s ease-in-out infinite;
 }
 
 @keyframes drift {
@@ -69,9 +164,90 @@ body {
   .animate-drift {
     animation: none;
   }
+
+  /* The marquee stops and becomes a plain strip the reader scrolls itself. */
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee {
+    overflow-x: auto;
+    mask-image: none;
+  }
 }
 
 @layer components {
+  /* Section grounds.
+     Alternating plain white with slate-50 was still reading as one long white
+     page — the two are four percent apart and a reader scrolling past does not
+     register the change. So the tinted band now carries a real gradient out of
+     the brand blue plus a dot texture, the white band gets a faint wash at its
+     top edge, and every band closes on a coloured hairline instead of a grey
+     border. Backgrounds rather than pseudo-elements, so nothing can paint over
+     the content sitting on them. */
+  .band {
+    @apply relative border-b border-slate-200/70;
+  }
+
+  .band::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-300 to-transparent;
+  }
+
+  .band-tint {
+    background-color: #f6f8fd;
+    background-image:
+      radial-gradient(rgba(59, 91, 219, 0.11) 1px, transparent 1px),
+      linear-gradient(
+        to bottom,
+        rgba(238, 243, 255, 0.95),
+        rgba(255, 255, 255, 0) 60%
+      );
+    background-size:
+      22px 22px,
+      100% 100%;
+  }
+
+  .band-plain {
+    background-color: #ffffff;
+    background-image: radial-gradient(
+      70rem 22rem at 50% 0%,
+      rgba(59, 91, 219, 0.06),
+      transparent 70%
+    );
+  }
+
+  /* Tooltip for controls that show an icon and no label. The text comes from
+     data-tip, and the element must carry its own aria-label as well — this is
+     a ::after on a pseudo-element, so a screen reader never sees it, and a
+     touch screen has no hover at all. Which is why it is used only where the
+     icon genuinely stands on its own (call, WhatsApp, email) and never as the
+     only explanation of something the reader has to decide about. */
+  .tip {
+    @apply relative;
+  }
+
+  .tip::after {
+    content: attr(data-tip);
+    @apply pointer-events-none absolute left-1/2 top-[calc(100%+0.5rem)] z-50 w-max max-w-[15rem] -translate-x-1/2 translate-y-1 rounded-lg bg-ink px-2.5 py-1.5 text-xs font-medium normal-case tracking-normal text-white opacity-0 shadow-lift transition duration-200;
+  }
+
+  .tip:hover::after,
+  .tip:focus-visible::after {
+    @apply translate-y-0 opacity-100;
+  }
+
+  /* For a control pinned to the left edge of the screen, where a tooltip
+     hanging underneath would run off the bottom or the side. */
+  .tip-right::after {
+    @apply left-[calc(100%+0.6rem)] top-1/2 translate-x-1 -translate-y-1/2;
+  }
+
+  .tip-right:hover::after,
+  .tip-right:focus-visible::after {
+    @apply -translate-y-1/2 translate-x-0;
+  }
+
   /* Every section is measured by this one class. 1600px keeps four cards on a
      1920 monitor without the text lines getting too long to read. */
   .shell {

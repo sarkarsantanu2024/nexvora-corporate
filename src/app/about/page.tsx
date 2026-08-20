@@ -6,12 +6,12 @@ import { Founder, WhyIStarted, NotRightForYou } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "About Me — Santanu Sarkar, the Person Who Does the Work",
-  description: "Nexvora is a one-person technology business in Kolkata. Thirteen years building for the web, no account manager in the middle, and I will travel anywhere in India if the job needs it.",
+  description: "Nexvora is a small technology business in Kolkata, run by Santanu Sarkar. Thirteen years building for the web, no account manager in the middle, and you deal with the person doing the work.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/about" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/about",
     title: "About Me — Santanu Sarkar, the Person Who Does the Work",
-    description: "Nexvora is a one-person technology business in Kolkata. Thirteen years building for the web, no account manager in the middle, and I will travel anywhere in India if the job needs it.",
+    description: "Nexvora is a small technology business in Kolkata, run by Santanu Sarkar. Thirteen years building for the web, no account manager in the middle, and you deal with the person doing the work.",
     images: [OG_IMAGE],
   },
   twitter: { images: [OG_IMAGE.url] },
@@ -24,7 +24,7 @@ export default function Page() {
         {...{
         "eyebrow": "About me",
         "title": "You will be dealing with the person who does the work.",
-        "intro": "I am Santanu Sarkar. Nexvora is mine, it is based in Kolkata, and there is no account manager in the middle. Thirteen years building for the web, and I will travel anywhere in India when a job genuinely needs me there.",
+        "intro": "I am Santanu Sarkar. Nexvora is mine, it is based in Kolkata, and there is no account manager in the middle. Thirteen years building for the web. I do the work myself and bring in another pair of hands only when a job genuinely needs one — either way you deal with me.",
         "icon": "person",
         "motif": [
           "code",
