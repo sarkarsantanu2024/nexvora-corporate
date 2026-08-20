@@ -20,11 +20,11 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How does the payment work?",
-    a: "We agree it at the same time as the price, before any work starts, and it is written down with everything else. Small jobs are usually paid once you have the finished thing in your hand. Larger ones are split into stages so you are never paying far ahead of what has actually been done. Whatever we agree is what you pay — nothing is added to the bill later because the job turned out to be harder than I thought.",
+    a: "We agree it at the same time as the price, before any work starts, and it is written down with everything else. Small jobs are usually paid once you have the finished thing in your hand. Larger ones are split into stages so you are never paying far ahead of what has actually been done. Whatever we agree is what you pay — nothing is added to the bill later because the job turned out to be harder than I thought. If you ask for something that was not in what we agreed, that is a separate thing: I will tell you what it costs before I build it, and you decide.",
   },
   {
     q: "Will the website be in my name or yours?",
-    a: "Yours. Domain, hosting, Google and social accounts are registered to you wherever that is practical. If you ever want to move away from me, you take all of it with you and you do not need my permission.",
+    a: "Yours. Domain, hosting, Google and social accounts are registered to you wherever that is practical, and they stay under your control. A few things genuinely cannot work that way — a payment gateway has its own account rules, some third-party services are billed through mine, and occasionally a customer would simply rather I hold the technical side. Where that happens I will say so at the time and tell you what it means. Everything that can be in your name is, and if you ever want to move away from me you take it with you without needing my permission.",
   },
   {
     q: "Can we meet face to face?",
@@ -36,7 +36,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What if the work takes longer than you said?",
-    a: "You hear it from me the same day I know, not after the date has passed. Sometimes a requirement turns out to be harder, or the plan needs changing. I would rather tell you an inconvenient truth early than a comfortable excuse late.",
+    a: "You hear it from me the same day I know, not after the date has passed. Sometimes a requirement turns out to be harder, or the plan needs changing. If something changes, I will tell you — even when the news is not good.",
   },
   {
     q: "I already have a website. Can you repair it instead?",
@@ -44,6 +44,6 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Will I get a proper bill?",
-    a: `A GST invoice for every rupee. Nexvora is a registered MSME — Udyam ${CONTACT.udyam} — with an office you can visit.`,
+    a: `A proper invoice for every job, with the payment terms we agreed written on it. Nexvora is a registered MSME — Udyam ${CONTACT.udyam} — based in Kolkata.`,
   },
 ];

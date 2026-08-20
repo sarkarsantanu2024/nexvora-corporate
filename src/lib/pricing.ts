@@ -135,7 +135,7 @@ const PACKAGE_SPECS: PackageSpec[] = [
       "Facebook business page set up",
       "Google Business Profile set up",
       "Visiting card design",
-      "Everything registered in your name",
+      "Domain, hosting and accounts under your control wherever practical",
     ],
   },
   {
@@ -168,7 +168,7 @@ const PACKAGE_SPECS: PackageSpec[] = [
       "Visiting card design",
       "Five social media post designs to start you off",
       "Set up so Google can read and list your pages",
-      "Everything registered in your name",
+      "Domain, hosting and accounts under your control wherever practical",
     ],
   },
 ];

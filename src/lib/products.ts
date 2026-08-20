@@ -39,7 +39,9 @@ export const PRODUCTS: Product[] = [
     name: "Health Locker",
     tagline: "Personal medical records",
     blurb:
-      "Keep prescriptions, reports and medical history in one secure place, shareable with any doctor in seconds.",
+      // "Secure" is a claim with a standard behind it, and this one is not
+      // live or tested yet. It says organised until it can say secure.
+      "Keep prescriptions, reports and medical history in one organised place, shareable with any doctor in seconds.",
     href: null,
     accent: "from-rose-500 to-red-600",
   },
