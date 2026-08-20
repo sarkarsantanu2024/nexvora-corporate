@@ -16,20 +16,26 @@ export const OG_IMAGE = {
 // Contact details and capability shorthand live here because they appear in
 // three or four places each — header, hero, footer, contact section — and a
 // phone number that disagrees with itself across a page is worse than none.
+// No street address anywhere on the site. There is no office, and the
+// registered address is a private one — publishing it invited people to turn
+// up somewhere they cannot be received, and put a home address on the open
+// web for no return.
+//
+// The city stays. "Kolkata, West Bengal" is true, it is what Google's local
+// ranking actually reads, and it tells a customer the one thing they want to
+// know before they enquire — roughly where this person is. The schema in
+// layout.tsx carries the same city-level address and areaServed instead of a
+// PostalAddress with a street in it.
 export const CONTACT = {
   phoneDisplay: "+91 98042 43159",
   phoneHref: "tel:+919804243159",
   whatsappHref: "https://wa.me/919804243159",
   email: "sarkarsantanu69@gmail.com",
   emailHref: "mailto:sarkarsantanu69@gmail.com",
-  street: "142 R. N. Guha Road",
   city: "Kolkata",
   state: "West Bengal",
-  pincode: "700076",
   country: "India",
   location: "Kolkata, West Bengal, India",
-  addressLines: ["142 R. N. Guha Road", "Kolkata, West Bengal 700076", "India"],
-  mapQuery: "142 R.N. Guha Road, Kolkata, West Bengal 700076, India",
   udyam: "UDYAM-WB-10-021416",
 };
 

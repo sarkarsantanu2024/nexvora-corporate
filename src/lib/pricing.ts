@@ -175,6 +175,128 @@ const PACKAGE_SPECS: PackageSpec[] = [
 
 export type Package = Omit<PackageSpec, "worthItems"> & { worth: number };
 
+/**
+ * Nexvora Care — the monthly plans.
+ *
+ * Deliberately not sold as hosting. The moment a plan is described as hosting,
+ * it is compared with a ₹100 hosting bill and loses. What is actually being
+ * bought is knowing who to WhatsApp when something breaks, and not having to
+ * learn any of it — which is the same promise the rest of the site makes,
+ * continued past the day the site goes live.
+ *
+ * Every tier states its time allowance out loud. "Minor updates included" with
+ * no number is how a ₹299 customer ends up asking for a booking system, and
+ * how the person doing the work quietly starts resenting the plan. A stated
+ * limit protects both sides and is easier to sell than a vague generosity.
+ *
+ * The annual price is roughly ten months for twelve. It is worth offering:
+ * the customer saves real money, and the cash arrives at the start of the year
+ * rather than in twelve pieces that each need chasing.
+ *
+ * Not called an AMC anywhere in the interface. Plenty of Indian businesses
+ * know the term, but the person this site is written for may not, and "care"
+ * needs no explaining.
+ */
+export type CarePlan = {
+  id: string;
+  name: string;
+  monthly: number;
+  yearly: number;
+  who: string;
+  /** The time allowance, stated rather than implied. */
+  allowance: string;
+  includes: string[];
+  featured?: boolean;
+};
+
+export const CARE_PLANS: CarePlan[] = [
+  {
+    id: "basic",
+    name: "Basic Care",
+    monthly: 299,
+    yearly: 2999,
+    who: "For a simple business website that mostly stays the same",
+    allowance: "Up to 30 minutes of changes a month",
+    includes: [
+      "Hosting and the security certificate looked after",
+      "Backups taken, and checked that they actually restore",
+      "I am told if your site goes down, before you notice",
+      "Security updates as they come",
+      "Small changes — a phone number, a price, a photograph",
+      "WhatsApp support from me, not a ticket queue",
+    ],
+  },
+  {
+    id: "business",
+    name: "Business Care",
+    monthly: 599,
+    yearly: 5999,
+    who: "For a business that actually uses its website every month",
+    featured: true,
+    allowance: "Up to 1 hour of changes a month",
+    includes: [
+      "Everything in Basic Care",
+      "Text and photographs replaced whenever you need",
+      "A new offer or announcement banner put up",
+      "Your Google Business Profile kept current",
+      "A monthly check that the site is fast and working",
+      "Your enquiries checked — the form and the WhatsApp button",
+      "Your message answered first",
+    ],
+  },
+  {
+    id: "growth",
+    name: "Growth Care",
+    monthly: 999,
+    yearly: 9999,
+    who: "For a business that wants its website working, not just sitting there",
+    allowance: "Up to 2 hours of changes a month",
+    includes: [
+      "Everything in Business Care",
+      "2 promotional creatives a month, in your colours",
+      "Ongoing SEO work so you keep turning up in searches",
+      "Google Business posts and photographs kept going",
+      "A monthly note on how many people came and from where",
+      "Small landing pages for an offer or a season",
+    ],
+  },
+  {
+    id: "pro",
+    name: "Pro Care",
+    monthly: 1499,
+    yearly: 14999,
+    who: "For a web application, an online shop, or custom software",
+    allowance: "Up to 4 hours of maintenance a month",
+    includes: [
+      "Everything in Growth Care",
+      "Your application and its database watched, not just the website",
+      "Bugs fixed as they are found",
+      "Speed and uptime watched properly",
+      "Small changes to features you already have",
+      "A monthly report in plain language on how it is all holding up",
+    ],
+  },
+];
+
+// The line between looking after what exists and building something new.
+// Written down because this is the single thing that decides whether a
+// monthly plan is worth having or slowly turns into unpaid development.
+export const CARE_INCLUDED = [
+  "Changing text, prices and phone numbers",
+  "Swapping photographs and replacing a banner",
+  "Small layout tidying on a page that already exists",
+  "Keeping hosting, backups and security in order",
+  "Telling you what went wrong when something breaks",
+];
+
+export const CARE_NOT_INCLUDED = [
+  "New pages beyond what the plan allows",
+  "A new feature, module or payment gateway",
+  "A booking system, a login, or anything with a database behind it",
+  "A full redesign of the site",
+  "A mobile app or custom software built from scratch",
+];
+
 // The running costs. These are never inside any figure on this page, they are
 // paid to the provider in the customer's own name, and saying so plainly here
 // is cheaper than an argument later.

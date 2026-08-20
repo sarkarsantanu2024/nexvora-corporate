@@ -123,12 +123,15 @@ const JSON_LD = {
       telephone: "+91-98042-43159",
       email: CONTACT.email,
       priceRange: "₹₹",
+      // City-level only, with no street or postcode: this is a business that
+      // works remotely and has no premises to receive anyone at. Google treats
+      // that as a service-area business, and the Business Profile should be
+      // set the same way — address hidden, service area set to India — or the
+      // listing and this markup will disagree with each other.
       address: {
         "@type": "PostalAddress",
-        streetAddress: CONTACT.street,
         addressLocality: CONTACT.city,
         addressRegion: CONTACT.state,
-        postalCode: CONTACT.pincode,
         addressCountry: "IN",
       },
       areaServed: { "@type": "Country", name: "India" },

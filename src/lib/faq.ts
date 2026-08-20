@@ -27,6 +27,10 @@ export const FAQS: Faq[] = [
     a: "Yours. Domain, hosting, Google and social accounts are registered to you wherever that is practical, and they stay under your control. A few things genuinely cannot work that way — a payment gateway has its own account rules, some third-party services are billed through mine, and occasionally a customer would simply rather I hold the technical side. Where that happens I will say so at the time and tell you what it means. Everything that can be in your name is, and if you ever want to move away from me you take it with you without needing my permission.",
   },
   {
+    q: "What happens after the website is live? Do I have to pay every month?",
+    a: "No. The website is yours once it is paid for, and it keeps working whether or not you pay me anything again. What is optional is Nexvora Care — a monthly plan from ₹299 where I look after the hosting, the backups and the security, and make the small changes as they come up: a new price, a new photograph, a new offer. Every plan says out loud how much of my time it includes, so nobody is guessing. Take it if you would rather not think about any of this, and leave it if you would.",
+  },
+  {
     q: "Can we meet face to face?",
     a: "Most of the work runs on phone, WhatsApp and video call, and that keeps your cost down. If you would rather sit across a table, say so and we will find somewhere in Kolkata to meet. Some jobs are better done face to face, and for those I will travel — whether yours is one of them is my decision, and I will tell you plainly either way. If I do come, you arrange the travel, the stay and the food, and I do not charge extra for the trip itself.",
   },
