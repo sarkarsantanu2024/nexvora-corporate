@@ -28,17 +28,25 @@ const GA_ID =
     ? (process.env.NEXT_PUBLIC_GA_ID ?? "G-06RYPVJNB3")
     : undefined;
 
-// Written for the person, not the crawler — but the words a person would
-// actually search for are still in it. Tell me what you need is the whole
-// proposition; everything else on the page is detail.
+// The meta description, kept near 160 characters so Google shows all of it
+// rather than cutting it mid-sentence. Service, then place, then the one
+// instruction that is the whole proposition.
 const DESCRIPTION =
+  "Affordable websites, web apps, online stores, software and digital services for small businesses in Kolkata and across India. Tell Nexvora on WhatsApp.";
+
+// The longer version, for the LocalBusiness schema and the OG card, where
+// there is no length penalty and the extra detail earns its place.
+const BUSINESS_DESCRIPTION =
   "You don't need to understand technology, or a big company budget. Tell me on WhatsApp what your business needs and I'll tell you what it costs before we start. Websites, online stores, web apps, Google and Facebook setup, design and marketing for small businesses across India. Kolkata-based Nexvora Technologies also builds EduFlow school management software.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
+  // Service, then place, then brand — the order Google reads it in, and still
+  // a sentence a person understands. The old title led with the brand, which
+  // only helps people who already know the name.
   title: {
     default:
-      "Nexvora Technologies — Website for Your Business Without a Big Company Budget",
+      "Affordable Website & Web Development in Kolkata | Nexvora Technologies",
     template: "%s · Nexvora Technologies",
   },
   description: DESCRIPTION,
@@ -111,7 +119,7 @@ const JSON_LD = {
       url: SITE,
       image: `${SITE}/logo-mark.png`,
       logo: `${SITE}/logo-mark.png`,
-      description: DESCRIPTION,
+      description: BUSINESS_DESCRIPTION,
       telephone: "+91-98042-43159",
       email: CONTACT.email,
       priceRange: "₹₹",
