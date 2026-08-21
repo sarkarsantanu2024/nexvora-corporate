@@ -40,14 +40,22 @@ export function PromiseCarousel() {
     >
       {/* The box is sized to the longest translation so the buttons below it
           never jump as the language changes. */}
-      <div className="relative min-h-[15rem] sm:min-h-[16rem] lg:min-h-[19rem]">
+      <div className="relative min-h-[19rem] sm:min-h-[21rem] lg:min-h-[26rem]">
         {PROMISE_TEXTS.map((t, i) => (
           <blockquote
             key={t.code}
             lang={t.lang}
             aria-hidden={i !== index}
-            className={`indic absolute inset-0 flex items-center justify-center text-xl font-semibold leading-snug tracking-tight transition-opacity duration-[1800ms] ease-in-out sm:text-2xl lg:text-[2.1rem] lg:leading-[1.35] ${
-              i === index ? "opacity-100" : "pointer-events-none opacity-0"
+            // `invisible` on the inactive ones, not just opacity-0. Two
+            // paragraphs of different text cross-fading in the same box
+            // produced a legible ghost of one language sitting behind the
+            // other for the whole of the fade. Visibility flips instantly so
+            // only one is ever readable, while opacity still animates the one
+            // arriving.
+            className={`indic absolute inset-0 flex items-center justify-center text-xl font-semibold leading-snug tracking-tight transition-opacity duration-700 ease-in-out sm:text-2xl lg:text-[2.1rem] lg:leading-[1.35] ${
+              i === index
+                ? "visible opacity-100"
+                : "invisible pointer-events-none opacity-0"
             }`}
           >
             <span>“{t.text}”</span>
