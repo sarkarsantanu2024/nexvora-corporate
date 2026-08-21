@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { LEGAL_LINKS } from "@/lib/legal";
 import { NAV_LINKS, SITE_URL } from "@/lib/site";
 
 /**
@@ -9,10 +10,14 @@ import { NAV_LINKS, SITE_URL } from "@/lib/site";
  * search a way back to the top. The BreadcrumbList JSON-LD alongside it is
  * what makes Google show "nexvoratechnologies.co.in › Price" in the result
  * instead of a bare URL. The label comes from NAV_LINKS, so it can never
- * disagree with the menu.
+ * disagree with the menu — and from LEGAL_LINKS for the legal pages, which
+ * are reachable from the footer rather than the menu but still deserve a way
+ * back to the top.
  */
 export function Breadcrumbs({ current }: { current: string }) {
-  const page = NAV_LINKS.find((l) => l.href === current);
+  const page =
+    NAV_LINKS.find((l) => l.href === current) ??
+    LEGAL_LINKS.find((l) => l.href === current);
   if (!page) return null;
 
   const jsonLd = {

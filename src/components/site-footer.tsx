@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SocialLinks } from "@/components/social-links";
+import { LEGAL_LINKS } from "@/lib/legal";
 import { CAPABILITIES, CONTACT, NAV_LINKS } from "@/lib/site";
 
 const YEAR = 2026;
@@ -121,8 +122,22 @@ export function SiteFooter() {
     </div>
 
     <div className="relative border-t border-white/10 bg-black/25">
-      <div className="shell flex flex-col gap-2 py-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <div className="shell flex flex-col gap-4 py-6 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between">
         <p>© {YEAR} Nexvora Technologies. All rights reserved.</p>
+
+        {/* The legal pages live down here rather than in the menu. Nobody
+            comes to the site looking for them, but everybody expects to find
+            them in this exact corner when they do go looking. */}
+        <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          {LEGAL_LINKS.map((l) => (
+            <li key={l.href}>
+              <Link href={l.href} className="transition hover:text-white">
+                {l.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
         <p>Udyam {CONTACT.udyam}</p>
       </div>
     </div>
