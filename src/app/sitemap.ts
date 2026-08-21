@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { LEGAL_LINKS, LEGAL_UPDATED_AT } from "@/lib/legal";
 import { NAV_LINKS, SITE_URL } from "@/lib/site";
 
 const SITE = SITE_URL;
@@ -34,6 +35,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: UPDATED,
       changeFrequency: "monthly" as const,
       priority: PRIORITY[l.href] ?? 0.6,
+    })),
+    // The legal pages. Listed so they are indexed and can be produced when
+    // somebody asks whether the business has them, but priced at the bottom
+    // of the crawl budget — nobody searches their way to a refund policy.
+    ...LEGAL_LINKS.map((l) => ({
+      url: `${SITE}${l.href}`,
+      lastModified: LEGAL_UPDATED_AT,
+      changeFrequency: "yearly" as const,
+      priority: 0.3,
     })),
   ];
 }
