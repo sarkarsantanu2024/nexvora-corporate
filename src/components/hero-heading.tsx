@@ -84,8 +84,14 @@ export function HeroHeading() {
             aria-hidden={on ? undefined : true}
             // Every version occupies the same cell, so the box is sized by
             // the tallest and nothing below it shifts.
-            className={`indic col-start-1 row-start-1 transition-opacity duration-[2000ms] ease-in-out ${
-              on ? "opacity-100" : "pointer-events-none opacity-0"
+            // `invisible` rather than opacity alone: three headings stacked in
+            // one grid cell and cross-faded leave a readable ghost of the
+            // outgoing language behind the incoming one. Visibility flips
+            // instantly so only one is ever legible; opacity still animates.
+            className={`indic col-start-1 row-start-1 transition-opacity duration-[1400ms] ease-in-out ${
+              on
+                ? "visible opacity-100"
+                : "invisible pointer-events-none opacity-0"
             }`}
           >
             {v.before}
