@@ -138,7 +138,7 @@ const PROMISES = [
 const STEPS = [
   {
     icon: "chat",
-    title: "Tell me what you need",
+    title: "You tell me what you need",
     body: "WhatsApp is enough. Text, photos, a screenshot, a voice note, or just explain the idea. You do not have to prepare anything technical.",
   },
   {
@@ -245,7 +245,7 @@ export function Hero() {
           small businesses and people starting something new.
         </p>
         <p className="mt-4 max-w-xl text-base font-medium leading-relaxed text-slate-800 sm:text-lg">
-          Tell me what you need on WhatsApp. I will tell you what is
+          You can tell me on WhatsApp what you need, and I will tell you what is
           possible and what it will cost.
         </p>
 
@@ -527,7 +527,7 @@ export function WhatICanDo() {
           What can I help you with?
         </h2>
         <p className="mt-3 text-slate-600">
-          You do not have to know the technical name for it. Just tell me
+          You do not have to know the technical name for it. You can just tell me
           what you want to do.
         </p>
       </Reveal>
@@ -792,7 +792,7 @@ export function NoTechNeeded() {
           talking to somebody who does.
         </p>
         <p className="mt-4 font-semibold text-slate-900">
-          Tell me what you want your customer to be able to do. That is
+          You only have to say what you want your customer to be able to do. That is
           enough to start.
         </p>
       </Reveal>
@@ -850,8 +850,8 @@ export function Pricing() {
         </p>
         <p className="mt-4 leading-relaxed text-slate-600">
           So I am not going to put a made-up &ldquo;starting from
-          ₹X&rdquo; on this page just to get you to call. Tell me what you
-          actually need, I will look at it properly, and I will give you a
+          ₹X&rdquo; on this page just to get you to call. Once I know what
+          you actually need, I will look at it properly and give you a
           number for it.
         </p>
         <p className="mt-4 leading-relaxed text-slate-600">

@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { X } from "lucide-react";
 import { CONTACT } from "@/lib/site";
 import {
+  CARE_NOT_INCLUDED,
+  CARE_PLANS,
   NOT_INCLUDED,
   PACKAGES,
   PRICE_GROUPS,
@@ -32,6 +34,14 @@ export function PriceCalculator() {
   const [open, setOpen] = useState(false);
   const [picked, setPicked] = useState<string[]>([]);
   const [pkg, setPkg] = useState<string | null>(null);
+  // Care is a monthly figure, so it is held separately and never folded into
+  // the one-off estimate. Adding ₹599 to a ₹9,999 build would make the total
+  // wrong in both directions at once.
+  const [care, setCare] = useState<string | null>(null);
+  // Three tabs rather than one long column. Thirty jobs, two packages and four
+  // care plans stacked end to end is about six phone-screens of scrolling, and
+  // the reader who came to price one poster had to travel through all of it.
+  const [tab, setTab] = useState<"jobs" | "packages" | "care">("jobs");
 
   // Escape closes, and the page behind must not scroll while the panel is over
   // it — on a phone that is the difference between a panel and a mess.
@@ -58,6 +68,7 @@ export function PriceCalculator() {
   }, []);
 
   const chosenPackage = PACKAGES.find((p) => p.id === pkg) ?? null;
+  const chosenCare = CARE_PLANS.find((c) => c.id === care) ?? null;
 
   const total = useMemo(() => {
     const items = picked.reduce(
@@ -67,7 +78,7 @@ export function PriceCalculator() {
     return items + (chosenPackage?.price ?? 0);
   }, [picked, chosenPackage]);
 
-  const count = picked.length + (chosenPackage ? 1 : 0);
+  const count = picked.length + (chosenPackage ? 1 : 0) + (chosenCare ? 1 : 0);
 
   const toggle = (id: string) =>
     setPicked((v) => (v.includes(id) ? v.filter((x) => x !== id) : [...v, id]));
@@ -75,6 +86,7 @@ export function PriceCalculator() {
   const reset = () => {
     setPicked([]);
     setPkg(null);
+    setCare(null);
   };
 
   // The enquiry, written out the way a person would write it.
@@ -93,10 +105,16 @@ export function PriceCalculator() {
         if (item) lines.push(`• ${item.label} — ${rupees(item.price)}`);
       }
     }
-    if (count) lines.push("", `Estimated total: ${rupees(total)}`);
+    if (total) lines.push("", `Estimated one-time total: ${rupees(total)}`);
+    if (chosenCare) {
+      lines.push(
+        "",
+        `Monthly care: ${chosenCare.name} — ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
+      );
+    }
     lines.push("", "Please tell me if this is right for what I need.");
     return `${CONTACT.whatsappHref}?text=${encodeURIComponent(lines.join("\n"))}`;
-  }, [chosenPackage, picked, total, count]);
+  }, [chosenPackage, chosenCare, picked, total]);
 
   return (
     <>
@@ -158,18 +176,61 @@ export function PriceCalculator() {
               </button>
             </div>
 
+            {/* Jobs first: most people open this to cost one thing they
+                already have in mind, not to be sold a bundle. The count on
+                each tab means a selection made in one is never lost from
+                sight while the reader is looking at another. */}
+            <div
+              role="tablist"
+              aria-label="What would you like to price?"
+              className="flex shrink-0 border-b border-slate-200 bg-slate-50 px-2 sm:px-4"
+            >
+              {(
+                [
+                  ["jobs", "Jobs", picked.length],
+                  ["packages", "Packages", chosenPackage ? 1 : 0],
+                  ["care", "Monthly care", chosenCare ? 1 : 0],
+                ] as const
+              ).map(([id, label, n]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={tab === id}
+                  onClick={() => setTab(id)}
+                  className={`relative flex-1 px-2 py-3.5 text-sm font-semibold transition ${
+                    tab === id
+                      ? "text-brand-700"
+                      : "text-slate-500 hover:text-slate-800"
+                  }`}
+                >
+                  <span className="inline-flex items-center gap-1.5">
+                    {label}
+                    {n > 0 && (
+                      <span className="grid h-5 min-w-5 place-items-center rounded-full bg-brand-600 px-1 text-[11px] font-bold text-white">
+                        {n}
+                      </span>
+                    )}
+                  </span>
+                  {tab === id && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-gradient-to-r from-brand-600 to-violet-600"
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+
             <div className="flex-1 overflow-y-auto px-5 py-6 sm:px-7">
-              {/* The individual jobs come first. Most people open this to
-                  cost one thing they already have in mind, not to be sold a
-                  bundle — so the list they came for is the first thing under
-                  their thumb, and the packages sit underneath as the answer
-                  to "that is adding up". */}
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Pick jobs one by one
-              </p>
-              {PRICE_GROUPS.map((g) => (
-                <div key={g.id} className="mt-6">
-                  <div className="flex items-center gap-3">
+              {tab === "jobs" && (
+                <>
+              {/* One group open, the rest folded. A reader pricing a poster
+                  should not have to scroll past eight website prices to
+                  reach it. */}
+              {PRICE_GROUPS.map((g, gi) => (
+                <details key={g.id} open={gi === 0} className="group mt-3 first:mt-0">
+                  <summary className="flex cursor-pointer list-none items-center gap-3 rounded-xl px-1 py-2 hover:bg-slate-50">
                     <span className="icon-tile-soft h-10 w-10">
                       <span
                         aria-hidden="true"
@@ -178,9 +239,17 @@ export function PriceCalculator() {
                         {g.icon}
                       </span>
                     </span>
-                    <h3 className="font-semibold tracking-tight">{g.title}</h3>
-                  </div>
-                  <ul className="mt-3 space-y-1">
+                    <h3 className="flex-1 font-semibold tracking-tight">
+                      {g.title}
+                    </h3>
+                    <span
+                      aria-hidden="true"
+                      className="material-symbols-rounded shrink-0 text-[22px] text-slate-400 transition-transform group-open:rotate-180"
+                    >
+                      expand_more
+                    </span>
+                  </summary>
+                  <ul className="mt-2 space-y-1">
                     {g.items.map((item) => {
                       const active = picked.includes(item.id);
                       return (
@@ -209,15 +278,16 @@ export function PriceCalculator() {
                       );
                     })}
                   </ul>
-                </div>
+                </details>
               ))}
+                </>
+              )}
 
-              {/* Packages after the list, not before it. They genuinely cost
-                  less than the same things ticked one by one, and this is the
-                  moment that lands: the reader has just watched their own
-                  total climb. */}
-              <p className="mt-9 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Or take a package — cheaper than buying the pieces
+              {tab === "packages" && (
+                <>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Most people need several of these at once. Bought together
+                they cost less than ticking them off one by one.
               </p>
               <div className="mt-4 space-y-3">
                 {PACKAGES.map((p) => {
@@ -271,19 +341,114 @@ export function PriceCalculator() {
                   );
                 })}
               </div>
+                </>
+              )}
 
-              {/* The part nobody else prints. */}
-              <div className="mt-9 rounded-2xl border border-amber-200 bg-amber-50 p-5">
-                <p className="flex items-center gap-2 font-semibold tracking-tight text-amber-900">
+              {tab === "care" && (
+                <>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Optional, and separate from everything above. Your website
+                works whether or not you take one, and you can stop it
+                whenever you like.
+              </p>
+              <div className="mt-4 space-y-3">
+                {CARE_PLANS.map((c) => {
+                  const active = care === c.id;
+                  return (
+                    <button
+                      type="button"
+                      key={c.id}
+                      onClick={() => setCare(active ? null : c.id)}
+                      aria-pressed={active}
+                      className={`w-full rounded-2xl border p-4 text-left transition sm:p-5 ${
+                        active
+                          ? "border-brand-500 bg-brand-50 ring-1 ring-brand-500"
+                          : "border-slate-200 bg-white hover:border-brand-300"
+                      }`}
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <p className="font-semibold tracking-tight">
+                            {c.name}
+                            {c.featured && (
+                              <span className="ml-2 whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                                Most taken
+                              </span>
+                            )}
+                          </p>
+                          <p className="mt-0.5 text-sm text-slate-600">
+                            {c.who}
+                          </p>
+                        </div>
+                        <div className="shrink-0 text-right">
+                          <p className="text-lg font-bold tracking-tight">
+                            {rupees(c.monthly)}
+                          </p>
+                          <p className="text-xs text-slate-500">per month</p>
+                        </div>
+                      </div>
+                      <p className="mt-3 rounded-lg bg-white/70 px-2.5 py-1.5 text-xs font-semibold text-brand-800">
+                        {c.allowance} · or {rupees(c.yearly)} a year
+                      </p>
+                      <ul className="mt-3 space-y-1.5 border-t border-slate-200 pt-3 text-sm text-slate-700">
+                        {c.includes.map((line) => (
+                          <li key={line} className="flex gap-2">
+                            <span
+                              aria-hidden="true"
+                              className="material-symbols-rounded mt-px shrink-0 text-[17px] text-brand-500"
+                            >
+                              check
+                            </span>
+                            <span className="leading-snug">{line}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm">
+                <p className="font-semibold text-slate-800">
+                  What is a separate job
+                </p>
+                <ul className="mt-2 space-y-1 text-slate-600">
+                  {CARE_NOT_INCLUDED.map((line) => (
+                    <li key={line} className="leading-snug">
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-slate-500">
+                  None of these are refused — they are quoted as their own
+                  job, with their own number.
+                </p>
+              </div>
+                </>
+              )}
+
+              {/* The part nobody else prints. Folded, because it is reference
+                  rather than a decision — but on every tab, because it is true
+                  of every total in here. */}
+              <details className="group mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+                <summary className="flex cursor-pointer list-none items-center gap-2 font-semibold tracking-tight text-amber-900">
                   <span
                     aria-hidden="true"
                     className="material-symbols-rounded text-[22px]"
                   >
                     info
                   </span>
-                  What this total does not include
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-amber-900/90">
+                  <span className="flex-1">
+                    What this total does not include
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="material-symbols-rounded shrink-0 text-[22px] text-amber-700 transition-transform group-open:rotate-180"
+                  >
+                    expand_more
+                  </span>
+                </summary>
+                <p className="mt-3 text-sm leading-relaxed text-amber-900/90">
                   These are running costs, paid to the provider in your own
                   name. I do not add anything on top of them, and I will tell
                   you what each one costs before you commit to it.
@@ -304,7 +469,7 @@ export function PriceCalculator() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </details>
 
               <p className="mt-6 text-sm leading-relaxed text-slate-600">
                 This is an estimate, not a quotation. Something unusual about
@@ -317,13 +482,30 @@ export function PriceCalculator() {
             {/* Total, pinned so it never scrolls out of sight. */}
             <div className="border-t border-slate-200 bg-white px-5 py-4 shadow-[0_-8px_24px_-18px_rgba(10,17,40,0.5)] sm:px-7">
               <div className="flex items-end justify-between gap-4">
+                {/* Two figures, never added together. One is what you pay
+                    once; the other is what you would pay every month if you
+                    take a care plan. A single combined number would be wrong
+                    on the first month and wrong on every month after it. */}
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
                     Estimated total
                   </p>
-                  <p className="mt-1 text-3xl font-bold tracking-tight">
-                    {rupees(total)}
-                  </p>
+                  <div className="mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <p className="text-3xl font-bold tracking-tight">
+                      {rupees(total)}
+                      <span className="ml-1 text-sm font-medium text-slate-500">
+                        once
+                      </span>
+                    </p>
+                    {chosenCare && (
+                      <p className="text-xl font-bold tracking-tight text-brand-700">
+                        + {rupees(chosenCare.monthly)}
+                        <span className="ml-1 text-sm font-medium text-slate-500">
+                          a month
+                        </span>
+                      </p>
+                    )}
+                  </div>
                   <p className="mt-0.5 text-xs text-slate-500">
                     {count === 0
                       ? "Nothing selected yet"
