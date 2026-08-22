@@ -635,11 +635,12 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 /* ============================================================
    FLOATING CONTACT BAR (mobile) + BACK TO TOP
    ============================================================ */
-/* Two round buttons in the corner — icon only, so they never
-   stretch across a narrow screen and cover the page. */
+/* Two round buttons stacked down the left edge — icon only, so they
+   never stretch across a narrow screen and cover the page. Back to
+   top keeps the right side to itself. */
 .float-bar{
-  position:fixed; right:var(--gutter); bottom:1.1rem; z-index:90;
-  display:flex; gap:.65rem;
+  position:fixed; left:var(--gutter); bottom:1.1rem; z-index:90;
+  display:flex; flex-direction:column; gap:.65rem;
   transform:translateY(180%); transition:transform .35s ease;
 }
 .float-bar.is-visible{transform:translateY(0)}
@@ -650,7 +651,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .float-bar .btn svg{width:24px; height:24px; flex:none}
 
 .to-top{
-  position:fixed; right:var(--gutter); bottom:5.6rem; z-index:95;
+  position:fixed; right:var(--gutter); bottom:1.4rem; z-index:95;
   width:48px; height:48px; display:grid; place-items:center;
   border-radius:50%; background:var(--forest); color:var(--ivory);
   box-shadow:0 16px 30px -16px rgba(22,40,29,.9);
@@ -677,6 +678,16 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .reveal[data-anim="zoom-in-up"]{transform:translateY(34px) scale(.92)}
 .reveal[data-anim="flip-left"]{transform:perspective(1400px) rotateY(16deg) translateX(34px); transform-origin:right center}
 .reveal.is-in{opacity:1; transform:none}
+
+/* On a phone the blocks run the full width of the screen, so sliding
+   them 56px sideways pushes them past the edge — where the page clips
+   them and the words come out cut in half. Narrow screens rise
+   straight up instead. */
+@media (max-width:899px){
+  .reveal[data-anim="fade-left"],
+  .reveal[data-anim="fade-right"],
+  .reveal[data-anim="flip-left"]{transform:translateY(26px)}
+}
 
 /* Hero pieces animate on load rather than on scroll */
 .hero .reveal{transition-duration:1.3s}
