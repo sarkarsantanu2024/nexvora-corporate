@@ -178,6 +178,29 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
 
 /* ============================================================
+   DEMO BAR
+   Thin strip above the header saying this is a sample.
+   Scrolls away with the page; the header keeps the top edge.
+   Delete this block and its markup before go-live.
+   ============================================================ */
+.demobar{background:var(--forest-deep); color:rgba(251,247,240,.66)}
+.demobar .wrap{max-width:none}
+.demobar__inner{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  min-height:34px; padding-block:.4rem;
+  font-size:.65rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+}
+.demobar b{
+  color:var(--ivory); font-weight:600; letter-spacing:.2em;
+  border-bottom:1px solid rgba(185,119,63,.7); padding-bottom:1px;
+}
+.demobar__sep{color:rgba(185,119,63,.9); margin-inline:.5rem}
+.demobar__note{display:none; flex:none; color:rgba(251,247,240,.5)}
+@media (min-width:700px){
+  .demobar__note{display:block}
+}
+
+/* ============================================================
    HEADER
    ============================================================ */
 .header{
@@ -696,6 +719,16 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
+<!-- ========================== DEMO BAR ===========================
+     Remove this strip and its styles before the site goes live.
+     ============================================================== -->
+<div class="demobar">
+  <div class="wrap demobar__inner">
+    <span><b>Sample website</b><span class="demobar__sep">&mdash;</span>Prepared for Trishakti Mindfulness Yoga</span>
+    <span class="demobar__note">This is a preview</span>
+  </div>
+</div>
 
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="top">
