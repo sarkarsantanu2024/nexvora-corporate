@@ -404,15 +404,10 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   background:linear-gradient(100deg, rgba(22,40,29,.86) 0%, rgba(22,40,29,.62) 46%, rgba(22,40,29,.28) 100%);
 }
 .band__inner{position:relative; z-index:1; padding-block:clamp(3.5rem,7vw,6rem)}
-.band blockquote{
+.band__line{
   margin:0; max-width:22ch;
   font-family:var(--display); font-weight:300; color:var(--ivory);
   font-size:clamp(1.7rem,1rem + 2.9vw,3.5rem); line-height:1.16; letter-spacing:-.03em;
-}
-.band cite{
-  display:block; margin-top:1.6rem; font-style:normal;
-  font-size:.72rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--sand-soft);
 }
 .band .btn-row{margin-top:2.4rem}
 
@@ -600,6 +595,10 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
    ============================================================ */
 .final{text-align:center}
 .final .btn-row{justify-content:center}
+.final__place{
+  margin-top:2rem; font-size:.74rem; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--sand-soft);
+}
 
 /* ============================================================
    FOOTER
@@ -733,6 +732,36 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   .reveal{opacity:1; transform:none}
   .hero__ring{opacity:.6}
 }
+
+/* ============================================================
+   WHAT THE SAMPLE DOES NOT SHOW
+
+   The sample is a taste of the work, not the finished site, so
+   several parts of the page are built but switched off. Nothing
+   has been thrown away — every one of them is still in the file,
+   carrying the class demo-off.
+
+   Switched off at the moment:
+     - the wide photo band
+     - Why Practice With Trishakti
+     - Begin Your Journey in Three Simple Steps
+     - the Google rating panel
+     - Can't Join Us in Person (online classes)
+     - Find Trishakti Mindfulness Yoga, with the map
+     - four of the seven programme cards, and the three shown in
+       the sample in their place
+     - the second WhatsApp link under the About text
+     - Explore Our Classes in the banner
+     - Why Us in both menus
+
+   To build the paid site: take demo-off off whatever the client
+   is paying for, and delete the three cards marked DEMO ONLY.
+   ============================================================ */
+.demo-off{display:none !important}
+
+/* Trust line under the Why Trishakti heading — same shape as the
+   bar under the banner, so the page keeps one language. */
+.trustbar{margin-top:2.5rem; margin-bottom:3rem}
 </style>
 </head>
 
@@ -770,8 +799,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         <li><a class="nav__link" href="#top">Home</a></li>
         <li><a class="nav__link" href="#about">About</a></li>
         <li><a class="nav__link" href="#programs">Programs</a></li>
-        <li><a class="nav__link" href="#why">Why Us</a></li>
-        <li><a class="nav__link" href="#gallery">Gallery</a></li>
+        <li class="demo-off"><a class="nav__link" href="#why">Why Us</a></li>
+        <li><a class="nav__link" href="#gallery">Why Trishakti</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -798,8 +827,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
     <a class="mobile-nav__link" href="#top">Home</a>
     <a class="mobile-nav__link" href="#about">About</a>
     <a class="mobile-nav__link" href="#programs">Programs</a>
-    <a class="mobile-nav__link" href="#why">Why Us</a>
-    <a class="mobile-nav__link" href="#gallery">Gallery</a>
+    <a class="mobile-nav__link demo-off" href="#why">Why Us</a>
+    <a class="mobile-nav__link" href="#gallery">Why Trishakti</a>
     <a class="mobile-nav__link" href="#contact">Contact</a>
     <!-- REPLACE WITH CLIENT WHATSAPP -->
     <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
@@ -826,7 +855,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
         <!-- REPLACE WITH CLIENT PHONE -->
         <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">Call Us</a>
-        <a class="btn btn--ghost" href="#programs">Explore Our Classes</a>
+        <a class="btn btn--ghost demo-off" href="#programs">Explore Our Classes</a>
       </div>
 
     </div>
@@ -871,10 +900,10 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       <div class="lede">
         <p>At Trishakti Mindfulness Yoga, we believe yoga is more than physical exercise.</p>
         <p>It is a journey towards better movement, greater awareness and a calmer mind.</p>
-        <p>Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.</p>
+        <p class="demo-off">Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.</p>
       </div>
       <!-- REPLACE WITH CLIENT WHATSAPP -->
-      <a class="link-cta" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp &rarr;</a>
+      <a class="link-cta demo-off" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp &rarr;</a>
     </div>
 
     <div class="about__figure reveal" data-anim="fade-left">
@@ -904,7 +933,43 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
     <ul class="pcards">
+      <!-- DEMO ONLY — the three cards the sample shows. Delete these
+           three and take demo-off off the seven real programmes below
+           when the client's own site is built. -->
       <li class="pcard pcard--wide reveal" data-anim="zoom-in-up">
+        <figure class="pcard__media">
+          <span class="pcard__num" aria-hidden="true">01</span>
+          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="A group class holding Warrior II together in a sunlit studio" width="1100" height="740" loading="lazy" decoding="async"></span>
+        </figure>
+        <div class="pcard__body">
+          <h3>Yoga Classes</h3>
+          <p>Group sessions for different levels.</p>
+        </div>
+      </li>
+      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="80">
+        <figure class="pcard__media">
+          <span class="pcard__num" aria-hidden="true">02</span>
+          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A woman seated cross-legged with her hands together at her chest" width="600" height="800" loading="lazy" decoding="async"></span>
+        </figure>
+        <div class="pcard__body">
+          <h3>Mindful Practice</h3>
+          <p>Yoga, breath and mindful movement.</p>
+        </div>
+      </li>
+      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="160">
+        <figure class="pcard__media">
+          <span class="pcard__num" aria-hidden="true">03</span>
+          <span class="ph"><img src="/demo/yoga/images/online-living-room.jpg" alt="A woman holding an extended side pose on a mat in her living room" width="1200" height="750" loading="lazy" decoding="async"></span>
+        </figure>
+        <div class="pcard__body">
+          <h3>Online Classes</h3>
+          <p>Practice from wherever you are.</p>
+        </div>
+      </li>
+      <!-- END DEMO ONLY -->
+
+      <!-- The seven real programmes, switched off for the sample. -->
+      <li class="pcard pcard--wide reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">01</span>
           <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="A group class holding Warrior II together in a sunlit studio" width="1100" height="740" loading="lazy" decoding="async"></span>
@@ -914,7 +979,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>Guided group sessions in a supportive environment.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="80">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">02</span>
           <span class="ph"><img src="/demo/yoga/images/program-ashtanga.jpg" alt="Students holding a downward-facing pose on mats during class" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -924,7 +989,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>A dynamic practice combining movement, breath and focus.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="160">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">03</span>
           <span class="ph"><img src="/demo/yoga/images/program-hatha.jpg" alt="A woman holding a shoulder-supported pose on a mat against a warm wall" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -934,7 +999,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>Build strength, flexibility and awareness through traditional yoga practice.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="240">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="240">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">04</span>
           <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A woman seated cross-legged with her hands together at her chest" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -944,7 +1009,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>A mindful practice focused on devotion, awareness and inner connection.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">05</span>
           <span class="ph"><img src="/demo/yoga/images/program-hot-yoga.jpg" alt="A class moving through a low kneeling stretch on their mats" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -954,7 +1019,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>A challenging practice combining yoga postures with a heated environment.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="80">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">06</span>
           <span class="ph"><img src="/demo/yoga/images/program-family.jpg" alt="A woman and a young girl stretching together on a studio floor" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -964,7 +1029,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>A shared yoga experience for families to move, practice and connect.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="160">
+      <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">07</span>
           <span class="ph"><img src="/demo/yoga/images/program-iyengar.jpg" alt="Students using yoga blocks to support their alignment during class" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -979,13 +1044,13 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
     <div class="programs__foot reveal">
       <!-- REPLACE WITH CLIENT WHATSAPP -->
       <a class="link-cta" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Ask About Classes &rarr;</a>
-      <p class="note">Message us to check which practices are running at the moment.</p>
+      <p class="note">More programmes can be added &mdash; tell us what you run and they go on the site.</p>
     </div>
   </div>
 </section>
 
 <!-- ============================ IMAGE BAND ============================ -->
-<section class="band">
+<section class="band demo-off">
   <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
   <figure class="band__bg">
     <img src="/demo/yoga/images/band-class-wide.jpg" alt="A wide view of a yoga class holding a standing pose in a bright studio" width="1800" height="1000" loading="lazy" decoding="async">
@@ -993,8 +1058,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   <div class="wrap band__inner">
     <div class="reveal" data-anim="fade-right">
       <p class="eyebrow eyebrow--light">On the Mat</p>
-      <blockquote>Yoga is the journey of the self, through the self, to the self.</blockquote>
-      <cite>The Bhagavad Gita</cite>
+      <p class="band__line">A practice built around the people who come to it.</p>
       <div class="btn-row">
         <!-- REPLACE WITH CLIENT WHATSAPP -->
         <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
@@ -1006,7 +1070,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ WHY US ============================ -->
-<section class="section section--sage why" id="why">
+<section class="section section--sage why demo-off" id="why">
   <div class="wrap split">
     <div class="split__media reveal" data-anim="fade-right">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
@@ -1057,7 +1121,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ JOURNEY ============================ -->
-<section class="section section--forest journey">
+<section class="section section--forest journey demo-off">
   <!-- Abstract backdrop: the brand's three circles, turning slowly -->
   <div class="journey__glow journey__glow--1" aria-hidden="true"></div>
   <div class="journey__glow journey__glow--2" aria-hidden="true"></div>
@@ -1112,7 +1176,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ RATING ============================ -->
-<section class="section section--shell">
+<section class="section section--shell demo-off">
   <div class="wrap">
     <div class="rating reveal" data-anim="zoom-in">
       <div class="rating__media">
@@ -1154,9 +1218,28 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 <section class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">A Glimpse Into Our Practice</p>
-      <h2 class="h-lg">Moments From the Mat</h2>
+      <p class="eyebrow">Why People Choose Trishakti</p>
+      <h2 class="h-lg">Why Trishakti?</h2>
     </div>
+
+    <ul class="hero__bar trustbar reveal" data-anim="zoom-in-up">
+      <li>
+        <b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</b>
+        <span>Google Rating</span>
+      </li>
+      <li>
+        <b>50+</b>
+        <span>Google Reviews</span>
+      </li>
+      <li>
+        <b>Online</b>
+        <span>Classes Available</span>
+      </li>
+      <li>
+        <b>Newtown</b>
+        <span>Action Area I, Kolkata</span>
+      </li>
+    </ul>
 
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
     <div class="gallery">
@@ -1213,7 +1296,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ ONLINE ============================ -->
-<section class="section section--shell">
+<section class="section section--shell demo-off">
   <div class="wrap online__grid">
     <div class="reveal" data-anim="fade-right">
       <p class="eyebrow">Practice From Anywhere</p>
@@ -1246,7 +1329,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ LOCATION ============================ -->
-<section class="section" id="contact">
+<section class="section demo-off" id="location">
   <div class="wrap location__grid">
     <div class="reveal" data-anim="fade-right">
       <p class="eyebrow">Visit Us</p>
@@ -1285,18 +1368,20 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ FINAL CTA ============================ -->
-<section class="section section--forest final">
+<section class="section section--forest final" id="contact">
   <div class="wrap">
     <div class="head head--center reveal">
       <p class="eyebrow eyebrow--light">Ready to Begin?</p>
       <h2 class="h-lg">Ready to Begin Your Practice?</h2>
-      <p class="lede">Have questions about classes, timings or online sessions? Connect with Trishakti Mindfulness Yoga.</p>
+      <p class="lede">Ask about classes, timings or online sessions.</p>
       <div class="btn-row">
         <!-- REPLACE WITH CLIENT WHATSAPP -->
         <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Trishakti%20Mindfulness%20Yoga%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp</a>
+        <a class="btn btn--outline-light" href="https://www.google.com/maps/dir/?api=1&amp;destination=Street%20No.%20271%2C%20DD-99%2C%20behind%20The%20New%20Town%20School%2C%20DD%20Block%2C%20Action%20Area%20I%2C%20Newtown%2C%20Kolkata%2C%20West%20Bengal%20700156" target="_blank" rel="noopener">Get Directions</a>
         <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--outline-light" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+        <a class="btn btn--outline-light demo-off" href="tel:PHONE_NUMBER_HERE">Call Us</a>
       </div>
+      <p class="final__place">Newtown, Kolkata</p>
     </div>
   </div>
 </section>
