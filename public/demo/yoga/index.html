@@ -734,30 +734,28 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 }
 
 /* ============================================================
-   WHAT THE SAMPLE DOES NOT SHOW
+   THE PAGE HAS TWO SETTINGS
 
-   The sample is a taste of the work, not the finished site, so
-   several parts of the page are built but switched off. Nothing
-   has been thrown away — every one of them is still in the file,
-   carrying the class demo-off.
+   One word on the <body> tag decides how much of the site shows.
 
-   Switched off at the moment:
-     - the wide photo band
-     - Why Practice With Us
-     - Begin Your Journey in Three Simple Steps
-     - the Google rating panel
-     - Can't Join Us in Person (online classes)
-     - Find Wellness Yoga Studio, with the map
-     - four of the seven programme cards, and the three shown in
-       the sample in their place
-     - the second WhatsApp link under the About text
-     - Explore Our Classes in the banner
-     - Why Us in both menus
+     <body>                 the whole site — everything below
+     <body class="sample">  the short sample — five sections
 
-   To build the paid site: take demo-off off whatever the client
-   is paying for, and delete the three cards marked DEMO ONLY.
+   Nothing is ever thrown away. Both settings are always in the
+   file; the class only decides which parts are on screen.
+
+   Parts marked demo-off are the full site: the wide photo band,
+   Why Practice With Us, the three steps, the Google rating panel,
+   the online classes section, the map, all seven programmes, the
+   second WhatsApp link under About, Explore Our Classes in the
+   banner, and Why Us in both menus.
+
+   Parts marked demo-only stand in for them in the short sample:
+   three programme cards, the trust line, the Why Choose Us
+   heading and the directions button at the foot of the page.
    ============================================================ */
-.demo-off{display:none !important}
+body.sample .demo-off{display:none !important}
+body:not(.sample) .demo-only{display:none !important}
 
 /* Trust line under the Why Choose Us heading — same shape as the
    bar under the banner, so the page keeps one language. */
@@ -803,7 +801,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         <li><a class="nav__link" href="#about">About</a></li>
         <li><a class="nav__link" href="#programs">Programs</a></li>
         <li class="demo-off"><a class="nav__link" href="#why">Why Us</a></li>
-        <li><a class="nav__link" href="#gallery">Why Us</a></li>
+        <li class="demo-only"><a class="nav__link" href="#gallery">Why Us</a></li>
+        <li class="demo-off"><a class="nav__link" href="#gallery">Gallery</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -831,7 +830,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
     <a class="mobile-nav__link" href="#about">About</a>
     <a class="mobile-nav__link" href="#programs">Programs</a>
     <a class="mobile-nav__link demo-off" href="#why">Why Us</a>
-    <a class="mobile-nav__link" href="#gallery">Why Us</a>
+    <a class="mobile-nav__link demo-only" href="#gallery">Why Us</a>
+    <a class="mobile-nav__link demo-off" href="#gallery">Gallery</a>
     <a class="mobile-nav__link" href="#contact">Contact</a>
     <!-- REPLACE WITH CLIENT WHATSAPP -->
     <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
@@ -936,10 +936,9 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
     <ul class="pcards">
-      <!-- DEMO ONLY — the three cards the sample shows. Delete these
-           three and take demo-off off the seven real programmes below
-           when the client's own site is built. -->
-      <li class="pcard pcard--wide reveal" data-anim="zoom-in-up">
+      <!-- The three cards the short sample shows, standing in for the
+           seven real programmes below. -->
+      <li class="pcard pcard--wide reveal demo-only" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">01</span>
           <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="A group class holding Warrior II together in a sunlit studio" width="1100" height="740" loading="lazy" decoding="async"></span>
@@ -949,7 +948,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>Group sessions for different levels.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="80">
+      <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">02</span>
           <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A woman seated cross-legged with her hands together at her chest" width="600" height="800" loading="lazy" decoding="async"></span>
@@ -959,7 +958,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>Yoga, breath and mindful movement.</p>
         </div>
       </li>
-      <li class="pcard reveal" data-anim="zoom-in-up" data-delay="160">
+      <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">03</span>
           <span class="ph"><img src="/demo/yoga/images/online-living-room.jpg" alt="A woman holding an extended side pose on a mat in her living room" width="1200" height="750" loading="lazy" decoding="async"></span>
@@ -969,9 +968,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <p>Practice from wherever you are.</p>
         </div>
       </li>
-      <!-- END DEMO ONLY -->
-
-      <!-- The seven real programmes, switched off for the sample. -->
+      
+      <!-- The seven real programmes. -->
       <li class="pcard pcard--wide reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">01</span>
@@ -1047,7 +1045,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
     <div class="programs__foot reveal">
       <!-- REPLACE WITH CLIENT WHATSAPP -->
       <a class="link-cta" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Ask About Classes &rarr;</a>
-      <p class="note">More programmes can be added &mdash; tell us what you run and they go on the site.</p>
+      <p class="note demo-only">More programmes can be added &mdash; tell us what you run and they go on the site.</p>
+      <p class="note demo-off">Message us to check which practices are running at the moment.</p>
     </div>
   </div>
 </section>
@@ -1220,12 +1219,16 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 <!-- ============================ GALLERY ============================ -->
 <section class="section" id="gallery">
   <div class="wrap">
-    <div class="head head--center reveal">
+    <div class="head head--center reveal demo-only">
       <p class="eyebrow">Why People Choose Us</p>
       <h2 class="h-lg">Why Choose Us?</h2>
     </div>
+    <div class="head head--center reveal demo-off">
+      <p class="eyebrow">A Glimpse Into Our Practice</p>
+      <h2 class="h-lg">Moments From the Mat</h2>
+    </div>
 
-    <ul class="hero__bar trustbar reveal" data-anim="zoom-in-up">
+    <ul class="hero__bar trustbar reveal demo-only" data-anim="zoom-in-up">
       <li>
         <b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</b>
         <span>Google Rating</span>
@@ -1379,11 +1382,11 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       <div class="btn-row">
         <!-- REPLACE WITH CLIENT WHATSAPP -->
         <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp</a>
-        <a class="btn btn--outline-light" href="https://www.google.com/maps/search/?api=1&amp;query=yoga%20studio%20Kolkata" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn--outline-light demo-only" href="https://www.google.com/maps/search/?api=1&amp;query=yoga%20studio%20Kolkata" target="_blank" rel="noopener">Get Directions</a>
         <!-- REPLACE WITH CLIENT PHONE -->
         <a class="btn btn--outline-light demo-off" href="tel:PHONE_NUMBER_HERE">Call Us</a>
       </div>
-      <p class="final__place">Your area, your city</p>
+      <p class="final__place demo-only">Your area, your city</p>
     </div>
   </div>
 </section>
