@@ -33,7 +33,7 @@ const NEXT_STEPS = [
     href: "/price",
     icon: "sell",
     title: "What it costs",
-    body: "Real numbers. Small jobs from ₹499, business websites from ₹4,499, bigger custom projects quoted on what they actually need — and the running costs that are never inside any of it.",
+    body: "Real numbers. Small jobs from ₹499, business websites from ₹5,999, bigger custom projects quoted on what they actually need — and the running costs that are never inside any of it.",
   },
   {
     href: "/examples",

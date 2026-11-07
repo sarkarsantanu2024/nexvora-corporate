@@ -304,7 +304,7 @@ export function Hero() {
         <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2.5 text-sm font-medium text-slate-700">
           {[
             "One agreed price for the agreed work",
-            "Small jobs from ₹499, websites from ₹4,499",
+            "Small jobs from ₹499, websites from ₹5,999",
             "Payment agreed before work starts",
             "Your accounts stay under your control",
             "Registered MSME",
@@ -1166,7 +1166,7 @@ export function Pricing() {
 }
 
 /**
- * Nexvora Care — the monthly plans, sold as peace of mind rather than as
+ * Nexvora Care — the monthly plan, sold as peace of mind rather than as
  * hosting.
  *
  * The heading asks a question the customer already has, instead of announcing
@@ -1175,9 +1175,13 @@ export function Pricing() {
  * working — because that is the argument. Nobody buys "maintenance"; they buy
  * not having to deal with any of that themselves.
  *
- * Every card states its time allowance in the same place, at the same size as
- * the price. That is the honest part: a plan that says "minor updates
- * included" and means thirty minutes is a disagreement waiting to happen.
+ * The card states its allowance in the same place, at the same size as the
+ * price. That is the honest part: a plan that says "minor updates included"
+ * and means thirty minutes is a disagreement waiting to happen.
+ *
+ * There is one plan, so the card sits alone at a reading width rather than in
+ * a grid that would leave three empty columns beside it. CARE_PLANS is still
+ * mapped, so a second plan can be added without touching this file.
  */
 function CarePlans() {
   return (
@@ -1192,16 +1196,17 @@ function CarePlans() {
         <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
           Building the website is only the beginning. Your phone number
           changes. Your prices change. A new offer comes. Photographs need
-          replacing. Sometimes a site simply stops working properly and you
-          have no idea why. You do not need to learn any of that — this is
-          me looking after the technical side for you, month by month.
+          replacing. Your Facebook page goes quiet. Sometimes a site simply
+          stops working properly and you have no idea why. You do not need
+          to learn any of that — this is me looking after the website and
+          the posting for you, week by week.
         </p>
         <p className="mt-3 max-w-3xl font-medium text-slate-800">
           Optional, always. Nothing here is bundled into the price of a
           website, and you can stop it whenever you like.
         </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid max-w-xl gap-4">
           {CARE_PLANS.map((plan) => (
             <div
               key={plan.id}
@@ -1271,7 +1276,7 @@ function CarePlans() {
         </div>
 
         {/* The line between looking after and building. Printed, because it is
-            the only thing that keeps a ₹299 plan from turning into a booking
+            the only thing that keeps a monthly plan from turning into a booking
             system somebody expected for free. */}
         <div className="mt-6 grid gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-7 lg:grid-cols-2">
           <div>

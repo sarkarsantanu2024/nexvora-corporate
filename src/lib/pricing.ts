@@ -127,12 +127,16 @@ const PACKAGE_SPECS: PackageSpec[] = [
     id: "starter",
     name: "Just get me started",
     tagline: "For a business that is nowhere online yet",
-    price: 4499,
-    worthItems: ["landing", "fb-page", "gbp", "visiting-card"],
+    // Repriced to ₹5,999 on 2026-11-07. The Instagram profile was added at
+    // the same time so the parts still add up to more than the package — the
+    // heading above the packages promises exactly that.
+    price: 5999,
+    worthItems: ["landing", "fb-page", "insta-profile", "gbp", "visiting-card"],
     includes: [
       "One-page website with your services and photos",
       "Contact form and WhatsApp button",
       "Facebook business page set up",
+      "Instagram business profile set up",
       "Google Business Profile set up",
       "Visiting card design",
       "Domain, hosting and accounts under your control wherever practical",
@@ -176,18 +180,24 @@ const PACKAGE_SPECS: PackageSpec[] = [
 export type Package = Omit<PackageSpec, "worthItems"> & { worth: number };
 
 /**
- * Nexvora Care — the monthly plans.
+ * Nexvora Care — the monthly plan. The AMC, in plain words.
+ *
+ * One plan, not a ladder of tiers. Four tiers from ₹299 to ₹1,499 were
+ * replaced with this single plan on 2026-11-07, because the ₹1,499 plan is
+ * the real business and the cheaper rungs only gave people a reason to buy
+ * less of it.
  *
  * Deliberately not sold as hosting. The moment a plan is described as hosting,
  * it is compared with a ₹100 hosting bill and loses. What is actually being
- * bought is knowing who to WhatsApp when something breaks, and not having to
- * learn any of it — which is the same promise the rest of the site makes,
- * continued past the day the site goes live.
+ * bought is a website and social accounts that stay alive every week without
+ * the owner having to learn any of it — the same promise the rest of the site
+ * makes, continued past the day the site goes live.
  *
- * Every tier states its time allowance out loud. "Minor updates included" with
- * no number is how a ₹299 customer ends up asking for a booking system, and
- * how the person doing the work quietly starts resenting the plan. A stated
- * limit protects both sides and is easier to sell than a vague generosity.
+ * The allowance is stated out loud, in things a shopkeeper can count: pages,
+ * posts, uploads. "Minor updates included" with no number is how a plan turns
+ * into unpaid development, and how the person doing the work quietly starts
+ * resenting it. A stated limit protects both sides and is easier to sell than
+ * a vague generosity.
  *
  * The annual price is roughly ten months for twelve. It is worth offering:
  * the customer saves real money, and the cash arrives at the start of the year
@@ -203,7 +213,7 @@ export type CarePlan = {
   monthly: number;
   yearly: number;
   who: string;
-  /** The time allowance, stated rather than implied. */
+  /** The allowance, stated rather than implied. */
   allowance: string;
   includes: string[];
   featured?: boolean;
@@ -211,69 +221,22 @@ export type CarePlan = {
 
 export const CARE_PLANS: CarePlan[] = [
   {
-    id: "basic",
-    name: "Basic Care",
-    monthly: 299,
-    yearly: 2999,
-    who: "For a simple business website that mostly stays the same",
-    allowance: "Up to 30 minutes of changes a month",
-    includes: [
-      "Hosting and the security certificate looked after",
-      "Backups taken, and checked that they actually restore",
-      "I am told if your site goes down, before you notice",
-      "Security updates as they come",
-      "Small changes — a phone number, a price, a photograph",
-      "WhatsApp support from me, not a ticket queue",
-    ],
-  },
-  {
-    id: "business",
-    name: "Business Care",
-    monthly: 599,
-    yearly: 5999,
-    who: "For a business that actually uses its website every month",
-    featured: true,
-    allowance: "Up to 1 hour of changes a month",
-    includes: [
-      "Everything in Basic Care",
-      "Text and photographs replaced whenever you need",
-      "A new offer or announcement banner put up",
-      "Your Google Business Profile kept current",
-      "A monthly check that the site is fast and working",
-      "Your enquiries checked — the form and the WhatsApp button",
-      "Your message answered first",
-    ],
-  },
-  {
-    id: "growth",
-    name: "Growth Care",
-    monthly: 999,
-    yearly: 9999,
-    who: "For a business that wants its website working, not just sitting there",
-    allowance: "Up to 2 hours of changes a month",
-    includes: [
-      "Everything in Business Care",
-      "2 promotional creatives a month, in your colours",
-      "Ongoing SEO work so you keep turning up in searches",
-      "Google Business posts and photographs kept going",
-      "A monthly note on how many people came and from where",
-      "Small landing pages for an offer or a season",
-    ],
-  },
-  {
-    id: "pro",
-    name: "Pro Care",
+    id: "care",
+    name: "Nexvora Care",
     monthly: 1499,
     yearly: 14999,
-    who: "For a web application, an online shop, or custom software",
-    allowance: "Up to 4 hours of maintenance a month",
+    who: "For a business that wants its website and its social pages kept alive every week, without doing any of it",
+    allowance: "Up to five pages, two Facebook posts a week, one YouTube upload a week",
     includes: [
-      "Everything in Growth Care",
-      "Your application and its database watched, not just the website",
-      "Bugs fixed as they are found",
-      "Speed and uptime watched properly",
-      "Small changes to features you already have",
+      "Your website looked after — up to five pages kept working and up to date",
+      "Hosting, backups and security looked after",
+      "New photographs and content put up on the website",
+      "Two Facebook posts a week, designed and posted for you",
+      "The video you send me uploaded to your YouTube channel every week",
+      "Text and photographs replaced whenever you need",
+      "A new offer or announcement banner put up",
       "A monthly report in plain language on how it is all holding up",
+      "WhatsApp support from me, not a ticket queue",
     ],
   },
 ];
@@ -285,12 +248,14 @@ export const CARE_INCLUDED = [
   "Changing text, prices and phone numbers",
   "Swapping photographs and replacing a banner",
   "Small layout tidying on a page that already exists",
+  "Facebook posts and YouTube uploads, up to the weekly number",
   "Keeping hosting, backups and security in order",
   "Telling you what went wrong when something breaks",
 ];
 
 export const CARE_NOT_INCLUDED = [
-  "New pages beyond what the plan allows",
+  "New pages beyond the five the plan covers",
+  "Shooting or editing the videos — you send the video, I upload it",
   "A new feature, module or payment gateway",
   "A booking system, a login, or anything with a database behind it",
   "A full redesign of the site",
