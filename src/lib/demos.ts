@@ -136,6 +136,24 @@ export const DEMOS: Demo[] = [
     alt: "Sample website for a wooden furniture shop",
   },
   {
+    slug: "salon",
+    name: "Aalta Beauty Parlour",
+    kind: "Salon and beauty parlour",
+    blurb:
+      "A ladies' parlour — haircut, facial, threading, hair spa, mehendi and a bridal package, with a fixed price list and appointments on WhatsApp.",
+    image: "/demo/salon/images/hero.jpg",
+    alt: "Sample website for a salon and beauty parlour",
+  },
+  {
+    slug: "gym",
+    name: "Iron Para Gym",
+    kind: "Gym and fitness centre",
+    blurb:
+      "A neighbourhood gym — weights floor, cardio, group classes, a women's hour, trainer profiles and three membership plans with the timings.",
+    image: "/demo/gym/images/hero.jpg",
+    alt: "Sample website for a gym and fitness centre",
+  },
+  {
     slug: "yoga",
     name: "Wellness Yoga Studio",
     kind: "Yoga studio",

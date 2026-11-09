@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Aalta Beauty Parlour | Ladies' Salon in Jadavpur, Kolkata</title>
+<meta name="description" content="Ladies-only salon and beauty parlour in Jadavpur. Haircut, facial, threading, hair spa, mehendi and bridal make-up. Fixed price list. Book on WhatsApp.">
+
+<!-- Sample site. Served with noindex from next.config.mjs as well; the
+     meta tag is belt and braces for when the file is opened elsewhere. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.nexvoratechnologies.co.in/demo/salon">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aalta Beauty Parlour | Ladies' Salon in Jadavpur, Kolkata">
+<meta property="og:description" content="Haircut, facial, threading, hair spa, mehendi and bridal make-up. Ladies only. Fixed prices. Book on WhatsApp.">
+<meta property="og:url" content="https://www.nexvoratechnologies.co.in/demo/salon">
+<meta property="og:image" content="https://www.nexvoratechnologies.co.in/demo/salon/images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aalta Beauty Parlour | Ladies' Salon in Jadavpur, Kolkata">
+<meta name="twitter:description" content="Haircut, facial, threading, hair spa, mehendi and bridal make-up. Ladies only.">
+<meta name="theme-color" content="#FBF7F4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ==========================================================
+     DEMO IMAGERY
+     Every photograph sits in this demo's images folder and is free-licence
+     stock from Pexels (free for commercial use, no attribution
+     required). To swap one, drop the client's photo in over the same
+     filename and keep the same crop.
+     REPLACE WITH APPROVED CLIENT IMAGES before go-live.
+     ========================================================== -->
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --cream:#FBF7F4;
+  --cream-deep:#F4ECE6;
+  --blush:#F2C4C4;
+  --blush-soft:#F9E3E1;
+  --blush-deep:#D99A9A;
+  --gold:#C9A66B;
+  --gold-deep:#A8864C;
+  --gold-soft:#EFE3CF;
+  --ink:#2B2B2B;
+  --ink-deep:#1C1B1B;
+  --muted:#6F6663;
+  --line:rgba(43,43,43,.12);
+
+  --display:"Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
+  --body:"Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --wrap:1560px;
+  --gutter:clamp(1.25rem, 4vw, 4rem);
+  --section-y:clamp(4.5rem, 9vw, 7.5rem);
+  --radius:14px;
+  --shadow:0 30px 50px -40px rgba(28,27,27,.55);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:84px}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:clamp(.98rem,.95rem + .16vw,1.05rem);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0; font-family:var(--display); font-weight:500; line-height:1.12; letter-spacing:-.01em; color:var(--ink)}
+p{margin:0}
+ul,ol{margin:0; padding:0; list-style:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-deep); outline-offset:3px; border-radius:4px}
+
+.wrap{width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter)}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.skip{
+  position:absolute; left:1rem; top:-4rem; z-index:200;
+  background:var(--ink); color:var(--cream);
+  padding:.7rem 1.1rem; border-radius:8px; font-size:.9rem; font-weight:600; transition:top .2s ease;
+}
+.skip:focus{top:1rem}
+
+/* ============================================================
+   SHARED PIECES
+   ============================================================ */
+.eyebrow{
+  display:flex; align-items:center; gap:.7rem;
+  font-size:.7rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold-deep); margin:0 0 1.1rem;
+}
+.eyebrow::before{content:""; width:28px; height:1px; background:var(--gold)}
+.head--center .eyebrow{justify-content:center}
+.head--center .eyebrow::after{content:""; width:28px; height:1px; background:var(--gold)}
+
+.h-lg{font-size:clamp(1.9rem,1.3rem + 2.6vw,3rem)}
+.h-md{font-size:clamp(1.4rem,1.15rem + 1.1vw,1.85rem)}
+.lede{color:var(--muted); max-width:56ch; margin-top:1.2rem}
+.head{max-width:44rem}
+.head--center{margin-inline:auto; text-align:center}
+.head--center .lede{margin-inline:auto}
+
+.section{padding-block:var(--section-y)}
+.section--deep{background:var(--cream-deep)}
+.section--blush{background:var(--blush-soft)}
+.section--ink{background:var(--ink); color:var(--cream)}
+.section--ink h2,.section--ink h3{color:var(--cream)}
+.section--ink .lede{color:rgba(251,247,244,.72)}
+.section--ink .eyebrow{color:var(--gold)}
+
+/* Buttons --------------------------------------------------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+  min-height:50px; padding:.8rem 1.5rem; border-radius:999px;
+  font-size:.82rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+  text-decoration:none; text-align:center;
+  transition:transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn svg{width:17px; height:17px; flex:none}
+.btn--ink{background:var(--ink); color:var(--cream)}
+.btn--ink:hover{background:var(--ink-deep); transform:translateY(-2px)}
+.btn--gold{background:var(--gold); color:var(--ink-deep)}
+.btn--gold:hover{background:var(--gold-deep); color:#fff; transform:translateY(-2px)}
+.btn--ghost{border:1px solid var(--ink); color:var(--ink); background:transparent}
+.btn--ghost:hover{background:var(--ink); color:var(--cream); transform:translateY(-2px)}
+.btn--light{background:var(--cream); color:var(--ink)}
+.btn--light:hover{background:#fff; transform:translateY(-2px)}
+.btn--outline-light{border:1px solid rgba(251,247,244,.5); color:var(--cream)}
+.btn--outline-light:hover{border-color:var(--cream); background:rgba(251,247,244,.1); transform:translateY(-2px)}
+.btn-row{display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2rem}
+
+/* Image frames ---------------------------------------------- */
+.ph{position:relative; display:block; margin:0; overflow:hidden; background:var(--gold-soft)}
+.ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+/* ============================================================
+   DEMO BAR (remove before go-live)
+   ============================================================ */
+.demobar{background:var(--ink-deep); color:rgba(251,247,244,.66)}
+.demobar .wrap{max-width:none}
+.demobar__inner{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  min-height:34px; padding-block:.4rem;
+  font-size:.65rem; font-weight:500; letter-spacing:.14em; text-transform:uppercase;
+}
+.demobar b{color:var(--cream); font-weight:600; letter-spacing:.2em; border-bottom:1px solid var(--gold); padding-bottom:1px}
+.demobar__sep{color:var(--gold); margin-inline:.5rem}
+.demobar a{color:inherit; text-decoration:none}
+.demobar a:hover{color:var(--cream)}
+.demobar__links{display:flex; gap:1.25rem; flex:none}
+.demobar__note{display:none}
+@media (min-width:700px){.demobar__note{display:inline}}
+
+/* ============================================================
+   HEADER — solid background, edge to edge
+   ============================================================ */
+.header{
+  position:sticky; top:0; z-index:100;
+  background:var(--cream); border-bottom:1px solid transparent;
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.header.is-stuck{border-bottom-color:var(--line); box-shadow:0 10px 30px -26px rgba(28,27,27,.6)}
+.header .wrap{max-width:none}
+.header__inner{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:72px}
+
+.brand{display:flex; align-items:center; gap:.75rem; text-decoration:none}
+.brand__mark{width:38px; height:38px; flex:none; color:var(--gold-deep)}
+.brand__text{display:flex; flex-direction:column; line-height:1}
+.brand__name{font-family:var(--display); font-size:clamp(1.05rem,.8rem + .8vw,1.35rem); font-weight:500; letter-spacing:.02em; color:var(--ink)}
+.brand__sub{font-size:.52rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold-deep); margin-top:.4rem}
+
+.nav{display:none}
+.nav__list{display:flex; align-items:center; gap:2rem}
+.nav__link{position:relative; text-decoration:none; font-size:.86rem; font-weight:500; color:var(--ink); padding-block:.4rem}
+.nav__link::after{content:""; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--gold-deep); transition:width .25s ease}
+.nav__link:hover::after{width:100%}
+.header .btn{min-height:44px; padding:.6rem 1.2rem; font-size:.72rem}
+.header__actions{display:none; align-items:center; gap:.55rem}
+
+.burger{
+  display:inline-flex; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+  width:46px; height:46px; border:1px solid var(--line); border-radius:50%; background:#fff;
+}
+.burger span{display:block; width:18px; height:1.5px; background:var(--ink); transition:transform .25s ease, opacity .2s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Drawer menu — lives outside the header on purpose */
+.mobile-nav{
+  position:fixed; top:0; right:0; bottom:0; z-index:150;
+  width:min(84vw,360px); display:flex; flex-direction:column;
+  background:var(--cream); padding:1rem var(--gutter) 2rem;
+  overflow-y:auto; box-shadow:-24px 0 60px -30px rgba(28,27,27,.6);
+  transform:translateX(100%); visibility:hidden;
+  transition:transform .45s cubic-bezier(.22,1,.36,1), visibility 0s linear .45s;
+}
+.mobile-nav.is-open{transform:translateX(0); visibility:visible; transition-delay:0s}
+.mobile-nav__close{
+  align-self:flex-end; width:44px; height:44px; display:grid; place-items:center;
+  border:1px solid var(--line); border-radius:50%; color:var(--ink); margin-bottom:1rem; background:#fff;
+}
+.mobile-nav__close svg{width:18px; height:18px}
+.mobile-nav__link{
+  display:block; padding:.85rem .25rem; min-height:48px; text-decoration:none;
+  font-family:var(--display); font-size:1.25rem; color:var(--ink); border-bottom:1px solid var(--line);
+}
+.mobile-nav .btn{width:100%}
+.mobile-nav .btn--ink{margin-top:auto}
+.mobile-nav .btn--gold{margin-top:.6rem}
+.backdrop{position:fixed; inset:0; z-index:140; background:rgba(0,0,0,.45); opacity:0; pointer-events:none; transition:opacity .3s ease}
+.backdrop.is-open{opacity:1; pointer-events:auto}
+
+/* ============================================================
+   HERO — split, airy, framed photo
+   ============================================================ */
+.hero{position:relative; overflow:hidden; padding-block:clamp(2.5rem,5vw,5rem) clamp(3.5rem,7vw,6rem)}
+.hero::before{
+  content:""; position:absolute; right:-10%; top:-20%; width:min(60vw,700px); aspect-ratio:1;
+  border-radius:50%; background:radial-gradient(circle, rgba(242,196,196,.5), transparent 68%); pointer-events:none;
+}
+.hero__grid{position:relative; display:grid; gap:clamp(2.5rem,5vw,5rem); align-items:center}
+.hero h1{font-size:clamp(2.5rem,1.2rem + 5.2vw,5.2rem); font-weight:400; line-height:1.02}
+.hero h1 em{font-style:italic; font-weight:400; color:var(--gold-deep)}
+.hero .lede{font-size:clamp(1rem,.95rem + .3vw,1.15rem); max-width:38rem}
+.hero__facts{display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem 1.5rem; margin-top:2.75rem; padding-top:1.75rem; border-top:1px solid var(--line)}
+.hero__facts b{display:block; font-family:var(--display); font-size:1.4rem; font-weight:500; line-height:1.1}
+.hero__facts span{display:block; margin-top:.3rem; font-size:.72rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+
+.hero__figure{position:relative; padding:0 1.25rem 2rem 0}
+.frame{position:relative; width:100%; max-width:520px; margin-inline:auto; aspect-ratio:4/5; border-radius:var(--radius); box-shadow:var(--shadow)}
+.frame::after{
+  content:""; position:absolute; inset:0; border-radius:var(--radius);
+  border:1px solid var(--gold); transform:translate(1.25rem,1.25rem); pointer-events:none;
+}
+.hero__inset{
+  position:absolute; left:-.5rem; bottom:0; width:38%; max-width:190px; aspect-ratio:1;
+  border-radius:50%; border:6px solid var(--cream); box-shadow:var(--shadow);
+}
+.hero__badge{
+  position:absolute; right:0; top:1.5rem; z-index:2;
+  background:var(--cream); border:1px solid var(--line); border-radius:var(--radius);
+  padding:.9rem 1.1rem; text-align:center; box-shadow:var(--shadow);
+}
+.hero__badge b{display:block; font-family:var(--display); font-size:1.6rem; font-weight:500; line-height:1}
+.hero__badge span{display:block; margin-top:.4rem; font-size:.58rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+
+/* ============================================================
+   SERVICES — six quiet cards
+   ============================================================ */
+.services{display:grid; gap:1.1rem; margin-top:3rem; grid-template-columns:1fr}
+.svc{
+  background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+  padding:1.6rem 1.5rem 1.7rem; transition:transform .3s ease, border-color .3s ease;
+}
+.svc:hover{transform:translateY(-4px); border-color:var(--gold)}
+.svc__icon{width:44px; height:44px; display:grid; place-items:center; border-radius:50%; background:var(--blush-soft); color:var(--gold-deep); margin-bottom:1.1rem}
+.svc__icon svg{width:22px; height:22px}
+.svc h3{font-size:1.3rem; margin-bottom:.5rem}
+.svc p{font-size:.92rem; color:var(--muted)}
+.svc__from{display:block; margin-top:.9rem; font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-deep)}
+
+/* ============================================================
+   PRICE LIST — four columns with dotted leaders
+   ============================================================ */
+.prices{display:grid; gap:2.5rem 3rem; margin-top:3rem}
+.pricecol h3{font-size:1.45rem; padding-bottom:.9rem; border-bottom:1px solid var(--gold); margin-bottom:.4rem}
+.pricecol li{display:flex; align-items:baseline; gap:.5rem; padding:.7rem 0; border-bottom:1px dotted var(--line); font-size:.95rem}
+.pricecol li span:first-child{flex:none}
+.pricecol li i{flex:1; border-bottom:1px dotted rgba(43,43,43,.3); transform:translateY(-.3em)}
+.pricecol li b{flex:none; font-weight:600; font-variant-numeric:tabular-nums}
+.pricecol small{display:block; font-size:.78rem; color:var(--muted); margin-top:.1rem}
+.prices__note{margin-top:2.5rem; font-size:.85rem; color:var(--muted); max-width:60ch}
+
+/* ============================================================
+   BRIDAL — split with package card, then three steps
+   ============================================================ */
+.bridal__grid{display:grid; gap:clamp(2.5rem,5vw,4.5rem); align-items:center}
+.bridal__media .ph{border-radius:var(--radius); aspect-ratio:3/4; box-shadow:var(--shadow)}
+.pkg{margin-top:2rem; background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+.pkg__row{display:flex; justify-content:space-between; align-items:baseline; gap:1rem; padding:1rem 1.4rem; border-bottom:1px solid var(--line)}
+.pkg__row:last-child{border-bottom:0}
+.pkg__row--head{background:var(--blush-soft)}
+.pkg__row h3{font-size:1.15rem}
+.pkg__row b{font-family:var(--display); font-size:1.4rem; font-weight:500; white-space:nowrap}
+.pkg__row span{font-size:.9rem; color:var(--muted)}
+.pkg__list{padding:1.1rem 1.4rem; display:grid; gap:.45rem; font-size:.92rem}
+.pkg__list li{display:flex; gap:.6rem; align-items:flex-start}
+.pkg__list li::before{content:""; flex:none; width:6px; height:6px; margin-top:.6em; border-radius:50%; background:var(--gold)}
+
+.steps{display:grid; gap:1.25rem; margin-top:3.5rem}
+.step{position:relative; border-radius:var(--radius); overflow:hidden; background:var(--ink)}
+.step .ph{aspect-ratio:4/5; border-radius:0}
+.step .ph img{transition:transform .8s cubic-bezier(.19,1,.22,1)}
+.step:hover img{transform:scale(1.05)}
+.step::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(28,27,27,.82) 0%, rgba(28,27,27,.2) 45%, transparent 70%)}
+.step__body{position:absolute; z-index:1; left:0; right:0; bottom:0; padding:1.4rem 1.4rem 1.5rem; color:var(--cream)}
+.step__num{display:block; font-size:.7rem; font-weight:600; letter-spacing:.2em; color:var(--gold); margin-bottom:.4rem}
+.step h3{color:var(--cream); font-size:1.3rem}
+.step p{font-size:.88rem; color:rgba(251,247,244,.82); margin-top:.35rem}
+
+/* ============================================================
+   BAND — full-bleed photograph
+   ============================================================ */
+.band{position:relative; overflow:hidden; min-height:clamp(400px,52vw,600px); display:grid; align-items:center}
+.band__bg{position:absolute; inset:0; margin:0}
+.band__bg img{width:100%; height:100%; object-fit:cover; object-position:70% 30%}
+.band::after{content:""; position:absolute; inset:0; background:linear-gradient(95deg, rgba(28,27,27,.84) 0%, rgba(28,27,27,.6) 45%, rgba(28,27,27,.2) 100%)}
+.band__inner{position:relative; z-index:1; padding-block:clamp(3.5rem,7vw,6rem)}
+.band__line{max-width:20ch; font-family:var(--display); font-weight:400; color:var(--cream); font-size:clamp(1.8rem,1rem + 3vw,3.6rem); line-height:1.12}
+.band__line em{font-style:italic; color:var(--blush)}
+.band p{color:rgba(251,247,244,.78); max-width:46ch; margin-top:1.2rem}
+
+/* ============================================================
+   HYGIENE — numbered facts beside a photo
+   ============================================================ */
+.hyg__grid{display:grid; gap:clamp(2.5rem,5vw,4.5rem); align-items:center}
+.hyg__media .ph{border-radius:var(--radius); aspect-ratio:4/5; box-shadow:var(--shadow)}
+.facts{margin-top:2rem}
+.facts li{display:grid; grid-template-columns:auto 1fr; gap:1.1rem; padding-block:1.2rem; border-top:1px solid var(--line)}
+.facts li:last-child{border-bottom:1px solid var(--line)}
+.facts .n{font-family:var(--display); font-size:1.3rem; color:var(--gold-deep); line-height:1.2; min-width:2ch}
+.facts h3{font-size:1.1rem; font-family:var(--body); font-weight:600}
+.facts p{font-size:.92rem; color:var(--muted); margin-top:.25rem}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery{display:grid; gap:1rem; margin-top:3rem; grid-template-columns:repeat(2,1fr)}
+.gallery__item{position:relative; margin:0; overflow:hidden; border-radius:var(--radius)}
+.gallery .ph{aspect-ratio:4/5; border-radius:var(--radius)}
+.gallery .ph img{transition:transform .9s cubic-bezier(.19,1,.22,1)}
+.gallery__item:hover img{transform:scale(1.06)}
+.gallery__cap{
+  position:absolute; left:0; right:0; bottom:0; z-index:1; padding:1rem 1.1rem;
+  background:linear-gradient(to top, rgba(28,27,27,.78), transparent); color:var(--cream);
+  font-size:.82rem; font-weight:600; letter-spacing:.06em;
+}
+
+/* ============================================================
+   QUOTES — two plain words from customers
+   ============================================================ */
+.quotes{display:grid; gap:1.25rem; margin-top:3rem}
+.quote{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:2rem 1.8rem}
+.quote p{font-family:var(--display); font-size:clamp(1.15rem,1rem + .6vw,1.45rem); line-height:1.4; font-style:italic}
+.quote footer{margin-top:1.2rem; font-size:.85rem; color:var(--muted)}
+.quote footer b{color:var(--ink); font-weight:600}
+
+/* ============================================================
+   VISIT
+   ============================================================ */
+.visit__grid{display:grid; gap:clamp(2.25rem,4vw,3.5rem); align-items:start}
+.address{font-style:normal; margin-top:1.75rem; line-height:1.85}
+.label{display:block; font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:.5rem}
+.hours{margin-top:1.75rem; width:100%; border-collapse:collapse; font-size:.95rem}
+.hours td{padding:.6rem 0; border-bottom:1px dotted var(--line); vertical-align:top}
+.hours td:last-child{text-align:right; font-variant-numeric:tabular-nums}
+.contact-note{margin-top:1.5rem; font-size:.85rem; color:var(--muted)}
+.map{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; border:1px solid var(--line); background:var(--gold-soft); box-shadow:var(--shadow)}
+.map iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.final{text-align:center}
+.final .btn-row{justify-content:center}
+.final__place{margin-top:2rem; font-size:.74rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+
+/* ============================================================
+   FOOTER — edge to edge
+   ============================================================ */
+.footer{background:var(--ink-deep); color:rgba(251,247,244,.72); padding-block:clamp(3.25rem,6vw,4.5rem) 2rem}
+.footer .wrap{max-width:none}
+.footer__grid{display:grid; gap:2.75rem}
+.footer address{font-style:normal; font-size:.9rem; line-height:1.8}
+.footer__contact a{display:inline-block; margin-top:.9rem; font-size:.9rem; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:.15rem}
+.footer .brand__name{color:var(--cream)}
+.footer .brand__mark{color:var(--gold)}
+.footer__tag{margin-top:1.15rem; font-size:.88rem}
+.footer h4{font-family:var(--body); font-size:.68rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:1.1rem}
+.footer__links li + li{margin-top:.65rem}
+.footer__links a{font-size:.9rem; text-decoration:none}
+.footer__links a:hover,.footer__contact a:hover{color:var(--cream)}
+.socials{display:flex; gap:.7rem}
+.socials a{width:42px; height:42px; display:grid; place-items:center; border:1px solid rgba(251,247,244,.2); border-radius:50%; color:rgba(251,247,244,.8); transition:border-color .2s ease, transform .2s ease}
+.socials a:hover{border-color:var(--gold); color:var(--cream); transform:translateY(-2px)}
+.socials svg{width:17px; height:17px}
+.footer__bottom{margin-top:3rem; padding-top:1.6rem; border-top:1px solid rgba(251,247,244,.14); font-size:.79rem; color:rgba(251,247,244,.5)}
+.footer__sample{margin-top:1rem; font-size:.79rem; line-height:1.7; color:rgba(251,247,244,.5)}
+.footer__sample a{color:rgba(251,247,244,.8)}
+
+/* ============================================================
+   FLOATING SOCIAL DOCK + BACK TO TOP
+   A stack of small brand-coloured circles on the right edge. It
+   sits off-screen while the page scrolls and slides in 2.5 s after
+   scrolling stops. Same place on a phone as on a desktop.
+   ============================================================ */
+.dock{
+  position:fixed; right:10px; top:50%; z-index:90;
+  display:flex; flex-direction:column; gap:8px;
+  transform:translate(calc(100% + 12px),-50%);
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{
+  position:relative; width:34px; height:34px; flex:none;
+  display:grid; place-items:center; border-radius:50%;
+  color:#fff; text-decoration:none;
+  box-shadow:0 6px 14px -6px rgba(0,0,0,.45);
+  transition:transform .2s ease;
+}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px)}
+.dock__btn::after{
+  content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%;
+  translate:6px -50%; white-space:nowrap; pointer-events:none;
+  background:var(--ink); color:var(--cream);
+  font-size:.72rem; font-weight:600; letter-spacing:.02em;
+  padding:.35rem .6rem; border-radius:8px;
+  opacity:0; transition:opacity .2s ease, translate .2s ease;
+}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--ink)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
+
+.to-top{
+  position:fixed; right:var(--gutter); bottom:1.25rem; z-index:95;
+  width:48px; height:48px; display:grid; place-items:center;
+  border-radius:50%; background:var(--gold); color:var(--ink-deep);
+  box-shadow:0 16px 30px -16px rgba(28,27,27,.9);
+  opacity:0; visibility:hidden; transform:translateY(14px);
+  transition:opacity .3s ease, transform .3s ease, visibility .3s, background-color .2s ease;
+}
+.to-top.is-visible{opacity:1; visibility:visible; transform:none}
+.to-top:hover{background:var(--gold-deep); color:#fff; transform:translateY(-3px)}
+.to-top svg{width:18px; height:18px}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0; transform:translateY(24px); transition:opacity 1s cubic-bezier(.19,1,.22,1), transform 1s cubic-bezier(.19,1,.22,1)}
+.reveal.is-in{opacity:1; transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (min-width:600px){
+  .services{grid-template-columns:repeat(2,1fr)}
+  .prices{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .quotes{grid-template-columns:repeat(2,1fr)}
+  .footer__grid{grid-template-columns:1.5fr 1fr 1.2fr 1fr; gap:2rem}
+}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:1.1fr .9fr}
+  .hero__facts{grid-template-columns:repeat(4,1fr)}
+  .bridal__grid{grid-template-columns:.9fr 1.1fr}
+  .hyg__grid{grid-template-columns:1.1fr .9fr}
+  .hyg__grid .hyg__media{order:2}
+  .visit__grid{grid-template-columns:.9fr 1.1fr}
+  .services{grid-template-columns:repeat(3,1fr)}
+  .nav{display:block}
+  .header__actions{display:flex}
+  .burger{display:none}
+  .mobile-nav,.backdrop{display:none !important}
+  .to-top{bottom:2rem; width:54px; height:54px}
+}
+@media (min-width:1100px){
+  .prices{grid-template-columns:repeat(4,1fr)}
+  .gallery{grid-template-columns:repeat(6,1fr)}
+  .nav__list{gap:2.6rem}
+  .header__inner{min-height:84px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important; transition-duration:.001ms !important}
+  .reveal{opacity:1; transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ========================== DEMO BAR =========================== -->
+<div class="demobar">
+  <div class="wrap demobar__inner">
+    <a href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&mdash;</span>by Nexvora Technologies</a>
+    <span class="demobar__links">
+      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
+      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
+    </span>
+  </div>
+</div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="top">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Aalta Beauty Parlour, back to top">
+      <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <ellipse cx="20" cy="17" rx="11" ry="13" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M20 30v7M15 37h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M20 9c3 3 3 9 0 12-3-3-3-9 0-12Z" fill="currentColor"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">Aalta Beauty Parlour</span>
+        <span class="brand__sub">Ladies only &bull; Jadavpur</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#services">Services</a></li>
+        <li><a class="nav__link" href="#prices">Price list</a></li>
+        <li><a class="nav__link" href="#bridal">Bridal</a></li>
+        <li><a class="nav__link" href="#hygiene">Hygiene</a></li>
+        <li><a class="nav__link" href="#gallery">Gallery</a></li>
+        <li><a class="nav__link" href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--ghost" href="tel:+919804243159">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+        Call
+      </a>
+      <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        Book on WhatsApp
+      </a>
+    </div>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Drawer menu and its backdrop, outside the header on purpose. -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <button class="mobile-nav__close" id="navClose" type="button" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <a class="mobile-nav__link" href="#services">Services</a>
+  <a class="mobile-nav__link" href="#prices">Price list</a>
+  <a class="mobile-nav__link" href="#bridal">Bridal</a>
+  <a class="mobile-nav__link" href="#hygiene">Hygiene</a>
+  <a class="mobile-nav__link" href="#gallery">Gallery</a>
+  <a class="mobile-nav__link" href="#visit">Visit</a>
+  <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
+  <a class="btn btn--gold" href="tel:+919804243159">Call Us</a>
+</nav>
+<div class="backdrop" id="backdrop"></div>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="reveal">
+        <p class="eyebrow">Hair &bull; Skin &bull; Bridal &bull; Mehendi</p>
+        <h1>Look your best,<br>for <em>every</em> occasion.</h1>
+        <p class="lede">A ladies-only parlour in Jadavpur, open since 2011. Haircuts, facials, threading, hair spa, mehendi and bridal make-up, at prices written on the wall. Send a WhatsApp message and we will hold a chair for you.</p>
+        <div class="btn-row">
+          <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn btn--ghost" href="#prices">See the price list</a>
+        </div>
+        <ul class="hero__facts">
+          <li><b>Since 2011</b><span>In Jadavpur</span></li>
+          <li><b>Ladies only</b><span>Staff and customers</span></li>
+          <li><b>7 days</b><span>Open every day</span></li>
+          <li><b>2 brides</b><span>A day, no more</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__figure reveal">
+        <div class="hero__badge"><b>₹99</b><span>Eyebrow threading</span></div>
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph frame">
+          <img src="/demo/salon/images/hero.jpg" alt="A young woman with a fresh layered haircut, smiling in the salon chair" width="1200" height="1800" fetchpriority="high" decoding="async">
+        </figure>
+        <figure class="ph hero__inset">
+          <img src="/demo/salon/images/bridal-eyeliner.jpg" alt="Our make-up artist shaping a bride's eyebrow with a fine brush" width="800" height="1199" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="section section--deep" id="services">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">What we do</p>
+      <h2 class="h-lg">Six things, done properly</h2>
+      <p class="lede">No long menu. These are the services our customers come back for, and we keep practising them.</p>
+    </div>
+
+    <div class="services">
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="17.5" r="2.5"/><path d="M8.5 8.3 20 18M8.5 15.7 20 6"/></svg></div>
+        <h3>Haircut and styling</h3>
+        <p>Trims, layers, step cuts, kids' cuts, blow-dry and ironing. We cut dry first so you see the length before it is gone.</p>
+        <span class="svc__from">From ₹250</span>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 3c-3.5 4-6 7-6 10.5a6 6 0 0 0 12 0C18 10 15.5 7 12 3Z"/><path d="M9.5 14.5c.4 1.5 1.3 2.4 2.8 2.8"/></svg></div>
+        <h3>Facial and clean-up</h3>
+        <p>Fruit, gold, de-tan and oxygen facials, 45 to 75 minutes. A clean-up when you only have half an hour.</p>
+        <span class="svc__from">From ₹450</span>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 20 14 10l4-1 1-4-5 1L4 16v4Z"/><path d="m12 8 4 4"/></svg></div>
+        <h3>Bridal make-up</h3>
+        <p>HD and airbrush make-up for the wedding and the reception, with saree draping and hair. One trial is part of the package.</p>
+        <span class="svc__from">From ₹8,500</span>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 21v-5a4 4 0 0 1 8 0v5"/><path d="M12 12V3M9 6l3-3 3 3"/><path d="M6 21h12"/></svg></div>
+        <h3>Mehendi</h3>
+        <p>Natural cone mehendi for Eid, Karwa Chauth, Pujo and weddings. Both hands, feet and full bridal designs.</p>
+        <span class="svc__from">From ₹300</span>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 12c3-4 6-6 9-6s6 2 9 6c-3 4-6 6-9 6s-6-2-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
+        <h3>Threading and waxing</h3>
+        <p>Eyebrows, upper lip, forehead and full face threading. Honey and rica wax for arms, legs and full body.</p>
+        <span class="svc__from">From ₹99</span>
+      </article>
+      <article class="svc reveal">
+        <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M7 4v6a5 5 0 0 0 10 0V4"/><path d="M12 15v5M9 20h6"/></svg></div>
+        <h3>Hair spa and colour</h3>
+        <p>Deep-conditioning spa, keratin, smoothening, global colour and highlights. We do a patch test the day before any colour.</p>
+        <span class="svc__from">From ₹900</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRICES ============================ -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Price list</p>
+      <h2 class="h-lg">The same prices as on our wall</h2>
+      <p class="lede">What you see here is what you pay at the counter. No hidden product charge, no surprise at billing.</p>
+    </div>
+
+    <div class="prices">
+      <div class="pricecol reveal">
+        <h3>Hair</h3>
+        <ul>
+          <li><span>Haircut, any style</span><i></i><b>₹350</b></li>
+          <li><span>Kids' haircut (under 10)</span><i></i><b>₹250</b></li>
+          <li><span>Blow-dry</span><i></i><b>₹300</b></li>
+          <li><span>Hair ironing</span><i></i><b>₹500</b></li>
+          <li><span>Hair spa <small>Shoulder length</small></span><i></i><b>₹900</b></li>
+          <li><span>Global colour <small>Ammonia-free</small></span><i></i><b>₹1,800</b></li>
+          <li><span>Highlights, 10 streaks</span><i></i><b>₹1,500</b></li>
+          <li><span>Keratin <small>Shoulder length</small></span><i></i><b>₹4,500</b></li>
+        </ul>
+      </div>
+      <div class="pricecol reveal">
+        <h3>Skin</h3>
+        <ul>
+          <li><span>Clean-up</span><i></i><b>₹450</b></li>
+          <li><span>Fruit facial</span><i></i><b>₹750</b></li>
+          <li><span>De-tan facial</span><i></i><b>₹950</b></li>
+          <li><span>Gold facial</span><i></i><b>₹1,400</b></li>
+          <li><span>Oxygen facial</span><i></i><b>₹1,800</b></li>
+          <li><span>Bleach, face and neck</span><i></i><b>₹350</b></li>
+          <li><span>Face pack, add-on</span><i></i><b>₹150</b></li>
+        </ul>
+      </div>
+      <div class="pricecol reveal">
+        <h3>Threading, waxing, nails</h3>
+        <ul>
+          <li><span>Eyebrows</span><i></i><b>₹99</b></li>
+          <li><span>Upper lip or forehead</span><i></i><b>₹50</b></li>
+          <li><span>Full face threading</span><i></i><b>₹250</b></li>
+          <li><span>Full arms wax <small>Honey</small></span><i></i><b>₹350</b></li>
+          <li><span>Full legs wax <small>Honey</small></span><i></i><b>₹500</b></li>
+          <li><span>Rica wax, full arms</span><i></i><b>₹600</b></li>
+          <li><span>Manicure</span><i></i><b>₹450</b></li>
+          <li><span>Pedicure</span><i></i><b>₹550</b></li>
+        </ul>
+      </div>
+      <div class="pricecol reveal">
+        <h3>Make-up and mehendi</h3>
+        <ul>
+          <li><span>Party make-up</span><i></i><b>₹2,000</b></li>
+          <li><span>Engagement make-up</span><i></i><b>₹4,500</b></li>
+          <li><span>Saree draping</span><i></i><b>₹300</b></li>
+          <li><span>Hairstyle, bun or braid</span><i></i><b>₹500</b></li>
+          <li><span>Mehendi, both hands</span><i></i><b>₹300</b></li>
+          <li><span>Mehendi, hands and feet</span><i></i><b>₹600</b></li>
+          <li><span>Bridal mehendi</span><i></i><b>₹2,500</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="prices__note">Prices include GST. Hair prices are for shoulder length; longer hair costs a little more and we tell you the figure before we start. Prices last revised January 2026.</p>
+  </div>
+</section>
+
+<!-- ============================ BRIDAL ============================ -->
+<section class="section section--blush" id="bridal">
+  <div class="wrap">
+    <div class="bridal__grid">
+      <div class="bridal__media reveal">
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph">
+          <img src="/demo/salon/images/bengali-bride.jpg" alt="A Bengali bride in red Benarasi with mukut, chandan on the forehead and gold jewellery" width="1200" height="1600" loading="lazy" decoding="async">
+        </figure>
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow">Bridal package</p>
+        <h2 class="h-lg">Your wedding day, in two hands you trust</h2>
+        <p class="lede">We take two brides a day, no more, so nobody is rushed. The same artist does your trial and your wedding. Bengali, Marwari and Punjabi bridal looks, with chandan work and traditional hair.</p>
+
+        <div class="pkg">
+          <div class="pkg__row pkg__row--head"><h3>Full bridal, wedding day</h3><b>₹18,000</b></div>
+          <ul class="pkg__list">
+            <li>HD or airbrush make-up, your choice</li>
+            <li>Hairstyle with fresh gajra and all pins</li>
+            <li>Saree or lehenga draping, dupatta setting</li>
+            <li>Chandan or alta work on the forehead and feet</li>
+            <li>One full trial, two weeks before</li>
+            <li>Touch-up kit to carry to the venue</li>
+          </ul>
+          <div class="pkg__row"><span>Reception make-up, same bride</span><b>₹8,500</b></div>
+          <div class="pkg__row"><span>Bridal mehendi, hands and feet</span><b>₹2,500</b></div>
+          <div class="pkg__row"><span>Pre-bridal: 3 facials, 2 hair spas, waxing</span><b>₹6,000</b></div>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Check your wedding date</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <article class="step reveal">
+        <figure class="ph"><img src="/demo/salon/images/bridal-makeup-artist.jpg" alt="Our artist brushing blush on a bride in a blue and red silk saree" width="1200" height="1200" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span class="step__num">01</span><h3>The trial</h3><p>Two weeks before. Bring your blouse and jewellery. We photograph the look so it is repeated exactly.</p></div>
+      </article>
+      <article class="step reveal">
+        <figure class="ph"><img src="/demo/salon/images/haldi-bride.jpg" alt="A bride laughing at her haldi ceremony in yellow and pink" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span class="step__num">02</span><h3>Pre-bridal</h3><p>Three sittings in the month before: facials, hair spa and waxing, timed so your skin is calm on the day.</p></div>
+      </article>
+      <article class="step reveal">
+        <figure class="ph"><img src="/demo/salon/images/mehendi-bridal-arms.jpg" alt="A bride holding mehendi-covered arms across her face, the design running to the elbow" width="1200" height="1599" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span class="step__num">03</span><h3>Mehendi</h3><p>Two days before, at your home or ours. Natural cone, no chemical dye, dark colour by the wedding morning.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BAND ============================ -->
+<section class="band">
+  <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+  <figure class="band__bg">
+    <img src="/demo/salon/images/bride-red-band.jpg" alt="A bride in red velvet with kundan jewellery, looking down and smiling" width="1600" height="1067" loading="lazy" decoding="async">
+  </figure>
+  <div class="wrap band__inner">
+    <h2 class="band__line reveal">Wedding dates fill up <em>early</em>.</h2>
+    <p class="reveal">November to February and the Baisakh weddings go first. Message us with your date and we will tell you the same day if it is free. A ₹2,000 advance holds it.</p>
+    <div class="btn-row reveal">
+      <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about a date</a>
+      <a class="btn btn--outline-light" href="tel:+919804243159">Call us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HYGIENE ============================ -->
+<section class="section" id="hygiene">
+  <div class="wrap hyg__grid">
+    <div class="reveal">
+      <p class="eyebrow">Hygiene</p>
+      <h2 class="h-lg">Five things we do for every customer</h2>
+      <p class="lede">You should not have to ask. These are the rules in our parlour, and you are welcome to watch us follow them.</p>
+      <ol class="facts">
+        <li><span class="n">1</span><div><h3>A fresh towel and cape, every time</h3><p>Washed at 60°C after one use. Nothing is reused between customers.</p></div></li>
+        <li><span class="n">2</span><div><h3>Steel tools go in the steriliser</h3><p>Scissors, tweezers, combs and nail tools sit in the UV cabinet between customers.</p></div></li>
+        <li><span class="n">3</span><div><h3>Wax is never double-dipped</h3><p>One spatula, one dip, in the bin. Strips come out of a sealed pack in front of you.</p></div></li>
+        <li><span class="n">4</span><div><h3>Sealed products, opened in front of you</h3><p>Facial kits and colour tubes are opened at your chair. The empty pack goes home with you if you want it.</p></div></li>
+        <li><span class="n">5</span><div><h3>Ladies-only staff and floor</h3><p>No men on the floor at any time, including delivery. The door is curtained from the street.</p></div></li>
+      </ol>
+    </div>
+    <div class="hyg__media reveal">
+      <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+      <figure class="ph">
+        <img src="/demo/salon/images/makeup-station.jpg" alt="Our make-up artist working at a client's eye with a clean brush, the station laid out behind" width="1200" height="1799" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="section section--deep" id="gallery">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">From our chairs</p>
+      <h2 class="h-lg">Recent work</h2>
+      <p class="lede">Photographed in the parlour with permission. No filters.</p>
+    </div>
+    <div class="gallery">
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/hair-curls.jpg" alt="Soft brown curls after a blow-dry" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Blow-dry, soft curls</figcaption></figure>
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/hair-highlights.jpg" alt="Caramel highlights on long dark hair" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Caramel highlights</figcaption></figure>
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/kids-haircut.jpg" alt="A little girl grinning after her first short haircut" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Kids' cut</figcaption></figure>
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/bridal-bun-gajra.jpg" alt="A bridal bun with jasmine gajra, roses and a pearl juda pin" width="800" height="533" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Bridal bun with gajra</figcaption></figure>
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/mehendi-bangles.jpg" alt="Mehendi on a hand wearing gold and blue bangles" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Mehendi, both hands</figcaption></figure>
+      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/bridal-tikka-makeup.jpg" alt="Eyeliner being drawn on a bride wearing a gold maang tikka" width="1200" height="800" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Bridal eye make-up</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUOTES ============================ -->
+<section class="section">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">In their words</p>
+      <h2 class="h-lg">Two customers</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote reveal">
+        <p>"My daughter's wedding make-up was exactly what we saw at the trial. Not one thing different. That is why I keep going back."</p>
+        <footer><b>Sumitra</b>, Jadavpur, customer since 2013</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>"I asked for the price before the facial and paid the same price after. In Kolkata that is rarer than it should be."</p>
+        <footer><b>Nazia</b>, Garia</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VISIT ============================ -->
+<section class="section section--deep" id="visit">
+  <div class="wrap visit__grid">
+    <div class="reveal">
+      <p class="eyebrow">Visit</p>
+      <h2 class="h-lg">Two minutes from Jadavpur 8B bus stand</h2>
+      <address class="address">
+        <span class="label">Address</span>
+        41A Raja Subodh Mullick Road<br>
+        Jadavpur, Kolkata 700032<br>
+        West Bengal<br>
+        First floor, above the pharmacy. Lift available.
+      </address>
+      <table class="hours">
+        <caption class="label" style="text-align:left">Opening hours</caption>
+        <tbody>
+          <tr><td>Monday to Saturday</td><td>10:00 am – 8:00 pm</td></tr>
+          <tr><td>Sunday</td><td>10:00 am – 5:00 pm</td></tr>
+          <tr><td>Bridal appointments</td><td>From 5:00 am by booking</td></tr>
+        </tbody>
+      </table>
+      <p class="contact-note">Walk-ins are welcome for threading and haircuts. For facials, spa, colour and make-up, please book a slot on WhatsApp so there is no waiting.</p>
+      <div class="btn-row">
+        <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a slot</a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <div class="map reveal">
+      <iframe title="Map showing Aalta Beauty Parlour, Jadavpur" src="https://www.google.com/maps?q=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="section section--ink final">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">Appointment</p>
+      <h2 class="h-lg">Message us. We reply within the hour.</h2>
+      <p class="lede">Tell us the service and a time that suits you. We confirm on WhatsApp and keep the chair ready.</p>
+      <div class="btn-row">
+        <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn--outline-light" href="tel:+919804243159">Call +91 98042 43159</a>
+      </div>
+      <p class="final__place">Jadavpur &bull; Kolkata 700032</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <ellipse cx="20" cy="17" rx="11" ry="13" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M20 30v7M15 37h10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M20 9c3 3 3 9 0 12-3-3-3-9 0-12Z" fill="currentColor"/>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Aalta Beauty Parlour</span>
+            <span class="brand__sub">Ladies only &bull; Jadavpur</span>
+          </span>
+        </a>
+        <p class="footer__tag">Hair, skin, mehendi and bridal make-up since 2011.</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#prices">Price list</a></li>
+          <li><a href="#bridal">Bridal</a></li>
+          <li><a href="#hygiene">Hygiene</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <h4>Visit</h4>
+        <address>
+          41A Raja Subodh Mullick Road<br>
+          Jadavpur, Kolkata 700032<br>
+          Mon–Sat 10 am – 8 pm &bull; Sun 10 am – 5 pm
+        </address>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__bottom">&copy; 2026 Aalta Beauty Parlour. All rights reserved.</p>
+    <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
+  </div>
+</footer>
+
+<!-- Floating social dock -->
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener" aria-label="Google Maps">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
+  </a>
+</nav>
+
+<!-- Back to top -->
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
+
+<!-- Structured data: name, dummy address and services only. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Aalta Beauty Parlour",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "41A Raja Subodh Mullick Road, Jadavpur",
+    "addressLocality": "Kolkata",
+    "postalCode": "700032",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Kolkata",
+  "availableService": [
+    { "@type": "Service", "name": "Haircut and styling" },
+    { "@type": "Service", "name": "Facial and clean-up" },
+    { "@type": "Service", "name": "Bridal make-up" },
+    { "@type": "Service", "name": "Mehendi" },
+    { "@type": "Service", "name": "Threading and waxing" },
+    { "@type": "Service", "name": "Hair spa and colour" }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- Drawer menu ---- */
+  var burger = document.getElementById("burger");
+  var mobileNav = document.getElementById("mobile-nav");
+  var navClose = document.getElementById("navClose");
+  var backdrop = document.getElementById("backdrop");
+
+  function setMenu(open) {
+    var wasOpen = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    mobileNav.classList.toggle("is-open", open);
+    backdrop.classList.toggle("is-open", open);
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    if (open) navClose.focus();
+    else if (wasOpen) burger.focus();
+  }
+  burger.addEventListener("click", function () { setMenu(burger.getAttribute("aria-expanded") !== "true"); });
+  navClose.addEventListener("click", function () { setMenu(false); });
+  backdrop.addEventListener("click", function () { setMenu(false); });
+  mobileNav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") setMenu(false);
+  });
+  window.addEventListener("resize", function () { if (window.innerWidth >= 900) setMenu(false); });
+
+  /* ---- Social dock: slides in 2.5 s after scrolling stops ---- */
+  var dock = document.querySelector(".dock");
+  var dockTimer;
+  function hideDock() {
+    dock.classList.remove("is-in");
+    clearTimeout(dockTimer);
+    dockTimer = setTimeout(function () { dock.classList.add("is-in"); }, 2500);
+  }
+  window.addEventListener("scroll", hideDock, { passive: true });
+  hideDock();
+
+  /* ---- Sticky header state + back to top ---- */
+  var header = document.querySelector(".header");
+  var toTop = document.getElementById("toTop");
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    header.classList.toggle("is-stuck", y > 12);
+    toTop.classList.toggle("is-visible", y > 700);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener("click", function () {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  /* ---- Scroll reveal ---- */
+  var items = document.querySelectorAll(".reveal");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) {
+    items.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add("is-in"); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    items.forEach(function (el) { io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Iron Para Gym | Neighbourhood Gym in Jodhpur Park, Kolkata</title>
+<meta name="description" content="Weights floor, cardio, Zumba and yoga classes, personal training. Monthly, quarterly and yearly plans. Open 5:30 am to 10 pm in Jodhpur Park, Kolkata. Message us on WhatsApp.">
+
+<!-- Sample site. Served with noindex from next.config.mjs as well; the
+     meta tag is belt and braces for when the file is opened elsewhere. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.nexvoratechnologies.co.in/demo/gym">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Iron Para Gym | Neighbourhood Gym in Jodhpur Park, Kolkata">
+<meta property="og:description" content="Weights floor, cardio, Zumba and yoga classes, personal training. Open 5:30 am to 10 pm.">
+<meta property="og:url" content="https://www.nexvoratechnologies.co.in/demo/gym">
+<meta property="og:image" content="https://www.nexvoratechnologies.co.in/demo/gym/images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Iron Para Gym | Jodhpur Park, Kolkata">
+<meta name="twitter:description" content="Weights floor, cardio, group classes, personal training. Open 5:30 am to 10 pm.">
+<meta name="theme-color" content="#0B0B0D">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ==========================================================
+     DEMO IMAGERY
+     Every photograph sits in the images folder next to this file and is free-licence
+     stock from Pexels (free for commercial use, no attribution
+     required). See images/CREDITS.md. To swap one, drop the client's
+     photo in over the same filename and keep the same crop.
+     REPLACE WITH APPROVED CLIENT IMAGES before go-live.
+     ========================================================== -->
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --ink:#0B0B0D;
+  --ink-2:#141418;
+  --ink-3:#1D1D22;
+  --amber:#F5B301;
+  --amber-deep:#D99D00;
+  --concrete:#8A8F98;
+  --concrete-soft:#C4C7CC;
+  --paper:#F4F4F2;
+  --white:#FFFFFF;
+  --line:rgba(255,255,255,.12);
+  --line-dark:rgba(11,11,13,.14);
+
+  --display:"Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --body:"Barlow", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --wrap:1560px;
+  --gutter:clamp(1.25rem, 4vw, 4rem);
+  --section-y:clamp(4.5rem, 9vw, 7.5rem);
+  --radius:6px;
+  --shadow:0 24px 48px -28px rgba(0,0,0,.85);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:84px}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--white);
+  font-family:var(--body);
+  font-size:clamp(1rem,.96rem + .18vw,1.08rem);
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0; font-family:var(--display); font-weight:400; line-height:.95; letter-spacing:.01em; color:var(--white)}
+p{margin:0}
+ul,ol{margin:0; padding:0; list-style:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
+table{border-collapse:collapse; width:100%}
+
+:focus-visible{outline:2px solid var(--amber); outline-offset:3px; border-radius:3px}
+
+.wrap{width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter)}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+
+.skip{
+  position:absolute; left:1rem; top:-4rem; z-index:200;
+  background:var(--amber); color:var(--ink);
+  padding:.7rem 1.1rem; border-radius:var(--radius); font-size:.9rem; font-weight:700;
+  transition:top .2s ease;
+}
+.skip:focus{top:1rem}
+
+/* ============================================================
+   SHARED PIECES
+   ============================================================ */
+.tag{
+  display:inline-flex; align-items:center; gap:.6rem;
+  font-size:.74rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--amber); margin:0 0 1rem;
+}
+.tag::before{content:""; width:28px; height:3px; background:currentColor; flex:none}
+
+.h-xl{font-size:clamp(3rem,2rem + 5vw,6.2rem)}
+.h-lg{font-size:clamp(2.4rem,1.7rem + 3vw,4.4rem)}
+.h-md{font-size:clamp(1.6rem,1.3rem + 1.2vw,2.2rem)}
+.lede{color:var(--concrete-soft); max-width:56ch; margin-top:1.2rem; font-size:1.02rem}
+
+.section{padding-block:var(--section-y)}
+.section--ink2{background:var(--ink-2)}
+.section--paper{background:var(--paper); color:var(--ink)}
+.section--paper h2,.section--paper h3{color:var(--ink)}
+.section--paper .lede{color:#4B4F57}
+.section--paper .tag{color:var(--amber-deep)}
+.section--amber{background:var(--amber); color:var(--ink)}
+.section--amber h2{color:var(--ink)}
+.section--amber .lede{color:rgba(11,11,13,.75)}
+.section--amber .tag{color:var(--ink)}
+
+.head{max-width:46rem}
+.head--center{margin-inline:auto; text-align:center}
+.head--center .tag{justify-content:center}
+.head--center .lede{margin-inline:auto}
+
+/* Hazard stripe: thin amber band used as a divider */
+.stripe{
+  height:8px;
+  background:repeating-linear-gradient(135deg, var(--amber) 0 14px, var(--ink) 14px 28px);
+}
+
+/* Buttons ---------------------------------------------------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.55rem;
+  min-height:52px; padding:.8rem 1.6rem;
+  border-radius:var(--radius);
+  font-family:var(--display); font-size:1.15rem; letter-spacing:.08em;
+  text-decoration:none; text-align:center; line-height:1;
+  transition:transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn svg{width:18px; height:18px; flex:none}
+.btn--amber{background:var(--amber); color:var(--ink)}
+.btn--amber:hover{background:var(--white); transform:translateY(-2px)}
+.btn--ghost{border:1px solid rgba(255,255,255,.35); color:var(--white)}
+.btn--ghost:hover{border-color:var(--amber); color:var(--amber); transform:translateY(-2px)}
+.btn--ink{background:var(--ink); color:var(--white)}
+.btn--ink:hover{background:var(--ink-3); transform:translateY(-2px)}
+.btn--ghost-dark{border:1px solid rgba(11,11,13,.4); color:var(--ink)}
+.btn--ghost-dark:hover{border-color:var(--ink); background:rgba(11,11,13,.06); transform:translateY(-2px)}
+.btn-row{display:flex; flex-wrap:wrap; gap:.85rem; margin-top:2rem}
+
+/* Image frames ---------------------------------------------- */
+.ph{position:relative; display:block; margin:0; overflow:hidden; background:var(--ink-3); border-radius:var(--radius)}
+.ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+/* ============================================================
+   DEMO BAR
+   Thin strip above the header saying this is a sample.
+   Delete this block and its markup before go-live.
+   ============================================================ */
+.demobar{background:var(--amber); color:rgba(11,11,13,.8)}
+.demobar .wrap{max-width:none}
+.demobar__inner{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  min-height:34px; padding-block:.4rem;
+  font-size:.66rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+}
+.demobar b{color:var(--ink); font-weight:700; letter-spacing:.2em; border-bottom:1px solid rgba(11,11,13,.5); padding-bottom:1px}
+.demobar__sep{margin-inline:.5rem}
+.demobar a{color:inherit; text-decoration:none}
+.demobar a:hover{color:var(--ink)}
+.demobar__home{flex:none}
+.demobar__links{display:flex; gap:1.25rem; flex:none}
+.demobar__note{display:none}
+@media (min-width:700px){.demobar__note{display:inline}}
+
+/* ============================================================
+   HEADER (solid, sticky, edge to edge)
+   ============================================================ */
+.header{
+  position:sticky; top:0; z-index:100;
+  background:var(--ink);
+  border-bottom:1px solid var(--line);
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.header.is-stuck{border-bottom-color:rgba(245,179,1,.5); box-shadow:0 10px 30px -20px rgba(0,0,0,.9)}
+.header .wrap{max-width:none}
+.header__inner{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:72px}
+
+.brand{display:flex; align-items:center; gap:.75rem; text-decoration:none}
+.brand__mark{width:38px; height:38px; flex:none}
+.brand__text{display:flex; flex-direction:column; line-height:1}
+.brand__name{font-family:var(--display); font-size:clamp(1.3rem,1rem + 1vw,1.7rem); letter-spacing:.06em; color:var(--white)}
+.brand__name em{font-style:normal; color:var(--amber)}
+.brand__sub{font-size:.58rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--concrete); margin-top:.3rem}
+
+.nav{display:none}
+.nav__list{display:flex; align-items:center; gap:1.9rem}
+.nav__link{
+  position:relative; text-decoration:none; font-size:.9rem; font-weight:600;
+  letter-spacing:.04em; text-transform:uppercase; color:var(--concrete-soft);
+  padding-block:.4rem; transition:color .2s ease;
+}
+.nav__link::after{content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--amber); transition:width .25s ease}
+.nav__link:hover{color:var(--white)}
+.nav__link:hover::after{width:100%}
+
+.header .btn{min-height:44px; padding:.55rem 1.1rem; font-size:1rem}
+.header__actions{display:none; align-items:center; gap:.55rem}
+
+.burger{
+  display:inline-flex; flex-direction:column; justify-content:center; gap:5px;
+  width:46px; height:46px; align-items:center;
+  border:1px solid var(--line); border-radius:var(--radius); background:var(--ink-2);
+}
+.burger span{display:block; width:20px; height:2px; background:var(--amber); transition:transform .25s ease, opacity .2s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Drawer menu from the right edge. Lives outside the header on
+   purpose, so no header effect can become its containing block. */
+.mobile-nav{
+  position:fixed; top:0; right:0; bottom:0; z-index:150;
+  width:min(84vw,360px); display:flex; flex-direction:column;
+  background:var(--ink-2); padding:1rem var(--gutter) 2rem;
+  overflow-y:auto; box-shadow:-24px 0 60px -30px rgba(0,0,0,.9);
+  border-left:1px solid var(--line);
+  transform:translateX(100%); visibility:hidden;
+  transition:transform .45s cubic-bezier(.22,1,.36,1), visibility 0s linear .45s;
+}
+.mobile-nav.is-open{transform:translateX(0); visibility:visible; transition-delay:0s}
+.mobile-nav__close{
+  align-self:flex-end; width:44px; height:44px; display:grid; place-items:center;
+  border:1px solid var(--line); border-radius:var(--radius); color:var(--amber); margin-bottom:1rem;
+}
+.mobile-nav__close svg{width:18px; height:18px}
+.mobile-nav__link{
+  display:flex; align-items:center; min-height:48px; padding:.4rem .25rem; text-decoration:none;
+  font-family:var(--display); font-size:1.5rem; letter-spacing:.06em; color:var(--white);
+  border-bottom:1px solid var(--line);
+}
+.mobile-nav__link:hover{color:var(--amber)}
+.mobile-nav .btn{width:100%; min-height:50px}
+.mobile-nav .btn--amber{margin-top:auto}
+.mobile-nav .btn--ghost{margin-top:.6rem}
+.backdrop{
+  position:fixed; inset:0; z-index:140; background:rgba(0,0,0,.45);
+  opacity:0; pointer-events:none; transition:opacity .3s ease;
+}
+.backdrop.is-open{opacity:1; pointer-events:auto}
+
+/* ============================================================
+   HERO — poster style
+   ============================================================ */
+.hero{position:relative; overflow:hidden; padding-block:clamp(2.5rem,5vw,4.5rem) 0}
+.hero__grid{display:grid; gap:clamp(2.5rem,5vw,4rem); align-items:end}
+.hero h1{font-size:clamp(3.6rem,2.2rem + 8.2vw,9.6rem); line-height:.88; letter-spacing:.005em}
+.hero h1 .amber{color:var(--amber)}
+.hero h1 .outline{color:transparent; -webkit-text-stroke:2px var(--white)}
+.hero .lede{font-size:clamp(1.02rem,.98rem + .3vw,1.2rem); max-width:40rem}
+.hero__meta{
+  display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; margin-top:1.6rem;
+  font-size:.82rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--concrete);
+}
+.hero__meta span::before{content:"//"; color:var(--amber); margin-right:.5rem}
+
+.hero__figure{position:relative; padding:0 0 1.5rem 1.5rem}
+.hero__figure::before{
+  content:""; position:absolute; left:0; bottom:0; right:1.5rem; top:1.5rem;
+  border:2px solid var(--amber); border-radius:var(--radius); pointer-events:none;
+}
+.hero__figure .ph{aspect-ratio:4/5; box-shadow:var(--shadow)}
+.hero__badge{
+  position:absolute; left:-.5rem; bottom:3.5rem; z-index:2;
+  background:var(--amber); color:var(--ink); padding:.9rem 1.1rem; border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+.hero__badge b{display:block; font-family:var(--display); font-size:2.2rem; line-height:.9}
+.hero__badge span{display:block; font-size:.66rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; margin-top:.3rem}
+
+/* Fact strip under the banner — edge to edge */
+.facts{margin-top:clamp(2.5rem,5vw,4rem); border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--ink-2)}
+.facts ul{display:grid; grid-template-columns:repeat(2,1fr)}
+.facts li{padding:1.4rem var(--gutter); border-right:1px solid var(--line)}
+.facts li:nth-child(2n){border-right:0}
+.facts li:nth-child(n+3){border-top:1px solid var(--line)}
+.facts b{display:block; font-family:var(--display); font-size:2rem; line-height:1; color:var(--amber)}
+.facts span{display:block; margin-top:.35rem; font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--concrete)}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about__grid{display:grid; gap:clamp(2.5rem,5vw,4.5rem); align-items:center}
+.about__text p + p{margin-top:1rem}
+.about__figure{position:relative; padding-right:clamp(2rem,8%,4rem); padding-bottom:3rem}
+.about__figure .ph--main{aspect-ratio:4/5; box-shadow:var(--shadow)}
+.about__figure .ph--inset{
+  position:absolute; right:0; bottom:0; width:48%; aspect-ratio:1;
+  border:6px solid var(--ink); box-shadow:var(--shadow);
+}
+.checks{margin-top:1.8rem; display:grid; gap:.7rem}
+.checks li{display:flex; gap:.8rem; align-items:flex-start; color:var(--concrete-soft)}
+.checks li::before{
+  content:""; flex:none; width:18px; height:18px; margin-top:.3rem;
+  background:var(--amber);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6 9 17l-5-5' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6 9 17l-5-5' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.checks b{color:var(--white); font-weight:600}
+
+/* ============================================================
+   FACILITIES — photo cards + plain cards
+   ============================================================ */
+.fcards{display:grid; gap:1.1rem; margin-top:3rem; grid-template-columns:1fr}
+.fcard{
+  position:relative; overflow:hidden; border-radius:var(--radius);
+  background:var(--ink-2); border:1px solid var(--line); box-shadow:var(--shadow);
+  display:flex; flex-direction:column;
+}
+.fcard .ph{aspect-ratio:4/3; border-radius:0}
+.fcard .ph img{transition:transform .8s cubic-bezier(.19,1,.22,1)}
+.fcard:hover .ph img{transform:scale(1.05)}
+.fcard__body{padding:1.3rem 1.3rem 1.5rem; display:flex; flex-direction:column; flex:1}
+.fcard__num{font-family:var(--display); font-size:.95rem; letter-spacing:.14em; color:var(--amber)}
+.fcard h3{font-size:1.7rem; margin-top:.3rem}
+.fcard p{color:var(--concrete-soft); font-size:.95rem; margin-top:.6rem}
+.fcard--plain{justify-content:flex-end; min-height:260px; background:var(--ink-3)}
+.fcard--plain .fcard__icon{width:40px; height:40px; color:var(--amber); margin-bottom:auto}
+.fcard--plain .fcard__icon svg{width:100%; height:100%}
+.fcard--plain .fcard__body{padding-top:1.5rem}
+.facilities__note{margin-top:2rem; font-size:.9rem; color:var(--concrete); max-width:60ch}
+
+/* ============================================================
+   TABLES (classes, timings)
+   ============================================================ */
+.tablewrap{margin-top:3rem; overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); background:var(--ink)}
+.table th,.table td{padding:1rem 1.1rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); white-space:nowrap}
+.table th{font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--concrete); background:var(--ink-3)}
+.table tr:last-child td{border-bottom:0}
+.table td:first-child{font-family:var(--display); font-size:1.35rem; letter-spacing:.04em; color:var(--white)}
+.table td{color:var(--concrete-soft); font-size:.95rem}
+.table .pill{display:inline-block; padding:.2rem .6rem; border-radius:999px; font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; background:rgba(245,179,1,.14); color:var(--amber)}
+.table .pill--w{background:rgba(255,255,255,.1); color:var(--concrete-soft)}
+.table__note{margin-top:1.2rem; font-size:.88rem; color:var(--concrete)}
+
+.classes__grid{display:grid; gap:clamp(2rem,4vw,3.5rem); align-items:start}
+.classes__grid .tablewrap{margin-top:0}
+.classes__side{display:grid; gap:1rem}
+.classes__side .ph{aspect-ratio:3/2; box-shadow:var(--shadow)}
+.quote{
+  padding:1.4rem 1.5rem; border-left:3px solid var(--amber); background:var(--ink-3); border-radius:var(--radius);
+}
+.quote p{font-size:1.02rem; color:var(--white)}
+.quote footer{margin-top:.7rem; font-size:.82rem; color:var(--concrete)}
+
+/* ============================================================
+   PLANS — the one light section
+   ============================================================ */
+.plans{display:grid; gap:1.1rem; margin-top:3rem}
+.plan{
+  position:relative; background:var(--white); border:1px solid var(--line-dark); border-radius:var(--radius);
+  padding:1.8rem 1.6rem 1.7rem; display:flex; flex-direction:column; box-shadow:0 24px 48px -36px rgba(11,11,13,.5);
+}
+.plan__name{font-family:var(--display); font-size:1.1rem; letter-spacing:.16em; color:#4B4F57}
+.plan__price{margin-top:.7rem; font-family:var(--display); font-size:clamp(3rem,2.4rem + 2vw,4.2rem); line-height:.9; color:var(--ink)}
+.plan__price small{font-family:var(--body); font-size:.95rem; font-weight:600; color:#4B4F57; margin-left:.3rem}
+.plan__per{margin-top:.5rem; font-size:.9rem; color:#4B4F57}
+.plan ul{margin-top:1.3rem; display:grid; gap:.5rem; padding-top:1.2rem; border-top:1px solid var(--line-dark); font-size:.95rem; color:#2B2E34}
+.plan li{display:flex; gap:.6rem}
+.plan li::before{content:"+"; color:var(--amber-deep); font-weight:700}
+.plan .btn{margin-top:1.6rem}
+.plan--hot{background:var(--ink); color:var(--white); border-color:var(--ink)}
+.plan--hot .plan__name,.plan--hot .plan__per,.plan--hot .plan__price small{color:var(--concrete)}
+.plan--hot .plan__price{color:var(--amber)}
+.plan--hot ul{border-top-color:var(--line); color:var(--concrete-soft)}
+.plan--hot li::before{color:var(--amber)}
+.plan__flag{
+  position:absolute; top:-.75rem; left:1.6rem; background:var(--amber); color:var(--ink);
+  font-size:.66rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; padding:.3rem .7rem; border-radius:3px;
+}
+.plans__extra{margin-top:2.5rem; display:grid; gap:1rem}
+.extra{
+  display:grid; grid-template-columns:1fr auto; gap:1rem; align-items:center;
+  padding:1.1rem 1.3rem; background:var(--white); border:1px solid var(--line-dark); border-radius:var(--radius);
+}
+.extra h3{font-size:1.4rem}
+.extra p{font-size:.9rem; color:#4B4F57; margin-top:.2rem}
+.extra b{font-family:var(--display); font-size:1.9rem; color:var(--ink); white-space:nowrap}
+.plans__note{margin-top:1.6rem; font-size:.88rem; color:#4B4F57; max-width:64ch}
+
+/* ============================================================
+   TRAINERS
+   ============================================================ */
+.trainers{display:grid; gap:1.4rem; margin-top:3rem}
+.trainer{display:grid; grid-template-columns:120px 1fr; gap:1.2rem; align-items:start; padding:1.2rem; background:var(--ink-3); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+.trainer .ph{aspect-ratio:3/4}
+.trainer h3{font-size:1.8rem}
+.trainer__role{margin-top:.25rem; font-size:.76rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--amber)}
+.trainer p{margin-top:.7rem; font-size:.93rem; color:var(--concrete-soft)}
+.trainer dl{margin:.9rem 0 0; display:grid; grid-template-columns:auto 1fr; gap:.25rem .8rem; font-size:.86rem}
+.trainer dt{color:var(--concrete)}
+.trainer dd{margin:0; color:var(--white)}
+
+/* ============================================================
+   FIRST DAY / RULES
+   ============================================================ */
+.rules__grid{display:grid; gap:clamp(2rem,4vw,3.5rem); align-items:start}
+.steps{display:grid; gap:0; margin-top:2rem}
+.steps li{display:grid; grid-template-columns:auto 1fr; gap:1.1rem; padding-block:1.2rem; border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .n{font-family:var(--display); font-size:1.6rem; color:var(--amber); line-height:1; padding-top:.15rem; min-width:2ch}
+.steps h3{font-size:1.35rem}
+.steps p{margin-top:.3rem; font-size:.93rem; color:var(--concrete-soft)}
+.rulebox{background:var(--ink-2); border:1px solid var(--line); border-radius:var(--radius); padding:1.6rem 1.5rem; box-shadow:var(--shadow)}
+.rulebox h3{font-size:1.6rem}
+.rulebox ul{margin-top:1rem; display:grid; gap:.6rem; font-size:.95rem; color:var(--concrete-soft)}
+.rulebox li{display:flex; gap:.7rem}
+.rulebox li::before{content:"—"; color:var(--amber)}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery{display:grid; gap:1rem; margin-top:3rem; grid-template-columns:repeat(2,1fr)}
+.gallery__item{position:relative; margin:0; overflow:hidden; border-radius:var(--radius); box-shadow:var(--shadow)}
+.gallery .ph{aspect-ratio:1}
+.gallery .ph img{transition:transform .9s cubic-bezier(.19,1,.22,1)}
+.gallery__item:hover img{transform:scale(1.06)}
+.gallery__cap{
+  position:absolute; z-index:2; left:0; right:0; bottom:0; padding:.9rem 1rem;
+  background:linear-gradient(to top, rgba(11,11,13,.9), transparent);
+  font-family:var(--display); font-size:1.05rem; letter-spacing:.08em; color:var(--white);
+}
+
+/* ============================================================
+   VISIT
+   ============================================================ */
+.visit__grid{display:grid; gap:clamp(2.25rem,4vw,3.5rem); align-items:start}
+.address{font-style:normal; margin-top:1.6rem; font-size:1.02rem; line-height:1.8}
+.label{display:block; font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--amber); margin-bottom:.4rem}
+.hours{margin-top:1.4rem}
+.hours table td{padding:.5rem 0; border-bottom:1px solid var(--line); font-size:.95rem; color:var(--concrete-soft)}
+.hours table td:last-child{text-align:right; color:var(--white); white-space:nowrap}
+.hours table tr:last-child td{border-bottom:0}
+.map{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; border:1px solid var(--line); background:var(--ink-2); box-shadow:var(--shadow)}
+.map iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:grayscale(1) contrast(1.05)}
+.visit__note{margin-top:1.4rem; font-size:.88rem; color:var(--concrete)}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.final{text-align:center}
+.final .btn-row{justify-content:center}
+.final__place{margin-top:1.8rem; font-size:.76rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(11,11,13,.7)}
+
+/* ============================================================
+   FOOTER (edge to edge)
+   ============================================================ */
+.footer{background:#060607; color:var(--concrete); padding-block:clamp(3.25rem,6vw,4.5rem) 2rem; border-top:1px solid var(--line)}
+.footer .wrap{max-width:none}
+.footer__grid{display:grid; gap:2.5rem}
+.footer address{font-style:normal; font-size:.92rem; line-height:1.8}
+.footer__contact a{display:inline-block; margin-top:.9rem; font-size:.9rem; text-decoration:none; border-bottom:1px solid rgba(245,179,1,.5); padding-bottom:.15rem; color:var(--concrete-soft)}
+.footer__contact a:hover{color:var(--white)}
+.footer__tag{margin-top:1.1rem; font-size:.92rem}
+.footer__loc{margin-top:.3rem; font-size:.88rem; color:var(--concrete)}
+.footer h4{font-family:var(--body); font-size:.7rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--amber); margin-bottom:1rem}
+.footer__links li + li{margin-top:.6rem}
+.footer__links a{font-size:.92rem; text-decoration:none; color:var(--concrete-soft); transition:color .2s ease}
+.footer__links a:hover{color:var(--white)}
+.socials{display:flex; gap:.7rem}
+.socials a{width:44px; height:44px; display:grid; place-items:center; border:1px solid var(--line); border-radius:var(--radius); color:var(--concrete-soft); transition:border-color .2s ease, color .2s ease, transform .2s ease}
+.socials a:hover{border-color:var(--amber); color:var(--amber); transform:translateY(-2px)}
+.socials svg{width:18px; height:18px}
+.footer__bottom{margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); font-size:.8rem; color:var(--concrete)}
+.footer__sample{margin-top:1rem; font-size:.8rem; line-height:1.7; color:var(--concrete)}
+.footer__sample a{color:var(--concrete-soft)}
+
+/* ============================================================
+   FLOATING SOCIAL DOCK + BACK TO TOP
+   No panel: a slim stack of small brand-coloured circles with white
+   glyphs. Sits off the right edge and slides in 2.5 s after scrolling
+   stops. Same place on a phone as on a desktop.
+   ============================================================ */
+.dock{
+  position:fixed; right:10px; top:50%; z-index:90;
+  display:flex; flex-direction:column; gap:8px;
+  transform:translate(calc(100% + 12px),-50%);
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{
+  position:relative; width:34px; height:34px; flex:none;
+  display:grid; place-items:center; border-radius:50%;
+  color:#fff; text-decoration:none;
+  box-shadow:0 6px 14px -6px rgba(0,0,0,.45);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px); box-shadow:0 10px 18px -8px rgba(0,0,0,.6)}
+.dock__btn::after{
+  content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%;
+  translate:6px -50%; white-space:nowrap; pointer-events:none;
+  background:var(--ink-3); color:var(--white); border:1px solid var(--line);
+  font-size:.72rem; font-weight:600; letter-spacing:.02em;
+  padding:.35rem .6rem; border-radius:8px;
+  opacity:0; transition:opacity .2s ease, translate .2s ease;
+}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--amber); color:var(--ink)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
+
+.to-top{
+  position:fixed; right:1.25rem; bottom:1.25rem; z-index:95;
+  width:48px; height:48px; display:grid; place-items:center;
+  border-radius:50%; background:var(--amber); color:var(--ink);
+  box-shadow:0 16px 30px -16px rgba(0,0,0,.9);
+  opacity:0; visibility:hidden; transform:translateY(14px);
+  transition:opacity .3s ease, transform .3s ease, visibility .3s, background-color .2s ease;
+}
+.to-top.is-visible{opacity:1; visibility:visible; transform:none}
+.to-top:hover{background:var(--white); transform:translateY(-3px)}
+.to-top svg{width:18px; height:18px}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0; transform:translateY(24px); transition:opacity .9s cubic-bezier(.19,1,.22,1), transform .9s cubic-bezier(.19,1,.22,1)}
+.reveal[data-anim="fade-left"]{transform:translateX(48px)}
+.reveal[data-anim="fade-right"]{transform:translateX(-48px)}
+.reveal.is-in{opacity:1; transform:none}
+@media (max-width:899px){
+  .reveal[data-anim="fade-left"],.reveal[data-anim="fade-right"]{transform:translateY(24px)}
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (min-width:600px){
+  .fcards{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .plans__extra{grid-template-columns:repeat(2,1fr)}
+  .footer__grid{grid-template-columns:1.5fr 1fr 1.2fr 1fr; gap:2rem}
+  .trainer{grid-template-columns:150px 1fr}
+}
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:1.2fr .8fr}
+  .facts ul{grid-template-columns:repeat(4,1fr)}
+  .facts li{border-right:1px solid var(--line)}
+  .facts li:nth-child(2n){border-right:1px solid var(--line)}
+  .facts li:last-child{border-right:0}
+  .facts li:nth-child(n+3){border-top:0}
+  .about__grid{grid-template-columns:1fr 1fr}
+  .classes__grid{grid-template-columns:1.3fr .7fr}
+  .rules__grid{grid-template-columns:1.1fr .9fr}
+  .visit__grid{grid-template-columns:.9fr 1.1fr}
+  .trainers{grid-template-columns:repeat(3,1fr)}
+  .trainer{grid-template-columns:1fr; gap:1rem}
+  .trainer .ph{aspect-ratio:4/5}
+  .nav{display:block}
+  .header__actions{display:flex}
+  .burger{display:none}
+  .mobile-nav,.backdrop{display:none !important}
+  .to-top{bottom:2rem; right:2rem; width:54px; height:54px}
+}
+@media (min-width:1100px){
+  .fcards{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(6,1fr)}
+  .nav__list{gap:2.4rem}
+  .header__inner{min-height:84px}
+}
+@media (min-width:1400px){
+  .fcards{grid-template-columns:repeat(6,1fr)}
+  .fcard .ph{aspect-ratio:3/4}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
+  .reveal{opacity:1; transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ========================== DEMO BAR ===========================
+     Remove this strip and its styles before the site goes live.
+     ============================================================== -->
+<div class="demobar">
+  <div class="wrap demobar__inner">
+    <a class="demobar__home" href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&mdash;</span>by Nexvora Technologies</a>
+    <span class="demobar__links">
+      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
+      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
+    </span>
+  </div>
+</div>
+
+<!-- ============================ HEADER ============================ -->
+<header class="header" id="top">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="Iron Para Gym, back to top">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="2" y="13" width="6" height="14" rx="1" fill="#F5B301"/>
+        <rect x="32" y="13" width="6" height="14" rx="1" fill="#F5B301"/>
+        <rect x="9" y="16" width="4" height="8" rx="1" fill="#fff"/>
+        <rect x="27" y="16" width="4" height="8" rx="1" fill="#fff"/>
+        <rect x="13" y="18.5" width="14" height="3" fill="#fff"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">IRON <em>PARA</em> GYM</span>
+        <span class="brand__sub">Jodhpur Park &bull; Since 2016</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#facilities">Facilities</a></li>
+        <li><a class="nav__link" href="#classes">Classes</a></li>
+        <li><a class="nav__link" href="#plans">Plans</a></li>
+        <li><a class="nav__link" href="#trainers">Trainers</a></li>
+        <li><a class="nav__link" href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a class="btn btn--ghost" href="tel:+919804243159">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+        Call
+      </a>
+      <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Drawer menu and its backdrop, outside the header on purpose. -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <button class="mobile-nav__close" id="navClose" type="button" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <a class="mobile-nav__link" href="#about">About</a>
+  <a class="mobile-nav__link" href="#facilities">Facilities</a>
+  <a class="mobile-nav__link" href="#classes">Classes</a>
+  <a class="mobile-nav__link" href="#plans">Plans</a>
+  <a class="mobile-nav__link" href="#trainers">Trainers</a>
+  <a class="mobile-nav__link" href="#visit">Visit</a>
+  <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+  <a class="btn btn--ghost" href="tel:+919804243159">Call Us</a>
+</nav>
+<div class="backdrop" id="backdrop"></div>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__content reveal" data-anim="fade-right">
+        <p class="tag">Jodhpur Park &bull; Kolkata</p>
+        <h1>Lift. Sweat.<br><span class="amber">Go home.</span><br><span class="outline">Come back</span> tomorrow.</h1>
+        <p class="lede">A proper neighbourhood gym. Free weights, machines, cardio, Zumba and yoga in the evening, trainers who learn your name. Open from 5:30 in the morning, six days a week.</p>
+        <div class="btn-row">
+          <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask on WhatsApp</a>
+          <a class="btn btn--ghost" href="#plans">See the plans</a>
+        </div>
+        <p class="hero__meta"><span>Monthly from &#8377;1,200</span><span>First visit free</span><span>Women's hour daily</span></p>
+      </div>
+
+      <div class="hero__figure reveal" data-anim="fade-left" data-delay="150">
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph">
+          <img src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="hero__badge">
+          <b>5:30 am</b>
+          <span>Doors open</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="facts reveal" data-delay="300">
+    <ul>
+      <li><b>Since 2016</b><span>In Jodhpur Park</span></li>
+      <li><b>2,400 sq ft</b><span>One floor, no stairs</span></li>
+      <li><b>3 trainers</b><span>On the floor, every shift</span></li>
+      <li><b>6 days</b><span>5:30 am to 10 pm</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="section section--ink2 about" id="about">
+  <div class="wrap about__grid">
+    <div class="about__figure reveal" data-anim="fade-right">
+      <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+      <figure class="ph ph--main">
+        <img src="/demo/gym/images/tyre-flip.jpg" alt="A man flipping a large tractor tyre on the gym floor" width="1200" height="1600" loading="lazy" decoding="async">
+      </figure>
+      <figure class="ph ph--inset">
+        <img src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async">
+      </figure>
+    </div>
+
+    <div class="about__text reveal" data-anim="fade-left">
+      <p class="tag">About the gym</p>
+      <h2 class="h-lg">A para gym,<br>not a mall gym.</h2>
+      <div class="lede">
+        <p>Iron Para Gym opened in 2016 on the ground floor of a house in Jodhpur Park. The owner, Subrata Ghosh, still runs the morning shift himself.</p>
+        <p>It is one big room. Free weights on one side, machines and cardio on the other, a mat area at the back for classes and stretching. There is a fan over every rack and an AC that works in summer.</p>
+      </div>
+      <ul class="checks">
+        <li><b>Plates up to 20 kg, dumbbells to 40 kg.</b> Two squat racks, a flat and incline bench, a Smith machine.</li>
+        <li><b>Trainers on the floor, not at the desk.</b> Ask anyone in a black T-shirt for help with form.</li>
+        <li><b>No sales pressure.</b> Plans are on this page. Pay for the month you want, nothing more.</li>
+        <li><b>Women's hour 11 am to 1 pm.</b> Women only on the floor, Monday to Saturday.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="stripe" aria-hidden="true"></div>
+
+<!-- ============================ FACILITIES ============================ -->
+<section class="section" id="facilities">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="tag">What's inside</p>
+      <h2 class="h-lg">Everything you need. Nothing you'll pay for and never use.</h2>
+      <p class="lede">All of this is included in every membership. Group classes too.</p>
+    </div>
+
+    <div class="fcards">
+      <article class="fcard reveal">
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph"><img src="/demo/gym/images/preacher-curl.jpg" alt="A man doing preacher curls on a red bench" width="1200" height="1797" loading="lazy" decoding="async"></figure>
+        <div class="fcard__body">
+          <span class="fcard__num">01</span>
+          <h3>Free weights</h3>
+          <p>Two squat racks, flat and incline benches, a deadlift platform, dumbbells from 2.5 to 40 kg.</p>
+        </div>
+      </article>
+      <article class="fcard reveal" data-delay="80">
+        <figure class="ph"><img src="/demo/gym/images/triceps-cable.jpg" alt="A man doing triceps pushdowns on a cable machine" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <div class="fcard__body">
+          <span class="fcard__num">02</span>
+          <h3>Machines</h3>
+          <p>Cable crossover, lat pulldown, leg press, leg curl and extension, chest press, Smith machine.</p>
+        </div>
+      </article>
+      <article class="fcard reveal" data-delay="160">
+        <figure class="ph"><img src="/demo/gym/images/battle-ropes.jpg" alt="A man swinging battle ropes" width="1200" height="1800" loading="lazy" decoding="async"></figure>
+        <div class="fcard__body">
+          <span class="fcard__num">03</span>
+          <h3>Cardio &amp; functional</h3>
+          <p>Four treadmills, two cross-trainers, two bikes, a rower, battle ropes, kettlebells and a tyre.</p>
+        </div>
+      </article>
+      <article class="fcard reveal" data-delay="240">
+        <figure class="ph"><img src="/demo/gym/images/group-class.jpg" alt="A group sitting cross-legged on yoga mats on a lawn" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <div class="fcard__body">
+          <span class="fcard__num">04</span>
+          <h3>Group classes</h3>
+          <p>Zumba, yoga, HIIT and a Sunday stretch class on the mat area. Timetable below. Included.</p>
+        </div>
+      </article>
+      <article class="fcard reveal" data-delay="320">
+        <figure class="ph"><img src="/demo/gym/images/personal-training.jpg" alt="A trainer correcting a woman's posture in a standing stretch" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <div class="fcard__body">
+          <span class="fcard__num">05</span>
+          <h3>Personal training</h3>
+          <p>One trainer, one plan written for you, twelve sessions a month. Booked in advance so you get the slot you want.</p>
+        </div>
+      </article>
+      <article class="fcard fcard--plain reveal" data-delay="400">
+        <div class="fcard__body">
+          <span class="fcard__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 9h18M3 15h18"/></svg>
+          </span>
+          <span class="fcard__num">06</span>
+          <h3>Changing room &amp; lockers</h3>
+          <p>Separate changing rooms for men and women, 40 day-lockers (bring your own lock), a shower, filtered drinking water, first-aid box at the desk.</p>
+        </div>
+      </article>
+    </div>
+    <p class="facilities__note">We do not have a steam room, a pool or a juice bar. We keep the fees low instead.</p>
+  </div>
+</section>
+
+<!-- ============================ CLASSES ============================ -->
+<section class="section section--ink2" id="classes">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="tag">Group classes</p>
+      <h2 class="h-lg">The weekly timetable</h2>
+      <p class="lede">Classes run on the mat area at the back. Come five minutes early. All of them are included in every plan; no extra booking, just turn up.</p>
+    </div>
+
+    <div class="classes__grid" style="margin-top:3rem">
+      <div class="tablewrap reveal">
+        <table class="table">
+          <thead>
+            <tr><th scope="col">Class</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Level</th><th scope="col">Takes it</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>HIIT circuit</td><td>Mon &bull; Wed &bull; Fri</td><td>6:00 &ndash; 6:45 am</td><td><span class="pill">All levels</span></td><td>Rohit</td></tr>
+            <tr><td>Yoga</td><td>Tue &bull; Thu &bull; Sat</td><td>6:30 &ndash; 7:30 am</td><td><span class="pill pill--w">Beginner</span></td><td>Priya</td></tr>
+            <tr><td>Women's strength</td><td>Tue &bull; Thu</td><td>11:30 am &ndash; 12:30 pm</td><td><span class="pill">All levels</span></td><td>Priya</td></tr>
+            <tr><td>Zumba</td><td>Mon &bull; Wed &bull; Fri</td><td>7:00 &ndash; 8:00 pm</td><td><span class="pill">All levels</span></td><td>Guest instructor</td></tr>
+            <tr><td>Stretch &amp; mobility</td><td>Sun</td><td>8:00 &ndash; 9:00 am</td><td><span class="pill pill--w">Beginner</span></td><td>Arjun</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="classes__side reveal" data-anim="fade-left">
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph">
+          <img src="/demo/gym/images/yoga-class.jpg" alt="Two women seated in a yoga pose with arms raised" width="1200" height="800" loading="lazy" decoding="async">
+        </figure>
+        <blockquote class="quote">
+          <p>"I joined for the 6 am HIIT class and stayed for the people. Nobody stares, nobody sells you anything."</p>
+          <footer>Moumita, member since 2022</footer>
+        </blockquote>
+      </div>
+    </div>
+    <p class="table__note">Zumba is taken by a visiting instructor. If she is on leave the slot becomes an open mat hour. We post changes on the noticeboard and on WhatsApp.</p>
+  </div>
+</section>
+
+<div class="stripe" aria-hidden="true"></div>
+
+<!-- ============================ PLANS ============================ -->
+<section class="section section--paper" id="plans">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="tag">Membership</p>
+      <h2 class="h-lg">Three plans. The price is the price.</h2>
+      <p class="lede">Every plan covers the whole gym and every class. Pay cash, UPI or card at the desk. There is a one-time admission fee of &#8377;500 on your first plan.</p>
+    </div>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <span class="plan__name">MONTHLY</span>
+        <p class="plan__price">&#8377;1,200<small>/ month</small></p>
+        <p class="plan__per">Good for trying us out.</p>
+        <ul>
+          <li>Full gym, 5:30 am to 10 pm</li>
+          <li>All group classes</li>
+          <li>Day-locker use</li>
+          <li>Starter plan written on day one</li>
+        </ul>
+        <a class="btn btn--ghost-dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about monthly</a>
+      </article>
+
+      <article class="plan plan--hot reveal" data-delay="100">
+        <span class="plan__flag">Most members pick this</span>
+        <span class="plan__name">QUARTERLY</span>
+        <p class="plan__price">&#8377;3,000<small>/ 3 months</small></p>
+        <p class="plan__per">Works out to &#8377;1,000 a month.</p>
+        <ul>
+          <li>Everything in Monthly</li>
+          <li>One free freeze of up to 10 days</li>
+          <li>Body measurements taken each month</li>
+          <li>Plan reviewed by a trainer every 4 weeks</li>
+        </ul>
+        <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about quarterly</a>
+      </article>
+
+      <article class="plan reveal" data-delay="200">
+        <span class="plan__name">YEARLY</span>
+        <p class="plan__price">&#8377;9,600<small>/ year</small></p>
+        <p class="plan__per">Works out to &#8377;800 a month.</p>
+        <ul>
+          <li>Everything in Quarterly</li>
+          <li>Freeze up to 30 days in the year</li>
+          <li>Admission fee waived</li>
+          <li>Two guest passes for a friend</li>
+        </ul>
+        <a class="btn btn--ghost-dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about yearly</a>
+      </article>
+    </div>
+
+    <div class="plans__extra">
+      <div class="extra reveal">
+        <div>
+          <h3>Personal training</h3>
+          <p>12 one-hour sessions a month with one trainer. Added on top of any plan.</p>
+        </div>
+        <b>&#8377;3,500<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / month</small></b>
+      </div>
+      <div class="extra reveal" data-delay="100">
+        <div>
+          <h3>Day pass</h3>
+          <p>One visit, full gym, any class running that day. Your first visit is free.</p>
+        </div>
+        <b>&#8377;150<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / day</small></b>
+      </div>
+    </div>
+    <p class="plans__note">Students with a valid college ID get &#8377;100 off the monthly plan. No refunds once a plan has started, but you can freeze it as shown above. Prices are examples for this sample site.</p>
+  </div>
+</section>
+
+<!-- ============================ TIMINGS ============================ -->
+<section class="section" id="timings">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="tag">Timings</p>
+      <h2 class="h-lg">When the doors are open</h2>
+    </div>
+    <div class="tablewrap reveal">
+      <table class="table">
+        <thead>
+          <tr><th scope="col">Day</th><th scope="col">Open</th><th scope="col">Women's hour</th><th scope="col">Quietest</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday &ndash; Friday</td><td>5:30 am &ndash; 10:00 pm</td><td>11:00 am &ndash; 1:00 pm</td><td>2 pm &ndash; 5 pm</td></tr>
+          <tr><td>Saturday</td><td>5:30 am &ndash; 10:00 pm</td><td>11:00 am &ndash; 1:00 pm</td><td>After 7 pm</td></tr>
+          <tr><td>Sunday</td><td>6:00 am &ndash; 1:00 pm</td><td>&mdash;</td><td>After 10 am</td></tr>
+          <tr><td>Closed</td><td colspan="3">Durga Pujo (Ashtami to Dashami), Kali Pujo, Holi, 15 August, 26 January</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table__note">Last entry is 45 minutes before closing. The busiest hours are 6 to 8 in the morning and 6 to 9 in the evening.</p>
+  </div>
+</section>
+
+<!-- ============================ TRAINERS ============================ -->
+<section class="section section--ink2" id="trainers">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="tag">Trainers</p>
+      <h2 class="h-lg">Three people who know the floor</h2>
+      <p class="lede">All three are certified fitness trainers and first-aid trained. One of them is on the floor at every hour we are open.</p>
+    </div>
+
+    <div class="trainers">
+      <article class="trainer reveal">
+        <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+        <figure class="ph"><img src="/demo/gym/images/trainer-arjun.jpg" alt="Arjun, a young man in an olive T-shirt standing in the gym" width="800" height="1066" loading="lazy" decoding="async"></figure>
+        <div>
+          <h3>Arjun Das</h3>
+          <p class="trainer__role">Strength &bull; Head trainer</p>
+          <p>Runs the morning shift. Teaches the squat, bench and deadlift from scratch and writes most of the beginner plans.</p>
+          <dl>
+            <dt>At the gym</dt><dd>Since 2016</dd>
+            <dt>Shift</dt><dd>5:30 am &ndash; 1:30 pm</dd>
+            <dt>Also takes</dt><dd>Sunday stretch class</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="trainer reveal" data-delay="100">
+        <figure class="ph"><img src="/demo/gym/images/trainer-rohit.jpg" alt="Rohit, a young man in a red vest smiling next to a punching bag" width="800" height="1422" loading="lazy" decoding="async"></figure>
+        <div>
+          <h3>Rohit Mondal</h3>
+          <p class="trainer__role">Functional &bull; HIIT</p>
+          <p>Takes the 6 am circuit class and the evening floor. Kettlebells, ropes, boxing basics on the bag, and conditioning for school and college athletes.</p>
+          <dl>
+            <dt>At the gym</dt><dd>Since 2019</dd>
+            <dt>Shift</dt><dd>5:30 &ndash; 9 am, 4 &ndash; 10 pm</dd>
+            <dt>Also takes</dt><dd>HIIT circuit</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="trainer reveal" data-delay="200">
+        <figure class="ph"><img src="/demo/gym/images/trainer-priya.jpg" alt="Priya, a woman holding a dumbbell in the gym" width="800" height="1200" loading="lazy" decoding="async"></figure>
+        <div>
+          <h3>Priya Sen</h3>
+          <p class="trainer__role">Women's strength &bull; Yoga</p>
+          <p>Runs the women's hour and the morning yoga class. Works with beginners, new mothers and anyone coming back after a long gap.</p>
+          <dl>
+            <dt>At the gym</dt><dd>Since 2020</dd>
+            <dt>Shift</dt><dd>6 am &ndash; 1 pm</dd>
+            <dt>Also takes</dt><dd>Yoga, women's strength</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIRST DAY ============================ -->
+<section class="section" id="first-day">
+  <div class="wrap rules__grid">
+    <div class="reveal" data-anim="fade-right">
+      <p class="tag">Your first day</p>
+      <h2 class="h-lg">How it goes</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><div><h3>Walk in, any open hour</h3><p>No appointment. Your first visit is free. Say you are new at the desk.</p></div></li>
+        <li><span class="n">2</span><div><h3>Ten minutes with a trainer</h3><p>We ask what you want, check for old injuries, measure height, weight and waist.</p></div></li>
+        <li><span class="n">3</span><div><h3>A tour and a first workout</h3><p>The trainer shows you every machine and walks you through a light first session.</p></div></li>
+        <li><span class="n">4</span><div><h3>Pick a plan, or don't</h3><p>Pay at the desk if you want to continue. Nobody will call you if you don't.</p></div></li>
+      </ol>
+    </div>
+    <div class="rulebox reveal" data-anim="fade-left">
+      <h3>Bring and know</h3>
+      <ul>
+        <li>Indoor shoes. Outdoor shoes stay in the rack at the door.</li>
+        <li>A towel and a water bottle. We have filtered water, not disposable cups.</li>
+        <li>A lock for the day-locker. Lockers are emptied at closing.</li>
+        <li>Re-rack your plates and wipe the bench after use.</li>
+        <li>Phone calls off the floor, please. Photos are fine if nobody else is in them.</li>
+        <li>Tell a trainer about any injury, heart condition or pregnancy before starting.</li>
+        <li>Children under 14 are not allowed on the floor.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GALLERY ============================ -->
+<section class="section section--ink2" id="gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="tag">Gallery</p>
+      <h2 class="h-lg">On the floor</h2>
+    </div>
+    <div class="gallery">
+      <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
+      <figure class="gallery__item reveal"><span class="ph"><img src="/demo/gym/images/women-dumbbells.jpg" alt="A woman holding two dumbbells at her sides" width="800" height="1200" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Women's hour</figcaption></figure>
+      <figure class="gallery__item reveal" data-delay="60"><span class="ph"><img src="/demo/gym/images/cable-row.jpg" alt="A man doing a seated cable row" width="1200" height="1800" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Cable row</figcaption></figure>
+      <figure class="gallery__item reveal" data-delay="120"><span class="ph"><img src="/demo/gym/images/push-ups.jpg" alt="A man doing push-ups on a wooden ledge outdoors" width="1200" height="800" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Sunday outdoors</figcaption></figure>
+      <figure class="gallery__item reveal" data-delay="180"><span class="ph"><img src="/demo/gym/images/triceps-rope.jpg" alt="A triceps rope hanging from a cable machine with a ceiling fan behind" width="1200" height="1602" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Cable station</figcaption></figure>
+      <figure class="gallery__item reveal" data-delay="240"><span class="ph"><img src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Dumbbell rack</figcaption></figure>
+      <figure class="gallery__item reveal" data-delay="300"><span class="ph"><img src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Squat rack</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ VISIT ============================ -->
+<section class="section" id="visit">
+  <div class="wrap visit__grid">
+    <div class="reveal" data-anim="fade-right">
+      <p class="tag">Visit</p>
+      <h2 class="h-lg">Find us</h2>
+      <address class="address">
+        <span class="label">Address</span>
+        41 Jodhpur Park, ground floor<br>
+        Near the Jodhpur Park post office<br>
+        Kolkata 700068, West Bengal
+      </address>
+      <div class="hours">
+        <span class="label">Hours</span>
+        <table>
+          <tr><td>Monday to Saturday</td><td>5:30 am &ndash; 10:00 pm</td></tr>
+          <tr><td>Sunday</td><td>6:00 am &ndash; 1:00 pm</td></tr>
+          <tr><td>Women's hour (Mon&ndash;Sat)</td><td>11:00 am &ndash; 1:00 pm</td></tr>
+        </table>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn btn--ghost" href="tel:+919804243159">Call Us</a>
+        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <p class="visit__note">Two-wheeler parking in the lane. Dhakuria station is a 10-minute walk; buses stop at Jodhpur Park on Prince Anwar Shah Road.</p>
+    </div>
+
+    <div class="reveal" data-anim="fade-left">
+      <!-- Map is centred on the sample address. Swap for the client's own
+           address once the listing is confirmed. -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps?q=41%20Jodhpur%20Park%2C%20Kolkata%20700068&amp;output=embed"
+          title="Map showing where the gym is"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="section section--amber final" id="contact">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="tag">First visit free</p>
+      <h2 class="h-xl">Come in tomorrow morning.</h2>
+      <p class="lede">Message us the time you want to come. We will have a trainer ready at the door.</p>
+      <div class="btn-row">
+        <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+        <a class="btn btn--ghost-dark" href="tel:+919804243159">Call Us</a>
+      </div>
+      <p class="final__place">41 Jodhpur Park &bull; Kolkata 700068</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="2" y="13" width="6" height="14" rx="1" fill="#F5B301"/>
+            <rect x="32" y="13" width="6" height="14" rx="1" fill="#F5B301"/>
+            <rect x="9" y="16" width="4" height="8" rx="1" fill="#fff"/>
+            <rect x="27" y="16" width="4" height="8" rx="1" fill="#fff"/>
+            <rect x="13" y="18.5" width="14" height="3" fill="#fff"/>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">IRON <em>PARA</em> GYM</span>
+            <span class="brand__sub">Jodhpur Park &bull; Since 2016</span>
+          </span>
+        </a>
+        <p class="footer__tag">Weights, cardio, classes, trainers. No frills, fair fees.</p>
+        <p class="footer__loc">Jodhpur Park, Kolkata</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#classes">Classes</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <h4>Visit</h4>
+        <address>
+          41 Jodhpur Park, ground floor<br>
+          Kolkata 700068<br>
+          West Bengal
+        </address>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener" aria-label="Find us on Google Maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer__bottom">&copy; 2026 Iron Para Gym. All rights reserved.</p>
+    <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
+  </div>
+</footer>
+
+<!-- Floating social dock: slides in from the right edge after scrolling stops. -->
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener" aria-label="Google Maps">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
+  </a>
+</nav>
+
+<!-- Back to top -->
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
+
+<!-- Structured data: name, sample address and services only. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Iron Para Gym",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "41 Jodhpur Park",
+    "addressLocality": "Kolkata",
+    "postalCode": "700068",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "areaServed": "Kolkata",
+  "availableService": [
+    { "@type": "Service", "name": "Gym membership" },
+    { "@type": "Service", "name": "Personal training" },
+    { "@type": "Service", "name": "Zumba classes" },
+    { "@type": "Service", "name": "Yoga classes" },
+    { "@type": "Service", "name": "HIIT classes" }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- Drawer menu ---- */
+  var burger = document.getElementById("burger");
+  var mobileNav = document.getElementById("mobile-nav");
+  var navClose = document.getElementById("navClose");
+  var backdrop = document.getElementById("backdrop");
+
+  function setMenu(open) {
+    var wasOpen = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    mobileNav.classList.toggle("is-open", open);
+    backdrop.classList.toggle("is-open", open);
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    if (open) navClose.focus();
+    else if (wasOpen) burger.focus();
+  }
+
+  burger.addEventListener("click", function () {
+    setMenu(burger.getAttribute("aria-expanded") !== "true");
+  });
+  navClose.addEventListener("click", function () { setMenu(false); });
+  backdrop.addEventListener("click", function () { setMenu(false); });
+  mobileNav.addEventListener("click", function (e) {
+    if (e.target.closest("a")) setMenu(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") setMenu(false);
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth >= 900) setMenu(false);
+  });
+
+  /* ---- Social dock: slides in 2.5 s after scrolling stops ---- */
+  var dock = document.querySelector(".dock");
+  var dockTimer;
+  function hideDock() {
+    dock.classList.remove("is-in");
+    clearTimeout(dockTimer);
+    dockTimer = setTimeout(function () { dock.classList.add("is-in"); }, 2500);
+  }
+  window.addEventListener("scroll", hideDock, { passive: true });
+  hideDock();
+
+  /* ---- Sticky header state + back to top ---- */
+  var header = document.querySelector(".header");
+  var toTop = document.getElementById("toTop");
+  function onScroll() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    header.classList.toggle("is-stuck", y > 12);
+    toTop.classList.toggle("is-visible", y > 700);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  toTop.addEventListener("click", function () {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  /* ---- Scroll reveal ---- */
+  var items = document.querySelectorAll(".reveal");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) {
+    items.forEach(function (el) { el.classList.add("is-in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    items.forEach(function (el) {
+      var delay = parseInt(el.getAttribute("data-delay") || "0", 10);
+      if (delay) el.style.transitionDelay = delay + "ms";
+      io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
