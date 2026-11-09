@@ -15,6 +15,7 @@ import {
   PRICE_GROUPS,
   rupees,
 } from "@/lib/pricing";
+import { DEMOS } from "@/lib/demos";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
 import { HeroChat } from "@/components/hero-chat";
@@ -1179,9 +1180,9 @@ export function Pricing() {
  * price. That is the honest part: a plan that says "minor updates included"
  * and means thirty minutes is a disagreement waiting to happen.
  *
- * There is one plan, so the card sits alone at a reading width rather than in
- * a grid that would leave three empty columns beside it. CARE_PLANS is still
- * mapped, so a second plan can be added without touching this file.
+ * Two plans side by side, capped at a reading width so neither card has to
+ * stretch across a wide screen. CARE_PLANS is mapped, so a third plan would
+ * slot in without touching this file.
  */
 function CarePlans() {
   return (
@@ -1206,7 +1207,7 @@ function CarePlans() {
           website, and you can stop it whenever you like.
         </p>
 
-        <div className="mt-8 grid max-w-xl gap-4">
+        <div className="mt-8 grid max-w-4xl gap-4 md:grid-cols-2">
           {CARE_PLANS.map((plan) => (
             <div
               key={plan.id}
@@ -1411,6 +1412,110 @@ export function Examples() {
           week is a poster, a page or a spreadsheet that somebody needed
           by Friday.
         </p>
+        <p className="mt-3 text-slate-600">
+          Want to see what a website for your kind of shop or centre would
+          look like?{" "}
+          <Link
+            href="/demos"
+            className="font-semibold text-brand-700 underline decoration-brand-300 underline-offset-4 hover:text-brand-800"
+          >
+            Open the sample websites
+          </Link>
+          — a sweet shop, a clinic, a coaching centre and ten more.
+        </p>
+      </Reveal>
+    </div>
+  </section>
+  );
+}
+
+/**
+ * The sample websites, one card each.
+ *
+ * Every card opens its demo in a new tab, because a demo is a whole other
+ * website with its own header and nothing of ours on it — a reader who
+ * finishes looking wants this page still open behind it. The card picture
+ * is the demo's own hero photograph, served from its folder, so the card can
+ * never show a design the demo no longer has.
+ */
+export function Demos() {
+  return (
+  <section id="demos" className="scroll-mt-32 band band-plain">
+    <div className="shell py-16 sm:py-20 2xl:py-24">
+      <Reveal className="max-w-3xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-600">
+          Sample websites
+        </p>
+        <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl 2xl:text-5xl">
+          Pick the one closest to your business
+        </h2>
+        <p className="mt-3 text-slate-600">
+          Each of these is a complete website you can open on your phone.
+          The names, addresses and prices on them are made up. The look,
+          the sections and the speed are what you would actually get.
+          Yours comes with your own name, photographs and prices, at the
+          website price on the Price page.
+        </p>
+      </Reveal>
+
+      <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {DEMOS.map((d, i) => (
+          <Reveal key={d.slug} delay={(i % 3) * 80} className="h-full">
+            <a
+              href={`/demo/${d.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-5"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200">
+                <Image
+                  src={d.image}
+                  alt={d.alt}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                />
+                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-700 backdrop-blur">
+                  Sample
+                </span>
+              </div>
+              <div className="mt-5 flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">
+                    {d.kind}
+                  </p>
+                  <h3 className="mt-1 text-lg font-semibold tracking-tight">
+                    {d.name}
+                  </h3>
+                </div>
+                <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-slate-300 transition group-hover:text-brand-600" />
+              </div>
+              <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
+                {d.blurb}
+              </p>
+              <p className="mt-4 text-sm font-semibold text-brand-700">
+                Open the sample
+              </p>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+
+      <Reveal delay={140}>
+        <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-7">
+          <p className="max-w-2xl text-slate-700">
+            Your kind of business not here? Tell me what you do on WhatsApp
+            and I will send you the closest sample, or make one.
+          </p>
+          <a
+            href={`${CONTACT.whatsappHref}?text=${encodeURIComponent("Hello, I saw the sample websites on your site. My business is: ")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-xl bg-gradient-to-br from-brand-600 to-violet-600 px-5 py-3.5 text-sm font-semibold text-white shadow-lift transition hover:brightness-110"
+          >
+            Ask on WhatsApp
+          </a>
+        </div>
       </Reveal>
     </div>
   </section>

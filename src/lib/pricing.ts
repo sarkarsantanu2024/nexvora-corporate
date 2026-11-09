@@ -180,12 +180,14 @@ const PACKAGE_SPECS: PackageSpec[] = [
 export type Package = Omit<PackageSpec, "worthItems"> & { worth: number };
 
 /**
- * Nexvora Care — the monthly plan. The AMC, in plain words.
+ * Nexvora Care — the monthly plans. The AMC, in plain words.
  *
- * One plan, not a ladder of tiers. Four tiers from ₹299 to ₹1,499 were
- * replaced with this single plan on 2026-11-07, because the ₹1,499 plan is
- * the real business and the cheaper rungs only gave people a reason to buy
- * less of it.
+ * Two plans, not a ladder. Four tiers from ₹299 to ₹1,499 were replaced on
+ * 2026-11-07 because the cheap rungs only gave people a reason to buy less;
+ * on 2026-11-09 a second, higher plan was added for the customer who changes
+ * things every week — new products, new photographs, posts and videos —
+ * because that customer was costing more than ₹1,499 of time and the plan
+ * needed to say so.
  *
  * Deliberately not sold as hosting. The moment a plan is described as hosting,
  * it is compared with a ₹100 hosting bill and loses. What is actually being
@@ -221,22 +223,38 @@ export type CarePlan = {
 
 export const CARE_PLANS: CarePlan[] = [
   {
-    id: "care",
-    name: "Nexvora Care",
+    id: "basic",
+    name: "Basic Care",
     monthly: 1499,
     yearly: 14999,
-    who: "For a business that wants its website and its social pages kept alive every week, without doing any of it",
-    allowance: "Up to five pages, two Facebook posts a week, one YouTube upload a week",
+    who: "For a business whose website mostly stays the same, with a few changes a month",
+    allowance: "Up to five pages, and up to four changes a month",
     includes: [
       "Your website looked after — up to five pages kept working and up to date",
       "Hosting, backups and security looked after",
-      "New photographs and content put up on the website",
-      "Two Facebook posts a week, designed and posted for you",
-      "The video you send me uploaded to your YouTube channel every week",
-      "Text and photographs replaced whenever you need",
+      "Text and photographs replaced when you need — up to four times a month",
       "A new offer or announcement banner put up",
+      "Two Facebook posts a month, designed and posted for you",
       "A monthly report in plain language on how it is all holding up",
       "WhatsApp support from me, not a ticket queue",
+    ],
+  },
+  {
+    id: "active",
+    name: "Active Care",
+    monthly: 2999,
+    yearly: 29999,
+    who: "For a business that changes something every week — products, photographs, posts, videos",
+    featured: true,
+    allowance: "Up to five pages, weekly changes, two Facebook posts and one YouTube upload a week",
+    includes: [
+      "Everything in Basic Care",
+      "Products, prices, photographs and content changed every week, as often as you need",
+      "Two Facebook posts a week, designed and posted for you",
+      "The video you send me uploaded to your YouTube channel every week",
+      "Your Google Business Profile kept current — posts, photographs and hours",
+      "A small page for each new offer or season",
+      "Your message answered first",
     ],
   },
 ];
@@ -248,7 +266,7 @@ export const CARE_INCLUDED = [
   "Changing text, prices and phone numbers",
   "Swapping photographs and replacing a banner",
   "Small layout tidying on a page that already exists",
-  "Facebook posts and YouTube uploads, up to the weekly number",
+  "Facebook posts and YouTube uploads, up to the number the plan says",
   "Keeping hosting, backups and security in order",
   "Telling you what went wrong when something breaks",
 ];

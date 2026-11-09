@@ -7,15 +7,16 @@
 <title>Wellness Yoga Studio | Yoga, Meditation and Wellness Classes</title>
 <meta name="description" content="Yoga, meditation and mindful movement classes, in the studio and online. Message us to find a class that suits you.">
 
-<!-- REPLACE WITH ACTUAL LIVE DOMAIN -->
-<link rel="canonical" href="https://WEBSITE_URL_HERE/">
+<!-- Sample site. Served with noindex from next.config.mjs as well; the
+     meta tag is belt and braces for when the file is opened elsewhere. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.nexvoratechnologies.co.in/demo/yoga">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wellness Yoga Studio | Yoga, Meditation and Wellness Classes">
 <meta property="og:description" content="Yoga, meditation and mindful movement classes, in the studio and online. Message us to find a class that suits you.">
-<meta property="og:url" content="https://WEBSITE_URL_HERE/">
-<!-- REPLACE WITH APPROVED CLIENT IMAGE (1200x630) -->
-<meta property="og:image" content="https://WEBSITE_URL_HERE/assets/og-image.jpg">
+<meta property="og:url" content="https://www.nexvoratechnologies.co.in/demo/yoga">
+<meta property="og:image" content="https://www.nexvoratechnologies.co.in/demo/yoga/images/hero-balance-pose.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wellness Yoga Studio | Yoga, Meditation and Wellness Classes">
 <meta name="twitter:description" content="Yoga, meditation and mindful movement, in the studio and online.">
@@ -195,9 +196,13 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   border-bottom:1px solid rgba(185,119,63,.7); padding-bottom:1px;
 }
 .demobar__sep{color:rgba(185,119,63,.9); margin-inline:.5rem}
-.demobar__note{display:none; flex:none; color:rgba(251,247,240,.5)}
+.demobar a{color:inherit; text-decoration:none}
+.demobar a:hover{color:var(--ivory)}
+.demobar__home{flex:none}
+.demobar__links{display:flex; gap:1.25rem; flex:none}
+.demobar__note{display:none; color:rgba(251,247,240,.5)}
 @media (min-width:700px){
-  .demobar__note{display:block}
+  .demobar__note{display:inline}
 }
 
 /* ============================================================
@@ -500,12 +505,12 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .rating__media{position:relative; min-height:300px}
 .rating__media .ph{position:absolute; inset:0}
 .rating__panel{background:var(--ivory); padding:clamp(2rem,4vw,3.4rem)}
-.rating__top{display:flex; align-items:flex-end; gap:1.1rem; margin-top:1.9rem}
-.rating__score{
-  font-family:var(--display); font-weight:500; letter-spacing:-.04em;
-  font-size:clamp(3.4rem,2.4rem + 4vw,5rem); line-height:.85; color:var(--forest);
+.rating__quote{margin:1.9rem 0 0; padding-left:1.25rem; border-left:2px solid var(--sand)}
+.rating__quote p{
+  font-family:var(--display); font-weight:300; letter-spacing:-.02em;
+  font-size:clamp(1.25rem,1.05rem + .9vw,1.7rem); line-height:1.35; color:var(--forest);
 }
-.rating__stars{font-size:1.15rem; color:var(--sand); letter-spacing:.2em; padding-bottom:.35rem}
+.rating__quote footer{margin-top:.9rem; font-size:.84rem; color:var(--muted)}
 .rating__meta{
   display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.5rem;
   padding-top:1.5rem; border-top:1px solid var(--line);
@@ -582,6 +587,11 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   text-transform:uppercase; color:var(--sand); margin-bottom:.6rem;
 }
 .contact-note{margin-top:1.6rem; font-size:.82rem; color:var(--muted)}
+.hours{margin-top:1.5rem; font-size:.95rem; line-height:1.7}
+.hours .label{
+  display:block; font-size:.68rem; font-weight:600; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--sand); margin-bottom:.4rem;
+}
 
 .map{
   position:relative; border-radius:var(--radius); overflow:hidden;
@@ -632,25 +642,40 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 }
 
 /* ============================================================
-   FLOATING CONTACT BAR (mobile) + BACK TO TOP
+   FLOATING SOCIAL DOCK + BACK TO TOP
    ============================================================ */
-/* Two round buttons stacked down the left edge — icon only, so they
-   never stretch across a narrow screen and cover the page. Back to
-   top keeps the right side to itself. */
-.float-bar{
-  position:fixed; left:var(--gutter); bottom:1.1rem; z-index:90;
-  display:flex; flex-direction:column; gap:.65rem;
-  transform:translateY(180%); transition:transform .35s ease;
+/* On a phone: a bar along the bottom with six round buttons, so the
+   thumb reaches every one. From 900px: a vertical stack pinned to the
+   right edge, halfway down, out of the way of the words. */
+.dock{
+  position:fixed; left:0; right:0; bottom:0; z-index:90;
+  display:flex; justify-content:center; gap:.55rem;
+  padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom));
+  background:rgba(251,247,240,.94); border-top:1px solid var(--line);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
 }
-.float-bar.is-visible{transform:translateY(0)}
-.float-bar .btn{
-  flex:none; width:56px; height:56px; min-height:0; padding:0;
-  border-radius:50%; box-shadow:0 18px 34px -18px rgba(22,40,29,.85);
+.dock__btn{
+  width:46px; height:46px; flex:none; display:grid; place-items:center;
+  border-radius:50%; border:1px solid var(--line);
+  background:#fff; color:var(--forest); text-decoration:none;
+  transition:transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
 }
-.float-bar .btn svg{width:24px; height:24px; flex:none}
+.dock__btn svg{width:20px; height:20px}
+.dock__btn:hover{transform:translateY(-3px); border-color:var(--forest)}
+.dock__btn--wa{background:#25D366; border-color:#25D366; color:#fff}
+.dock__btn--wa:hover{background:#1DA851; border-color:#1DA851}
+.dock__btn--call{background:var(--sand); border-color:var(--sand); color:#fff}
+.dock__btn--call:hover{background:#9E6432; border-color:#9E6432}
+
+.footer__sample{
+  margin-top:1rem; font-size:.79rem; line-height:1.7; color:rgba(251,247,240,.5);
+}
+.footer__sample a{color:rgba(251,247,240,.8)}
+/* Room for the bottom dock on a phone */
+.footer{padding-bottom:calc(2rem + 64px)}
 
 .to-top{
-  position:fixed; right:var(--gutter); bottom:1.4rem; z-index:95;
+  position:fixed; right:var(--gutter); bottom:calc(1.4rem + 64px); z-index:95;
   width:48px; height:48px; display:grid; place-items:center;
   border-radius:50%; background:var(--forest); color:var(--ivory);
   box-shadow:0 16px 30px -16px rgba(22,40,29,.9);
@@ -716,7 +741,16 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   .header__actions{display:flex}
   .burger{display:none}
   .mobile-nav{display:none !important}
-  .float-bar{display:none}
+  .dock{
+    left:auto; right:0; bottom:50%; translate:0 50%;
+    flex-direction:column; gap:.5rem; justify-content:flex-start;
+    padding:.6rem; background:rgba(251,247,240,.9);
+    border:1px solid var(--line); border-right:0; border-radius:16px 0 0 16px;
+    box-shadow:0 20px 40px -30px rgba(22,40,29,.8);
+  }
+  .dock__btn{width:42px; height:42px}
+  .dock__btn svg{width:18px; height:18px}
+  .footer{padding-bottom:2rem}
   .to-top{bottom:2rem; width:54px; height:54px}
 }
 @media (min-width:1100px){
@@ -745,7 +779,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
    file; the class only decides which parts are on screen.
 
    Parts marked demo-off are the full site: the wide photo band,
-   Why Practice With Us, the three steps, the Google rating panel,
+   Why Practice With Us, the three steps, the student quote panel,
    the online classes section, the map, all seven programmes, the
    second WhatsApp link under About, Explore Our Classes in the
    banner, and Why Us in both menus.
@@ -771,11 +805,11 @@ body:not(.sample) .demo-only{display:none !important}
      ============================================================== -->
 <div class="demobar">
   <div class="wrap demobar__inner">
-    <!-- PUT THE PROSPECT'S BUSINESS NAME HERE. It is the one line
-         worth changing before you send the link — the rest of the
-         page is written to suit any yoga or wellness studio. -->
-    <span><b>Sample website</b><span class="demobar__sep">&mdash;</span>Prepared for your studio</span>
-    <span class="demobar__note">This is a preview</span>
+    <a class="demobar__home" href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&mdash;</span>by Nexvora Technologies</a>
+    <span class="demobar__links">
+      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
+      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
+    </span>
   </div>
 </div>
 
@@ -808,13 +842,11 @@ body:not(.sample) .demo-only{display:none !important}
     </nav>
 
     <div class="header__actions">
-      <!-- REPLACE WITH CLIENT PHONE -->
-      <a class="btn btn--ghost" href="tel:PHONE_NUMBER_HERE">
+      <a class="btn btn--ghost" href="tel:+919804243159">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
         Call Us
       </a>
-      <!-- REPLACE WITH CLIENT WHATSAPP -->
-      <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">
+      <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
         WhatsApp Us
       </a>
@@ -833,10 +865,8 @@ body:not(.sample) .demo-only{display:none !important}
     <a class="mobile-nav__link demo-only" href="#gallery">Why Us</a>
     <a class="mobile-nav__link demo-off" href="#gallery">Gallery</a>
     <a class="mobile-nav__link" href="#contact">Contact</a>
-    <!-- REPLACE WITH CLIENT WHATSAPP -->
-    <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
-    <!-- REPLACE WITH CLIENT PHONE -->
-    <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+  <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+  <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
   </nav>
 </header>
 
@@ -854,11 +884,9 @@ body:not(.sample) .demo-only{display:none !important}
       <p class="lede">Discover a mindful approach to yoga with guided classes designed to support strength, flexibility, relaxation and overall well-being.</p>
 
       <div class="btn-row">
-        <!-- REPLACE WITH CLIENT WHATSAPP -->
-        <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
-        <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">Call Us</a>
-        <a class="btn btn--ghost demo-off" href="#programs">Explore Our Classes</a>
+          <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
+  <a class="btn btn--ghost demo-off" href="#programs">Explore Our Classes</a>
       </div>
 
     </div>
@@ -875,16 +903,16 @@ body:not(.sample) .demo-only{display:none !important}
 
     <ul class="hero__bar reveal" data-anim="zoom-in-up" data-delay="320">
       <li>
-        <b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</b>
-        <span>Google Rating</span>
+        <b>Since 2014</b>
+        <span>Teaching in Gariahat</span>
       </li>
       <li>
-        <b>50+</b>
-        <span>Google Reviews</span>
+        <b>12 at most</b>
+        <span>Students in a class</span>
       </li>
       <li>
-        <b>Your Area</b>
-        <span>Your Area, Your City</span>
+        <b>7 Practices</b>
+        <span>Hatha to Iyengar</span>
       </li>
       <li>
         <b>Online</b>
@@ -905,8 +933,7 @@ body:not(.sample) .demo-only{display:none !important}
         <p>It is a journey towards better movement, greater awareness and a calmer mind.</p>
         <p class="demo-off">Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.</p>
       </div>
-      <!-- REPLACE WITH CLIENT WHATSAPP -->
-      <a class="link-cta demo-off" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp &rarr;</a>
+            <a class="link-cta demo-off" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Talk to Us on WhatsApp &rarr;</a>
     </div>
 
     <div class="about__figure reveal" data-anim="fade-left">
@@ -918,8 +945,8 @@ body:not(.sample) .demo-only{display:none !important}
         <img src="/demo/yoga/images/about-rolled-mats.jpg" alt="Rolled yoga mats standing in a wooden crate" width="500" height="500" loading="lazy" decoding="async">
       </figure>
       <div class="about__badge">
-        <b>5.0</b>
-        <span>Google Rating</span>
+        <b>12</b>
+        <span>Students per class, at most</span>
       </div>
     </div>
   </div>
@@ -1043,8 +1070,7 @@ body:not(.sample) .demo-only{display:none !important}
     </ul>
 
     <div class="programs__foot reveal">
-      <!-- REPLACE WITH CLIENT WHATSAPP -->
-      <a class="link-cta" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Ask About Classes &rarr;</a>
+            <a class="link-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask About Classes &rarr;</a>
       <p class="note demo-only">More programmes can be added &mdash; tell us what you run and they go on the site.</p>
       <p class="note demo-off">Message us to check which practices are running at the moment.</p>
     </div>
@@ -1062,10 +1088,8 @@ body:not(.sample) .demo-only{display:none !important}
       <p class="eyebrow eyebrow--light">On the Mat</p>
       <p class="band__line">A practice built around the people who come to it.</p>
       <div class="btn-row">
-        <!-- REPLACE WITH CLIENT WHATSAPP -->
-        <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
-        <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--outline-light" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+          <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn--outline-light" href="tel:+919804243159">Call Us</a>
       </div>
     </div>
   </div>
@@ -1092,8 +1116,8 @@ body:not(.sample) .demo-only{display:none !important}
         <li>
           <span class="n" aria-hidden="true">01</span>
           <div>
-            <h3>5.0 Google Rating</h3>
-            <p>A strong rating from the local Google community.</p>
+            <h3>Small Classes</h3>
+            <p>Never more than twelve on the mat, so every posture gets corrected.</p>
           </div>
         </li>
         <li>
@@ -1169,10 +1193,8 @@ body:not(.sample) .demo-only{display:none !important}
     </ol>
 
     <div class="journey__cta btn-row reveal">
-      <!-- REPLACE WITH CLIENT WHATSAPP -->
-      <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Ask About Today&rsquo;s Classes</a>
-      <!-- REPLACE WITH CLIENT PHONE -->
-      <a class="btn btn--outline-light" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+      <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask About Today&rsquo;s Classes</a>
+      <a class="btn btn--outline-light" href="tel:+919804243159">Call Us</a>
     </div>
   </div>
 </section>
@@ -1189,27 +1211,23 @@ body:not(.sample) .demo-only{display:none !important}
       </div>
 
       <div class="rating__panel">
-        <p class="eyebrow">Loved By Our Community</p>
-        <h2 class="h-md">A 5.0-Rated Local Yoga Practice</h2>
-        <p class="lede">Our rating comes from the people who practise with us.</p>
+        <p class="eyebrow">From the Mat</p>
+        <h2 class="h-md">What Students Say</h2>
 
-        <p class="rating__top">
-          <span class="rating__score">5.0</span>
-          <span class="rating__stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        </p>
-        <span class="sr-only">Rated 5.0 out of 5 on Google.</span>
+        <blockquote class="rating__quote">
+          <p>&ldquo;I came for my back and stayed for the quiet. Twelve of us, one teacher, and nobody rushes you.&rdquo;</p>
+          <footer>&mdash; Rina, Hatha evening batch</footer>
+        </blockquote>
 
         <p class="rating__meta">
-          <span>Google Rating</span>
-          <span>50+ Reviews</span>
-          <span>Your Area, Your City</span>
+          <span>Since 2014</span>
+          <span>Small groups</span>
+          <span>Gariahat, Kolkata</span>
         </p>
 
         <div class="btn-row">
-          <!-- REPLACE WITH ACTUAL GOOGLE REVIEW URL -->
-          <a class="btn btn--ghost" href="GOOGLE_REVIEW_URL_HERE" target="_blank" rel="noopener">See Google Reviews</a>
-          <!-- REPLACE WITH CLIENT WHATSAPP -->
-          <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
+    <a class="btn btn--ghost" href="#programs">See the Classes</a>
+    <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
     </div>
@@ -1230,20 +1248,20 @@ body:not(.sample) .demo-only{display:none !important}
 
     <ul class="hero__bar trustbar reveal demo-only" data-anim="zoom-in-up">
       <li>
-        <b><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0</b>
-        <span>Google Rating</span>
+        <b>Since 2014</b>
+        <span>Teaching in Gariahat</span>
       </li>
       <li>
-        <b>50+</b>
-        <span>Google Reviews</span>
+        <b>12 at most</b>
+        <span>Students in a class</span>
       </li>
       <li>
         <b>Online</b>
         <span>Classes Available</span>
       </li>
       <li>
-        <b>Your Area</b>
-        <span>Your Area, Your City</span>
+        <b>7 Practices</b>
+        <span>Hatha to Iyengar</span>
       </li>
     </ul>
 
@@ -1310,10 +1328,8 @@ body:not(.sample) .demo-only{display:none !important}
       <p class="online__big">Practice From Wherever You Are.</p>
       <p class="lede">Our online classes make it easier to maintain your yoga practice wherever you are.</p>
       <div class="btn-row">
-        <!-- REPLACE WITH CLIENT WHATSAPP -->
-        <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Ask About Online Classes</a>
-        <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+          <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask About Online Classes</a>
+          <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
       </div>
     </div>
 
@@ -1343,28 +1359,27 @@ body:not(.sample) .demo-only{display:none !important}
 
       <address class="address">
         <span class="label">Studio Address</span>
-        Your studio address<br>
-        Your area, your city<br>
+        14 Hindusthan Park<br>
+        Gariahat, Kolkata 700029<br>
         West Bengal
       </address>
+      <p class="hours"><span class="label">Class Hours</span>Monday to Saturday, 6&ndash;9 am and 5&ndash;8 pm. Sunday morning only.</p>
 
       <div class="btn-row">
-        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=yoga%20studio%20Kolkata" target="_blank" rel="noopener">Get Directions</a>
-        <!-- REPLACE WITH CLIENT WHATSAPP -->
-        <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">WhatsApp Us</a>
-        <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+  <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
       </div>
 
       <p class="contact-note">Message us on WhatsApp for class timings, availability and online sessions.</p>
     </div>
 
     <div class="reveal" data-anim="fade-left">
-      <!-- Map is centred on the studio address. Swap for the client's own
-           Google Business Profile embed once the listing is confirmed. -->
+      <!-- Map is centred on the sample address. Swap for the client's own
+           address once the listing is confirmed. -->
       <div class="map">
         <iframe
-          src="https://www.google.com/maps?q=Kolkata%2C%20West%20Bengal&amp;z=12&amp;output=embed"
+          src="https://www.google.com/maps?q=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029&amp;output=embed"
           title="Map showing where the studio is"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
@@ -1380,13 +1395,11 @@ body:not(.sample) .demo-only{display:none !important}
       <h2 class="h-lg">Ready to Begin Your Practice?</h2>
       <p class="lede">Ask about classes, timings or online sessions.</p>
       <div class="btn-row">
-        <!-- REPLACE WITH CLIENT WHATSAPP -->
-        <a class="btn btn--light" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">Talk to Us on WhatsApp</a>
-        <a class="btn btn--outline-light demo-only" href="https://www.google.com/maps/search/?api=1&amp;query=yoga%20studio%20Kolkata" target="_blank" rel="noopener">Get Directions</a>
-        <!-- REPLACE WITH CLIENT PHONE -->
-        <a class="btn btn--outline-light demo-off" href="tel:PHONE_NUMBER_HERE">Call Us</a>
+          <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Talk to Us on WhatsApp</a>
+  <a class="btn btn--outline-light demo-only" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn--outline-light demo-off" href="tel:+919804243159">Call Us</a>
       </div>
-      <p class="final__place demo-only">Your area, your city</p>
+      <p class="final__place demo-only">Gariahat, Kolkata</p>
     </div>
   </div>
 </section>
@@ -1411,7 +1424,7 @@ body:not(.sample) .demo-only{display:none !important}
           </span>
         </a>
         <p class="footer__tag">Mindfulness &bull; Movement &bull; Balance</p>
-        <p class="footer__loc">Your area, your city</p>
+        <p class="footer__loc">Gariahat, Kolkata</p>
       </div>
 
       <nav aria-label="Footer">
@@ -1428,24 +1441,26 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="footer__contact">
         <h4>Visit</h4>
         <address>
-          Your studio address<br>
-          Your area, your city<br>
+          14 Hindusthan Park<br>
+          Gariahat, Kolkata 700029<br>
           West Bengal
         </address>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=yoga%20studio%20Kolkata" target="_blank" rel="noopener">Get Directions</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
       </div>
 
       <div>
         <h4>Follow</h4>
-        <!-- REPLACE WITH ACTUAL SOCIAL LINKS -->
         <div class="socials">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
           </a>
-          <a href="#" aria-label="Google profile">
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Find us on Google Maps">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
           </a>
         </div>
@@ -1453,22 +1468,32 @@ body:not(.sample) .demo-only{display:none !important}
     </div>
 
     <p class="footer__bottom">&copy; 2026 Wellness Yoga Studio. All rights reserved.</p>
+    <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The studio, its address and its timings are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
   </div>
 </footer>
 
-<!-- Floating contact bar (mobile only) -->
-<div class="float-bar" id="floatBar">
-  <!-- REPLACE WITH CLIENT WHATSAPP -->
-  <a class="btn btn--solid" href="https://wa.me/WHATSAPP_NUMBER_HERE?text=Hello%20Wellness%20Yoga%20Studio%2C%20I%20would%20like%20to%20know%20more%20about%20your%20classes." target="_blank" rel="noopener">
+<!-- Floating social dock. A vertical stack on the right edge on a
+     desktop; a bar along the bottom of the screen on a phone. -->
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-    <span class="sr-only">WhatsApp us</span>
   </a>
-  <!-- REPLACE WITH CLIENT PHONE -->
-  <a class="btn btn--sand" href="tel:PHONE_NUMBER_HERE">
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-    <span class="sr-only">Call us</span>
   </a>
-</div>
+  <a class="dock__btn" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
+  </a>
+  <a class="dock__btn" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
+  </a>
+  <a class="dock__btn" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+  <a class="dock__btn" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Find us on Google Maps">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
+  </a>
+</nav>
 
 <!-- Back to top -->
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">
@@ -1533,13 +1558,11 @@ body:not(.sample) .demo-only{display:none !important}
 
   /* ---- Sticky header state + floating bar + back to top ---- */
   var header = document.querySelector(".header");
-  var floatBar = document.getElementById("floatBar");
   var toTop = document.getElementById("toTop");
 
   function onScroll() {
     var y = window.pageYOffset || document.documentElement.scrollTop;
     header.classList.toggle("is-stuck", y > 12);
-    floatBar.classList.toggle("is-visible", y > 420);
     toTop.classList.toggle("is-visible", y > 700);
   }
   window.addEventListener("scroll", onScroll, { passive: true });

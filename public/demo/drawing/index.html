@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rong Tuli Art School | Drawing and painting classes in Bhowanipore, Kolkata</title>
+<meta name="description" content="Drawing and art school at Sarat Bose Road, Kolkata. Pencil, watercolour and sketching classes for children and adults, exam preparation for art colleges, weekend hobby batches.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#FAFAF7; --paper-2:#F1F0EA; --white:#FFFFFF;
+  --pencil:#3D3D3D; --pencil-light:#8C8C8C; --pencil-faint:#D9D8D2; --ink:#1F1F1F;
+  --red:#E63946; --blue:#1D4ED8; --yellow:#F4C20D; --green:#2A9D8F;
+  --line:#DCDBD4;
+  --hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --body:"Work Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  --wrap:1560px; --gutter:clamp(1.25rem,4vw,4rem); --sy:clamp(4.5rem,9vw,7.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:84px}
+body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:1rem; line-height:1.65; overflow-x:hidden; -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--pencil-faint) 1px, transparent 1px), linear-gradient(90deg, var(--pencil-faint) 1px, transparent 1px);
+  background-size:40px 40px; background-attachment:fixed}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0; font-family:var(--body); font-weight:800; line-height:1.1; letter-spacing:-.025em; color:var(--ink)}
+p{margin:0}
+ul,ol{margin:0; padding:0; list-style:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
+:focus-visible{outline:3px solid var(--blue); outline-offset:3px}
+.wrap{width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter)}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.skip{position:absolute; left:1rem; top:-4rem; z-index:300; background:var(--ink); color:#fff; padding:.7rem 1.1rem; font-weight:700; border-radius:6px; transition:top .2s}
+.skip:focus{top:1rem}
+
+.hand{font-family:var(--hand); font-weight:700; letter-spacing:0; text-transform:none}
+.scribble{display:inline-block; font-family:var(--hand); font-size:clamp(1.3rem,1rem + 1.4vw,1.9rem); font-weight:700; color:var(--red); transform:rotate(-2deg); margin-bottom:.4rem}
+.scribble--blue{color:var(--blue)}
+.scribble--green{color:var(--green)}
+.h-xl{font-size:clamp(2.4rem,1.5rem + 4.5vw,5rem); line-height:.98}
+.h-lg{font-size:clamp(1.9rem,1.4rem + 2.2vw,3rem)}
+.h-md{font-size:clamp(1.2rem,1.05rem + .7vw,1.5rem)}
+.mark{background:linear-gradient(transparent 55%, rgba(244,194,13,.6) 55%)}
+.lede{color:var(--pencil); max-width:56ch; margin-top:1.1rem; font-size:1.05rem}
+.center{text-align:center}
+.center .lede{margin-inline:auto}
+.section{padding-block:var(--sy); position:relative}
+.section--white{background:var(--white)}
+.section--grey{background:var(--paper-2)}
+.section--ink{background:var(--ink); color:#fff}
+.section--ink h2,.section--ink h3{color:#fff}
+.section--ink .lede{color:rgba(255,255,255,.72)}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.55rem; min-height:50px; padding:.8rem 1.5rem; font-weight:700; font-size:.92rem; text-decoration:none; border-radius:8px; border:2px solid var(--ink); transition:transform .15s, box-shadow .15s, background .15s, color .15s; box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink)}
+.btn svg{width:18px; height:18px; flex:none}
+.btn--red{background:var(--red); color:#fff}
+.btn--yellow{background:var(--yellow); color:var(--ink)}
+.btn--white{background:#fff; color:var(--ink)}
+.btn--blue{background:var(--blue); color:#fff}
+.btn-row{display:flex; flex-wrap:wrap; gap:.9rem; margin-top:1.9rem}
+
+.ph{position:relative; display:block; margin:0; overflow:hidden; background:var(--paper-2)}
+.ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+/* taped paper look */
+.tape{position:relative; background:#fff; padding:.6rem .6rem 2rem; box-shadow:0 10px 30px -14px rgba(0,0,0,.35); border:1px solid var(--line)}
+.tape::before{content:""; position:absolute; top:-10px; left:50%; width:90px; height:22px; transform:translateX(-50%) rotate(-2deg); background:rgba(244,194,13,.55); border:1px solid rgba(0,0,0,.05); z-index:2}
+.tape figcaption{position:absolute; left:0; right:0; bottom:.4rem; text-align:center; font-family:var(--hand); font-size:1.1rem; color:var(--pencil); font-weight:500}
+
+/* demo strip */
+.demostrip{background:var(--ink); color:#fff; font-size:.78rem; font-weight:500}
+.demostrip .wrap{max-width:none}
+.demostrip__in{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:38px; padding-block:.45rem}
+.demostrip a{color:#fff; text-decoration:none}
+.demostrip a:hover{text-decoration:underline}
+.demostrip__mid{display:none}
+.demostrip__cta{background:var(--yellow); color:var(--ink) !important; padding:.3rem .8rem; border-radius:4px; font-weight:700}
+@media (min-width:700px){.demostrip__mid{display:inline}}
+
+/* header with primary colour rule */
+.header{position:sticky; top:0; z-index:100; background:rgba(250,250,247,.92); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:2px solid var(--ink)}
+.header::before{content:""; display:block; height:5px; background:linear-gradient(90deg, var(--red) 0 33.3%, var(--yellow) 33.3% 66.6%, var(--blue) 66.6%)}
+.header .wrap{max-width:none}
+.header__in{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:70px}
+.brand{display:flex; align-items:center; gap:.7rem; text-decoration:none}
+.brand__mark{width:40px; height:40px; flex:none}
+.brand__name{font-weight:800; font-size:clamp(1.05rem,.9rem + .6vw,1.3rem); letter-spacing:-.02em; line-height:1}
+.brand__sub{display:block; font-family:var(--hand); font-size:1rem; color:var(--red); margin-top:.1rem; font-weight:500}
+.nav{display:none}
+.nav ul{display:flex; gap:1.6rem}
+.nav a{text-decoration:none; font-size:.92rem; font-weight:600; color:var(--pencil); padding-block:.5rem; position:relative}
+.nav a::after{content:""; position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .2s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{transform:scaleX(1)}
+.header__cta{display:none}
+.header .btn{min-height:44px; padding:.5rem 1.1rem; font-size:.85rem; box-shadow:3px 3px 0 var(--ink)}
+.burger{display:inline-flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; width:46px; height:46px; border:2px solid var(--ink); border-radius:8px; background:#fff}
+.burger span{display:block; width:20px; height:2px; background:var(--ink); transition:transform .25s, opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:none; border-top:1px solid var(--line); background:var(--paper); padding:.8rem var(--gutter) 1.5rem}
+.mnav.is-open{display:block}
+.mnav a{display:block; padding:.9rem .2rem; text-decoration:none; font-size:1.05rem; font-weight:600; border-bottom:1px dashed var(--pencil-faint)}
+.mnav .btn{margin-top:1.2rem; width:100%; border-bottom:2px solid var(--ink)}
+@media (min-width:1024px){.nav{display:block}.header__cta{display:flex; gap:.7rem}.burger,.mnav{display:none !important}}
+
+/* hero: poster / stacked, collage below */
+.hero{padding-top:clamp(2.5rem,6vw,5rem); overflow:hidden}
+.hero__head{max-width:980px}
+.hero__head h1 .hand{font-size:1.1em; color:var(--blue); font-weight:700; letter-spacing:0}
+.hero__meta{display:flex; flex-wrap:wrap; gap:.6rem 1.4rem; margin-top:1.6rem; font-size:.9rem; font-weight:600; color:var(--pencil)}
+.hero__meta li{display:flex; align-items:center; gap:.5rem}
+.hero__meta i{width:12px; height:12px; border-radius:50%; display:inline-block}
+.collage{display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; margin-top:3rem; align-items:start}
+.collage .tape{transform:rotate(-1.5deg)}
+.collage .tape:nth-child(2){transform:rotate(1.5deg); margin-top:1.8rem}
+.collage .tape:nth-child(3){transform:rotate(-.8deg); grid-column:span 2; max-width:520px; margin-inline:auto}
+.collage .ph{aspect-ratio:4/3}
+@media (min-width:800px){
+  .collage{grid-template-columns:1.2fr 1fr 1fr; gap:1.6rem}
+  .collage .tape:nth-child(3){grid-column:auto; margin-top:3rem; max-width:none}
+  .collage .ph{aspect-ratio:3/4}
+  .collage .tape:first-child .ph{aspect-ratio:4/3}
+}
+
+/* about + numbers */
+.about{display:grid; gap:2.5rem; align-items:center}
+.about__text p+p{margin-top:1rem}
+.about__text p{color:var(--pencil)}
+.numbers{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:2rem}
+.numbers li{border:2px solid var(--ink); background:#fff; padding:1rem 1.1rem; border-radius:8px; box-shadow:4px 4px 0 var(--yellow)}
+.numbers li:nth-child(2){box-shadow:4px 4px 0 var(--red)}
+.numbers li:nth-child(3){box-shadow:4px 4px 0 var(--blue)}
+.numbers li:nth-child(4){box-shadow:4px 4px 0 var(--green)}
+.numbers b{display:block; font-size:1.8rem; font-weight:800; letter-spacing:-.03em}
+.numbers span{font-size:.85rem; color:var(--pencil)}
+.about__fig .ph{aspect-ratio:4/5}
+@media (min-width:900px){.about{grid-template-columns:1fr 1fr; gap:4rem}}
+
+/* courses: colour-coded cards */
+.courses{display:grid; gap:1.4rem; margin-top:2.6rem}
+.course{display:grid; grid-template-columns:1fr; background:#fff; border:2px solid var(--ink); border-radius:10px; overflow:hidden; border-left-width:10px}
+.course .ph{aspect-ratio:16/9}
+.course__body{padding:1.4rem 1.4rem 1.6rem}
+.course__body h3{font-size:1.3rem; margin-bottom:.4rem}
+.course__body p{color:var(--pencil); font-size:.96rem}
+.course__row{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem}
+.chip{font-size:.75rem; font-weight:700; letter-spacing:.04em; padding:.3rem .65rem; border-radius:999px; background:var(--paper-2); color:var(--pencil); border:1px solid var(--line)}
+.course--red{border-left-color:var(--red)}
+.course--blue{border-left-color:var(--blue)}
+.course--yellow{border-left-color:var(--yellow)}
+.course--green{border-left-color:var(--green)}
+.course--grey{border-left-color:var(--pencil-light)}
+@media (min-width:700px){.course{grid-template-columns:220px 1fr}.course .ph{aspect-ratio:auto; min-height:100%}}
+@media (min-width:1024px){.courses{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.courses{grid-template-columns:repeat(3,1fr); gap:1.6rem}.course{grid-template-columns:1fr}.course .ph{aspect-ratio:16/9; min-height:0}}
+
+/* timetable */
+.table-wrap{margin-top:2.4rem; overflow-x:auto; -webkit-overflow-scrolling:touch; border:2px solid var(--ink); background:#fff; border-radius:10px}
+table{width:100%; border-collapse:collapse; min-width:640px; font-size:.95rem}
+th,td{padding:.95rem 1rem; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--pencil); background:var(--paper-2); font-weight:700}
+td b{font-weight:700}
+tr:last-child td{border-bottom:0}
+.dot{display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:.5rem; vertical-align:middle}
+.fee{white-space:nowrap; font-weight:700}
+.note{margin-top:1rem; font-size:.9rem; color:var(--pencil)}
+
+/* materials */
+.materials{display:grid; gap:2rem; margin-top:2.4rem}
+.matbox{background:#fff; border:2px dashed var(--pencil-light); border-radius:10px; padding:1.6rem}
+.matbox h3{font-size:1.1rem; margin-bottom:1rem; display:flex; align-items:center; gap:.6rem}
+.matbox h3 i{width:14px; height:14px; border-radius:3px; display:inline-block}
+.matbox li{display:flex; gap:.7rem; padding:.45rem 0; border-bottom:1px solid var(--paper-2); color:var(--pencil); font-size:.95rem}
+.matbox li::before{content:"\2610"; color:var(--pencil-light)}
+.matbox li:last-child{border-bottom:0}
+.matbox small{display:block; margin-top:1rem; color:var(--pencil-light); font-size:.84rem}
+@media (min-width:800px){.materials{grid-template-columns:1fr 1fr 1fr; max-width:1300px; margin-inline:auto}}
+
+/* steps */
+.steps{display:grid; gap:1.2rem; margin-top:2.6rem; counter-reset:step}
+.step{position:relative; padding:1.6rem 1.4rem 1.4rem 1.4rem; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:10px}
+.step::before{counter-increment:step; content:counter(step); position:absolute; top:-1rem; left:1.2rem; width:2.2rem; height:2.2rem; border-radius:50%; background:var(--yellow); color:var(--ink); font-weight:800; display:grid; place-items:center; font-size:1rem}
+.step:nth-child(2)::before{background:var(--red); color:#fff}
+.step:nth-child(3)::before{background:var(--blue); color:#fff}
+.step:nth-child(4)::before{background:var(--green); color:#fff}
+.step h3{font-size:1.1rem; margin:.4rem 0 .5rem}
+.step p{color:rgba(255,255,255,.72); font-size:.95rem}
+@media (min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}}
+
+/* gallery */
+.gallery{display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem 1rem; margin-top:2.6rem}
+.gallery .tape{padding-bottom:1.8rem}
+.gallery .tape:nth-child(odd){transform:rotate(-1.2deg)}
+.gallery .tape:nth-child(even){transform:rotate(1deg)}
+.gallery .ph{aspect-ratio:1}
+@media (min-width:800px){.gallery{grid-template-columns:repeat(4,1fr); gap:2rem 1.4rem}}
+@media (min-width:1100px){.gallery{gap:2.4rem 1.8rem}}
+
+/* quotes */
+.quotes{display:grid; gap:1.2rem; margin-top:2.4rem}
+.quote{background:#fff; border:2px solid var(--ink); border-radius:10px; padding:1.6rem; box-shadow:5px 5px 0 var(--pencil-faint)}
+.quote p{font-size:1.05rem; color:var(--ink)}
+.quote footer{margin-top:1rem; font-family:var(--hand); font-size:1.25rem; color:var(--blue); font-weight:500}
+@media (min-width:800px){.quotes{grid-template-columns:1fr 1fr; max-width:1200px; margin-inline:auto}}
+
+/* visit */
+.visit{display:grid; gap:2rem; margin-top:2.4rem}
+.visit__map{position:relative; min-height:320px; border:2px solid var(--ink); border-radius:10px; overflow:hidden; background:var(--paper-2)}
+.visit__map iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.visit__info h3{font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--pencil-light); margin-bottom:.5rem}
+.visit__block+.visit__block{margin-top:1.6rem}
+.visit__info address{font-style:normal; color:var(--pencil)}
+.hours li{display:flex; justify-content:space-between; gap:1rem; border-bottom:1px dashed var(--pencil-faint); padding:.35rem 0; color:var(--pencil)}
+.hours li span:last-child{color:var(--ink); font-weight:600}
+.visit__links{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.4rem}
+@media (min-width:900px){.visit{grid-template-columns:1fr 1fr; gap:3.5rem}.visit__map{min-height:420px}}
+
+/* final */
+.final{background:var(--yellow); border-top:2px solid var(--ink); border-bottom:2px solid var(--ink)}
+.final .lede{color:var(--ink)}
+
+/* footer */
+.footer{background:var(--ink); color:rgba(255,255,255,.7); padding:3.5rem 0 2rem; font-size:.92rem}
+.footer .wrap{max-width:none}
+.footer__grid{display:grid; gap:2rem}
+.footer h4{font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; color:var(--yellow); margin-bottom:.9rem}
+.footer ul li+li{margin-top:.45rem}
+.footer a{color:rgba(255,255,255,.75); text-decoration:none}
+.footer a:hover{color:#fff}
+.footer address{font-style:normal}
+.footer .brand__name{color:#fff}
+.footer .brand__sub{color:var(--yellow)}
+.footer__tag{margin-top:1rem; max-width:34ch}
+.footer__sample{margin-top:2.5rem; padding-top:1.4rem; border-top:1px solid rgba(255,255,255,.15); font-size:.86rem}
+.footer__sample a{text-decoration:underline; color:#fff}
+.footer__copy{margin-top:.8rem; font-size:.8rem; color:rgba(255,255,255,.45)}
+@media (min-width:800px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* social stack */
+.social{position:fixed; right:.75rem; bottom:5.2rem; z-index:90; display:flex; flex-direction:column; gap:.5rem}
+.social a{width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:var(--ink); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); transition:transform .15s}
+.social a svg{width:20px; height:20px}
+.social a:hover{transform:translate(-2px,-2px)}
+.social a:nth-child(1){background:#25D366; color:#fff}
+.social a:nth-child(2){color:var(--blue)}
+.social a:nth-child(3){color:var(--red)}
+.social a:nth-child(4){color:#C13584}
+.social a:nth-child(5){color:var(--green)}
+@media (min-width:900px){.social{top:50%; bottom:auto; transform:translateY(-50%); right:1rem}}
+
+/* float bar */
+.floatbar{position:fixed; left:0; right:0; bottom:0; z-index:95; display:grid; grid-template-columns:1fr 1fr; gap:.6rem; background:var(--paper); border-top:2px solid var(--ink); padding:.55rem .75rem calc(.55rem + env(safe-area-inset-bottom))}
+.floatbar .btn{min-height:46px; font-size:.85rem; box-shadow:3px 3px 0 var(--ink)}
+@media (min-width:900px){.floatbar{display:none}}
+body{padding-bottom:68px}
+@media (min-width:900px){body{padding-bottom:0}}
+
+/* back to top: sits above the mobile social stack (5 x 44px + 4 x .5rem gaps) */
+.to-top{position:fixed; right:.75rem; bottom:calc(5.2rem + 262px); z-index:90; width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--yellow); color:var(--ink); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, visibility .25s, transform .25s}
+.to-top svg{width:20px; height:20px}
+.to-top.is-visible{opacity:1; visibility:visible; transform:none}
+.to-top.is-visible:hover{transform:translate(-2px,-2px)}
+@media (min-width:900px){.to-top{right:1rem; bottom:1.5rem; width:48px; height:48px}}
+
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}
+.reveal.is-in{opacity:1; transform:none}
+.tape.reveal{transition-property:opacity}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1; transform:none; transition:none}
+  *{transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="demostrip">
+  <div class="wrap demostrip__in">
+    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
+    <a class="demostrip__mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
+    <a class="demostrip__cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
+  </div>
+</div>
+
+<header class="header" id="top">
+  <div class="wrap header__in">
+    <a class="brand" href="#top">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="6" y="6" width="28" height="28" rx="3" fill="none" stroke="#1F1F1F" stroke-width="2.2"/>
+        <circle cx="16" cy="16" r="5" fill="#E63946"/>
+        <rect x="19" y="19" width="10" height="10" fill="#1D4ED8"/>
+        <path d="M11 29l6-9 4 6" fill="#F4C20D"/>
+      </svg>
+      <span><span class="brand__name">Rong Tuli Art School</span><span class="brand__sub">drawing &amp; painting, since 2009</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#batches">Batches &amp; fees</a></li>
+        <li><a href="#materials">What to bring</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--white" href="tel:+919804243159">Call</a>
+      <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Join a trial class</a>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#batches">Batches &amp; fees</a>
+    <a href="#materials">What to bring</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit us</a>
+    <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Join a trial class on WhatsApp</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__head">
+      <span class="scribble">Bhowanipore, Kolkata</span>
+      <h1 class="h-xl">Everyone can draw. <br>We teach you <span class="hand">how.</span></h1>
+      <p class="lede">Pencil, watercolour and sketching classes for children from age 6 and adults of any age. Small batches, patient teachers, and a proper portfolio if you are aiming for an art college.</p>
+      <div class="btn-row">
+        <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Book a free trial class
+        </a>
+        <a class="btn btn--white" href="#courses">See the courses</a>
+      </div>
+      <ul class="hero__meta">
+        <li><i style="background:var(--red)"></i>Kids 6&ndash;12</li>
+        <li><i style="background:var(--blue)"></i>Teens &amp; exam prep</li>
+        <li><i style="background:var(--yellow)"></i>Adult hobby batches</li>
+        <li><i style="background:var(--green)"></i>Weekend only options</li>
+      </ul>
+    </div>
+    <div class="collage">
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/hero.jpg" width="1600" height="900" alt="Art teacher explaining to students standing at easels in a studio full of paintings" fetchpriority="high"></div><figcaption>Saturday adult batch</figcaption></figure>
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/child-colour-pencils.jpg" width="1200" height="800" alt="Child drawing with colour pencils in soft light" loading="lazy"></div><figcaption>Kids' batch, age 7</figcaption></figure>
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1798" alt="Hand painting a wash with watercolours on paper" loading="lazy"></div><figcaption>Watercolour wash practice</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section section--white" id="about">
+  <div class="wrap about">
+    <div class="about__text reveal">
+      <span class="scribble scribble--blue">About us</span>
+      <h2 class="h-lg">A two-room art school on Sarat Bose Road</h2>
+      <p style="margin-top:1.2rem">Rong Tuli was started in 2009 by Debjani Ghosh, a Government College of Art &amp; Craft graduate, after years of teaching from her verandah. The school now has two rooms with north light, a shelf of 400 reference books and a kettle that is always on.</p>
+      <p>We teach drawing the old way: look first, then draw. Children start with shapes and shading. Adults start wherever they are. Exam students work on a timed portfolio from day one.</p>
+      <p>Every student gets a folder. At the end of each term we put the work up on the wall and invite parents in.</p>
+      <ul class="numbers">
+        <li><b>2009</b><span>Teaching since</span></li>
+        <li><b>110</b><span>Students this term</span></li>
+        <li><b>38</b><span>Art college admissions since 2015</span></li>
+        <li><b>8</b><span>Students per batch, maximum</span></li>
+      </ul>
+    </div>
+    <figure class="about__fig tape reveal">
+      <div class="ph"><img src="/demo/drawing/images/teacher-with-student.jpg" width="1200" height="675" alt="Art teacher leaning over a student's drawing and pointing out a correction" loading="lazy"></div>
+      <figcaption>Debjani di correcting proportions</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Courses -->
+<section class="section" id="courses">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="scribble">What we teach</span>
+      <h2 class="h-lg">Five courses, colour-coded</h2>
+      <p class="lede">Pick by age and by what you want to make. Each course runs in three-month terms. You can join mid-term and pay for the months left.</p>
+    </div>
+    <div class="courses">
+      <article class="course course--red reveal">
+        <figure class="ph"><img src="/demo/drawing/images/kids-art-class.jpg" width="1200" height="801" alt="Children at a long table in an art class, drawing and colouring" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Kids' drawing (6&ndash;12)</h3>
+          <p>Shapes, shading, colour pencils, oil pastels and poster colour. One finished picture every week to take home. Handwriting improves as a side effect.</p>
+          <div class="course__row"><span class="chip">Age 6&ndash;12</span><span class="chip">90 min</span><span class="chip">Twice a week</span></div>
+        </div>
+      </article>
+      <article class="course course--grey reveal">
+        <figure class="ph"><img src="/demo/drawing/images/pencil-sketching.jpg" width="1200" height="1600" alt="Artist sketching a glass with a pencil on paper" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Pencil &amp; sketching</h3>
+          <p>Still life, perspective, light and shadow, graphite and charcoal. The foundation for everything else. Good for teens and adults who want to draw "properly".</p>
+          <div class="course__row"><span class="chip">Age 13+</span><span class="chip">2 hours</span><span class="chip">Twice a week</span></div>
+        </div>
+      </article>
+      <article class="course course--blue reveal">
+        <figure class="ph"><img src="/demo/drawing/images/watercolour-palette.jpg" width="800" height="1192" alt="Well-used watercolour palette with mixed colours" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Watercolour</h3>
+          <p>Washes, wet-on-wet, Kolkata street scenes and the lakes. We paint outdoors at Rabindra Sarobar one Sunday a month in winter.</p>
+          <div class="course__row"><span class="chip">Age 14+</span><span class="chip">2 hours</span><span class="chip">Once or twice a week</span></div>
+        </div>
+      </article>
+      <article class="course course--yellow reveal">
+        <figure class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1800" alt="Pencil portrait studies in a sketchbook" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Art college exam prep</h3>
+          <p>For Government College of Art &amp; Craft, Rabindra Bharati, Kala Bhavana and NIFT/NID. Timed object drawing, memory drawing, composition and a 20-sheet portfolio. Mock tests every month.</p>
+          <div class="course__row"><span class="chip">Class 10&ndash;12 &amp; gap year</span><span class="chip">3 hours</span><span class="chip">Thrice a week</span></div>
+        </div>
+      </article>
+      <article class="course course--green reveal">
+        <figure class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="675" alt="Two adults painting side by side in a bright studio" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Weekend hobby batch (adults)</h3>
+          <p>Saturday afternoons. No exams, no homework. Pencil, pen-and-ink or watercolour, your choice. Most students are 25 to 60 and have not drawn since school.</p>
+          <div class="course__row"><span class="chip">Age 18+</span><span class="chip">2 hours</span><span class="chip">Saturdays</span></div>
+        </div>
+      </article>
+      <article class="course course--grey reveal">
+        <figure class="ph"><img src="/demo/drawing/images/charcoal-box.jpg" width="800" height="1198" alt="Wooden box of charcoal sticks and drawing supplies" loading="lazy"></figure>
+        <div class="course__body">
+          <h3>Short workshops</h3>
+          <p>Two-day workshops in the school holidays: alpona, Pujo-theme poster, charcoal portrait, urban sketching. Announced on our WhatsApp group a month ahead.</p>
+          <div class="course__row"><span class="chip">All ages</span><span class="chip">2 days</span><span class="chip">&#8377;600 &ndash; &#8377;900</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Batches & fees -->
+<section class="section section--white" id="batches">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="scribble scribble--blue">Batches &amp; fees</span>
+      <h2 class="h-lg">Weekly timetable</h2>
+      <p class="lede">Fees are per month, paid in the first week. Paper and basic materials for kids are included. Older students bring their own (list below).</p>
+    </div>
+    <div class="table-wrap reveal">
+      <table>
+        <thead><tr><th scope="col">Course</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Batch size</th><th scope="col">Monthly fee</th></tr></thead>
+        <tbody>
+          <tr><td><span class="dot" style="background:var(--red)"></span><b>Kids' drawing A</b></td><td>Mon, Thu</td><td>4:30 &ndash; 6:00 pm</td><td>8</td><td class="fee">&#8377;900</td></tr>
+          <tr><td><span class="dot" style="background:var(--red)"></span><b>Kids' drawing B</b></td><td>Sat, Sun</td><td>10:00 &ndash; 11:30 am</td><td>8</td><td class="fee">&#8377;900</td></tr>
+          <tr><td><span class="dot" style="background:var(--pencil-light)"></span><b>Pencil &amp; sketching</b></td><td>Tue, Fri</td><td>5:00 &ndash; 7:00 pm</td><td>8</td><td class="fee">&#8377;1,200</td></tr>
+          <tr><td><span class="dot" style="background:var(--blue)"></span><b>Watercolour</b></td><td>Wed, Sun</td><td>Wed 5 &ndash; 7 pm, Sun 7 &ndash; 9 am</td><td>6</td><td class="fee">&#8377;1,300</td></tr>
+          <tr><td><span class="dot" style="background:var(--yellow)"></span><b>Exam prep</b></td><td>Mon, Wed, Fri</td><td>6:00 &ndash; 9:00 pm</td><td>6</td><td class="fee">&#8377;2,500</td></tr>
+          <tr><td><span class="dot" style="background:var(--green)"></span><b>Weekend hobby (adults)</b></td><td>Sat</td><td>3:00 &ndash; 5:00 pm</td><td>8</td><td class="fee">&#8377;1,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Admission &#8377;300 once, includes the folder and a sketchbook. Pay three months together and the third month is &#8377;200 off. Trial class is free, no admission needed for it.</p>
+  </div>
+</section>
+
+<!-- Materials -->
+<section class="section" id="materials">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="scribble scribble--green">Before your first class</span>
+      <h2 class="h-lg">What to bring</h2>
+      <p class="lede">All of this is available at the stationery shop below us or at any art shop on College Street. Bring what you have; we lend the rest for the first month.</p>
+    </div>
+    <div class="materials">
+      <div class="matbox reveal">
+        <h3><i style="background:var(--red)"></i>Kids' drawing</h3>
+        <ul>
+          <li>A4 drawing copy, 100 pages</li>
+          <li>HB and 2B pencils, eraser, sharpener</li>
+          <li>24-shade colour pencils</li>
+          <li>Oil pastels, 25 shades</li>
+          <li>An old shirt or apron</li>
+        </ul>
+        <small>We supply paper, poster colour and brushes.</small>
+      </div>
+      <div class="matbox reveal">
+        <h3><i style="background:var(--pencil-light)"></i>Pencil, sketching, exam prep</h3>
+        <ul>
+          <li>Cartridge paper, A3 and half-imperial</li>
+          <li>Pencils 2H to 8B, charcoal sticks</li>
+          <li>Kneaded eraser, blending stump</li>
+          <li>Drawing board 18 x 24 inch with clips</li>
+          <li>Fixative spray (exam prep only)</li>
+        </ul>
+        <small>Exam students also need a portfolio bag before the mock tests.</small>
+      </div>
+      <div class="matbox reveal">
+        <h3><i style="background:var(--blue)"></i>Watercolour &amp; hobby</h3>
+        <ul>
+          <li>Watercolour paper, 300 gsm, A4 pad</li>
+          <li>12-pan watercolour set</li>
+          <li>Round brushes no. 2, 6, 10 and a 1-inch flat</li>
+          <li>Two water jars, cloth rag</li>
+          <li>Masking tape</li>
+        </ul>
+        <small>A student-grade set costs about &#8377;450 to &#8377;700.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How a term works -->
+<section class="section section--ink">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="scribble" style="color:var(--yellow)">How it works</span>
+      <h2 class="h-lg">A term at Rong Tuli</h2>
+      <p class="lede">Three months, one theme, one wall show at the end. This is the same for a six-year-old and a sixty-year-old.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><h3>Trial class</h3><p>Come for one free class. We watch how you hold the pencil and suggest a batch. No admission fee for the trial.</p></li>
+      <li class="step reveal"><h3>Weeks 1 to 4</h3><p>Basics for the term's theme: lines, shapes, tone. Everyone draws the same still life so progress is easy to see.</p></li>
+      <li class="step reveal"><h3>Weeks 5 to 10</h3><p>Your own work. Teacher sits with each student for ten minutes every class. Corrections are drawn on tracing paper, never on your sheet.</p></li>
+      <li class="step reveal"><h3>Wall show</h3><p>Last Sunday of the term. Work goes up on the studio wall, parents and friends come, tea is served. Then a new term begins.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="scribble">On the wall</span>
+      <h2 class="h-lg">From the studio</h2>
+    </div>
+    <div class="gallery">
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/kids-canvas-easels.jpg" width="1200" height="801" alt="Children painting on canvases set on easels" loading="lazy"></div><figcaption>Canvas day, kids' batch</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/eye-sketches.jpg" width="800" height="600" alt="Pencil studies of eyes in a notepad" loading="lazy"></div><figcaption>Eye studies, week 3</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/brushes-holder.jpg" width="800" height="534" alt="Assorted paintbrushes standing in a wooden holder" loading="lazy"></div><figcaption>The brush shelf</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/oil-pastels.jpg" width="800" height="1198" alt="Box of oil pastels in many colours" loading="lazy"></div><figcaption>Oil pastels, kids' batch</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/childrens-drawings-wall.jpg" width="1200" height="1797" alt="Wall covered with children's drawings pinned up for display" loading="lazy"></div><figcaption>Term-end wall show</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1798" alt="Hand painting with watercolours" loading="lazy"></div><figcaption>Wet-on-wet, Sunday</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1800" alt="Portrait studies in a sketchbook" loading="lazy"></div><figcaption>Exam prep portfolio</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="675" alt="Adults painting together in the studio" loading="lazy"></div><figcaption>Saturday hobby batch</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- Quotes -->
+<section class="section section--white">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="scribble scribble--blue">Students and parents</span>
+      <h2 class="h-lg">In their words</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote reveal">
+        <p>My son could not sit still for ten minutes. After a year at Rong Tuli he draws for an hour at home without being asked. His school art teacher noticed before we did.</p>
+        <footer>Sudeshna, parent, Hazra</footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>I joined the exam prep batch in Class 11 with no portfolio at all. Debjani di made me draw one object a day for a year. I got into Government Art College in 2024.</p>
+        <footer>Rohan, former student</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Visit -->
+<section class="section" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="scribble scribble--green">Find us</span>
+      <h2 class="h-lg">Near Jadubabur Bazar, Bhowanipore</h2>
+    </div>
+    <div class="visit">
+      <div class="visit__map reveal">
+        <iframe title="Map showing Rong Tuli Art School at Sarat Bose Road, Kolkata" src="https://www.google.com/maps?q=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="visit__info reveal">
+        <div class="visit__block">
+          <h3>Address</h3>
+          <address>Rong Tuli Art School<br>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025<br>Above Maa Tara Stationery, 5 minutes' walk from Jatin Das Park metro</address>
+        </div>
+        <div class="visit__block">
+          <h3>Studio hours</h3>
+          <ul class="hours">
+            <li><span>Monday &ndash; Friday</span><span>4:00 &ndash; 9:00 pm</span></li>
+            <li><span>Saturday</span><span>10:00 am &ndash; 6:00 pm</span></li>
+            <li><span>Sunday</span><span>7:00 am &ndash; 12:00 noon</span></li>
+            <li><span>Closed</span><span>Durga Pujo, Saptami to Dashami</span></li>
+          </ul>
+        </div>
+        <div class="visit__links">
+          <a class="btn btn--blue" href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn--white" href="tel:+919804243159">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+            Call us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section final" id="contact">
+  <div class="wrap center reveal">
+    <span class="scribble" style="color:var(--ink)">First class is free</span>
+    <h2 class="h-lg">Bring a pencil this Saturday</h2>
+    <p class="lede">Message us the age of the student and what you want to learn. We will reply with the batch to come to and what to bring.</p>
+    <div class="btn-row" style="justify-content:center">
+      <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+        WhatsApp us
+      </a>
+      <a class="btn btn--white" href="tel:+919804243159">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+        +91 98042 43159
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect x="6" y="6" width="28" height="28" rx="3" fill="none" stroke="#fff" stroke-width="2.2"/>
+            <circle cx="16" cy="16" r="5" fill="#E63946"/>
+            <rect x="19" y="19" width="10" height="10" fill="#1D4ED8"/>
+            <path d="M11 29l6-9 4 6" fill="#F4C20D"/>
+          </svg>
+          <span><span class="brand__name">Rong Tuli Art School</span><span class="brand__sub">drawing &amp; painting, since 2009</span></span>
+        </a>
+        <p class="footer__tag">Drawing, sketching, watercolour and art-college preparation for children and adults in Bhowanipore.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#batches">Batches &amp; fees</a></li>
+          <li><a href="#materials">What to bring</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Visit</h4>
+        <address>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025</address>
+        <ul style="margin-top:.8rem">
+          <li><a href="tel:+919804243159">+91 98042 43159</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples.</p>
+    <p class="footer__copy">&copy; 2026 Rong Tuli Art School</p>
+  </div>
+</footer>
+
+<div class="social" aria-label="Social links">
+  <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</div>
+
+<div class="floatbar">
+  <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+    WhatsApp
+  </a>
+  <a class="btn btn--white" href="tel:+919804243159">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+    Call
+  </a>
+</div>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
+</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Rong Tuli Art School",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "45/1 Sarat Bose Road, Bhowanipore",
+    "addressLocality": "Kolkata",
+    "postalCode": "700025",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "availableService": [
+    { "@type": "Service", "name": "Kids' drawing classes" },
+    { "@type": "Service", "name": "Pencil and sketching classes" },
+    { "@type": "Service", "name": "Watercolour classes" },
+    { "@type": "Service", "name": "Art college entrance exam preparation" },
+    { "@type": "Service", "name": "Weekend hobby art batch for adults" }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var burger=document.getElementById("burger"), mnav=document.getElementById("mnav");
+  function setMenu(open){burger.setAttribute("aria-expanded",open?"true":"false");burger.setAttribute("aria-label",open?"Close menu":"Open menu");mnav.classList.toggle("is-open",open);}
+  burger.addEventListener("click",function(){setMenu(burger.getAttribute("aria-expanded")!=="true");});
+  mnav.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&burger.getAttribute("aria-expanded")==="true"){setMenu(false);burger.focus();}});
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var toTop=document.getElementById("toTop");
+  function onScroll(){toTop.classList.toggle("is-visible",window.scrollY>700);}
+  window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+  toTop.addEventListener("click",function(){window.scrollTo({top:0,behavior:reduce?"auto":"smooth"});});
+  var items=document.querySelectorAll(".reveal");
+  if(!reduce&&"IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add("is-in");io.unobserve(en.target);}});},{rootMargin:"0px 0px -8% 0px",threshold:.1});
+    items.forEach(function(el){io.observe(el);});
+  } else {items.forEach(function(el){el.classList.add("is-in");});}
+})();
+</script>
+</body>
+</html>

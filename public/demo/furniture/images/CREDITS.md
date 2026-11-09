@@ -1,0 +1,21 @@
+# Photo credits (Pexels, free licence, no attribution required)
+
+- hero.jpg — Pexels 34838628 — <https://www.pexels.com/photo/cozy-sunlit-bedroom-with-wooden-bed-frame-34838628/>
+- wood-grain.jpg — Pexels 36081877 — <https://www.pexels.com/photo/close-up-of-wooden-texture-with-detailed-grain-patterns-36081877/>
+- bed-frame.jpg — Pexels 5644286 — <https://www.pexels.com/photo/a-wooden-bed-frame-with-mattress-and-blanket-5644286/>
+- bed-canopy.jpg — Pexels 29627918 — <https://www.pexels.com/photo/elegant-canopy-bed-with-ornate-wooden-headboard-29627918/>
+- almirah-sunlit.jpg — Pexels 40475239 — <https://www.pexels.com/photo/sunlit-wooden-wardrobe-with-hanging-white-shirts-40475239/>
+- almirah-vintage.jpg — Pexels 19962637 — <https://www.pexels.com/photo/vintage-wardrobe-in-room-19962637/>
+- dining-set.jpg — Pexels 4221404 — <https://www.pexels.com/photo/wooden-table-and-chairs-in-the-dining-room-4221404/>
+- dining-window.jpg — Pexels 3935317 — <https://www.pexels.com/photo/photo-of-wooden-table-near-window-3935317/>
+- sofa-wooden.jpg — Pexels 39134569 — <https://www.pexels.com/photo/modern-minimalist-wooden-sofa-in-stylish-living-room-39134569/>
+- cabinet-drawers.jpg — Pexels 11643074 — <https://www.pexels.com/photo/wooden-storage-cabinet-with-drawers-11643074/>
+- study-table.jpg — Pexels 34956532 — <https://www.pexels.com/photo/cozy-indoor-wooden-desk-and-chair-arrangement-34956532/>
+- workshop-carpenter.jpg — Pexels 40729959 — <https://www.pexels.com/photo/skilled-carpenter-working-in-rustic-workshop-40729959/>
+- workshop-measuring.jpg — Pexels 37178416 — <https://www.pexels.com/photo/carpenter-measuring-wooden-plank-in-workshop-37178416/>
+- workshop-sanding.jpg — Pexels 33005110 — <https://www.pexels.com/photo/carpenter-sanding-wooden-surface-indoors-33005110/>
+- chisel-carving.jpg — Pexels 5711890 — <https://www.pexels.com/photo/crop-carpenter-with-chisel-carving-wood-5711890/>
+- chisels-wall.jpg — Pexels 5973896 — <https://www.pexels.com/photo/collection-of-various-chisels-on-wall-5973896/>
+- carving-india.jpg — Pexels 37011185 — <https://www.pexels.com/photo/craftsman-carving-intricate-wooden-design-in-india-37011185/>
+- carved-floral.jpg — Pexels 4611337 — <https://www.pexels.com/photo/brown-carved-wood-with-floral-design-4611337/>
+- showroom-antique.jpg — Pexels 6830012 — <https://www.pexels.com/photo/wood-furniture-on-display-in-an-antique-shop-6830012/>

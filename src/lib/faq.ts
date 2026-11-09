@@ -28,7 +28,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What happens after the website is live? Do I have to pay every month?",
-    a: "No. The website is yours once it is paid for, and it keeps working whether or not you pay me anything again. What is optional is Nexvora Care — a monthly plan at ₹1,499 where I look after the hosting, the backups and the security, make the small changes as they come up — a new price, a new photograph, a new offer — and keep your Facebook page and YouTube channel going every week. The plan says out loud what it includes, so nobody is guessing. Take it if you would rather not think about any of this, and leave it if you would.",
+    a: "No. The website is yours once it is paid for, and it keeps working whether or not you pay me anything again. What is optional is Nexvora Care — a monthly plan from ₹1,499 where I look after the hosting, the backups and the security and make the small changes as they come up: a new price, a new photograph, a new offer. If you change things every week — products, photographs, Facebook posts, YouTube videos — there is a ₹2,999 plan for that. Each plan says out loud what it includes, so nobody is guessing. Take it if you would rather not think about any of this, and leave it if you would.",
   },
   {
     q: "Can we meet face to face?",

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sankhya Abacus Academy, Lake Town | Abacus and Mental Arithmetic for Ages 5 to 14</title>
+<meta name="description" content="Abacus and mental arithmetic classes for children aged 5 to 14 in Lake Town, Kolkata. Eight levels, free demo class, two classes a week, state and national competitions.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#6A3FB5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Sankhya Abacus Academy","address":{"@type":"PostalAddress","streetAddress":"8/3 Jessore Road, Lake Town","addressLocality":"Kolkata","postalCode":"700089","addressRegion":"West Bengal","addressCountry":"IN"},"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Abacus classes for children aged 5 to 14"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Mental arithmetic training"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Free demo class"}}]}
+</script>
+<style>
+:root{
+  --orange:#F4782A; --orange-deep:#C85A14; --orange-soft:#FFE9DB;
+  --violet:#6A3FB5; --violet-deep:#4E2B8C; --violet-soft:#EEE7FA;
+  --ink:#241B3A; --muted:#625A78; --white:#fff; --off:#FAF8FF; --line:#E6E0F2;
+  --display:"Quicksand","Trebuchet MS","Segoe UI",Arial,sans-serif;
+  --body:"Mulish",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1560px; --gut:clamp(1.25rem,4vw,4rem); --sec:clamp(4.5rem,9vw,7.5rem); --r:28px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--body);font-size:1rem;line-height:1.68;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--display);font-weight:700;line-height:1.15;color:var(--ink)}
+p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:300;background:var(--violet);color:#fff;padding:.7rem 1rem;border-radius:10px;font-weight:700}
+.skip:focus{top:1rem}
+.sec{padding-block:var(--sec)}
+.sec-off{background:var(--off)}
+.h2{font-size:clamp(1.8rem,1.3rem + 2.3vw,2.9rem)}
+.lede{color:var(--muted);max-width:58ch;margin-top:1rem;font-size:1.04rem}
+.center{text-align:center}.center .lede{margin-inline:auto}
+/* bead motif */
+.beads{display:inline-flex;align-items:center;gap:6px;margin-bottom:1rem;position:relative;height:14px}
+.beads::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:var(--line);z-index:0}
+.beads i{width:14px;height:14px;border-radius:50%;position:relative;z-index:1;background:var(--orange)}
+.beads i:nth-child(2n){background:var(--violet)}
+.beads i:nth-child(4){margin-left:16px}
+.center .beads{margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.75rem 1.6rem;border-radius:999px;font-family:var(--display);font-weight:700;font-size:1rem;text-decoration:none;transition:transform .15s,background .15s;border:2px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-orange{background:var(--orange);color:#fff}.btn-orange:hover{background:var(--orange-deep)}
+.btn-violet{background:var(--violet);color:#fff}.btn-violet:hover{background:var(--violet-deep)}
+.btn-line{border-color:var(--violet);color:var(--violet)}.btn-line:hover{background:var(--violet-soft)}
+.btn-white{background:#fff;color:var(--violet)}
+
+/* strip */
+.strip{background:var(--violet-deep);color:#fff;font-size:.85rem}
+.strip .wrap{max-width:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:40px;padding-block:.35rem}
+.strip a{color:#fff;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:32px}
+.strip a:hover{text-decoration:underline}
+.strip .get{background:var(--orange);padding:.2rem .9rem;border-radius:999px}
+@media (max-width:640px){.strip .mid{display:none}}
+
+/* header with bead rail */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+.header::after{content:"";display:block;height:6px;background:repeating-linear-gradient(90deg,var(--orange) 0 18px,var(--violet) 18px 36px)}
+.header .wrap{max-width:none;display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1}
+.brand svg{width:44px;height:44px;flex:none}
+.brand small{display:block;font-family:var(--body);font-weight:700;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-deep);margin-top:.2rem}
+.nav{display:none;gap:.2rem;background:var(--off);border-radius:999px;padding:.3rem}
+.nav a{text-decoration:none;font-weight:700;font-size:.93rem;padding:.55rem 1rem;border-radius:999px}
+.nav a:hover{background:#fff;color:var(--violet)}
+.hdr-cta{display:none}
+.burger{width:48px;height:48px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center}
+.burger svg{width:24px;height:24px}
+.mnav{display:none;background:#fff;border-top:1px solid var(--line)}
+.mnav.open{display:block}
+.mnav a{display:block;padding:.9rem var(--gut);text-decoration:none;font-weight:700;border-bottom:1px solid var(--line)}
+@media (min-width:980px){.nav{display:flex}.burger,.mnav{display:none!important}.hdr-cta{display:inline-flex;min-height:44px;padding:.5rem 1.2rem;font-size:.95rem}}
+
+/* hero: stacked */
+.hero{padding-top:clamp(2.5rem,6vw,5rem);background:radial-gradient(ellipse at top,var(--violet-soft),#fff 60%)}
+.hero .top{text-align:center;max-width:860px;margin-inline:auto}
+.hero h1{font-size:clamp(2.4rem,1.5rem + 4.6vw,4.4rem);line-height:1.05}
+.hero h1 span{color:var(--orange)}
+.hero .lede{font-size:1.12rem;margin-inline:auto}
+.hero-act{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.8rem}
+.hero-row{margin-top:clamp(2rem,5vw,3.5rem);display:grid;gap:1rem;align-items:stretch}
+.hero-row .pic{position:relative;border-radius:var(--r);overflow:hidden;background:var(--violet-soft)}
+.hero-row .pic img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.hero-row .pic.main img{aspect-ratio:16/10}
+.hero-row .stat{border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;min-height:180px}
+.hero-row .stat b{font-family:var(--display);font-size:2.6rem;line-height:1}
+.hero-row .stat span{font-weight:600;opacity:.92;margin-top:.3rem}
+.stat.o{background:var(--orange)}.stat.v{background:var(--violet)}
+@media (min-width:760px){.hero-row{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.hero-row{grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto}.hero-row .pic.main{grid-row:1/3}.hero-row .pic.main img{aspect-ratio:auto;height:100%}}
+
+/* why */
+.why{display:grid;gap:1.2rem;margin-top:2.5rem}
+.w{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:1.6rem;position:relative}
+.w .ic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--orange-soft);color:var(--orange-deep);margin-bottom:1rem}
+.w:nth-child(2n) .ic{background:var(--violet-soft);color:var(--violet)}
+.w .ic svg{width:28px;height:28px}
+.w h3{font-size:1.25rem}.w p{color:var(--muted);margin-top:.5rem;font-size:.96rem}
+@media (min-width:700px){.why{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.why{grid-template-columns:repeat(4,1fr)}}
+
+/* levels as bead rod */
+.rod{position:relative;margin-top:3rem;display:grid;gap:1rem}
+.rod::before{content:"";position:absolute;left:22px;top:0;bottom:0;width:4px;background:var(--line);border-radius:2px}
+.lv{position:relative;padding-left:64px}
+.lv::before{content:"";position:absolute;left:8px;top:8px;width:32px;height:32px;border-radius:50%;background:var(--orange);box-shadow:inset -4px -4px 0 rgba(0,0,0,.15)}
+.lv:nth-child(2n)::before{background:var(--violet)}
+.lv .card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:1.2rem 1.3rem}
+.lv h3{font-size:1.15rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.lv h3 small{font-family:var(--body);font-weight:700;font-size:.8rem;color:var(--orange-deep);background:var(--orange-soft);padding:.15rem .7rem;border-radius:999px}
+.lv:nth-child(2n) h3 small{color:var(--violet);background:var(--violet-soft)}
+.lv p{color:var(--muted);font-size:.93rem;margin-top:.4rem}
+@media (min-width:1100px){
+  .rod{grid-template-columns:repeat(4,1fr);gap:1.2rem;padding-top:40px}
+  .rod::before{left:0;right:0;top:22px;bottom:auto;width:auto;height:4px}
+  .lv{padding-left:0}
+  .lv::before{left:50%;top:-34px;margin-left:-16px}
+}
+
+/* demo class + fee */
+.demo .wrap{display:grid;gap:2.5rem;align-items:center}
+.demo img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.steps{margin-top:1.6rem;display:grid;gap:.8rem}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:.9rem;align-items:start}
+.steps .b{width:40px;height:40px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700}
+.steps li:nth-child(2n) .b{background:var(--orange)}
+.steps h3{font-size:1.05rem}.steps p{color:var(--muted);font-size:.93rem}
+.feecard{margin-top:1.8rem;background:var(--violet);color:#fff;border-radius:var(--r);padding:1.5rem 1.6rem;display:grid;gap:.6rem}
+.feecard h3{color:#fff;font-size:1.2rem}
+.feecard dl{display:grid;grid-template-columns:1fr auto;gap:.45rem 1rem;margin:0;font-size:.97rem}
+.feecard dt{opacity:.9}.feecard dd{margin:0;font-family:var(--display);font-weight:700;text-align:right}
+.feecard p{font-size:.85rem;opacity:.85;margin-top:.3rem}
+@media (min-width:980px){.demo .wrap{grid-template-columns:1fr 1.2fr}}
+
+/* band */
+.band{position:relative;overflow:hidden;min-height:clamp(380px,48vw,560px);display:grid;align-items:center;color:#fff}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(78,43,140,.92),rgba(78,43,140,.6) 55%,rgba(78,43,140,.3))}
+.band .wrap{position:relative;z-index:1;padding-block:3rem;display:grid;gap:2rem;align-items:center}
+.band h2{color:#fff;font-size:clamp(1.8rem,1.3rem + 2.3vw,2.9rem);max-width:18ch}
+.band p{color:rgba(255,255,255,.9);max-width:50ch;margin-top:1rem;font-size:1.05rem}
+.comp{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.comp li{background:rgba(255,255,255,.14);border-radius:18px;padding:1rem 1.1rem;backdrop-filter:blur(4px)}
+.comp b{display:block;font-family:var(--display);font-size:1.9rem;line-height:1;color:#FFD2B5}
+.comp span{font-size:.88rem}
+@media (min-width:980px){.band .wrap{grid-template-columns:1.1fr 1fr}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2.5rem}
+.gal figure{margin:0;border-radius:22px;overflow:hidden;position:relative;background:var(--off)}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+.gal .wide{grid-column:span 2}.gal .wide img{aspect-ratio:2/1}
+.gal figcaption{position:absolute;left:.7rem;bottom:.7rem;background:#fff;color:var(--ink);font-weight:700;font-size:.78rem;padding:.25rem .7rem;border-radius:999px}
+@media (min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}.gal .wide{grid-column:span 2}}
+@media (min-width:1100px){.gal{grid-template-columns:repeat(4,1fr)}.gal .wide{grid-column:span 2}}
+
+/* testimonials */
+.quotes{display:grid;gap:1.2rem;margin-top:2.5rem}
+.quote{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:1.6rem;position:relative}
+.quote .beads{margin-bottom:.8rem}
+.quote p{font-size:1.03rem}
+.quote footer{margin-top:1rem;font-weight:700;color:var(--violet)}
+.quote footer span{display:block;font-weight:600;color:var(--muted);font-size:.85rem}
+@media (min-width:760px){.quotes{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.quotes{grid-template-columns:repeat(3,1fr)}}
+
+/* faq */
+.faq{display:grid;gap:.7rem;margin-top:2.5rem}
+.faq details{background:#fff;border:2px solid var(--line);border-radius:18px}
+.faq summary{cursor:pointer;list-style:none;padding:1rem 3.2rem 1rem 1.2rem;font-family:var(--display);font-weight:700;font-size:1.05rem;position:relative;min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:1.1rem;top:1rem;width:26px;height:26px;border-radius:50%;background:var(--orange);box-shadow:inset -3px -3px 0 rgba(0,0,0,.15)}
+.faq details[open] summary::after{background:var(--violet)}
+.faq details p{padding:0 1.2rem 1.1rem;color:var(--muted);font-size:.95rem}
+@media (min-width:1100px){.faq{grid-template-columns:1fr 1fr;align-items:start}}
+
+/* visit */
+.visit .wrap{display:grid;gap:2rem}
+.map{border-radius:var(--r);overflow:hidden;border:2px solid var(--line);min-height:340px;background:var(--off)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.info{display:grid;gap:1rem;margin-top:1.5rem}
+.card{background:var(--off);border:2px solid var(--line);border-radius:20px;padding:1.2rem 1.3rem}
+.card h3{font-size:1.1rem;display:flex;gap:.5rem;align-items:center}
+.card h3 svg{width:22px;height:22px;color:var(--orange-deep)}
+.card p{color:var(--muted);margin-top:.4rem;font-size:.95rem}
+.hours{display:grid;grid-template-columns:1fr auto;gap:.25rem 1rem;margin-top:.5rem;font-size:.95rem;color:var(--muted)}
+.hours b{color:var(--ink)}
+@media (min-width:980px){.visit .wrap{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr 1fr}.info .card:first-child{grid-column:1/-1}}
+
+/* final */
+.final{background:var(--orange);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;left:-60px;right:-60px;top:50%;height:4px;background:rgba(255,255,255,.3)}
+.final .wrap{position:relative;z-index:1;background:var(--orange);display:inline-block;width:auto;padding-inline:var(--gut)}
+.final .h2{color:#fff}.final .lede{color:rgba(255,255,255,.92)}
+.final .btn-line{border-color:#fff;color:#fff}
+
+/* footer */
+.footer{background:var(--ink);color:#C6BEDC;padding:3rem 0 7rem;font-size:.92rem}
+.footer .wrap{max-width:none;display:grid;gap:2rem}
+.footer .brand{color:#fff}.footer .brand small{color:#FFB487}
+.footer h4{color:#fff;font-size:1rem;margin-bottom:.6rem}
+.footer a{color:#fff;text-decoration:none}.footer a:hover{text-decoration:underline}
+.footer li{margin-top:.35rem}
+.footer .note{border-top:1px solid #3B3055;padding-top:1.4rem;font-size:.85rem}
+@media (min-width:800px){.footer .wrap{grid-template-columns:1.4fr 1fr 1fr}.footer .note{grid-column:1/-1}.footer{padding-bottom:3rem}}
+
+/* social + mobile bar */
+.social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:90;display:none;flex-direction:column;gap:.5rem;padding:.5rem;background:#fff;border-radius:18px 0 0 18px;box-shadow:0 10px 30px -10px rgba(36,27,58,.35)}
+.social a,.msocial a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff}
+.social svg,.msocial svg{width:22px;height:22px}
+.s-wa{background:#25D366}.s-fb{background:#1877F2}.s-yt{background:#FF0000}.s-ig{background:#E1306C}.s-g{background:var(--violet)}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.5rem var(--gut) calc(.5rem + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--line)}
+.mbar .btn{min-height:48px}
+.msocial{position:fixed;right:.75rem;bottom:calc(4.6rem + env(safe-area-inset-bottom));z-index:90;display:flex;flex-direction:column;gap:.4rem}
+.msocial a{width:44px;height:44px;box-shadow:0 6px 16px -6px rgba(0,0,0,.35)}
+@media (min-width:980px){.social{display:flex}.mbar,.msocial{display:none}}
+
+.to-top{position:fixed;right:.75rem;bottom:calc(16.8rem + env(safe-area-inset-bottom));z-index:90;width:46px;height:46px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:22px;height:22px}
+@media (min-width:980px){.to-top{right:1.5rem;bottom:1.5rem}}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="strip" role="note">
+  <div class="wrap">
+    <a href="https://www.nexvoratechnologies.co.in/">Sample website by Nexvora Technologies</a>
+    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
+    <a class="get" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Get one like this</a>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Sankhya Abacus Academy, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10" fill="#6A3FB5"/><path d="M12 18h24M12 30h24" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="4" fill="#F4782A"/><circle cx="28" cy="18" r="4" fill="#F4782A"/><circle cx="23" cy="30" r="4" fill="#F4782A"/><circle cx="33" cy="30" r="4" fill="#F4782A"/></svg>
+      <span>Sankhya<small>Abacus Academy</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#why">Why abacus</a><a href="#levels">Levels</a><a href="#demo">Demo class</a><a href="#gallery">Gallery</a><a href="#faq">Parent FAQs</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn btn-orange hdr-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Book a free demo</a>
+    <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#why">Why abacus</a><a href="#levels">The eight levels</a><a href="#demo">Demo class and fees</a><a href="#competitions">Competitions</a><a href="#gallery">Gallery</a><a href="#faq">Parent FAQs</a><a href="#visit">Visit us</a>
+    <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a>
+  </nav>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="top">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h1>Sums in the head, <span>faster than a calculator.</span></h1>
+      <p class="lede">Abacus and mental arithmetic for children aged 5 to 14, in Lake Town since 2014. Two classes a week, eight levels, and a free demo class so you can see your child's face when it clicks.</p>
+      <div class="hero-act">
+        <a class="btn btn-orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book a free demo class</a>
+        <a class="btn btn-line" href="#levels">See the eight levels</a>
+      </div>
+    </div>
+    <div class="hero-row">
+      <div class="pic main"><img src="/demo/abacus/images/hero.jpg" alt="A young girl in a yellow top moving the beads of a colourful abacus" width="1600" height="2400" fetchpriority="high"></div>
+      <div class="stat o"><b>11</b><span>years teaching abacus in Lake Town</span></div>
+      <div class="pic"><img src="/demo/abacus/images/abacus-closeup.jpg" alt="Close-up of wooden abacus beads on metal rods" width="800" height="1200" loading="lazy"></div>
+      <div class="pic"><img src="/demo/abacus/images/whiteboard.jpg" alt="A child writing multiplication sums on a whiteboard" width="800" height="1200" loading="lazy"></div>
+      <div class="stat v"><b>8</b><span>children to a batch, never more</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">What abacus does for a child</h2>
+      <p class="lede">The beads are only the first year. After that the child pictures the abacus in the head and moves the beads with the mind. That is what we are really teaching.</p>
+    </div>
+    <ul class="why">
+      <li class="w rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg></div><h3>Concentration</h3><p>A child doing 10-digit sums in the head cannot think about anything else. Teachers tell us the same child sits still in school too.</p></li>
+      <li class="w rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14l4-4 4 4 8-8"/><path d="M15 6h5v5"/></svg></div><h3>Speed and accuracy</h3><p>By Level 4 most children add a column of fifteen two-digit numbers in under thirty seconds, without paper. School maths stops being a fear.</p></li>
+      <li class="w rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a8 8 0 0 0-8 8c0 3 2 5 4 6v2h8v-2c2-1 4-3 4-6a8 8 0 0 0-8-8Z"/><path d="M10 22h4"/></svg></div><h3>Both sides of the brain</h3><p>The right hand moves beads, the mind holds the picture. Visual and logical work together. Children also get better at remembering and at listening.</p></li>
+      <li class="w rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v5a6 6 0 0 1-12 0V4Z"/><path d="M6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg></div><h3>Confidence</h3><p>Every level ends with a certificate. Every year there is a competition hall full of children. Standing on a stage at seven does something that lasts.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec-off" id="levels">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">Eight levels, one bead at a time</h2>
+      <p class="lede">Each level takes about three to four months. There is a written and a speed exam at the end, with a certificate from our affiliating body. The whole course takes two and a half to three years.</p>
+    </div>
+    <ol class="rod">
+      <li class="lv rv"><div class="card"><h3>Level 1 <small>Age 5+</small></h3><p>Holding the abacus, bead values, single-digit addition and subtraction on the beads. Lots of games.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 2 <small>Small friends</small></h3><p>Two-digit sums, the "small friend" and "big friend" formulas. First flash cards for mental pictures.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 3 <small>Mental starts</small></h3><p>Three-digit addition and subtraction. Child begins visualising: sums done with the abacus closed in the bag.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 4 <small>Multiplication</small></h3><p>Tables up to 9 on the abacus, 2-digit by 1-digit. Speed test: 50 sums in 5 minutes. First competition entry.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 5 <small>Division</small></h3><p>Division on the abacus, decimals introduced. Mental sums of 10 rows, 2 digits each.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 6 <small>Mixed sums</small></h3><p>All four operations mixed. Negative numbers. Mental multiplication of 2-digit by 2-digit.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 7 <small>Decimals</small></h3><p>Decimal multiplication and division, percentages. Mental sums 15 rows of 3 digits. Dictation sums.</p></div></li>
+      <li class="lv rv"><div class="card"><h3>Level 8 <small>Grand level</small></h3><p>Full speed and accuracy. Square roots. Children at this level sit for the national grand competition.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec demo" id="demo">
+  <div class="wrap">
+    <div class="rv"><img src="/demo/abacus/images/class-board.jpg" alt="Two young girls in a classroom, one with an abacus and one at a blackboard" width="1200" height="1800" loading="lazy"></div>
+    <div class="rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">The free demo class, and what it costs after</h2>
+      <p class="lede">Every child starts with one free class on a Saturday morning. Parents sit in. If the child enjoys it, you join from the next week.</p>
+      <ol class="steps">
+        <li><span class="b">1</span><div><h3>Message us the child's age</h3><p>We put you in a Saturday 10 am demo slot. Four children at most in a demo.</p></div></li>
+        <li><span class="b">2</span><div><h3>The child tries the beads</h3><p>Forty-five minutes. By the end most children can add single digits on the abacus and are not ready to leave.</p></div></li>
+        <li><span class="b">3</span><div><h3>We tell you honestly</h3><p>If a child is too young to sit for 45 minutes, we say so and ask you to come back in six months. No pressure to join.</p></div></li>
+        <li><span class="b">4</span><div><h3>Join from the next week</h3><p>Pick a batch: Tue-Thu evening, Mon-Wed evening, or Sat-Sun morning. Fees monthly.</p></div></li>
+      </ol>
+      <div class="feecard">
+        <h3>Fees, plainly</h3>
+        <dl>
+          <dt>Monthly fee (2 classes a week, 1 hour each)</dt><dd>&#8377;900</dd>
+          <dt>Starter kit, once (abacus, Level 1 books, bag)</dt><dd>&#8377;1,200</dd>
+          <dt>Level exam and certificate, per level</dt><dd>&#8377;300</dd>
+          <dt>Books for each new level</dt><dd>&#8377;250</dd>
+          <dt>Sibling discount, on the second child</dt><dd>&#8377;150 off</dd>
+        </dl>
+        <p>Competition entry fees are set by the organisers and told to parents beforehand. No yearly contract. Leave with two weeks' notice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="competitions">
+  <img src="/demo/abacus/images/beads-colour.jpg" alt="" width="1600" height="1067" loading="lazy">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Competitions are part of the course</h2>
+      <p>From Level 4, every child sits at least one competition a year. Not to win, though many do, but to sit in a hall with three hundred other children and finish a paper against the clock. We take the children by bus together and the parents come along.</p>
+    </div>
+    <ul class="comp rv">
+      <li><b>2</b><span>state-level competitions a year, in Kolkata</span></li>
+      <li><b>1</b><span>national grand competition, every December</span></li>
+      <li><b>37</b><span>of our children placed in the top 10 of their age group in 2025</span></li>
+      <li><b>460+</b><span>children have completed at least one level with us</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">In the classroom</h2>
+    </div>
+    <div class="gal">
+      <figure class="wide rv"><img src="/demo/abacus/images/class-girl.jpg" alt="A child's hand moving purple beads on a rainbow abacus" width="1200" height="800" loading="lazy"><figcaption>Level 1, first week</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/classroom.jpg" alt="A child moving beads on an abacus at a classroom desk" width="1200" height="800" loading="lazy"><figcaption>Tuesday evening batch</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/maths-board.jpg" alt="A child writing numbers on a blackboard" width="800" height="1422" loading="lazy"><figcaption>Dictation sums</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/class-two.jpg" alt="Two children sitting on a carpet with an abacus and a bead toy, seen from above" width="1200" height="801" loading="lazy"><figcaption>Saturday juniors</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/mental-math.jpg" alt="A boy writing a long calculation on a chalkboard" width="1200" height="675" loading="lazy"><figcaption>Level 7 practice</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/red-abacus.jpg" alt="A modern abacus with numbered red beads" width="1200" height="675" loading="lazy"><figcaption>Our display abacus</figcaption></figure>
+      <figure class="rv"><img src="/demo/abacus/images/trophy.jpg" alt="Children's hands raising a golden trophy together" width="1200" height="2133" loading="lazy"><figcaption>State competition, 2025</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-off" id="parents">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">Parents tell us</h2>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote rv"><div class="beads" aria-hidden="true"><i></i><i></i><i></i></div><p>My daughter used to count on her fingers in Class 2. After a year here her teacher asked me what had changed. She does the shop bill before the shopkeeper.</p><footer>Moumita<span>Mother of Ahana, 8, Bangur</span></footer></blockquote>
+      <blockquote class="quote rv"><div class="beads" aria-hidden="true"><i></i><i></i><i></i></div><p>Honestly I joined for the maths. What I did not expect was the sitting still. Forty-five minutes without fidgeting, for a six-year-old boy, is a miracle.</p><footer>Arnab<span>Father of Rishi, 7, Lake Town</span></footer></blockquote>
+      <blockquote class="quote rv"><div class="beads" aria-hidden="true"><i></i><i></i><i></i></div><p>They told us at the demo that our son was too young and to come back in six months. We did. That honesty is why we stayed four years.</p><footer>Sudeshna<span>Mother of Aryan, 11, Sreebhumi</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">Questions parents ask</h2>
+    </div>
+    <div class="faq">
+      <details class="rv"><summary>What is the right age to start?</summary><p>Five to seven is ideal. The child should know numbers 1 to 100 and be able to sit for 45 minutes. We take children up to 14, but older children move through the levels faster and join a separate batch.</p></details>
+      <details class="rv"><summary>Will it clash with school maths?</summary><p>No. Abacus gives the answer; school teaches the method. Children do school sums the school's way in their copies and use the mental picture to check. Teachers usually notice only that the child is faster.</p></details>
+      <details class="rv"><summary>How much practice at home?</summary><p>Ten minutes a day, from the practice book. Not more. We would rather have ten minutes every day than an hour on Sunday. Parents do not need to know abacus to help; the book has answers.</p></details>
+      <details class="rv"><summary>Which abacus do you use?</summary><p>The 17-rod Japanese soroban style, with one bead above and four below. It is the standard for all competitions. The starter kit includes one, and it lasts the whole course.</p></details>
+      <details class="rv"><summary>What if my child misses classes?</summary><p>Tell us and the child can sit in another batch the same week. If a whole month is missed for illness or travel, we pause the fee for that month.</p></details>
+      <details class="rv"><summary>Is the certificate recognised?</summary><p>Level certificates come from our affiliating abacus association and are the same ones accepted at the competitions. They are not a school-board qualification and we do not claim they are.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-off visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <h2 class="h2">Find us on Jessore Road</h2>
+      <div class="info">
+        <div class="card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Address</h3>
+          <p>Sankhya Abacus Academy<br>8/3 Jessore Road, Lake Town<br>Kolkata 700089<br>Second floor, opposite Lake Town Block A bus stop. Lift available.</p>
+          <p style="margin-top:.8rem"><a class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></p>
+        </div>
+        <div class="card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Class hours</h3>
+          <div class="hours"><b>Mon to Thu</b><span>4.00 pm - 7.30 pm</span><b>Friday</b><span>Closed</span><b>Sat and Sun</b><span>9.00 am - 1.00 pm</span><b>Demo class</b><span>Saturday 10.00 am</span></div>
+        </div>
+        <div class="card">
+          <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call or message</h3>
+          <p><a href="tel:+919804243159">+91 98042 43159</a><br>WhatsApp is best during class hours.</p>
+        </div>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe title="Map showing 8/3 Jessore Road, Lake Town, Kolkata" src="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="sec final" id="contact">
+  <div class="wrap rv">
+    <h2 class="h2">Book the free Saturday demo</h2>
+    <p class="lede center">Send the child's name and age. We reply with the next Saturday that has a seat.</p>
+    <div class="hero-act">
+      <a class="btn btn-white" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp us</a>
+      <a class="btn btn-line" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="10" fill="#6A3FB5"/><path d="M12 18h24M12 30h24" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="4" fill="#F4782A"/><circle cx="28" cy="18" r="4" fill="#F4782A"/><circle cx="23" cy="30" r="4" fill="#F4782A"/><circle cx="33" cy="30" r="4" fill="#F4782A"/></svg><span>Sankhya<small>Abacus Academy</small></span></a>
+      <p style="margin-top:1rem;max-width:38ch">Abacus and mental arithmetic for children aged 5 to 14. Lake Town, Kolkata, since 2014.</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="#why">Why abacus</a></li><li><a href="#levels">The eight levels</a></li><li><a href="#demo">Demo class and fees</a></li><li><a href="#competitions">Competitions</a></li><li><a href="#faq">Parent FAQs</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li>8/3 Jessore Road, Lake Town, Kolkata 700089</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></li></ul>
+    </div>
+    <p class="note">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. &copy; 2026 Sankhya Abacus Academy.</p>
+  </div>
+</footer>
+
+<nav class="social" aria-label="Social links">
+  <a class="s-wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="s-fb" href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="s-yt" href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="s-ig" href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="s-g" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</nav>
+
+<nav class="msocial" aria-label="Social links (mobile)">
+  <a class="s-fb" href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="s-yt" href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="s-ig" href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="s-g" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</nav>
+
+<div class="mbar">
+  <a class="btn btn-violet" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." aria-label="WhatsApp us"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp</a>
+  <a class="btn btn-orange" href="tel:+919804243159" aria-label="Call us"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
+</div>
+
+<button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+(function(){
+  var b=document.querySelector('.burger'),m=document.getElementById('mnav');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('.rv');
+  var tt=document.querySelector('.to-top');
+  window.addEventListener('scroll',function(){tt.classList.toggle('show',window.scrollY>700);},{passive:true});
+  tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>

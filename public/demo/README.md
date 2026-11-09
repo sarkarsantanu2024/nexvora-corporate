@@ -9,7 +9,35 @@ public/demo/dance/index.html     ->  https://www.nexvoratechnologies.co.in/demo/
 ```
 
 That is the whole system. To add a category: make the folder, put `index.html`
-in it, push. There is no route to register and no code to change.
+in it, push. There is no route to register. To show it on the /demos page of
+the main site, add one entry to `src/lib/demos.ts` — the page reads from that
+list and nothing else.
+
+## What every demo carries
+
+- **A strip at the very top** saying it is a sample website by Nexvora
+  Technologies, with links to the main site, to `/demos` ("See all samples")
+  and a WhatsApp link ("Get one like this"). A line in the footer says the
+  business, address and prices are examples.
+- **Every WhatsApp and call button goes to Nexvora's own number**
+  (`wa.me/919804243159`, `tel:+919804243159`), with a message that names the
+  sample. A curious visitor reaches Santanu, not a dead placeholder.
+- **A floating dock of social buttons** — WhatsApp, call, Facebook, YouTube,
+  Instagram and Google Maps — down the right edge on a desktop and along the
+  bottom on a phone.
+- **A hero photograph named `hero.jpg`** in `images/`, because the card on
+  `/demos` uses that file.
+- **A dummy Kolkata address, dummy hours and dummy prices.** A Google Maps
+  embed and a "Get directions" link to the dummy address are fine.
+
+## What no demo may carry
+
+**No Google rating or Google review claims.** No "5.0 Google Rating", no
+"50+ reviews", no star counts, no "See Google Reviews" button. An invented
+business cannot have a real rating, and a sample that shows one teaches the
+customer to expect a lie. Build trust with facts instead — years open, class
+size, hours, a price list, the process. One or two short plain testimonials
+with a first name are acceptable; stars and counts are not.
 
 ## The rules
 
@@ -22,10 +50,12 @@ inside its own folder, or loaded from a URL. A demo must not import anything
 from the main site, because the point of it is to look like the customer's own
 website rather than like a page of ours with their name on it.
 
-**Anything else in the folder is served as itself.** `public/demo/yoga/hero.jpg`
-answers at `/demo/yoga/hero.jpg`. Reference assets with paths relative to the
-demo folder (`./hero.jpg`), so the folder can be renamed or handed to a client
-whole without every link breaking.
+**Anything else in the folder is served as itself.** `public/demo/yoga/images/hero.jpg`
+answers at `/demo/yoga/images/hero.jpg`. Reference assets with absolute paths
+(`/demo/yoga/images/hero.jpg`): the clean URL `/demo/yoga` has no trailing
+slash, so a relative `./images/hero.jpg` resolves to `/demo/images/hero.jpg`
+and breaks. When a demo is handed to a client, a search-and-replace of the
+`/demo/<slug>/` prefix is the one change needed.
 
 **Slugs stay lowercase and hyphenated.** `beauty-salon`, not `Beauty Salon` or
 `beauty_salon`. URLs are case-sensitive on the server even though Windows is
@@ -46,9 +76,13 @@ including demos added later.
 
 ## Before sending a link
 
-Check the demo does not still carry template placeholders — `WHATSAPP_NUMBER_HERE`,
-`WEBSITE_URL_HERE`, `PHONE_NUMBER_HERE`. A customer clicking a WhatsApp button
-that goes nowhere is worse than a demo with no button at all.
+Run this from the repo root and fix anything it prints:
+
+```
+f=public/demo/<slug>/index.html
+grep -n -i -E "google rating|google review|_HERE|lorem" $f
+grep -o '/demo/<slug>/images/[^" ]*' $f | sort -u | while read p; do [ -f "public$p" ] || echo "MISSING $p"; done
+```
 
 Also check the demo says somewhere that it is a demonstration. `/disclaimer`
 promises that every example on this site is labelled for what it is — a real

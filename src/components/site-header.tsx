@@ -123,7 +123,9 @@ export function SiteHeader() {
             />
           </Link>
 
-          <div className="hidden items-center gap-8 lg:flex xl:gap-10">
+          {/* Eight links now. gap-5 is what lets all of them, the wordmark
+              and the two buttons share a 1024px screen without wrapping. */}
+          <div className="hidden items-center gap-5 lg:flex xl:gap-8">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}

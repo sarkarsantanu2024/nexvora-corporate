@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mukherjee Clinic | Dr. Sayan Mukherjee, General Physician, Kalighat</title>
+<meta name="description" content="General physician chamber in Kalighat, Kolkata. Fever, diabetes, blood pressure, child and elderly care. Morning and evening timings, fixed fees, no appointment needed.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B2545">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Mukherjee Clinic",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18B Rashbehari Avenue, Kalighat",
+    "addressLocality": "Kolkata",
+    "postalCode": "700026",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "medicalSpecialty": "GeneralPractice",
+  "availableService": [
+    "General consultation",
+    "Fever and infection treatment",
+    "Diabetes and blood pressure follow-up",
+    "Child health check",
+    "Elderly care",
+    "ECG and blood sugar test"
+  ]
+}
+</script>
+
+<!-- Photos are free-licence stock from Pexels. See images/CREDITS.md. Replace with the clinic's own photos before go-live. -->
+
+<style>
+:root{
+  --teal:#0F766E;
+  --teal-deep:#0B5C56;
+  --teal-tint:#E6F4F1;
+  --teal-line:#BFE3DC;
+  --navy:#0B2545;
+  --navy-soft:#1B3A63;
+  --white:#FFFFFF;
+  --paper:#F6F9F9;
+  --ink:#172033;
+  --muted:#55637A;
+  --line:#DCE3EA;
+  --warn:#B45309;
+
+  --display:"Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --body:"Lora", Georgia, "Times New Roman", serif;
+
+  --wrap:1560px;
+  --gutter:clamp(1.25rem, 4vw, 4rem);
+  --sec:clamp(4.5rem, 9vw, 7.5rem);
+  --r:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:84px}
+body{margin:0; background:var(--white); color:var(--ink); font-family:var(--body); font-size:1.02rem; line-height:1.7; overflow-x:hidden; -webkit-font-smoothing:antialiased}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0; font-family:var(--display); color:var(--navy); line-height:1.15; letter-spacing:-.02em; font-weight:700}
+p{margin:0}
+ul,ol{margin:0; padding:0; list-style:none}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
+table{border-collapse:collapse; width:100%}
+:focus-visible{outline:3px solid var(--teal); outline-offset:3px; border-radius:6px}
+
+.wrap{width:100%; max-width:var(--wrap); margin-inline:auto; padding-inline:var(--gutter)}
+/* header, footer and demo strip run edge to edge: side padding only */
+.header .wrap,.footer .wrap,.demobar .wrap{max-width:none}
+.sr-only{position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.skip{position:absolute; left:1rem; top:-4rem; z-index:300; background:var(--navy); color:#fff; padding:.7rem 1rem; border-radius:8px; font-family:var(--display); font-weight:600; text-decoration:none}
+.skip:focus{top:1rem}
+
+/* shared */
+.tag{display:inline-flex; align-items:center; gap:.45rem; font-family:var(--display); font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--teal); background:var(--teal-tint); border:1px solid var(--teal-line); padding:.3rem .7rem .3rem .55rem; border-radius:999px; margin-bottom:1rem}
+.tag svg{width:14px; height:14px}
+.h-xl{font-size:clamp(2rem,1.4rem + 3vw,3.3rem); font-weight:800; letter-spacing:-.03em}
+.h-lg{font-size:clamp(1.65rem,1.3rem + 1.6vw,2.4rem)}
+.h-md{font-size:clamp(1.15rem,1.05rem + .5vw,1.35rem)}
+.lede{color:var(--muted); max-width:58ch; margin-top:1rem}
+.sec{padding-block:var(--sec)}
+.sec--paper{background:var(--paper)}
+.sec--navy{background:var(--navy); color:#fff}
+.sec--navy h2,.sec--navy h3{color:#fff}
+.sec--navy .lede{color:rgba(255,255,255,.78)}
+.head{max-width:44rem}
+.head--c{margin-inline:auto; text-align:center}
+.head--c .lede{margin-inline:auto}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:48px; padding:.75rem 1.35rem; border-radius:10px; font-family:var(--display); font-weight:700; font-size:.92rem; text-decoration:none; border:2px solid transparent; transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease}
+.btn svg{width:18px; height:18px; flex:none}
+.btn:hover{transform:translateY(-1px)}
+.btn--teal{background:var(--teal); color:#fff}
+.btn--teal:hover{background:var(--teal-deep)}
+.btn--navy{background:var(--navy); color:#fff}
+.btn--navy:hover{background:var(--navy-soft)}
+.btn--line{border-color:var(--line); color:var(--navy); background:#fff}
+.btn--line:hover{border-color:var(--navy)}
+.btn--white{background:#fff; color:var(--navy)}
+.btn--ghost-w{border-color:rgba(255,255,255,.4); color:#fff}
+.btn--ghost-w:hover{border-color:#fff; background:rgba(255,255,255,.08)}
+.btn-row{display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.75rem}
+
+.ph{position:relative; display:block; margin:0; overflow:hidden; background:var(--teal-tint); border-radius:var(--r)}
+.ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+
+/* demo strip */
+.demobar{background:var(--navy); color:rgba(255,255,255,.8); font-family:var(--display); font-size:.78rem}
+.demobar__in{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:38px; padding-block:.45rem}
+.demobar a{color:#fff; text-decoration:none; font-weight:600; white-space:nowrap}
+.demobar a:hover{text-decoration:underline}
+.demobar__mid{display:none}
+.demobar__cta{background:var(--teal); padding:.3rem .75rem; border-radius:999px}
+@media (min-width:640px){.demobar__mid{display:inline}}
+
+/* header */
+.header{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.94); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid transparent; transition:border-color .2s, box-shadow .2s}
+.header.is-stuck{border-bottom-color:var(--line); box-shadow:0 6px 24px -20px rgba(11,37,69,.6)}
+.header__in{display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:72px}
+.brand{display:flex; align-items:center; gap:.65rem; text-decoration:none}
+.brand__mark{width:40px; height:40px; flex:none}
+.brand__name{font-family:var(--display); font-weight:800; font-size:1.1rem; color:var(--navy); line-height:1.05; display:block}
+.brand__sub{font-family:var(--display); font-size:.68rem; font-weight:600; color:var(--teal); letter-spacing:.04em; display:block; margin-top:.15rem}
+.nav{display:none}
+.nav ul{display:flex; gap:1.6rem}
+.nav a{font-family:var(--display); font-weight:600; font-size:.92rem; text-decoration:none; color:var(--ink); padding:.4rem 0; border-bottom:2px solid transparent}
+.nav a:hover{color:var(--teal); border-bottom-color:var(--teal)}
+.header__cta{display:none}
+.burger{display:inline-flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; width:46px; height:46px; border:1px solid var(--line); border-radius:10px; background:#fff}
+.burger span{display:block; width:20px; height:2px; background:var(--navy); transition:transform .25s, opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{display:none; border-top:1px solid var(--line); background:#fff; padding:.5rem var(--gutter) 1.25rem}
+.mnav.is-open{display:block}
+.mnav a{display:block; padding:.9rem .25rem; font-family:var(--display); font-weight:600; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--line)}
+.mnav .btn{margin-top:1rem; width:100%}
+@media (min-width:960px){.nav,.header__cta{display:flex} .burger,.mnav{display:none !important}}
+
+/* hero: split */
+.hero{position:relative; background:linear-gradient(180deg,var(--paper) 0%, #fff 100%); overflow:hidden}
+.hero::before{content:""; position:absolute; right:-10%; top:-20%; width:55%; height:140%; background:radial-gradient(closest-side, rgba(15,118,110,.12), transparent); pointer-events:none}
+.hero__grid{display:grid; gap:2.25rem; padding-block:clamp(2.5rem,6vw,5rem); align-items:center}
+.hero__kicker{font-family:var(--display); font-weight:600; color:var(--teal); font-size:.95rem; margin-bottom:.9rem; display:flex; align-items:center; gap:.5rem}
+.hero__kicker::before{content:""; width:28px; height:2px; background:var(--teal)}
+.hero h1 .sub{display:block; color:var(--teal); font-weight:600; font-size:.5em; letter-spacing:0; margin-top:.5rem; font-family:var(--display)}
+.hero__facts{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; padding-top:1.5rem; border-top:1px dashed var(--line)}
+.hero__facts b{display:block; font-family:var(--display); font-size:1.35rem; color:var(--navy); line-height:1}
+.hero__facts span{font-size:.82rem; color:var(--muted)}
+.hero__fig{position:relative}
+.hero__fig .ph{aspect-ratio:4/4.6; border-radius:22px; box-shadow:0 30px 60px -40px rgba(11,37,69,.6)}
+.hero__card{position:absolute; left:-.5rem; bottom:-1rem; background:#fff; border:1px solid var(--line); border-radius:14px; padding:.9rem 1.1rem; box-shadow:0 20px 40px -30px rgba(11,37,69,.6); max-width:270px}
+.hero__card b{font-family:var(--display); color:var(--navy); display:block; font-size:.9rem}
+.hero__card .status{display:inline-flex; align-items:center; gap:.4rem; font-family:var(--display); font-size:.78rem; font-weight:700; color:var(--teal)}
+.hero__card .status::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--teal)}
+.hero__card p{font-size:.86rem; color:var(--muted); margin-top:.3rem}
+@media (min-width:860px){
+  .hero__grid{grid-template-columns:1.1fr .9fr; gap:3.5rem}
+  .hero__card{left:auto; right:-1rem; bottom:2rem}
+}
+
+/* about doctor */
+.about{display:grid; gap:2.5rem; align-items:start}
+.about__fig{display:grid; grid-template-columns:1fr 1fr; gap:.75rem}
+.about__fig .ph:first-child{grid-column:1/-1; aspect-ratio:16/10}
+.about__fig .ph{aspect-ratio:1}
+.quals{margin-top:1.5rem; display:grid; gap:.6rem}
+.quals li{display:flex; gap:.75rem; align-items:flex-start; padding:.8rem 1rem; background:var(--paper); border:1px solid var(--line); border-radius:10px}
+.quals svg{width:20px; height:20px; flex:none; color:var(--teal); margin-top:.15rem}
+.quals b{font-family:var(--display); color:var(--navy); display:block; font-size:.95rem}
+.quals span{font-size:.9rem; color:var(--muted)}
+.reg{margin-top:1.25rem; font-size:.88rem; color:var(--muted)}
+.reg code{font-family:var(--display); background:var(--teal-tint); color:var(--teal-deep); padding:.1rem .4rem; border-radius:4px; font-size:.85em}
+@media (min-width:860px){.about{grid-template-columns:.9fr 1.1fr; gap:3.5rem}}
+
+/* services */
+.svc{display:grid; gap:1rem; margin-top:2.25rem}
+.svc li{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:1.35rem 1.25rem; position:relative; transition:border-color .2s, transform .2s}
+.svc li:hover{border-color:var(--teal); transform:translateY(-2px)}
+.svc .ico{width:44px; height:44px; border-radius:10px; background:var(--teal-tint); color:var(--teal); display:grid; place-items:center; margin-bottom:.9rem}
+.svc .ico svg{width:22px; height:22px}
+.svc h3{font-size:1.05rem; margin-bottom:.35rem}
+.svc p{font-size:.92rem; color:var(--muted)}
+@media (min-width:600px){.svc{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.svc{grid-template-columns:repeat(3,1fr)}}
+
+/* timings + fees */
+.tf{display:grid; gap:2rem; margin-top:2.25rem; align-items:start}
+.card{background:#fff; border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+.card__head{padding:1rem 1.25rem; border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; gap:1rem; background:var(--paper)}
+.card__head h3{font-size:1.05rem}
+.card__note{font-size:.8rem; color:var(--muted); font-family:var(--display); font-weight:600}
+.tt th,.tt td{padding:.8rem 1.25rem; text-align:left; font-size:.95rem; border-bottom:1px solid var(--line)}
+.tt th{font-family:var(--display); font-weight:700; color:var(--navy); font-size:.8rem; letter-spacing:.04em; text-transform:uppercase}
+.tt tr:last-child td{border-bottom:0}
+.tt td.day{font-family:var(--display); font-weight:600; color:var(--navy)}
+.tt td.off{color:var(--warn); font-style:italic}
+.tt tr.today td{background:var(--teal-tint)}
+.tt tr.today td.day::after{content:"Today"; font-size:.68rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:var(--teal); border-radius:999px; padding:.1rem .45rem; margin-left:.5rem; vertical-align:middle}
+.fees li{display:flex; justify-content:space-between; gap:1rem; padding:.85rem 1.25rem; border-bottom:1px solid var(--line); font-size:.95rem}
+.fees li:last-child{border-bottom:0}
+.fees b{font-family:var(--display); color:var(--navy); white-space:nowrap}
+.fees small{display:block; color:var(--muted); font-size:.84rem}
+.card__foot{padding:1rem 1.25rem; background:var(--paper); border-top:1px solid var(--line); font-size:.88rem; color:var(--muted)}
+@media (min-width:860px){.tf{grid-template-columns:1.15fr .85fr}}
+
+/* bring: checklist */
+.bring{display:grid; gap:2.5rem; align-items:center}
+.check{display:grid; gap:.7rem; margin-top:1.5rem}
+.check li{display:flex; gap:.8rem; align-items:flex-start}
+.check .box{width:26px; height:26px; flex:none; border-radius:7px; background:#fff; border:2px solid var(--teal); color:var(--teal); display:grid; place-items:center; margin-top:.1rem}
+.check .box svg{width:15px; height:15px}
+.check b{font-family:var(--display); color:var(--navy)}
+.bring__fig{display:grid; gap:.75rem; grid-template-columns:1fr 1fr}
+.bring__fig .ph{aspect-ratio:3/4}
+.bring__fig .ph:nth-child(2){margin-top:2rem}
+@media (min-width:860px){.bring{grid-template-columns:1fr 1fr; gap:4rem}}
+
+/* steps: how a visit goes */
+.steps{display:grid; gap:1rem; margin-top:2.25rem; counter-reset:s}
+.steps li{position:relative; padding:1.4rem 1.25rem 1.25rem 1.25rem; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:var(--r)}
+.steps li::before{counter-increment:s; content:"0" counter(s); font-family:var(--display); font-weight:800; font-size:1.6rem; color:#7FD1C4; display:block; margin-bottom:.5rem; line-height:1}
+.steps h3{font-size:1.02rem; margin-bottom:.35rem}
+.steps p{font-size:.92rem; color:rgba(255,255,255,.8)}
+@media (min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.steps{grid-template-columns:repeat(4,1fr)}}
+
+/* gallery */
+.gal{display:grid; gap:.75rem; grid-template-columns:repeat(2,1fr); margin-top:2.25rem}
+.gal .ph{aspect-ratio:4/3}
+.gal .ph.tall{aspect-ratio:3/4; grid-row:span 2}
+.gal figcaption{position:absolute; left:0; right:0; bottom:0; padding:1.5rem .9rem .7rem; font-family:var(--display); font-size:.78rem; font-weight:600; color:#fff; background:linear-gradient(0deg, rgba(11,37,69,.7), transparent)}
+@media (min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1100px){.gal{grid-template-columns:repeat(4,1fr)}}
+
+/* words + faq */
+.words{display:grid; gap:1rem; margin-top:2.25rem}
+.quote{background:#fff; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:var(--r); padding:1.35rem 1.4rem}
+.quote p{font-style:italic; font-size:1rem}
+.quote footer{margin-top:.8rem; font-family:var(--display); font-size:.85rem; font-weight:700; color:var(--navy)}
+.quote footer span{font-weight:500; color:var(--muted)}
+@media (min-width:860px){.words{grid-template-columns:1fr 1fr}}
+.faq{margin-top:2.25rem; border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.05rem .25rem; font-family:var(--display); font-weight:700; color:var(--navy); font-size:1rem; min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; font-size:1.4rem; color:var(--teal); line-height:1; flex:none; width:28px; text-align:center}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 .25rem 1.2rem; color:var(--muted); max-width:70ch}
+
+/* visit */
+.visit{display:grid; gap:2.5rem}
+.addr{margin-top:1.25rem; font-style:normal; display:grid; gap:1rem}
+.addr .row{display:flex; gap:.8rem; align-items:flex-start}
+.addr svg{width:20px; height:20px; color:var(--teal); flex:none; margin-top:.2rem}
+.addr b{font-family:var(--display); color:var(--navy); display:block; font-size:.9rem}
+.map{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--paper)}
+.map iframe{width:100%; height:100%; border:0; display:block}
+@media (min-width:860px){.visit{grid-template-columns:1fr 1.2fr; gap:3.5rem}}
+
+/* final */
+.final{background:var(--teal); color:#fff; text-align:center}
+.final h2{color:#fff}
+.final .lede{color:rgba(255,255,255,.85)}
+.final .btn-row{justify-content:center}
+.final__hours{margin-top:1.5rem; font-family:var(--display); font-weight:600; font-size:.92rem; color:rgba(255,255,255,.9)}
+
+/* footer */
+.footer{background:var(--navy); color:rgba(255,255,255,.78); padding-block:3rem 6rem; font-size:.92rem}
+.footer__grid{display:grid; gap:2rem}
+.footer h4{color:#fff; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:.8rem}
+.footer a{text-decoration:none}
+.footer a:hover{color:#fff; text-decoration:underline}
+.footer .brand__name{color:#fff}
+.footer .brand__sub{color:#7FD1C4}
+.footer__links li{padding:.25rem 0}
+.footer__note{margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,.14); font-size:.85rem; color:rgba(255,255,255,.62)}
+.footer__note a{color:#fff}
+@media (min-width:760px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr} .footer{padding-bottom:3rem}}
+
+/* floating social */
+.social{position:fixed; right:0; top:50%; transform:translateY(-50%); z-index:90; display:flex; flex-direction:column; gap:.5rem; padding:.5rem; background:rgba(255,255,255,.9); border:1px solid var(--line); border-right:0; border-radius:14px 0 0 14px; box-shadow:0 10px 30px -20px rgba(11,37,69,.6)}
+.social a{width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; text-decoration:none; transition:transform .15s}
+.social a:hover{transform:scale(1.08)}
+.social svg{width:22px; height:22px}
+.social .wa{background:#25D366}.social .fb{background:#1877F2}.social .yt{background:#FF0000}.social .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}.social .gm{background:var(--navy)}
+@media (max-width:859px){
+  .social{top:auto; bottom:5.25rem; transform:none; flex-direction:column; border-radius:14px 0 0 14px}
+  .social a{width:40px; height:40px}
+  .social svg{width:19px; height:19px}
+}
+/* mobile call bar */
+.mbar{position:fixed; left:0; right:0; bottom:0; z-index:95; display:grid; grid-template-columns:1fr 1fr; background:#fff; border-top:1px solid var(--line); padding:.5rem .75rem calc(.5rem + env(safe-area-inset-bottom)); gap:.5rem}
+.mbar .btn{min-height:46px}
+@media (min-width:860px){.mbar{display:none}}
+
+/* back to top: sits above the mobile social stack so they never overlap */
+.to-top{position:fixed; right:1.25rem; bottom:1.25rem; z-index:92; width:46px; height:46px; border-radius:50%; background:var(--navy); color:#fff; display:grid; place-items:center; box-shadow:0 10px 24px -14px rgba(11,37,69,.9); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, transform .25s, visibility .25s}
+.to-top.is-visible{opacity:1; visibility:visible; transform:none}
+.to-top:hover{background:var(--teal)}
+.to-top svg{width:20px; height:20px}
+@media (max-width:859px){.to-top{right:.6rem; bottom:calc(5.25rem + 16.5rem); width:42px; height:42px}}
+
+/* reveal */
+.rv{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}
+.rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1; transform:none; transition:none}
+  .btn:hover,.svc li:hover,.social a:hover{transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="demobar">
+  <div class="wrap demobar__in">
+    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
+    <a class="demobar__mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
+    <a class="demobar__cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a class="brand" href="#top" aria-label="Mukherjee Clinic, home">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect x="2" y="2" width="36" height="36" rx="10" fill="#0F766E"/>
+        <rect x="17" y="9" width="6" height="22" rx="2" fill="#fff"/>
+        <rect x="9" y="17" width="22" height="6" rx="2" fill="#fff"/>
+        <circle cx="30" cy="10" r="3" fill="#7FD1C4"/>
+      </svg>
+      <span>
+        <span class="brand__name">Mukherjee Clinic</span>
+        <span class="brand__sub">Dr. Sayan Mukherjee &middot; General Physician</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#doctor">The doctor</a></li>
+        <li><a href="#services">What we treat</a></li>
+        <li><a href="#timings">Timings &amp; fees</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--teal" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call the chamber</a>
+    </div>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile">
+    <a href="#doctor">The doctor</a>
+    <a href="#services">What we treat</a>
+    <a href="#timings">Timings &amp; fees</a>
+    <a href="#bring">What to bring</a>
+    <a href="#faq">Questions</a>
+    <a href="#visit">Visit</a>
+    <a class="btn btn--teal" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp the clinic</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="rv">
+      <p class="hero__kicker">Kalighat, Kolkata &middot; Chamber since 2009</p>
+      <h1 class="h-xl">A family doctor you can walk in to see.<span class="sub">Dr. Sayan Mukherjee, MBBS, MD (General Medicine)</span></h1>
+      <p class="lede">Fever, cough, sugar, pressure, stomach trouble, a child who is not eating. Most things a family needs a doctor for, in one chamber on Rashbehari Avenue. No appointment needed. Come in during chamber hours and take a token.</p>
+      <div class="btn-row">
+        <a class="btn btn--teal" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Ask on WhatsApp</a>
+        <a class="btn btn--line" href="#timings">See timings &amp; fees</a>
+      </div>
+      <ul class="hero__facts">
+        <li><b>16 yrs</b><span>in practice</span></li>
+        <li><b>₹400</b><span>consultation fee</span></li>
+        <li><b>2 shifts</b><span>morning &amp; evening</span></li>
+      </ul>
+    </div>
+    <div class="hero__fig rv">
+      <figure class="ph">
+        <img src="/demo/clinic/images/hero.jpg" alt="Dr. Sayan Mukherjee in a white coat with a stethoscope, arms folded" width="1600" height="1067" fetchpriority="high" decoding="async">
+      </figure>
+      <div class="hero__card">
+        <span class="status">Chamber hours</span>
+        <b>Mon to Sat, 9 am to 1 pm and 6 pm to 9 pm</b>
+        <p>Sunday morning only, 9 am to 12 noon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="sec" id="doctor">
+  <div class="wrap about">
+    <div class="about__fig rv">
+      <figure class="ph"><img src="/demo/clinic/images/doctor-glasses.jpg" alt="Dr. Mukherjee looking at the camera, stethoscope around his neck" width="1200" height="800" loading="lazy" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/clinic/images/desk-stethoscope.jpg" alt="A stethoscope resting on a notebook on the chamber desk" width="800" height="1200" loading="lazy" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/clinic/images/hands-on-table.jpg" alt="Doctor and patient going through a report together at the desk" width="1200" height="1800" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>About the doctor</p>
+      <h2 class="h-lg">Dr. Sayan Mukherjee</h2>
+      <p class="lede">Dr. Mukherjee finished his MBBS at Medical College Kolkata in 2006 and his MD in General Medicine from NRS Medical College in 2010. He worked in the medicine department of a government hospital for six years before opening this chamber. He speaks Bengali, Hindi and English, and he will explain your reports in whichever one you prefer.</p>
+      <ul class="quals">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7l8-4 8 4-8 4-8-4Z"/><path d="M4 7v6M8 9.5V15c0 1.5 1.8 3 4 3s4-1.5 4-3V9.5"/></svg><div><b>MBBS, 2006</b><span>Medical College and Hospital, Kolkata</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7l8-4 8 4-8 4-8-4Z"/><path d="M4 7v6M8 9.5V15c0 1.5 1.8 3 4 3s4-1.5 4-3V9.5"/></svg><div><b>MD (General Medicine), 2010</b><span>NRS Medical College, Kolkata</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 15h4"/></svg><div><b>Six years in a government hospital</b><span>Medicine department, 2010 to 2016</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Own chamber since 2009</b><span>Evening practice first, full time from 2016</span></div></li>
+      </ul>
+      <p class="reg">West Bengal Medical Council registration <code>WBMC 61842</code>. Degree certificates are on the chamber wall if you want to see them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec sec--paper" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>What we treat</p>
+      <h2 class="h-lg">Everyday illness, long-term conditions, and the check-ups in between</h2>
+      <p class="lede">If something needs a specialist, Dr. Mukherjee will say so and write a referral. He will not keep you waiting on a problem he cannot fix here.</p>
+    </div>
+    <ul class="svc">
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 4v9.5a4 4 0 1 1-4 0V4h4Z"/><path d="M10 8h4M10 11h4"/></svg></div><h3>Fever, cold and infections</h3><p>Viral fever, dengue and malaria season, throat and chest infections, stomach upsets, typhoid follow-up.</p></li>
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div><h3>Blood pressure and heart</h3><p>Pressure checks, medicine adjustment, cholesterol reports, ECG in the chamber when needed.</p></li>
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z"/></svg></div><h3>Diabetes care</h3><p>Sugar testing, HbA1c review, diet advice in plain words, insulin guidance for those who need it.</p></li>
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></div><h3>Children and teenagers</h3><p>Fever, worms, poor appetite, growth worries, school health certificates. Vaccination advice.</p></li>
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10H4Z"/><path d="M10 20v-6h4v6"/></svg></div><h3>Elderly care</h3><p>Joint pain, weakness, memory worries, multiple medicines checked together so nothing clashes.</p></li>
+      <li class="rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3>Reports and check-ups</h3><p>Blood sugar and pressure done in the chamber. Full blood tests collected here by a tie-up lab, reports in two days.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TIMINGS AND FEES -->
+<section class="sec" id="timings">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Timings and fees</p>
+      <h2 class="h-lg">Chamber timings</h2>
+      <p class="lede">Tokens are given at the desk from 30 minutes before each shift. Around 20 patients are seen per shift, so come early on Mondays and after holidays.</p>
+    </div>
+    <div class="tf">
+      <div class="card rv">
+        <div class="card__head"><h3>Weekly timings</h3><span class="card__note">Closed on public holidays</span></div>
+        <table class="tt" id="timetable">
+          <thead><tr><th scope="col">Day</th><th scope="col">Morning</th><th scope="col">Evening</th></tr></thead>
+          <tbody>
+            <tr data-day="1"><td class="day">Monday</td><td>9:00 am – 1:00 pm</td><td>6:00 pm – 9:00 pm</td></tr>
+            <tr data-day="2"><td class="day">Tuesday</td><td>9:00 am – 1:00 pm</td><td>6:00 pm – 9:00 pm</td></tr>
+            <tr data-day="3"><td class="day">Wednesday</td><td>9:00 am – 1:00 pm</td><td>6:00 pm – 9:00 pm</td></tr>
+            <tr data-day="4"><td class="day">Thursday</td><td>9:00 am – 1:00 pm</td><td class="off">No evening chamber</td></tr>
+            <tr data-day="5"><td class="day">Friday</td><td>9:00 am – 1:00 pm</td><td>6:00 pm – 9:00 pm</td></tr>
+            <tr data-day="6"><td class="day">Saturday</td><td>9:00 am – 1:00 pm</td><td>6:00 pm – 9:00 pm</td></tr>
+            <tr data-day="0"><td class="day">Sunday</td><td>9:00 am – 12:00 noon</td><td class="off">Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="card__foot">Thursday evening the doctor visits a hospital OPD. On Sundays the chamber closes once the morning tokens are done.</div>
+      </div>
+      <div class="card rv">
+        <div class="card__head"><h3>Fees</h3><span class="card__note">Cash or UPI</span></div>
+        <ul class="fees">
+          <li><div>First consultation<small>Includes pressure and weight check</small></div><b>₹400</b></li>
+          <li><div>Follow-up within 10 days<small>Same complaint, bring the old prescription</small></div><b>₹200</b></li>
+          <li><div>Report review only<small>If you were asked to get tests done</small></div><b>Free</b></li>
+          <li><div>Blood sugar (fasting or PP)<small>Done in the chamber, result in 5 minutes</small></div><b>₹60</b></li>
+          <li><div>ECG<small>Done in the chamber, read by the doctor</small></div><b>₹250</b></li>
+          <li><div>Fitness or sick certificate<small>After consultation, on letterhead</small></div><b>₹100</b></li>
+        </ul>
+        <div class="card__foot">Senior citizens above 70 pay ₹300 for a first consultation. Fees are printed at the desk and do not change by time of day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO BRING -->
+<section class="sec sec--paper" id="bring">
+  <div class="wrap bring">
+    <div class="rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Before you come</p>
+      <h2 class="h-lg">What to bring with you</h2>
+      <p class="lede">Five minutes of preparation at home saves a second visit. Bring what you have; if you have none of these, come anyway.</p>
+      <ul class="check">
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Old prescriptions</b> from any doctor, even if the problem seems unrelated.</div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Recent test reports</b>, blood tests, X-rays, USG, in the original or on your phone.</div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>The medicines you take now</b>, or a photo of the strips. Names matter more than you think.</div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>A note of your symptoms</b>: when it started, what makes it worse, any fever readings.</div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>For sugar tests</b>, come fasting in the morning shift. Water is fine.</div></li>
+        <li><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><b>For children</b>, the vaccination card and school health form if there is one.</div></li>
+      </ul>
+    </div>
+    <div class="bring__fig rv">
+      <figure class="ph"><img src="/demo/clinic/images/consult-blood-pressure.jpg" alt="Blood pressure being checked at the chamber desk with a cuff and gauge" width="1200" height="800" loading="lazy" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/clinic/images/pulse-oximeter.jpg" alt="A pulse oximeter clipped on an elderly patient's finger" width="800" height="533" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- HOW A VISIT GOES -->
+<section class="sec sec--navy">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>How a visit goes</p>
+      <h2 class="h-lg">No appointment. Four simple steps.</h2>
+    </div>
+    <ol class="steps">
+      <li class="rv"><h3>Take a token</h3><p>Come in during chamber hours. Tell the desk your name and the problem in one line. You get a number.</p></li>
+      <li class="rv"><h3>Pressure and weight</h3><p>The assistant notes your blood pressure, weight and temperature while you wait. This is included in the fee.</p></li>
+      <li class="rv"><h3>See the doctor</h3><p>Usually 10 to 15 minutes. He examines, reads your reports, and explains what he thinks is going on.</p></li>
+      <li class="rv"><h3>Prescription and next step</h3><p>A written prescription with generic names where possible, and a clear note on when to come back, if at all.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="head head--c rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Inside the chamber</p>
+      <h2 class="h-lg">A small clinic, kept clean and quiet</h2>
+    </div>
+    <div class="gal">
+      <figure class="ph tall rv"><img src="/demo/clinic/images/doctor-seated.jpg" alt="Dr. Mukherjee standing with arms folded in the consultation room" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Consultation room</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/clinic/images/waiting-room.jpg" alt="The waiting area with blue chairs and a reception counter" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Waiting area</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/clinic/images/reception-desk.jpg" alt="A patient speaking to the receptionist at the front desk" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Token desk</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/clinic/images/otoscope-boy.jpg" alt="A boy having his ear checked with an otoscope" width="1200" height="675" loading="lazy" decoding="async"><figcaption>Child check-up</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/clinic/images/child-temperature.jpg" alt="A mother holding a thermometer next to her child wrapped in a blanket" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Fever season</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WORDS + FAQ -->
+<section class="sec sec--paper" id="faq">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Patients say</p>
+      <h2 class="h-lg">Two notes from the chamber register</h2>
+    </div>
+    <div class="words">
+      <blockquote class="quote rv"><p>“My father has been his patient for ten years. He remembers which medicines Baba cannot take without looking at the file.”</p><footer>Rupa <span>&middot; Kalighat</span></footer></blockquote>
+      <blockquote class="quote rv"><p>“He told me plainly that my sugar was high and what to stop eating. No lecture, just a list. It worked.”</p><footer>Debashis <span>&middot; Hazra Road</span></footer></blockquote>
+    </div>
+
+    <h2 class="h-md rv" style="margin-top:3rem">Common questions</h2>
+    <div class="faq rv">
+      <details><summary>Do I need an appointment?</summary><div class="a">No. Walk in during chamber hours and take a token at the desk. If you are coming from far, send a WhatsApp message first and the desk will tell you how long the queue is.</div></details>
+      <details><summary>Does the doctor do home visits?</summary><div class="a">Only for bed-ridden patients already under his care, within Kalighat, Bhowanipore and Hazra, and only after the evening chamber. The fee is ₹1,200. Call the desk to arrange it.</div></details>
+      <details><summary>Can I show reports on WhatsApp?</summary><div class="a">You can send them so they are ready when you come, but the doctor will not advise on WhatsApp alone. A short visit is needed to examine you.</div></details>
+      <details><summary>Is there a lift or ramp?</summary><div class="a">The chamber is on the ground floor with one small step at the entrance. A folding ramp is kept at the desk for wheelchairs.</div></details>
+      <details><summary>Which languages does the doctor speak?</summary><div class="a">Bengali, Hindi and English. Prescriptions are written in English with the dose explained in your language.</div></details>
+      <details><summary>Is a pharmacy nearby?</summary><div class="a">There are three medicine shops within 200 metres on Rashbehari Avenue. The chamber does not sell medicines and has no tie-up with any shop.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="sec" id="visit">
+  <div class="wrap visit">
+    <div class="rv">
+      <p class="tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Find us</p>
+      <h2 class="h-lg">On Rashbehari Avenue, two minutes from Kalighat metro</h2>
+      <address class="addr">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Address</b>18B Rashbehari Avenue, Kalighat<br>Kolkata 700026, West Bengal<br><span style="color:var(--muted);font-size:.9rem">Ground floor, next to the blue post box. Gate 2 of Kalighat metro is 150 metres away.</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Chamber hours</b>Mon to Sat: 9 am – 1 pm, 6 pm – 9 pm<br>Thursday: morning only<br>Sunday: 9 am – 12 noon</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><div><b>Phone and WhatsApp</b><a href="tel:+919804243159">+91 98042 43159</a></div></div>
+      </address>
+      <div class="btn-row">
+        <a class="btn btn--navy" href="https://www.google.com/maps?q=18B%20Rashbehari%20Avenue%2C%20Kalighat%2C%20Kolkata%20700026" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn--line" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe src="https://www.google.com/maps?q=18B%20Rashbehari%20Avenue%2C%20Kalighat%2C%20Kolkata%20700026&amp;output=embed" title="Map showing the clinic's location on Rashbehari Avenue" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec final" id="contact">
+  <div class="wrap">
+    <div class="head head--c rv">
+      <h2 class="h-lg">Not feeling well? Come in today.</h2>
+      <p class="lede">Send a message to ask about the queue, or just walk in during chamber hours.</p>
+      <div class="btn-row">
+        <a class="btn btn--white" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp the clinic</a>
+        <a class="btn btn--ghost-w" href="tel:+919804243159">Call +91 98042 43159</a>
+      </div>
+      <p class="final__hours">Today's chamber: <span id="today-hours">see timings above</span></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="10" fill="#0F766E"/><rect x="17" y="9" width="6" height="22" rx="2" fill="#fff"/><rect x="9" y="17" width="22" height="6" rx="2" fill="#fff"/><circle cx="30" cy="10" r="3" fill="#7FD1C4"/></svg>
+          <span><span class="brand__name">Mukherjee Clinic</span><span class="brand__sub">Dr. Sayan Mukherjee &middot; MBBS, MD</span></span>
+        </a>
+        <p style="margin-top:1rem; max-width:34ch">General physician chamber in Kalighat. Walk in, take a token, get seen.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h4>On this page</h4>
+        <ul class="footer__links">
+          <li><a href="#doctor">The doctor</a></li>
+          <li><a href="#services">What we treat</a></li>
+          <li><a href="#timings">Timings and fees</a></li>
+          <li><a href="#bring">What to bring</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Chamber</h4>
+        <address style="font-style:normal">18B Rashbehari Avenue, Kalighat<br>Kolkata 700026<br><a href="tel:+919804243159">+91 98042 43159</a></address>
+      </div>
+    </div>
+    <p class="footer__note">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples.</p>
+  </div>
+</footer>
+
+<!-- floating social -->
+<nav class="social" aria-label="Social links">
+  <a class="wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="gm" href="https://www.google.com/maps?q=18B%20Rashbehari%20Avenue%2C%20Kalighat%2C%20Kolkata%20700026" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</nav>
+
+<!-- mobile call bar -->
+<div class="mbar">
+  <a class="btn btn--teal" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Clinic%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn--navy" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+(function(){
+  var header=document.getElementById('header');
+  var toTop=document.getElementById('toTop');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var onScroll=function(){
+    header.classList.toggle('is-stuck',window.scrollY>8);
+    toTop.classList.toggle('is-visible',window.scrollY>700);
+  };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+  toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:reduce?'auto':'smooth'}); });
+
+  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
+  burger.addEventListener('click',function(){
+    var open=burger.getAttribute('aria-expanded')==='true';
+    burger.setAttribute('aria-expanded',String(!open));
+    burger.setAttribute('aria-label',open?'Open menu':'Close menu');
+    mnav.classList.toggle('is-open',!open);
+  });
+  mnav.addEventListener('click',function(e){ if(e.target.tagName==='A'){burger.setAttribute('aria-expanded','false'); mnav.classList.remove('is-open');} });
+
+  var today=new Date().getDay();
+  var row=document.querySelector('#timetable tr[data-day="'+today+'"]');
+  var out=document.getElementById('today-hours');
+  if(row){
+    row.classList.add('today');
+    var cells=row.querySelectorAll('td');
+    var m=cells[1].textContent, e=cells[2].textContent;
+    out.textContent = (e.indexOf('No')===0||e==='Closed') ? m+' (morning only)' : m+' and '+e;
+  }
+
+  var els=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
