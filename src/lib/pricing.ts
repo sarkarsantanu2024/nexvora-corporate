@@ -6,9 +6,10 @@
 //
 // Everything in PRICE_GROUPS is a fixed-price job between ₹499 and ₹12,999 —
 // work small enough that quoting it individually wastes more time than doing
-// it. Anything larger is discussed and priced on its own; see PACKAGES for the
-// bundles, and NOT_INCLUDED for the running costs that are never part of any
-// figure on this page.
+// it. Websites are not on that list: they are sold as one of the three plans
+// in PACKAGES, and no other website price may appear anywhere on the site.
+// Anything larger is discussed and priced on its own. NOT_INCLUDED holds the
+// running costs that are never part of any figure on this page.
 //
 // Repriced on 2026-08-21 against how long each job actually takes now, rather
 // than against what the market charges. The anchor is the visiting card at
@@ -62,7 +63,7 @@ export const PRICE_GROUPS: PriceGroup[] = [
     id: "social",
     icon: "thumb_up",
     title: "Social media and your accounts",
-    lead: "Set up properly the first time, in your own account — never mine.",
+    lead: "Set up properly the first time, in your own account, never mine.",
     items: [
       { id: "insta-profile", label: "Instagram business profile set up", price: 499 },
       { id: "fb-page", label: "Facebook business page set up", price: 699 },
@@ -70,7 +71,7 @@ export const PRICE_GROUPS: PriceGroup[] = [
       { id: "gbp", label: "Google Business Profile set up", price: 1199 },
       { id: "wa-business", label: "WhatsApp Business with catalogue", price: 1199 },
       { id: "posts-5", label: "Five social media post designs", price: 999 },
-      { id: "posts-month", label: "A month of posts — twelve designs", price: 2499 },
+      { id: "posts-month", label: "A month of posts, twelve designs", price: 2499 },
     ],
   },
   {
@@ -97,48 +98,51 @@ export const PRICE_GROUPS: PriceGroup[] = [
       { id: "site-repair", label: "Repair to a website you already have", price: 1999 },
       { id: "tool", label: "Small calculator or enquiry form tool", price: 2499 },
       { id: "landing", label: "One-page landing site", price: 3499 },
-      { id: "site-3", label: "3-page website with contact form", price: 5999 },
+      // The 3-page and 5-page websites were taken off this list on
+      // 2026-11-10 so that no website price here clashes with the three
+      // plans below. A website is bought as a plan now.
       { id: "portfolio", label: "Portfolio website with gallery", price: 7999 },
-      { id: "site-5", label: "5-page business website", price: 9999 },
       { id: "excel-app", label: "One Excel process turned into a small app", price: 12999 },
     ],
   },
 ];
 
-type PackageSpec = {
+/**
+ * The three website plans. Every website on this site is sold as one of
+ * these, at these prices, and nowhere else on the site may name another
+ * website price. Set on 2026-11-10.
+ *
+ * The old "worth" arithmetic (adding up the small jobs inside a bundle) is
+ * gone: the website itself is no longer on the small-jobs list, so there is
+ * nothing honest to add up. A plan is a price, and the list under it is what
+ * that price buys.
+ */
+export type Package = {
   id: string;
   name: string;
   tagline: string;
+  /** The small label on the card: Launch offer, Full plan, Most control. */
+  label: string;
   price: number;
-  // Ids from PRICE_GROUPS. The "worth" shown against the package price is the
-  // sum of these, computed rather than typed — a saving a customer can add up
-  // for themselves is the only kind worth printing, and a hand-keyed total is
-  // one edit away from being a lie.
-  worthItems: string[];
-  // Display lines. A superset of worthItems: some of these are part of another
-  // line rather than a separately priced job, and are listed because they are
-  // what the customer actually cares about.
   includes: string[];
   featured?: boolean;
 };
 
-const PACKAGE_SPECS: PackageSpec[] = [
+export const PACKAGES: Package[] = [
   {
     id: "starter",
     name: "Just get me started",
     tagline: "For a business that is nowhere online yet",
-    // Repriced to ₹5,999 on 2026-11-07. The Instagram profile was added at
-    // the same time so the parts still add up to more than the package — the
-    // heading above the packages promises exactly that.
+    label: "Launch offer",
     price: 5999,
-    worthItems: ["landing", "fb-page", "insta-profile", "gbp", "visiting-card"],
     includes: [
-      "One-page website with your services and photos",
-      "Contact form and WhatsApp button",
+      "One-page website (all your details on one scrolling page)",
+      "WhatsApp button, call button and Google Map",
       "Facebook business page set up",
       "Instagram business profile set up",
+      "YouTube channel with banner and about",
       "Google Business Profile set up",
-      "Visiting card design",
+      "First month of care free",
       "Domain, hosting and accounts under your control wherever practical",
     ],
   },
@@ -146,38 +150,69 @@ const PACKAGE_SPECS: PackageSpec[] = [
     id: "online",
     name: "Get my business online",
     tagline: "The whole thing, in one go",
-    price: 13999,
-    worthItems: [
-      "site-5",
-      "fb-page",
-      "insta-profile",
-      "yt-channel",
-      "gbp",
-      "wa-business",
-      "logo",
-      "visiting-card",
-      "posts-5",
-    ],
+    label: "Full plan",
+    price: 12999,
     featured: true,
     includes: [
-      "5-page website — home, about, services, gallery, contact",
-      "Contact form and WhatsApp button on every page",
+      "5 separate pages: Home, About, Services, Gallery, Contact",
+      "WhatsApp and call button on every page",
       "Opens quickly on a cheap Android phone",
-      "Facebook business page set up",
-      "Instagram business profile set up",
-      "YouTube channel with banner and about section",
-      "Google Business Profile set up",
+      "Set up so Google can read and list every page",
+      "Facebook, Instagram, YouTube and Google Business Profile set up",
       "WhatsApp Business with your catalogue",
       "Logo, if you do not already have one",
       "Visiting card design",
       "Five social media post designs to start you off",
-      "Set up so Google can read and list your pages",
+      "First month of care free",
       "Domain, hosting and accounts under your control wherever practical",
+    ],
+  },
+  {
+    id: "self",
+    name: "Run it yourself",
+    tagline: "The full plan, plus a panel to change it yourself",
+    label: "Most control",
+    price: 14999,
+    includes: [
+      "Everything in Get my business online",
+      "Your own private edit panel with a login, made for your website only",
+      "The panel follows the same sections as your website, so each section of your site has its own matching form (for example: Home banner, About, Services, Gallery, Contact)",
+      "Change text, photos, prices, phone number, WhatsApp number, address, timings, Google Map location and social media links yourself, any time",
+      "Replace or add gallery photos and put up an offer banner",
+      "Works on your phone, no technical knowledge needed",
+      "Your website's design and layout are protected: the panel lets you change what is inside each section, but sections cannot be added, removed or rearranged, so the site can never break or look messy",
+      "A short training call to show you how to use it",
+      "First month of care free",
     ],
   },
 ];
 
-export type Package = Omit<PackageSpec, "worthItems"> & { worth: number };
+/** The block under the three plans. */
+export const FIRST_MONTH_FREE = {
+  title: "Your first month is free",
+  intro: "It starts on the day the website goes live. For that month:",
+  lines: [
+    "Your photos and text uploaded",
+    "2 Facebook posts every week",
+    "Videos you send uploaded to YouTube",
+  ],
+  after:
+    "After the free month, Basic Care (₹1,499/month) or Active Care (₹2,999/month) is optional, and each client chooses one separately.",
+};
+
+/** The comparison table under the plans. Columns follow PACKAGES order. */
+export const PLAN_COMPARISON: { row: string; values: [string, string, string] }[] = [
+  { row: "Website pages", values: ["1", "5", "5"] },
+  { row: "Facebook, Instagram, YouTube and Google set up", values: ["Yes", "Yes", "Yes"] },
+  { row: "WhatsApp Business catalogue", values: ["No", "Yes", "Yes"] },
+  { row: "Logo and visiting card", values: ["No", "Yes", "Yes"] },
+  { row: "Edit it yourself panel", values: ["No", "No", "Yes"] },
+  { row: "First month free", values: ["Yes", "Yes", "Yes"] },
+];
+
+/** The one line under the care plans. */
+export const CARE_OPTIONAL_NOTE =
+  "On the Run it yourself plan you can make your own changes any time, so a Care plan is optional.";
 
 /**
  * Nexvora Care — the monthly plans. The AMC, in plain words.
@@ -230,8 +265,8 @@ export const CARE_PLANS: CarePlan[] = [
     who: "For a business whose website mostly stays the same, with a few changes a month",
     allowance: "Up to five pages, and up to two changes a month",
     includes: [
-      "Your website looked after — up to five pages kept working and up to date",
-      "Text and photographs replaced when you need — up to two times a month",
+      "Your website looked after: up to five pages kept working and up to date",
+      "Text and photographs replaced when you need, up to two times a month",
       "A new offer or announcement banner put up",
       "Two Facebook posts a month, designed and posted for you",
       "WhatsApp support from me, not a ticket queue",
@@ -242,7 +277,7 @@ export const CARE_PLANS: CarePlan[] = [
     name: "Active Care",
     monthly: 2999,
     yearly: 29999,
-    who: "For a business that changes something every week — products, photographs, posts, videos",
+    who: "For a business that changes something every week: products, photographs, posts, videos",
     featured: true,
     allowance: "Up to five pages, weekly changes, one Facebook post and one YouTube upload a week",
     includes: [
@@ -250,7 +285,7 @@ export const CARE_PLANS: CarePlan[] = [
       "Products, prices, photographs and content changed every week, as often as you need",
       "One Facebook post a week, designed and posted for you",
       "The video you send me uploaded to your YouTube channel every week",
-      "Your Google Business Profile kept current — posts, photographs and hours",
+      "Your Google Business Profile kept current: posts, photographs and hours",
       "A small page for each new offer or season",
       "Your message answered first",
     ],
@@ -271,9 +306,10 @@ export const CARE_INCLUDED = [
 
 export const CARE_NOT_INCLUDED = [
   "New pages beyond the five the plan covers",
-  "Shooting or editing the videos — you send the video, I upload it",
+  "Shooting or editing the videos: you send the video, I upload it",
   "A new feature, module or payment gateway",
-  "A booking system, a login, or anything with a database behind it",
+  "An enquiry or contact form",
+  "A booking system, customer logins, or anything with a database behind it (the edit panel in the Run it yourself plan is already included)",
   "A full redesign of the site",
   "A mobile app or custom software built from scratch",
 ];
@@ -281,7 +317,13 @@ export const CARE_NOT_INCLUDED = [
 // The running costs. These are never inside any figure on this page, they are
 // paid to the provider in the customer's own name, and saying so plainly here
 // is cheaper than an argument later.
-export const NOT_INCLUDED: { icon: string; label: string; note: string }[] = [
+export const NOT_INCLUDED: {
+  icon: string;
+  label: string;
+  note: string;
+  /** A second line, shown under the note where one is needed. */
+  extra?: string;
+}[] = [
   {
     icon: "dns",
     label: "Domain name",
@@ -291,11 +333,13 @@ export const NOT_INCLUDED: { icon: string; label: string; note: string }[] = [
     icon: "cloud",
     label: "Hosting and business email",
     note: "A yearly or monthly bill paid to the hosting company, sized to what you actually use.",
+    extra:
+      "On the Run it yourself plan, the edit panel and its storage are run by Nexvora and included in the price for the first year. After that, it stays included while you are on any Care plan. If you ever leave, you get all your text and photos to take with you.",
   },
   {
     icon: "local_shipping",
     label: "Printing and courier",
-    note: "The design is what is priced here. The press bill and the courier are paid by you, at what they actually cost — I do not add anything to either.",
+    note: "The design is what is priced here. The press bill and the courier are paid by you, at what they actually cost. I do not add anything to either.",
   },
   {
     icon: "campaign",
@@ -321,24 +365,6 @@ const ALL_ITEMS = new Map(
 export function itemById(id: string): PriceItem | undefined {
   return ALL_ITEMS.get(id);
 }
-
-// A typo in a worthItems id would silently understate the package's value, so
-// it fails the build instead. Cheap insurance on a number a customer may well
-// sit and add up.
-export const PACKAGES: Package[] = PACKAGE_SPECS.map(
-  ({ worthItems, ...rest }) => ({
-    ...rest,
-    worth: worthItems.reduce((sum, id) => {
-      const item = ALL_ITEMS.get(id);
-      if (!item) {
-        throw new Error(
-          `Package "${rest.id}" lists unknown price item "${id}". Fix the id in PACKAGE_SPECS or add the item to PRICE_GROUPS.`,
-        );
-      }
-      return sum + item.price;
-    }, 0),
-  }),
-);
 
 // ₹1,499 rather than ₹1499 — the Indian grouping is what people read prices in.
 export function rupees(n: number): string {

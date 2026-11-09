@@ -35,10 +35,10 @@ export function PriceCalculator() {
   const [picked, setPicked] = useState<string[]>([]);
   const [pkg, setPkg] = useState<string | null>(null);
   // Care is a monthly figure, so it is held separately and never folded into
-  // the one-off estimate. Adding ₹599 to a ₹9,999 build would make the total
+  // the one-off estimate. Adding ₹1,499 to a ₹12,999 build would make the total
   // wrong in both directions at once.
   const [care, setCare] = useState<string | null>(null);
-  // Three tabs rather than one long column. Thirty jobs, two packages and four
+  // Three tabs rather than one long column. Thirty jobs, three plans and two
   // care plans stacked end to end is about six phone-screens of scrolling, and
   // the reader who came to price one poster had to travel through all of it.
   const [tab, setTab] = useState<"jobs" | "packages" | "care">("jobs");
@@ -95,21 +95,21 @@ export function PriceCalculator() {
     if (chosenPackage) {
       lines.push(
         "",
-        `Package: ${chosenPackage.name} — ${rupees(chosenPackage.price)}`,
+        `Plan: ${chosenPackage.name}: ${rupees(chosenPackage.price)}`,
       );
     }
     if (picked.length) {
       lines.push("", "Items:");
       for (const id of picked) {
         const item = itemById(id);
-        if (item) lines.push(`• ${item.label} — ${rupees(item.price)}`);
+        if (item) lines.push(`• ${item.label}: ${rupees(item.price)}`);
       }
     }
     if (total) lines.push("", `Estimated one-time total: ${rupees(total)}`);
     if (chosenCare) {
       lines.push(
         "",
-        `Monthly care: ${chosenCare.name} — ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
+        `Monthly care: ${chosenCare.name}: ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
       );
     }
     lines.push("", "Please tell me if this is right for what I need.");
@@ -286,8 +286,8 @@ export function PriceCalculator() {
               {tab === "packages" && (
                 <>
               <p className="text-sm leading-relaxed text-slate-600">
-                Most people need several of these at once. Bought together
-                they cost less than ticking them off one by one.
+                Every website is one of these three plans. The first month
+                of care is free on all of them.
               </p>
               <div className="mt-4 space-y-3">
                 {PACKAGES.map((p) => {
@@ -308,11 +308,15 @@ export function PriceCalculator() {
                         <div className="min-w-0">
                           <p className="font-semibold tracking-tight">
                             {p.name}
-                            {p.featured && (
-                              <span className="ml-2 whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                                Best value
-                              </span>
-                            )}
+                            <span
+                              className={`ml-2 whitespace-nowrap rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                                p.featured
+                                  ? "bg-brand-600 text-white"
+                                  : "bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-200"
+                              }`}
+                            >
+                              {p.label}
+                            </span>
                           </p>
                           <p className="mt-0.5 text-sm text-slate-600">
                             {p.tagline}
@@ -463,8 +467,9 @@ export function PriceCalculator() {
                         {row.icon}
                       </span>
                       <span className="text-sm leading-snug text-amber-900">
-                        <span className="font-semibold">{row.label}</span> —{" "}
+                        <span className="font-semibold">{row.label}</span>:{" "}
                         {row.note}
+                        {row.extra && <> {row.extra}</>}
                       </span>
                     </li>
                   ))}

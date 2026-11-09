@@ -9,9 +9,12 @@ import { HELP_GROUPS } from "@/lib/help";
 import {
   CARE_INCLUDED,
   CARE_NOT_INCLUDED,
+  CARE_OPTIONAL_NOTE,
   CARE_PLANS,
+  FIRST_MONTH_FREE,
   NOT_INCLUDED,
   PACKAGES,
+  PLAN_COMPARISON,
   PRICE_GROUPS,
   rupees,
 } from "@/lib/pricing";
@@ -933,8 +936,8 @@ export function Pricing() {
               <p className="mt-4 leading-relaxed text-slate-700">
                 Not everything is a website. Sometimes you need one poster
                 for tomorrow&apos;s offer, a bill format, a presentation
-                by Monday, or three quick pages with a contact form — and
-                nobody wants to quote for work that small.
+                by Monday, or a QR-code menu page, and nobody wants to
+                quote for work that small.
               </p>
               <p className="mt-3 leading-relaxed text-slate-700">
                 I do. Send it on WhatsApp with whatever details and photos
@@ -1035,29 +1038,27 @@ export function Pricing() {
         </div>
       </Reveal>
 
-      {/* Packages. Cheaper than ticking the same things one by one, but the
-          struck-through total and the "you keep" line are deliberately not
-          shown. A crossed-out price is the oldest trick on a sales page, and
-          on a site whose whole argument is that it does not do sales tricks,
-          it costs more trust than the saving it advertises. The parts are all
-          priced above; anyone who wants to check the arithmetic can. The
-          `worth` figure is still computed in lib/pricing — it fails the build
-          on a bad item id, which is worth keeping on its own. */}
+      {/* The three website plans. No struck-through "worth" total: a
+          crossed-out price is the oldest trick on a sales page, and on a
+          site whose whole argument is that it does not do sales tricks it
+          costs more trust than it earns. Three cards side by side on a
+          desktop, one under the other on a phone. */}
       <Reveal delay={100}>
-        <div className="mt-12">
+        <div id="plans" className="mt-12 scroll-mt-32">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Or take the lot together and pay less
+            Or take the lot together: three website plans
           </h2>
           <p className="mt-3 max-w-2xl text-slate-600">
-            Most people who come to me need several of these at once. Put
-            together, they cost less than buying them one at a time.
+            Every website I build is one of these three. Pick the one that
+            fits, and if you are not sure, ask me and I will tell you which
+            one you actually need.
           </p>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
             {PACKAGES.map((p) => (
               <div
                 key={p.id}
-                className={`flex h-full flex-col rounded-2xl border p-6 shadow-sm sm:p-8 ${
+                className={`flex h-full flex-col rounded-2xl border p-6 shadow-sm sm:p-7 ${
                   p.featured
                     ? "border-brand-500 bg-white ring-1 ring-brand-500"
                     : "border-slate-200 bg-white"
@@ -1072,11 +1073,15 @@ export function Pricing() {
                       {p.tagline}
                     </p>
                   </div>
-                  {p.featured && (
-                    <span className="shrink-0 rounded-full bg-brand-600 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
-                      Best value
-                    </span>
-                  )}
+                  <span
+                    className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${
+                      p.featured
+                        ? "bg-brand-600 text-white"
+                        : "bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-200"
+                    }`}
+                  >
+                    {p.label}
+                  </span>
                 </div>
 
                 <div className="mt-5 flex items-baseline gap-3">
@@ -1113,6 +1118,91 @@ export function Pricing() {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* The free first month, said once under all three plans rather
+              than explained three times inside the cards. */}
+          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-7">
+            <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-emerald-900">
+              <span
+                aria-hidden="true"
+                className="material-symbols-rounded text-[24px]"
+              >
+                redeem
+              </span>
+              {FIRST_MONTH_FREE.title}
+            </h3>
+            <p className="mt-2 text-emerald-900/90">{FIRST_MONTH_FREE.intro}</p>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-3">
+              {FIRST_MONTH_FREE.lines.map((line) => (
+                <li
+                  key={line}
+                  className="flex gap-2 rounded-xl bg-white/70 px-3.5 py-2.5 text-sm text-emerald-950"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="material-symbols-rounded shrink-0 text-[18px] text-emerald-600"
+                  >
+                    check
+                  </span>
+                  <span className="leading-snug">{line}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm leading-relaxed text-emerald-900/90">
+              {FIRST_MONTH_FREE.after}
+            </p>
+          </div>
+
+          {/* The same three plans as a table, for the reader who wants to
+              compare rather than read. */}
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <table className="w-full min-w-[560px] text-sm">
+              <caption className="sr-only">
+                What each website plan includes
+              </caption>
+              <thead>
+                <tr className="border-b border-slate-200 bg-slate-50 text-left">
+                  <th scope="col" className="px-4 py-3 font-semibold text-slate-700">
+                    What you get
+                  </th>
+                  {PACKAGES.map((p) => (
+                    <th
+                      key={p.id}
+                      scope="col"
+                      className="px-4 py-3 text-center font-semibold text-slate-900"
+                    >
+                      <span className="block">{p.name}</span>
+                      <span className="block text-xs font-medium text-slate-500">
+                        {rupees(p.price)}
+                      </span>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {PLAN_COMPARISON.map((r) => (
+                  <tr key={r.row} className="border-b border-slate-100 last:border-0">
+                    <th
+                      scope="row"
+                      className="px-4 py-3 text-left font-medium text-slate-700"
+                    >
+                      {r.row}
+                    </th>
+                    {r.values.map((v, i) => (
+                      <td
+                        key={PACKAGES[i].id}
+                        className={`px-4 py-3 text-center ${
+                          v === "No" ? "text-slate-400" : "font-semibold text-slate-900"
+                        }`}
+                      >
+                        {v}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </Reveal>
@@ -1155,6 +1245,11 @@ export function Pricing() {
                   <span className="mt-1 block text-amber-900/90">
                     {row.note}
                   </span>
+                  {row.extra && (
+                    <span className="mt-1.5 block text-amber-900/90">
+                      {row.extra}
+                    </span>
+                  )}
                 </span>
               </li>
             ))}
@@ -1275,6 +1370,10 @@ function CarePlans() {
             </div>
           ))}
         </div>
+
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-600">
+          {CARE_OPTIONAL_NOTE}
+        </p>
 
         {/* The line between looking after and building. Printed, because it is
             the only thing that keeps a monthly plan from turning into a booking
