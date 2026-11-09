@@ -246,11 +246,11 @@ export const CARE_PLANS: CarePlan[] = [
     yearly: 29999,
     who: "For a business that changes something every week — products, photographs, posts, videos",
     featured: true,
-    allowance: "Up to five pages, weekly changes, two Facebook posts and one YouTube upload a week",
+    allowance: "Up to five pages, weekly changes, one Facebook post and one YouTube upload a week",
     includes: [
       "Everything in Basic Care",
       "Products, prices, photographs and content changed every week, as often as you need",
-      "Two Facebook posts a week, designed and posted for you",
+      "One Facebook post a week, designed and posted for you",
       "The video you send me uploaded to your YouTube channel every week",
       "Your Google Business Profile kept current — posts, photographs and hours",
       "A small page for each new offer or season",
