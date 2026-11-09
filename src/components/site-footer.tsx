@@ -20,7 +20,7 @@ export function SiteFooter() {
     <div className="relative border-b border-white/10">
       <div className="shell py-10 sm:py-12">
         <p className="max-w-4xl text-[clamp(1.15rem,2.4vw,1.75rem)] font-semibold leading-snug tracking-tight text-white">
-          Every Indian business — small or big — deserves to be found online.
+          Every Indian business, small or big, deserves to be found online.
           Price should never be the thing that stops it.
         </p>
       </div>

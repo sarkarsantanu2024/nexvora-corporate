@@ -51,8 +51,8 @@ export function LegalDocument({ doc }: { doc: LegalDoc }) {
               ))}
             </ul>
             <p className="mt-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-relaxed text-slate-500">
-              Last changed {LEGAL_UPDATED}. Written in plain English on purpose
-              — if any of it is unclear, ask me and I will explain it.
+              Last changed {LEGAL_UPDATED}. Written in plain English on purpose.
+              If any of it is unclear, ask me and I will explain it.
             </p>
           </aside>
 

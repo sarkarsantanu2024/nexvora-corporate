@@ -104,7 +104,7 @@ const PROMISES = [
   {
     icon: "handshake",
     title: "I don't go quiet once work starts",
-    body: "You keep messaging the same WhatsApp number you started on. While the work is going on, and long after the site is live, you get a reply from me — not from an office.",
+    body: "You keep messaging the same WhatsApp number you started on. While the work is going on, and long after the site is live, you get a reply from me, not from an office.",
   },
   {
     icon: "notifications_active",
@@ -119,7 +119,7 @@ const PROMISES = [
   {
     icon: "key",
     title: "Your business stays yours",
-    body: "Domain, hosting, Google account, Facebook page — registered in your name wherever it is practical. You can walk away with all of it.",
+    body: "Domain, hosting, Google account, Facebook page: registered in your name wherever it is practical. You can walk away with all of it.",
   },
   {
     icon: "warning",
@@ -134,7 +134,7 @@ const PROMISES = [
   {
     icon: "verified_user",
     title: "A registered business, not a stranger",
-    body: `A registered MSME — Udyam ${CONTACT.udyam} — based in Kolkata, with a proper invoice for every job.`,
+    body: `A registered MSME (Udyam ${CONTACT.udyam}) based in Kolkata, with a proper invoice for every job.`,
   },
 ];
 
@@ -353,7 +353,7 @@ export function Hero() {
             Naming the four areas and then saying what it saves the customer
             is the same breadth, argued rather than announced. */}
         <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-          Websites, software, design and digital services — without dealing
+          Websites, software, design and digital services, without dealing
           with five different people
         </p>
       </div>
@@ -435,15 +435,15 @@ export function PuttingOff() {
         </p>
         <p className="mt-4 leading-relaxed text-slate-600">
           If all you need today is a small site with your business name,
-          your photos, your services, your location and a WhatsApp button
-          — start with that. If later you need online payment, booking, an
+          your photos, your services, your location and a WhatsApp button,
+          start with that. If later you need online payment, booking, an
           app, customer logins or something built specially for you, that
           can be built too.
         </p>
         <p className="mt-5 rounded-2xl border-l-4 border-brand-500 bg-white px-5 py-4 font-medium text-slate-800 shadow-sm">
           You hear the price before any work starts, the domain and hosting
           stay under your control wherever practical, and you talk to the person doing the
-          work — not to a sales desk.
+          work, not to a sales desk.
         </p>
       </Reveal>
 
@@ -792,7 +792,7 @@ export function NoTechNeeded() {
         <p className="mt-5 leading-relaxed text-slate-600">
           That is fine. You do not need to know HTML, CSS, React, hosting,
           databases, APIs, SEO or any other word like them. There is no
-          shame in not knowing technology — that is exactly why you are
+          shame in not knowing technology. That is exactly why you are
           talking to somebody who does.
         </p>
         <p className="mt-4 font-semibold text-slate-900">
@@ -954,9 +954,9 @@ export function Pricing() {
               <ul className="mt-4 space-y-3 text-sm text-slate-700">
                 {[
                   "You are told the price before I touch it.",
-                  "Nothing in this range needs an advance conversation — pay when you are happy with it.",
-                  "Design files can be printed and couriered to you — printing and courier paid by you, at cost.",
-                  "₹12,999 is where this band ends, not where the work does — a web application, a database, an online shop or a mobile app gets a proper look and its own number.",
+                  "Nothing in this range needs an advance conversation. Pay when you are happy with it.",
+                  "Design files can be printed and couriered to you, with printing and courier paid by you, at cost.",
+                  "₹12,999 is where this band ends, not where the work does. A web application, a database, an online shop or a mobile app gets a proper look and its own number.",
                   "Domain, hosting and any advertising budget are separate, and never inside these figures.",
                 ].map((line) => (
                   <li key={line} className="flex gap-2.5">
@@ -1224,8 +1224,8 @@ export function Pricing() {
           <p className="mt-3 max-w-3xl leading-relaxed text-amber-900/90">
             These are running costs. They are paid to the provider, in
             your own name, and I do not add anything on top of them. You
-            will be told what each one costs before you commit to it —
-            finding this out after the work is done is exactly the kind of
+            will be told what each one costs before you commit to it.
+            Finding this out after the work is done is exactly the kind of
             surprise this page exists to avoid.
           </p>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -1294,7 +1294,7 @@ function CarePlans() {
           changes. Your prices change. A new offer comes. Photographs need
           replacing. Your Facebook page goes quiet. Sometimes a site simply
           stops working properly and you have no idea why. You do not need
-          to learn any of that — this is me looking after the website and
+          to learn any of that. This is me looking after the website and
           the posting for you, week by week.
         </p>
         <p className="mt-3 max-w-3xl font-medium text-slate-800">
@@ -1328,7 +1328,7 @@ function CarePlans() {
                 <span className="text-sm text-slate-500">/month</span>
               </p>
               <p className="mt-1 text-sm text-slate-500">
-                or {rupees(plan.yearly)} for the year — {rupees(plan.monthly * 12 - plan.yearly)} less
+                or {rupees(plan.yearly)} for the year, {rupees(plan.monthly * 12 - plan.yearly)} less
               </p>
 
               <p className="mt-3 text-sm leading-snug text-slate-600">
@@ -1415,7 +1415,7 @@ function CarePlans() {
               ))}
             </ul>
             <p className="mt-3 text-sm leading-relaxed text-slate-500">
-              None of these are refused — they are quoted as their own job,
+              None of these are refused. They are quoted as their own job,
               with their own number, the same way everything else here is.
             </p>
           </div>
@@ -1445,7 +1445,7 @@ export function Examples() {
           Things I have actually built
         </h2>
         <p className="mt-3 text-slate-600">
-          Not mock-ups or template previews — screenshots of software that
+          Not mock-ups or template previews, but screenshots of software that
           is running right now, with real people using it. Open any of
           them and look for yourself.
         </p>
@@ -1520,7 +1520,7 @@ export function Examples() {
           >
             Open the sample websites
           </Link>
-          — a sweet shop, a clinic, a coaching centre and ten more.
+          {": "}a sweet shop, a clinic, a coaching centre and ten more.
         </p>
       </Reveal>
     </div>
@@ -1637,7 +1637,7 @@ export function Products() {
         </h2>
         <p className="mt-3 text-slate-600">
           Nexvora is not only a service business. These are products I
-          built and still run for real businesses — which means I know
+          built and still run for real businesses, which means I know
           what happens to software after it goes live, not just up to the
           day it launches.
         </p>
@@ -1865,7 +1865,7 @@ export function Founder() {
         </h2>
         <p className="mt-5 leading-relaxed text-slate-600">
           I am Santanu. Nexvora is a small technology business based in
-          Kolkata, and it is mine. I do the work myself — from working out
+          Kolkata, and it is mine. I do the work myself, from working out
           what you need, to building the website or the software, to
           helping you get it online. When a job genuinely needs another
           pair of hands, a photographer, a printer, someone for a language
@@ -1885,7 +1885,7 @@ export function Founder() {
         <p className="mt-4 leading-relaxed text-slate-600">
           I will tell you what I think is practical. And if I think you do
           not need something, I will tell you that too. I want your
-          business to get online — not your bill to get bigger.
+          business to get online, not your bill to get bigger.
         </p>
 
         {/* How we will actually talk to each other, including the part
@@ -1926,7 +1926,7 @@ export function Founder() {
               Some jobs are better done face to face, and for those I will
               travel. Whether a job is one of them is my decision, and I
               will say yes or no plainly rather than leave you waiting. If
-              I do travel, you arrange the travel, the stay and the food —
+              I do travel, you arrange the travel, the stay and the food,
               and I add no charge on top for the trip itself.
             </p>
           </div>
@@ -2231,8 +2231,8 @@ export function Contact() {
           <Reveal delay={260} className="sm:col-span-2">
             <p className="rounded-2xl border border-slate-200 bg-white p-5 text-sm leading-relaxed text-slate-600 shadow-sm">
               Most of the work runs on WhatsApp and video call. Some jobs
-              are better done face to face, and for those I will travel —
-              whether yours is one of them is my decision, and you will get
+              are better done face to face, and for those I will travel.
+              Whether yours is one of them is my decision, and you will get
               a plain yes or no. If I do come, you cover the travel, stay
               and food, and there is no extra charge for the trip.
             </p>
@@ -2258,7 +2258,7 @@ export function Contact() {
             <p className="mt-3 leading-relaxed text-slate-600">
               There is no form to fill in and no office hours to catch. Send a
               message, a voice note or a photograph of something you have
-              written down, and you will hear back from me — not from an
+              written down, and you will hear back from me, not from an
               assistant, and not next week.
             </p>
             <a

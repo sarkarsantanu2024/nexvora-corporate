@@ -6,12 +6,12 @@ import { Contact } from "@/components/sections";
 import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact — Message Me on WhatsApp",
+  title: "Contact: Message Me on WhatsApp",
   description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Based in Kolkata, and I travel to meet you when the job calls for it.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/contact" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/contact",
-    title: "Contact — Message Me on WhatsApp",
+    title: "Contact: Message Me on WhatsApp",
     description: "WhatsApp +91 98042 43159, call, or email. Text, a photograph or a voice note is enough to start. Based in Kolkata, and I travel to meet you when the job calls for it.",
     images: [OG_IMAGE],
   },

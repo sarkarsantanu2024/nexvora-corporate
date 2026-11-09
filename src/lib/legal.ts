@@ -57,7 +57,7 @@ export type LegalDoc = {
 };
 
 const WHO =
-  `Nexvora Technologies is a one-person technology business run by Santanu Sarkar from ${CONTACT.location}. It is a registered MSME, Udyam ${CONTACT.udyam}. There is no office you can walk into and no staff — when this page says "I", it means Santanu Sarkar, and when it says "you", it means the person or business using this website or buying work from me.`;
+  `Nexvora Technologies is a one-person technology business run by Santanu Sarkar from ${CONTACT.location}. It is a registered MSME, Udyam ${CONTACT.udyam}. There is no office you can walk into and no staff. When this page says "I", it means Santanu Sarkar, and when it says "you", it means the person or business using this website or buying work from me.`;
 
 const REACH_ME = `You can reach me on WhatsApp at ${CONTACT.phoneDisplay}, or by email at ${CONTACT.email}. Bengali, Hindi or English is fine, and a voice note is fine.`;
 
@@ -80,7 +80,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         blocks: [
           { p: WHO },
           {
-            p: "I decide what happens to the information described on this page, so under the Digital Personal Data Protection Act, 2023 I am the data fiduciary for it. If you want something changed or deleted, I am the person to ask — there is nobody else to be passed on to.",
+            p: "I decide what happens to the information described on this page, so under the Digital Personal Data Protection Act, 2023 I am the data fiduciary for it. If you want something changed or deleted, I am the person to ask. There is nobody else to be passed on to.",
           },
         ],
       },
@@ -88,7 +88,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "The website itself collects nothing",
         blocks: [
           {
-            p: "There is no server behind this site. The pages are files, served as they are, and there is no place for anything you type to be stored. That is not a policy decision I could quietly reverse next month — it is how the site is built.",
+            p: "There is no server behind this site. The pages are files, served as they are, and there is no place for anything you type to be stored. That is not a policy decision I could quietly reverse next month. It is how the site is built.",
           },
           {
             p: "The enquiry form on the contact page does not send anything anywhere. As you fill it in, it writes a WhatsApp or email message for you in your own browser. When you press the button, your phone or computer opens WhatsApp or your email app with that message ready. You can read it, change it, or close it and send nothing. Nothing leaves your device until you send it yourself.",
@@ -111,7 +111,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
               "Your phone number or email address, because that is what you wrote from",
               "Your town or city, if you told me",
               "What you want built, and roughly what you want to spend",
-              "Anything you send me for the job — photographs, your logo, price lists, text, documents",
+              "Anything you send me for the job: photographs, your logo, price lists, text, documents",
             ],
           },
           {
@@ -131,7 +131,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
               "Quoting the job, and telling you what it will cost",
               "Doing the work you asked for",
               "Raising the bill and keeping the record of it",
-              "Telling you about something that affects work I built for you — a renewal coming up, or something that has broken",
+              "Telling you about something that affects work I built for you, such as a renewal coming up, or something that has broken",
             ],
           },
           {
@@ -147,7 +147,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
           },
           {
             list: [
-              "Vercel, in the United States, serves these pages. Like any web host it records the ordinary details of a request — the address the page was asked from, roughly when, and what browser was used.",
+              "Vercel, in the United States, serves these pages. Like any web host it records the ordinary details of a request: the address the page was asked from, roughly when, and what browser was used.",
               "Google Analytics counts visits, so I know which pages people actually read. It is set up to measure pages, not people. More about this, and how to switch it off, is on the cookies page.",
               "Google Fonts supplies the three typefaces this site uses. Your browser fetches them from Google, which means Google sees the request. No cookie is set by it.",
               "WhatsApp, which is Meta, carries the messages you send me there. Their terms apply to that conversation as much as mine do.",
@@ -170,7 +170,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Bills and payment records I keep as long as the law requires me to keep the records of a sale, which is a few years, and I cannot delete those on request while that period is running.",
           },
           {
-            p: "Files you sent for a job — photographs, logos, documents — I keep while the work is live and for a reasonable time after, in case you need something rebuilt. Ask me to delete them and I will.",
+            p: "Files you sent for a job (photographs, logos, documents) I keep while the work is live and for a reasonable time after, in case you need something rebuilt. Ask me to delete them and I will.",
           },
         ],
       },
@@ -200,7 +200,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: `Just ask. There is no form and no fee. Message me on WhatsApp at ${CONTACT.phoneDisplay} or email ${CONTACT.email} and I will do it, normally within a few days.`,
           },
           {
-            p: "If you are not happy with how I handled a request about your information, write to me first and say so plainly — it is a small business and most things are a misunderstanding. If that goes nowhere, the Digital Personal Data Protection Act, 2023 gives you the right to complain to the Data Protection Board of India.",
+            p: "If you are not happy with how I handled a request about your information, write to me first and say so plainly. It is a small business and most things are a misunderstanding. If that goes nowhere, the Digital Personal Data Protection Act, 2023 gives you the right to complain to the Data Protection Board of India.",
           },
         ],
       },
@@ -216,7 +216,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "If this page changes",
         blocks: [
           {
-            p: `This page was last changed on ${LEGAL_UPDATED}. If the way the site works changes, this page changes with it on the same day. There is no archive of old versions — what is on this page is what is true today.`,
+            p: `This page was last changed on ${LEGAL_UPDATED}. If the way the site works changes, this page changes with it on the same day. There is no archive of old versions. What is on this page is what is true today.`,
           },
           { p: REACH_ME },
         ],
@@ -230,19 +230,19 @@ export const LEGAL_DOCS: LegalDoc[] = [
     eyebrow: "Terms",
     title: "The rules, in the same plain words as everything else.",
     intro:
-      "Two different things are covered here: using this website, which is free and open to anyone, and buying work from me, which is not. The second one matters more. Nothing on this page takes back a promise made anywhere else on this site — if you ever find a place where it seems to, the promise wins.",
+      "Two different things are covered here: using this website, which is free and open to anyone, and buying work from me, which is not. The second one matters more. Nothing on this page takes back a promise made anywhere else on this site. If you ever find a place where it seems to, the promise wins.",
     icon: "gavel",
     motif: ["handshake", "description", "payments", "schedule", "balance"],
     metaTitle: "Terms of Use",
     metaDescription:
-      "What is agreed when you use this website or buy work from Nexvora Technologies — prices, payment, what you supply, who owns the finished work, timelines, and what I am and am not responsible for.",
+      "What is agreed when you use this website or buy work from Nexvora Technologies: prices, payment, what you supply, who owns the finished work, timelines, and what I am and am not responsible for.",
     sections: [
       {
         heading: "Who you are agreeing with",
         blocks: [
           { p: WHO },
           {
-            p: "By using this website you accept the terms on this page. If a part of it does not suit you, say so before we start work rather than after — most of it can be discussed.",
+            p: "By using this website you accept the terms on this page. If a part of it does not suit you, say so before we start work rather than after. Most of it can be discussed.",
           },
         ],
       },
@@ -250,7 +250,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "What actually forms our agreement",
         blocks: [
           {
-            p: "The job itself is governed by what you and I agreed in writing before the work started — the price, what is included, and when you pay. That is normally a WhatsApp message or an email, followed by the invoice. It is the real agreement.",
+            p: "The job itself is governed by what you and I agreed in writing before the work started: the price, what is included, and when you pay. That is normally a WhatsApp message or an email, followed by the invoice. It is the real agreement.",
           },
           {
             p: "This page fills in everything we did not discuss. If this page and what we agreed for your job disagree, what we agreed for your job is what counts.",
@@ -271,7 +271,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Anything larger is quoted on its own after we have talked, and the price calculator on this site gives an estimate to argue with, not a bill.",
           },
           {
-            p: "Once a price is agreed for your job, that is the price. Nothing gets added later because the work turned out harder than I expected. If you ask for something that was not in what we agreed, that is a separate thing — I tell you what it costs before I build it, and you decide.",
+            p: "Once a price is agreed for your job, that is the price. Nothing gets added later because the work turned out harder than I expected. If you ask for something that was not in what we agreed, that is a separate thing. I tell you what it costs before I build it, and you decide.",
           },
           {
             p: "Published prices can change for future jobs. A price already agreed with you does not change. Any tax that applies by law is shown on the invoice.",
@@ -309,7 +309,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Small jobs are usually paid once you have the finished thing in your hand. Larger ones are split into stages, so you are never paying far ahead of what has actually been done, and a stage payment falls due when that stage is delivered.",
           },
           {
-            p: "You get a proper invoice for every job, with the terms we agreed written on it. If an invoice sits unpaid, I will chase it by WhatsApp before I do anything else — but work stops until it is settled, and files, source material and accounts are handed over once the job is paid for in full.",
+            p: "You get a proper invoice for every job, with the terms we agreed written on it. If an invoice sits unpaid, I will chase it by WhatsApp before I do anything else, but work stops until it is settled, and files, source material and accounts are handed over once the job is paid for in full.",
           },
         ],
       },
@@ -317,7 +317,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "What you need to give me",
         blocks: [
           {
-            p: "Most jobs need something from you: your text, your photographs, your logo, your price list, access to an account. The date I give you assumes those arrive when I ask for them. If they do not, the date moves — that is arithmetic, not a penalty.",
+            p: "Most jobs need something from you: your text, your photographs, your logo, your price list, access to an account. The date I give you assumes those arrive when I ask for them. If they do not, the date moves. That is arithmetic, not a penalty.",
           },
           {
             p: "What you send me has to be yours to send. If you give me a photograph, a font, a logo or a piece of writing that belongs to somebody else, and they come after it, that is on you and not on me. If you are not sure whether you have the right to use something, ask me and we will find something you clearly do.",
@@ -331,10 +331,10 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "Changes and approval",
         blocks: [
           {
-            p: "Reasonable changes while a job is in progress are normal and expected — that is what a draft is for. Redoing something from the beginning because you have changed your mind about the whole idea is a new job, and I will tell you what it costs before I start it.",
+            p: "Reasonable changes while a job is in progress are normal and expected. That is what a draft is for. Redoing something from the beginning because you have changed your mind about the whole idea is a new job, and I will tell you what it costs before I start it.",
           },
           {
-            p: "When you approve a design or a page, that is the version that gets built, printed or published. For anything that goes to a printing press, the proof you approve is what gets printed, and a mistake in an approved proof cannot be undone afterwards. Read it properly — the spelling of a name, the phone number, the date.",
+            p: "When you approve a design or a page, that is the version that gets built, printed or published. For anything that goes to a printing press, the proof you approve is what gets printed, and a mistake in an approved proof cannot be undone afterwards. Read it properly: the spelling of a name, the phone number, the date.",
           },
         ],
       },
@@ -342,13 +342,13 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "Who owns the finished work",
         blocks: [
           {
-            p: "You do, once the job is paid for in full. The design, the pages, the files — yours, to use, change, or hand to somebody else later.",
+            p: "You do, once the job is paid for in full. The design, the pages, the files are yours, to use, change, or hand to somebody else later.",
           },
           {
-            p: "The domain, the hosting, and your Google and social accounts are registered in your name wherever that is practical, and they stay under your control. A few things genuinely cannot work that way — a payment gateway has its own account rules, and some services are billed through mine. Where that happens I say so at the time. If you ever want to move away from me, you take everything with you and you do not need my permission.",
+            p: "The domain, the hosting, and your Google and social accounts are registered in your name wherever that is practical, and they stay under your control. A few things genuinely cannot work that way. A payment gateway has its own account rules, and some services are billed through mine. Where that happens I say so at the time. If you ever want to move away from me, you take everything with you and you do not need my permission.",
           },
           {
-            p: "Two things stay mine. The tools and general code I reuse across jobs remain mine to reuse. And unless you tell me not to, I may show the finished work as an example of what I do — a screenshot, your business name, a link. Say the word and I will not.",
+            p: "Two things stay mine. The tools and general code I reuse across jobs remain mine to reuse. And unless you tell me not to, I may show the finished work as an example of what I do: a screenshot, your business name, a link. Say the word and I will not.",
           },
         ],
       },
@@ -373,7 +373,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Each plan states out loud how much of my time it includes each month. That allowance does not roll over into the next month. Looking after what already exists is inside the plan; building something new is not, and the price page lists exactly which is which.",
           },
           {
-            p: "You can stop a plan whenever you like — see the refunds page for what happens to money already paid. If I ever have to stop offering a plan, you get a month's notice.",
+            p: "You can stop a plan whenever you like. See the refunds page for what happens to money already paid. If I ever have to stop offering a plan, you get a month's notice.",
           },
         ],
       },
@@ -400,7 +400,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "If I get something wrong, I fix it. That is the first and usually the only remedy either of us needs.",
           },
           {
-            p: "Beyond that, if it ever came to money, what I can be held liable for is limited to what you actually paid me for that job. I am not liable for business you believe you lost, profits you expected, or costs somebody else charged you — and not for anything caused by a third-party service failing, by content you supplied, or by changes somebody else made to the work after I handed it over.",
+            p: "Beyond that, if it ever came to money, what I can be held liable for is limited to what you actually paid me for that job. I am not liable for business you believe you lost, profits you expected, or costs somebody else charged you, and not for anything caused by a third-party service failing, by content you supplied, or by changes somebody else made to the work after I handed it over.",
           },
           {
             p: "None of this limits anything that cannot lawfully be limited.",
@@ -455,7 +455,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
     motif: ["undo", "payments", "handshake", "schedule", "receipt_long"],
     metaTitle: "Refund and Cancellation Policy",
     metaDescription:
-      "When Nexvora Technologies refunds money and when it does not — cancelling before work starts, cancelling part-way, delivered work, third-party costs like domains and printing, and the monthly care plans.",
+      "When Nexvora Technologies refunds money and when it does not: cancelling before work starts, cancelling part-way, delivered work, third-party costs like domains and printing, and the monthly care plans.",
     sections: [
       {
         heading: "The rule everything else follows",
@@ -484,7 +484,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Tell me you want to stop and I stop that day. Then I tell you honestly how much of the job was done, you pay for that part, and the rest comes back to you.",
           },
           {
-            p: "I show you what was done — the drafts, the pages, the designs as they stand — so you can see the assessment is fair rather than take my word for it. You keep those files for the part you paid for.",
+            p: "I show you what was done (the drafts, the pages, the designs as they stand) so you can see the assessment is fair rather than take my word for it. You keep those files for the part you paid for.",
           },
           {
             p: "If we cannot agree on how much was done, I would rather settle in your favour than have you tell people I kept your money.",
@@ -509,7 +509,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "Printed work",
         blocks: [
           {
-            p: "Printing is the one place where a mistake cannot be undone. Once you approve a proof and it goes to the press, that print run is spent — the press bill cannot come back from me, and neither can the courier.",
+            p: "Printing is the one place where a mistake cannot be undone. Once you approve a proof and it goes to the press, that print run is spent. The press bill cannot come back from me, and neither can the courier.",
           },
           {
             p: "If the error was mine and the approved proof shows it, I redo the design free and pay for the reprint. If the approved proof was correct and the printing came out wrong, that is between me and the press, and I will sort it out for you.",
@@ -540,13 +540,13 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "The monthly care plans",
         blocks: [
           {
-            p: "Stop whenever you like. There is no notice period and no cancellation charge — send one WhatsApp message.",
+            p: "Stop whenever you like. There is no notice period and no cancellation charge. Send one WhatsApp message.",
           },
           {
             list: [
               "On a monthly plan, it runs to the end of the month you have paid for and then stops. That month is not refunded, because the hosting, the backups and the watching all ran.",
               "On a yearly plan, I refund the whole months you have not used. Part-months are not split.",
-              "The time allowance in a plan does not carry over and is not refunded if you did not use it. That is what a plan is — it is there whether you needed it that month or not.",
+              "The time allowance in a plan does not carry over and is not refunded if you did not use it. That is what a plan is: it is there whether you needed it that month or not.",
             ],
           },
           {
@@ -558,7 +558,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "If I am the one who stops",
         blocks: [
           {
-            p: "If I cannot finish a job — I am ill, I have taken on something beyond what I can honestly do, or life gets in the way — you get back everything you paid for the part that was not done, and you keep the part that was.",
+            p: "If I cannot finish a job (I am ill, I have taken on something beyond what I can honestly do, or life gets in the way) you get back everything you paid for the part that was not done, and you keep the part that was.",
           },
           {
             p: "If it is my fault that we got there, I will also help you hand the work to somebody else, with the files and an explanation of where things stand, at no charge.",
@@ -569,7 +569,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "How a refund actually reaches you",
         blocks: [
           {
-            p: "Back the same way it came — the same UPI ID, the same bank account, the same card. I do not issue refunds as credit notes or as free work you did not ask for, unless you would rather have that.",
+            p: "Back the same way it came: the same UPI ID, the same bank account, the same card. I do not issue refunds as credit notes or as free work you did not ask for, unless you would rather have that.",
           },
           {
             p: "Ask on WhatsApp or by email. I will tell you the amount and the reasoning within two working days, and send it within seven working days of us agreeing the figure. A card or gateway refund can take a few more days to appear on your statement, which is the bank's timing and not mine.",
@@ -616,14 +616,14 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "What this site sets",
         blocks: [
           {
-            p: "Google Analytics, and nothing else. It writes two cookies — one usually named _ga and one starting _ga_ — which tell it whether this browser has been here before and whether this is one visit or two. They last up to two years unless you clear them.",
+            p: "Google Analytics, and nothing else. It writes two cookies (one usually named _ga and one starting _ga_) which tell it whether this browser has been here before and whether this is one visit or two. They last up to two years unless you clear them.",
           },
           {
             p: "What I actually look at is which pages people read and roughly where in the country they came from. It tells me whether the price page is doing its job. I am not building a profile of you, I could not identify you from it, and no advertising is run off it.",
           },
           {
             callout:
-              "No advertising pixels. No Facebook pixel. No chat widget. No cookie from Nexvora itself — there is no server here to set one.",
+              "No advertising pixels. No Facebook pixel. No chat widget. No cookie from Nexvora itself, because there is no server here to set one.",
           },
         ],
       },
@@ -658,7 +658,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "If this changes",
         blocks: [
           {
-            p: `Last changed on ${LEGAL_UPDATED}. If I ever add something that sets a cookie — a chat widget, an advertising pixel — this page changes on the same day, before it goes live. More about the rest of it is on the privacy page.`,
+            p: `Last changed on ${LEGAL_UPDATED}. If I ever add something that sets a cookie (a chat widget, an advertising pixel) this page changes on the same day, before it goes live. More about the rest of it is on the privacy page.`,
           },
         ],
       },
@@ -732,7 +732,7 @@ export const LEGAL_DOCS: LegalDoc[] = [
             p: "Links out to other websites are there because they are useful. I do not control them, I do not check them regularly, and a link is not an endorsement of everything on the other end.",
           },
           {
-            p: "Product and company names on this site — Google, Meta, WhatsApp, Vercel, Razorpay, and the businesses whose work is shown — belong to their owners. They are named because they are part of the work, not because they are connected to me.",
+            p: "Product and company names on this site (Google, Meta, WhatsApp, Vercel, Razorpay, and the businesses whose work is shown) belong to their owners. They are named because they are part of the work, not because they are connected to me.",
           },
         ],
       },

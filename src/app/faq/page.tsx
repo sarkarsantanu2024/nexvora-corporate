@@ -6,12 +6,12 @@ import { FAQS } from "@/lib/faq";
 import { Faq } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "FAQ — The Questions People Ask Me First",
+  title: "FAQ: The Questions People Ask Me First",
   description: "What it costs, how much to pay up front, whose name the domain is in, which language you can write to me in, what happens if the work runs late, and whether I take very small jobs.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/faq" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/faq",
-    title: "FAQ — The Questions People Ask Me First",
+    title: "FAQ: The Questions People Ask Me First",
     description: "What it costs, how much to pay up front, whose name the domain is in, which language you can write to me in, what happens if the work runs late, and whether I take very small jobs.",
     images: [OG_IMAGE],
   },

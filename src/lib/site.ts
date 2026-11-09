@@ -10,7 +10,7 @@ export const OG_IMAGE = {
   url: `${SITE_URL}/og-cover.png`,
   width: 1200,
   height: 630,
-  alt: "Nexvora Technologies — need a website for your business? You don't need a big company budget.",
+  alt: "Nexvora Technologies. Need a website for your business? You don't need a big company budget.",
 };
 
 // Contact details and capability shorthand live here because they appear in

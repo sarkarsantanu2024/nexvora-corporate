@@ -105,7 +105,7 @@ export function SiteHeader() {
         >
           <Link
             href="/"
-            aria-label="Nexvora Technologies — home"
+            aria-label="Nexvora Technologies, home"
             className="shrink-0"
           >
             <Image

@@ -5,12 +5,12 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { HowItWorks, NoTechNeeded, MyPromise } from "@/components/sections";
 
 export const metadata: Metadata = {
-  title: "How It Works — Six Steps, and No Surprises on the Bill",
+  title: "How It Works: Six Steps, and No Surprises on the Bill",
   description: "Message me on WhatsApp and agree the price before anything starts, then I keep you updated until it goes live. No technical knowledge needed, and your domain, hosting and business accounts stay under your control wherever practical.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/how-it-works" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/how-it-works",
-    title: "How It Works — Six Steps, and No Surprises on the Bill",
+    title: "How It Works: Six Steps, and No Surprises on the Bill",
     description: "Message me on WhatsApp and agree the price before anything starts, then I keep you updated until it goes live. No technical knowledge needed, and your domain, hosting and business accounts stay under your control wherever practical.",
     images: [OG_IMAGE],
   },
@@ -24,7 +24,7 @@ export default function Page() {
         {...{
         "eyebrow": "How it works",
         "title": "From your first message to the day it goes live.",
-        "intro": "Six steps, and you are told the price before any of them start. No technical document to prepare, no hourly meter, and no chasing me for an update — I will tell you when I start, when it is ready to look at, and when it is online.",
+        "intro": "Six steps, and you are told the price before any of them start. No technical document to prepare, no hourly meter, and no chasing me for an update. I will tell you when I start, when it is ready to look at, and when it is online.",
         "icon": "route",
         "motif": [
           "chat",

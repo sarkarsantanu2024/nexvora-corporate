@@ -48,7 +48,7 @@ export const WORK: WorkItem[] = [
     name: "Tirupati Balaji Health Care Group",
     kind: "Demo I built to show what is possible",
     blurb:
-      "A demonstration hospital site, not a client's — built to show what a multi-speciality hospital could have: departments, doctor profiles, diagnostics, gallery and appointment enquiries, with the emergency numbers reachable from every page.",
+      "A demonstration hospital site, not a client's, built to show what a multi-speciality hospital could have: departments, doctor profiles, diagnostics, gallery and appointment enquiries, with the emergency numbers reachable from every page.",
     image: "/work/tirupati-balaji.png",
     alt: "A demonstration hospital website home page, built to show what is possible",
     href: "https://tirupati-balaji-hospital.vercel.app/",
@@ -57,7 +57,7 @@ export const WORK: WorkItem[] = [
     name: "Avocado Tree",
     kind: "Built for a client",
     blurb:
-      "A dark, photography-led site for a digital growth consultancy — the system they sell, their pricing, their articles and a booking call, built to read as well on a phone as on a laptop.",
+      "A dark, photography-led site for a digital growth consultancy: the system they sell, their pricing, their articles and a booking call, built to read as well on a phone as on a laptop.",
     image: "/work/avocado-tree.png",
     alt: "The Avocado Tree digital consultancy website home page",
     href: "https://www.avocadotreedigital.com/",

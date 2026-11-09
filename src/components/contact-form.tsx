@@ -23,7 +23,7 @@ const BUDGETS = [
   `${rupees(5000)} – ${rupees(15000)}`,
   `${rupees(15000)} – ${rupees(30000)}`,
   "Over ₹30,000",
-  "I don't know yet — tell me",
+  "I don't know yet, tell me",
 ];
 
 const field =
@@ -182,7 +182,7 @@ export function ContactForm() {
                 className={`${field} resize-y`}
               />
               <p className="mt-2 text-sm text-slate-500">
-                In Bengali, Hindi or English — whichever is easiest for you.
+                In Bengali, Hindi or English, whichever is easiest for you.
               </p>
             </div>
 

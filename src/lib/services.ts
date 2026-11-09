@@ -33,7 +33,7 @@ export const SERVICES: Service[] = [
   {
     icon: "trending_up",
     title: "SEO and performance",
-    body: "First the repairs that stop Google reading your site properly — slow pages, pages it cannot see, the same page showing up twice — then the writing that actually earns a ranking. You get told which searches you appear for, where you sit on them, and what moved since last month.",
+    body: "First the repairs that stop Google reading your site properly (slow pages, pages it cannot see, the same page showing up twice), then the writing that actually earns a ranking. You get told which searches you appear for, where you sit on them, and what moved since last month.",
   },
   {
     icon: "code",
@@ -68,7 +68,7 @@ export const SERVICES: Service[] = [
   {
     icon: "design_services",
     title: "Interface design",
-    body: "Every screen is drawn and shown to whoever will open it forty times a day — the front desk, the teacher, the store clerk — before a line of code is written. Fewer clicks beats a prettier gradient.",
+    body: "Every screen is drawn and shown to whoever will open it forty times a day (the front desk, the teacher, the store clerk) before a line of code is written. Fewer clicks beats a prettier gradient.",
   },
   {
     icon: "dns",
@@ -83,7 +83,7 @@ export const SERVICES: Service[] = [
   {
     icon: "auto_awesome_motion",
     title: "Social media posts and creatives",
-    body: "A month of posts prepared in one go — festival greetings, offer creatives, new-arrival cards — in your colours and your language, sized for Facebook, Instagram and WhatsApp status. Usually back in two or three days.",
+    body: "A month of posts prepared in one go (festival greetings, offer creatives, new-arrival cards) in your colours and your language, sized for Facebook, Instagram and WhatsApp status. Usually back in two or three days.",
   },
   {
     icon: "photo_camera",
@@ -108,11 +108,11 @@ export const SERVICES: Service[] = [
   {
     icon: "local_shipping",
     title: "Printing and delivery",
-    body: "Anything I design can be printed and sent to you — visiting cards, brochures, flyers, banners, sign boards, wedding and event cards. You approve the proof and I deal with the press and the courier for you. The printing bill and the courier charge are yours, at what they cost; nothing is added on top.",
+    body: "Anything I design can be printed and sent to you: visiting cards, brochures, flyers, banners, sign boards, wedding and event cards. You approve the proof and I deal with the press and the courier for you. The printing bill and the courier charge are yours, at what they cost; nothing is added on top.",
   },
   {
     icon: "support_agent",
     title: "Support and maintenance",
-    body: "Someone picks up. Security updates, keeping the site current as browsers and phones change, and the small stuff — a new column in a report, one more field on a form — without a fresh quotation each time.",
+    body: "Someone picks up. Security updates, keeping the site current as browsers and phones change, and the small stuff (a new column in a report, one more field on a form) without a fresh quotation each time.",
   },
 ];

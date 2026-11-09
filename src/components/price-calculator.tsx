@@ -424,7 +424,7 @@ export function PriceCalculator() {
                   ))}
                 </ul>
                 <p className="mt-2 text-slate-500">
-                  None of these are refused — they are quoted as their own
+                  None of these are refused. They are quoted as their own
                   job, with their own number.
                 </p>
               </div>

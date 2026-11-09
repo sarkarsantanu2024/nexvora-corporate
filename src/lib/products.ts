@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     name: "EduFlow",
     tagline: "School and coaching management",
     blurb:
-      "Admissions, attendance, fees, exams and parent communication in one place — designed for schools and coaching centres.",
+      "Admissions, attendance, fees, exams and parent communication in one place, designed for schools and coaching centres.",
     href: "https://eduflow.nexvoratechnologies.co.in",
     accent: "from-emerald-500 to-teal-600",
   },
