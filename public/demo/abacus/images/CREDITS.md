@@ -2,15 +2,14 @@
 
 All photos from Pexels (free licence, no attribution required).
 
-- hero.jpg — Pexels 8612926 — https://www.pexels.com/photo/pretty-girl-learning-to-count-with-an-abacus-8612926/
-- abacus-closeup.jpg — Pexels 6692914 — https://www.pexels.com/photo/close-up-shot-of-an-abacus-6692914/
-- beads-colour.jpg — Pexels 8923967 — https://www.pexels.com/photo/colorful-wooden-beads-with-numbers-8923967/
-- class-girl.jpg — Pexels 8613095 — https://www.pexels.com/photo/girl-holding-multi-colored-wooden-abacus-8613095/
-- class-board.jpg — Pexels 8613061 — https://www.pexels.com/photo/girl-in-pink-dress-playing-with-an-abacus-and-girl-in-yellow-dress-writing-on-a-blackboard-8613061/
-- class-two.jpg — Pexels 8763110 — https://www.pexels.com/photo/girl-and-boy-sitting-on-gray-carpet-playing-with-wooden-abacus-8763110/
-- maths-board.jpg — Pexels 8088233 — https://www.pexels.com/photo/a-kid-writing-numbers-on-a-blackboard-8088233/
-- mental-math.jpg — Pexels 39190807 — https://www.pexels.com/photo/young-student-solving-math-problems-on-chalkboard-39190807/
-- trophy.jpg — Pexels 6125928 — https://www.pexels.com/photo/children-holding-a-trophy-6125928/
-- classroom.jpg — Pexels 31864404 — https://www.pexels.com/photo/child-learning-with-abacus-in-classroom-31864404/
-- red-abacus.jpg — Pexels 40132825 — https://www.pexels.com/photo/artistic-shot-of-modern-abacus-with-red-beads-40132825/
-- whiteboard.jpg — Pexels 8923545 — https://www.pexels.com/photo/a-child-writing-on-a-white-board-8923545/
+- hero.jpg — Pexels 1720186 — https://www.pexels.com/photo/two-girls-doing-school-works-1720186/
+- writing-numbers.jpg — Pexels 5896616 — https://www.pexels.com/photo/small-girl-writing-numbers-in-notebook-5896616/
+- siblings.jpg — Pexels 17332827 — https://www.pexels.com/photo/two-children-wearing-eyeglasses-17332827/
+- classroom.jpg — Pexels 3231358 — https://www.pexels.com/photo/photograph-of-girls-in-a-classroom-3231358/
+- competition.jpg — Pexels 40378003 — https://www.pexels.com/photo/children-in-school-uniform-at-hyderabad-gathering-40378003/
+- laughing.jpg — Pexels 38482703 — https://www.pexels.com/photo/joyful-indian-children-in-traditional-attire-38482703/
+- friends.jpg — Pexels 20556421 — https://www.pexels.com/photo/smiling-girl-and-boys-sitting-under-walls-with-letters-at-school-20556421/
+- notebook-boy.jpg — Pexels 20556417 — https://www.pexels.com/photo/smiling-boy-sitting-with-notebook-20556417/
+- jumping.jpg — Pexels 38962497 — https://www.pexels.com/photo/joyful-school-children-jumping-outdoors-38962497/
+- test-girl.jpg — Pexels 37809227 — https://www.pexels.com/photo/child-focused-on-school-assignment-in-classroom-37809227/
+- desk-boy.jpg — Pexels 18012458 — https://www.pexels.com/photo/a-child-sitting-at-a-desk-in-a-classroom-18012458/

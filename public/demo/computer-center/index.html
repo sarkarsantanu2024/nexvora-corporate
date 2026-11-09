@@ -153,11 +153,18 @@ table{border-collapse:collapse; width:100%}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mnav{display:none; border-top:1px solid var(--line-dark); background:var(--black); padding:.5rem var(--gutter) 1.25rem}
-.mnav.is-open{display:block}
-.mnav a{display:block; padding:.9rem .25rem; font-family:var(--display); font-weight:600; text-decoration:none; color:#fff; border-bottom:1px solid var(--line-dark)}
-.mnav .btn{margin-top:1rem; width:100%}
-@media (min-width:1100px){.nav,.header__cta{display:flex} .burger,.mnav{display:none !important}}
+/* mobile menu: right-side drawer (lives outside the header; backdrop-filter would trap a fixed child) */
+.drawer{position:fixed; top:0; right:0; bottom:0; width:min(84vw,360px); z-index:200; background:var(--black); color:#fff; transform:translateX(100%); transition:transform .45s cubic-bezier(.22,1,.36,1); display:flex; flex-direction:column; padding:1rem 1.25rem 1.5rem; box-shadow:-20px 0 50px -30px rgba(0,0,0,.6); overflow-y:auto}
+.drawer.is-open{transform:translateX(0)}
+.drawer__top{display:flex; justify-content:flex-end; margin-bottom:.75rem}
+.drawer__close{width:44px; height:44px; display:grid; place-items:center; border:1px solid var(--line-dark); border-radius:var(--r); color:var(--lime)}
+.drawer__close svg{width:20px; height:20px}
+.drawer__links{flex:1}
+.drawer__links a{display:flex; align-items:center; min-height:48px; padding:.35rem .25rem; font-family:var(--display); font-weight:600; font-size:1.05rem; text-decoration:none; color:#fff; border-bottom:1px solid var(--line-dark)}
+.drawer__cta{display:grid; gap:.6rem; margin-top:1.25rem}
+.backdrop{position:fixed; inset:0; z-index:190; background:rgba(0,0,0,.45); opacity:0; pointer-events:none; transition:opacity .3s}
+.backdrop.is-open{opacity:1; pointer-events:auto}
+@media (min-width:900px){.nav,.header__cta{display:flex} .burger,.drawer,.backdrop{display:none !important}}
 
 /* hero: stacked poster on grid, photo band below */
 .hero{padding-block:clamp(3.5rem,7vw,6rem) 0}
@@ -298,31 +305,37 @@ table{border-collapse:collapse; width:100%}
 .footer__note a{color:#fff}
 @media (min-width:760px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr} .footer{padding-bottom:3rem}}
 
-/* floating social */
-.social{position:fixed; right:0; top:50%; transform:translateY(-50%); z-index:90; display:flex; flex-direction:column; gap:.5rem; padding:.5rem; background:rgba(11,15,26,.92); border:1px solid var(--line-dark); border-right:0; border-radius:var(--r) 0 0 var(--r)}
-.social a{width:44px; height:44px; border-radius:50%; display:grid; place-items:center; color:#fff; text-decoration:none; transition:transform .15s}
-.social a:hover{transform:scale(1.08)}
-.social svg{width:22px; height:22px}
-.social .wa{background:#25D366}.social .fb{background:#1877F2}.social .yt{background:#FF0000}.social .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)}.social .gm{background:var(--lime); color:var(--black)}
-@media (max-width:859px){.social{top:auto; bottom:5.25rem; transform:none} .social a{width:40px; height:40px} .social svg{width:19px; height:19px}}
-.mbar{position:fixed; left:0; right:0; bottom:0; z-index:95; display:grid; grid-template-columns:1fr 1fr; background:var(--black); border-top:1px solid var(--line-dark); padding:.5rem .75rem calc(.5rem + env(safe-area-inset-bottom)); gap:.5rem}
-.mbar .btn{min-height:46px}
-@media (min-width:860px){.mbar{display:none}}
+/* floating social dock: no panel, brand-coloured circles with hover labels.
+   Off-screen while scrolling, slides in 2.5 s after scrolling stops. */
+.dock{position:fixed; right:10px; top:50%; z-index:90; display:flex; flex-direction:column; gap:8px; transform:translate(calc(100% + 12px),-50%); transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative; width:34px; height:34px; flex:none; display:grid; place-items:center; border-radius:50%; color:#fff; text-decoration:none; box-shadow:0 6px 14px -6px rgba(0,0,0,.45); transition:transform .2s ease, box-shadow .2s ease}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px); box-shadow:0 10px 18px -8px rgba(0,0,0,.5)}
+.dock__btn::after{content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%; translate:6px -50%; white-space:nowrap; pointer-events:none; background:var(--black); color:#fff; font-family:var(--display); font-size:.72rem; font-weight:600; letter-spacing:.02em; padding:.35rem .6rem; border-radius:8px; opacity:0; transition:opacity .2s ease, translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--blue)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
 
-/* back to top: sits above the mobile social stack so they never overlap */
+/* back to top */
 .to-top{position:fixed; right:1.25rem; bottom:1.25rem; z-index:92; width:46px; height:46px; border-radius:50%; background:var(--lime); color:var(--black); display:grid; place-items:center; box-shadow:0 10px 24px -14px rgba(0,0,0,.9); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, transform .25s, visibility .25s}
 .to-top.is-visible{opacity:1; visibility:visible; transform:none}
 .to-top:hover{background:var(--blue); color:#fff}
 .to-top svg{width:20px; height:20px}
-@media (max-width:859px){.to-top{right:.6rem; bottom:calc(5.25rem + 16.5rem); width:42px; height:42px}}
 
 /* reveal */
 .rv{opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease}
 .rv.in{opacity:1; transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
+  .drawer,.backdrop,.dock,.dock__btn,.dock__btn::after,.to-top{transition:none}
   .rv{opacity:1; transform:none; transition:none}
-  .btn:hover,.course:hover,.social a:hover{transform:none}
+  .btn:hover,.course:hover{transform:none}
 }
 </style>
 </head>
@@ -365,7 +378,14 @@ table{border-collapse:collapse; width:100%}
     </div>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile">
+</header>
+
+<div class="backdrop" id="backdrop"></div>
+<nav class="drawer" id="mnav" aria-label="Mobile">
+  <div class="drawer__top">
+    <button class="drawer__close" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="drawer__links">
     <a href="#courses">Courses and fees</a>
     <a href="#batches">Batch timings</a>
     <a href="#why">Why here</a>
@@ -373,9 +393,12 @@ table{border-collapse:collapse; width:100%}
     <a href="#gallery">Gallery</a>
     <a href="#faq">Questions</a>
     <a href="#visit">Visit</a>
-    <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a free demo class</a>
-  </nav>
-</header>
+  </div>
+  <div class="drawer__cta">
+    <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
+    <a class="btn btn--line-w" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
+  </div>
+</nav>
 
 <main id="main">
 
@@ -404,7 +427,7 @@ table{border-collapse:collapse; width:100%}
       </div>
     </div>
     <div class="hero__band rv">
-      <figure class="ph"><img src="/demo/computer-center/images/hero.jpg" alt="A row of students at desktop computers in a bright classroom, each at their own machine" width="1600" height="973" fetchpriority="high" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/computer-center/images/hero.jpg" alt="Students in formal dress gathered around desktop computers at the institute" width="1600" height="1068" fetchpriority="high" decoding="async"></figure>
       <ul class="hero__stats">
         <li><b>18</b><span>computers, one per student</span></li>
         <li><b>8</b><span>students per batch, maximum</span></li>
@@ -479,8 +502,8 @@ table{border-collapse:collapse; width:100%}
       </ul>
     </div>
     <div class="why__figs rv">
-      <figure class="ph"><img src="/demo/computer-center/images/woman-smiling.jpg" alt="A young woman smiles at her screen in the computer room" width="1200" height="1800" loading="lazy" decoding="async"></figure>
-      <figure class="ph"><img src="/demo/computer-center/images/typing-hands.jpg" alt="Hands on a keyboard beside a notebook and pen" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/computer-center/images/woman-smiling.jpg" alt="A young woman works at a laptop at a desk by a brick wall" width="1200" height="800" loading="lazy" decoding="async"></figure>
+      <figure class="ph"><img src="/demo/computer-center/images/typing-hands.jpg" alt="Hands typing on a laptop keyboard" width="800" height="533" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -519,14 +542,14 @@ table{border-collapse:collapse; width:100%}
       <h2 class="h-lg">One room, eighteen screens</h2>
     </div>
     <div class="gal">
-      <figure class="ph w rv"><img src="/demo/computer-center/images/class-group.jpg" alt="Students working at a long row of monitors during a morning batch" width="1200" height="727" loading="lazy" decoding="async"><figcaption>Morning 2 batch</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/teacher-checking.jpg" alt="A teacher stands behind a student and checks the work on his laptop" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Screen check</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/elderly-learner.jpg" alt="A teacher leans in to help an elderly man on a laptop" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Basic Computing, 10:30 slot</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/class-row.jpg" alt="Students on both sides of a long desk, each at a monitor" width="1200" height="740" loading="lazy" decoding="async"><figcaption>Evening 1</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/students-a.jpg" alt="A teacher helps three children at a desktop computer" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Afternoon slot</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/calculator-ledger.jpg" alt="A person works through documents with a calculator" width="800" height="1200" loading="lazy" decoding="async"><figcaption>Tally practice bills</figcaption></figure>
+      <figure class="ph w rv"><img src="/demo/computer-center/images/class-group.jpg" alt="A young man in an orange t-shirt smiles while working on a laptop" width="1200" height="1800" loading="lazy" decoding="async"><figcaption>Practice hours</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/teacher-checking.jpg" alt="A man in a checked shirt looks up from his laptop in the classroom" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Evening 1</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/elderly-learner.jpg" alt="A learner in a turban works at a laptop at a plain desk" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Basic Computing, 10:30 slot</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/class-row.jpg" alt="A student in school uniform works at a desktop in a computer classroom, a classmate beside him" width="1600" height="1067" loading="lazy" decoding="async"><figcaption>School-hours batch</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/students-a.jpg" alt="Two learners share a laptop at a desk and talk through the work" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Afternoon slot</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/calculator-ledger.jpg" alt="A young woman works at a desktop computer in the institute" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Tally practice</figcaption></figure>
       <figure class="ph rv"><img src="/demo/computer-center/images/boy-laptop.jpg" alt="A smiling young man works on a laptop outdoors on a bench" width="800" height="609" loading="lazy" decoding="async"><figcaption>Web Basics, Sunday batch</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/girls-computers.jpg" alt="Young women at computers in a bright classroom" width="1200" height="745" loading="lazy" decoding="async"><figcaption>Late morning</figcaption></figure>
+      <figure class="ph rv"><img src="/demo/computer-center/images/girls-computers.jpg" alt="Young women in uniform gather around a laptop at a table" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Late morning</figcaption></figure>
     </div>
   </div>
 </section>
@@ -625,18 +648,15 @@ table{border-collapse:collapse; width:100%}
   </div>
 </footer>
 
-<nav class="social" aria-label="Social links">
-  <a class="wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a class="fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a class="yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a class="ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a class="gm" href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+<nav class="dock" id="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
 </nav>
 
-<div class="mbar">
-  <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
-  <a class="btn btn--blue" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
-</div>
 
 <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
@@ -651,14 +671,32 @@ table{border-collapse:collapse; width:100%}
   };
   onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
   toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:reduce?'auto':'smooth'}); });
-  var burger=document.getElementById('burger'), mnav=document.getElementById('mnav');
-  burger.addEventListener('click',function(){
-    var open=burger.getAttribute('aria-expanded')==='true';
-    burger.setAttribute('aria-expanded',String(!open));
-    burger.setAttribute('aria-label',open?'Open menu':'Close menu');
-    mnav.classList.toggle('is-open',!open);
-  });
-  mnav.addEventListener('click',function(e){ if(e.target.tagName==='A'){burger.setAttribute('aria-expanded','false'); mnav.classList.remove('is-open');} });
+  // right-side drawer
+  var burger=document.getElementById('burger'), drawer=document.getElementById('mnav'),
+      backdrop=document.getElementById('backdrop'), closeBtn=document.getElementById('drawerClose');
+  function openDrawer(){
+    drawer.classList.add('is-open'); backdrop.classList.add('is-open');
+    burger.setAttribute('aria-expanded','true');
+    document.documentElement.style.overflow='hidden';
+    closeBtn.focus();
+  }
+  function closeDrawer(){
+    if(!drawer.classList.contains('is-open')) return;
+    drawer.classList.remove('is-open'); backdrop.classList.remove('is-open');
+    burger.setAttribute('aria-expanded','false');
+    document.documentElement.style.overflow='';
+    burger.focus();
+  }
+  burger.addEventListener('click',function(){ drawer.classList.contains('is-open')?closeDrawer():openDrawer(); });
+  closeBtn.addEventListener('click',closeDrawer);
+  backdrop.addEventListener('click',closeDrawer);
+  drawer.addEventListener('click',function(e){ if(e.target.closest('a')) closeDrawer(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeDrawer(); });
+
+  // social dock: hide on scroll, slide in 2.5 s after scrolling stops (and 2.5 s after load)
+  var dock=document.getElementById('dock'), dockTimer;
+  function hideDock(){ dock.classList.remove('is-in'); clearTimeout(dockTimer); dockTimer=setTimeout(function(){dock.classList.add('is-in')},2500); }
+  window.addEventListener('scroll',hideDock,{passive:true}); hideDock();
   var els=document.querySelectorAll('.rv');
   if(reduce||!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('in')}); return; }
   var io=new IntersectionObserver(function(entries){

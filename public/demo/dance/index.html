@@ -100,11 +100,21 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.mnav{display:none; border-top:1px solid var(--line); background:var(--plum-deep); padding:.8rem var(--gutter) 1.5rem}
-.mnav.is-open{display:block}
-.mnav a{display:block; padding:.9rem .2rem; text-decoration:none; font-size:1.05rem; font-weight:600; color:var(--ink); border-bottom:1px solid var(--line)}
-.mnav .btn{margin-top:1.2rem; width:100%}
-@media (min-width:1024px){.nav{display:block}.header__cta{display:flex; gap:.6rem}.burger,.mnav{display:none !important}}
+/* mobile drawer: slides in from the right */
+.drawer{position:fixed; top:0; right:0; bottom:0; width:min(84vw,360px); z-index:120; background:var(--plum-deep); color:var(--ink); display:flex; flex-direction:column; padding:1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom)); overflow-y:auto; box-shadow:-20px 0 50px -30px rgba(0,0,0,.9); transform:translateX(100%); visibility:hidden; transition:transform .45s cubic-bezier(.22,1,.36,1), visibility 0s .45s}
+.drawer.is-open{transform:translateX(0); visibility:visible; transition-delay:0s}
+.drawer__top{display:flex; align-items:center; justify-content:space-between; min-height:56px}
+.drawer__title{font-family:var(--display); font-size:1.15rem; font-weight:700}
+.drawer__close{width:44px; height:44px; display:grid; place-items:center; border:1px solid var(--line); color:var(--ink)}
+.drawer__close svg{width:20px; height:20px}
+.drawer__links{margin-top:1rem; flex:1}
+.drawer__links a{display:flex; align-items:center; min-height:48px; padding:0 .25rem; text-decoration:none; font-size:1.05rem; font-weight:600; color:var(--ink); border-bottom:1px solid var(--line)}
+.drawer__links a:hover{color:var(--rose-light)}
+.drawer__actions{display:grid; gap:.6rem; margin-top:1.5rem}
+.backdrop{position:fixed; inset:0; z-index:110; background:rgba(0,0,0,.45); opacity:0; pointer-events:none; transition:opacity .3s}
+.backdrop.is-open{opacity:1; pointer-events:auto}
+@media (min-width:900px){.nav{display:block}.nav ul{gap:1.2rem}.nav a{font-size:.76rem}.header__cta{display:flex; gap:.6rem}.burger,.drawer,.backdrop{display:none !important}}
+@media (min-width:1100px){.nav ul{gap:1.9rem}.nav a{font-size:.82rem}}
 
 /* hero: split, photo right */
 .hero{position:relative; background:var(--black)}
@@ -231,27 +241,28 @@ tr:last-child td{border-bottom:0}
 .footer__copy{margin-top:.8rem; font-size:.8rem; color:rgba(246,239,234,.45)}
 @media (min-width:800px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr}}
 
-/* social stack */
-.social{position:fixed; right:.75rem; bottom:5.2rem; z-index:90; display:flex; flex-direction:column; gap:.5rem}
-.social a{width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--plum); color:var(--ink); border:1px solid var(--line); box-shadow:0 8px 24px -10px rgba(0,0,0,.8); transition:background .2s, transform .2s}
-.social a svg{width:20px; height:20px}
-.social a:hover{background:var(--rose); color:var(--black); transform:translateX(-3px)}
-.social a:first-child{background:#25D366; color:#fff; border-color:#25D366}
-@media (min-width:900px){.social{top:50%; bottom:auto; transform:translateY(-50%); right:1rem}}
+/* floating social dock: small brand-coloured circles on the right edge,
+   off-screen while scrolling, slides in 2.5s after scrolling stops */
+.dock{position:fixed; right:10px; top:50%; z-index:90; display:flex; flex-direction:column; gap:8px; transform:translate(calc(100% + 12px),-50%); transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative; width:34px; height:34px; flex:none; display:grid; place-items:center; border-radius:50%; color:#fff; text-decoration:none; box-shadow:0 6px 14px -6px rgba(0,0,0,.45); transition:transform .2s ease, box-shadow .2s ease}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px); box-shadow:0 10px 18px -8px rgba(0,0,0,.55)}
+.dock__btn::after{content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%; translate:6px -50%; white-space:nowrap; pointer-events:none; background:var(--plum-deep); color:var(--ink); font-size:.72rem; font-weight:600; letter-spacing:.02em; padding:.35rem .6rem; border-radius:8px; opacity:0; transition:opacity .2s ease, translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--plum)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
 
-/* mobile float bar */
-.floatbar{position:fixed; left:0; right:0; bottom:0; z-index:95; display:grid; grid-template-columns:1fr 1fr; background:var(--plum-deep); border-top:1px solid var(--line); padding:.5rem .75rem calc(.5rem + env(safe-area-inset-bottom))}
-.floatbar .btn{min-height:46px; font-size:.74rem}
-@media (min-width:900px){.floatbar{display:none}}
-body{padding-bottom:64px}
-@media (min-width:900px){body{padding-bottom:0}}
-
-/* back to top: sits above the mobile social stack (5 x 44px + 4 x .5rem gaps) */
-.to-top{position:fixed; right:.75rem; bottom:calc(5.2rem + 262px); z-index:90; width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--rose); color:var(--black); box-shadow:0 8px 24px -10px rgba(0,0,0,.8); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, visibility .25s, transform .25s, background .2s}
+/* back to top */
+.to-top{position:fixed; right:1rem; bottom:1.25rem; z-index:90; width:46px; height:46px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--rose); color:var(--black); box-shadow:0 8px 24px -10px rgba(0,0,0,.8); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, visibility .25s, transform .25s, background .2s}
 .to-top svg{width:20px; height:20px}
 .to-top.is-visible{opacity:1; visibility:visible; transform:none}
 .to-top:hover{background:var(--rose-light)}
-@media (min-width:900px){.to-top{right:1rem; bottom:1.5rem; width:48px; height:48px}}
 
 /* reveal */
 .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease}
@@ -259,6 +270,7 @@ body{padding-bottom:64px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1; transform:none; transition:none}
+  .drawer,.backdrop,.dock{transition:none}
   *{transition-duration:.01ms !important}
 }
 </style>
@@ -301,9 +313,20 @@ body{padding-bottom:64px}
       <a class="btn btn--line" href="tel:+919804243159">Call</a>
       <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a trial class</a>
     </div>
-    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile">
+</header>
+
+<!-- Mobile drawer menu -->
+<div class="backdrop" id="backdrop" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Mobile" aria-hidden="true">
+  <div class="drawer__top">
+    <span class="drawer__title">Menu</span>
+    <button class="drawer__close" id="drawerClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__links">
     <a href="#about">About</a>
     <a href="#styles">Dance styles</a>
     <a href="#guru">Our guru</a>
@@ -311,9 +334,18 @@ body{padding-bottom:64px}
     <a href="#show">Annual show</a>
     <a href="#gallery">Gallery</a>
     <a href="#visit">Visit us</a>
-    <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a trial class on WhatsApp</a>
-  </nav>
-</header>
+  </div>
+  <div class="drawer__actions">
+    <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+      WhatsApp us
+    </a>
+    <a class="btn btn--line" href="tel:+919804243159">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+      Call +91 98042 43159
+    </a>
+  </div>
+</nav>
 
 <main id="main">
 
@@ -348,7 +380,7 @@ body{padding-bottom:64px}
   <div class="wrap about__grid">
     <div class="about__photos reveal">
       <figure class="ph"><img src="/demo/dance/images/ghungroo-footwork.jpg" width="800" height="534" alt="Close view of a dancer's feet with ghungroo bells during footwork practice" loading="lazy"></figure>
-      <figure class="ph"><img src="/demo/dance/images/empty-studio.jpg" width="1200" height="800" alt="Empty dance studio with wooden floor and a long mirror" loading="lazy"></figure>
+      <figure class="ph"><img src="/demo/dance/images/empty-studio.jpg" width="1200" height="800" alt="Circle of hands holding colourful dandiya sticks during a dance practice" loading="lazy"></figure>
     </div>
     <div class="about__text reveal">
       <p class="kicker">About the academy</p>
@@ -402,7 +434,7 @@ body{padding-bottom:64px}
       </li>
       <li class="reveal">
         <a class="style" href="#batches">
-          <figure class="ph"><img src="/demo/dance/images/bollywood-class.jpg" width="1200" height="801" alt="Group of women following steps together in a dance class" loading="lazy"></figure>
+          <figure class="ph"><img src="/demo/dance/images/bollywood-class.jpg" width="1200" height="800" alt="Three young dancers in kurta and lehenga doing a Bollywood routine together" loading="lazy"></figure>
           <div class="style__body">
             <h3>Bollywood &amp; fitness</h3>
             <p>Film songs, one new routine every two weeks. Good for weddings, college fests and simply for sweating it out.</p>
@@ -515,7 +547,7 @@ body{padding-bottom:64px}
       <h2 class="h-lg">From class to stage</h2>
     </div>
     <div class="gallery">
-      <figure class="ph ph--tall reveal"><img src="/demo/dance/images/group-dance-class.jpg" width="1200" height="2133" alt="Dance class with a group of students practising together" loading="lazy"></figure>
+      <figure class="ph ph--tall reveal"><img src="/demo/dance/images/group-dance-class.jpg" width="1200" height="2134" alt="Line of dancers in bright sarees holding the same pose on a beach, seen from above" loading="lazy"></figure>
       <figure class="ph reveal"><img src="/demo/dance/images/stage-costume.jpg" width="1200" height="1800" alt="Dancer in a colourful traditional costume performing on stage" loading="lazy"></figure>
       <figure class="ph reveal"><img src="/demo/dance/images/ghungroo-footwork.jpg" width="800" height="534" alt="Ghungroo bells tied around a dancer's ankles" loading="lazy"></figure>
       <figure class="ph ph--wide reveal"><img src="/demo/dance/images/red-drapes-performance.jpg" width="1200" height="800" alt="Dance-drama performer between red stage curtains under warm light" loading="lazy"></figure>
@@ -643,26 +675,15 @@ body{padding-bottom:64px}
   </div>
 </footer>
 
-<!-- Floating social stack -->
-<div class="social" aria-label="Social links">
-  <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a href="https://www.google.com/maps/search/?api=1&amp;query=12A%20Lake%20View%20Road%2C%20Lake%20Market%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
-</div>
-
-<!-- Mobile float bar -->
-<div class="floatbar">
-  <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-    WhatsApp
-  </a>
-  <a class="btn btn--line" href="tel:+919804243159">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-    Call
-  </a>
-</div>
+<!-- Floating social dock -->
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nupur%20Nritya%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps/search/?api=1&amp;query=12A%20Lake%20View%20Road%2C%20Lake%20Market%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</nav>
 
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
@@ -695,11 +716,27 @@ body{padding-bottom:64px}
 <script>
 (function(){
   "use strict";
-  var burger=document.getElementById("burger"), mnav=document.getElementById("mnav");
-  function setMenu(open){burger.setAttribute("aria-expanded",open?"true":"false");burger.setAttribute("aria-label",open?"Close menu":"Open menu");mnav.classList.toggle("is-open",open);}
-  burger.addEventListener("click",function(){setMenu(burger.getAttribute("aria-expanded")!=="true");});
-  mnav.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&burger.getAttribute("aria-expanded")==="true"){setMenu(false);burger.focus();}});
+  /* ---- Drawer menu ---- */
+  var burger=document.getElementById("burger"), drawer=document.getElementById("drawer"), backdrop=document.getElementById("backdrop"), closeBtn=document.getElementById("drawerClose");
+  backdrop.hidden=false;
+  function setMenu(open){
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    drawer.classList.toggle("is-open",open); backdrop.classList.toggle("is-open",open);
+    drawer.setAttribute("aria-hidden",open?"false":"true");
+    document.documentElement.style.overflow=open?"hidden":"";
+    if(open){closeBtn.focus();}else{burger.focus();}
+  }
+  burger.addEventListener("click",function(){setMenu(true);});
+  closeBtn.addEventListener("click",function(){setMenu(false);});
+  backdrop.addEventListener("click",function(){setMenu(false);});
+  drawer.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&burger.getAttribute("aria-expanded")==="true")setMenu(false);});
+
+  /* ---- Social dock: slides in 2.5s after scrolling stops ---- */
+  var dock=document.querySelector(".dock"), dockTimer;
+  function hideDock(){dock.classList.remove("is-in"); clearTimeout(dockTimer); dockTimer=setTimeout(function(){dock.classList.add("is-in");},2500);}
+  window.addEventListener("scroll",hideDock,{passive:true}); hideDock();
+
   var header=document.querySelector(".header"), toTop=document.getElementById("toTop");
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   function onScroll(){header.classList.toggle("is-stuck",window.scrollY>10);toTop.classList.toggle("is-visible",window.scrollY>700);}

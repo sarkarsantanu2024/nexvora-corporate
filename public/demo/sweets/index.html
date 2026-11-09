@@ -78,7 +78,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @media (max-width:640px){.demo-strip .mid{display:none}}
 
 /* header */
-.header{position:sticky;top:0;z-index:100;background:rgba(255,246,232,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--line)}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
 .brand svg{width:44px;height:44px;flex:none}
@@ -93,15 +93,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .nav .btn--maroon::after{display:none}
 .burger{display:none;width:48px;height:48px;border-radius:10px;align-items:center;justify-content:center;color:var(--maroon)}
 .burger svg{width:26px;height:26px}
-.burger .x{display:none}
-.burger[aria-expanded="true"] .bars{display:none}
-.burger[aria-expanded="true"] .x{display:block}
+.nav__close,.nav__mob{display:none}
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:150}
+.backdrop.is-open{opacity:1;pointer-events:auto}
 @media (max-width:900px){
-  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:.6rem var(--gutter) 1.2rem;box-shadow:0 20px 30px -20px rgba(62,15,16,.35)}
-  .nav.open{display:flex}
-  .nav a{padding:.85rem 0;border-bottom:1px solid var(--line);font-size:1.05rem}
+  .nav{position:fixed;top:0;right:0;bottom:0;width:min(84vw,360px);background:var(--cream);z-index:160;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:4.5rem var(--gutter) 1.5rem;transform:translateX(100%);transition:transform .45s cubic-bezier(.22,1,.36,1);box-shadow:-20px 0 40px -30px rgba(0,0,0,.5);overflow-y:auto}
+  .nav.is-open{transform:translateX(0)}
+  .nav a{padding:.75rem 0;min-height:48px;display:flex;align-items:center;border-bottom:1px solid var(--line);font-size:1.05rem}
   .nav a::after{display:none}
-  .nav .btn{margin-top:1rem;border-bottom:0}
+  .nav>.btn{display:none}
+  .nav__close{display:grid;place-items:center;position:absolute;top:.75rem;right:.75rem;width:44px;height:44px;border-radius:10px;color:var(--maroon)}
+  .nav__close svg{width:24px;height:24px}
+  .nav__mob{display:flex;flex-direction:column;gap:.6rem;margin-top:auto;padding-top:1.5rem}
+  .nav__mob .btn{border-bottom:0;justify-content:center}
   .burger{display:inline-flex}
 }
 
@@ -248,7 +252,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .final__cta{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2rem}
 
 /* footer */
-.footer{background:var(--maroon-deep);color:rgba(255,246,232,.8);padding:3rem 0 7rem;font-size:.92rem}
+.footer{background:var(--maroon-deep);color:rgba(255,246,232,.8);padding:3rem 0 3rem;font-size:.92rem}
 .footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
 .footer h4{color:var(--cream);font-family:var(--body);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.9rem}
 .footer a{color:var(--cream);text-decoration:none}
@@ -260,30 +264,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,246,232,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
-@media (min-width:861px){.footer{padding-bottom:3rem}}
 
-/* floating social stack */
-.social{position:fixed;right:.8rem;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:.5rem}
-.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--white);color:var(--maroon);border:1px solid var(--line);box-shadow:0 8px 20px -10px rgba(62,15,16,.5);transition:transform .15s,background .15s,color .15s}
-.social a:hover{transform:translateX(-3px);background:var(--maroon);color:var(--cream)}
-.social a.wa{background:#25D366;color:#fff;border-color:transparent}
-.social svg{width:22px;height:22px}
-@media (max-width:860px){
-  .social{top:auto;bottom:5.2rem;right:.7rem;transform:none;gap:.4rem}
-  .social a{width:42px;height:42px}
-  .social a.wa{display:none}
-}
-/* mobile bar */
-.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--white);border-top:1px solid var(--line);padding:.6rem var(--gutter);gap:.6rem;box-shadow:0 -10px 30px -20px rgba(0,0,0,.4)}
-.mbar .btn{flex:1;min-height:48px;padding:.6rem}
-@media (max-width:860px){.mbar{display:flex}}
+/* floating social dock */
+.dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative;width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 6px 14px -6px rgba(0,0,0,.45);transition:transform .2s ease,box-shadow .2s ease}
+.dock__btn svg{width:15px;height:15px}
+.dock__btn:hover{transform:translateX(-3px);box-shadow:0 10px 18px -8px rgba(0,0,0,.55)}
+.dock__btn::after{content:attr(aria-label);position:absolute;right:calc(100% + 10px);top:50%;translate:6px -50%;white-space:nowrap;pointer-events:none;background:var(--maroon-deep);color:var(--cream);font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:.35rem .6rem;border-radius:8px;opacity:0;transition:opacity .2s ease,translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1;translate:0 -50%}
+@media (hover:none){.dock__btn::after{display:none}}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--maroon)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
 
 /* back to top */
-.to-top{position:fixed;right:.8rem;bottom:1.2rem;z-index:92;width:46px;height:46px;border-radius:50%;background:var(--maroon);color:var(--cream);display:grid;place-items:center;box-shadow:0 10px 24px -12px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top{position:fixed;right:.8rem;bottom:1.25rem;z-index:92;width:46px;height:46px;border-radius:50%;background:var(--maroon);color:var(--cream);display:grid;place-items:center;box-shadow:0 10px 24px -12px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
 .to-top:hover{background:var(--saffron);color:var(--maroon-deep)}
 .to-top svg{width:22px;height:22px}
-@media (max-width:860px){.to-top{right:.7rem;bottom:17.6rem;width:42px;height:42px}}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -313,10 +315,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span><b>Mohini Mishtanna Bhandar</b><small>Shyambazar &middot; since 1962</small></span>
     </a>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
-      <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Main">
+      <button class="nav__close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       <a href="#story">Our story</a>
       <a href="#sweets">Sweets</a>
       <a href="#prices">Price list</a>
@@ -324,9 +326,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <a href="#catering">Catering</a>
       <a href="#visit">Visit</a>
       <a class="btn btn--maroon" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Order on WhatsApp</a>
+      <div class="nav__mob">
+        <a class="btn btn--saffron" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn btn--maroon" href="tel:+919804243159">Call +91 98042 43159</a>
+      </div>
     </nav>
   </div>
 </header>
+<div class="backdrop"></div>
 
 <main id="main">
 <section class="hero" id="top">
@@ -608,26 +615,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </footer>
 
-<nav class="social" aria-label="Social links">
-  <a class="wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a href="https://www.google.com/maps?q=71%2F1%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700004" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps?q=71%2F1%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700004" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
 </nav>
-
-<div class="mbar">
-  <a class="btn btn--saffron" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp</a>
-  <a class="btn btn--maroon" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
-</div>
 
 <button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
-  var b=document.querySelector('.burger'),n=document.getElementById('nav');
-  b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open menu':'Close menu');n.classList.toggle('open',!o);});
-  n.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('open');}});
+  var b=document.querySelector('.burger'),n=document.getElementById('nav'),bd=document.querySelector('.backdrop'),cl=n.querySelector('.nav__close');
+  function openM(){n.classList.add('is-open');bd.classList.add('is-open');b.setAttribute('aria-expanded','true');document.documentElement.style.overflow='hidden';cl.focus();}
+  function closeM(){if(!n.classList.contains('is-open'))return;n.classList.remove('is-open');bd.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.documentElement.style.overflow='';b.focus();}
+  b.addEventListener('click',function(){n.classList.contains('is-open')?closeM():openM();});
+  cl.addEventListener('click',closeM);bd.addEventListener('click',closeM);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeM();});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))closeM();});
+  var dock=document.querySelector('.dock'),dt;
+  function hideDock(){dock.classList.remove('is-in');clearTimeout(dt);dt=setTimeout(function(){dock.classList.add('is-in')},2500);}
+  window.addEventListener('scroll',hideDock,{passive:true});hideDock();
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var tt=document.querySelector('.to-top');
   function ut(){tt.classList.toggle('show',window.scrollY>700)}

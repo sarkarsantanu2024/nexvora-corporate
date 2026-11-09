@@ -68,16 +68,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--display);font-weight:900;font-size:1.3rem;color:var(--navy);line-height:1}
 .brand svg{width:40px;height:40px;flex:none}
 .brand small{display:block;font-family:var(--body);font-weight:600;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin-top:.25rem}
-.nav{display:none;gap:1.4rem}
+.nav{display:none;gap:1.1rem}
 .nav a{text-decoration:none;font-weight:600;font-size:.93rem;padding:.5rem 0;border-bottom:2px solid transparent}
 .nav a:hover{border-color:var(--gold)}
 .hdr-cta{display:none}
 .burger{width:48px;height:48px;border:1px solid var(--navy);display:grid;place-items:center;color:var(--navy);border-radius:4px}
 .burger svg{width:22px;height:22px}
-.mnav{display:none;background:#fff;border-bottom:3px solid var(--gold)}
-.mnav.open{display:block}
-.mnav a{display:block;padding:.9rem var(--gut);text-decoration:none;font-weight:600;border-top:1px solid var(--line)}
-@media (min-width:960px){.nav{display:flex}.burger,.mnav{display:none!important}.hdr-cta{display:inline-flex;min-height:42px;padding:.5rem 1.1rem;font-size:.9rem}}
+/* right-side drawer */
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:150}
+.backdrop.is-open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(84vw,360px);background:var(--chalk);transform:translateX(100%);transition:transform .45s cubic-bezier(.22,1,.36,1);z-index:160;display:flex;flex-direction:column;padding:1rem 1.25rem 1.5rem;overflow-y:auto;box-shadow:-10px 0 30px -15px rgba(0,0,0,.3);border-left:3px solid var(--gold)}
+.drawer.is-open{transform:translateX(0)}
+.drawer-top{display:flex;justify-content:space-between;align-items:center;min-height:48px}
+.drawer-top b{font-family:var(--display);font-size:1.1rem;color:var(--navy)}
+.drawer-close{width:44px;height:44px;border-radius:4px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.drawer-close svg{width:22px;height:22px}
+.drawer nav{display:flex;flex-direction:column;margin-top:1rem;border-top:1px solid var(--line)}
+.drawer nav a{display:flex;align-items:center;min-height:48px;padding:.4rem .25rem;text-decoration:none;font-weight:600;font-size:1.02rem;border-bottom:1px solid var(--line)}
+.drawer-cta{margin-top:auto;padding-top:1.5rem;display:grid;gap:.7rem}
+.drawer-cta .btn{width:100%}
+@media (min-width:900px){.nav{display:flex}.burger,.drawer,.backdrop{display:none!important}}
+@media (min-width:1100px){.hdr-cta{display:inline-flex;min-height:42px;padding:.5rem 1.1rem;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.drawer,.backdrop{transition:none}}
 
 /* hero split */
 .hero{display:grid;background:var(--navy);color:#fff}
@@ -218,7 +230,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .final .h2{color:#fff}.final .lede{color:#D3D9E6}
 
 /* footer */
-.footer{background:var(--navy-deep);color:#AEB7C8;padding:3rem 0 7rem;font-size:.9rem}
+.footer{background:var(--navy-deep);color:#AEB7C8;padding:3rem 0;font-size:.9rem}
 .footer .wrap{max-width:none;display:grid;gap:2rem}
 .footer .brand{color:#fff}.footer .brand small{color:var(--gold)}
 .footer h4{color:#fff;font-size:.95rem;margin-bottom:.6rem;font-family:var(--body);letter-spacing:.08em;text-transform:uppercase}
@@ -227,20 +239,26 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer .note{border-top:1px solid #27324A;padding-top:1.4rem;font-size:.85rem}
 @media (min-width:800px){.footer .wrap{grid-template-columns:1.4fr 1fr 1fr}.footer .note{grid-column:1/-1}.footer{padding-bottom:3rem}}
 
-/* social + mobile bar */
-.social{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:90;display:none;flex-direction:column;gap:.4rem;padding:.45rem;background:#fff;border:1px solid var(--line);border-right:0;border-radius:6px 0 0 6px}
-.social a,.msocial a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff}
-.social svg,.msocial svg{width:22px;height:22px}
-.s-wa{background:#25D366}.s-fb{background:#1877F2}.s-yt{background:#FF0000}.s-ig{background:#E1306C}.s-g{background:var(--navy)}
-.mbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.5rem var(--gut) calc(.5rem + env(safe-area-inset-bottom));background:#fff;border-top:2px solid var(--gold)}
-.msocial{position:fixed;right:.75rem;bottom:calc(4.6rem + env(safe-area-inset-bottom));z-index:90;display:flex;flex-direction:column;gap:.4rem}
-.msocial a{width:44px;height:44px;box-shadow:0 6px 16px -6px rgba(0,0,0,.35)}
-@media (min-width:960px){.social{display:flex}.mbar,.msocial{display:none}}
+/* floating dock */
+.dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative;width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 6px 14px -6px rgba(0,0,0,.45);transition:transform .2s ease,box-shadow .2s ease}
+.dock__btn svg{width:15px;height:15px}
+.dock__btn:hover{transform:translateX(-3px);box-shadow:0 10px 18px -8px rgba(0,0,0,.5)}
+.dock__btn::after{content:attr(aria-label);position:absolute;right:calc(100% + 10px);top:50%;translate:6px -50%;white-space:nowrap;pointer-events:none;background:var(--navy-deep);color:var(--chalk);font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:.35rem .6rem;border-radius:8px;opacity:0;transition:opacity .2s ease,translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1;translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--navy)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
+@media (prefers-reduced-motion:reduce){.dock,.dock__btn,.dock__btn::after{transition:none}}
 
-.to-top{position:fixed;right:.75rem;bottom:calc(16.8rem + env(safe-area-inset-bottom));z-index:90;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top{position:fixed;right:1.25rem;bottom:1.25rem;z-index:90;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
 .to-top svg{width:22px;height:22px}
-@media (min-width:960px){.to-top{right:1.5rem;bottom:1.5rem}}
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
@@ -276,11 +294,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <a class="btn btn-gold hdr-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Ask about admission</a>
     <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile">
+  </header>
+
+<div class="backdrop" id="backdrop"></div>
+<aside class="drawer" id="mnav" aria-label="Menu" aria-hidden="true">
+  <div class="drawer-top"><b>Menu</b><button class="drawer-close" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav aria-label="Mobile">
     <a href="#classes">Classes we teach</a><a href="#subjects">Subjects</a><a href="#method">Our method</a><a href="#fees">Batches and fees</a><a href="#teachers">Teachers</a><a href="#results">Results</a><a href="#visit">Visit us</a>
-    <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a>
   </nav>
-</header>
+  <div class="drawer-cta">
+    <a class="btn btn-gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp us</a>
+    <a class="btn btn-navy" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
+  </div>
+</aside>
+
 
 <main id="main">
 <section class="hero" id="top">
@@ -354,15 +381,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="sgrid">
       <article class="sub rv">
-        <img src="/demo/coaching/images/maths-board.jpg" alt="A teacher's hand writing an integral on a blackboard" width="800" height="533" loading="lazy">
+        <img src="/demo/coaching/images/maths-board.jpg" alt="Young children writing letters and numbers on slates in a classroom" width="800" height="600" loading="lazy">
         <div class="in"><h3>Mathematics</h3><p class="who">Class 5 to 12</p><p>Arithmetic to calculus. Every chapter ends with a 20-sum sheet, and the child does not move on until the sheet is clean. Board students get a formula booklet we print ourselves.</p></div>
       </article>
       <article class="sub rv">
-        <img src="/demo/coaching/images/science-lab.jpg" alt="Two students at a bench, one holding a flask and one at a microscope" width="1200" height="800" loading="lazy">
+        <img src="/demo/coaching/images/science-lab.jpg" alt="A teacher in a saree showing anatomical models to a class of students" width="1200" height="800" loading="lazy">
         <div class="in"><h3>Science</h3><p class="who">Physical Science, Life Science, PCM</p><p>Diagrams drawn on the board and in the copy, not photocopied. Numericals practised till they are routine. For Class 11-12, Physics and Chemistry run as separate batches.</p></div>
       </article>
       <article class="sub rv">
-        <img src="/demo/coaching/images/notes.jpg" alt="Handwritten formula notes on a sheet of paper" width="800" height="1200" loading="lazy">
+        <img src="/demo/coaching/images/notes.jpg" alt="A young child in a yellow cap writing in an exercise book" width="800" height="558" loading="lazy">
         <div class="in"><h3>English</h3><p class="who">Class 5 to 12</p><p>Grammar, unseen passages, letter and report writing, and the textbook. Bengali-medium students get extra speaking and writing practice because that is where marks are lost.</p></div>
       </article>
     </div>
@@ -471,12 +498,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <h2 class="h2">Two rooms, one doubt desk, a lot of chalk</h2>
     </div>
     <div class="gal">
-      <figure class="rv"><img src="/demo/coaching/images/teacher-board.jpg" alt="A teacher writing on a large blackboard in a bright room" width="1600" height="1067" loading="lazy"><figcaption>Room 1, Class 10 Maths</figcaption></figure>
+      <figure class="rv"><img src="/demo/coaching/images/teacher-board.jpg" alt="A teacher standing with folded arms in front of a chalkboard" width="1600" height="1067" loading="lazy"><figcaption>Arindam Sir, Room 1</figcaption></figure>
       <figure class="rv"><img src="/demo/coaching/images/classroom-india.jpg" alt="Boys in checked school shirts sitting at desks in a classroom" width="1200" height="675" loading="lazy"><figcaption>Foundation batch, Class 5-6</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/exam-hall.jpg" alt="A student's hand filling in an OMR answer sheet at an exam desk" width="1200" height="900" loading="lazy"><figcaption>Sunday test series</figcaption></figure>
+      <figure class="rv"><img src="/demo/coaching/images/exam-hall.jpg" alt="Two boys in blue school uniforms sitting at a desk and listening" width="1200" height="675" loading="lazy"><figcaption>Sunday test series</figcaption></figure>
       <figure class="rv"><img src="/demo/coaching/images/library.jpg" alt="Students in school uniform reading in a small library" width="1200" height="800" loading="lazy"><figcaption>Reading corner and past papers</figcaption></figure>
       <figure class="rv"><img src="/demo/coaching/images/boys-desk.jpg" alt="Two boys reading from a notebook at a shared desk" width="800" height="450" loading="lazy"><figcaption>Homework check before class</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/books.jpg" alt="Open textbooks and a pair of glasses on a table" width="800" height="995" loading="lazy"><figcaption>Doubt desk, Room 2</figcaption></figure>
+      <figure class="rv"><img src="/demo/coaching/images/books.jpg" alt="Two young boys at a desk with a school bag, waiting for class" width="800" height="450" loading="lazy"><figcaption>Foundation batch, before class</figcaption></figure>
     </div>
   </div>
 </section>
@@ -555,41 +582,40 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </footer>
 
-<nav class="social" aria-label="Social links">
-  <a class="s-wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a class="s-fb" href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a class="s-yt" href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a class="s-ig" href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a class="s-g" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
 </nav>
-
-<nav class="msocial" aria-label="Social links (mobile)">
-  <a class="s-fb" href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a class="s-yt" href="https://www.youtube.com/" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a class="s-ig" href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a class="s-g" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
-</nav>
-
-<div class="mbar">
-  <a class="btn btn-navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." aria-label="WhatsApp us"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp</a>
-  <a class="btn btn-gold" href="tel:+919804243159" aria-label="Call us"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
-</div>
 
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
-  var b=document.querySelector('.burger'),m=document.getElementById('mnav');
-  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');});
-  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,els=document.querySelectorAll('.rv');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var b=document.querySelector('.burger'),d=document.getElementById('mnav'),bd=document.getElementById('backdrop'),x=d.querySelector('.drawer-close');
+  function openM(){d.classList.add('is-open');bd.classList.add('is-open');d.setAttribute('aria-hidden','false');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Close menu');document.documentElement.style.overflow='hidden';x.focus();}
+  function closeM(){d.classList.remove('is-open');bd.classList.remove('is-open');d.setAttribute('aria-hidden','true');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');document.documentElement.style.overflow='';b.focus();}
+  b.addEventListener('click',function(){if(d.classList.contains('is-open')){closeM();}else{openM();}});
+  x.addEventListener('click',closeM);
+  bd.addEventListener('click',closeM);
+  d.addEventListener('click',function(e){if(e.target.closest('a')){closeM();}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('is-open')){closeM();}});
+  var dock=document.querySelector('.dock'),t;
+  function hideDock(){dock.classList.remove('is-in');clearTimeout(t);t=setTimeout(function(){dock.classList.add('is-in');},2500);}
+  window.addEventListener('scroll',hideDock,{passive:true});hideDock();
   var tt=document.querySelector('.to-top');
   window.addEventListener('scroll',function(){tt.classList.toggle('show',window.scrollY>700);},{passive:true});
   tt.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+  var els=document.querySelectorAll('.rv');
   if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
   var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
 </body>
+
 </html>

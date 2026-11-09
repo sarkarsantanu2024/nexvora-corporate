@@ -2,18 +2,18 @@
 
 All photos from Pexels (free licence, no attribution required).
 
-- hero.jpg — Pexels 8613100 — https://www.pexels.com/photo/teacher-giving-lesson-and-children-raising-their-hands-8613100/
-- wooden-blocks.jpg — Pexels 8612970 — https://www.pexels.com/photo/two-boys-playing-with-wooden-blocks-in-a-room-8612970/
-- clay-dough.jpg — Pexels 8422148 — https://www.pexels.com/photo/children-playing-clay-dough-in-school-8422148/
-- story-time.jpg — Pexels 8613089 — https://www.pexels.com/photo/woman-reading-a-book-to-the-children-8613089/
-- abacus-girl.jpg — Pexels 8613095 — https://www.pexels.com/photo/girl-holding-multi-colored-wooden-abacus-8613095/
-- classroom.jpg — Pexels 15052434 — https://www.pexels.com/photo/classroom-in-a-kindergarten-15052434/
-- toy-shelves.jpg — Pexels 8923987 — https://www.pexels.com/photo/educational-toys-on-shelves-8923987/
-- exercise-time.jpg — Pexels 8422104 — https://www.pexels.com/photo/kids-exercising-in-school-8422104/
-- playground-slides.jpg — Pexels 35136501 — https://www.pexels.com/photo/children-playing-on-colorful-slides-in-playground-35136501/
-- group-photo.jpg — Pexels 8612877 — https://www.pexels.com/photo/group-picture-of-preschoolers-with-their-teachers-8612877/
-- blackboard-drawing.jpg — Pexels 8613298 — https://www.pexels.com/photo/girls-drawing-on-a-blackboard-8613298/
-- colour-matching.jpg — Pexels 8535236 — https://www.pexels.com/photo/kids-playing-color-matching-in-preschool-8535236/
-- hand-painting.jpg — Pexels 8612972 — https://www.pexels.com/photo/person-painting-a-girl-s-hand-with-yellow-color-8612972/
+- hero.jpg — Pexels 5636692 — https://www.pexels.com/photo/children-sitting-on-the-ground-in-the-classroom-5636692/
+- wooden-blocks.jpg — Pexels 40282969 — https://www.pexels.com/photo/young-boy-building-block-tower-in-classroom-40282969/
+- clay-dough.jpg — Pexels 40282966 — https://www.pexels.com/photo/children-engaging-in-montessori-classroom-activity-40282966/
+- story-time.jpg — Pexels 33947140 — https://www.pexels.com/photo/young-boy-reading-in-traditional-indian-setting-33947140/
+- abacus-girl.jpg — Pexels 35493021 — https://www.pexels.com/photo/children-in-traditional-attire-at-a-school-event-35493021/
+- classroom.jpg — Pexels 18012456 — https://www.pexels.com/photo/children-sitting-in-a-classroom-with-desks-and-chairs-18012456/
+- toy-shelves.jpg — Pexels 33899104 — https://www.pexels.com/photo/young-girl-reading-book-outdoors-in-india-33899104/
+- exercise-time.jpg — Pexels 11429489 — https://www.pexels.com/photo/children-in-circle-formation-11429489/
+- playground-slides.jpg — Pexels 39542200 — https://www.pexels.com/photo/young-boy-on-playground-slide-in-tiruppur-39542200/
+- group-photo.jpg — Pexels 1895114 — https://www.pexels.com/photo/group-of-listening-little-children-sitting-on-the-floor-1895114/
+- blackboard-drawing.jpg — Pexels 31864391 — https://www.pexels.com/photo/young-girl-learning-geography-with-indian-map-31864391/
+- colour-matching.jpg — Pexels 40282972 — https://www.pexels.com/photo/young-girl-engaged-in-montessori-activity-indoors-40282972/
+- hand-painting.jpg — Pexels 38874250 — https://www.pexels.com/photo/joyful-children-playing-peekaboo-indoors-38874250/
 - letters-wall.jpg — Pexels 20556421 — https://www.pexels.com/photo/smiling-girl-and-boys-sitting-under-walls-with-letters-at-school-20556421/
-- art-table.jpg — Pexels 8612983 — https://www.pexels.com/photo/group-of-children-sitting-around-a-table-and-doing-art-8612983/
+- art-table.jpg — Pexels 31864396 — https://www.pexels.com/photo/child-playing-with-educational-toy-in-classroom-31864396/

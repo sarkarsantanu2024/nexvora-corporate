@@ -23,8 +23,18 @@ list and nothing else.
   (`wa.me/919804243159`, `tel:+919804243159`), with a message that names the
   sample. A curious visitor reaches Santanu, not a dead placeholder.
 - **A floating dock of social buttons** — WhatsApp, call, Facebook, YouTube,
-  Instagram and Google Maps — down the right edge on a desktop and along the
-  bottom on a phone.
+  Instagram and Google Maps — small (36px) on the right edge, halfway down,
+  on every screen size. It sits off-screen while the page is scrolling and
+  slides in 2.5 seconds after scrolling stops, so it never covers the words
+  somebody is reading.
+- **A right-side drawer for the phone menu**, sliding in with a backdrop,
+  a close button, Escape to close and focus handled. The drawer markup sits
+  outside the header, because a header with `backdrop-filter` becomes the
+  containing block for anything `position:fixed` inside it.
+- **A back-to-top button**, bottom-right, shown after about 700px of scroll.
+- **Indian photographs only.** Where Pexels has no Indian-subject photo for a
+  scene, use a photo with no people (the room, the objects, hands) rather
+  than a non-Indian person.
 - **A hero photograph named `hero.jpg`** in `images/`, because the card on
   `/demos` uses that file.
 - **A dummy Kolkata address, dummy hours and dummy prices.** A Google Maps

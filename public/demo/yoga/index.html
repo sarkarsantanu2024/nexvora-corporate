@@ -253,19 +253,36 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
+/* Mobile menu: a drawer that slides in from the right edge. It lives
+   outside the header on purpose — the header's backdrop-filter would
+   otherwise become the containing block for a fixed panel. */
 .mobile-nav{
-  display:none;
-  border-top:1px solid var(--line);
-  background:var(--ivory);
-  padding:1rem var(--gutter) 1.6rem;
+  position:fixed; top:0; right:0; bottom:0; z-index:150;
+  width:min(84vw,360px); display:flex; flex-direction:column;
+  background:var(--ivory); padding:1rem var(--gutter) 2rem;
+  overflow-y:auto; box-shadow:-24px 0 60px -30px rgba(22,40,29,.7);
+  transform:translateX(100%); visibility:hidden;
+  transition:transform .45s cubic-bezier(.22,1,.36,1), visibility 0s linear .45s;
 }
-.mobile-nav.is-open{display:block}
+.mobile-nav.is-open{transform:translateX(0); visibility:visible; transition-delay:0s}
+.mobile-nav__close{
+  align-self:flex-end; width:44px; height:44px; display:grid; place-items:center;
+  border:1px solid var(--line); border-radius:12px; color:var(--forest); margin-bottom:1rem;
+}
+.mobile-nav__close svg{width:18px; height:18px}
 .mobile-nav__link{
-  display:block; padding:.95rem .25rem; text-decoration:none;
-  font-size:1rem; font-weight:500; color:var(--ink);
+  display:block; padding:.85rem .25rem; text-decoration:none;
+  font-size:1.05rem; font-weight:500; color:var(--ink);
   border-bottom:1px solid rgba(34,64,47,.08);
 }
-.mobile-nav .btn{width:100%; margin-top:1.2rem; min-height:52px; font-size:.78rem}
+.mobile-nav .btn{width:100%; min-height:50px; font-size:.78rem}
+.mobile-nav .btn--solid{margin-top:auto; padding-top:.85rem}
+.mobile-nav .btn--sand{margin-top:.6rem}
+.backdrop{
+  position:fixed; inset:0; z-index:140; background:rgba(22,40,29,.45);
+  opacity:0; pointer-events:none; transition:opacity .3s ease;
+}
+.backdrop.is-open{opacity:1; pointer-events:auto}
 
 /* ============================================================
    HERO
@@ -647,35 +664,51 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 /* On a phone: a bar along the bottom with six round buttons, so the
    thumb reaches every one. From 900px: a vertical stack pinned to the
    right edge, halfway down, out of the way of the words. */
+/* Sits off the right edge and slides in 2.5s after scrolling stops, so
+   it never covers the words while someone is reading. Same place on a
+   phone as on a desktop. */
+/* No panel: a slim stack of small brand-coloured circles with white
+   glyphs, each with a label that slides out to the left on hover. */
 .dock{
-  position:fixed; left:0; right:0; bottom:0; z-index:90;
-  display:flex; justify-content:center; gap:.55rem;
-  padding:.55rem var(--gutter) calc(.55rem + env(safe-area-inset-bottom));
-  background:rgba(251,247,240,.94); border-top:1px solid var(--line);
-  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  position:fixed; right:10px; top:50%; z-index:90;
+  display:flex; flex-direction:column; gap:8px;
+  transform:translate(calc(100% + 12px),-50%);
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
 }
+.dock.is-in{transform:translate(0,-50%)}
 .dock__btn{
-  width:46px; height:46px; flex:none; display:grid; place-items:center;
-  border-radius:50%; border:1px solid var(--line);
-  background:#fff; color:var(--forest); text-decoration:none;
-  transition:transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  position:relative; width:34px; height:34px; flex:none;
+  display:grid; place-items:center; border-radius:50%;
+  color:#fff; text-decoration:none;
+  box-shadow:0 6px 14px -6px rgba(22,40,29,.5);
+  transition:transform .2s ease, box-shadow .2s ease;
 }
-.dock__btn svg{width:20px; height:20px}
-.dock__btn:hover{transform:translateY(-3px); border-color:var(--forest)}
-.dock__btn--wa{background:#25D366; border-color:#25D366; color:#fff}
-.dock__btn--wa:hover{background:#1DA851; border-color:#1DA851}
-.dock__btn--call{background:var(--sand); border-color:var(--sand); color:#fff}
-.dock__btn--call:hover{background:#9E6432; border-color:#9E6432}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px); box-shadow:0 10px 18px -8px rgba(22,40,29,.6)}
+.dock__btn::after{
+  content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%;
+  translate:6px -50%; white-space:nowrap; pointer-events:none;
+  background:var(--forest-deep); color:var(--ivory);
+  font-size:.72rem; font-weight:600; letter-spacing:.02em;
+  padding:.35rem .6rem; border-radius:8px;
+  opacity:0; transition:opacity .2s ease, translate .2s ease;
+}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--forest)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
 
 .footer__sample{
   margin-top:1rem; font-size:.79rem; line-height:1.7; color:rgba(251,247,240,.5);
 }
 .footer__sample a{color:rgba(251,247,240,.8)}
-/* Room for the bottom dock on a phone */
-.footer{padding-bottom:calc(2rem + 64px)}
 
 .to-top{
-  position:fixed; right:var(--gutter); bottom:calc(1.4rem + 64px); z-index:95;
+  position:fixed; right:var(--gutter); bottom:1.25rem; z-index:95;
   width:48px; height:48px; display:grid; place-items:center;
   border-radius:50%; background:var(--forest); color:var(--ivory);
   box-shadow:0 16px 30px -16px rgba(22,40,29,.9);
@@ -740,17 +773,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   .nav{display:block}
   .header__actions{display:flex}
   .burger{display:none}
-  .mobile-nav{display:none !important}
-  .dock{
-    left:auto; right:0; bottom:50%; translate:0 50%;
-    flex-direction:column; gap:.5rem; justify-content:flex-start;
-    padding:.6rem; background:rgba(251,247,240,.9);
-    border:1px solid var(--line); border-right:0; border-radius:16px 0 0 16px;
-    box-shadow:0 20px 40px -30px rgba(22,40,29,.8);
-  }
-  .dock__btn{width:42px; height:42px}
-  .dock__btn svg{width:18px; height:18px}
-  .footer{padding-bottom:2rem}
+  .mobile-nav,.backdrop{display:none !important}
   .to-top{bottom:2rem; width:54px; height:54px}
 }
 @media (min-width:1100px){
@@ -857,7 +880,13 @@ body:not(.sample) .demo-only{display:none !important}
     </button>
   </div>
 
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+</header>
+
+<!-- Drawer menu and its backdrop, outside the header on purpose. -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+    <button class="mobile-nav__close" id="navClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
     <a class="mobile-nav__link" href="#top">Home</a>
     <a class="mobile-nav__link" href="#about">About</a>
     <a class="mobile-nav__link" href="#programs">Programs</a>
@@ -867,8 +896,8 @@ body:not(.sample) .demo-only{display:none !important}
     <a class="mobile-nav__link" href="#contact">Contact</a>
   <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
   <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
-  </nav>
-</header>
+</nav>
+<div class="backdrop" id="backdrop"></div>
 
 <main id="main">
 
@@ -896,7 +925,7 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="hero__ring hero__ring--inner" aria-hidden="true"></div>
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph arch">
-        <img src="/demo/yoga/images/hero-balance-pose.jpg" alt="A woman holding a balancing yoga pose in a calm, softly lit room" width="900" height="1150" fetchpriority="high" decoding="async">
+        <img src="/demo/yoga/images/hero-balance-pose.jpg" alt="A woman holding tree pose beside a forest stream" width="900" height="1150" fetchpriority="high" decoding="async">
       </figure>
     </div>
    </div>
@@ -939,10 +968,10 @@ body:not(.sample) .demo-only{display:none !important}
     <div class="about__figure reveal" data-anim="fade-left">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph">
-        <img src="/demo/yoga/images/about-class-stretch.jpg" alt="A small class stretching forward on their mats in a bright studio" width="1000" height="800" loading="lazy" decoding="async">
+        <img src="/demo/yoga/images/about-class-stretch.jpg" alt="A teacher adjusting students' overhead stretch during class" width="1000" height="800" loading="lazy" decoding="async">
       </figure>
       <figure class="ph about__inset">
-        <img src="/demo/yoga/images/about-rolled-mats.jpg" alt="Rolled yoga mats standing in a wooden crate" width="500" height="500" loading="lazy" decoding="async">
+        <img src="/demo/yoga/images/about-rolled-mats.jpg" alt="A woman in a yellow kurta sitting on her mat on a lawn" width="500" height="500" loading="lazy" decoding="async">
       </figure>
       <div class="about__badge">
         <b>12</b>
@@ -968,7 +997,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard pcard--wide reveal demo-only" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">01</span>
-          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="A group class holding Warrior II together in a sunlit studio" width="1100" height="740" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Yoga Classes</h3>
@@ -978,7 +1007,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">02</span>
-          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A woman seated cross-legged with her hands together at her chest" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Mindful Practice</h3>
@@ -988,7 +1017,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">03</span>
-          <span class="ph"><img src="/demo/yoga/images/online-living-room.jpg" alt="A woman holding an extended side pose on a mat in her living room" width="1200" height="750" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Online Classes</h3>
@@ -1000,7 +1029,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard pcard--wide reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">01</span>
-          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="A group class holding Warrior II together in a sunlit studio" width="1100" height="740" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Group Lessons</h3>
@@ -1010,7 +1039,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">02</span>
-          <span class="ph"><img src="/demo/yoga/images/program-ashtanga.jpg" alt="Students holding a downward-facing pose on mats during class" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-ashtanga.jpg" alt="A man in white holding a deep squat with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Ashtanga Yoga</h3>
@@ -1020,7 +1049,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">03</span>
-          <span class="ph"><img src="/demo/yoga/images/program-hatha.jpg" alt="A woman holding a shoulder-supported pose on a mat against a warm wall" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-hatha.jpg" alt="A woman in a side stretch beside a wooden door" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Hatha Yoga</h3>
@@ -1030,7 +1059,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="240">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">04</span>
-          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A woman seated cross-legged with her hands together at her chest" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Bhakti Yoga</h3>
@@ -1040,7 +1069,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">05</span>
-          <span class="ph"><img src="/demo/yoga/images/program-hot-yoga.jpg" alt="A class moving through a low kneeling stretch on their mats" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-hot-yoga.jpg" alt="A woman holding a headstand on grass among pine trees" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Bikram / Hot Yoga</h3>
@@ -1050,7 +1079,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">06</span>
-          <span class="ph"><img src="/demo/yoga/images/program-family.jpg" alt="A woman and a young girl stretching together on a studio floor" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-family.jpg" alt="Children in an outdoor yoga class" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Family Yoga</h3>
@@ -1060,7 +1089,7 @@ body:not(.sample) .demo-only{display:none !important}
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
           <span class="pcard__num" aria-hidden="true">07</span>
-          <span class="ph"><img src="/demo/yoga/images/program-iyengar.jpg" alt="Students using yoga blocks to support their alignment during class" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span class="ph"><img src="/demo/yoga/images/program-iyengar.jpg" alt="A woman seated in the studio with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
           <h3>Iyengar Yoga</h3>
@@ -1081,7 +1110,7 @@ body:not(.sample) .demo-only{display:none !important}
 <section class="band demo-off">
   <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
   <figure class="band__bg">
-    <img src="/demo/yoga/images/band-class-wide.jpg" alt="A wide view of a yoga class holding a standing pose in a bright studio" width="1800" height="1000" loading="lazy" decoding="async">
+    <img src="/demo/yoga/images/band-class-wide.jpg" alt="An outdoor yoga class on a red stone courtyard" width="1800" height="1000" loading="lazy" decoding="async">
   </figure>
   <div class="wrap band__inner">
     <div class="reveal" data-anim="fade-right">
@@ -1101,10 +1130,10 @@ body:not(.sample) .demo-only{display:none !important}
     <div class="split__media reveal" data-anim="fade-right">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph">
-        <img src="/demo/yoga/images/why-standing-practice.jpg" alt="Two women standing quietly with their hands together in a sunlit room" width="800" height="1000" loading="lazy" decoding="async">
+        <img src="/demo/yoga/images/why-standing-practice.jpg" alt="A man in white holding tree pose with hands in namaste" width="800" height="1000" loading="lazy" decoding="async">
       </figure>
       <figure class="ph ph--small">
-        <img src="/demo/yoga/images/why-students-inset.jpg" alt="Students smiling as they settle in at the start of a class" width="500" height="500" loading="lazy" decoding="async">
+        <img src="/demo/yoga/images/why-students-inset.jpg" alt="A class holding plank pose together" width="500" height="500" loading="lazy" decoding="async">
       </figure>
     </div>
 
@@ -1206,7 +1235,7 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="rating__media">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/yoga/images/rating-class.jpg" alt="A group of adults holding a seated pose during an indoor yoga class" width="1000" height="1000" loading="lazy" decoding="async">
+          <img src="/demo/yoga/images/rating-class.jpg" alt="A group holding their rolled mats on a hillside" width="1000" height="1000" loading="lazy" decoding="async">
         </figure>
       </div>
 
@@ -1268,11 +1297,11 @@ body:not(.sample) .demo-only{display:none !important}
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
     <div class="gallery">
       <figure class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-settling-in.jpg" alt="A group of adults holding a seated pose during an indoor yoga class" width="900" height="675" loading="lazy" decoding="async"></span>
+        <span class="ph"><img src="/demo/yoga/images/gallery-settling-in.jpg" alt="A woman seated on a printed mat at home" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
           <span class="gallery__tag">Group Lessons</span>
-          <b>Settling In Together</b>
-          <span>A guided group session in progress.</span>
+          <b>Practising at Home</b>
+          <span>Online students follow along from home.</span>
         </figcaption>
       </figure>
       <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
@@ -1284,15 +1313,15 @@ body:not(.sample) .demo-only{display:none !important}
         </figcaption>
       </figure>
       <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-mats-props.jpg" alt="Rolled yoga mats and folded blankets arranged neatly on a shelf" width="900" height="675" loading="lazy" decoding="async"></span>
+        <span class="ph"><img src="/demo/yoga/images/gallery-mats-props.jpg" alt="A woman in a saree seated on a mat with her arms overhead" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">The Studio</span>
-          <b>Mats and Props Ready</b>
-          <span>Mats and props kept ready for class.</span>
+          <span class="gallery__tag">Seated Practice</span>
+          <b>Room to Breathe</b>
+          <span>A seated practice, arms reaching overhead.</span>
         </figcaption>
       </figure>
       <figure class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-breathing.jpg" alt="Two people sitting cross-legged on mats practising a breathing exercise" width="900" height="675" loading="lazy" decoding="async"></span>
+        <span class="ph"><img src="/demo/yoga/images/gallery-breathing.jpg" alt="A man in a blue kurta meditating on a lawn" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
           <span class="gallery__tag">Bhakti</span>
           <b>Sitting With the Breath</b>
@@ -1300,7 +1329,7 @@ body:not(.sample) .demo-only{display:none !important}
         </figcaption>
       </figure>
       <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-basics.jpg" alt="Students holding a downward-facing pose on mats during class" width="900" height="675" loading="lazy" decoding="async"></span>
+        <span class="ph"><img src="/demo/yoga/images/gallery-basics.jpg" alt="Students folding forward in a studio with a blue floor" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
           <span class="gallery__tag">Hatha</span>
           <b>Working the Basics</b>
@@ -1308,7 +1337,7 @@ body:not(.sample) .demo-only{display:none !important}
         </figcaption>
       </figure>
       <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-side-by-side.jpg" alt="Two people practising yoga poses in a sunlit room" width="900" height="675" loading="lazy" decoding="async"></span>
+        <span class="ph"><img src="/demo/yoga/images/gallery-side-by-side.jpg" alt="A couple holding tree pose side by side" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
           <span class="gallery__tag">Small Groups</span>
           <b>Room to Be Corrected</b>
@@ -1337,12 +1366,12 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="device">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/yoga/images/online-living-room.jpg" alt="A woman holding an extended side pose on a mat in her living room" width="1200" height="750" loading="lazy" decoding="async">
+          <img src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async">
         </figure>
         <div class="device__foot" aria-hidden="true"></div>
         <div class="device__phone">
           <figure class="ph">
-            <img src="/demo/yoga/images/online-rolled-mat.jpg" alt="A person holding a rolled yoga mat, ready to begin a session" width="360" height="640" loading="lazy" decoding="async">
+            <img src="/demo/yoga/images/online-rolled-mat.jpg" alt="A woman meditating on a beach" width="360" height="640" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
@@ -1481,17 +1510,17 @@ body:not(.sample) .demo-only{display:none !important}
   <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
   </a>
-  <a class="dock__btn" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg>
   </a>
-  <a class="dock__btn" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg>
   </a>
-  <a class="dock__btn" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
   </a>
-  <a class="dock__btn" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Find us on Google Maps">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener" aria-label="Google Maps">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg>
   </a>
 </nav>
 
@@ -1534,25 +1563,44 @@ body:not(.sample) .demo-only{display:none !important}
   /* ---- Mobile menu ---- */
   var burger = document.getElementById("burger");
   var mobileNav = document.getElementById("mobile-nav");
+  var navClose = document.getElementById("navClose");
+  var backdrop = document.getElementById("backdrop");
 
   function setMenu(open) {
+    var wasOpen = burger.getAttribute("aria-expanded") === "true";
     burger.setAttribute("aria-expanded", open ? "true" : "false");
     burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileNav.classList.toggle("is-open", open);
+    backdrop.classList.toggle("is-open", open);
+    document.documentElement.style.overflow = open ? "hidden" : "";
+    if (open) navClose.focus();
+    else if (wasOpen) burger.focus();
   }
 
   burger.addEventListener("click", function () {
     setMenu(burger.getAttribute("aria-expanded") !== "true");
   });
+  navClose.addEventListener("click", function () { setMenu(false); });
+  backdrop.addEventListener("click", function () { setMenu(false); });
 
   mobileNav.addEventListener("click", function (e) {
     if (e.target.closest("a")) setMenu(false);
   });
 
+  /* ---- Social dock: slides in 2.5s after scrolling stops ---- */
+  var dock = document.querySelector(".dock");
+  var dockTimer;
+  function hideDock() {
+    dock.classList.remove("is-in");
+    clearTimeout(dockTimer);
+    dockTimer = setTimeout(function () { dock.classList.add("is-in"); }, 2500);
+  }
+  window.addEventListener("scroll", hideDock, { passive: true });
+  hideDock();
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
       setMenu(false);
-      burger.focus();
     }
   });
 

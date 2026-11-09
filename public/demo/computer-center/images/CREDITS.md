@@ -4,14 +4,14 @@ All photos are from Pexels (free licence, no attribution required). Downloaded v
 
 | File | Pexels id | URL |
 |---|---|---|
-| hero.jpg | 5530484 | https://www.pexels.com/photo/people-sitting-on-chairs-while-using-computers-5530484/ |
-| class-group.jpg | 5530482 | https://www.pexels.com/photo/group-of-people-sitting-on-chair-while-using-computer-5530482/ |
-| class-row.jpg | 5530437 | https://www.pexels.com/photo/group-of-people-sitting-on-chair-in-front-of-computers-in-the-class-5530437/ |
-| girls-computers.jpg | 5530454 | https://www.pexels.com/photo/girls-sitting-in-front-of-the-computers-5530454/ |
-| woman-smiling.jpg | 5530440 | https://www.pexels.com/photo/woman-in-black-t-shirt-using-computer-and-smiling-5530440/ |
-| students-a.jpg | 10638065 | https://www.pexels.com/photo/students-using-computers-10638065/ |
-| elderly-learner.jpg | 7983551 | https://www.pexels.com/photo/a-man-in-white-long-sleeves-teaching-an-elderly-man-to-use-a-computer-7983551/ |
-| teacher-checking.jpg | 9159042 | https://www.pexels.com/photo/a-man-in-blazer-looking-at-the-students-work-9159042/ |
-| typing-hands.jpg | 8572600 | https://www.pexels.com/photo/close-up-shot-of-a-person-typing-on-a-keyboard-8572600/ |
+| hero.jpg | 29927465 | https://www.pexels.com/photo/team-collaboration-in-an-office-setting-29927465/ |
+| class-group.jpg | 9474021 | https://www.pexels.com/photo/man-in-orange-t-shirt-smiling-while-working-on-laptop-9474021/ |
+| class-row.jpg | 16171110 | https://www.pexels.com/photo/young-man-using-a-computer-in-a-classroom-16171110/ |
+| girls-computers.jpg | 18067562 | https://www.pexels.com/photo/women-in-office-by-laptop-at-table-18067562/ |
+| woman-smiling.jpg | 9159669 | https://www.pexels.com/photo/a-woman-studying-at-home-9159669/ |
+| students-a.jpg | 4307854 | https://www.pexels.com/photo/young-indian-couple-talking-to-each-other-during-remote-work-at-home-4307854/ |
+| elderly-learner.jpg | 4307853 | https://www.pexels.com/photo/unrecognizable-indian-man-using-laptop-while-working-at-home-4307853/ |
+| teacher-checking.jpg | 8178754 | https://www.pexels.com/photo/man-in-a-brown-and-black-checkered-shirt-8178754/ |
+| typing-hands.jpg | 8069754 | https://www.pexels.com/photo/a-person-typing-on-a-laptop-8069754/ |
 | boy-laptop.jpg | 15598849 | https://www.pexels.com/photo/young-indian-boy-is-doing-his-work-in-laptop-15598849/ |
-| calculator-ledger.jpg | 8297220 | https://www.pexels.com/photo/a-person-working-on-the-documents-using-a-calculator-8297220/ |
+| calculator-ledger.jpg | 37888103 | https://www.pexels.com/photo/young-woman-working-at-computer-in-office-setting-37888103/ |

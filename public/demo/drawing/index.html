@@ -105,11 +105,21 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mnav{display:none; border-top:1px solid var(--line); background:var(--paper); padding:.8rem var(--gutter) 1.5rem}
-.mnav.is-open{display:block}
-.mnav a{display:block; padding:.9rem .2rem; text-decoration:none; font-size:1.05rem; font-weight:600; border-bottom:1px dashed var(--pencil-faint)}
-.mnav .btn{margin-top:1.2rem; width:100%; border-bottom:2px solid var(--ink)}
-@media (min-width:1024px){.nav{display:block}.header__cta{display:flex; gap:.7rem}.burger,.mnav{display:none !important}}
+/* mobile drawer: slides in from the right */
+.drawer{position:fixed; top:0; right:0; bottom:0; width:min(84vw,360px); z-index:120; background:var(--paper); color:var(--ink); display:flex; flex-direction:column; padding:1rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom)); overflow-y:auto; border-left:2px solid var(--ink); transform:translateX(100%); visibility:hidden; transition:transform .45s cubic-bezier(.22,1,.36,1), visibility 0s .45s}
+.drawer.is-open{transform:translateX(0); visibility:visible; transition-delay:0s}
+.drawer__top{display:flex; align-items:center; justify-content:space-between; min-height:56px}
+.drawer__title{font-family:var(--hand); font-size:1.5rem; font-weight:700; color:var(--red)}
+.drawer__close{width:44px; height:44px; display:grid; place-items:center; border:2px solid var(--ink); border-radius:8px; background:#fff; color:var(--ink)}
+.drawer__close svg{width:20px; height:20px}
+.drawer__links{margin-top:1rem; flex:1}
+.drawer__links a{display:flex; align-items:center; min-height:48px; padding:0 .25rem; text-decoration:none; font-size:1.05rem; font-weight:600; color:var(--ink); border-bottom:1px dashed var(--pencil-faint)}
+.drawer__links a:hover{color:var(--blue)}
+.drawer__actions{display:grid; gap:.8rem; margin-top:1.5rem}
+.backdrop{position:fixed; inset:0; z-index:110; background:rgba(0,0,0,.45); opacity:0; pointer-events:none; transition:opacity .3s}
+.backdrop.is-open{opacity:1; pointer-events:auto}
+@media (min-width:900px){.nav{display:block}.nav ul{gap:1.1rem}.nav a{font-size:.86rem}.header__cta{display:flex; gap:.7rem}.burger,.drawer,.backdrop{display:none !important}}
+@media (min-width:1100px){.nav ul{gap:1.6rem}.nav a{font-size:.92rem}}
 
 /* hero: poster / stacked, collage below */
 .hero{padding-top:clamp(2.5rem,6vw,5rem); overflow:hidden}
@@ -244,31 +254,28 @@ tr:last-child td{border-bottom:0}
 .footer__copy{margin-top:.8rem; font-size:.8rem; color:rgba(255,255,255,.45)}
 @media (min-width:800px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr}}
 
-/* social stack */
-.social{position:fixed; right:.75rem; bottom:5.2rem; z-index:90; display:flex; flex-direction:column; gap:.5rem}
-.social a{width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:#fff; color:var(--ink); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); transition:transform .15s}
-.social a svg{width:20px; height:20px}
-.social a:hover{transform:translate(-2px,-2px)}
-.social a:nth-child(1){background:#25D366; color:#fff}
-.social a:nth-child(2){color:var(--blue)}
-.social a:nth-child(3){color:var(--red)}
-.social a:nth-child(4){color:#C13584}
-.social a:nth-child(5){color:var(--green)}
-@media (min-width:900px){.social{top:50%; bottom:auto; transform:translateY(-50%); right:1rem}}
+/* floating social dock: small brand-coloured circles on the right edge,
+   off-screen while scrolling, slides in 2.5s after scrolling stops */
+.dock{position:fixed; right:10px; top:50%; z-index:90; display:flex; flex-direction:column; gap:8px; transform:translate(calc(100% + 12px),-50%); transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative; width:34px; height:34px; flex:none; display:grid; place-items:center; border-radius:50%; color:#fff; text-decoration:none; box-shadow:0 6px 14px -6px rgba(0,0,0,.45); transition:transform .2s ease, box-shadow .2s ease}
+.dock__btn svg{width:15px; height:15px}
+.dock__btn:hover{transform:translateX(-3px); box-shadow:0 10px 18px -8px rgba(0,0,0,.55)}
+.dock__btn::after{content:attr(aria-label); position:absolute; right:calc(100% + 10px); top:50%; translate:6px -50%; white-space:nowrap; pointer-events:none; background:var(--ink); color:#fff; font-size:.72rem; font-weight:600; letter-spacing:.02em; padding:.35rem .6rem; border-radius:8px; opacity:0; transition:opacity .2s ease, translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1; translate:0 -50%}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--ink)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
+@media (hover:none){.dock__btn::after{display:none}}
 
-/* float bar */
-.floatbar{position:fixed; left:0; right:0; bottom:0; z-index:95; display:grid; grid-template-columns:1fr 1fr; gap:.6rem; background:var(--paper); border-top:2px solid var(--ink); padding:.55rem .75rem calc(.55rem + env(safe-area-inset-bottom))}
-.floatbar .btn{min-height:46px; font-size:.85rem; box-shadow:3px 3px 0 var(--ink)}
-@media (min-width:900px){.floatbar{display:none}}
-body{padding-bottom:68px}
-@media (min-width:900px){body{padding-bottom:0}}
-
-/* back to top: sits above the mobile social stack (5 x 44px + 4 x .5rem gaps) */
-.to-top{position:fixed; right:.75rem; bottom:calc(5.2rem + 262px); z-index:90; width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--yellow); color:var(--ink); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, visibility .25s, transform .25s}
+/* back to top */
+.to-top{position:fixed; right:1rem; bottom:1.25rem; z-index:90; width:46px; height:46px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--yellow); color:var(--ink); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s, visibility .25s, transform .25s}
 .to-top svg{width:20px; height:20px}
 .to-top.is-visible{opacity:1; visibility:visible; transform:none}
 .to-top.is-visible:hover{transform:translate(-2px,-2px)}
-@media (min-width:900px){.to-top{right:1rem; bottom:1.5rem; width:48px; height:48px}}
 
 .reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}
 .reveal.is-in{opacity:1; transform:none}
@@ -276,6 +283,7 @@ body{padding-bottom:68px}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1; transform:none; transition:none}
+  .drawer,.backdrop,.dock{transition:none}
   *{transition-duration:.01ms !important}
 }
 </style>
@@ -316,18 +324,38 @@ body{padding-bottom:68px}
       <a class="btn btn--white" href="tel:+919804243159">Call</a>
       <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Join a trial class</a>
     </div>
-    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile">
+</header>
+
+<!-- Mobile drawer menu -->
+<div class="backdrop" id="backdrop" hidden></div>
+<nav class="drawer" id="drawer" aria-label="Mobile" aria-hidden="true">
+  <div class="drawer__top">
+    <span class="drawer__title">Menu</span>
+    <button class="drawer__close" id="drawerClose" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="drawer__links">
     <a href="#about">About</a>
     <a href="#courses">Courses</a>
     <a href="#batches">Batches &amp; fees</a>
     <a href="#materials">What to bring</a>
     <a href="#gallery">Gallery</a>
     <a href="#visit">Visit us</a>
-    <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Join a trial class on WhatsApp</a>
-  </nav>
-</header>
+  </div>
+  <div class="drawer__actions">
+    <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+      WhatsApp us
+    </a>
+    <a class="btn btn--white" href="tel:+919804243159">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+      Call +91 98042 43159
+    </a>
+  </div>
+</nav>
 
 <main id="main">
 
@@ -353,9 +381,9 @@ body{padding-bottom:68px}
       </ul>
     </div>
     <div class="collage">
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/hero.jpg" width="1600" height="900" alt="Art teacher explaining to students standing at easels in a studio full of paintings" fetchpriority="high"></div><figcaption>Saturday adult batch</figcaption></figure>
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/child-colour-pencils.jpg" width="1200" height="800" alt="Child drawing with colour pencils in soft light" loading="lazy"></div><figcaption>Kids' batch, age 7</figcaption></figure>
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1798" alt="Hand painting a wash with watercolours on paper" loading="lazy"></div><figcaption>Watercolour wash practice</figcaption></figure>
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/hero.jpg" width="1600" height="1067" alt="Two girls drawing at a long table in an art class while the teacher sharpens a pencil" fetchpriority="high"></div><figcaption>Kids' batch, Thursday</figcaption></figure>
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/child-colour-pencils.jpg" width="1200" height="1887" alt="Girl colouring a printed sheet with crayons at a low table" loading="lazy"></div><figcaption>Kids' batch, age 7</figcaption></figure>
+      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a Pattachitra design on a tin cup with a fine brush" loading="lazy"></div><figcaption>Fine brushwork practice</figcaption></figure>
     </div>
   </div>
 </section>
@@ -377,8 +405,8 @@ body{padding-bottom:68px}
       </ul>
     </div>
     <figure class="about__fig tape reveal">
-      <div class="ph"><img src="/demo/drawing/images/teacher-with-student.jpg" width="1200" height="675" alt="Art teacher leaning over a student's drawing and pointing out a correction" loading="lazy"></div>
-      <figcaption>Debjani di correcting proportions</figcaption>
+      <div class="ph"><img src="/demo/drawing/images/teacher-with-student.jpg" width="1200" height="1800" alt="Woman in a red kurta painting an alpona design on the floor" loading="lazy"></div>
+      <figcaption>Debjani di painting alpona before the Pujo show</figcaption>
     </figure>
   </div>
 </section>
@@ -393,7 +421,7 @@ body{padding-bottom:68px}
     </div>
     <div class="courses">
       <article class="course course--red reveal">
-        <figure class="ph"><img src="/demo/drawing/images/kids-art-class.jpg" width="1200" height="801" alt="Children at a long table in an art class, drawing and colouring" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/kids-art-class.jpg" width="1200" height="839" alt="Young girl in a blue shirt drawing with crayons beside her teacher" loading="lazy"></figure>
         <div class="course__body">
           <h3>Kids' drawing (6&ndash;12)</h3>
           <p>Shapes, shading, colour pencils, oil pastels and poster colour. One finished picture every week to take home. Handwriting improves as a side effect.</p>
@@ -401,7 +429,7 @@ body{padding-bottom:68px}
         </div>
       </article>
       <article class="course course--grey reveal">
-        <figure class="ph"><img src="/demo/drawing/images/pencil-sketching.jpg" width="1200" height="1600" alt="Artist sketching a glass with a pencil on paper" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/pencil-sketching.jpg" width="1200" height="1800" alt="Artist's hand painting the eye of a clay idol with a fine brush" loading="lazy"></figure>
         <div class="course__body">
           <h3>Pencil &amp; sketching</h3>
           <p>Still life, perspective, light and shadow, graphite and charcoal. The foundation for everything else. Good for teens and adults who want to draw "properly".</p>
@@ -409,7 +437,7 @@ body{padding-bottom:68px}
         </div>
       </article>
       <article class="course course--blue reveal">
-        <figure class="ph"><img src="/demo/drawing/images/watercolour-palette.jpg" width="800" height="1192" alt="Well-used watercolour palette with mixed colours" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/watercolour-palette.jpg" width="800" height="1067" alt="Green alpona-style fish painted on paper with a brush beside it" loading="lazy"></figure>
         <div class="course__body">
           <h3>Watercolour</h3>
           <p>Washes, wet-on-wet, Kolkata street scenes and the lakes. We paint outdoors at Rabindra Sarobar one Sunday a month in winter.</p>
@@ -417,7 +445,7 @@ body{padding-bottom:68px}
         </div>
       </article>
       <article class="course course--yellow reveal">
-        <figure class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1800" alt="Pencil portrait studies in a sketchbook" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine Pattachitra lines on a small wooden box" loading="lazy"></figure>
         <div class="course__body">
           <h3>Art college exam prep</h3>
           <p>For Government College of Art &amp; Craft, Rabindra Bharati, Kala Bhavana and NIFT/NID. Timed object drawing, memory drawing, composition and a 20-sheet portfolio. Mock tests every month.</p>
@@ -425,7 +453,7 @@ body{padding-bottom:68px}
         </div>
       </article>
       <article class="course course--green reveal">
-        <figure class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="675" alt="Two adults painting side by side in a bright studio" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman in a studio painting a large colourful mask" loading="lazy"></figure>
         <div class="course__body">
           <h3>Weekend hobby batch (adults)</h3>
           <p>Saturday afternoons. No exams, no homework. Pencil, pen-and-ink or watercolour, your choice. Most students are 25 to 60 and have not drawn since school.</p>
@@ -433,7 +461,7 @@ body{padding-bottom:68px}
         </div>
       </article>
       <article class="course course--grey reveal">
-        <figure class="ph"><img src="/demo/drawing/images/charcoal-box.jpg" width="800" height="1198" alt="Wooden box of charcoal sticks and drawing supplies" loading="lazy"></figure>
+        <figure class="ph"><img src="/demo/drawing/images/charcoal-box.jpg" width="800" height="1200" alt="Hands painting red alta on a dancer's feet" loading="lazy"></figure>
         <div class="course__body">
           <h3>Short workshops</h3>
           <p>Two-day workshops in the school holidays: alpona, Pujo-theme poster, charcoal portrait, urban sketching. Announced on our WhatsApp group a month ahead.</p>
@@ -540,14 +568,14 @@ body{padding-bottom:68px}
       <h2 class="h-lg">From the studio</h2>
     </div>
     <div class="gallery">
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/kids-canvas-easels.jpg" width="1200" height="801" alt="Children painting on canvases set on easels" loading="lazy"></div><figcaption>Canvas day, kids' batch</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/eye-sketches.jpg" width="800" height="600" alt="Pencil studies of eyes in a notepad" loading="lazy"></div><figcaption>Eye studies, week 3</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/brushes-holder.jpg" width="800" height="534" alt="Assorted paintbrushes standing in a wooden holder" loading="lazy"></div><figcaption>The brush shelf</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/oil-pastels.jpg" width="800" height="1198" alt="Box of oil pastels in many colours" loading="lazy"></div><figcaption>Oil pastels, kids' batch</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/childrens-drawings-wall.jpg" width="1200" height="1797" alt="Wall covered with children's drawings pinned up for display" loading="lazy"></div><figcaption>Term-end wall show</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1798" alt="Hand painting with watercolours" loading="lazy"></div><figcaption>Wet-on-wet, Sunday</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1800" alt="Portrait studies in a sketchbook" loading="lazy"></div><figcaption>Exam prep portfolio</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="675" alt="Adults painting together in the studio" loading="lazy"></div><figcaption>Saturday hobby batch</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/kids-canvas-easels.jpg" width="1200" height="800" alt="Smiling boy holding out a fistful of crayons in a courtyard" loading="lazy"></div><figcaption>Crayon day, kids' batch</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/eye-sketches.jpg" width="800" height="533" alt="Child's hands painted in saffron, white and green" loading="lazy"></div><figcaption>Independence Day hand-paint</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/brushes-holder.jpg" width="800" height="1067" alt="Artisan painting a wooden fish surrounded by Pattachitra plates" loading="lazy"></div><figcaption>Pattachitra workshop day</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/oil-pastels.jpg" width="800" height="1200" alt="Pattachitra scroll painting of deer, fish and birds" loading="lazy"></div><figcaption>Pattachitra scroll, reference shelf</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/childrens-drawings-wall.jpg" width="1200" height="1800" alt="Stack of hand-painted Pattachitra wooden plates" loading="lazy"></div><figcaption>Folk-art plates, term project</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a design on a tin cup" loading="lazy"></div><figcaption>Folk-art brushwork, Sunday</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine lines on a small wooden box" loading="lazy"></div><figcaption>Fine-line practice, exam batch</figcaption></figure>
+      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman painting a colourful mask in the studio" loading="lazy"></div><figcaption>Saturday hobby batch</figcaption></figure>
     </div>
   </div>
 </section>
@@ -669,24 +697,15 @@ body{padding-bottom:68px}
   </div>
 </footer>
 
-<div class="social" aria-label="Social links">
-  <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
-</div>
-
-<div class="floatbar">
-  <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
-    WhatsApp
-  </a>
-  <a class="btn btn--white" href="tel:+919804243159">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-    Call
-  </a>
-</div>
+<!-- Floating social dock -->
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+</nav>
 
 <button class="to-top" id="toTop" type="button" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>
@@ -718,11 +737,27 @@ body{padding-bottom:68px}
 <script>
 (function(){
   "use strict";
-  var burger=document.getElementById("burger"), mnav=document.getElementById("mnav");
-  function setMenu(open){burger.setAttribute("aria-expanded",open?"true":"false");burger.setAttribute("aria-label",open?"Close menu":"Open menu");mnav.classList.toggle("is-open",open);}
-  burger.addEventListener("click",function(){setMenu(burger.getAttribute("aria-expanded")!=="true");});
-  mnav.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&burger.getAttribute("aria-expanded")==="true"){setMenu(false);burger.focus();}});
+  /* ---- Drawer menu ---- */
+  var burger=document.getElementById("burger"), drawer=document.getElementById("drawer"), backdrop=document.getElementById("backdrop"), closeBtn=document.getElementById("drawerClose");
+  backdrop.hidden=false;
+  function setMenu(open){
+    burger.setAttribute("aria-expanded",open?"true":"false");
+    drawer.classList.toggle("is-open",open); backdrop.classList.toggle("is-open",open);
+    drawer.setAttribute("aria-hidden",open?"false":"true");
+    document.documentElement.style.overflow=open?"hidden":"";
+    if(open){closeBtn.focus();}else{burger.focus();}
+  }
+  burger.addEventListener("click",function(){setMenu(true);});
+  closeBtn.addEventListener("click",function(){setMenu(false);});
+  backdrop.addEventListener("click",function(){setMenu(false);});
+  drawer.addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&burger.getAttribute("aria-expanded")==="true")setMenu(false);});
+
+  /* ---- Social dock: slides in 2.5s after scrolling stops ---- */
+  var dock=document.querySelector(".dock"), dockTimer;
+  function hideDock(){dock.classList.remove("is-in"); clearTimeout(dockTimer); dockTimer=setTimeout(function(){dock.classList.add("is-in");},2500);}
+  window.addEventListener("scroll",hideDock,{passive:true}); hideDock();
+
   var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var toTop=document.getElementById("toTop");
   function onScroll(){toTop.classList.toggle("is-visible",window.scrollY>700);}

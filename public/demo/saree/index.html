@@ -69,7 +69,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @media (max-width:640px){.demo-strip .mid{display:none}}
 
 /* header */
-.header{position:sticky;top:0;z-index:100;background:rgba(251,248,241,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header{position:sticky;top:0;z-index:100;background:var(--ivory);border-bottom:1px solid var(--line)}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
 .brand svg{width:38px;height:38px;flex:none}
@@ -81,14 +81,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .nav .btn{min-height:42px;padding:.5rem 1.2rem;border-bottom:1px solid var(--magenta)}
 .burger{display:none;width:48px;height:48px;align-items:center;justify-content:center}
 .burger svg{width:26px;height:26px}
-.burger .x{display:none}
-.burger[aria-expanded="true"] .bars{display:none}
-.burger[aria-expanded="true"] .x{display:block}
-@media (max-width:960px){
-  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ivory);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:.5rem var(--gutter) 1.5rem}
-  .nav.open{display:flex}
-  .nav a{padding:.95rem 0;border-bottom:1px solid var(--line);font-size:.86rem}
-  .nav .btn{margin-top:1.2rem;justify-content:center}
+.nav__close,.nav__mob{display:none}
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:150}
+.backdrop.is-open{opacity:1;pointer-events:auto}
+@media (max-width:1040px){.nav{gap:1.2rem}}
+@media (max-width:900px){
+  .nav{position:fixed;top:0;right:0;bottom:0;width:min(84vw,360px);background:var(--ivory);z-index:160;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:4.5rem var(--gutter) 1.5rem;transform:translateX(100%);transition:transform .45s cubic-bezier(.22,1,.36,1);box-shadow:-20px 0 40px -30px rgba(0,0,0,.5);overflow-y:auto}
+  .nav.is-open{transform:translateX(0)}
+  .nav a{padding:.75rem 0;min-height:48px;display:flex;align-items:center;border-bottom:1px solid var(--line);font-size:.86rem}
+  .nav>.btn{display:none}
+  .nav__close{display:grid;place-items:center;position:absolute;top:.75rem;right:.75rem;width:44px;height:44px;color:var(--ink)}
+  .nav__close svg{width:24px;height:24px}
+  .nav__mob{display:flex;flex-direction:column;gap:.6rem;margin-top:auto;padding-top:1.5rem}
+  .nav__mob .btn{border-bottom-color:currentColor;justify-content:center}
+  .nav__mob .btn--magenta{border-bottom-color:var(--magenta)}
   .burger{display:inline-flex}
 }
 
@@ -222,7 +228,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .final .btn--light:hover{color:var(--magenta)}
 
 /* footer */
-.footer{background:var(--ink);color:rgba(251,248,241,.75);padding:3.5rem 0 7rem;font-size:.9rem}
+.footer{background:var(--ink);color:rgba(251,248,241,.75);padding:3.5rem 0 3.5rem;font-size:.9rem}
 .footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:2.5rem}
 .footer h4{color:var(--ivory);font-family:var(--body);font-weight:500;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;margin-bottom:1rem}
 .footer a{color:var(--ivory);text-decoration:none}
@@ -234,24 +240,27 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(251,248,241,.15);font-size:.82rem}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
-@media (min-width:861px){.footer{padding-bottom:3.5rem}}
 
-/* social */
-.social{position:fixed;right:.9rem;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:.5rem}
-.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 10px 24px -14px rgba(0,0,0,.45);transition:transform .15s,background .15s,color .15s}
-.social a:hover{transform:translateX(-3px);background:var(--magenta);color:#fff}
-.social a.wa{background:#25D366;color:#fff;border-color:transparent}
-.social svg{width:22px;height:22px}
-@media (max-width:860px){.social{top:auto;bottom:5.2rem;right:.7rem;transform:none;gap:.4rem}.social a{width:42px;height:42px}.social a.wa{display:none}}
-.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--ivory);border-top:1px solid var(--line);padding:.6rem var(--gutter);gap:.6rem}
-.mbar .btn{flex:1;min-height:48px;padding:.6rem;font-size:.76rem}
-@media (max-width:860px){.mbar{display:flex}}
+/* floating social dock */
+.dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.dock.is-in{transform:translate(0,-50%)}
+.dock__btn{position:relative;width:34px;height:34px;flex:none;display:grid;place-items:center;border-radius:50%;color:#fff;text-decoration:none;box-shadow:0 6px 14px -6px rgba(0,0,0,.45);transition:transform .2s ease,box-shadow .2s ease}
+.dock__btn svg{width:15px;height:15px}
+.dock__btn:hover{transform:translateX(-3px);box-shadow:0 10px 18px -8px rgba(0,0,0,.55)}
+.dock__btn::after{content:attr(aria-label);position:absolute;right:calc(100% + 10px);top:50%;translate:6px -50%;white-space:nowrap;pointer-events:none;background:var(--ink);color:var(--ivory);font-size:.72rem;font-weight:600;letter-spacing:.02em;padding:.35rem .6rem;border-radius:8px;opacity:0;transition:opacity .2s ease,translate .2s ease}
+.dock__btn:hover::after,.dock__btn:focus-visible::after{opacity:1;translate:0 -50%}
+@media (hover:none){.dock__btn::after{display:none}}
+.dock__btn--wa{background:#25D366}
+.dock__btn--call{background:var(--magenta)}
+.dock__btn--fb{background:#1877F2}
+.dock__btn--yt{background:#FF0000}
+.dock__btn--ig{background:linear-gradient(45deg,#F9CE34 0%,#EE2A7B 50%,#6228D7 100%)}
+.dock__btn--g{background:#4285F4}
 
-.to-top{position:fixed;right:.9rem;bottom:1.2rem;z-index:92;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--ivory);display:grid;place-items:center;box-shadow:0 10px 24px -12px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
+.to-top{position:fixed;right:.9rem;bottom:1.25rem;z-index:92;width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--ivory);display:grid;place-items:center;box-shadow:0 10px 24px -12px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s,transform .25s,visibility .25s}
 .to-top.show{opacity:1;visibility:visible;transform:none}
 .to-top:hover{background:var(--magenta);color:#fff}
 .to-top svg{width:22px;height:22px}
-@media (max-width:860px){.to-top{right:.7rem;bottom:17.6rem;width:42px;height:42px}}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*::before,*::after{transition:none!important;animation:none!important}}
@@ -275,19 +284,24 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span><b>Sreemoyee</b><small>Sarees &middot; Gariahat</small></span>
     </a>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
-      <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-      <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Main">
+      <button class="nav__close" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       <a href="#collection">Collection</a>
       <a href="#handloom">Handloom</a>
       <a href="#bridal">Bridal</a>
       <a href="#stitching">Stitching</a>
       <a href="#visit">Visit</a>
       <a class="btn" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Sarees%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp</a>
+      <div class="nav__mob">
+        <a class="btn btn--magenta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Sarees%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
+        <a class="btn" href="tel:+919804243159">Call +91 98042 43159</a>
+      </div>
     </nav>
   </div>
 </header>
+<div class="backdrop"></div>
 
 <main id="main">
 <section class="hero" id="top">
@@ -342,7 +356,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 
 <section class="band" id="handloom">
-  <img class="band__img" src="/demo/saree/images/loom-hands.jpg" width="1200" height="1500" alt="" loading="lazy">
+  <img class="band__img" src="/demo/saree/images/loom-hands.jpg" width="1200" height="800" alt="" loading="lazy">
   <div class="wrap">
     <div class="reveal">
       <span class="num">Handloom</span>
@@ -396,7 +410,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <div class="stitch">
       <figure class="stitch__photo reveal" style="margin:0">
-        <img src="/demo/saree/images/blouse-stitching.jpg" width="800" height="534" alt="A tailor stitching fabric on a sewing machine" loading="lazy">
+        <img src="/demo/saree/images/blouse-stitching.jpg" width="800" height="450" alt="An elderly Indian tailor at his sewing machine in a small workshop" loading="lazy">
         <figcaption>Blouse fittings on the first floor. One free alteration within a month.</figcaption>
       </figure>
       <div class="reveal">
@@ -425,11 +439,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
     <ul class="gal reveal">
       <li><img src="/demo/saree/images/shop-mannequin.jpg" width="1200" height="800" alt="A customer looking at a yellow saree on a mannequin" loading="lazy"></li>
-      <li><img src="/demo/saree/images/loom-threads.jpg" width="800" height="1000" alt="Threads set up on a traditional handloom" loading="lazy"></li>
+      <li><img src="/demo/saree/images/loom-threads.jpg" width="800" height="1067" alt="A weaver in a turban working at a handloom" loading="lazy"></li>
       <li><img src="/demo/saree/images/yellow-fabric-hand.jpg" width="800" height="1200" alt="A hand holding a bright yellow fabric" loading="lazy"></li>
       <li><img src="/demo/saree/images/embroidery.jpg" width="800" height="1421" alt="An artisan sewing embroidery on yellow fabric" loading="lazy"></li>
-      <li><img src="/demo/saree/images/shop-browsing.jpg" width="800" height="533" alt="Two women browsing sarees in the shop" loading="lazy"></li>
-      <li><img src="/demo/saree/images/choosing-fabric.jpg" width="800" height="533" alt="A woman feeling a fabric between her fingers" loading="lazy"></li>
+      <li><img src="/demo/saree/images/shop-browsing.jpg" width="800" height="1118" alt="A woman in a saree holding up a blue and white saree at a busy market" loading="lazy"></li>
+      <li><img src="/demo/saree/images/choosing-fabric.jpg" width="800" height="533" alt="Two shopkeepers behind a counter stacked with colourful sarees" loading="lazy"></li>
     </ul>
   </div>
 </section>
@@ -543,26 +557,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </footer>
 
-<nav class="social" aria-label="Social links">
-  <a class="wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Sarees%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
-  <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a href="https://www.google.com/maps?q=9%2F1A%20Gariahat%20Road%2C%20Kolkata%20700019" target="_blank" rel="noopener" aria-label="Google Maps directions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
+<nav class="dock" aria-label="Contact and social links">
+  <a class="dock__btn dock__btn--wa" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Sarees%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+  <a class="dock__btn dock__btn--call" href="tel:+919804243159" aria-label="Call"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg></a>
+  <a class="dock__btn dock__btn--fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.5 1.6-1.5h1.6V4.3c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.5H7.6V14h2.7v8h3.2Z"/></svg></a>
+  <a class="dock__btn dock__btn--yt" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a>
+  <a class="dock__btn dock__btn--ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="dock__btn dock__btn--g" href="https://www.google.com/maps?q=9%2F1A%20Gariahat%20Road%2C%20Kolkata%20700019" target="_blank" rel="noopener" aria-label="Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.2c0 5-3.6 8.3-8.7 8.3A8.5 8.5 0 1 1 12.3 3.5c2.3 0 4.2.9 5.7 2.3l-2.4 2.3a4.9 4.9 0 0 0-3.3-1.3 5.5 5.5 0 0 0 0 11c2.8 0 4.6-1.6 4.9-3.9h-4.9v-3H21c.1.5.1.9.1 1.3Z"/></svg></a>
 </nav>
-
-<div class="mbar">
-  <a class="btn btn--magenta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Sarees%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp</a>
-  <a class="btn" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
-</div>
 
 <button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>
 (function(){
-  var b=document.querySelector('.burger'),n=document.getElementById('nav');
-  b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open menu':'Close menu');n.classList.toggle('open',!o);});
-  n.addEventListener('click',function(e){if(e.target.tagName==='A'){b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open menu');n.classList.remove('open');}});
+  var b=document.querySelector('.burger'),n=document.getElementById('nav'),bd=document.querySelector('.backdrop'),cl=n.querySelector('.nav__close');
+  function openM(){n.classList.add('is-open');bd.classList.add('is-open');b.setAttribute('aria-expanded','true');document.documentElement.style.overflow='hidden';cl.focus();}
+  function closeM(){if(!n.classList.contains('is-open'))return;n.classList.remove('is-open');bd.classList.remove('is-open');b.setAttribute('aria-expanded','false');document.documentElement.style.overflow='';b.focus();}
+  b.addEventListener('click',function(){n.classList.contains('is-open')?closeM():openM();});
+  cl.addEventListener('click',closeM);bd.addEventListener('click',closeM);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeM();});
+  n.addEventListener('click',function(e){if(e.target.closest('a'))closeM();});
+  var dock=document.querySelector('.dock'),dt;
+  function hideDock(){dock.classList.remove('is-in');clearTimeout(dt);dt=setTimeout(function(){dock.classList.add('is-in')},2500);}
+  window.addEventListener('scroll',hideDock,{passive:true});hideDock();
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var tt=document.querySelector('.to-top');
   function ut(){tt.classList.toggle('show',window.scrollY>700)}
