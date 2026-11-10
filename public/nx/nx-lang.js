@@ -95,8 +95,8 @@
   // Laptop (hamburger hidden): menu links, then a hairline, then Login and
   // the language, and the site's own call-to-action button stays last at
   // the far right. The 38 demos build their headers three ways:
-  //   1. brand, nav, a .header__cta / .header__actions box, burger
-  //      -> the controls go just before that box;
+  //   1. brand, nav, a .header__cta / .header__actions box (or one plain
+  //      a.btn), burger -> the controls go just before that;
   //   2. brand, burger, nav that holds the links AND the .btn
   //      -> the controls go inside the nav, before the first .btn;
   //   3. brand, nav of links only, burger
@@ -107,7 +107,17 @@
   var nav = row ? row.querySelector("nav") : null;
   var marker = document.createComment("nx-lang");
   if (row) row.insertBefore(marker, holder);
-  var actions = row ? row.querySelector(".header__cta, .header__actions") : null;
+  // The call-to-action beside the nav: a box of buttons, or one plain
+  // button link, placed directly in the header row.
+  var actions = null;
+  if (row) {
+    for (var r = 0; r < row.children.length; r++) {
+      var ch = row.children[r];
+      if (/(^|\s)(header__cta|header__actions)(\s|$)/.test(ch.className) || (ch.tagName === "A" && /(^|\s)btn(\s|$)/.test(ch.className))) { actions = ch; break; }
+    }
+  }
+  // Or the call-to-action inside the nav itself: the first a.btn that is a
+  // direct child of the nav (the phone-only .nav__mob block is ignored).
   var navCta = null;
   if (nav) {
     for (var i = 0; i < nav.children.length; i++) {
@@ -144,7 +154,7 @@
       place(nav, navCta);
       holder.style.marginLeft = ".6rem";
       holder.style.marginRight = ".35rem";
-      nav.style.marginLeft = "";
+      nav.style.marginLeft = "auto";
     } else {
       place(marker.parentNode, marker.nextSibling);
       holder.style.marginLeft = ".6rem";
