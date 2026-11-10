@@ -254,6 +254,12 @@ h6 {
     @apply mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12 2xl:px-16;
   }
 
+  /* The header alone runs the full width of the screen, with the same side
+     padding; the body below stays centred. */
+  .shell-wide {
+    @apply w-full px-5 sm:px-8 lg:px-12 2xl:px-16;
+  }
+
   /* Nav link with an underline that grows from the left on hover. */
   .nav-link {
     @apply relative text-[0.95rem] font-medium text-slate-600 transition hover:text-brand-700;

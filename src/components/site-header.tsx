@@ -45,7 +45,7 @@ export function SiteHeader() {
       {/* Contact bar in brand colour rather than near-black: it has to feel
           approachable, since the phone number on it is the main call. */}
       <div className="relative overflow-hidden bg-gradient-to-r from-brand-700 via-brand-600 to-violet-600 text-brand-100">
-        <div className="shell relative flex h-11 items-center justify-between gap-4">
+        <div className="shell-wide relative flex h-11 items-center justify-between gap-4">
           <div className="flex items-center gap-5 text-sm xl:gap-7">
             <a
               href={CONTACT.phoneHref}
@@ -99,7 +99,7 @@ export function SiteHeader() {
         }`}
       >
         <nav
-          className={`shell flex items-center justify-between gap-3 transition-all duration-300 sm:gap-6 ${
+          className={`shell-wide flex items-center justify-between gap-3 transition-all duration-300 sm:gap-6 ${
             scrolled ? "h-16 sm:h-[68px]" : "h-[68px] sm:h-20"
           }`}
         >
@@ -193,7 +193,7 @@ export function SiteHeader() {
             id="mobile-nav"
             className="border-t border-slate-200 bg-white lg:hidden"
           >
-            <div className="shell flex flex-col py-2">
+            <div className="shell-wide flex flex-col py-2">
               {NAV_LINKS.map((l) => (
                 <Link
                   key={l.href}
