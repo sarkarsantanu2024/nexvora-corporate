@@ -1,0 +1,1575 @@
+{
+  "site": "salon",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Aalta Beauty Parlour",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1199"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Look your best, for every occasion",
+            "bn": "Look your best, for every occasion"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Six things, done properly",
+        "bn": "Six things, done properly"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "services",
+          "label": {
+            "en": "Six things, done properly",
+            "bn": "Six things, done properly"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "The same prices as on our wall",
+        "bn": "The same prices as on our wall"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "prices-note",
+          "type": "textarea",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Hair",
+            "bn": "Hair"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Skin",
+            "bn": "Skin"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Threading, waxing, nails",
+            "bn": "Threading, waxing, nails"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Make-up and mehendi",
+            "bn": "Make-up and mehendi"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bridal",
+      "label": {
+        "en": "Your wedding day, in two hands you trust",
+        "bn": "Your wedding day, in two hands you trust"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "pkg-list",
+          "label": {
+            "en": "Full bridal, wedding day",
+            "bn": "Full bridal, wedding day"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "steps",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1200"
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "label": {
+        "en": "Wedding dates fill up early",
+        "bn": "Wedding dates fill up early"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "band-line",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "hygiene",
+      "label": {
+        "en": "Five things we do for every customer",
+        "bn": "Five things we do for every customer"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        }
+      ],
+      "lists": [
+        {
+          "key": "facts",
+          "label": {
+            "en": "Five things we do for every customer",
+            "bn": "Five things we do for every customer"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Recent work",
+        "bn": "Recent work"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Recent work",
+            "bn": "Recent work"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "Two customers",
+        "bn": "Two customers"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two customers",
+            "bn": "Two customers"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Two minutes from Jadavpur 8B bus stand",
+        "bn": "Two minutes from Jadavpur 8B bus stand"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "label",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Two minutes from Jadavpur 8B bus stand",
+            "bn": "Two minutes from Jadavpur 8B bus stand"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-11",
+      "label": {
+        "en": "Message us. We reply within the hour",
+        "bn": "Message us. We reply within the hour"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "final-place",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "footer-bottom",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "Aalta Beauty Parlour",
+      "brand-sub": "Ladies only • Jadavpur"
+    },
+    "section-2": {
+      "eyebrow": "Hair • Skin • Bridal • Mehendi",
+      "h1": "Look your best,<br>for <em>every</em> occasion.",
+      "lede": "A ladies-only parlour in Jadavpur, open since 2011. Haircuts, facials, threading, hair spa, mehendi and bridal make-up, at prices written on the wall. Send a WhatsApp message and we will hold a chair for you.",
+      "button": "See the price list",
+      "b": "₹99",
+      "span": "Eyebrow threading",
+      "photo": {
+        "src": "/demo/salon/images/hero.jpg",
+        "alt": "A young woman with a fresh layered haircut, smiling in the salon chair"
+      },
+      "photo2": {
+        "src": "/demo/salon/images/bridal-eyeliner.jpg",
+        "alt": "Our make-up artist shaping a bride's eyebrow with a fine brush"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "Since 2011",
+            "span": "In Jadavpur"
+          },
+          {
+            "b": "Ladies only",
+            "span": "Staff and customers"
+          },
+          {
+            "b": "7 days",
+            "span": "Open every day"
+          },
+          {
+            "b": "2 brides",
+            "span": "A day, no more"
+          }
+        ]
+      }
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "h2": "Six things, done properly",
+      "lede": "No long menu. These are the services our customers come back for, and we keep practising them.",
+      "services": {
+        "items": [
+          {
+            "h3": "Haircut and styling",
+            "p": "Trims, layers, step cuts, kids' cuts, blow-dry and ironing. We cut dry first so you see the length before it is gone.",
+            "span": "From ₹250"
+          },
+          {
+            "h3": "Facial and clean-up",
+            "p": "Fruit, gold, de-tan and oxygen facials, 45 to 75 minutes. A clean-up when you only have half an hour.",
+            "span": "From ₹450"
+          },
+          {
+            "h3": "Bridal make-up",
+            "p": "HD and airbrush make-up for the wedding and the reception, with saree draping and hair. One trial is part of the package.",
+            "span": "From ₹8,500"
+          },
+          {
+            "h3": "Mehendi",
+            "p": "Natural cone mehendi for Eid, Karwa Chauth, Pujo and weddings. Both hands, feet and full bridal designs.",
+            "span": "From ₹300"
+          },
+          {
+            "h3": "Threading and waxing",
+            "p": "Eyebrows, upper lip, forehead and full face threading. Honey and rica wax for arms, legs and full body.",
+            "span": "From ₹99"
+          },
+          {
+            "h3": "Hair spa and colour",
+            "p": "Deep-conditioning spa, keratin, smoothening, global colour and highlights. We do a patch test the day before any colour.",
+            "span": "From ₹900"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "eyebrow": "Price list",
+      "h2": "The same prices as on our wall",
+      "lede": "What you see here is what you pay at the counter. No hidden product charge, no surprise at billing.",
+      "h3": "Hair",
+      "h32": "Skin",
+      "h33": "Threading, waxing, nails",
+      "h34": "Make-up and mehendi",
+      "prices-note": "Prices include GST. Hair prices are for shoulder length; longer hair costs a little more and we tell you the figure before we start. Prices last revised January 2026.",
+      "list": {
+        "items": [
+          {
+            "span": "Haircut, any style",
+            "b": "₹350"
+          },
+          {
+            "span": "Kids' haircut (under 10)",
+            "b": "₹250"
+          },
+          {
+            "span": "Blow-dry",
+            "b": "₹300"
+          },
+          {
+            "span": "Hair ironing",
+            "b": "₹500"
+          },
+          {
+            "span": "Hair spa <small>Shoulder length</small>",
+            "b": "₹900"
+          },
+          {
+            "span": "Global colour <small>Ammonia-free</small>",
+            "b": "₹1,800"
+          },
+          {
+            "span": "Highlights, 10 streaks",
+            "b": "₹1,500"
+          },
+          {
+            "span": "Keratin <small>Shoulder length</small>",
+            "b": "₹4,500"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Clean-up",
+            "b": "₹450"
+          },
+          {
+            "span": "Fruit facial",
+            "b": "₹750"
+          },
+          {
+            "span": "De-tan facial",
+            "b": "₹950"
+          },
+          {
+            "span": "Gold facial",
+            "b": "₹1,400"
+          },
+          {
+            "span": "Oxygen facial",
+            "b": "₹1,800"
+          },
+          {
+            "span": "Bleach, face and neck",
+            "b": "₹350"
+          },
+          {
+            "span": "Face pack, add-on",
+            "b": "₹150"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Eyebrows",
+            "b": "₹99"
+          },
+          {
+            "span": "Upper lip or forehead",
+            "b": "₹50"
+          },
+          {
+            "span": "Full face threading",
+            "b": "₹250"
+          },
+          {
+            "span": "Full arms wax <small>Honey</small>",
+            "b": "₹350"
+          },
+          {
+            "span": "Full legs wax <small>Honey</small>",
+            "b": "₹500"
+          },
+          {
+            "span": "Rica wax, full arms",
+            "b": "₹600"
+          },
+          {
+            "span": "Manicure",
+            "b": "₹450"
+          },
+          {
+            "span": "Pedicure",
+            "b": "₹550"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Party make-up",
+            "b": "₹2,000"
+          },
+          {
+            "span": "Engagement make-up",
+            "b": "₹4,500"
+          },
+          {
+            "span": "Saree draping",
+            "b": "₹300"
+          },
+          {
+            "span": "Hairstyle, bun or braid",
+            "b": "₹500"
+          },
+          {
+            "span": "Mehendi, both hands",
+            "b": "₹300"
+          },
+          {
+            "span": "Mehendi, hands and feet",
+            "b": "₹600"
+          },
+          {
+            "span": "Bridal mehendi",
+            "b": "₹2,500"
+          }
+        ]
+      }
+    },
+    "bridal": {
+      "photo": {
+        "src": "/demo/salon/images/bengali-bride.jpg",
+        "alt": "A Bengali bride in red Benarasi with mukut, chandan on the forehead and gold jewellery"
+      },
+      "eyebrow": "Bridal package",
+      "h2": "Your wedding day, in two hands you trust",
+      "lede": "We take two brides a day, no more, so nobody is rushed. The same artist does your trial and your wedding. Bengali, Marwari and Punjabi bridal looks, with chandan work and traditional hair.",
+      "h3": "Full bridal, wedding day",
+      "b": "₹18,000",
+      "span": "Reception make-up, same bride",
+      "b2": "₹8,500",
+      "span2": "Bridal mehendi, hands and feet",
+      "b3": "₹2,500",
+      "span3": "Pre-bridal: 3 facials, 2 hair spas, waxing",
+      "b4": "₹6,000",
+      "pkg-list": {
+        "items": [
+          {
+            "li": "HD or airbrush make-up, your choice"
+          },
+          {
+            "li": "Hairstyle with fresh gajra and all pins"
+          },
+          {
+            "li": "Saree or lehenga draping, dupatta setting"
+          },
+          {
+            "li": "Chandan or alta work on the forehead and feet"
+          },
+          {
+            "li": "One full trial, two weeks before"
+          },
+          {
+            "li": "Touch-up kit to carry to the venue"
+          }
+        ]
+      },
+      "steps": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/salon/images/bridal-makeup-artist.jpg",
+              "alt": "Our artist brushing blush on a bride in a blue and red silk saree"
+            },
+            "span": "01",
+            "h3": "The trial",
+            "p": "Two weeks before. Bring your blouse and jewellery. We photograph the look so it is repeated exactly."
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/haldi-bride.jpg",
+              "alt": "A bride laughing at her haldi ceremony in yellow and pink"
+            },
+            "span": "02",
+            "h3": "Pre-bridal",
+            "p": "Three sittings in the month before: facials, hair spa and waxing, timed so your skin is calm on the day."
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/mehendi-bridal-arms.jpg",
+              "alt": "A bride holding mehendi-covered arms across her face, the design running to the elbow"
+            },
+            "span": "03",
+            "h3": "Mehendi",
+            "p": "Two days before, at your home or ours. Natural cone, no chemical dye, dark colour by the wedding morning."
+          }
+        ]
+      }
+    },
+    "section-6": {
+      "photo": {
+        "src": "/demo/salon/images/bride-red-band.jpg",
+        "alt": "A bride in red velvet with kundan jewellery, looking down and smiling"
+      },
+      "band-line": "Wedding dates fill up <em>early</em>.",
+      "p": "November to February and the Baisakh weddings go first. Message us with your date and we will tell you the same day if it is free. A ₹2,000 advance holds it."
+    },
+    "hygiene": {
+      "eyebrow": "Hygiene",
+      "h2": "Five things we do for every customer",
+      "lede": "You should not have to ask. These are the rules in our parlour, and you are welcome to watch us follow them.",
+      "photo": {
+        "src": "/demo/salon/images/makeup-station.jpg",
+        "alt": "Our make-up artist working at a client's eye with a clean brush, the station laid out behind"
+      },
+      "facts": {
+        "items": [
+          {
+            "n": "1",
+            "h3": "A fresh towel and cape, every time",
+            "p": "Washed at 60°C after one use. Nothing is reused between customers."
+          },
+          {
+            "n": "2",
+            "h3": "Steel tools go in the steriliser",
+            "p": "Scissors, tweezers, combs and nail tools sit in the UV cabinet between customers."
+          },
+          {
+            "n": "3",
+            "h3": "Wax is never double-dipped",
+            "p": "One spatula, one dip, in the bin. Strips come out of a sealed pack in front of you."
+          },
+          {
+            "n": "4",
+            "h3": "Sealed products, opened in front of you",
+            "p": "Facial kits and colour tubes are opened at your chair. The empty pack goes home with you if you want it."
+          },
+          {
+            "n": "5",
+            "h3": "Ladies-only staff and floor",
+            "p": "No men on the floor at any time, including delivery. The door is curtained from the street."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "eyebrow": "From our chairs",
+      "h2": "Recent work",
+      "lede": "Photographed in the parlour with permission. No filters.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/salon/images/hair-curls.jpg",
+              "alt": "Soft brown curls after a blow-dry"
+            },
+            "figcaption": "Blow-dry, soft curls"
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/hair-highlights.jpg",
+              "alt": "Caramel highlights on long dark hair"
+            },
+            "figcaption": "Caramel highlights"
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/kids-haircut.jpg",
+              "alt": "A little girl grinning after her first short haircut"
+            },
+            "figcaption": "Kids' cut"
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/bridal-bun-gajra.jpg",
+              "alt": "A bridal bun with jasmine gajra, roses and a pearl juda pin"
+            },
+            "figcaption": "Bridal bun with gajra"
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/mehendi-bangles.jpg",
+              "alt": "Mehendi on a hand wearing gold and blue bangles"
+            },
+            "figcaption": "Mehendi, both hands"
+          },
+          {
+            "photo": {
+              "src": "/demo/salon/images/bridal-tikka-makeup.jpg",
+              "alt": "Eyeliner being drawn on a bride wearing a gold maang tikka"
+            },
+            "figcaption": "Bridal eye make-up"
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "eyebrow": "In their words",
+      "h2": "Two customers",
+      "quotes": {
+        "items": [
+          {
+            "p": "\"My daughter's wedding make-up was exactly what we saw at the trial. Not one thing different. That is why I keep going back.\"",
+            "b": "Sumitra"
+          },
+          {
+            "p": "\"I asked for the price before the facial and paid the same price after. In Kolkata that is rarer than it should be.\"",
+            "b": "Nazia"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "eyebrow": "Visit",
+      "h2": "Two minutes from Jadavpur 8B bus stand",
+      "address": "<span class=\"label\">Address</span>\r\n        41A Raja Subodh Mullick Road<br>\r\n        Jadavpur, Kolkata 700032<br>\r\n        West Bengal<br>\r\n        First floor, above the pharmacy. Lift available.",
+      "label": "Opening hours",
+      "p": "Walk-ins are welcome for threading and haircuts. For facials, spa, colour and make-up, please book a slot on WhatsApp so there is no waiting.",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:00 am – 8:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 5:00 pm"
+          },
+          {
+            "td": "Bridal appointments",
+            "td2": "From 5:00 am by booking"
+          }
+        ]
+      }
+    },
+    "section-11": {
+      "eyebrow": "Appointment",
+      "h2": "Message us. We reply within the hour.",
+      "lede": "Tell us the service and a time that suits you. We confirm on WhatsApp and keep the chair ready.",
+      "final-place": "Jadavpur • Kolkata 700032"
+    },
+    "footer": {
+      "brand-name": "Aalta Beauty Parlour",
+      "brand-sub": "Ladies only • Jadavpur",
+      "footer-tag": "Hair, skin, mehendi and bridal make-up since 2011.",
+      "h4": "Visit",
+      "address": "41A Raja Subodh Mullick Road<br>\r\n          Jadavpur, Kolkata 700032<br>\r\n          Mon–Sat 10 am – 8 pm &bull; Sun 10 am – 5 pm",
+      "button": "Get directions",
+      "h42": "Follow",
+      "footer-bottom": "© 2026 Aalta Beauty Parlour. All rights reserved."
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Aalta Beauty Parlour sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Aalta Beauty Parlour | Ladies' Salon in Jadavpur, Kolkata",
+      "description": "Ladies-only salon and beauty parlour in Jadavpur. Haircut, facial, threading, hair spa, mehendi and bridal make-up. Fixed price list. Book on WhatsApp."
+    }
+  }
+}

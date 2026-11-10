@@ -304,6 +304,14 @@ table{border-collapse:collapse; width:100%}
 .footer__note{margin-top:2.5rem; padding-top:1.25rem; border-top:1px solid var(--line-dark); font-size:.85rem; color:rgba(255,255,255,.6)}
 .footer__note a{color:#fff}
 @media (min-width:760px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr} .footer{padding-bottom:3rem}}
+/* phone: the seal sits under the rows instead of over them; comfortable tap targets; readable small print */
+@media (max-width:760px){
+  .cert__card .seal{position:static; margin:1rem 0 0 auto}
+  .addr a,.footer__links a,.footer address a{display:inline-flex; align-items:center; min-height:44px}
+  .footer__links li{padding:0}
+  .footer__note a{padding-block:.7rem}
+  .footer .brand__sub{font-size:.76rem}
+}
 
 /* floating social dock: no panel, brand-coloured circles with hover labels.
    Off-screen while scrolling, slides in 2.5 s after scrolling stops. */
@@ -338,19 +346,16 @@ table{border-collapse:collapse; width:100%}
   .btn:hover,.course:hover{transform:none}
 }
 </style>
+<meta name="nx-site" content="computer-center">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demobar">
-  <div class="wrap demobar__in">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="demobar__mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="demobar__cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header" id="header">
+<header data-nx-section="header" class="header" id="header">
   <div class="wrap header__in">
     <a class="brand" href="#top" aria-label="Digital Disha Computer Centre, home">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
@@ -359,8 +364,8 @@ table{border-collapse:collapse; width:100%}
         <rect x="26" y="8" width="6" height="6" rx="1" fill="#C8F31D"/>
       </svg>
       <span>
-        <span class="brand__name">Digital Disha</span>
-        <span class="brand__sub">Computer Centre &middot; Behala</span>
+        <span data-nx="header.brand-name" class="brand__name">Digital Disha</span>
+        <span data-nx="header.brand-sub" class="brand__sub">Computer Centre &middot; Behala</span>
       </span>
     </a>
     <nav class="nav" aria-label="Main">
@@ -376,6 +381,7 @@ table{border-collapse:collapse; width:100%}
     <div class="header__cta">
       <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a free demo class</a>
     </div>
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -403,195 +409,195 @@ table{border-collapse:collapse; width:100%}
 <main id="main">
 
 <!-- HERO -->
-<section class="hero grid-bg dark">
+<section data-nx-section="section-2" class="hero grid-bg dark">
   <div class="wrap">
     <div class="hero__top">
       <div class="rv">
-        <p class="tag">Behala Chowrasta &middot; Since 2011</p>
-        <h1 class="h-xl">Learn the computer skills <span class="mark">offices actually ask for.</span></h1>
-        <p class="lede">Basic computing, MS Office, Tally with GST, DTP, typing and web basics. One student per computer, small batches of eight, morning and evening slots. Most courses finish in two to three months.</p>
+        <p data-nx="section-2.tag" class="tag">Behala Chowrasta &middot; Since 2011</p>
+        <h1 data-nx="section-2.h1" class="h-xl">Learn the computer skills <span class="mark">offices actually ask for.</span></h1>
+        <p data-nx="section-2.lede" class="lede">Basic computing, MS Office, Tally with GST, DTP, typing and web basics. One student per computer, small batches of eight, morning and evening slots. Most courses finish in two to three months.</p>
         <div class="btn-row">
           <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book a free demo class</a>
-          <a class="btn btn--line-w" href="#courses">See courses and fees</a>
+          <a data-nx="section-2.button" class="btn btn--line-w" href="#courses">See courses and fees</a>
         </div>
       </div>
       <div class="term rv" aria-label="Batches starting soon">
-        <div class="term__bar"><i></i><i></i><i></i><span>next_batches.txt</span></div>
-        <ul>
-          <li><span class="p">&gt;</span><span class="c">MS Office, morning</span><span class="d">starts <b>17 Nov</b> &middot; 3 seats</span></li>
-          <li><span class="p">&gt;</span><span class="c">Tally Prime with GST, evening</span><span class="d">starts <b>20 Nov</b> &middot; 5 seats</span></li>
-          <li><span class="p">&gt;</span><span class="c">Basic Computing, afternoon</span><span class="d">starts <b>24 Nov</b> &middot; 6 seats</span></li>
-          <li><span class="p">&gt;</span><span class="c">Typing, English + Bengali</span><span class="d">join <b>any Monday</b></span></li>
-          <li><span class="p">&gt;</span><span class="c">Web Basics, Sunday</span><span class="d">starts <b>7 Dec</b> &middot; 8 seats</span></li>
+        <div class="term__bar"><i></i><i></i><i></i><span data-nx="section-2.span">next_batches.txt</span></div>
+        <ul data-nx-list="section-2.list">
+          <li data-nx-item><span data-nx-f="p" class="p">&gt;</span><span data-nx-f="c" class="c">MS Office, morning</span><span data-nx-f="d" class="d">starts <b>17 Nov</b> &middot; 3 seats</span></li>
+          <li data-nx-item><span data-nx-f="p" class="p">&gt;</span><span data-nx-f="c" class="c">Tally Prime with GST, evening</span><span data-nx-f="d" class="d">starts <b>20 Nov</b> &middot; 5 seats</span></li>
+          <li data-nx-item><span data-nx-f="p" class="p">&gt;</span><span data-nx-f="c" class="c">Basic Computing, afternoon</span><span data-nx-f="d" class="d">starts <b>24 Nov</b> &middot; 6 seats</span></li>
+          <li data-nx-item><span data-nx-f="p" class="p">&gt;</span><span data-nx-f="c" class="c">Typing, English + Bengali</span><span data-nx-f="d" class="d">join <b>any Monday</b></span></li>
+          <li data-nx-item><span data-nx-f="p" class="p">&gt;</span><span data-nx-f="c" class="c">Web Basics, Sunday</span><span data-nx-f="d" class="d">starts <b>7 Dec</b> &middot; 8 seats</span></li>
         </ul>
       </div>
     </div>
     <div class="hero__band rv">
-      <figure class="ph"><img src="/demo/computer-center/images/hero.jpg" alt="Students in formal dress gathered around desktop computers at the institute" width="1600" height="1068" fetchpriority="high" decoding="async"></figure>
-      <ul class="hero__stats">
-        <li><b>18</b><span>computers, one per student</span></li>
-        <li><b>8</b><span>students per batch, maximum</span></li>
-        <li><b>2,400+</b><span>students certified since 2011</span></li>
-        <li><b>₹1,500</b><span>Basic Computing, full course</span></li>
+      <figure class="ph"><img data-nx="section-2.photo" src="/demo/computer-center/images/hero.jpg" alt="Students in formal dress gathered around desktop computers at the institute" width="1600" height="1068" fetchpriority="high" decoding="async"></figure>
+      <ul data-nx-list="section-2.hero-stats" class="hero__stats">
+        <li data-nx-item><b data-nx-f="b">18</b><span data-nx-f="span">computers, one per student</span></li>
+        <li data-nx-item><b data-nx-f="b">8</b><span data-nx-f="span">students per batch, maximum</span></li>
+        <li data-nx-item><b data-nx-f="b">2,400+</b><span data-nx-f="span">students certified since 2011</span></li>
+        <li data-nx-item><b data-nx-f="b">₹1,500</b><span data-nx-f="span">Basic Computing, full course</span></li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- COURSES -->
-<section class="sec" id="courses">
+<section data-nx-section="courses" class="sec" id="courses">
   <div class="wrap">
     <div class="head rv">
-      <p class="tag">Courses and fees</p>
-      <h2 class="h-lg">Six courses. Fixed fees. Nothing extra for the certificate.</h2>
-      <p class="lede">Fees include study material, practice hours and the exam. Pay in two instalments if you prefer. A free demo class comes before any payment.</p>
+      <p data-nx="courses.tag" class="tag">Courses and fees</p>
+      <h2 data-nx="courses.h2" class="h-lg">Six courses. Fixed fees. Nothing extra for the certificate.</h2>
+      <p data-nx="courses.lede" class="lede">Fees include study material, practice hours and the exam. Pay in two instalments if you prefer. A free demo class comes before any payment.</p>
     </div>
     <ul class="courses">
-      <li class="course rv"><span class="course__code">DD-101</span><h3>Basic Computing</h3><p>Switching on to sending email. Windows, files and folders, typing, internet, Paint, printing, online forms and payments. For beginners of any age.</p><div class="course__foot"><span class="course__fee">₹1,500<small>full course</small></span><span class="course__dur">1 month &middot; 1 hr/day</span></div></li>
-      <li class="course course--hot rv"><span class="course__code">DD-201</span><h3>MS Office</h3><p>Word, Excel and PowerPoint for office work. Letters, mail merge, formulas, charts, pivot tables, presentations. Excel gets half the course.</p><div class="course__foot"><span class="course__fee">₹3,200<small>full course</small></span><span class="course__dur">2 months &middot; 1.5 hr/day</span></div></li>
-      <li class="course rv"><span class="course__code">DD-301</span><h3>Tally Prime with GST</h3><p>Company creation, ledgers, vouchers, inventory, GST entries and returns, payroll basics, bank reconciliation. Practice on real-style bills.</p><div class="course__foot"><span class="course__fee">₹4,500<small>full course</small></span><span class="course__dur">3 months &middot; 1.5 hr/day</span></div></li>
-      <li class="course rv"><span class="course__code">DD-401</span><h3>DTP</h3><p>Photoshop, CorelDRAW and PageMaker-style layout. Visiting cards, banners, pujo invitations, Bengali typesetting. For print shop and design jobs.</p><div class="course__foot"><span class="course__fee">₹4,000<small>full course</small></span><span class="course__dur">3 months &middot; 1.5 hr/day</span></div></li>
-      <li class="course rv"><span class="course__code">DD-501</span><h3>Typing, English and Bengali</h3><p>Touch typing to 35+ words per minute in English, plus Bengali in Avro and Inscript. Speed tests every week. Useful for data entry and government exams.</p><div class="course__foot"><span class="course__fee">₹1,200<small>per month</small></span><span class="course__dur">Join any Monday</span></div></li>
-      <li class="course rv"><span class="course__code">DD-601</span><h3>Web Basics</h3><p>HTML, CSS and a little JavaScript. Build a five-page website for a shop and put it online. Weekend batch, good for college students.</p><div class="course__foot"><span class="course__fee">₹3,800<small>full course</small></span><span class="course__dur">10 Sundays &middot; 3 hr</span></div></li>
+      <li class="course rv"><span data-nx="courses.course-code" class="course__code">DD-101</span><h3 data-nx="courses.h3">Basic Computing</h3><p data-nx="courses.p">Switching on to sending email. Windows, files and folders, typing, internet, Paint, printing, online forms and payments. For beginners of any age.</p><div class="course__foot"><span data-nx="courses.course-fee" class="course__fee">₹1,500<small>full course</small></span><span data-nx="courses.course-dur" class="course__dur">1 month &middot; 1 hr/day</span></div></li>
+      <li class="course course--hot rv"><span data-nx="courses.course-code2" class="course__code">DD-201</span><h3 data-nx="courses.h32">MS Office</h3><p data-nx="courses.p2">Word, Excel and PowerPoint for office work. Letters, mail merge, formulas, charts, pivot tables, presentations. Excel gets half the course.</p><div class="course__foot"><span data-nx="courses.course-fee2" class="course__fee">₹3,200<small>full course</small></span><span data-nx="courses.course-dur2" class="course__dur">2 months &middot; 1.5 hr/day</span></div></li>
+      <li class="course rv"><span data-nx="courses.course-code3" class="course__code">DD-301</span><h3 data-nx="courses.h33">Tally Prime with GST</h3><p data-nx="courses.p3">Company creation, ledgers, vouchers, inventory, GST entries and returns, payroll basics, bank reconciliation. Practice on real-style bills.</p><div class="course__foot"><span data-nx="courses.course-fee3" class="course__fee">₹4,500<small>full course</small></span><span data-nx="courses.course-dur3" class="course__dur">3 months &middot; 1.5 hr/day</span></div></li>
+      <li class="course rv"><span data-nx="courses.course-code4" class="course__code">DD-401</span><h3 data-nx="courses.h34">DTP</h3><p data-nx="courses.p4">Photoshop, CorelDRAW and PageMaker-style layout. Visiting cards, banners, pujo invitations, Bengali typesetting. For print shop and design jobs.</p><div class="course__foot"><span data-nx="courses.course-fee4" class="course__fee">₹4,000<small>full course</small></span><span data-nx="courses.course-dur4" class="course__dur">3 months &middot; 1.5 hr/day</span></div></li>
+      <li class="course rv"><span data-nx="courses.course-code5" class="course__code">DD-501</span><h3 data-nx="courses.h35">Typing, English and Bengali</h3><p data-nx="courses.p5">Touch typing to 35+ words per minute in English, plus Bengali in Avro and Inscript. Speed tests every week. Useful for data entry and government exams.</p><div class="course__foot"><span data-nx="courses.course-fee5" class="course__fee">₹1,200<small>per month</small></span><span data-nx="courses.course-dur5" class="course__dur">Join any Monday</span></div></li>
+      <li class="course rv"><span data-nx="courses.course-code6" class="course__code">DD-601</span><h3 data-nx="courses.h36">Web Basics</h3><p data-nx="courses.p6">HTML, CSS and a little JavaScript. Build a five-page website for a shop and put it online. Weekend batch, good for college students.</p><div class="course__foot"><span data-nx="courses.course-fee6" class="course__fee">₹3,800<small>full course</small></span><span data-nx="courses.course-dur6" class="course__dur">10 Sundays &middot; 3 hr</span></div></li>
     </ul>
   </div>
 </section>
 
 <!-- BATCHES -->
-<section class="sec grid-bg dark" id="batches">
+<section data-nx-section="batches" class="sec grid-bg dark" id="batches">
   <div class="wrap">
     <div class="head rv">
-      <p class="tag">Batch timings</p>
-      <h2 class="h-lg">Six slots a day, Monday to Saturday</h2>
-      <p class="lede">Pick a slot when you join and keep it for the whole course. If you miss a class, you can sit in another slot that week for the same lesson.</p>
+      <p data-nx="batches.tag" class="tag">Batch timings</p>
+      <h2 data-nx="batches.h2" class="h-lg">Six slots a day, Monday to Saturday</h2>
+      <p data-nx="batches.lede" class="lede">Pick a slot when you join and keep it for the whole course. If you miss a class, you can sit in another slot that week for the same lesson.</p>
     </div>
     <div class="bt rv">
       <div class="bt__scroll">
         <table>
-          <thead><tr><th scope="col">Slot</th><th scope="col">Time</th><th scope="col">Who usually comes</th><th scope="col">Seats this month</th></tr></thead>
-          <tbody>
-            <tr><td class="t">Morning 1</td><td>7:00 – 8:30 am</td><td>Office-goers before work, Tally and MS Office</td><td><span class="seats few">2 left</span></td></tr>
-            <tr><td class="t">Morning 2</td><td>8:30 – 10:00 am</td><td>College students, Web Basics practice</td><td><span class="seats ok">Open</span></td></tr>
-            <tr><td class="t">Late morning</td><td>10:30 am – 12:00 noon</td><td>Homemakers and retired learners, Basic Computing</td><td><span class="seats ok">Open</span></td></tr>
-            <tr><td class="t">Afternoon</td><td>2:00 – 3:30 pm</td><td>School students after half day, typing</td><td><span class="seats ok">Open</span></td></tr>
-            <tr><td class="t">Evening 1</td><td>5:00 – 6:30 pm</td><td>DTP and MS Office</td><td><span class="seats few">3 left</span></td></tr>
-            <tr><td class="t">Evening 2</td><td>6:30 – 8:00 pm</td><td>Working people, Tally with GST</td><td><span class="seats few">1 left</span></td></tr>
-            <tr><td class="t">Sunday</td><td>10:00 am – 1:00 pm</td><td>Web Basics only</td><td><span class="seats ok">Open</span></td></tr>
+          <thead><tr><th data-nx="batches.th" scope="col">Slot</th><th data-nx="batches.th2" scope="col">Time</th><th data-nx="batches.th3" scope="col">Who usually comes</th><th data-nx="batches.th4" scope="col">Seats this month</th></tr></thead>
+          <tbody data-nx-list="batches.list">
+            <tr data-nx-item><td data-nx-f="t" class="t">Morning 1</td><td data-nx-f="td">7:00 – 8:30 am</td><td data-nx-f="td2">Office-goers before work, Tally and MS Office</td><td><span data-nx-f="seats" class="seats few">2 left</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Morning 2</td><td data-nx-f="td">8:30 – 10:00 am</td><td data-nx-f="td2">College students, Web Basics practice</td><td><span data-nx-f="seats" class="seats ok">Open</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Late morning</td><td data-nx-f="td">10:30 am – 12:00 noon</td><td data-nx-f="td2">Homemakers and retired learners, Basic Computing</td><td><span data-nx-f="seats" class="seats ok">Open</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Afternoon</td><td data-nx-f="td">2:00 – 3:30 pm</td><td data-nx-f="td2">School students after half day, typing</td><td><span data-nx-f="seats" class="seats ok">Open</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Evening 1</td><td data-nx-f="td">5:00 – 6:30 pm</td><td data-nx-f="td2">DTP and MS Office</td><td><span data-nx-f="seats" class="seats few">3 left</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Evening 2</td><td data-nx-f="td">6:30 – 8:00 pm</td><td data-nx-f="td2">Working people, Tally with GST</td><td><span data-nx-f="seats" class="seats few">1 left</span></td></tr>
+            <tr data-nx-item><td data-nx-f="t" class="t">Sunday</td><td data-nx-f="td">10:00 am – 1:00 pm</td><td data-nx-f="td2">Web Basics only</td><td><span data-nx-f="seats" class="seats ok">Open</span></td></tr>
           </tbody>
         </table>
       </div>
-      <div class="bt__foot">Closed on Sundays except the Web Basics batch, and on major pujo days. Free practice hours: 12 noon to 2 pm and 3:30 to 5 pm for enrolled students.</div>
+      <div data-nx="batches.bt-foot" class="bt__foot">Closed on Sundays except the Web Basics batch, and on major pujo days. Free practice hours: 12 noon to 2 pm and 3:30 to 5 pm for enrolled students.</div>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
-<section class="sec grid-bg--light grid-bg" id="why" style="background-color:var(--grey)">
+<section data-nx-section="why" class="sec grid-bg--light grid-bg" id="why" style="background-color:var(--grey)">
   <div class="wrap why">
     <div class="rv">
-      <p class="tag">Why learn here</p>
-      <h2 class="h-lg">Small room, your own computer, a teacher who checks your screen</h2>
-      <p class="lede">We are not a franchise. The same two teachers have been here since 2011 and know which mistakes a beginner makes in week one.</p>
-      <ul class="facts">
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><div><b>One student, one computer</b><span>Nobody shares a keyboard. 18 machines, all with the current Windows and Office versions.</span></div></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4.5 4.5 0 0 1 6-4"/></svg></span><div><b>Batches of eight</b><span>Small enough for the teacher to walk behind every chair in every class.</span></div></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Free practice hours</b><span>Three and a half hours a day when the room is open for enrolled students, no charge.</span></div></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 14h3"/></svg></span><div><b>Real work, not slides</b><span>Tally students enter a month of a real-style shop's bills. DTP students print a pujo invitation.</span></div></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.3 6.8 19.1l1-5.8-4.3-4.1 5.9-.9Z"/></svg></span><div><b>Bengali or English</b><span>Classes are taught in whichever the batch is comfortable with. Notes are in both.</span></div></li>
-        <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Help after the course</b><span>Resume format, interview questions for data entry and accounts jobs, and a WhatsApp group for doubts.</span></div></li>
+      <p data-nx="why.tag" class="tag">Why learn here</p>
+      <h2 data-nx="why.h2" class="h-lg">Small room, your own computer, a teacher who checks your screen</h2>
+      <p data-nx="why.lede" class="lede">We are not a franchise. The same two teachers have been here since 2011 and know which mistakes a beginner makes in week one.</p>
+      <ul data-nx-list="why.facts" class="facts">
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span><div><b data-nx-f="b">One student, one computer</b><span data-nx-f="span">Nobody shares a keyboard. 18 machines, all with the current Windows and Office versions.</span></div></li>
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M15 20a4.5 4.5 0 0 1 6-4"/></svg></span><div><b data-nx-f="b">Batches of eight</b><span data-nx-f="span">Small enough for the teacher to walk behind every chair in every class.</span></div></li>
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b data-nx-f="b">Free practice hours</b><span data-nx-f="span">Three and a half hours a day when the room is open for enrolled students, no charge.</span></div></li>
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 10h16M9 14h3"/></svg></span><div><b data-nx-f="b">Real work, not slides</b><span data-nx-f="span">Tally students enter a month of a real-style shop's bills. DTP students print a pujo invitation.</span></div></li>
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.3 6.8 19.1l1-5.8-4.3-4.1 5.9-.9Z"/></svg></span><div><b data-nx-f="b">Bengali or English</b><span data-nx-f="span">Classes are taught in whichever the batch is comfortable with. Notes are in both.</span></div></li>
+        <li data-nx-item><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b data-nx-f="b">Help after the course</b><span data-nx-f="span">Resume format, interview questions for data entry and accounts jobs, and a WhatsApp group for doubts.</span></div></li>
       </ul>
     </div>
-    <div class="why__figs rv">
-      <figure class="ph"><img src="/demo/computer-center/images/woman-smiling.jpg" alt="A young woman works at a laptop at a desk by a brick wall" width="1200" height="800" loading="lazy" decoding="async"></figure>
-      <figure class="ph"><img src="/demo/computer-center/images/typing-hands.jpg" alt="Hands typing on a laptop keyboard" width="800" height="533" loading="lazy" decoding="async"></figure>
+    <div data-nx-list="why.why-figs" class="why__figs rv">
+      <figure data-nx-item class="ph"><img data-nx-f="photo" src="/demo/computer-center/images/woman-smiling.jpg" alt="A young woman works at a laptop at a desk by a brick wall" width="1200" height="800" loading="lazy" decoding="async"></figure>
+      <figure data-nx-item class="ph"><img data-nx-f="photo" src="/demo/computer-center/images/typing-hands.jpg" alt="Hands typing on a laptop keyboard" width="800" height="533" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATE -->
-<section class="sec grid-bg dark" id="certificate">
+<section data-nx-section="certificate" class="sec grid-bg dark" id="certificate">
   <div class="wrap cert">
     <div class="rv">
-      <p class="tag">Certificate</p>
-      <h2 class="h-lg">A certificate that says what you can do, with a number anyone can check</h2>
-      <p class="lede">Every course ends with a practical exam on the computer. Pass, and you get a printed certificate with a unique ID. An employer can message us the ID and we confirm it the same day.</p>
-      <ul class="cert__pts">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Practical exam, not a written one. You do the tasks on screen in 60 minutes.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>Grade printed on the certificate: A, B or C, with your typing speed where relevant.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>One free re-sit within a month if you do not pass the first time.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span>We also prepare students for the NIELIT CCC exam and help with the registration form. The exam fee is paid to NIELIT directly.</span></li>
+      <p data-nx="certificate.tag" class="tag">Certificate</p>
+      <h2 data-nx="certificate.h2" class="h-lg">A certificate that says what you can do, with a number anyone can check</h2>
+      <p data-nx="certificate.lede" class="lede">Every course ends with a practical exam on the computer. Pass, and you get a printed certificate with a unique ID. An employer can message us the ID and we confirm it the same day.</p>
+      <ul data-nx-list="certificate.cert-pts" class="cert__pts">
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-nx-f="span">Practical exam, not a written one. You do the tasks on screen in 60 minutes.</span></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-nx-f="span">Grade printed on the certificate: A, B or C, with your typing speed where relevant.</span></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-nx-f="span">One free re-sit within a month if you do not pass the first time.</span></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><span data-nx-f="span">We also prepare students for the NIELIT CCC exam and help with the registration form. The exam fee is paid to NIELIT directly.</span></li>
       </ul>
     </div>
     <div class="cert__card rv" aria-hidden="true">
-      <p class="l">Certificate of completion</p>
-      <p class="n">MS Office &middot; Grade A</p>
-      <div class="row"><span>Student</span><b>Priyanka Das</b></div>
-      <div class="row"><span>Duration</span><b>Sept to Nov 2026, 48 classes</b></div>
-      <div class="row"><span>Practical exam</span><b>86 / 100</b></div>
-      <div class="row"><span>Certificate ID</span><b>DD-2026-1187</b></div>
-      <div class="seal">Digital<br>Disha<br>Behala</div>
+      <p data-nx="certificate.l" class="l">Certificate of completion</p>
+      <p data-nx="certificate.n" class="n">MS Office &middot; Grade A</p>
+      <div class="row"><span data-nx="certificate.span">Student</span><b data-nx="certificate.b">Priyanka Das</b></div>
+      <div class="row"><span data-nx="certificate.span2">Duration</span><b data-nx="certificate.b2">Sept to Nov 2026, 48 classes</b></div>
+      <div class="row"><span data-nx="certificate.span3">Practical exam</span><b data-nx="certificate.b3">86 / 100</b></div>
+      <div class="row"><span data-nx="certificate.span4">Certificate ID</span><b data-nx="certificate.b4">DD-2026-1187</b></div>
+      <div data-nx="certificate.seal" class="seal">Digital<br>Disha<br>Behala</div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="sec" id="gallery">
+<section data-nx-section="gallery" class="sec" id="gallery">
   <div class="wrap">
     <div class="head head--c rv">
-      <p class="tag">In the classroom</p>
-      <h2 class="h-lg">One room, eighteen screens</h2>
+      <p data-nx="gallery.tag" class="tag">In the classroom</p>
+      <h2 data-nx="gallery.h2" class="h-lg">One room, eighteen screens</h2>
     </div>
     <div class="gal">
-      <figure class="ph w rv"><img src="/demo/computer-center/images/class-group.jpg" alt="A young man in an orange t-shirt smiles while working on a laptop" width="1200" height="1800" loading="lazy" decoding="async"><figcaption>Practice hours</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/teacher-checking.jpg" alt="A man in a checked shirt looks up from his laptop in the classroom" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Evening 1</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/elderly-learner.jpg" alt="A learner in a turban works at a laptop at a plain desk" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Basic Computing, 10:30 slot</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/class-row.jpg" alt="A student in school uniform works at a desktop in a computer classroom, a classmate beside him" width="1600" height="1067" loading="lazy" decoding="async"><figcaption>School-hours batch</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/students-a.jpg" alt="Two learners share a laptop at a desk and talk through the work" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Afternoon slot</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/calculator-ledger.jpg" alt="A young woman works at a desktop computer in the institute" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Tally practice</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/boy-laptop.jpg" alt="A smiling young man works on a laptop outdoors on a bench" width="800" height="609" loading="lazy" decoding="async"><figcaption>Web Basics, Sunday batch</figcaption></figure>
-      <figure class="ph rv"><img src="/demo/computer-center/images/girls-computers.jpg" alt="Young women in uniform gather around a laptop at a table" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Late morning</figcaption></figure>
+      <figure class="ph w rv"><img data-nx="gallery.photo" src="/demo/computer-center/images/class-group.jpg" alt="A young man in an orange t-shirt smiles while working on a laptop" width="1200" height="1800" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption">Practice hours</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo2" src="/demo/computer-center/images/teacher-checking.jpg" alt="A man in a checked shirt looks up from his laptop in the classroom" width="1200" height="1600" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption2">Evening 1</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo3" src="/demo/computer-center/images/elderly-learner.jpg" alt="A learner in a turban works at a laptop at a plain desk" width="1200" height="800" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption3">Basic Computing, 10:30 slot</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo4" src="/demo/computer-center/images/class-row.jpg" alt="A student in school uniform works at a desktop in a computer classroom, a classmate beside him" width="1600" height="1067" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption4">School-hours batch</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo5" src="/demo/computer-center/images/students-a.jpg" alt="Two learners share a laptop at a desk and talk through the work" width="1200" height="800" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption5">Afternoon slot</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo6" src="/demo/computer-center/images/calculator-ledger.jpg" alt="A young woman works at a desktop computer in the institute" width="1200" height="800" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption6">Tally practice</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo7" src="/demo/computer-center/images/boy-laptop.jpg" alt="A smiling young man works on a laptop outdoors on a bench" width="800" height="609" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption7">Web Basics, Sunday batch</figcaption></figure>
+      <figure class="ph rv"><img data-nx="gallery.photo8" src="/demo/computer-center/images/girls-computers.jpg" alt="Young women in uniform gather around a laptop at a table" width="1200" height="800" loading="lazy" decoding="async"><figcaption data-nx="gallery.figcaption8">Late morning</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- WORDS + FAQ -->
-<section class="sec grid-bg--light grid-bg" id="faq" style="background-color:var(--grey)">
+<section data-nx-section="faq" class="sec grid-bg--light grid-bg" id="faq" style="background-color:var(--grey)">
   <div class="wrap">
     <div class="head rv">
-      <p class="tag">Students say</p>
-      <h2 class="h-lg">Three notes from the register</h2>
+      <p data-nx="faq.tag" class="tag">Students say</p>
+      <h2 data-nx="faq.h2" class="h-lg">Three notes from the register</h2>
     </div>
-    <div class="words">
-      <blockquote class="quote rv"><p>I did Tally here in 2024 and joined a hardware shop in Sakherbazar as their accounts person two months later. The GST return practice was exactly what the owner wanted.</p><footer>Soumen <span>&middot; Tally with GST</span></footer></blockquote>
-      <blockquote class="quote rv"><p>At 58 I thought it was too late. The 10:30 batch is all people my age. I can now pay bills, video call my daughter and fill the pension form myself.</p><footer>Krishna <span>&middot; Basic Computing</span></footer></blockquote>
-      <blockquote class="quote rv"><p>Excel pivot tables got me through my office interview. The teacher made us do the same sheet five different ways until it stuck.</p><footer>Ritika <span>&middot; MS Office</span></footer></blockquote>
+    <div data-nx-list="faq.words" class="words">
+      <blockquote data-nx-item class="quote rv"><p data-nx-f="p">I did Tally here in 2024 and joined a hardware shop in Sakherbazar as their accounts person two months later. The GST return practice was exactly what the owner wanted.</p><footer>Soumen <span data-nx-f="span">&middot; Tally with GST</span></footer></blockquote>
+      <blockquote data-nx-item class="quote rv"><p data-nx-f="p">At 58 I thought it was too late. The 10:30 batch is all people my age. I can now pay bills, video call my daughter and fill the pension form myself.</p><footer>Krishna <span data-nx-f="span">&middot; Basic Computing</span></footer></blockquote>
+      <blockquote data-nx-item class="quote rv"><p data-nx-f="p">Excel pivot tables got me through my office interview. The teacher made us do the same sheet five different ways until it stuck.</p><footer>Ritika <span data-nx-f="span">&middot; MS Office</span></footer></blockquote>
     </div>
 
-    <h2 class="h-md rv" style="margin-top:3rem">Common questions</h2>
-    <div class="faq rv">
-      <details><summary>I have never touched a computer. Can I join?</summary><div class="a">Yes. Basic Computing starts from switching the machine on. About a third of our students are complete beginners, many over 50.</div></details>
-      <details><summary>Do I need my own laptop?</summary><div class="a">No. Every student has a computer in class and free practice hours. If you do have a laptop, bring it on Saturdays and we will set it up the same way.</div></details>
-      <details><summary>Can I pay in instalments?</summary><div class="a">Two instalments for any course over ₹3,000: half at joining, half after the first month. Cash or UPI. A receipt is given for every payment.</div></details>
-      <details><summary>What if I miss classes?</summary><div class="a">Sit in another slot the same week for the same lesson. If you miss more than a week, we give one free catch-up session.</div></details>
-      <details><summary>Is the certificate government recognised?</summary><div class="a">It is our own certificate with a verifiable ID; it is not a government certificate. For a government one we prepare you for the NIELIT CCC exam, which you sit at a NIELIT centre.</div></details>
-      <details><summary>Do you help with jobs?</summary><div class="a">We do not promise placement. We do fix your resume, run mock interviews for accounts and data entry roles, and pass on openings that local shops and offices send us.</div></details>
+    <h2 data-nx="faq.rv" class="h-md rv" style="margin-top:3rem">Common questions</h2>
+    <div data-nx-list="faq.faq" class="faq rv">
+      <details data-nx-item><summary data-nx-f="summary">I have never touched a computer. Can I join?</summary><div data-nx-f="a" class="a">Yes. Basic Computing starts from switching the machine on. About a third of our students are complete beginners, many over 50.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Do I need my own laptop?</summary><div data-nx-f="a" class="a">No. Every student has a computer in class and free practice hours. If you do have a laptop, bring it on Saturdays and we will set it up the same way.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Can I pay in instalments?</summary><div data-nx-f="a" class="a">Two instalments for any course over ₹3,000: half at joining, half after the first month. Cash or UPI. A receipt is given for every payment.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">What if I miss classes?</summary><div data-nx-f="a" class="a">Sit in another slot the same week for the same lesson. If you miss more than a week, we give one free catch-up session.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Is the certificate government recognised?</summary><div data-nx-f="a" class="a">It is our own certificate with a verifiable ID; it is not a government certificate. For a government one we prepare you for the NIELIT CCC exam, which you sit at a NIELIT centre.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you help with jobs?</summary><div data-nx-f="a" class="a">We do not promise placement. We do fix your resume, run mock interviews for accounts and data entry roles, and pass on openings that local shops and offices send us.</div></details>
     </div>
   </div>
 </section>
 
 <!-- VISIT -->
-<section class="sec" id="visit">
+<section data-nx-section="visit" class="sec" id="visit">
   <div class="wrap visit">
     <div class="rv">
-      <p class="tag">Find us</p>
-      <h2 class="h-lg">First floor, above the medicine shop at Behala Chowrasta</h2>
+      <p data-nx="visit.tag" class="tag">Find us</p>
+      <h2 data-nx="visit.h2" class="h-lg">First floor, above the medicine shop at Behala Chowrasta</h2>
       <address class="addr">
-        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Address</b>212 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034, West Bengal<br><span style="color:var(--muted);font-size:.9rem">Behala Chowrasta metro, Gate 1, is a two-minute walk. Buses 12C, S12 and 3C stop outside.</span></div></div>
-        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Office hours</b>Mon to Sat: 7 am – 8 pm<br>Sunday: 10 am – 1 pm (Web Basics only)</div></div>
-        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><div><b>Phone and WhatsApp</b><a href="tel:+919804243159">+91 98042 43159</a></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div data-nx="visit.div"><b>Address</b>212 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034, West Bengal<br><span style="color:var(--muted);font-size:.9rem">Behala Chowrasta metro, Gate 1, is a two-minute walk. Buses 12C, S12 and 3C stop outside.</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div data-nx="visit.div2"><b>Office hours</b>Mon to Sat: 7 am – 8 pm<br>Sunday: 10 am – 1 pm (Web Basics only)</div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg><div><b data-nx="visit.b">Phone and WhatsApp</b><a href="tel:+919804243159">+91 98042 43159</a></div></div>
       </address>
       <div class="btn-row">
-        <a class="btn btn--black" href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions</a>
+        <a data-nx="visit.button" class="btn btn--black" href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions</a>
         <a class="btn btn--line" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call</a>
       </div>
     </div>
@@ -602,32 +608,32 @@ table{border-collapse:collapse; width:100%}
 </section>
 
 <!-- FINAL -->
-<section class="sec grid-bg dark final" id="contact">
+<section data-nx-section="contact" class="sec grid-bg dark final" id="contact">
   <div class="wrap">
     <div class="head head--c rv">
-      <p class="tag">Free demo class</p>
-      <h2 class="h-lg">Sit in one class. Then decide.</h2>
-      <p class="lede">Message us the course you are thinking of and a time that suits you. The first class is free and there is no form to fill.</p>
+      <p data-nx="contact.tag" class="tag">Free demo class</p>
+      <h2 data-nx="contact.h2" class="h-lg">Sit in one class. Then decide.</h2>
+      <p data-nx="contact.lede" class="lede">Message us the course you are thinking of and a time that suits you. The first class is free and there is no form to fill.</p>
       <div class="btn-row">
         <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Digital%20Disha%20Computer%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp the centre</a>
         <a class="btn btn--line-w" href="tel:+919804243159">Call +91 98042 43159</a>
       </div>
-      <p class="final__note">New batches start every two weeks. Typing can be joined any Monday.</p>
+      <p data-nx="contact.final-note" class="final__note">New batches start every two weeks. Typing can be joined any Monday.</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
         <a class="brand" href="#top">
           <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="6" fill="#1F4BFF"/><path d="M10 13h12a7 7 0 0 1 0 14H10V13Z" fill="none" stroke="#fff" stroke-width="3"/><rect x="26" y="8" width="6" height="6" rx="1" fill="#C8F31D"/></svg>
-          <span><span class="brand__name">Digital Disha</span><span class="brand__sub">Computer Centre &middot; Behala</span></span>
+          <span><span data-nx="footer.brand-name" class="brand__name">Digital Disha</span><span data-nx="footer.brand-sub" class="brand__sub">Computer Centre &middot; Behala</span></span>
         </a>
-        <p style="margin-top:1rem; max-width:36ch">Computer training for beginners, office-goers and students. Behala Chowrasta, since 2011.</p>
+        <p data-nx="footer.p" style="margin-top:1rem; max-width:36ch">Computer training for beginners, office-goers and students. Behala Chowrasta, since 2011.</p>
       </div>
       <nav aria-label="Footer">
         <h4>On this page</h4>
@@ -640,7 +646,7 @@ table{border-collapse:collapse; width:100%}
         </ul>
       </nav>
       <div>
-        <h4>Centre</h4>
+        <h4 data-nx="footer.h4">Centre</h4>
         <address style="font-style:normal">212 Diamond Harbour Road<br>Behala Chowrasta, Kolkata 700034<br><a href="tel:+919804243159">+91 98042 43159</a></address>
       </div>
     </div>
@@ -705,5 +711,7 @@ table{border-collapse:collapse; width:100%}
   els.forEach(function(el){io.observe(el)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

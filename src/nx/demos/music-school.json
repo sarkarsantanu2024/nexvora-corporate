@@ -1,0 +1,1963 @@
+{
+  "site": "music-school",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sur Sadhana Sangeet Vidyalaya",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:801"
+        },
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-card",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hero-list",
+          "label": {
+            "en": "Learn music the slow way, which is the only way",
+            "bn": "Learn music the slow way, which is the only way"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vocal",
+      "label": {
+        "en": "Two kinds of singing, two teachers, one floor",
+        "bn": "Two kinds of singing, two teachers, one floor"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1203"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "meta",
+          "label": {
+            "en": "Rabindra Sangeet",
+            "bn": "Rabindra Sangeet"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta2",
+          "label": {
+            "en": "Hindustani classical vocal",
+            "bn": "Hindustani classical vocal"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instruments",
+      "label": {
+        "en": "Five instruments, taught one student at a time within the batch",
+        "bn": "Five instruments, taught one student at a time within the batch"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "inst",
+          "label": {
+            "en": "Five instruments, taught one student at a time within the batch",
+            "bn": "Five instruments, taught one student at a time within the batch"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "Pick a tab. The fee is the fee",
+        "bn": "Pick a tab. The fee is the fee"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "tabs-foot",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "tabs-foot2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "tabs-foot3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-bar",
+          "label": {
+            "en": "Pick a tab. The fee is the fee",
+            "bn": "Pick a tab. The fee is the fee"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "small",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "small",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exams",
+      "label": {
+        "en": "Year by year, from Prathama to Sangeet Visharad level",
+        "bn": "Year by year, from Prathama to Sangeet Visharad level"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "exam-list",
+          "label": {
+            "en": "Year by year, from Prathama to Sangeet Visharad level",
+            "bn": "Year by year, from Prathama to Sangeet Visharad level"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "yr",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "How the exam season runs",
+            "bn": "How the exam season runs"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "function",
+      "label": {
+        "en": "Sur Sandhya, the second Sunday of January",
+        "bn": "Sur Sandhya, the second Sunday of January"
+      },
+      "fields": [
+        {
+          "key": "bg",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "band-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From the classrooms and the stage",
+        "bn": "From the classrooms and the stage"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "masonry",
+          "label": {
+            "en": "From the classrooms and the stage",
+            "bn": "From the classrooms and the stage"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "What they tell us",
+        "bn": "What they tell us"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "What they tell us",
+            "bn": "What they tell us"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "A two-storey house off N.S.C. Bose Road, five minutes from Tollygunge metro",
+        "bn": "A two-storey house off N.S.C. Bose Road, five minutes from Tollygunge metro"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "The first class is free. Come and listen",
+        "bn": "The first class is free. Come and listen"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Classes",
+            "bn": "Classes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Sur Sadhana",
+      "small": "Sangeet Vidyalaya · Tollygunge"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/music-school/images/hero.jpg",
+        "alt": "A teacher in a blue saree playing harmonium with four children sitting around her"
+      },
+      "hero-eyebrow": "Tollygunge · Vocal and instrumental music",
+      "h1": "Learn music the slow way, <em>which is the only way.</em>",
+      "lede": "A music school in a two-storey house off N.S.C. Bose Road. Rabindra Sangeet and classical vocal upstairs, guitar, keyboard, tabla, harmonium and violin downstairs. Children from age six, adults of any age. The first class is free.",
+      "button": "Batches and fees",
+      "hero-card": {
+        "items": [
+          {
+            "b": "1991",
+            "span": "Teaching since"
+          },
+          {
+            "b": "7",
+            "span": "Subjects, vocal and instruments"
+          },
+          {
+            "b": "8",
+            "span": "Students per batch at most"
+          }
+        ]
+      },
+      "hero-list": {
+        "items": [
+          {
+            "li": "Rabindra Sangeet"
+          },
+          {
+            "li": "Classical vocal"
+          },
+          {
+            "li": "Guitar"
+          },
+          {
+            "li": "Keyboard"
+          },
+          {
+            "li": "Tabla"
+          },
+          {
+            "li": "Harmonium"
+          },
+          {
+            "li": "Violin"
+          }
+        ]
+      }
+    },
+    "vocal": {
+      "kicker": "Vocal",
+      "h2": "Two kinds of singing, two teachers, one floor.",
+      "p": "Vocal classes are taught sitting on the floor with a harmonium and a tanpura app, the way most of us learnt. A child who cannot yet hold a note sits beside a student preparing for a stage.",
+      "photo": {
+        "src": "/demo/music-school/images/singer-sari.jpg",
+        "alt": "A woman in a yellow embroidered dress singing into a vintage microphone"
+      },
+      "h3": "Rabindra Sangeet",
+      "p2": "Taught from the Swarabitan notation, song by song, with the words explained before the tune. Students learn to sing with the correct pronunciation and without ornament, as the songs were written to be sung.",
+      "p3": "Beginners start with the simpler Puja and Prakriti songs. By the second year most students can sing twenty songs from notation and perform at Pochishe Boishakh.",
+      "photo2": {
+        "src": "/demo/music-school/images/singer-stage.jpg",
+        "alt": "A woman in a green dress singing into a microphone indoors"
+      },
+      "h32": "Hindustani classical vocal",
+      "p4": "Sargam, paltas and alankars for the first six months, whatever the age. Then raag by raag: Yaman, Bhupali, Bhairav, Kafi, in bandish and in alaap. Tabla accompaniment at every Saturday class.",
+      "p5": "Students who want to sing Bengali adhunik, Nazrul Geeti or film songs are welcome. Classical training is the base; what you sing with it is your choice.",
+      "meta": {
+        "items": [
+          {
+            "li": "Age 6 and up"
+          },
+          {
+            "li": "Tue, Thu or Sat, Sun"
+          },
+          {
+            "li": "Teacher: Madhumita Sen"
+          },
+          {
+            "li": "Board exam prep included"
+          }
+        ]
+      },
+      "meta2": {
+        "items": [
+          {
+            "li": "Age 8 and up, adults welcome"
+          },
+          {
+            "li": "Mon closed, other days"
+          },
+          {
+            "li": "Teacher: Pt. Subhankar Roy"
+          },
+          {
+            "li": "Board exam prep included"
+          }
+        ]
+      }
+    },
+    "instruments": {
+      "kicker": "Instruments",
+      "h2": "Five instruments, taught one student at a time within the batch.",
+      "p": "Instrument batches are four to six students. The teacher goes round, listens to each one, corrects the hand, moves on. Bring your own instrument from the second month; we have school ones for the first.",
+      "inst": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/music-school/images/boy-guitar.jpg",
+              "alt": "A boy with glasses playing an acoustic guitar against a red wall"
+            },
+            "h3": "Guitar",
+            "p": "Acoustic first, then electric if you wish. Chords, strumming patterns, Bengali and Hindi songs, then scales and lead.",
+            "b": "Age 9+ · Mon closed"
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/keyboard-hands.jpg",
+              "alt": "Hands playing a digital piano keyboard in soft light"
+            },
+            "h3": "Keyboard",
+            "p": "Both hands from the first month. Staff notation taught alongside, so students can read Western pieces and play harmonium parts.",
+            "b": "Age 7+ · Wed, Fri, Sun"
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/tabla-pair.jpg",
+              "alt": "A pair of tabla drums on a plain surface"
+            },
+            "h3": "Tabla",
+            "p": "Teentaal, Dadra, Kaharwa, Jhaptaal. Bols spoken before they are played. Our tabla students accompany the vocal classes on Saturdays.",
+            "b": "Age 7+ · Tue, Thu, Sat"
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/harmonium-hand.jpg",
+              "alt": "A hand playing the keys of a wooden harmonium"
+            },
+            "h3": "Harmonium",
+            "p": "For singers who want to accompany themselves, and for anyone who wants to play at home. Scales, chords and song accompaniment.",
+            "b": "Any age · Any day"
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/violin.jpg",
+              "alt": "A violin and bow in warm dramatic lighting"
+            },
+            "h3": "Violin",
+            "p": "Indian style, held low, taught on the Hindustani raag system. Bowing and tuning take the first three months. Patience is required.",
+            "b": "Age 8+ · Wed, Sat"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Batches and fees",
+      "h2": "Pick a tab. The fee is the fee.",
+      "p": "Monthly fees, paid by the 10th, cash or UPI. One-time admission ₹500. No charge for the first class, for the annual function rehearsals or for exam form help.",
+      "th": "Batch",
+      "th2": "Days",
+      "th3": "Time",
+      "th4": "For",
+      "th5": "Monthly fee",
+      "tabs-foot": "Vocal students may sit in on one instrument class a week for ₹300 extra. Most pick harmonium.",
+      "th6": "Instrument",
+      "th7": "Days",
+      "th8": "Time",
+      "th9": "Batch size",
+      "th10": "Monthly fee",
+      "tabs-foot2": "A second instrument for the same student is half price. Two children from one family: ₹200 off the second child.",
+      "th11": "Preparation",
+      "th12": "When",
+      "th13": "What is covered",
+      "th14": "Fee",
+      "b": "Junior years (1st to 3rd)",
+      "small": "Vocal or instrument",
+      "td": "Extra Sunday class, Oct to Feb",
+      "td2": "Theory book, practical pieces, viva questions",
+      "fee": "&#8377;500 a month<small>Oct to Feb only</small>",
+      "b2": "Senior years (4th to 6th)",
+      "small2": "Vocal or instrument",
+      "td3": "Extra Sunday class, Oct to Feb",
+      "td4": "Theory, raag notation, history, practical, viva",
+      "fee2": "&#8377;700 a month<small>Oct to Feb only</small>",
+      "b3": "Mock practical",
+      "small3": "Two rounds, in front of outside examiners",
+      "td5": "January",
+      "td6": "Full exam format, written feedback",
+      "fee3": "Included",
+      "b4": "Board exam fees",
+      "td7": "As per the board",
+      "td8": "Paid directly to the board; we fill the form with you",
+      "fee4": "At cost",
+      "tabs-foot3": "Exam preparation is optional. Plenty of students learn for ten years and never sit an exam. That is also a fine way to learn music.",
+      "tabs-bar": {
+        "items": [
+          {
+            "label": "Vocal"
+          },
+          {
+            "label": "Instruments"
+          },
+          {
+            "label": "Exam prep"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "b": "Rabindra Sangeet, children",
+            "small": "Batch of 8",
+            "td": "Tue, Thu",
+            "td2": "5:00 – 6:00 pm",
+            "td3": "Age 6 to 12",
+            "fee": "₹900"
+          },
+          {
+            "b": "Rabindra Sangeet, adults",
+            "small": "Batch of 8",
+            "td": "Sat, Sun",
+            "td2": "9:00 – 10:30 am",
+            "td3": "Age 13 and up",
+            "fee": "₹1,000"
+          },
+          {
+            "b": "Classical vocal, beginners",
+            "small": "Sargam and alankar year",
+            "td": "Tue, Fri",
+            "td2": "6:00 – 7:00 pm",
+            "td3": "Age 8 and up",
+            "fee": "₹1,000"
+          },
+          {
+            "b": "Classical vocal, senior",
+            "small": "Raag study, with tabla on Saturday",
+            "td": "Wed, Sat",
+            "td2": "7:00 – 8:30 pm",
+            "td3": "2+ years training",
+            "fee": "₹1,400"
+          },
+          {
+            "b": "Nazrul Geeti and adhunik",
+            "small": "Open to all vocal students",
+            "td": "Sun",
+            "td2": "11:00 am – 12:00 noon",
+            "td3": "Any level",
+            "fee": "₹600"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "b": "Guitar",
+            "small": "Acoustic or electric",
+            "td": "Tue, Thu, Sat",
+            "td2": "6:00 – 7:00 pm",
+            "td3": "6",
+            "fee": "₹1,000"
+          },
+          {
+            "b": "Keyboard",
+            "small": "School keyboard for the first month",
+            "td": "Wed, Fri, Sun",
+            "td2": "5:00 – 6:00 pm",
+            "td3": "5",
+            "fee": "₹1,000"
+          },
+          {
+            "b": "Tabla",
+            "small": "Pair available in class",
+            "td": "Tue, Thu, Sat",
+            "td2": "5:00 – 6:00 pm",
+            "td3": "6",
+            "fee": "₹900"
+          },
+          {
+            "b": "Harmonium",
+            "small": "Good first instrument for singers",
+            "td": "Any two days",
+            "td2": "Morning or evening",
+            "td3": "6",
+            "fee": "₹800"
+          },
+          {
+            "b": "Violin",
+            "small": "Student violin can be arranged on rent, ₹300 a month",
+            "td": "Wed, Sat",
+            "td2": "6:00 – 7:00 pm",
+            "td3": "4",
+            "fee": "₹1,200"
+          }
+        ]
+      }
+    },
+    "exams": {
+      "kicker": "Music board exams",
+      "h2": "Year by year, from Prathama to Sangeet Visharad level.",
+      "p": "Students who want a certificate sit for music board exams every year from the second year. We prepare them for the syllabus of the boards most Kolkata schools use. Here is what each stage looks like.",
+      "photo": {
+        "src": "/demo/music-school/images/tabla-player.jpg",
+        "alt": "An elderly man in a white shirt playing tabla outdoors"
+      },
+      "h3": "How the exam season runs",
+      "exam-list": {
+        "items": [
+          {
+            "yr": "Yr 1",
+            "h3": "No exam. Just learning.",
+            "p": "Posture, breath, sargam or hand position. We do not put a six-year-old in front of an examiner."
+          },
+          {
+            "yr": "Yr 2–3",
+            "h3": "Junior years",
+            "p": "Short theory paper and a practical of two or three pieces. Most children pass comfortably. Viva questions are practised in class from October."
+          },
+          {
+            "yr": "Yr 4–5",
+            "h3": "Middle years",
+            "p": "Notation writing, raag identification, history of the form. Practical gets longer. Mock exams in January with teachers from other schools as examiners."
+          },
+          {
+            "yr": "Yr 6+",
+            "h3": "Senior and diploma level",
+            "p": "Full performance plus a written paper. Students at this level usually teach the junior batches with us, which is the best preparation there is."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "span": "Form filling",
+            "b": "August"
+          },
+          {
+            "span": "Sunday exam classes",
+            "b": "Oct to Feb"
+          },
+          {
+            "span": "Mock practical",
+            "b": "January"
+          },
+          {
+            "span": "Board exam",
+            "b": "Feb or March"
+          },
+          {
+            "span": "Results and certificates",
+            "b": "June"
+          }
+        ]
+      }
+    },
+    "function": {
+      "bg": {
+        "src": "/demo/music-school/images/annual-function.jpg",
+        "alt": ""
+      },
+      "kicker": "Annual function",
+      "h2": "Sur Sandhya, the second Sunday of January.",
+      "p": "Every student who has attended for six months sings or plays on stage. Juniors in groups, seniors solo, the tabla batch accompanies everyone. We hire the hall, the sound and the lights. Families get three passes each and the rest are open to the neighbourhood.",
+      "button": "Photos from last January",
+      "band-facts": {
+        "items": [
+          {
+            "b": "34th",
+            "span": "Sur Sandhya in January 2027"
+          },
+          {
+            "b": "Sun 10 Jan",
+            "span": "Tollygunge community hall, 5 pm"
+          },
+          {
+            "b": "96",
+            "span": "Students on stage last year"
+          },
+          {
+            "b": "₹600",
+            "span": "Per student for costume and hall, once a year"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Gallery",
+      "h2": "From the classrooms and the stage.",
+      "masonry": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/music-school/images/harmonium-tabla-group.jpg",
+              "alt": "Three students performing with tabla and two harmoniums on a low stage"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/stage-performer.jpg",
+              "alt": "A singer in orange performing with a microphone in front of a large audience"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/sitar-chair.jpg",
+              "alt": "A sitar resting on a blue velvet chair"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/keyboard-hands.jpg",
+              "alt": "Hands on a keyboard"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/boy-guitar.jpg",
+              "alt": "A boy practising guitar"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/violin.jpg",
+              "alt": "A violin and bow"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/harmonium-hand.jpg",
+              "alt": "Harmonium keys under a hand"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/music-school/images/tabla-pair.jpg",
+              "alt": "A pair of tabla"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "Parents and students",
+      "h2": "What they tell us.",
+      "quotes": {
+        "items": [
+          {
+            "p": "My daughter started Rabindra Sangeet at seven, bored and fidgety. Madhumita di never raised her voice once. Four years on she sang solo at Sur Sandhya and I cried in the third row.",
+            "span": "· mother, Regent Park"
+          },
+          {
+            "p": "I am 52 and started tabla two years ago because I always wanted to. Nobody laughed. I now accompany the Saturday vocal class, badly but happily.",
+            "span": "· student, Tollygunge"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit",
+      "h2": "A two-storey house off N.S.C. Bose Road, five minutes from Tollygunge metro.",
+      "b": "Address",
+      "p": "23/1 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040",
+      "button": "Get directions →",
+      "b2": "Class hours",
+      "b3": "Phone",
+      "p2": "Say the age and the subject. We will tell you which batch has a seat.",
+      "hours": {
+        "items": [
+          {
+            "td": "Tuesday to Sunday, morning",
+            "td2": "8:00 am – 12:00 noon"
+          },
+          {
+            "td": "Tuesday to Sunday, evening",
+            "td2": "4:00 pm – 8:30 pm"
+          },
+          {
+            "td": "Monday",
+            "td2": "Closed"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sur Sadhana Sangeet Vidyalaya sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=23%2F1%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Sur Sadhana",
+      "small": "Sangeet Vidyalaya · Tollygunge",
+      "p": "Vocal and instrumental music classes since 1991. Small batches, board exam preparation, and a stage every January.",
+      "h4": "Classes",
+      "h42": "Find us",
+      "li": "23/1 N.S.C. Bose Road, Tollygunge, Kolkata 700040",
+      "li2": "Tue–Sun 8 am – 12 noon, 4 pm – 8:30 pm · Mon closed",
+      "list": {
+        "items": [
+          {
+            "button": "Rabindra Sangeet and classical"
+          },
+          {
+            "button": "Instruments"
+          },
+          {
+            "button": "Batches and fees"
+          },
+          {
+            "button": "Board exams"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Sur Sadhana Sangeet Vidyalaya | Music School in Tollygunge, Kolkata",
+      "description": "Rabindra Sangeet, classical vocal, guitar, keyboard, tabla, harmonium and violin classes in Tollygunge, Kolkata. Small batches, music board exam preparation, annual function every winter. First class free."
+    }
+  }
+}

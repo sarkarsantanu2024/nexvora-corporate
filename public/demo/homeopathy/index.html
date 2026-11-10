@@ -297,25 +297,30 @@ table{border-collapse:collapse;width:100%}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets, readable footer line, hours on one line */
+@media (max-width:760px){
+.footer li a,.visit__row a{display:inline-flex;align-items:center;min-height:44px}
+.footer__note a{padding-block:.75rem}
+.footer .brand small{font-size:.75rem}
+.hours td:last-child{white-space:nowrap}
+}
 </style>
+<meta name="nx-site" content="homeopathy">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Arogya%20Niketan%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Arogya Niketan, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#4F6B4A"/><path d="M22 34c0-10 4-16 12-20-2 10-6 16-12 20Z" fill="#D7C3A6"/><path d="M22 34c0-10-4-16-12-20 2 10 6 16 12 20Z" fill="#F4F1E8"/><path d="M22 34V22" stroke="#36503A" stroke-width="1.5" stroke-linecap="round"/></svg>
-      <span><b>Arogya Niketan</b><small>Homeopathy &amp; Ayurveda &middot; Tollygunge</small></span>
+      <span><b data-nx="header.b">Arogya Niketan</b><small data-nx="header.small">Homeopathy &amp; Ayurveda &middot; Tollygunge</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -339,221 +344,221 @@ table{border-collapse:collapse;width:100%}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__photo reveal">
-      <img src="/demo/homeopathy/images/hero.jpg" width="1200" height="800" alt="Dr. Subhankar Dutta in a white coat with a stethoscope, arms folded, standing against a plain wall" fetchpriority="high">
-      <ul class="hero__stats">
-        <li><b>&#8377;500</b><span>First consultation</span></li>
-        <li><b>30 min</b><span>Time kept for you</span></li>
-        <li><b>2008</b><span>Clinic opened</span></li>
+      <img data-nx="top.photo" src="/demo/homeopathy/images/hero.jpg" width="1200" height="800" alt="Dr. Subhankar Dutta in a white coat with a stethoscope, arms folded, standing against a plain wall" fetchpriority="high">
+      <ul data-nx-list="top.hero-stats" class="hero__stats">
+        <li data-nx-item><b data-nx-f="b">&#8377;500</b><span data-nx-f="span">First consultation</span></li>
+        <li data-nx-item><b data-nx-f="b">30 min</b><span data-nx-f="span">Time kept for you</span></li>
+        <li data-nx-item><b data-nx-f="b">2008</b><span data-nx-f="span">Clinic opened</span></li>
       </ul>
     </div>
     <div class="reveal">
-      <p class="hero__eyebrow">Tollygunge, Kolkata</p>
-      <h1>A quiet clinic for problems that <em>have not gone away.</em></h1>
-      <p>Skin, allergy, digestion, hair, children's complaints and long-standing conditions, seen by a homeopathic doctor and an ayurvedic doctor under one roof. Half an hour for a first visit, medicines given from the clinic, and honest words about what to expect.</p>
+      <p data-nx="top.hero-eyebrow" class="hero__eyebrow">Tollygunge, Kolkata</p>
+      <h1 data-nx="top.h1">A quiet clinic for problems that <em>have not gone away.</em></h1>
+      <p data-nx="top.p">Skin, allergy, digestion, hair, children's complaints and long-standing conditions, seen by a homeopathic doctor and an ayurvedic doctor under one roof. Half an hour for a first visit, medicines given from the clinic, and honest words about what to expect.</p>
       <div class="hero__cta">
         <a class="btn btn--brown" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Arogya%20Niketan%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a consultation
         </a>
-        <a class="btn btn--ghost" href="#conditions">What we commonly see</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#conditions">What we commonly see</a>
       </div>
-      <p class="hero__note">Homeopathy and ayurveda work slowly and do not suit every problem. If we think you need a hospital, a test or an allopathic doctor, we will tell you on the first day.</p>
+      <p data-nx="top.hero-note" class="hero__note">Homeopathy and ayurveda work slowly and do not suit every problem. If we think you need a hospital, a test or an allopathic doctor, we will tell you on the first day.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="doctors">
+<section data-nx-section="doctors" class="section" id="doctors">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The doctors</span>
-      <h2 class="h2">Two doctors, two systems, one file for you.</h2>
-      <p class="lead">You choose which doctor to see, or ask at the desk and we suggest. Both read the same patient file, so nothing is repeated and nothing clashes.</p>
+      <span data-nx="doctors.kicker" class="kicker">The doctors</span>
+      <h2 data-nx="doctors.h2" class="h2">Two doctors, two systems, one file for you.</h2>
+      <p data-nx="doctors.p" class="lead">You choose which doctor to see, or ask at the desk and we suggest. Both read the same patient file, so nothing is repeated and nothing clashes.</p>
     </div>
     <div class="docs">
       <article class="doc reveal">
-        <img src="/demo/homeopathy/images/doctor-arms.jpg" width="1200" height="1800" alt="Dr. Subhankar Dutta, hands folded, in a white coat with a stethoscope" loading="lazy">
+        <img data-nx="doctors.photo" src="/demo/homeopathy/images/doctor-arms.jpg" width="1200" height="1800" alt="Dr. Subhankar Dutta, hands folded, in a white coat with a stethoscope" loading="lazy">
         <div>
-          <h3>Dr. Subhankar Dutta</h3>
-          <p class="deg">BHMS (Calcutta Homoeopathic Medical College, 2004) &middot; Homeopathy</p>
-          <p>Eighteen years in practice, the last sixteen at this address. Takes a long first history, asks about sleep, food, moods and weather, and gives one medicine at a time so he can see what it does. Sees most of the children and skin cases.</p>
-          <ul><li>Skin and allergy</li><li>Children</li><li>Hair fall</li><li>Long-standing complaints</li></ul>
+          <h3 data-nx="doctors.h3">Dr. Subhankar Dutta</h3>
+          <p data-nx="doctors.deg" class="deg">BHMS (Calcutta Homoeopathic Medical College, 2004) &middot; Homeopathy</p>
+          <p data-nx="doctors.p2">Eighteen years in practice, the last sixteen at this address. Takes a long first history, asks about sleep, food, moods and weather, and gives one medicine at a time so he can see what it does. Sees most of the children and skin cases.</p>
+          <ul data-nx-list="doctors.list"><li data-nx-f="li" data-nx-item>Skin and allergy</li><li data-nx-f="li" data-nx-item>Children</li><li data-nx-f="li" data-nx-item>Hair fall</li><li data-nx-f="li" data-nx-item>Long-standing complaints</li></ul>
         </div>
       </article>
       <article class="doc reveal">
-        <img src="/demo/homeopathy/images/doctor-ayurveda.jpg" width="1200" height="800" alt="Dr. Arnab Mitra, bearded, in glasses and a white coat with a stethoscope" loading="lazy">
+        <img data-nx="doctors.photo2" src="/demo/homeopathy/images/doctor-ayurveda.jpg" width="1200" height="800" alt="Dr. Arnab Mitra, bearded, in glasses and a white coat with a stethoscope" loading="lazy">
         <div>
-          <h3>Dr. Arnab Mitra</h3>
-          <p class="deg">BAMS (J.B. Roy State Ayurvedic Medical College, 2011) &middot; Ayurveda</p>
-          <p>Joined the clinic in 2016. Works mostly on digestion, joint stiffness, sleep and weight, with diet and daily routine as much as medicine. Writes the diet plan on one page in Bengali so the whole family can follow it.</p>
-          <ul><li>Digestion and acidity</li><li>Joint pain</li><li>Sleep and stress</li><li>Diet and routine</li></ul>
+          <h3 data-nx="doctors.h32">Dr. Arnab Mitra</h3>
+          <p data-nx="doctors.deg2" class="deg">BAMS (J.B. Roy State Ayurvedic Medical College, 2011) &middot; Ayurveda</p>
+          <p data-nx="doctors.p3">Joined the clinic in 2016. Works mostly on digestion, joint stiffness, sleep and weight, with diet and daily routine as much as medicine. Writes the diet plan on one page in Bengali so the whole family can follow it.</p>
+          <ul data-nx-list="doctors.list2"><li data-nx-f="li" data-nx-item>Digestion and acidity</li><li data-nx-f="li" data-nx-item>Joint pain</li><li data-nx-f="li" data-nx-item>Sleep and stress</li><li data-nx-f="li" data-nx-item>Diet and routine</li></ul>
         </div>
       </article>
     </div>
-    <p class="lead" style="margin-top:1.4rem;font-size:.9rem">Both doctors are registered with the respective West Bengal councils. Certificates are on the wall of the consulting room.</p>
+    <p data-nx="doctors.p4" class="lead" style="margin-top:1.4rem;font-size:.9rem">Both doctors are registered with the respective West Bengal councils. Certificates are on the wall of the consulting room.</p>
   </div>
 </section>
 
-<section class="section section--deep" id="conditions">
+<section data-nx-section="conditions" class="section section--deep" id="conditions">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we commonly see</span>
-      <h2 class="h2">The complaints that bring most people through the door.</h2>
-      <p class="lead">This is what we see most, not a list of promises. Every person responds differently and some problems need more time than others. We say what we honestly expect at the first visit.</p>
+      <span data-nx="conditions.kicker" class="kicker">What we commonly see</span>
+      <h2 data-nx="conditions.h2" class="h2">The complaints that bring most people through the door.</h2>
+      <p data-nx="conditions.p" class="lead">This is what we see most, not a list of promises. Every person responds differently and some problems need more time than others. We say what we honestly expect at the first visit.</p>
     </div>
     <div class="cond">
-      <div class="cond__list">
-        <div class="cond__item reveal"><h3><span>01</span>Skin</h3><p>Eczema, psoriasis, urticaria (hives), acne, fungal patches that keep coming back, warts, dandruff. Bring old prescriptions and creams so we know what has been tried.</p><p class="who">Dr. Dutta</p></div>
-        <div class="cond__item reveal"><h3><span>02</span>Allergy and breathing</h3><p>Sneezing and running nose in season change, dust allergy, sinus, recurring cold and cough, mild asthma alongside your inhaler. We never ask anyone to stop an inhaler.</p><p class="who">Dr. Dutta</p></div>
-        <div class="cond__item reveal"><h3><span>03</span>Digestion</h3><p>Acidity, gas, bloating, constipation, loose motion that comes and goes, IBS-type complaints, poor appetite. Diet is half the treatment here.</p><p class="who">Dr. Mitra</p></div>
-        <div class="cond__item reveal"><h3><span>04</span>Hair</h3><p>Hair fall after illness or childbirth, dandruff, early greying, patchy loss. We check thyroid and haemoglobin reports first; bring them if you have them.</p><p class="who">Either doctor</p></div>
-        <div class="cond__item reveal"><h3><span>05</span>Children</h3><p>Recurring cold and tonsils, bed-wetting, poor appetite, worms, tantrums and sleep trouble, teething complaints. Medicines are sweet pills; children usually do not mind them.</p><p class="who">Dr. Dutta</p></div>
-        <div class="cond__item reveal"><h3><span>06</span>Long-standing and lifestyle</h3><p>Joint stiffness, migraine, sleep, stress, weight, menstrual irregularity, thyroid and sugar alongside your physician's medicine. We work with your existing doctor, not against.</p><p class="who">Either doctor</p></div>
+      <div data-nx-list="conditions.cond-list" class="cond__list">
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>01</span>Skin</h3><p data-nx-f="p">Eczema, psoriasis, urticaria (hives), acne, fungal patches that keep coming back, warts, dandruff. Bring old prescriptions and creams so we know what has been tried.</p><p data-nx-f="who" class="who">Dr. Dutta</p></div>
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>02</span>Allergy and breathing</h3><p data-nx-f="p">Sneezing and running nose in season change, dust allergy, sinus, recurring cold and cough, mild asthma alongside your inhaler. We never ask anyone to stop an inhaler.</p><p data-nx-f="who" class="who">Dr. Dutta</p></div>
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>03</span>Digestion</h3><p data-nx-f="p">Acidity, gas, bloating, constipation, loose motion that comes and goes, IBS-type complaints, poor appetite. Diet is half the treatment here.</p><p data-nx-f="who" class="who">Dr. Mitra</p></div>
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>04</span>Hair</h3><p data-nx-f="p">Hair fall after illness or childbirth, dandruff, early greying, patchy loss. We check thyroid and haemoglobin reports first; bring them if you have them.</p><p data-nx-f="who" class="who">Either doctor</p></div>
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>05</span>Children</h3><p data-nx-f="p">Recurring cold and tonsils, bed-wetting, poor appetite, worms, tantrums and sleep trouble, teething complaints. Medicines are sweet pills; children usually do not mind them.</p><p data-nx-f="who" class="who">Dr. Dutta</p></div>
+        <div data-nx-item class="cond__item reveal"><h3 data-nx-f="h3"><span>06</span>Long-standing and lifestyle</h3><p data-nx-f="p">Joint stiffness, migraine, sleep, stress, weight, menstrual irregularity, thyroid and sugar alongside your physician's medicine. We work with your existing doctor, not against.</p><p data-nx-f="who" class="who">Either doctor</p></div>
       </div>
       <aside class="fee-card reveal">
-        <h3>Consultation fees</h3>
-        <table>
-          <tr><td>First consultation<small>30 minutes, full history</small></td><td>&#8377;500</td></tr>
-          <tr><td>Follow-up<small>Within 45 days, 15 minutes</small></td><td>&#8377;300</td></tr>
-          <tr><td>Children under 12<small>First visit</small></td><td>&#8377;400</td></tr>
-          <tr><td>Online consultation<small>Video or phone, 20 minutes</small></td><td>&#8377;400</td></tr>
-          <tr><td>Medicines<small>Per month, given from the clinic</small></td><td>&#8377;150 to &#8377;600</td></tr>
+        <h3 data-nx="conditions.h3">Consultation fees</h3>
+        <table data-nx-list="conditions.list">
+          <tr data-nx-item><td data-nx-f="td">First consultation<small>30 minutes, full history</small></td><td data-nx-f="td2">&#8377;500</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Follow-up<small>Within 45 days, 15 minutes</small></td><td data-nx-f="td2">&#8377;300</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Children under 12<small>First visit</small></td><td data-nx-f="td2">&#8377;400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Online consultation<small>Video or phone, 20 minutes</small></td><td data-nx-f="td2">&#8377;400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Medicines<small>Per month, given from the clinic</small></td><td data-nx-f="td2">&#8377;150 to &#8377;600</td></tr>
         </table>
-        <p>Fees do not change with the complaint. Senior citizens above 70 pay the follow-up rate for every visit. Cash or UPI.</p>
+        <p data-nx="conditions.p2">Fees do not change with the complaint. Senior citizens above 70 pay the follow-up rate for every visit. Cash or UPI.</p>
         <a class="btn btn--brown" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Arogya%20Niketan%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a slot</a>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="section" id="how">
+<section data-nx-section="how" class="section" id="how">
   <div class="wrap how">
     <div class="reveal">
-      <span class="kicker">A first consultation</span>
-      <h2 class="h2">Thirty minutes. Most of it is you talking.</h2>
-      <ol class="tl">
-        <li><h3>Before you come</h3><p>Note when the problem started, what makes it better or worse, and what you have already tried. Bring reports and current medicines. Do not stop any medicine on your own.</p></li>
-        <li><h3>The history</h3><p>The doctor asks about the complaint and then about you: sleep, appetite, thirst, sweat, weather you dislike, worries. In homeopathy these details choose the medicine. Give honest answers; nothing is odd here.</p></li>
-        <li><h3>Examination and plan</h3><p>A look at the skin, tongue, pulse and whatever the complaint needs. Then the doctor tells you what he thinks is going on, what he expects to change, and in how many weeks you should see something.</p></li>
-        <li><h3>Medicines and diet</h3><p>Medicines are given from the clinic dispensary in labelled bottles, with the dose written in Bengali and English. A one-page diet and routine sheet comes with ayurvedic treatment.</p></li>
-        <li><h3>Follow-up</h3><p>Usually after three to four weeks. If nothing has changed by the second follow-up, we say so plainly and talk about other options, including a referral.</p></li>
+      <span data-nx="how.kicker" class="kicker">A first consultation</span>
+      <h2 data-nx="how.h2" class="h2">Thirty minutes. Most of it is you talking.</h2>
+      <ol data-nx-list="how.tl" class="tl">
+        <li data-nx-item><h3 data-nx-f="h3">Before you come</h3><p data-nx-f="p">Note when the problem started, what makes it better or worse, and what you have already tried. Bring reports and current medicines. Do not stop any medicine on your own.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">The history</h3><p data-nx-f="p">The doctor asks about the complaint and then about you: sleep, appetite, thirst, sweat, weather you dislike, worries. In homeopathy these details choose the medicine. Give honest answers; nothing is odd here.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Examination and plan</h3><p data-nx-f="p">A look at the skin, tongue, pulse and whatever the complaint needs. Then the doctor tells you what he thinks is going on, what he expects to change, and in how many weeks you should see something.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Medicines and diet</h3><p data-nx-f="p">Medicines are given from the clinic dispensary in labelled bottles, with the dose written in Bengali and English. A one-page diet and routine sheet comes with ayurvedic treatment.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Follow-up</h3><p data-nx-f="p">Usually after three to four weeks. If nothing has changed by the second follow-up, we say so plainly and talk about other options, including a referral.</p></li>
       </ol>
     </div>
-    <div class="how__fig reveal">
-      <img src="/demo/homeopathy/images/consultation.jpg" width="1200" height="800" alt="A doctor listens to a patient's chest with a stethoscope in the consulting room" loading="lazy">
-      <img src="/demo/homeopathy/images/herbs-mortar.jpg" width="1200" height="800" alt="Hands crushing dried herbs and flowers in a stone mortar" loading="lazy">
-      <img src="/demo/homeopathy/images/dropper-bottle.jpg" width="1200" height="1800" alt="A brown dropper bottle beside dried herbs and pills" loading="lazy">
+    <div data-nx-list="how.how-fig" class="how__fig reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/homeopathy/images/consultation.jpg" width="1200" height="800" alt="A doctor listens to a patient's chest with a stethoscope in the consulting room" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/homeopathy/images/herbs-mortar.jpg" width="1200" height="800" alt="Hands crushing dried herbs and flowers in a stone mortar" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/homeopathy/images/dropper-bottle.jpg" width="1200" height="1800" alt="A brown dropper bottle beside dried herbs and pills" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section section--sage" id="online">
+<section data-nx-section="online" class="section section--sage" id="online">
   <div class="wrap online">
     <div class="online__fig reveal">
-      <img src="/demo/homeopathy/images/neem.jpg" width="1200" height="1963" alt="A hand holds a fresh sprig of neem leaves" loading="lazy">
-      <div class="tag"><b>Medicines by courier</b>Within Kolkata next day, rest of India in 3 to 5 days. Courier charge at cost.</div>
+      <img data-nx="online.photo" src="/demo/homeopathy/images/neem.jpg" width="1200" height="1963" alt="A hand holds a fresh sprig of neem leaves" loading="lazy">
+      <div data-nx="online.tag" class="tag"><b>Medicines by courier</b>Within Kolkata next day, rest of India in 3 to 5 days. Courier charge at cost.</div>
     </div>
     <div class="reveal">
-      <span class="kicker">Online consultation</span>
-      <h2 class="h2">For follow-ups, and for people who have moved away.</h2>
-      <p class="lead" style="margin-top:1rem">Many of our patients now live in other cities or abroad. The first visit is best done in person; after that, most follow-ups work well on a video call.</p>
-      <ol class="online__steps">
-        <li><span class="n">1</span><div><h3>Send a message</h3><p>WhatsApp your name, the doctor you see, and two time slots that suit you. Pay &#8377;400 by UPI to confirm.</p></div></li>
-        <li><span class="n">2</span><div><h3>Share photos and reports</h3><p>For skin, clear photos in daylight. For anything else, the latest reports as PDF or photo. Send them the day before.</p></div></li>
-        <li><span class="n">3</span><div><h3>The call</h3><p>Twenty minutes on WhatsApp video or a normal phone call. The doctor writes the prescription and sends it as a photo the same evening.</p></div></li>
-        <li><span class="n">4</span><div><h3>Medicines reach you</h3><p>Collect from the clinic, or we courier them. Payment for medicines and courier by UPI after dispatch.</p></div></li>
+      <span data-nx="online.kicker" class="kicker">Online consultation</span>
+      <h2 data-nx="online.h2" class="h2">For follow-ups, and for people who have moved away.</h2>
+      <p data-nx="online.p" class="lead" style="margin-top:1rem">Many of our patients now live in other cities or abroad. The first visit is best done in person; after that, most follow-ups work well on a video call.</p>
+      <ol data-nx-list="online.online-steps" class="online__steps">
+        <li data-nx-item><span data-nx-f="n" class="n">1</span><div><h3 data-nx-f="h3">Send a message</h3><p data-nx-f="p">WhatsApp your name, the doctor you see, and two time slots that suit you. Pay &#8377;400 by UPI to confirm.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">2</span><div><h3 data-nx-f="h3">Share photos and reports</h3><p data-nx-f="p">For skin, clear photos in daylight. For anything else, the latest reports as PDF or photo. Send them the day before.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">3</span><div><h3 data-nx-f="h3">The call</h3><p data-nx-f="p">Twenty minutes on WhatsApp video or a normal phone call. The doctor writes the prescription and sends it as a photo the same evening.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">4</span><div><h3 data-nx-f="h3">Medicines reach you</h3><p data-nx-f="p">Collect from the clinic, or we courier them. Payment for medicines and courier by UPI after dispatch.</p></div></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="section" id="medicines">
+<section data-nx-section="medicines" class="section" id="medicines">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Medicines</span>
-      <h2 class="h2">Dispensed from the clinic, so you walk out with everything.</h2>
+      <span data-nx="medicines.kicker" class="kicker">Medicines</span>
+      <h2 data-nx="medicines.h2" class="h2">Dispensed from the clinic, so you walk out with everything.</h2>
     </div>
-    <ul class="meds reveal">
-      <li><img src="/demo/homeopathy/images/dropper-bottles.jpg" width="1200" height="1800" alt="Brown glass dropper bottles standing on a white shelf" loading="lazy"><div><h3>Homeopathic dilutions</h3><p>Liquid and globules, from licensed makers, labelled with potency and dose</p></div></li>
-      <li><img src="/demo/homeopathy/images/bottle-leaves.jpg" width="1200" height="1800" alt="A brown glass bottle with fresh green leaves on a wooden table" loading="lazy"><div><h3>Ayurvedic preparations</h3><p>Churnas, tablets, kadhas and oils from GMP-certified companies</p></div></li>
-      <li><img src="/demo/homeopathy/images/turmeric.jpg" width="1200" height="800" alt="Fresh turmeric roots and turmeric powder on a dark plate" loading="lazy"><div><h3>Kitchen prescriptions</h3><p>Turmeric, ginger, jeera, methi: what to take, how much, and when</p></div></li>
-      <li><img src="/demo/homeopathy/images/tulsi.jpg" width="1200" height="1800" alt="A tulsi plant with small flower spikes in a garden" loading="lazy"><div><h3>Plants you can grow</h3><p>Tulsi, aloe and neem; the doctor tells you if and how they fit your case</p></div></li>
+    <ul data-nx-list="medicines.meds" class="meds reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/dropper-bottles.jpg" width="1200" height="1800" alt="Brown glass dropper bottles standing on a white shelf" loading="lazy"><div><h3 data-nx-f="h3">Homeopathic dilutions</h3><p data-nx-f="p">Liquid and globules, from licensed makers, labelled with potency and dose</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/bottle-leaves.jpg" width="1200" height="1800" alt="A brown glass bottle with fresh green leaves on a wooden table" loading="lazy"><div><h3 data-nx-f="h3">Ayurvedic preparations</h3><p data-nx-f="p">Churnas, tablets, kadhas and oils from GMP-certified companies</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/turmeric.jpg" width="1200" height="800" alt="Fresh turmeric roots and turmeric powder on a dark plate" loading="lazy"><div><h3 data-nx-f="h3">Kitchen prescriptions</h3><p data-nx-f="p">Turmeric, ginger, jeera, methi: what to take, how much, and when</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/tulsi.jpg" width="1200" height="1800" alt="A tulsi plant with small flower spikes in a garden" loading="lazy"><div><h3 data-nx-f="h3">Plants you can grow</h3><p data-nx-f="p">Tulsi, aloe and neem; the doctor tells you if and how they fit your case</p></div></li>
     </ul>
-    <div class="meds__text reveal">
-      <p>We do not sell medicines over the counter without a consultation, and we do not stock anything we have not prescribed ourselves. Every bottle has the patient's name, the medicine, the potency or strength, and the dose written on it. Medicines are kept away from sunlight and strong smells, and we ask you to do the same at home.</p>
-      <p>A month of homeopathic medicine usually costs &#8377;150 to &#8377;300. Ayurvedic medicines cost more, &#8377;300 to &#8377;600 a month, because of the quantities. The price is told to you before the bottles are packed. If you prefer to buy from a shop outside, the prescription is yours to take.</p>
+    <div data-nx-list="medicines.meds-text" class="meds__text reveal">
+      <p data-nx-f="p" data-nx-item>We do not sell medicines over the counter without a consultation, and we do not stock anything we have not prescribed ourselves. Every bottle has the patient's name, the medicine, the potency or strength, and the dose written on it. Medicines are kept away from sunlight and strong smells, and we ask you to do the same at home.</p>
+      <p data-nx-f="p" data-nx-item>A month of homeopathic medicine usually costs &#8377;150 to &#8377;300. Ayurvedic medicines cost more, &#8377;300 to &#8377;600 a month, because of the quantities. The price is told to you before the bottles are packed. If you prefer to buy from a shop outside, the prescription is yours to take.</p>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="gallery">
+<section data-nx-section="gallery" class="section section--deep" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">The clinic</span>
-      <h2 class="h2">A ground-floor room, a dispensary, and a courtyard with a tulsi plant.</h2>
+      <span data-nx="gallery.kicker" class="kicker">The clinic</span>
+      <h2 data-nx="gallery.h2" class="h2">A ground-floor room, a dispensary, and a courtyard with a tulsi plant.</h2>
       <div class="rule"></div>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/homeopathy/images/mortar-bottle.jpg" width="1200" height="1800" alt="Flowers and leaves beside a mortar, pestle and glass bottle" loading="lazy"></li>
-      <li><img src="/demo/homeopathy/images/garlic-ginger.jpg" width="1200" height="1800" alt="Garlic, ginger and herbal capsules laid out on a table" loading="lazy"></li>
-      <li><img src="/demo/homeopathy/images/amla.jpg" width="1200" height="921" alt="Fresh amla fruit on the branch" loading="lazy"></li>
-      <li><img src="/demo/homeopathy/images/consultation.jpg" width="1200" height="800" alt="The doctor examines a patient at the consulting table" loading="lazy"></li>
-      <li><img src="/demo/homeopathy/images/herbs-mortar.jpg" width="1200" height="800" alt="Dried herbs being mixed by hand in a stone mortar" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/mortar-bottle.jpg" width="1200" height="1800" alt="Flowers and leaves beside a mortar, pestle and glass bottle" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/garlic-ginger.jpg" width="1200" height="1800" alt="Garlic, ginger and herbal capsules laid out on a table" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/amla.jpg" width="1200" height="921" alt="Fresh amla fruit on the branch" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/consultation.jpg" width="1200" height="800" alt="The doctor examines a patient at the consulting table" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/homeopathy/images/herbs-mortar.jpg" width="1200" height="800" alt="Dried herbs being mixed by hand in a stone mortar" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap two">
     <div class="reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2" style="margin-bottom:1.5rem">Asked at the desk most weeks.</h2>
-      <div class="faq">
-        <details><summary>How long before I see a change?</summary><div class="a">It depends on how long you have had the problem. A recent cold or a stomach upset may settle in days. Skin and allergy that have been there for years usually take months, and we tell you a realistic timeline on the first day. We cannot promise a result, and we will not pretend to.</div></details>
-        <details><summary>Can I take these medicines with my allopathic ones?</summary><div class="a">In most cases yes, and we ask you to continue them. Bring the full list. If anything should be spaced out, the doctor writes the timing. Never stop a sugar, pressure, thyroid or heart medicine without your physician.</div></details>
-        <details><summary>Do I have to give up tea, onion or garlic?</summary><div class="a">No. Keep a gap of fifteen minutes between the homeopathic medicine and strong tastes like coffee, mint or camphor. The ayurvedic diet sheet may ask you to cut down on some foods for a while; it says which and for how long.</div></details>
-        <details><summary>Is homeopathy safe for babies and in pregnancy?</summary><div class="a">The medicines are given in very small doses and are widely used for both. Tell the doctor if you are pregnant or breastfeeding, and keep your obstetrician informed of anything you take.</div></details>
-        <details><summary>Do you treat serious illness like cancer or kidney failure?</summary><div class="a">No. For those we support comfort alongside hospital treatment only if the treating doctor agrees. We do not take anyone off hospital treatment, and we say this clearly to any family who asks.</div></details>
-        <details><summary>Do I need an appointment?</summary><div class="a">Yes, because a first visit takes half an hour. Message or call; same-week slots are usually available. Follow-ups can walk in during chamber hours and wait their turn.</div></details>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2" style="margin-bottom:1.5rem">Asked at the desk most weeks.</h2>
+      <div data-nx-list="faq.faq" class="faq">
+        <details data-nx-item><summary data-nx-f="summary">How long before I see a change?</summary><div data-nx-f="a" class="a">It depends on how long you have had the problem. A recent cold or a stomach upset may settle in days. Skin and allergy that have been there for years usually take months, and we tell you a realistic timeline on the first day. We cannot promise a result, and we will not pretend to.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Can I take these medicines with my allopathic ones?</summary><div data-nx-f="a" class="a">In most cases yes, and we ask you to continue them. Bring the full list. If anything should be spaced out, the doctor writes the timing. Never stop a sugar, pressure, thyroid or heart medicine without your physician.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Do I have to give up tea, onion or garlic?</summary><div data-nx-f="a" class="a">No. Keep a gap of fifteen minutes between the homeopathic medicine and strong tastes like coffee, mint or camphor. The ayurvedic diet sheet may ask you to cut down on some foods for a while; it says which and for how long.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Is homeopathy safe for babies and in pregnancy?</summary><div data-nx-f="a" class="a">The medicines are given in very small doses and are widely used for both. Tell the doctor if you are pregnant or breastfeeding, and keep your obstetrician informed of anything you take.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Do you treat serious illness like cancer or kidney failure?</summary><div data-nx-f="a" class="a">No. For those we support comfort alongside hospital treatment only if the treating doctor agrees. We do not take anyone off hospital treatment, and we say this clearly to any family who asks.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Do I need an appointment?</summary><div data-nx-f="a" class="a">Yes, because a first visit takes half an hour. Message or call; same-week slots are usually available. Follow-ups can walk in during chamber hours and wait their turn.</div></details>
       </div>
     </div>
     <div class="reveal">
-      <span class="kicker">Patients say</span>
-      <h2 class="h2" style="margin-bottom:1.5rem">Two notes, in their own words.</h2>
-      <blockquote class="quote"><p>My daughter's eczema has been much calmer for the last eight months. What I valued most was that the doctor told us on day one it would take time, and it did.</p><footer>Sudeshna <span>&middot; Tollygunge</span></footer></blockquote>
-      <blockquote class="quote"><p>I came for acidity and left with a diet sheet I could actually follow. Three months on, I take half the antacids I used to. The doctor also sent me for an endoscopy first, which I appreciated.</p><footer>Prasenjit <span>&middot; Ranikuthi</span></footer></blockquote>
+      <span data-nx="faq.kicker2" class="kicker">Patients say</span>
+      <h2 data-nx="faq.h22" class="h2" style="margin-bottom:1.5rem">Two notes, in their own words.</h2>
+      <blockquote class="quote"><p data-nx="faq.p">My daughter's eczema has been much calmer for the last eight months. What I valued most was that the doctor told us on day one it would take time, and it did.</p><footer>Sudeshna <span data-nx="faq.span">&middot; Tollygunge</span></footer></blockquote>
+      <blockquote class="quote"><p data-nx="faq.p2">I came for acidity and left with a diet sheet I could actually follow. Three months on, I take half the antacids I used to. The doctor also sent me for an endoscopy first, which I appreciated.</p><footer>Prasenjit <span data-nx="faq.span2">&middot; Ranikuthi</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="visit">
+<section data-nx-section="visit" class="section section--deep" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the clinic</span>
-      <h2 class="h2">N.S.C. Bose Road, five minutes from Tollygunge metro.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the clinic</span>
+      <h2 data-nx="visit.h2" class="h2">N.S.C. Bose Road, five minutes from Tollygunge metro.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>23 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=23%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">23 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=23%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Chamber hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday, morning</td><td>9:00 am &ndash; 1:00 pm</td></tr>
-              <tr><td>Monday to Saturday, evening</td><td>5:00 pm &ndash; 8:30 pm</td></tr>
-              <tr><td>Sunday</td><td>9:00 am &ndash; 12:00 noon</td></tr>
-              <tr><td>Dr. Mitra (Ayurveda)</td><td>Mon, Wed, Fri, Sat</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Chamber hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday, morning</td><td data-nx-f="td2">9:00 am &ndash; 1:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday, evening</td><td data-nx-f="td2">5:00 pm &ndash; 8:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">9:00 am &ndash; 12:00 noon</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Dr. Mitra (Ayurveda)</td><td data-nx-f="td2">Mon, Wed, Fri, Sat</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Ground floor, no steps. Messages answered 9 am to 8:30 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Ground floor, no steps. Messages answered 9 am to 8:30 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--sage" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Arogya%20Niketan%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -567,10 +572,10 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Half an hour, <em>no hurry,</em> and a plain answer.</h2>
-    <p>Send your name, the complaint in one line, and a time that suits you. We confirm the slot the same day.</p>
+    <h2 data-nx="book.h2">Half an hour, <em>no hurry,</em> and a plain answer.</h2>
+    <p data-nx="book.p">Send your name, the complaint in one line, and a time that suits you. We confirm the slot the same day.</p>
     <div class="final__cta">
       <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Arogya%20Niketan%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -585,32 +590,32 @@ table{border-collapse:collapse;width:100%}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#D7C3A6"/><path d="M22 34c0-10 4-16 12-20-2 10-6 16-12 20Z" fill="#4F6B4A"/><path d="M22 34c0-10-4-16-12-20 2 10 6 16 12 20Z" fill="#36503A"/><path d="M22 34V22" stroke="#F4F1E8" stroke-width="1.5" stroke-linecap="round"/></svg>
-          <span><b>Arogya Niketan</b><small>Homeopathy &amp; Ayurveda &middot; Tollygunge</small></span>
+          <span><b data-nx="footer.b">Arogya Niketan</b><small data-nx="footer.small">Homeopathy &amp; Ayurveda &middot; Tollygunge</small></span>
         </a>
-        <p>Homeopathy and ayurveda clinic since 2008. Thirty-minute consultations, medicines from the clinic, and no promises we cannot keep.</p>
+        <p data-nx="footer.p">Homeopathy and ayurveda clinic since 2008. Thirty-minute consultations, medicines from the clinic, and no promises we cannot keep.</p>
       </div>
       <div>
-        <h4>On this page</h4>
-        <ul>
-          <li><a href="#doctors">The doctors</a></li>
-          <li><a href="#conditions">What we commonly see</a></li>
-          <li><a href="#how">A first consultation</a></li>
-          <li><a href="#online">Online consultation</a></li>
-          <li><a href="#faq">Common questions</a></li>
+        <h4 data-nx="footer.h4">On this page</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#doctors">The doctors</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#conditions">What we commonly see</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#how">A first consultation</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#online">Online consultation</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Common questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>23 N.S.C. Bose Road, Tollygunge, Kolkata 700040</li>
+          <li data-nx="footer.li">23 N.S.C. Bose Road, Tollygunge, Kolkata 700040</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 9 am &ndash; 1 pm, 5 pm &ndash; 8:30 pm &middot; Sun 9 am &ndash; 12 noon</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 9 am &ndash; 1 pm, 5 pm &ndash; 8:30 pm &middot; Sun 9 am &ndash; 12 noon</li>
         </ul>
       </div>
     </div>
@@ -652,5 +657,7 @@ table{border-collapse:collapse;width:100%}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

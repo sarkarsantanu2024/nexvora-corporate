@@ -1,0 +1,1998 @@
+{
+  "site": "travel-agent",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bhraman Bilash Tours & Travels",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "packages",
+      "label": {
+        "en": "Five trips we run every month",
+        "bn": "Five trips we run every month"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "itinerary",
+      "label": {
+        "en": "What you do each day, and what each hotel grade costs",
+        "bn": "What you do each day, and what each hotel grade costs"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "sub",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rate-note",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "sub2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "rate-note2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "sub3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rate-note3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "sub4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td19",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td20",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td21",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td22",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td23",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td24",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rate-note4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "sub5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td25",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td26",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td27",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td28",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td29",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td30",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rate-note5",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-bar",
+          "label": {
+            "en": "What you do each day, and what each hotel grade costs",
+            "bn": "What you do each day, and what each hotel grade costs"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "days",
+          "label": {
+            "en": "Digha, 2 nights 3 days",
+            "bn": "Digha, 2 nights 3 days"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "days2",
+          "label": {
+            "en": "Puri, 3 nights 4 days",
+            "bn": "Puri, 3 nights 4 days"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "days3",
+          "label": {
+            "en": "Darjeeling, 3 nights 4 days",
+            "bn": "Darjeeling, 3 nights 4 days"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "days4",
+          "label": {
+            "en": "Gangtok, 4 nights 5 days",
+            "bn": "Gangtok, 4 nights 5 days"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "days5",
+          "label": {
+            "en": "Andaman, 5 nights 6 days",
+            "bn": "Andaman, 5 nights 6 days"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "included",
+      "label": {
+        "en": "What the price covers, and what it does not",
+        "bn": "What the price covers, and what it does not"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Not going on a package? We still do the small jobs",
+        "bn": "Not going on a package? We still do the small jobs"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "svc",
+          "label": {
+            "en": "Not going on a package? We still do the small jobs",
+            "bn": "Not going on a package? We still do the small jobs"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chardham",
+      "label": {
+        "en": "Char Dham, 11 nights 12 days, from Haridwar",
+        "bn": "Char Dham, 11 nights 12 days, from Haridwar"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1304"
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "dham-list",
+          "label": {
+            "en": "Char Dham, 11 nights 12 days, from Haridwar",
+            "bn": "Char Dham, 11 nights 12 days, from Haridwar"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "label": {
+        "en": "Four steps. The first two cost nothing",
+        "bn": "Four steps. The first two cost nothing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "stepper",
+          "label": {
+            "en": "Four steps. The first two cost nothing",
+            "bn": "Four steps. The first two cost nothing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you send the advance",
+        "bn": "Before you send the advance"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Before you send the advance",
+            "bn": "Before you send the advance"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "Two trips from last year",
+        "bn": "Two trips from last year"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two trips from last year",
+            "bn": "Two trips from last year"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Photos sent back by travellers",
+        "bn": "Photos sent back by travellers"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Photos sent back by travellers",
+            "bn": "Photos sent back by travellers"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rashbehari Avenue, opposite Gariahat market",
+        "bn": "On Rashbehari Avenue, opposite Gariahat market"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "label": {
+        "en": "Send your dates. Get a price per person by tomorrow",
+        "bn": "Send your dates. Get a price per person by tomorrow"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Trips",
+            "bn": "Trips"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bhraman Bilash",
+      "small": "Tours & Travels · Gariahat"
+    },
+    "top": {
+      "hero-tag": "<span></span>Family tours from Kolkata since 2009",
+      "h1": "Digha to Darjeeling, <em>Puri to Port Blair.</em> One office, one price, no surprises.",
+      "p": "We plan the whole trip: train or flight, hotel, car, sightseeing. You get one written quote per person before you pay anything. Office in Gariahat, open six days a week.",
+      "button": "See the packages",
+      "photo": {
+        "src": "/demo/travel-agent/images/hero.jpg",
+        "alt": "Tea gardens on rolling hills near Darjeeling at sunset, with a family walking along the ridge"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "16",
+            "span": "years in business"
+          },
+          {
+            "b": "5",
+            "span": "fixed packages, prices shown"
+          },
+          {
+            "b": "50%",
+            "span": "advance, rest before travel"
+          }
+        ]
+      }
+    },
+    "packages": {
+      "kicker": "Packages",
+      "h2": "Five trips we run every month.",
+      "p": "Prices are per person on twin sharing, in a standard hotel. Children under 5 travel free; 5 to 11 pay 60%."
+    },
+    "itinerary": {
+      "kicker": "Day by day",
+      "h2": "What you do each day, and what each hotel grade costs.",
+      "p": "Pick a destination. Standard means a clean 2-star hotel with AC. Deluxe means a 3-star hotel with breakfast and dinner.",
+      "h3": "Digha, 2 nights 3 days",
+      "sub": "Leaves Kolkata every Friday and on request for groups of 8 or more.",
+      "th": "Hotel grade",
+      "th2": "Per person",
+      "td": "Standard, AC, breakfast",
+      "td2": "₹4,500",
+      "td3": "Deluxe, sea-facing, breakfast and dinner",
+      "td4": "₹6,200",
+      "td5": "Private car instead of bus (per car, 4 seats)",
+      "td6": "+ ₹5,500",
+      "rate-note": "Weekend and holiday dates cost ₹600 more per person.",
+      "h32": "Puri, 3 nights 4 days",
+      "sub2": "Train from Howrah overnight. Hotel within walking distance of the sea.",
+      "th3": "Hotel grade",
+      "th4": "Per person",
+      "td7": "Standard, sleeper class train",
+      "td8": "₹7,500",
+      "td9": "Standard, 3AC train",
+      "td10": "₹9,200",
+      "td11": "Deluxe, 3AC train, breakfast and dinner",
+      "td12": "₹11,800",
+      "rate-note2": "Rath Yatra week: hotel prices double, book 3 months ahead.",
+      "h33": "Darjeeling, 3 nights 4 days",
+      "sub3": "Train to New Jalpaiguri, shared car up to Darjeeling. Warm clothes needed October to March.",
+      "th5": "Hotel grade",
+      "th6": "Per person",
+      "td13": "Standard, shared car, 3AC train",
+      "td14": "₹11,500",
+      "td15": "Deluxe, private car, breakfast and dinner",
+      "td16": "₹15,800",
+      "td17": "Add Mirik and Kurseong day (per person)",
+      "td18": "+ ₹1,400",
+      "rate-note3": "Pujo week and Christmas week: add ₹2,000 per person.",
+      "h34": "Gangtok, 4 nights 5 days",
+      "sub4": "Permits for Tsomgo and Nathula are arranged by us. Carry two passport photos and a voter card or Aadhaar.",
+      "th7": "Hotel grade",
+      "th8": "Per person",
+      "td19": "Standard, shared car, 3AC train",
+      "td20": "₹16,500",
+      "td21": "Deluxe, private car, breakfast and dinner",
+      "td22": "₹22,500",
+      "td23": "Add 2 nights Lachung and Yumthang valley",
+      "td24": "+ ₹7,500",
+      "rate-note4": "Nathula permit costs ₹300 extra per person and is not refundable if the pass is shut.",
+      "h35": "Andaman, 5 nights 6 days",
+      "sub5": "Flights from Kolkata to Port Blair are booked separately and cost ₹9,000 to ₹16,000 return depending on the month.",
+      "th9": "Hotel grade",
+      "th10": "Per person",
+      "td25": "Standard, government ferry",
+      "td26": "₹28,000",
+      "td27": "Deluxe, private cruise ferry, breakfast and dinner",
+      "td28": "₹39,500",
+      "td29": "Scuba dive at Havelock (one dive)",
+      "td30": "+ ₹4,000",
+      "rate-note5": "Best months: November to April. Ferries are often cancelled in the monsoon.",
+      "tabs-bar": {
+        "items": [
+          {
+            "label": "Digha"
+          },
+          {
+            "label": "Puri"
+          },
+          {
+            "label": "Darjeeling"
+          },
+          {
+            "label": "Gangtok"
+          },
+          {
+            "label": "Andaman"
+          }
+        ]
+      },
+      "days": {
+        "items": [
+          {
+            "b": "Day 1",
+            "span": "AC bus from Esplanade at 7 am. Check in by 1 pm. Evening at Old Digha beach."
+          },
+          {
+            "b": "Day 2",
+            "span": "Car to Mandarmani and Talsari. Marine aquarium on the way back. Night at the hotel."
+          },
+          {
+            "b": "Day 3",
+            "span": "Morning at New Digha beach and market. Bus leaves 2 pm, Kolkata by 7 pm."
+          }
+        ]
+      },
+      "days2": {
+        "items": [
+          {
+            "b": "Day 1",
+            "span": "Overnight train from Howrah. Reach Puri early morning, check in, rest. Evening beach and Jagannath temple darshan."
+          },
+          {
+            "b": "Day 2",
+            "span": "Full-day car to Konark Sun Temple, Chandrabhaga beach and Ramchandi."
+          },
+          {
+            "b": "Day 3",
+            "span": "Chilika lake at Satapada, dolphin boat ride, Raghurajpur craft village."
+          },
+          {
+            "b": "Day 4",
+            "span": "Morning free for the market. Afternoon train back to Howrah."
+          }
+        ]
+      },
+      "days3": {
+        "items": [
+          {
+            "b": "Day 1",
+            "span": "Overnight train from Sealdah. Car from NJP, reach Darjeeling by afternoon. Mall Road walk."
+          },
+          {
+            "b": "Day 2",
+            "span": "Tiger Hill sunrise at 4 am, Ghoom monastery, Batasia Loop, then zoo, ropeway and tea garden."
+          },
+          {
+            "b": "Day 3",
+            "span": "Toy train joyride to Ghoom. Afternoon at Peace Pagoda and Happy Valley tea estate."
+          },
+          {
+            "b": "Day 4",
+            "span": "Car down to NJP, train home. Optional Mirik lake stop on the way."
+          }
+        ]
+      },
+      "days4": {
+        "items": [
+          {
+            "b": "Day 1",
+            "span": "Train to NJP, car to Gangtok (5 hours). Evening on MG Marg."
+          },
+          {
+            "b": "Day 2",
+            "span": "Tsomgo Lake and Baba Mandir. Nathula pass if the permit is granted (Wednesday to Sunday)."
+          },
+          {
+            "b": "Day 3",
+            "span": "Gangtok local: Rumtek monastery, Banjhakri falls, Tashi viewpoint, Ganesh Tok, flower show."
+          },
+          {
+            "b": "Day 4",
+            "span": "Day trip to Namchi, Char Dham replica and Samdruptse statue. Or a free day."
+          },
+          {
+            "b": "Day 5",
+            "span": "Car to NJP, train home."
+          }
+        ]
+      },
+      "days5": {
+        "items": [
+          {
+            "b": "Day 1",
+            "span": "Fly to Port Blair. Corbyn's Cove beach, Cellular Jail light and sound show."
+          },
+          {
+            "b": "Day 2",
+            "span": "Ferry to Havelock (Swaraj Dweep). Radhanagar beach for sunset."
+          },
+          {
+            "b": "Day 3",
+            "span": "Elephant beach by boat, snorkelling included. Evening free."
+          },
+          {
+            "b": "Day 4",
+            "span": "Ferry to Neil Island (Shaheed Dweep). Bharatpur, Laxmanpur and the natural bridge."
+          },
+          {
+            "b": "Day 5",
+            "span": "Ferry back to Port Blair. Ross Island and North Bay."
+          },
+          {
+            "b": "Day 6",
+            "span": "Fly home. Hotel check-out at 10 am, airport drop included."
+          }
+        ]
+      }
+    },
+    "included": {
+      "kicker": "Read this before you book",
+      "h2": "What the price covers, and what it does not.",
+      "p": "The same list applies to every package above. We write it on the quote too."
+    },
+    "services": {
+      "kicker": "Tickets and more",
+      "h2": "Not going on a package? We still do the small jobs.",
+      "p": "Walk in with your ID and dates. Most tickets are done while you wait.",
+      "svc": {
+        "items": [
+          {
+            "h3": "Train and flight tickets",
+            "p": "IRCTC bookings including Tatkal from 10 am sharp. Flights on every airline, with the fare shown to you before we book.",
+            "fee": "₹40 per train ticket · ₹200 per flight ticket"
+          },
+          {
+            "h3": "Hotel booking",
+            "p": "Hotels we have stayed in ourselves, at Digha, Puri, Darjeeling, Gangtok, Shillong and Port Blair. Confirmation on WhatsApp within an hour.",
+            "fee": "No fee. We earn from the hotel."
+          },
+          {
+            "h3": "Car hire",
+            "p": "AC sedan or 7-seater with driver, from Kolkata or at the destination. Fuel and driver's food included; tolls and parking extra.",
+            "fee": "Sedan ₹2,800 per day · 7-seater ₹3,800 per day (8 hours, 80 km)"
+          },
+          {
+            "h3": "Group and office tours",
+            "p": "Para clubs, school reunions, office outings. 20 to 60 people, one bus, one bill. We send a tour manager with groups of 30 or more.",
+            "fee": "Group rates from 10% below the per-person price"
+          },
+          {
+            "h3": "Passport and visa help",
+            "p": "We fill the passport form, book the PSK slot and check your documents. Tourist visas for Thailand, Singapore, Dubai, Nepal and Bhutan permits.",
+            "fee": "Passport form ₹500 · visa service ₹1,500 plus the embassy fee"
+          },
+          {
+            "h3": "Travel insurance",
+            "p": "Covers medical bills, lost baggage and trip cancellation. Needed for Andaman ferries and strongly advised for the hills.",
+            "fee": "From ₹180 per person for a 6-day trip"
+          }
+        ]
+      }
+    },
+    "chardham": {
+      "kicker": "Pilgrimage",
+      "h2": "Char Dham, 11 nights 12 days, from Haridwar.",
+      "p": "Yamunotri, Gangotri, Kedarnath and Badrinath in one trip, May to June and September to October. Our driver has done the route for nine seasons. Pony or palki at Kedarnath and Yamunotri is booked on the spot and paid by you.",
+      "p2": "The yatra registration, hotel at every halt, a Bengali cook who travels with the group, and a pick-up at Haridwar station are all included. Train from Howrah to Haridwar is booked separately so you can choose your class.",
+      "photo": {
+        "src": "/demo/travel-agent/images/kedarnath.jpg",
+        "alt": "Kedarnath temple with snow-covered Himalayan peaks behind it"
+      },
+      "b": "₹32,000",
+      "span": "per person, 2026 season",
+      "dham-list": {
+        "items": [
+          {
+            "li": "<b>&#8377;32,000</b>per person, twin sharing, 12 to 15 people"
+          },
+          {
+            "li": "<b>&#8377;3,500</b>extra for single room throughout"
+          },
+          {
+            "li": "<b>Helicopter</b>to Kedarnath on request, about &#8377;8,000 return"
+          },
+          {
+            "li": "<b>Age 65+</b>Fitness certificate from a doctor required"
+          }
+        ]
+      }
+    },
+    "booking": {
+      "kicker": "How to book",
+      "h2": "Four steps. The first two cost nothing.",
+      "stepper": {
+        "items": [
+          {
+            "h3": "Tell us dates and people",
+            "p": "WhatsApp or walk in. Give the destination, travel dates, number of adults and children, and whether you want train or flight."
+          },
+          {
+            "h3": "Get a written quote",
+            "p": "Within one working day you get a quote per person, with the hotel name, the train number and the included and not-included list."
+          },
+          {
+            "h3": "Pay 50% to confirm",
+            "p": "UPI, bank transfer or cash at the office. We book the tickets and the hotel the same day and send you the confirmations."
+          },
+          {
+            "h3": "Pay the rest, then travel",
+            "p": "Balance is due 7 days before departure. You get a printed itinerary, driver's number and our 24-hour number for the trip."
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Questions people ask",
+      "h2": "Before you send the advance.",
+      "faq": {
+        "items": [
+          {
+            "summary": "What if I cancel?",
+            "p": "More than 30 days before travel: full refund minus what the railway or airline keeps. 15 to 30 days: we keep 25% of the package. Under 15 days: we keep 50%. Under 72 hours: no refund, because the hotel does not refund us either. Every refund is paid within 7 working days."
+          },
+          {
+            "summary": "What do children pay?",
+            "p": "Under 5 years, sharing the parents' bed: free, you only pay the train or flight ticket if a seat is needed. 5 to 11 years with an extra bed: 60% of the adult price. 12 and above: adult price."
+          },
+          {
+            "summary": "What if the train ticket is waitlisted?",
+            "p": "We book the day the window opens, 60 days ahead, so most tickets confirm. If a ticket is still waitlisted 7 days before, we tell you and offer a bus, a different train, or a full refund of that package. We never make you travel on a waitlisted ticket."
+          },
+          {
+            "summary": "Can I change the dates or the hotel?",
+            "p": "Yes. Every package can run on your own dates for 2 people or more. You can pick a different hotel from our list, or name one you know; we quote the difference. Honeymoon rooms and ground-floor rooms for elderly travellers are arranged on request."
+          },
+          {
+            "summary": "How do I pay, and do I get a receipt?",
+            "p": "UPI, bank transfer, debit card at the office, or cash. Every payment gets a printed receipt with a GST invoice. We do not take payment on any personal UPI number; the name on the UPI is always Bhraman Bilash Tours and Travels."
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "kicker": "What travellers say",
+      "h2": "Two trips from last year.",
+      "quotes": {
+        "items": [
+          {
+            "p": "Took my parents to Puri in March. The hotel was the one in the quote, the car came on time every day, and when Baba felt unwell the driver took us to a doctor without being asked.",
+            "span": "· Jadavpur"
+          },
+          {
+            "p": "Our office went to Gangtok, 34 people. One bill, one bus, permits all done beforehand. Nathula was shut that day and they refunded the permit money the same week.",
+            "span": "· Salt Lake Sector V"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "From our trips",
+      "h2": "Photos sent back by travellers.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/sikkim.jpg",
+              "alt": "Kangchenjunga peaks above a Sikkim valley"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/toy-train.jpg",
+              "alt": "Darjeeling toy train on the hill track"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/puri-pilgrims.jpg",
+              "alt": "Two pilgrims in orange walking along Puri beach"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/digha-boats.jpg",
+              "alt": "Fishermen pulling a net at Digha beach at sunrise"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/ropeway.jpg",
+              "alt": "Darjeeling ropeway cabin above tea gardens"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/andaman-aerial.jpg",
+              "alt": "Aerial view of Jolly Buoy island beach in the Andamans"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/family-beach.jpg",
+              "alt": "A father and two children by a fishing boat on the beach"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/travel-agent/images/yumthang.jpg",
+              "alt": "Yumthang valley in North Sikkim"
+            }
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "The office",
+      "h2": "On Rashbehari Avenue, opposite Gariahat market.",
+      "b": "Address",
+      "p": "14B Rashbehari Avenue, 1st floor, Gariahat<br>Kolkata 700019",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone",
+      "p2": "Same number on WhatsApp. Travellers on a trip can call it any hour.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:00 am – 8:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "11:00 am – 3:00 pm"
+          },
+          {
+            "td": "Tatkal booking",
+            "td2": "From 9:45 am, every day"
+          }
+        ]
+      }
+    },
+    "quote": {
+      "h2": "Send your dates. Get a price per person by tomorrow.",
+      "p": "Destination, dates, how many adults and children. That is all we need to send a written quote."
+    },
+    "footer": {
+      "b": "Bhraman Bilash",
+      "small": "Tours & Travels · Gariahat",
+      "p": "Family tours to the sea and the hills, tickets, hotels and cars, from one office in Gariahat since 2009.",
+      "h4": "Trips",
+      "h42": "Find us",
+      "li": "14B Rashbehari Avenue, Gariahat, Kolkata 700019",
+      "li2": "Mon–Sat 10 am – 8 pm · Sun 11 am – 3 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Packages and prices"
+          },
+          {
+            "button": "Day-by-day plans"
+          },
+          {
+            "button": "Char Dham pilgrimage"
+          },
+          {
+            "button": "Tickets, hotels, cars"
+          },
+          {
+            "button": "Cancellation and payment"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bhraman Bilash Tours & Travels sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Bhraman Bilash Tours & Travels | Digha, Puri, Darjeeling, Sikkim and Andaman packages from Gariahat",
+      "description": "Family tour packages to Digha, Puri, Darjeeling, Gangtok and Andaman with per-person prices. Train and flight tickets, hotel booking, car hire, passport and visa help. Office in Gariahat, Kolkata."
+    }
+  }
+}

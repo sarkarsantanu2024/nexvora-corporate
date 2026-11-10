@@ -293,25 +293,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: readable small print and finger-sized links */
+@media (max-width:760px){
+  .brand small{font-size:.75rem}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+}
 </style>
+<meta name="nx-site" content="spoken-english">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Uttaran%20Spoken%20English%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Uttaran Spoken English Centre, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#1F3A93"/><path d="M10 30c0-6 4-10 10-10h6l-2 4h-4c-3 0-5 2-5 5v3h-5v-2Z" fill="#FFC72C"/><circle cx="29" cy="15" r="5" fill="#FFFFFF"/><path d="M24 33h10" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/></svg>
-      <span><b>Uttaran Spoken English</b><small>Baguiati &middot; since 2014</small></span>
+      <span><b data-nx="header.b">Uttaran Spoken English</b><small data-nx="header.small">Baguiati &middot; since 2014</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -335,152 +341,152 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
-  <div class="hero__bg" aria-hidden="true"><img src="/demo/spoken-english/images/hero.jpg" width="1200" height="800" alt="" fetchpriority="high"></div>
+<section data-nx-section="top" class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"><img data-nx="top.photo" src="/demo/spoken-english/images/hero.jpg" width="1200" height="800" alt="" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero__in">
-      <p class="hero__pill">First demo class is free. No fee, no form.</p>
-      <h1>Speak English <span>without stopping to think</span> in three months.</h1>
-      <p>A small centre on VIP Road for students, housewives and job seekers. Ten people to a batch, so everyone speaks in every class. Morning, evening and weekend timings. Teachers who explain in Bengali when you are stuck.</p>
+      <p data-nx="top.hero-pill" class="hero__pill">First demo class is free. No fee, no form.</p>
+      <h1 data-nx="top.h1">Speak English <span>without stopping to think</span> in three months.</h1>
+      <p data-nx="top.p">A small centre on VIP Road for students, housewives and job seekers. Ten people to a batch, so everyone speaks in every class. Morning, evening and weekend timings. Teachers who explain in Bengali when you are stuck.</p>
       <div class="hero__cta">
         <a class="btn btn--accent" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Uttaran%20Spoken%20English%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a free demo class
         </a>
-        <a class="btn btn--ghost-light" href="#fees">See course fees</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#fees">See course fees</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>10</b><span>Students per batch, never more</span></li>
-        <li><b>3 months</b><span>One course, start to finish</span></li>
-        <li><b>7 am to 9 pm</b><span>Batches through the day</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">10</b><span data-nx-f="span">Students per batch, never more</span></li>
+        <li data-nx-item><b data-nx-f="b">3 months</b><span data-nx-f="span">One course, start to finish</span></li>
+        <li data-nx-item><b data-nx-f="b">7 am to 9 pm</b><span data-nx-f="span">Batches through the day</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="who">
+<section data-nx-section="who" class="section" id="who">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Who joins</span>
-      <h2 class="h2">Three kinds of people sit in our classes.</h2>
-      <p class="lead" style="margin:1rem auto 0">Each has a different reason, so we keep separate batches where it helps. A college student and a housewife returning to work are not taught the same way.</p>
+      <span data-nx="who.kicker" class="kicker">Who joins</span>
+      <h2 data-nx="who.h2" class="h2">Three kinds of people sit in our classes.</h2>
+      <p data-nx="who.p" class="lead" style="margin:1rem auto 0">Each has a different reason, so we keep separate batches where it helps. A college student and a housewife returning to work are not taught the same way.</p>
     </div>
-    <ul class="who">
-      <li class="reveal"><img src="/demo/spoken-english/images/girls-classroom.jpg" width="1200" height="800" alt="A classroom of schoolgirls in white uniforms listening to a lesson" loading="lazy"><div><h3>School and college students</h3><p>Class 8 upwards. For viva, presentations, college interviews and simply to stop being scared of the English-medium crowd. Grammar fixed on the way, not taught as a separate subject.</p><span class="tag">Evening and weekend batches</span></div></li>
-      <li class="reveal"><img src="/demo/spoken-english/images/women-batch.jpg" width="1200" height="800" alt="A group of women in sarees attending a class in front of a blackboard" loading="lazy"><div><h3>Housewives and returning mothers</h3><p>A women-only morning batch at 11. For parent-teacher meetings, the bank, the doctor, travel, and going back to work after a gap. Many start from zero. That is fine.</p><span class="tag">Women-only batch, 11 am</span></div></li>
-      <li class="reveal"><img src="/demo/spoken-english/images/mock-interview.jpg" width="1200" height="1800" alt="A woman in a blazer speaking with a man in a suit during an interview" loading="lazy"><div><h3>Job seekers and working people</h3><p>Interview answers, self-introduction, telephone English, writing a plain email. Mock interviews every Saturday with feedback on the spot. Early morning and late evening batches.</p><span class="tag">7 am and 8 pm batches</span></div></li>
+    <ul data-nx-list="who.who" class="who">
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/spoken-english/images/girls-classroom.jpg" width="1200" height="800" alt="A classroom of schoolgirls in white uniforms listening to a lesson" loading="lazy"><div><h3 data-nx-f="h3">School and college students</h3><p data-nx-f="p">Class 8 upwards. For viva, presentations, college interviews and simply to stop being scared of the English-medium crowd. Grammar fixed on the way, not taught as a separate subject.</p><span data-nx-f="tag" class="tag">Evening and weekend batches</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/spoken-english/images/women-batch.jpg" width="1200" height="800" alt="A group of women in sarees attending a class in front of a blackboard" loading="lazy"><div><h3 data-nx-f="h3">Housewives and returning mothers</h3><p data-nx-f="p">A women-only morning batch at 11. For parent-teacher meetings, the bank, the doctor, travel, and going back to work after a gap. Many start from zero. That is fine.</p><span data-nx-f="tag" class="tag">Women-only batch, 11 am</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/spoken-english/images/mock-interview.jpg" width="1200" height="1800" alt="A woman in a blazer speaking with a man in a suit during an interview" loading="lazy"><div><h3 data-nx-f="h3">Job seekers and working people</h3><p data-nx-f="p">Interview answers, self-introduction, telephone English, writing a plain email. Mock interviews every Saturday with feedback on the spot. Early morning and late evening batches.</p><span data-nx-f="tag" class="tag">7 am and 8 pm batches</span></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--soft" id="levels">
+<section data-nx-section="levels" class="section section--soft" id="levels">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Levels</span>
-      <h2 class="h2">From the first sentence to the interview chair.</h2>
-      <p class="lead" style="margin-top:1rem">Everyone gives a short speaking test on the demo day. We put you in the level that fits, not in whichever batch has a seat.</p>
+      <span data-nx="levels.kicker" class="kicker">Levels</span>
+      <h2 data-nx="levels.h2" class="h2">From the first sentence to the interview chair.</h2>
+      <p data-nx="levels.p" class="lead" style="margin-top:1rem">Everyone gives a short speaking test on the demo day. We put you in the level that fits, not in whichever batch has a seat.</p>
     </div>
-    <ol class="levels reveal">
-      <li><h3>Beginner</h3><p class="for">For those who cannot form a sentence</p><p>Everyday words, simple present and past, asking and answering questions. Spoken in class from day one, reading and writing kept small.</p></li>
-      <li><h3>Intermediate</h3><p class="for">Can speak, but slowly and with mistakes</p><p>Tenses sorted out, common mistakes Bengali speakers make, longer answers, telling a story, describing your work and your day.</p></li>
-      <li><h3>Fluent conversation</h3><p class="for">Speaks, but wants to sound natural</p><p>Group discussion, debate, telephone English, pronunciation of the sounds we usually get wrong, idioms people actually use.</p></li>
-      <li><h3>Interview-ready</h3><p class="for">Has a job interview or campus placement coming</p><p>Self-introduction, HR questions, body language, dress, email writing, mock interview on camera with playback. Personality development is in this level.</p></li>
+    <ol data-nx-list="levels.levels" class="levels reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Beginner</h3><p data-nx-f="for" class="for">For those who cannot form a sentence</p><p data-nx-f="p">Everyday words, simple present and past, asking and answering questions. Spoken in class from day one, reading and writing kept small.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Intermediate</h3><p data-nx-f="for" class="for">Can speak, but slowly and with mistakes</p><p data-nx-f="p">Tenses sorted out, common mistakes Bengali speakers make, longer answers, telling a story, describing your work and your day.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Fluent conversation</h3><p data-nx-f="for" class="for">Speaks, but wants to sound natural</p><p data-nx-f="p">Group discussion, debate, telephone English, pronunciation of the sounds we usually get wrong, idioms people actually use.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Interview-ready</h3><p data-nx-f="for" class="for">Has a job interview or campus placement coming</p><p data-nx-f="p">Self-introduction, HR questions, body language, dress, email writing, mock interview on camera with playback. Personality development is in this level.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section" id="batches">
+<section data-nx-section="batches" class="section" id="batches">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Batch timings</span>
-      <h2 class="h2">Pick the time, we keep the seat.</h2>
-      <p class="lead" style="margin-top:1rem">Each batch runs three days a week for one hour. Ten students is the limit. If a batch is full we tell you the next start date rather than squeezing you in.</p>
+      <span data-nx="batches.kicker" class="kicker">Batch timings</span>
+      <h2 data-nx="batches.h2" class="h2">Pick the time, we keep the seat.</h2>
+      <p data-nx="batches.p" class="lead" style="margin-top:1rem">Each batch runs three days a week for one hour. Ten students is the limit. If a batch is full we tell you the next start date rather than squeezing you in.</p>
     </div>
     <div class="batches">
       <div class="batch reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="4"/><path d="M12 3v2M4.2 7.2l1.4 1.4M2 13h2M20 13h2M18.4 7.2 17 8.6M3 20h18"/></svg>
-        <h3>Morning</h3>
-        <p class="time">7 am &middot; 9 am &middot; 11 am</p>
-        <ul><li>7 am: office-goers and job seekers</li><li>9 am: college students</li><li>11 am: women-only batch</li><li>Mon, Wed, Fri or Tue, Thu, Sat</li></ul>
+        <h3 data-nx="batches.h3">Morning</h3>
+        <p data-nx="batches.time" class="time">7 am &middot; 9 am &middot; 11 am</p>
+        <ul data-nx-list="batches.list"><li data-nx-f="li" data-nx-item>7 am: office-goers and job seekers</li><li data-nx-f="li" data-nx-item>9 am: college students</li><li data-nx-f="li" data-nx-item>11 am: women-only batch</li><li data-nx-f="li" data-nx-item>Mon, Wed, Fri or Tue, Thu, Sat</li></ul>
       </div>
       <div class="batch reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 16a9 9 0 0 1 18 0M12 7V5M5 9 4 8M19 9l1-1M2 20h20"/></svg>
-        <h3>Evening</h3>
-        <p class="time">5 pm &middot; 6:30 pm &middot; 8 pm</p>
-        <ul><li>5 pm: school students, Class 8 to 12</li><li>6:30 pm: mixed adult batch</li><li>8 pm: working people, interview level</li><li>Mon, Wed, Fri or Tue, Thu, Sat</li></ul>
+        <h3 data-nx="batches.h32">Evening</h3>
+        <p data-nx="batches.time2" class="time">5 pm &middot; 6:30 pm &middot; 8 pm</p>
+        <ul data-nx-list="batches.list2"><li data-nx-f="li" data-nx-item>5 pm: school students, Class 8 to 12</li><li data-nx-f="li" data-nx-item>6:30 pm: mixed adult batch</li><li data-nx-f="li" data-nx-item>8 pm: working people, interview level</li><li data-nx-f="li" data-nx-item>Mon, Wed, Fri or Tue, Thu, Sat</li></ul>
       </div>
       <div class="batch reveal">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 15h3"/></svg>
-        <h3>Weekend</h3>
-        <p class="time">Sat and Sun, 8 am to 1 pm</p>
-        <ul><li>Two hours each day, same 3-month course</li><li>Good for those who travel on weekdays</li><li>Saturday mock interviews open to all levels</li><li>Sunday group discussion practice</li></ul>
+        <h3 data-nx="batches.h33">Weekend</h3>
+        <p data-nx="batches.time3" class="time">Sat and Sun, 8 am to 1 pm</p>
+        <ul data-nx-list="batches.list3"><li data-nx-f="li" data-nx-item>Two hours each day, same 3-month course</li><li data-nx-f="li" data-nx-item>Good for those who travel on weekdays</li><li data-nx-f="li" data-nx-item>Saturday mock interviews open to all levels</li><li data-nx-f="li" data-nx-item>Sunday group discussion practice</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--soft" id="fees">
+<section data-nx-section="fees" class="section section--soft" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Course fees</span>
-      <h2 class="h2">What a course costs, in one table.</h2>
-      <p class="lead" style="margin-top:1rem">Every course is three months. Pay the full fee at the start or in three monthly parts, no extra charge. Cash or UPI, receipt given.</p>
+      <span data-nx="fees.kicker" class="kicker">Course fees</span>
+      <h2 data-nx="fees.h2" class="h2">What a course costs, in one table.</h2>
+      <p data-nx="fees.p" class="lead" style="margin-top:1rem">Every course is three months. Pay the full fee at the start or in three monthly parts, no extra charge. Cash or UPI, receipt given.</p>
     </div>
     <div class="tbl reveal">
       <table>
         <caption class="sr-only">Courses, duration, class days and fees</caption>
-        <thead><tr><th scope="col">Course</th><th scope="col">Level</th><th scope="col">Duration</th><th scope="col">Classes</th><th scope="col">Fee</th></tr></thead>
-        <tbody>
-          <tr><td><b>Basic Spoken English</b><small>Start from zero, finish speaking in short sentences</small></td><td>Beginner</td><td>3 months</td><td>3 days a week, 1 hour</td><td class="fee">&#8377;3,600<small>&#8377;1,200 a month</small></td></tr>
-          <tr><td><b>Spoken English, Intermediate</b><small>Fix the mistakes, speak longer</small></td><td>Intermediate</td><td>3 months</td><td>3 days a week, 1 hour</td><td class="fee">&#8377;3,900<small>&#8377;1,300 a month</small></td></tr>
-          <tr><td><b>Fluency and Conversation</b><small>Group discussion, debate, pronunciation</small></td><td>Fluent</td><td>3 months</td><td>3 days a week, 1 hour</td><td class="fee">&#8377;4,500<small>&#8377;1,500 a month</small></td></tr>
-          <tr><td><b>Personality Development and Interview Skills</b><small>Mock interviews on camera, email writing, presentation</small></td><td>Interview-ready</td><td>3 months</td><td>3 days a week, 1 hour, plus Saturday mock interview</td><td class="fee">&#8377;5,400<small>&#8377;1,800 a month</small></td></tr>
-          <tr><td><b>Weekend course</b><small>Any level, Saturday and Sunday</small></td><td>Any</td><td>3 months</td><td>2 days a week, 2 hours</td><td class="fee">&#8377;4,200<small>&#8377;1,400 a month</small></td></tr>
-          <tr><td><b>School students, Class 8 to 12</b><small>Spoken English with viva and presentation practice</small></td><td>Beginner to Intermediate</td><td>3 months</td><td>3 days a week, 1 hour</td><td class="fee">&#8377;3,000<small>&#8377;1,000 a month</small></td></tr>
+        <thead><tr><th data-nx="fees.th" scope="col">Course</th><th data-nx="fees.th2" scope="col">Level</th><th data-nx="fees.th3" scope="col">Duration</th><th data-nx="fees.th4" scope="col">Classes</th><th data-nx="fees.th5" scope="col">Fee</th></tr></thead>
+        <tbody data-nx-list="fees.list">
+          <tr data-nx-item><td><b data-nx-f="b">Basic Spoken English</b><small data-nx-f="small">Start from zero, finish speaking in short sentences</small></td><td data-nx-f="td">Beginner</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">3 days a week, 1 hour</td><td data-nx-f="fee" class="fee">&#8377;3,600<small>&#8377;1,200 a month</small></td></tr>
+          <tr data-nx-item><td><b data-nx-f="b">Spoken English, Intermediate</b><small data-nx-f="small">Fix the mistakes, speak longer</small></td><td data-nx-f="td">Intermediate</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">3 days a week, 1 hour</td><td data-nx-f="fee" class="fee">&#8377;3,900<small>&#8377;1,300 a month</small></td></tr>
+          <tr data-nx-item><td><b data-nx-f="b">Fluency and Conversation</b><small data-nx-f="small">Group discussion, debate, pronunciation</small></td><td data-nx-f="td">Fluent</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">3 days a week, 1 hour</td><td data-nx-f="fee" class="fee">&#8377;4,500<small>&#8377;1,500 a month</small></td></tr>
+          <tr data-nx-item><td><b data-nx-f="b">Personality Development and Interview Skills</b><small data-nx-f="small">Mock interviews on camera, email writing, presentation</small></td><td data-nx-f="td">Interview-ready</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">3 days a week, 1 hour, plus Saturday mock interview</td><td data-nx-f="fee" class="fee">&#8377;5,400<small>&#8377;1,800 a month</small></td></tr>
+          <tr data-nx-item><td><b data-nx-f="b">Weekend course</b><small data-nx-f="small">Any level, Saturday and Sunday</small></td><td data-nx-f="td">Any</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">2 days a week, 2 hours</td><td data-nx-f="fee" class="fee">&#8377;4,200<small>&#8377;1,400 a month</small></td></tr>
+          <tr data-nx-item><td><b data-nx-f="b">School students, Class 8 to 12</b><small data-nx-f="small">Spoken English with viva and presentation practice</small></td><td data-nx-f="td">Beginner to Intermediate</td><td data-nx-f="td2">3 months</td><td data-nx-f="td3">3 days a week, 1 hour</td><td data-nx-f="fee" class="fee">&#8377;3,000<small>&#8377;1,000 a month</small></td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="fnote reveal">
-      <li><b>Admission &#8377;300</b>, once. Printed workbook &#8377;250. Nothing else is charged.</li>
-      <li><b>Repeat for free.</b> If you finish a level and want to sit through it again, the next three months cost nothing.</li>
-      <li><b>Two from one family:</b> &#8377;300 off the second person's course fee.</li>
+    <ul data-nx-list="fees.fnote" class="fnote reveal">
+      <li data-nx-f="li" data-nx-item><b>Admission &#8377;300</b>, once. Printed workbook &#8377;250. Nothing else is charged.</li>
+      <li data-nx-f="li" data-nx-item><b>Repeat for free.</b> If you finish a level and want to sit through it again, the next three months cost nothing.</li>
+      <li data-nx-f="li" data-nx-item><b>Two from one family:</b> &#8377;300 off the second person's course fee.</li>
     </ul>
   </div>
 </section>
 
-<section class="section section--blue" id="class">
+<section data-nx-section="class" class="section section--blue" id="class">
   <div class="wrap">
     <div class="inside">
-      <div class="inside__photos reveal">
-        <img src="/demo/spoken-english/images/teacher-whiteboard.jpg" width="1200" height="831" alt="A teacher in a turban and blazer writing on a whiteboard" loading="lazy">
-        <img src="/demo/spoken-english/images/group-practice.jpg" width="1200" height="800" alt="Three young adults laughing while holding papers in a discussion" loading="lazy">
-        <img src="/demo/spoken-english/images/chalkboard-spelling.jpg" width="1200" height="800" alt="A chalkboard with spelling lists written in neat handwriting" loading="lazy">
+      <div data-nx-list="class.inside-photos" class="inside__photos reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/spoken-english/images/teacher-whiteboard.jpg" width="1200" height="831" alt="A teacher in a turban and blazer writing on a whiteboard" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/spoken-english/images/group-practice.jpg" width="1200" height="800" alt="Three young adults laughing while holding papers in a discussion" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/spoken-english/images/chalkboard-spelling.jpg" width="1200" height="800" alt="A chalkboard with spelling lists written in neat handwriting" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="kicker">Inside a class</span>
-        <h2 class="h2">You talk for forty minutes. The teacher talks for twenty.</h2>
-        <p class="lead" style="margin-top:1rem">Most people who come to us have studied English for ten years in school and still cannot order food in it. The missing piece is not grammar. It is practice, in front of people, with someone correcting you kindly.</p>
-        <ul class="check">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Every student speaks in every class</b><span>Ten seats means ten turns. Nobody hides at the back.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Mistakes corrected after you finish, not during</b><span>You complete your sentence. Then the teacher shows the better way. Confidence first.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Bengali allowed for explaining, not for answering</b><span>If you do not understand a word, ask in Bengali. Reply in English, however broken.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b>Recorded on your phone once a month</b><span>You hear yourself in month one and month three. The difference is the report card.</span></div></li>
+        <span data-nx="class.kicker" class="kicker">Inside a class</span>
+        <h2 data-nx="class.h2" class="h2">You talk for forty minutes. The teacher talks for twenty.</h2>
+        <p data-nx="class.p" class="lead" style="margin-top:1rem">Most people who come to us have studied English for ten years in school and still cannot order food in it. The missing piece is not grammar. It is practice, in front of people, with someone correcting you kindly.</p>
+        <ul data-nx-list="class.check" class="check">
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b data-nx-f="b">Every student speaks in every class</b><span data-nx-f="span">Ten seats means ten turns. Nobody hides at the back.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b data-nx-f="b">Mistakes corrected after you finish, not during</b><span data-nx-f="span">You complete your sentence. Then the teacher shows the better way. Confidence first.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b data-nx-f="b">Bengali allowed for explaining, not for answering</b><span data-nx-f="span">If you do not understand a word, ask in Bengali. Reply in English, however broken.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><div><b data-nx-f="b">Recorded on your phone once a month</b><span data-nx-f="span">You hear yourself in month one and month three. The difference is the report card.</span></div></li>
         </ul>
-        <ul class="trainers">
-          <li><b>Debashree Mukherjee</b><span>M.A. English, 14 years teaching. Runs the women's batch and the beginner levels. Founded the centre in 2014.</span></li>
-          <li><b>Arnab Chakraborty</b><span>Former HR executive, 9 years here. Takes the interview-ready level and every Saturday mock interview.</span></li>
+        <ul data-nx-list="class.trainers" class="trainers">
+          <li data-nx-item><b data-nx-f="b">Debashree Mukherjee</b><span data-nx-f="span">M.A. English, 14 years teaching. Runs the women's batch and the beginner levels. Founded the centre in 2014.</span></li>
+          <li data-nx-item><b data-nx-f="b">Arnab Chakraborty</b><span data-nx-f="span">Former HR executive, 9 years here. Takes the interview-ready level and every Saturday mock interview.</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Our students</span>
-      <h2 class="h2">A few faces from the centre.</h2>
-      <p class="lead" style="margin:1rem auto 0">Swipe on your phone to see more.</p>
+      <span data-nx="gallery.kicker" class="kicker">Our students</span>
+      <h2 data-nx="gallery.h2" class="h2">A few faces from the centre.</h2>
+      <p data-nx="gallery.p" class="lead" style="margin:1rem auto 0">Swipe on your phone to see more.</p>
     </div>
     <ul class="strip reveal">
       <li><img src="/demo/spoken-english/images/man-classroom.jpg" width="1200" height="1800" alt="A young man laughing at a desk in front of a blackboard with Bengali writing" loading="lazy"></li>
@@ -493,61 +499,61 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--soft" id="faq">
+<section data-nx-section="faq" class="section section--soft" id="faq">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Before you message us.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Before you message us.</h2>
     </div>
-    <div class="faq reveal">
-      <details><summary>I cannot speak a single sentence. Can I still join?</summary><p>Yes. About a third of every beginner batch starts exactly there. The first two weeks are only listening and repeating. Nobody is asked to make a speech on day one.</p></details>
-      <details><summary>I am 45 and a housewife. Will I be in a class with college students?</summary><p>No. The 11 am batch is women only and most are between 30 and 55. If that time does not suit you, tell us and we will find a mixed batch where you will be comfortable.</p></details>
-      <details><summary>How does the free demo class work?</summary><p>Message or call with your name and the time you prefer. Come and sit through one full class of the level we think fits you. At the end you decide. There is no form to fill and nobody follows up more than once.</p></details>
-      <details><summary>What if I miss classes?</summary><p>Each lesson runs in two or three batches a week, so you can attend the same lesson in another batch that week. If you travel for a month, we pause your course and you join the next batch at the same point.</p></details>
-      <details><summary>Do you give a certificate?</summary><p>Yes, a centre certificate with the level and attendance after the course. We say plainly that it is our own certificate, not a university one. Employers care about how you speak in the interview, and that is what we work on.</p></details>
-      <details><summary>Is there a batch for IELTS or for studying abroad?</summary><p>Not at present. We do spoken English and interview preparation and we do them properly. If you need IELTS coaching we will tell you honestly and suggest you look elsewhere.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="head reveal">
-      <span class="kicker">In their words</span>
-      <h2 class="h2">Two students, two reasons.</h2>
-    </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>I joined the 11 am batch after fifteen years at home. In the second month I spoke to my daughter's class teacher in English for the first time. She did not know I had been practising.</p><footer>Sumana <span>&middot; Kestopur, women's batch</span></footer></blockquote>
-      <blockquote class="reveal"><p>Three interviews, three rejections, then I came here. Arnab Sir made me do my self-introduction twenty times on camera. Fourth interview, I got the job in Sector V.</p><footer>Rahul <span>&middot; Baguiati, interview-ready level</span></footer></blockquote>
+    <div data-nx-list="faq.faq" class="faq reveal">
+      <details data-nx-item><summary data-nx-f="summary">I cannot speak a single sentence. Can I still join?</summary><p data-nx-f="p">Yes. About a third of every beginner batch starts exactly there. The first two weeks are only listening and repeating. Nobody is asked to make a speech on day one.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">I am 45 and a housewife. Will I be in a class with college students?</summary><p data-nx-f="p">No. The 11 am batch is women only and most are between 30 and 55. If that time does not suit you, tell us and we will find a mixed batch where you will be comfortable.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">How does the free demo class work?</summary><p data-nx-f="p">Message or call with your name and the time you prefer. Come and sit through one full class of the level we think fits you. At the end you decide. There is no form to fill and nobody follows up more than once.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">What if I miss classes?</summary><p data-nx-f="p">Each lesson runs in two or three batches a week, so you can attend the same lesson in another batch that week. If you travel for a month, we pause your course and you join the next batch at the same point.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you give a certificate?</summary><p data-nx-f="p">Yes, a centre certificate with the level and attendance after the course. We say plainly that it is our own certificate, not a university one. Employers care about how you speak in the interview, and that is what we work on.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">Is there a batch for IELTS or for studying abroad?</summary><p data-nx-f="p">Not at present. We do spoken English and interview preparation and we do them properly. If you need IELTS coaching we will tell you honestly and suggest you look elsewhere.</p></details>
     </div>
   </div>
 </section>
 
-<section class="section section--soft" id="visit">
+<section data-nx-section="section-10" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the centre</span>
-      <h2 class="h2">Second floor, above the pharmacy at Baguiati crossing.</h2>
+      <span data-nx="section-10.kicker" class="kicker">In their words</span>
+      <h2 data-nx="section-10.h2" class="h2">Two students, two reasons.</h2>
+    </div>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I joined the 11 am batch after fifteen years at home. In the second month I spoke to my daughter's class teacher in English for the first time. She did not know I had been practising.</p><footer>Sumana <span data-nx-f="span">&middot; Kestopur, women's batch</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Three interviews, three rejections, then I came here. Arnab Sir made me do my self-introduction twenty times on camera. Fourth interview, I got the job in Sector V.</p><footer>Rahul <span data-nx-f="span">&middot; Baguiati, interview-ready level</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section data-nx-section="visit" class="section section--soft" id="visit">
+  <div class="wrap">
+    <div class="head reveal">
+      <span data-nx="visit.kicker" class="kicker">Visit the centre</span>
+      <h2 data-nx="visit.h2" class="h2">Second floor, above the pharmacy at Baguiati crossing.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>112 VIP Road, 2nd floor, Baguiati<br>Kolkata 700059</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=112%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">112 VIP Road, 2nd floor, Baguiati<br>Kolkata 700059</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=112%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>7:00 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>8:00 am &ndash; 1:00 pm</td></tr>
-              <tr><td>Demo classes</td><td>Any batch, any day</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">7:00 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">8:00 am &ndash; 1:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Demo classes</td><td data-nx-f="td2">Any batch, any day</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp is answered between classes, usually within the hour.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp is answered between classes, usually within the hour.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--brand" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Uttaran%20Spoken%20English%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -561,10 +567,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Come and sit in one class. Then decide.</h2>
-    <p>Send your name and whether you want morning, evening or weekend. We reply with the batch and the date of your free demo.</p>
+    <h2 data-nx="contact.h2">Come and sit in one class. Then decide.</h2>
+    <p data-nx="contact.p">Send your name and whether you want morning, evening or weekend. We reply with the batch and the date of your free demo.</p>
     <div class="final__cta">
       <a class="btn btn--brand" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Uttaran%20Spoken%20English%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -579,31 +585,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#FFC72C"/><path d="M10 30c0-6 4-10 10-10h6l-2 4h-4c-3 0-5 2-5 5v3h-5v-2Z" fill="#1F3A93"/><circle cx="29" cy="15" r="5" fill="#142A6E"/><path d="M24 33h10" stroke="#142A6E" stroke-width="3" stroke-linecap="round"/></svg>
-          <span><b>Uttaran Spoken English</b><small>Baguiati &middot; since 2014</small></span>
+          <span><b data-nx="footer.b">Uttaran Spoken English</b><small data-nx="footer.small">Baguiati &middot; since 2014</small></span>
         </a>
-        <p>Spoken English and personality development for students, housewives and job seekers. Ten to a batch, three months to a course.</p>
+        <p data-nx="footer.p">Spoken English and personality development for students, housewives and job seekers. Ten to a batch, three months to a course.</p>
       </div>
       <div>
-        <h4>Courses</h4>
-        <ul>
-          <li><a href="#levels">Levels</a></li>
-          <li><a href="#batches">Batch timings</a></li>
-          <li><a href="#fees">Course fees</a></li>
-          <li><a href="#faq">Common questions</a></li>
+        <h4 data-nx="footer.h4">Courses</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#levels">Levels</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#batches">Batch timings</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Course fees</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Common questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>112 VIP Road, 2nd floor, Baguiati, Kolkata 700059</li>
+          <li data-nx="footer.li">112 VIP Road, 2nd floor, Baguiati, Kolkata 700059</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 7 am &ndash; 9 pm &middot; Sun 8 am &ndash; 1 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 7 am &ndash; 9 pm &middot; Sun 8 am &ndash; 1 pm</li>
         </ul>
       </div>
     </div>
@@ -645,5 +651,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

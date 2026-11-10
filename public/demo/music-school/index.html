@@ -256,6 +256,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:760px){
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -288,24 +293,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="music-school">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sur%20Sadhana%20Sangeet%20Vidyalaya%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sur Sadhana Sangeet Vidyalaya, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#1E1B4B"/><path d="M16 30a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm12-4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="#F59E0B"/><path d="M20 26V12l12-3v13" stroke="#FBFAF6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-      <span><b>Sur Sadhana</b><small>Sangeet Vidyalaya &middot; Tollygunge</small></span>
+      <span><b data-nx="header.b">Sur Sadhana</b><small data-nx="header.small">Sangeet Vidyalaya &middot; Tollygunge</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -328,165 +331,165 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__photo">
-      <img src="/demo/music-school/images/hero.jpg" width="1200" height="801" alt="A teacher in a blue saree playing harmonium with four children sitting around her" fetchpriority="high">
-      <div class="hero__card" aria-label="Three facts about the school">
-        <div><b>1991</b><span>Teaching since</span></div>
-        <div><b>7</b><span>Subjects, vocal and instruments</span></div>
-        <div><b>8</b><span>Students per batch at most</span></div>
+      <img data-nx="top.photo" src="/demo/music-school/images/hero.jpg" width="1200" height="801" alt="A teacher in a blue saree playing harmonium with four children sitting around her" fetchpriority="high">
+      <div data-nx-list="top.hero-card" class="hero__card" aria-label="Three facts about the school">
+        <div data-nx-item><b data-nx-f="b">1991</b><span data-nx-f="span">Teaching since</span></div>
+        <div data-nx-item><b data-nx-f="b">7</b><span data-nx-f="span">Subjects, vocal and instruments</span></div>
+        <div data-nx-item><b data-nx-f="b">8</b><span data-nx-f="span">Students per batch at most</span></div>
       </div>
     </div>
     <div>
-      <p class="hero__eyebrow">Tollygunge &middot; Vocal and instrumental music</p>
-      <h1>Learn music the slow way, <em>which is the only way.</em></h1>
-      <p class="lede">A music school in a two-storey house off N.S.C. Bose Road. Rabindra Sangeet and classical vocal upstairs, guitar, keyboard, tabla, harmonium and violin downstairs. Children from age six, adults of any age. The first class is free.</p>
+      <p data-nx="top.hero-eyebrow" class="hero__eyebrow">Tollygunge &middot; Vocal and instrumental music</p>
+      <h1 data-nx="top.h1">Learn music the slow way, <em>which is the only way.</em></h1>
+      <p data-nx="top.lede" class="lede">A music school in a two-storey house off N.S.C. Bose Road. Rabindra Sangeet and classical vocal upstairs, guitar, keyboard, tabla, harmonium and violin downstairs. Children from age six, adults of any age. The first class is free.</p>
       <div class="hero__cta">
         <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sur%20Sadhana%20Sangeet%20Vidyalaya%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book the free first class
         </a>
-        <a class="btn btn--ghost-light" href="#fees">Batches and fees</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#fees">Batches and fees</a>
       </div>
-      <ul class="hero__list" aria-label="What we teach">
-        <li>Rabindra Sangeet</li><li>Classical vocal</li><li>Guitar</li><li>Keyboard</li><li>Tabla</li><li>Harmonium</li><li>Violin</li>
+      <ul data-nx-list="top.hero-list" class="hero__list" aria-label="What we teach">
+        <li data-nx-f="li" data-nx-item>Rabindra Sangeet</li><li data-nx-f="li" data-nx-item>Classical vocal</li><li data-nx-f="li" data-nx-item>Guitar</li><li data-nx-f="li" data-nx-item>Keyboard</li><li data-nx-f="li" data-nx-item>Tabla</li><li data-nx-f="li" data-nx-item>Harmonium</li><li data-nx-f="li" data-nx-item>Violin</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="vocal">
+<section data-nx-section="vocal" class="section" id="vocal">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Vocal</span>
-      <h2 class="h2">Two kinds of singing, two teachers, one floor.</h2>
-      <p class="lead" style="margin-top:1rem">Vocal classes are taught sitting on the floor with a harmonium and a tanpura app, the way most of us learnt. A child who cannot yet hold a note sits beside a student preparing for a stage.</p>
+      <span data-nx="vocal.kicker" class="kicker">Vocal</span>
+      <h2 data-nx="vocal.h2" class="h2">Two kinds of singing, two teachers, one floor.</h2>
+      <p data-nx="vocal.p" class="lead" style="margin-top:1rem">Vocal classes are taught sitting on the floor with a harmonium and a tanpura app, the way most of us learnt. A child who cannot yet hold a note sits beside a student preparing for a stage.</p>
     </div>
     <div class="zig">
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/music-school/images/singer-sari.jpg" width="1200" height="1203" alt="A woman in a yellow embroidered dress singing into a vintage microphone" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="vocal.photo" src="/demo/music-school/images/singer-sari.jpg" width="1200" height="1203" alt="A woman in a yellow embroidered dress singing into a vintage microphone" loading="lazy"></div>
         <div class="reveal">
-          <h3>Rabindra Sangeet</h3>
-          <p>Taught from the Swarabitan notation, song by song, with the words explained before the tune. Students learn to sing with the correct pronunciation and without ornament, as the songs were written to be sung.</p>
-          <p>Beginners start with the simpler Puja and Prakriti songs. By the second year most students can sing twenty songs from notation and perform at Pochishe Boishakh.</p>
-          <ul class="meta"><li>Age 6 and up</li><li>Tue, Thu or Sat, Sun</li><li>Teacher: Madhumita Sen</li><li>Board exam prep included</li></ul>
+          <h3 data-nx="vocal.h3">Rabindra Sangeet</h3>
+          <p data-nx="vocal.p2">Taught from the Swarabitan notation, song by song, with the words explained before the tune. Students learn to sing with the correct pronunciation and without ornament, as the songs were written to be sung.</p>
+          <p data-nx="vocal.p3">Beginners start with the simpler Puja and Prakriti songs. By the second year most students can sing twenty songs from notation and perform at Pochishe Boishakh.</p>
+          <ul data-nx-list="vocal.meta" class="meta"><li data-nx-f="li" data-nx-item>Age 6 and up</li><li data-nx-f="li" data-nx-item>Tue, Thu or Sat, Sun</li><li data-nx-f="li" data-nx-item>Teacher: Madhumita Sen</li><li data-nx-f="li" data-nx-item>Board exam prep included</li></ul>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/music-school/images/singer-stage.jpg" width="1200" height="1799" alt="A woman in a green dress singing into a microphone indoors" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="vocal.photo2" src="/demo/music-school/images/singer-stage.jpg" width="1200" height="1799" alt="A woman in a green dress singing into a microphone indoors" loading="lazy"></div>
         <div class="reveal">
-          <h3>Hindustani classical vocal</h3>
-          <p>Sargam, paltas and alankars for the first six months, whatever the age. Then raag by raag: Yaman, Bhupali, Bhairav, Kafi, in bandish and in alaap. Tabla accompaniment at every Saturday class.</p>
-          <p>Students who want to sing Bengali adhunik, Nazrul Geeti or film songs are welcome. Classical training is the base; what you sing with it is your choice.</p>
-          <ul class="meta"><li>Age 8 and up, adults welcome</li><li>Mon closed, other days</li><li>Teacher: Pt. Subhankar Roy</li><li>Board exam prep included</li></ul>
+          <h3 data-nx="vocal.h32">Hindustani classical vocal</h3>
+          <p data-nx="vocal.p4">Sargam, paltas and alankars for the first six months, whatever the age. Then raag by raag: Yaman, Bhupali, Bhairav, Kafi, in bandish and in alaap. Tabla accompaniment at every Saturday class.</p>
+          <p data-nx="vocal.p5">Students who want to sing Bengali adhunik, Nazrul Geeti or film songs are welcome. Classical training is the base; what you sing with it is your choice.</p>
+          <ul data-nx-list="vocal.meta2" class="meta"><li data-nx-f="li" data-nx-item>Age 8 and up, adults welcome</li><li data-nx-f="li" data-nx-item>Mon closed, other days</li><li data-nx-f="li" data-nx-item>Teacher: Pt. Subhankar Roy</li><li data-nx-f="li" data-nx-item>Board exam prep included</li></ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="instruments">
+<section data-nx-section="instruments" class="section section--deep" id="instruments">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Instruments</span>
-      <h2 class="h2">Five instruments, taught one student at a time within the batch.</h2>
-      <p class="lead" style="margin-top:1rem">Instrument batches are four to six students. The teacher goes round, listens to each one, corrects the hand, moves on. Bring your own instrument from the second month; we have school ones for the first.</p>
+      <span data-nx="instruments.kicker" class="kicker">Instruments</span>
+      <h2 data-nx="instruments.h2" class="h2">Five instruments, taught one student at a time within the batch.</h2>
+      <p data-nx="instruments.p" class="lead" style="margin-top:1rem">Instrument batches are four to six students. The teacher goes round, listens to each one, corrects the hand, moves on. Bring your own instrument from the second month; we have school ones for the first.</p>
     </div>
-    <ul class="inst">
-      <li class="reveal"><img src="/demo/music-school/images/boy-guitar.jpg" width="1200" height="800" alt="A boy with glasses playing an acoustic guitar against a red wall" loading="lazy"><div><h3>Guitar</h3><p>Acoustic first, then electric if you wish. Chords, strumming patterns, Bengali and Hindi songs, then scales and lead.</p><b>Age 9+ &middot; Mon closed</b></div></li>
-      <li class="reveal"><img src="/demo/music-school/images/keyboard-hands.jpg" width="1200" height="1800" alt="Hands playing a digital piano keyboard in soft light" loading="lazy"><div><h3>Keyboard</h3><p>Both hands from the first month. Staff notation taught alongside, so students can read Western pieces and play harmonium parts.</p><b>Age 7+ &middot; Wed, Fri, Sun</b></div></li>
-      <li class="reveal"><img src="/demo/music-school/images/tabla-pair.jpg" width="1200" height="1596" alt="A pair of tabla drums on a plain surface" loading="lazy"><div><h3>Tabla</h3><p>Teentaal, Dadra, Kaharwa, Jhaptaal. Bols spoken before they are played. Our tabla students accompany the vocal classes on Saturdays.</p><b>Age 7+ &middot; Tue, Thu, Sat</b></div></li>
-      <li class="reveal"><img src="/demo/music-school/images/harmonium-hand.jpg" width="1200" height="800" alt="A hand playing the keys of a wooden harmonium" loading="lazy"><div><h3>Harmonium</h3><p>For singers who want to accompany themselves, and for anyone who wants to play at home. Scales, chords and song accompaniment.</p><b>Any age &middot; Any day</b></div></li>
-      <li class="reveal"><img src="/demo/music-school/images/violin.jpg" width="1200" height="1800" alt="A violin and bow in warm dramatic lighting" loading="lazy"><div><h3>Violin</h3><p>Indian style, held low, taught on the Hindustani raag system. Bowing and tuning take the first three months. Patience is required.</p><b>Age 8+ &middot; Wed, Sat</b></div></li>
+    <ul data-nx-list="instruments.inst" class="inst">
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/music-school/images/boy-guitar.jpg" width="1200" height="800" alt="A boy with glasses playing an acoustic guitar against a red wall" loading="lazy"><div><h3 data-nx-f="h3">Guitar</h3><p data-nx-f="p">Acoustic first, then electric if you wish. Chords, strumming patterns, Bengali and Hindi songs, then scales and lead.</p><b data-nx-f="b">Age 9+ &middot; Mon closed</b></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/music-school/images/keyboard-hands.jpg" width="1200" height="1800" alt="Hands playing a digital piano keyboard in soft light" loading="lazy"><div><h3 data-nx-f="h3">Keyboard</h3><p data-nx-f="p">Both hands from the first month. Staff notation taught alongside, so students can read Western pieces and play harmonium parts.</p><b data-nx-f="b">Age 7+ &middot; Wed, Fri, Sun</b></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/music-school/images/tabla-pair.jpg" width="1200" height="1596" alt="A pair of tabla drums on a plain surface" loading="lazy"><div><h3 data-nx-f="h3">Tabla</h3><p data-nx-f="p">Teentaal, Dadra, Kaharwa, Jhaptaal. Bols spoken before they are played. Our tabla students accompany the vocal classes on Saturdays.</p><b data-nx-f="b">Age 7+ &middot; Tue, Thu, Sat</b></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/music-school/images/harmonium-hand.jpg" width="1200" height="800" alt="A hand playing the keys of a wooden harmonium" loading="lazy"><div><h3 data-nx-f="h3">Harmonium</h3><p data-nx-f="p">For singers who want to accompany themselves, and for anyone who wants to play at home. Scales, chords and song accompaniment.</p><b data-nx-f="b">Any age &middot; Any day</b></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/music-school/images/violin.jpg" width="1200" height="1800" alt="A violin and bow in warm dramatic lighting" loading="lazy"><div><h3 data-nx-f="h3">Violin</h3><p data-nx-f="p">Indian style, held low, taught on the Hindustani raag system. Bowing and tuning take the first three months. Patience is required.</p><b data-nx-f="b">Age 8+ &middot; Wed, Sat</b></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="fees">
+<section data-nx-section="fees" class="section" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Batches and fees</span>
-      <h2 class="h2">Pick a tab. The fee is the fee.</h2>
-      <p class="lead" style="margin-top:1rem">Monthly fees, paid by the 10th, cash or UPI. One-time admission &#8377;500. No charge for the first class, for the annual function rehearsals or for exam form help.</p>
+      <span data-nx="fees.kicker" class="kicker">Batches and fees</span>
+      <h2 data-nx="fees.h2" class="h2">Pick a tab. The fee is the fee.</h2>
+      <p data-nx="fees.p" class="lead" style="margin-top:1rem">Monthly fees, paid by the 10th, cash or UPI. One-time admission &#8377;500. No charge for the first class, for the annual function rehearsals or for exam form help.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="fees" id="t-vocal" checked>
       <input type="radio" name="fees" id="t-inst">
       <input type="radio" name="fees" id="t-exam">
-      <div class="tabs__bar" role="tablist" aria-label="Fee tables">
-        <label for="t-vocal">Vocal</label>
-        <label for="t-inst">Instruments</label>
-        <label for="t-exam">Exam prep</label>
+      <div data-nx-list="fees.tabs-bar" class="tabs__bar" role="tablist" aria-label="Fee tables">
+        <label data-nx-f="label" data-nx-item for="t-vocal">Vocal</label>
+        <label data-nx-f="label" data-nx-item for="t-inst">Instruments</label>
+        <label data-nx-f="label" data-nx-item for="t-exam">Exam prep</label>
       </div>
       <div class="tabs__panel tabs__panel--vocal">
         <table>
           <caption class="sr-only">Vocal batches, days, timings and monthly fees</caption>
-          <thead><tr><th scope="col">Batch</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">For</th><th scope="col">Monthly fee</th></tr></thead>
-          <tbody>
-            <tr><td><b>Rabindra Sangeet, children</b><small>Batch of 8</small></td><td>Tue, Thu</td><td>5:00 &ndash; 6:00 pm</td><td>Age 6 to 12</td><td class="fee">&#8377;900</td></tr>
-            <tr><td><b>Rabindra Sangeet, adults</b><small>Batch of 8</small></td><td>Sat, Sun</td><td>9:00 &ndash; 10:30 am</td><td>Age 13 and up</td><td class="fee">&#8377;1,000</td></tr>
-            <tr><td><b>Classical vocal, beginners</b><small>Sargam and alankar year</small></td><td>Tue, Fri</td><td>6:00 &ndash; 7:00 pm</td><td>Age 8 and up</td><td class="fee">&#8377;1,000</td></tr>
-            <tr><td><b>Classical vocal, senior</b><small>Raag study, with tabla on Saturday</small></td><td>Wed, Sat</td><td>7:00 &ndash; 8:30 pm</td><td>2+ years training</td><td class="fee">&#8377;1,400</td></tr>
-            <tr><td><b>Nazrul Geeti and adhunik</b><small>Open to all vocal students</small></td><td>Sun</td><td>11:00 am &ndash; 12:00 noon</td><td>Any level</td><td class="fee">&#8377;600</td></tr>
+          <thead><tr><th data-nx="fees.th" scope="col">Batch</th><th data-nx="fees.th2" scope="col">Days</th><th data-nx="fees.th3" scope="col">Time</th><th data-nx="fees.th4" scope="col">For</th><th data-nx="fees.th5" scope="col">Monthly fee</th></tr></thead>
+          <tbody data-nx-list="fees.list">
+            <tr data-nx-item><td><b data-nx-f="b">Rabindra Sangeet, children</b><small data-nx-f="small">Batch of 8</small></td><td data-nx-f="td">Tue, Thu</td><td data-nx-f="td2">5:00 &ndash; 6:00 pm</td><td data-nx-f="td3">Age 6 to 12</td><td data-nx-f="fee" class="fee">&#8377;900</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Rabindra Sangeet, adults</b><small data-nx-f="small">Batch of 8</small></td><td data-nx-f="td">Sat, Sun</td><td data-nx-f="td2">9:00 &ndash; 10:30 am</td><td data-nx-f="td3">Age 13 and up</td><td data-nx-f="fee" class="fee">&#8377;1,000</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Classical vocal, beginners</b><small data-nx-f="small">Sargam and alankar year</small></td><td data-nx-f="td">Tue, Fri</td><td data-nx-f="td2">6:00 &ndash; 7:00 pm</td><td data-nx-f="td3">Age 8 and up</td><td data-nx-f="fee" class="fee">&#8377;1,000</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Classical vocal, senior</b><small data-nx-f="small">Raag study, with tabla on Saturday</small></td><td data-nx-f="td">Wed, Sat</td><td data-nx-f="td2">7:00 &ndash; 8:30 pm</td><td data-nx-f="td3">2+ years training</td><td data-nx-f="fee" class="fee">&#8377;1,400</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Nazrul Geeti and adhunik</b><small data-nx-f="small">Open to all vocal students</small></td><td data-nx-f="td">Sun</td><td data-nx-f="td2">11:00 am &ndash; 12:00 noon</td><td data-nx-f="td3">Any level</td><td data-nx-f="fee" class="fee">&#8377;600</td></tr>
           </tbody>
         </table>
-        <p class="tabs__foot">Vocal students may sit in on one instrument class a week for &#8377;300 extra. Most pick harmonium.</p>
+        <p data-nx="fees.tabs-foot" class="tabs__foot">Vocal students may sit in on one instrument class a week for &#8377;300 extra. Most pick harmonium.</p>
       </div>
       <div class="tabs__panel tabs__panel--inst">
         <table>
           <caption class="sr-only">Instrument batches, days, timings and monthly fees</caption>
-          <thead><tr><th scope="col">Instrument</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Batch size</th><th scope="col">Monthly fee</th></tr></thead>
-          <tbody>
-            <tr><td><b>Guitar</b><small>Acoustic or electric</small></td><td>Tue, Thu, Sat</td><td>6:00 &ndash; 7:00 pm</td><td>6</td><td class="fee">&#8377;1,000</td></tr>
-            <tr><td><b>Keyboard</b><small>School keyboard for the first month</small></td><td>Wed, Fri, Sun</td><td>5:00 &ndash; 6:00 pm</td><td>5</td><td class="fee">&#8377;1,000</td></tr>
-            <tr><td><b>Tabla</b><small>Pair available in class</small></td><td>Tue, Thu, Sat</td><td>5:00 &ndash; 6:00 pm</td><td>6</td><td class="fee">&#8377;900</td></tr>
-            <tr><td><b>Harmonium</b><small>Good first instrument for singers</small></td><td>Any two days</td><td>Morning or evening</td><td>6</td><td class="fee">&#8377;800</td></tr>
-            <tr><td><b>Violin</b><small>Student violin can be arranged on rent, &#8377;300 a month</small></td><td>Wed, Sat</td><td>6:00 &ndash; 7:00 pm</td><td>4</td><td class="fee">&#8377;1,200</td></tr>
+          <thead><tr><th data-nx="fees.th6" scope="col">Instrument</th><th data-nx="fees.th7" scope="col">Days</th><th data-nx="fees.th8" scope="col">Time</th><th data-nx="fees.th9" scope="col">Batch size</th><th data-nx="fees.th10" scope="col">Monthly fee</th></tr></thead>
+          <tbody data-nx-list="fees.list2">
+            <tr data-nx-item><td><b data-nx-f="b">Guitar</b><small data-nx-f="small">Acoustic or electric</small></td><td data-nx-f="td">Tue, Thu, Sat</td><td data-nx-f="td2">6:00 &ndash; 7:00 pm</td><td data-nx-f="td3">6</td><td data-nx-f="fee" class="fee">&#8377;1,000</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Keyboard</b><small data-nx-f="small">School keyboard for the first month</small></td><td data-nx-f="td">Wed, Fri, Sun</td><td data-nx-f="td2">5:00 &ndash; 6:00 pm</td><td data-nx-f="td3">5</td><td data-nx-f="fee" class="fee">&#8377;1,000</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Tabla</b><small data-nx-f="small">Pair available in class</small></td><td data-nx-f="td">Tue, Thu, Sat</td><td data-nx-f="td2">5:00 &ndash; 6:00 pm</td><td data-nx-f="td3">6</td><td data-nx-f="fee" class="fee">&#8377;900</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Harmonium</b><small data-nx-f="small">Good first instrument for singers</small></td><td data-nx-f="td">Any two days</td><td data-nx-f="td2">Morning or evening</td><td data-nx-f="td3">6</td><td data-nx-f="fee" class="fee">&#8377;800</td></tr>
+            <tr data-nx-item><td><b data-nx-f="b">Violin</b><small data-nx-f="small">Student violin can be arranged on rent, &#8377;300 a month</small></td><td data-nx-f="td">Wed, Sat</td><td data-nx-f="td2">6:00 &ndash; 7:00 pm</td><td data-nx-f="td3">4</td><td data-nx-f="fee" class="fee">&#8377;1,200</td></tr>
           </tbody>
         </table>
-        <p class="tabs__foot">A second instrument for the same student is half price. Two children from one family: &#8377;200 off the second child.</p>
+        <p data-nx="fees.tabs-foot2" class="tabs__foot">A second instrument for the same student is half price. Two children from one family: &#8377;200 off the second child.</p>
       </div>
       <div class="tabs__panel tabs__panel--exam">
         <table>
           <caption class="sr-only">Exam preparation batches and fees</caption>
-          <thead><tr><th scope="col">Preparation</th><th scope="col">When</th><th scope="col">What is covered</th><th scope="col">Fee</th></tr></thead>
+          <thead><tr><th data-nx="fees.th11" scope="col">Preparation</th><th data-nx="fees.th12" scope="col">When</th><th data-nx="fees.th13" scope="col">What is covered</th><th data-nx="fees.th14" scope="col">Fee</th></tr></thead>
           <tbody>
-            <tr><td><b>Junior years (1st to 3rd)</b><small>Vocal or instrument</small></td><td>Extra Sunday class, Oct to Feb</td><td>Theory book, practical pieces, viva questions</td><td class="fee">&#8377;500 a month<small>Oct to Feb only</small></td></tr>
-            <tr><td><b>Senior years (4th to 6th)</b><small>Vocal or instrument</small></td><td>Extra Sunday class, Oct to Feb</td><td>Theory, raag notation, history, practical, viva</td><td class="fee">&#8377;700 a month<small>Oct to Feb only</small></td></tr>
-            <tr><td><b>Mock practical</b><small>Two rounds, in front of outside examiners</small></td><td>January</td><td>Full exam format, written feedback</td><td class="fee">Included</td></tr>
-            <tr><td><b>Board exam fees</b></td><td>As per the board</td><td>Paid directly to the board; we fill the form with you</td><td class="fee">At cost</td></tr>
+            <tr><td><b data-nx="fees.b">Junior years (1st to 3rd)</b><small data-nx="fees.small">Vocal or instrument</small></td><td data-nx="fees.td">Extra Sunday class, Oct to Feb</td><td data-nx="fees.td2">Theory book, practical pieces, viva questions</td><td data-nx="fees.fee" class="fee">&#8377;500 a month<small>Oct to Feb only</small></td></tr>
+            <tr><td><b data-nx="fees.b2">Senior years (4th to 6th)</b><small data-nx="fees.small2">Vocal or instrument</small></td><td data-nx="fees.td3">Extra Sunday class, Oct to Feb</td><td data-nx="fees.td4">Theory, raag notation, history, practical, viva</td><td data-nx="fees.fee2" class="fee">&#8377;700 a month<small>Oct to Feb only</small></td></tr>
+            <tr><td><b data-nx="fees.b3">Mock practical</b><small data-nx="fees.small3">Two rounds, in front of outside examiners</small></td><td data-nx="fees.td5">January</td><td data-nx="fees.td6">Full exam format, written feedback</td><td data-nx="fees.fee3" class="fee">Included</td></tr>
+            <tr><td><b data-nx="fees.b4">Board exam fees</b></td><td data-nx="fees.td7">As per the board</td><td data-nx="fees.td8">Paid directly to the board; we fill the form with you</td><td data-nx="fees.fee4" class="fee">At cost</td></tr>
           </tbody>
         </table>
-        <p class="tabs__foot">Exam preparation is optional. Plenty of students learn for ten years and never sit an exam. That is also a fine way to learn music.</p>
+        <p data-nx="fees.tabs-foot3" class="tabs__foot">Exam preparation is optional. Plenty of students learn for ten years and never sit an exam. That is also a fine way to learn music.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--indigo" id="exams">
+<section data-nx-section="exams" class="section section--indigo" id="exams">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Music board exams</span>
-      <h2 class="h2">Year by year, from Prathama to Sangeet Visharad level.</h2>
-      <p class="lead" style="margin-top:1rem">Students who want a certificate sit for music board exams every year from the second year. We prepare them for the syllabus of the boards most Kolkata schools use. Here is what each stage looks like.</p>
+      <span data-nx="exams.kicker" class="kicker">Music board exams</span>
+      <h2 data-nx="exams.h2" class="h2">Year by year, from Prathama to Sangeet Visharad level.</h2>
+      <p data-nx="exams.p" class="lead" style="margin-top:1rem">Students who want a certificate sit for music board exams every year from the second year. We prepare them for the syllabus of the boards most Kolkata schools use. Here is what each stage looks like.</p>
     </div>
     <div class="exam">
-      <ol class="exam__list reveal">
-        <li><span class="yr">Yr 1</span><div><h3>No exam. Just learning.</h3><p>Posture, breath, sargam or hand position. We do not put a six-year-old in front of an examiner.</p></div></li>
-        <li><span class="yr">Yr 2&ndash;3</span><div><h3>Junior years</h3><p>Short theory paper and a practical of two or three pieces. Most children pass comfortably. Viva questions are practised in class from October.</p></div></li>
-        <li><span class="yr">Yr 4&ndash;5</span><div><h3>Middle years</h3><p>Notation writing, raag identification, history of the form. Practical gets longer. Mock exams in January with teachers from other schools as examiners.</p></div></li>
-        <li><span class="yr">Yr 6+</span><div><h3>Senior and diploma level</h3><p>Full performance plus a written paper. Students at this level usually teach the junior batches with us, which is the best preparation there is.</p></div></li>
+      <ol data-nx-list="exams.exam-list" class="exam__list reveal">
+        <li data-nx-item><span data-nx-f="yr" class="yr">Yr 1</span><div><h3 data-nx-f="h3">No exam. Just learning.</h3><p data-nx-f="p">Posture, breath, sargam or hand position. We do not put a six-year-old in front of an examiner.</p></div></li>
+        <li data-nx-item><span data-nx-f="yr" class="yr">Yr 2&ndash;3</span><div><h3 data-nx-f="h3">Junior years</h3><p data-nx-f="p">Short theory paper and a practical of two or three pieces. Most children pass comfortably. Viva questions are practised in class from October.</p></div></li>
+        <li data-nx-item><span data-nx-f="yr" class="yr">Yr 4&ndash;5</span><div><h3 data-nx-f="h3">Middle years</h3><p data-nx-f="p">Notation writing, raag identification, history of the form. Practical gets longer. Mock exams in January with teachers from other schools as examiners.</p></div></li>
+        <li data-nx-item><span data-nx-f="yr" class="yr">Yr 6+</span><div><h3 data-nx-f="h3">Senior and diploma level</h3><p data-nx-f="p">Full performance plus a written paper. Students at this level usually teach the junior batches with us, which is the best preparation there is.</p></div></li>
       </ol>
       <aside class="exam__side reveal">
-        <img src="/demo/music-school/images/tabla-player.jpg" width="1200" height="1800" alt="An elderly man in a white shirt playing tabla outdoors" loading="lazy">
-        <h3>How the exam season runs</h3>
-        <ul>
-          <li><span>Form filling</span><b>August</b></li>
-          <li><span>Sunday exam classes</span><b>Oct to Feb</b></li>
-          <li><span>Mock practical</span><b>January</b></li>
-          <li><span>Board exam</span><b>Feb or March</b></li>
-          <li><span>Results and certificates</span><b>June</b></li>
+        <img data-nx="exams.photo" src="/demo/music-school/images/tabla-player.jpg" width="1200" height="1800" alt="An elderly man in a white shirt playing tabla outdoors" loading="lazy">
+        <h3 data-nx="exams.h3">How the exam season runs</h3>
+        <ul data-nx-list="exams.list">
+          <li data-nx-item><span data-nx-f="span">Form filling</span><b data-nx-f="b">August</b></li>
+          <li data-nx-item><span data-nx-f="span">Sunday exam classes</span><b data-nx-f="b">Oct to Feb</b></li>
+          <li data-nx-item><span data-nx-f="span">Mock practical</span><b data-nx-f="b">January</b></li>
+          <li data-nx-item><span data-nx-f="span">Board exam</span><b data-nx-f="b">Feb or March</b></li>
+          <li data-nx-item><span data-nx-f="span">Results and certificates</span><b data-nx-f="b">June</b></li>
         </ul>
         <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sur%20Sadhana%20Sangeet%20Vidyalaya%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about exam batches</a>
       </aside>
@@ -494,81 +497,81 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="band" id="function">
-  <img class="bg" src="/demo/music-school/images/annual-function.jpg" width="1200" height="1800" alt="" loading="lazy">
+<section data-nx-section="function" class="band" id="function">
+  <img data-nx="function.bg" class="bg" src="/demo/music-school/images/annual-function.jpg" width="1200" height="1800" alt="" loading="lazy">
   <div class="wrap">
     <div class="reveal">
-      <span class="kicker">Annual function</span>
-      <h2>Sur Sandhya, the second Sunday of January.</h2>
-      <p>Every student who has attended for six months sings or plays on stage. Juniors in groups, seniors solo, the tabla batch accompanies everyone. We hire the hall, the sound and the lights. Families get three passes each and the rest are open to the neighbourhood.</p>
-      <div class="hero__cta"><a class="btn btn--amber" href="#gallery">Photos from last January</a></div>
+      <span data-nx="function.kicker" class="kicker">Annual function</span>
+      <h2 data-nx="function.h2">Sur Sandhya, the second Sunday of January.</h2>
+      <p data-nx="function.p">Every student who has attended for six months sings or plays on stage. Juniors in groups, seniors solo, the tabla batch accompanies everyone. We hire the hall, the sound and the lights. Families get three passes each and the rest are open to the neighbourhood.</p>
+      <div class="hero__cta"><a data-nx="function.button" class="btn btn--amber" href="#gallery">Photos from last January</a></div>
     </div>
-    <ul class="band__facts reveal">
-      <li><b>34th</b><span>Sur Sandhya in January 2027</span></li>
-      <li><b>Sun 10 Jan</b><span>Tollygunge community hall, 5 pm</span></li>
-      <li><b>96</b><span>Students on stage last year</span></li>
-      <li><b>&#8377;600</b><span>Per student for costume and hall, once a year</span></li>
+    <ul data-nx-list="function.band-facts" class="band__facts reveal">
+      <li data-nx-item><b data-nx-f="b">34th</b><span data-nx-f="span">Sur Sandhya in January 2027</span></li>
+      <li data-nx-item><b data-nx-f="b">Sun 10 Jan</b><span data-nx-f="span">Tollygunge community hall, 5 pm</span></li>
+      <li data-nx-item><b data-nx-f="b">96</b><span data-nx-f="span">Students on stage last year</span></li>
+      <li data-nx-item><b data-nx-f="b">&#8377;600</b><span data-nx-f="span">Per student for costume and hall, once a year</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Gallery</span>
-      <h2 class="h2">From the classrooms and the stage.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Gallery</span>
+      <h2 data-nx="gallery.h2" class="h2">From the classrooms and the stage.</h2>
     </div>
-    <ul class="masonry reveal">
-      <li><img src="/demo/music-school/images/harmonium-tabla-group.jpg" width="1200" height="800" alt="Three students performing with tabla and two harmoniums on a low stage" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/stage-performer.jpg" width="1200" height="1600" alt="A singer in orange performing with a microphone in front of a large audience" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/sitar-chair.jpg" width="1200" height="800" alt="A sitar resting on a blue velvet chair" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/keyboard-hands.jpg" width="1200" height="1800" alt="Hands on a keyboard" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/boy-guitar.jpg" width="1200" height="800" alt="A boy practising guitar" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/violin.jpg" width="1200" height="1800" alt="A violin and bow" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/harmonium-hand.jpg" width="1200" height="800" alt="Harmonium keys under a hand" loading="lazy"></li>
-      <li><img src="/demo/music-school/images/tabla-pair.jpg" width="1200" height="1596" alt="A pair of tabla" loading="lazy"></li>
+    <ul data-nx-list="gallery.masonry" class="masonry reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/harmonium-tabla-group.jpg" width="1200" height="800" alt="Three students performing with tabla and two harmoniums on a low stage" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/stage-performer.jpg" width="1200" height="1600" alt="A singer in orange performing with a microphone in front of a large audience" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/sitar-chair.jpg" width="1200" height="800" alt="A sitar resting on a blue velvet chair" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/keyboard-hands.jpg" width="1200" height="1800" alt="Hands on a keyboard" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/boy-guitar.jpg" width="1200" height="800" alt="A boy practising guitar" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/violin.jpg" width="1200" height="1800" alt="A violin and bow" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/harmonium-hand.jpg" width="1200" height="800" alt="Harmonium keys under a hand" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/music-school/images/tabla-pair.jpg" width="1200" height="1596" alt="A pair of tabla" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Parents and students</span>
-      <h2 class="h2">What they tell us.</h2>
+      <span data-nx="section-9.kicker" class="kicker">Parents and students</span>
+      <h2 data-nx="section-9.h2" class="h2">What they tell us.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>My daughter started Rabindra Sangeet at seven, bored and fidgety. Madhumita di never raised her voice once. Four years on she sang solo at Sur Sandhya and I cried in the third row.</p><footer>Paromita <span>&middot; mother, Regent Park</span></footer></blockquote>
-      <blockquote class="reveal"><p>I am 52 and started tabla two years ago because I always wanted to. Nobody laughed. I now accompany the Saturday vocal class, badly but happily.</p><footer>Debojyoti <span>&middot; student, Tollygunge</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">My daughter started Rabindra Sangeet at seven, bored and fidgety. Madhumita di never raised her voice once. Four years on she sang solo at Sur Sandhya and I cried in the third row.</p><footer>Paromita <span data-nx-f="span">&middot; mother, Regent Park</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I am 52 and started tabla two years ago because I always wanted to. Nobody laughed. I now accompany the Saturday vocal class, badly but happily.</p><footer>Debojyoti <span data-nx-f="span">&middot; student, Tollygunge</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit</span>
-      <h2 class="h2">A two-storey house off N.S.C. Bose Road, five minutes from Tollygunge metro.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit</span>
+      <h2 data-nx="visit.h2" class="h2">A two-storey house off N.S.C. Bose Road, five minutes from Tollygunge metro.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>23/1 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=23%2F1%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">23/1 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=23%2F1%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Class hours</b>
-            <table class="hours">
-              <tr><td>Tuesday to Sunday, morning</td><td>8:00 am &ndash; 12:00 noon</td></tr>
-              <tr><td>Tuesday to Sunday, evening</td><td>4:00 pm &ndash; 8:30 pm</td></tr>
-              <tr><td>Monday</td><td>Closed</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Class hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Tuesday to Sunday, morning</td><td data-nx-f="td2">8:00 am &ndash; 12:00 noon</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Tuesday to Sunday, evening</td><td data-nx-f="td2">4:00 pm &ndash; 8:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Monday</td><td data-nx-f="td2">Closed</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Say the age and the subject. We will tell you which batch has a seat.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Say the age and the subject. We will tell you which batch has a seat.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--indigo" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sur%20Sadhana%20Sangeet%20Vidyalaya%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -582,10 +585,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>The first class is free. Come and listen.</h2>
-    <p>Send the student's age and what they want to learn. We reply with a batch, a day and a time for the free class.</p>
+    <h2 data-nx="contact.h2">The first class is free. Come and listen.</h2>
+    <p data-nx="contact.p">Send the student's age and what they want to learn. We reply with a batch, a day and a time for the free class.</p>
     <div class="final__cta">
       <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sur%20Sadhana%20Sangeet%20Vidyalaya%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -600,31 +603,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F59E0B"/><path d="M16 30a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm12-4a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="#1E1B4B"/><path d="M20 26V12l12-3v13" stroke="#13113A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-          <span><b>Sur Sadhana</b><small>Sangeet Vidyalaya &middot; Tollygunge</small></span>
+          <span><b data-nx="footer.b">Sur Sadhana</b><small data-nx="footer.small">Sangeet Vidyalaya &middot; Tollygunge</small></span>
         </a>
-        <p>Vocal and instrumental music classes since 1991. Small batches, board exam preparation, and a stage every January.</p>
+        <p data-nx="footer.p">Vocal and instrumental music classes since 1991. Small batches, board exam preparation, and a stage every January.</p>
       </div>
       <div>
-        <h4>Classes</h4>
-        <ul>
-          <li><a href="#vocal">Rabindra Sangeet and classical</a></li>
-          <li><a href="#instruments">Instruments</a></li>
-          <li><a href="#fees">Batches and fees</a></li>
-          <li><a href="#exams">Board exams</a></li>
+        <h4 data-nx="footer.h4">Classes</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#vocal">Rabindra Sangeet and classical</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#instruments">Instruments</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Batches and fees</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#exams">Board exams</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>23/1 N.S.C. Bose Road, Tollygunge, Kolkata 700040</li>
+          <li data-nx="footer.li">23/1 N.S.C. Bose Road, Tollygunge, Kolkata 700040</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Tue&ndash;Sun 8 am &ndash; 12 noon, 4 pm &ndash; 8:30 pm &middot; Mon closed</li>
+          <li data-nx="footer.li2">Tue&ndash;Sun 8 am &ndash; 12 noon, 4 pm &ndash; 8:30 pm &middot; Mon closed</li>
         </ul>
       </div>
     </div>
@@ -666,5 +669,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -125,9 +125,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero .wrap{grid-template-columns:1fr}
   .hero__photo{max-width:440px;padding-right:0;padding-bottom:0}
   .hero__photo img{aspect-ratio:4/4.4}
-  .hero__stats{position:static;margin-top:-2.2rem;margin-inline:1rem;min-width:0}
+  .hero__stats{position:relative;z-index:1;margin-top:-2.2rem;margin-inline:1rem;min-width:0}
 }
-@media (max-width:480px){.hero__stats{grid-template-columns:1fr 1fr;gap:1rem}.hero__stats li:last-child{grid-column:1/-1}}
+@media (max-width:480px){.hero__stats{grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;margin-inline:0}.hero__stats li:last-child{grid-column:1/-1}}
 
 /* garment zigzag */
 .zig li{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,5rem);align-items:center;padding-block:clamp(1.5rem,3.5vw,3rem);border-top:1px solid var(--line)}
@@ -302,25 +302,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: finger-sized links */
+@media (max-width:760px){
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+}
 </style>
+<meta name="nx-site" content="tailor">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rupashree%20Ladies%20Tailors%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Rupashree Ladies Tailors, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#5B2A4A"/><path d="M12 32 30 10M14 10l18 22" stroke="#FBF6F0" stroke-width="2.4" stroke-linecap="round"/><circle cx="14" cy="32" r="3.2" fill="#C4607A"/><circle cx="30" cy="32" r="3.2" fill="#C4607A"/></svg>
-      <span><b>Rupashree Ladies Tailors</b><small>Behala &middot; since 1998</small></span>
+      <span><b data-nx="header.b">Rupashree Ladies Tailors</b><small data-nx="header.small">Behala &middot; since 1998</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -343,228 +348,228 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__photo">
-      <img src="/demo/tailor/images/hero.jpg" width="1200" height="1871" alt="A woman in a saree stitching at a sewing machine by a sunlit window" fetchpriority="high">
-      <ul class="hero__stats">
-        <li><b>27</b><span>Years in Behala</span></li>
-        <li><b>5 days</b><span>Blouse ready, with trial</span></li>
-        <li><b>&#8377;400</b><span>Plain blouse, lining included</span></li>
+      <img data-nx="top.photo" src="/demo/tailor/images/hero.jpg" width="1200" height="1871" alt="A woman in a saree stitching at a sewing machine by a sunlit window" fetchpriority="high">
+      <ul data-nx-list="top.hero-stats" class="hero__stats">
+        <li data-nx-item><b data-nx-f="b">27</b><span data-nx-f="span">Years in Behala</span></li>
+        <li data-nx-item><b data-nx-f="b">5 days</b><span data-nx-f="span">Blouse ready, with trial</span></li>
+        <li data-nx-item><b data-nx-f="b">&#8377;400</b><span data-nx-f="span">Plain blouse, lining included</span></li>
       </ul>
     </div>
     <div>
-      <p class="hero__since"><span></span>Ladies' tailoring in Behala since 1998</p>
-      <h1>Stitched to <em>your</em> measurement, not a size chart.</h1>
-      <p>Blouse, salwar kameez, lehenga, kurti and alterations. Bring the cloth, we take the measurements, and you try it on before you pay the balance. Saree fall and pico done while you wait.</p>
+      <p data-nx="top.hero-since" class="hero__since"><span></span>Ladies' tailoring in Behala since 1998</p>
+      <h1 data-nx="top.h1">Stitched to <em>your</em> measurement, not a size chart.</h1>
+      <p data-nx="top.p">Blouse, salwar kameez, lehenga, kurti and alterations. Bring the cloth, we take the measurements, and you try it on before you pay the balance. Saree fall and pico done while you wait.</p>
       <div class="hero__cta">
         <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rupashree%20Ladies%20Tailors%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send a photo of your design
         </a>
-        <a class="btn btn--ghost" href="#prices">See the price list</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#prices">See the price list</a>
       </div>
-      <p class="hero__note"><b>Urgent blouse in 2 days</b> for &#8377;200 extra. Trial fitting on every order, and fitting changes after the trial are free.</p>
+      <p data-nx="top.hero-note" class="hero__note"><b>Urgent blouse in 2 days</b> for &#8377;200 extra. Trial fitting on every order, and fitting changes after the trial are free.</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="services">
+<section data-nx-section="services" class="section" id="services">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we stitch</span>
-      <h2 class="h2">Six things we do every week.</h2>
-      <p class="lead" style="margin-top:1rem">Stitching charge only. You bring the cloth, or pick from the lining, astar and canvas we keep in the shop.</p>
+      <span data-nx="services.kicker" class="kicker">What we stitch</span>
+      <h2 data-nx="services.h2" class="h2">Six things we do every week.</h2>
+      <p data-nx="services.p" class="lead" style="margin-top:1rem">Stitching charge only. You bring the cloth, or pick from the lining, astar and canvas we keep in the shop.</p>
     </div>
     <ul class="zig">
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/red-fabric.jpg" width="1200" height="800" alt="A hand holding the hem of a red embroidered blouse piece among other fabrics" loading="lazy"></div>
-        <div><span class="zig__n">01</span><h3>Blouse</h3><p>Plain, princess cut, boat neck, back-open, padded. Katori and lining included. Bridal blouses with hand embroidery on request. Bring the saree too so the length and the back match.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>&#8377;400 to &#8377;1,500</span></div><div><b>Ready in</b><span>5 days, trial on day 3</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo" src="/demo/tailor/images/red-fabric.jpg" width="1200" height="800" alt="A hand holding the hem of a red embroidered blouse piece among other fabrics" loading="lazy"></div>
+        <div><span data-nx="services.zig-n" class="zig__n">01</span><h3 data-nx="services.h3">Blouse</h3><p data-nx="services.p2">Plain, princess cut, boat neck, back-open, padded. Katori and lining included. Bridal blouses with hand embroidery on request. Bring the saree too so the length and the back match.</p>
+        <div data-nx-list="services.zig-meta" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">&#8377;400 to &#8377;1,500</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">5 days, trial on day 3</span></div></div></div>
       </li>
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/salwar.jpg" width="1200" height="1800" alt="A woman seated in a floral printed salwar kameez with a dupatta" loading="lazy"></div>
-        <div><span class="zig__n">02</span><h3>Salwar kameez</h3><p>Straight cut, A-line, Anarkali, with churidar, palazzo or straight pant. Dupatta edging done free with the suit. Lining added for thin fabrics.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>&#8377;750 to &#8377;1,800</span></div><div><b>Ready in</b><span>7 days</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo2" src="/demo/tailor/images/salwar.jpg" width="1200" height="1800" alt="A woman seated in a floral printed salwar kameez with a dupatta" loading="lazy"></div>
+        <div><span data-nx="services.zig-n2" class="zig__n">02</span><h3 data-nx="services.h32">Salwar kameez</h3><p data-nx="services.p3">Straight cut, A-line, Anarkali, with churidar, palazzo or straight pant. Dupatta edging done free with the suit. Lining added for thin fabrics.</p>
+        <div data-nx-list="services.zig-meta2" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">&#8377;750 to &#8377;1,800</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">7 days</span></div></div></div>
       </li>
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/pink-lehenga.jpg" width="1200" height="1800" alt="A young woman in a pink embroidered lehenga and dupatta" loading="lazy"></div>
-        <div><span class="zig__n">03</span><h3>Lehenga</h3><p>Can-can, flared or A-line skirt with a matching blouse. We stitch the lehenga from your fabric and work, or alter a readymade one to fit. Book a month before the wedding.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>From &#8377;3,500 for the set</span></div><div><b>Ready in</b><span>15 days, two trials</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo3" src="/demo/tailor/images/pink-lehenga.jpg" width="1200" height="1800" alt="A young woman in a pink embroidered lehenga and dupatta" loading="lazy"></div>
+        <div><span data-nx="services.zig-n3" class="zig__n">03</span><h3 data-nx="services.h33">Lehenga</h3><p data-nx="services.p4">Can-can, flared or A-line skirt with a matching blouse. We stitch the lehenga from your fabric and work, or alter a readymade one to fit. Book a month before the wedding.</p>
+        <div data-nx-list="services.zig-meta3" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">From &#8377;3,500 for the set</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">15 days, two trials</span></div></div></div>
       </li>
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/blue-salwar.jpg" width="1200" height="1800" alt="A woman seated in a blue printed kurta set with a light dupatta" loading="lazy"></div>
-        <div><span class="zig__n">04</span><h3>Kurti, gown and kids' wear</h3><p>Office kurtis, long gowns for Pujo and reception, frocks and lehenga-choli for little girls. Ten pieces or more get a lower rate and a fixed date.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>Kurti &#8377;450 &middot; Gown from &#8377;1,200</span></div><div><b>Ready in</b><span>7 days</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo4" src="/demo/tailor/images/blue-salwar.jpg" width="1200" height="1800" alt="A woman seated in a blue printed kurta set with a light dupatta" loading="lazy"></div>
+        <div><span data-nx="services.zig-n4" class="zig__n">04</span><h3 data-nx="services.h34">Kurti, gown and kids' wear</h3><p data-nx="services.p5">Office kurtis, long gowns for Pujo and reception, frocks and lehenga-choli for little girls. Ten pieces or more get a lower rate and a fixed date.</p>
+        <div data-nx-list="services.zig-meta4" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">Kurti &#8377;450 &middot; Gown from &#8377;1,200</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">7 days</span></div></div></div>
       </li>
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/needle.jpg" width="1200" height="800" alt="Close-up of a sewing machine needle stitching a seam" loading="lazy"></div>
-        <div><span class="zig__n">05</span><h3>Alterations</h3><p>Blouse loosening or tightening, sleeve change, kurti length, pant fitting, zip or hook change. Readymade clothes too. Give it before 1 pm for same-day work.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>&#8377;100 to &#8377;350</span></div><div><b>Ready in</b><span>Same day to 2 days</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo5" src="/demo/tailor/images/needle.jpg" width="1200" height="800" alt="Close-up of a sewing machine needle stitching a seam" loading="lazy"></div>
+        <div><span data-nx="services.zig-n5" class="zig__n">05</span><h3 data-nx="services.h35">Alterations</h3><p data-nx="services.p6">Blouse loosening or tightening, sleeve change, kurti length, pant fitting, zip or hook change. Readymade clothes too. Give it before 1 pm for same-day work.</p>
+        <div data-nx-list="services.zig-meta5" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">&#8377;100 to &#8377;350</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">Same day to 2 days</span></div></div></div>
       </li>
       <li class="reveal">
-        <div class="zig__photo"><img src="/demo/tailor/images/hand-sewing.jpg" width="1200" height="797" alt="A woman's hands hand-stitching a blue fabric" loading="lazy"></div>
-        <div><span class="zig__n">06</span><h3>Saree fall and pico</h3><p>Fall stitched by hand, edges pico on the machine. Matching fall from our stock or yours. Bring the saree in the morning, take it back by evening.</p>
-        <div class="zig__meta"><div><b>Charge</b><span>&#8377;120 with our fall</span></div><div><b>Ready in</b><span>Same day</span></div></div></div>
+        <div class="zig__photo"><img data-nx="services.photo6" src="/demo/tailor/images/hand-sewing.jpg" width="1200" height="797" alt="A woman's hands hand-stitching a blue fabric" loading="lazy"></div>
+        <div><span data-nx="services.zig-n6" class="zig__n">06</span><h3 data-nx="services.h36">Saree fall and pico</h3><p data-nx="services.p7">Fall stitched by hand, edges pico on the machine. Matching fall from our stock or yours. Bring the saree in the morning, take it back by evening.</p>
+        <div data-nx-list="services.zig-meta6" class="zig__meta"><div data-nx-item><b data-nx-f="b">Charge</b><span data-nx-f="span">&#8377;120 with our fall</span></div><div data-nx-item><b data-nx-f="b">Ready in</b><span data-nx-f="span">Same day</span></div></div></div>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep" id="prices">
+<section data-nx-section="prices" class="section section--deep" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price list</span>
-      <h2 class="h2">Stitching charges by garment.</h2>
-      <p class="lead" style="margin-top:1rem">Stitching charges only. Cloth, lace, buttons and embroidery work are extra and we tell you the full amount before we cut. Prices from 1 January 2026. Days count from when we have your cloth and measurements.</p>
+      <span data-nx="prices.kicker" class="kicker">Price list</span>
+      <h2 data-nx="prices.h2" class="h2">Stitching charges by garment.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">Stitching charges only. Cloth, lace, buttons and embroidery work are extra and we tell you the full amount before we cut. Prices from 1 January 2026. Days count from when we have your cloth and measurements.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="pt" id="pt1" checked>
       <input type="radio" name="pt" id="pt2">
       <input type="radio" name="pt" id="pt3">
       <input type="radio" name="pt" id="pt4">
-      <div class="tabs__labels">
-        <label for="pt1">Blouse</label>
-        <label for="pt2">Salwar &amp; kurti</label>
-        <label for="pt3">Lehenga &amp; gown</label>
-        <label for="pt4">Alterations &amp; fall-pico</label>
+      <div data-nx-list="prices.tabs-labels" class="tabs__labels">
+        <label data-nx-f="label" data-nx-item for="pt1">Blouse</label>
+        <label data-nx-f="label" data-nx-item for="pt2">Salwar &amp; kurti</label>
+        <label data-nx-f="label" data-nx-item for="pt3">Lehenga &amp; gown</label>
+        <label data-nx-f="label" data-nx-item for="pt4">Alterations &amp; fall-pico</label>
       </div>
       <div class="tabs__panel tabs__panel--1">
         <table class="ptable">
-          <thead><tr><th>Item</th><th>Charge</th><th>Days</th></tr></thead>
-          <tbody>
-            <tr><td>Plain blouse<small>Lining and katori included</small></td><td>&#8377;400</td><td>5</td></tr>
-            <tr><td>Princess cut or boat neck</td><td>&#8377;500</td><td>5</td></tr>
-            <tr><td>Padded blouse</td><td>&#8377;650</td><td>5</td></tr>
-            <tr><td>Designer back<small>Dori, latkan, keyhole</small></td><td>&#8377;800</td><td>7</td></tr>
-            <tr><td>Piping or lace border<small>Added to any blouse</small></td><td>+&#8377;100</td><td>same</td></tr>
-            <tr><td>Bridal blouse<small>Heavy fabric, hand finishing</small></td><td>&#8377;1,200 to &#8377;1,500</td><td>10</td></tr>
-            <tr><td>Urgent blouse<small>Plain or princess cut only</small></td><td>+&#8377;200</td><td>2</td></tr>
-            <tr><td>Petticoat<small>Cotton or satin</small></td><td>&#8377;250</td><td>5</td></tr>
+          <thead><tr><th data-nx="prices.th">Item</th><th data-nx="prices.th2">Charge</th><th data-nx="prices.th3">Days</th></tr></thead>
+          <tbody data-nx-list="prices.list">
+            <tr data-nx-item><td data-nx-f="td">Plain blouse<small>Lining and katori included</small></td><td data-nx-f="td2">&#8377;400</td><td data-nx-f="td3">5</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Princess cut or boat neck</td><td data-nx-f="td2">&#8377;500</td><td data-nx-f="td3">5</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Padded blouse</td><td data-nx-f="td2">&#8377;650</td><td data-nx-f="td3">5</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Designer back<small>Dori, latkan, keyhole</small></td><td data-nx-f="td2">&#8377;800</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Piping or lace border<small>Added to any blouse</small></td><td data-nx-f="td2">+&#8377;100</td><td data-nx-f="td3">same</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Bridal blouse<small>Heavy fabric, hand finishing</small></td><td data-nx-f="td2">&#8377;1,200 to &#8377;1,500</td><td data-nx-f="td3">10</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Urgent blouse<small>Plain or princess cut only</small></td><td data-nx-f="td2">+&#8377;200</td><td data-nx-f="td3">2</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Petticoat<small>Cotton or satin</small></td><td data-nx-f="td2">&#8377;250</td><td data-nx-f="td3">5</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel tabs__panel--2">
         <table class="ptable">
-          <thead><tr><th>Item</th><th>Charge</th><th>Days</th></tr></thead>
-          <tbody>
-            <tr><td>Salwar kameez, plain<small>Kameez with salwar or churidar</small></td><td>&#8377;750</td><td>7</td></tr>
-            <tr><td>Salwar kameez with lining</td><td>&#8377;950</td><td>7</td></tr>
-            <tr><td>Anarkali<small>With churidar</small></td><td>&#8377;1,500 to &#8377;1,800</td><td>10</td></tr>
-            <tr><td>Kurti</td><td>&#8377;450</td><td>7</td></tr>
-            <tr><td>Palazzo or straight pant</td><td>&#8377;350</td><td>5</td></tr>
-            <tr><td>Dupatta edging<small>Free with a suit</small></td><td>&#8377;80</td><td>same</td></tr>
-            <tr><td>Office kurtis, 10 or more<small>Per piece</small></td><td>&#8377;380</td><td>by date</td></tr>
+          <thead><tr><th data-nx="prices.th4">Item</th><th data-nx="prices.th5">Charge</th><th data-nx="prices.th6">Days</th></tr></thead>
+          <tbody data-nx-list="prices.list2">
+            <tr data-nx-item><td data-nx-f="td">Salwar kameez, plain<small>Kameez with salwar or churidar</small></td><td data-nx-f="td2">&#8377;750</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Salwar kameez with lining</td><td data-nx-f="td2">&#8377;950</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Anarkali<small>With churidar</small></td><td data-nx-f="td2">&#8377;1,500 to &#8377;1,800</td><td data-nx-f="td3">10</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Kurti</td><td data-nx-f="td2">&#8377;450</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Palazzo or straight pant</td><td data-nx-f="td2">&#8377;350</td><td data-nx-f="td3">5</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Dupatta edging<small>Free with a suit</small></td><td data-nx-f="td2">&#8377;80</td><td data-nx-f="td3">same</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Office kurtis, 10 or more<small>Per piece</small></td><td data-nx-f="td2">&#8377;380</td><td data-nx-f="td3">by date</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel tabs__panel--3">
         <table class="ptable">
-          <thead><tr><th>Item</th><th>Charge</th><th>Days</th></tr></thead>
-          <tbody>
-            <tr><td>Lehenga with can-can + blouse</td><td>&#8377;3,500 to &#8377;6,000</td><td>15</td></tr>
-            <tr><td>Lehenga skirt only<small>Flared or A-line</small></td><td>&#8377;2,200</td><td>10</td></tr>
-            <tr><td>Readymade lehenga fitting</td><td>&#8377;600 to &#8377;1,200</td><td>5</td></tr>
-            <tr><td>Long gown<small>Pujo, reception</small></td><td>From &#8377;1,200</td><td>7</td></tr>
-            <tr><td>Kids' frock</td><td>&#8377;350</td><td>7</td></tr>
-            <tr><td>Kids' lehenga-choli</td><td>&#8377;900</td><td>7</td></tr>
+          <thead><tr><th data-nx="prices.th7">Item</th><th data-nx="prices.th8">Charge</th><th data-nx="prices.th9">Days</th></tr></thead>
+          <tbody data-nx-list="prices.list3">
+            <tr data-nx-item><td data-nx-f="td">Lehenga with can-can + blouse</td><td data-nx-f="td2">&#8377;3,500 to &#8377;6,000</td><td data-nx-f="td3">15</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Lehenga skirt only<small>Flared or A-line</small></td><td data-nx-f="td2">&#8377;2,200</td><td data-nx-f="td3">10</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Readymade lehenga fitting</td><td data-nx-f="td2">&#8377;600 to &#8377;1,200</td><td data-nx-f="td3">5</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Long gown<small>Pujo, reception</small></td><td data-nx-f="td2">From &#8377;1,200</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Kids' frock</td><td data-nx-f="td2">&#8377;350</td><td data-nx-f="td3">7</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Kids' lehenga-choli</td><td data-nx-f="td2">&#8377;900</td><td data-nx-f="td3">7</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel tabs__panel--4">
         <table class="ptable">
-          <thead><tr><th>Item</th><th>Charge</th><th>Days</th></tr></thead>
-          <tbody>
-            <tr><td>Saree fall and pico<small>Our fall</small></td><td>&#8377;120</td><td>same day</td></tr>
-            <tr><td>Saree fall and pico<small>Your fall</small></td><td>&#8377;90</td><td>same day</td></tr>
-            <tr><td>Blouse loosen or tighten</td><td>&#8377;150</td><td>2</td></tr>
-            <tr><td>Sleeve change</td><td>&#8377;200</td><td>2</td></tr>
-            <tr><td>Kurti or pant length</td><td>&#8377;100</td><td>same day</td></tr>
-            <tr><td>Zip or hook change</td><td>&#8377;100 to &#8377;150</td><td>same day</td></tr>
-            <tr><td>Readymade gown fitting</td><td>&#8377;250 to &#8377;350</td><td>2</td></tr>
+          <thead><tr><th data-nx="prices.th10">Item</th><th data-nx="prices.th11">Charge</th><th data-nx="prices.th12">Days</th></tr></thead>
+          <tbody data-nx-list="prices.list4">
+            <tr data-nx-item><td data-nx-f="td">Saree fall and pico<small>Our fall</small></td><td data-nx-f="td2">&#8377;120</td><td data-nx-f="td3">same day</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Saree fall and pico<small>Your fall</small></td><td data-nx-f="td2">&#8377;90</td><td data-nx-f="td3">same day</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Blouse loosen or tighten</td><td data-nx-f="td2">&#8377;150</td><td data-nx-f="td3">2</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Sleeve change</td><td data-nx-f="td2">&#8377;200</td><td data-nx-f="td3">2</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Kurti or pant length</td><td data-nx-f="td2">&#8377;100</td><td data-nx-f="td3">same day</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Zip or hook change</td><td data-nx-f="td2">&#8377;100 to &#8377;150</td><td data-nx-f="td3">same day</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Readymade gown fitting</td><td data-nx-f="td2">&#8377;250 to &#8377;350</td><td data-nx-f="td3">2</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="tabs__note">Half the amount is paid when you give the cloth, the rest at the trial. Before Durga Pujo (from mid-September) add 5 days to everything.</p>
+      <p data-nx="prices.tabs-note" class="tabs__note">Half the amount is paid when you give the cloth, the rest at the trial. Before Durga Pujo (from mid-September) add 5 days to everything.</p>
     </div>
-    <p class="price__note">Want something not on the list? Send a photo on WhatsApp and we will quote before you buy the cloth.</p>
+    <p data-nx="prices.price-note" class="price__note">Want something not on the list? Send a photo on WhatsApp and we will quote before you buy the cloth.</p>
   </div>
 </section>
 
-<section class="section" id="process">
+<section data-nx-section="process" class="section" id="process">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">How it works</span>
-      <h2 class="h2">From your first message to the finished garment.</h2>
-      <p class="lead" style="margin-top:1rem">Measurements are taken by Rupa or Shree in a closed trial room and written on a card we keep for you. You come to the shop twice: once to measure, once for the trial.</p>
+      <span data-nx="process.kicker" class="kicker">How it works</span>
+      <h2 data-nx="process.h2" class="h2">From your first message to the finished garment.</h2>
+      <p data-nx="process.p" class="lead" style="margin-top:1rem">Measurements are taken by Rupa or Shree in a closed trial room and written on a card we keep for you. You come to the shop twice: once to measure, once for the trial.</p>
     </div>
     <div class="process">
       <ol class="tl reveal">
-        <li><span class="tl__when">Day 0</span><h3>Message or visit</h3><p>Send a photo of the design on WhatsApp, or walk in. We tell you the stitching charge, how much cloth to buy and the delivery date before anything else.</p></li>
-        <li><span class="tl__when">Day 0, ten minutes</span><h3>Measurements taken</h3><p>Fourteen measurements for a blouse, eighteen for a suit, more for a lehenga. If you brought an old blouse that fits, we copy what you like and fix what you do not. Half the amount is paid now.</p></li>
-        <li><span class="tl__when">Day 1 to 2</span><h3>Cutting</h3><p>The masterji cuts from your card. Lining, astar and canvas go in from our stock. Nothing is cut until the design and price are agreed.</p></li>
-        <li><span class="tl__when">Blouse day 3 &middot; suit day 5 &middot; lehenga day 8 and 12</span><h3>Trial fitting</h3><p>Tacked, not finished, so anything can still change. Sleeve, neck depth, length, tightness. Changes at this stage are free. The balance is paid here.</p>
-          <div class="tl__days"><span>Urgent blouse: trial day 2 morning</span><span>Lehenga: two trials</span></div></li>
-        <li><span class="tl__when">Blouse day 5 &middot; suit day 7 &middot; lehenga day 15</span><h3>Delivery</h3><p>Hooks, piping, fall and pressing are done after the trial. Your garment hangs in the front room under your name till you collect. Fall-pico and small alterations are same day: give before 1 pm, collect after 6 pm.</p>
-          <div class="tl__days"><span>Same day: fall-pico, small alterations</span><span>2 days: urgent blouse</span><span>5 days: blouse, petticoat, kurti</span><span>7 days: suit, gown, kids' wear</span><span>15 days: lehenga, bridal</span></div></li>
+        <li><span data-nx="process.tl-when" class="tl__when">Day 0</span><h3 data-nx="process.h3">Message or visit</h3><p data-nx="process.p2">Send a photo of the design on WhatsApp, or walk in. We tell you the stitching charge, how much cloth to buy and the delivery date before anything else.</p></li>
+        <li><span data-nx="process.tl-when2" class="tl__when">Day 0, ten minutes</span><h3 data-nx="process.h32">Measurements taken</h3><p data-nx="process.p3">Fourteen measurements for a blouse, eighteen for a suit, more for a lehenga. If you brought an old blouse that fits, we copy what you like and fix what you do not. Half the amount is paid now.</p></li>
+        <li><span data-nx="process.tl-when3" class="tl__when">Day 1 to 2</span><h3 data-nx="process.h33">Cutting</h3><p data-nx="process.p4">The masterji cuts from your card. Lining, astar and canvas go in from our stock. Nothing is cut until the design and price are agreed.</p></li>
+        <li><span data-nx="process.tl-when4" class="tl__when">Blouse day 3 &middot; suit day 5 &middot; lehenga day 8 and 12</span><h3 data-nx="process.h34">Trial fitting</h3><p data-nx="process.p5">Tacked, not finished, so anything can still change. Sleeve, neck depth, length, tightness. Changes at this stage are free. The balance is paid here.</p>
+          <div data-nx-list="process.tl-days" class="tl__days"><span data-nx-f="span" data-nx-item>Urgent blouse: trial day 2 morning</span><span data-nx-f="span" data-nx-item>Lehenga: two trials</span></div></li>
+        <li><span data-nx="process.tl-when5" class="tl__when">Blouse day 5 &middot; suit day 7 &middot; lehenga day 15</span><h3 data-nx="process.h35">Delivery</h3><p data-nx="process.p6">Hooks, piping, fall and pressing are done after the trial. Your garment hangs in the front room under your name till you collect. Fall-pico and small alterations are same day: give before 1 pm, collect after 6 pm.</p>
+          <div data-nx-list="process.tl-days2" class="tl__days"><span data-nx-f="span" data-nx-item>Same day: fall-pico, small alterations</span><span data-nx-f="span" data-nx-item>2 days: urgent blouse</span><span data-nx-f="span" data-nx-item>5 days: blouse, petticoat, kurti</span><span data-nx-f="span" data-nx-item>7 days: suit, gown, kids' wear</span><span data-nx-f="span" data-nx-item>15 days: lehenga, bridal</span></div></li>
       </ol>
       <aside class="aside reveal">
-        <img src="/demo/tailor/images/tape-pins.jpg" width="1200" height="800" alt="A measuring tape and sewing pins on the cutting table" loading="lazy">
+        <img data-nx="process.photo" src="/demo/tailor/images/tape-pins.jpg" width="1200" height="800" alt="A measuring tape and sewing pins on the cutting table" loading="lazy">
         <div class="aside__body">
-          <h3>What to bring</h3>
-          <ul>
-            <li>Your fabric. Blouse 80 cm to 1 m (1.2 m for long sleeves); salwar kameez 2.5 m top and 2.5 m bottom; lehenga 4 to 6 m.</li>
-            <li>The saree the blouse is for, so the length and back match.</li>
-            <li>One old garment that fits you well, if you have it.</li>
-            <li>A photo of the design on your phone, or pick from our book.</li>
-            <li>Any lace, buttons or dori you want used. We stock the rest.</li>
+          <h3 data-nx="process.h36">What to bring</h3>
+          <ul data-nx-list="process.list">
+            <li data-nx-f="li" data-nx-item>Your fabric. Blouse 80 cm to 1 m (1.2 m for long sleeves); salwar kameez 2.5 m top and 2.5 m bottom; lehenga 4 to 6 m.</li>
+            <li data-nx-f="li" data-nx-item>The saree the blouse is for, so the length and back match.</li>
+            <li data-nx-f="li" data-nx-item>One old garment that fits you well, if you have it.</li>
+            <li data-nx-f="li" data-nx-item>A photo of the design on your phone, or pick from our book.</li>
+            <li data-nx-f="li" data-nx-item>Any lace, buttons or dori you want used. We stock the rest.</li>
           </ul>
-          <p class="aside__foot">Repeat customers can skip the visit: we have your card, so just send the cloth with a reference blouse.</p>
+          <p data-nx="process.aside-foot" class="aside__foot">Repeat customers can skip the visit: we have your card, so just send the cloth with a reference blouse.</p>
         </div>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="band" id="story">
-  <img src="/demo/tailor/images/dresses-display.jpg" width="1200" height="1600" alt="Finished pink and gold embroidered lehengas hanging in a row" loading="lazy">
+<section data-nx-section="story" class="band" id="story">
+  <img data-nx="story.photo" src="/demo/tailor/images/dresses-display.jpg" width="1200" height="1600" alt="Finished pink and gold embroidered lehengas hanging in a row" loading="lazy">
   <div class="wrap">
     <div class="band__panel reveal">
-      <span class="kicker">About the shop</span>
-      <h2 class="h2">One shop, two sisters, four machines.</h2>
-      <p>Rupa Mondal started stitching blouses from her Behala flat in 1998. Her sister Shree joined in 2004 and the shop in Sahapur Colony opened the next year. Today there are four machines, one masterji for cutting, and two women who do only hand finishing: hooks, piping, fall and pico.</p>
-      <p>We keep every customer's measurements on a card, so a repeat blouse needs only a phone call and the cloth. Most of our customers have been coming for ten years or more.</p>
-      <ul class="band__facts">
-        <li><b>1998</b><span>First blouse stitched</span></li>
-        <li><b>4,000+</b><span>Measurement cards on file</span></li>
-        <li><b>4</b><span>Machines, one cutting table</span></li>
+      <span data-nx="story.kicker" class="kicker">About the shop</span>
+      <h2 data-nx="story.h2" class="h2">One shop, two sisters, four machines.</h2>
+      <p data-nx="story.p">Rupa Mondal started stitching blouses from her Behala flat in 1998. Her sister Shree joined in 2004 and the shop in Sahapur Colony opened the next year. Today there are four machines, one masterji for cutting, and two women who do only hand finishing: hooks, piping, fall and pico.</p>
+      <p data-nx="story.p2">We keep every customer's measurements on a card, so a repeat blouse needs only a phone call and the cloth. Most of our customers have been coming for ten years or more.</p>
+      <ul data-nx-list="story.band-facts" class="band__facts">
+        <li data-nx-item><b data-nx-f="b">1998</b><span data-nx-f="span">First blouse stitched</span></li>
+        <li data-nx-item><b data-nx-f="b">4,000+</b><span data-nx-f="span">Measurement cards on file</span></li>
+        <li data-nx-item><b data-nx-f="b">4</b><span data-nx-f="span">Machines, one cutting table</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Things customers ask before their first order.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Things customers ask before their first order.</h2>
     </div>
-    <div class="qa reveal">
-      <div><h3>Do I have to bring my own cloth?</h3><p>For the main fabric, yes. We keep cotton lining, astar, canvas, cups, hooks and matching thread in the shop and add those to the bill at cost.</p></div>
-      <div><h3>Can you copy a blouse I already have?</h3><p>Yes. Bring it along. We measure the blouse and you, and tell you if anything should change. Most repeat customers simply hand over the cloth and a reference blouse.</p></div>
-      <div><h3>Can I give measurements over WhatsApp?</h3><p>For a repeat order, yes, we have your card. For a first order we ask you to come once; a blouse measured on the phone almost never fits right the first time.</p></div>
-      <div><h3>What if the fitting is not right?</h3><p>That is what the trial is for. Fitting changes after the trial are free. If a finished garment does not fit because of our mistake, we fix it or stitch it again at no charge.</p></div>
-      <div><h3>Do you do bulk orders?</h3><p>Yes, for school uniforms, office kurtis and wedding-party blouses. Ten pieces or more get a lower rate and a fixed date. Message us the count and the date.</p></div>
-      <div><h3>Do you take orders before Pujo?</h3><p>Yes, but add 5 days to every delivery time from mid-September, and we stop taking new Pujo orders on Mahalaya. Book your Pujo blouses in August if you can.</p></div>
+    <div data-nx-list="faq.qa" class="qa reveal">
+      <div data-nx-item><h3 data-nx-f="h3">Do I have to bring my own cloth?</h3><p data-nx-f="p">For the main fabric, yes. We keep cotton lining, astar, canvas, cups, hooks and matching thread in the shop and add those to the bill at cost.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Can you copy a blouse I already have?</h3><p data-nx-f="p">Yes. Bring it along. We measure the blouse and you, and tell you if anything should change. Most repeat customers simply hand over the cloth and a reference blouse.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Can I give measurements over WhatsApp?</h3><p data-nx-f="p">For a repeat order, yes, we have your card. For a first order we ask you to come once; a blouse measured on the phone almost never fits right the first time.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">What if the fitting is not right?</h3><p data-nx-f="p">That is what the trial is for. Fitting changes after the trial are free. If a finished garment does not fit because of our mistake, we fix it or stitch it again at no charge.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Do you do bulk orders?</h3><p data-nx-f="p">Yes, for school uniforms, office kurtis and wedding-party blouses. Ten pieces or more get a lower rate and a fixed date. Message us the count and the date.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Do you take orders before Pujo?</h3><p data-nx-f="p">Yes, but add 5 days to every delivery time from mid-September, and we stop taking new Pujo orders on Mahalaya. Book your Pujo blouses in August if you can.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="gallery">
+<section data-nx-section="gallery" class="section section--deep" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">From the shop</span>
-      <h2 class="h2">Some of our work.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From the shop</span>
+      <h2 data-nx="gallery.h2" class="h2">Some of our work.</h2>
     </div>
     <ul class="strip reveal">
       <li><img src="/demo/tailor/images/red-lehenga.jpg" width="1200" height="1800" alt="A woman in a maroon sequin lehenga holding out a net dupatta" loading="lazy"></li>
@@ -576,48 +581,48 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <li><img src="/demo/tailor/images/hand-sewing.jpg" width="1200" height="797" alt="Hand stitching on blue fabric" loading="lazy"></li>
       <li><img src="/demo/tailor/images/needle.jpg" width="1200" height="800" alt="A sewing machine needle at work" loading="lazy"></li>
     </ul>
-    <p class="strip__hint">Swipe to see more</p>
+    <p data-nx="gallery.strip-hint" class="strip__hint">Swipe to see more</p>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-9" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-9.h2" class="h2">In their own words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>I have had my blouses stitched here for twelve years. I give the cloth to Shree di on Monday and pick it up on Saturday. Never once a fitting problem.</p><footer>Mousumi <span>&middot; Sakherbazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>They stitched my daughter's reception lehenga from fabric we bought in Gariahat. Two trials, every change done without a fuss, and ready a week before the date.</p><footer>Krishna <span>&middot; Thakurpukur</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I have had my blouses stitched here for twelve years. I give the cloth to Shree di on Monday and pick it up on Saturday. Never once a fitting problem.</p><footer>Mousumi <span data-nx-f="span">&middot; Sakherbazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">They stitched my daughter's reception lehenga from fabric we bought in Gariahat. Two trials, every change done without a fuss, and ready a week before the date.</p><footer>Krishna <span data-nx-f="span">&middot; Thakurpukur</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="visit">
+<section data-nx-section="visit" class="section section--deep" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">In Sahapur Colony, five minutes from Behala Chowrasta.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">In Sahapur Colony, five minutes from Behala Chowrasta.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>37 Sahapur Colony, Behala<br>Kolkata 700038 (first floor, above the medicine shop)</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=37%20Sahapur%20Colony%2C%20Behala%2C%20Kolkata%20700038" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">37 Sahapur Colony, Behala<br>Kolkata 700038 (first floor, above the medicine shop)</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=37%20Sahapur%20Colony%2C%20Behala%2C%20Kolkata%20700038" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:30 am &ndash; 8:30 pm</td></tr>
-              <tr><td>Sunday</td><td>11:00 am &ndash; 3:00 pm</td></tr>
-              <tr><td>Measurements taken</td><td>11 am &ndash; 7 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:30 am &ndash; 8:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">11:00 am &ndash; 3:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Measurements taken</td><td data-nx-f="td2">11 am &ndash; 7 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp photos of designs welcome, replies 10 am to 8 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp photos of designs welcome, replies 10 am to 8 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--plum" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rupashree%20Ladies%20Tailors%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -631,10 +636,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Send a photo of the design. We will tell you the price and the date.</h2>
-    <p>One message with the photo and the garment. We reply within the hour during shop time, and you only need to come once for measurements.</p>
+    <h2 data-nx="book.h2">Send a photo of the design. We will tell you the price and the date.</h2>
+    <p data-nx="book.p">One message with the photo and the garment. We reply within the hour during shop time, and you only need to come once for measurements.</p>
     <div class="final__cta">
       <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rupashree%20Ladies%20Tailors%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -649,31 +654,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#C4607A"/><path d="M12 32 30 10M14 10l18 22" stroke="#FBF6F0" stroke-width="2.4" stroke-linecap="round"/><circle cx="14" cy="32" r="3.2" fill="#3D1A31"/><circle cx="30" cy="32" r="3.2" fill="#3D1A31"/></svg>
-          <span><b>Rupashree Ladies Tailors</b><small>Behala &middot; since 1998</small></span>
+          <span><b data-nx="footer.b">Rupashree Ladies Tailors</b><small data-nx="footer.small">Behala &middot; since 1998</small></span>
         </a>
-        <p>Ladies' tailoring and boutique. Blouse, salwar kameez, lehenga, alterations, fall and pico. Measurements kept on file for every customer.</p>
+        <p data-nx="footer.p">Ladies' tailoring and boutique. Blouse, salwar kameez, lehenga, alterations, fall and pico. Measurements kept on file for every customer.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#services">What we stitch</a></li>
-          <li><a href="#prices">Price list</a></li>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="#story">About the shop</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#services">What we stitch</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#process">How it works</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#story">About the shop</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>37 Sahapur Colony, Behala, Kolkata 700038</li>
+          <li data-nx="footer.li">37 Sahapur Colony, Behala, Kolkata 700038</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10:30 am &ndash; 8:30 pm &middot; Sun 11 am &ndash; 3 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10:30 am &ndash; 8:30 pm &middot; Sun 11 am &ndash; 3 pm</li>
         </ul>
       </div>
     </div>
@@ -715,5 +720,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,1742 @@
+{
+  "site": "tax-consultant",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Mukherjee Tax & Accounts",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-badge",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Your taxes filed on time, your books kept clean",
+            "bn": "Your taxes filed on time, your books kept clean"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hero-card",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Nine things most small businesses and families need",
+        "bn": "Nine things most small businesses and families need"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "cards",
+          "label": {
+            "en": "Nine things most small businesses and families need",
+            "bn": "Nine things most small businesses and families need"
+          },
+          "min": 1,
+          "max": 18,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "from",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "Starting prices. No surprise at the end",
+        "bn": "Starting prices. No surprise at the end"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "tabs-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-bar",
+          "label": {
+            "en": "Starting prices. No surprise at the end",
+            "bn": "Starting prices. No surprise at the end"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 18,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 18,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "label": {
+        "en": "What to send for your income tax return",
+        "bn": "What to send for your income tax return"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "docs-tip",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "deadlines",
+      "label": {
+        "en": "The dates that matter in a year",
+        "bn": "The dates that matter in a year"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "cal-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "cal",
+          "label": {
+            "en": "The dates that matter in a year",
+            "bn": "The dates that matter in a year"
+          },
+          "min": 1,
+          "max": 24,
+          "fields": [
+            {
+              "key": "d",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shops",
+      "label": {
+        "en": "Bookkeeping that fits a shop counter, not a boardroom",
+        "bn": "Bookkeeping that fits a shop counter, not a boardroom"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Bookkeeping that fits a shop counter, not a boardroom",
+            "bn": "Bookkeeping that fits a shop counter, not a boardroom"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "num",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "shops-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": {
+        "en": "Four steps, mostly on your phone",
+        "bn": "Four steps, mostly on your phone"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Four steps, mostly on your phone",
+            "bn": "Four steps, mostly on your phone"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "steps-photos",
+          "label": {
+            "en": "Four steps, mostly on your phone",
+            "bn": "Four steps, mostly on your phone"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1799"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "team",
+      "label": {
+        "en": "A small team that knows your file",
+        "bn": "A small team that knows your file"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps-photos",
+          "label": {
+            "en": "A small team that knows your file",
+            "bn": "A small team that knows your file"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "In their words",
+        "bn": "In their words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their words",
+            "bn": "In their words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "BD Block, Sector I, five minutes from Karunamoyee",
+        "bn": "BD Block, Sector I, five minutes from Karunamoyee"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send your papers today. Filed in two days",
+        "bn": "Send your papers today. Filed in two days"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Office",
+            "bn": "Office"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Mukherjee Tax & Accounts",
+      "small": "Salt Lake · Sector I"
+    },
+    "top": {
+      "hero-badge": "<span></span>Qualified chartered accountant office, since 2011",
+      "h1": "Your taxes filed on time, your books kept <mark>clean</mark>.",
+      "p": "Income tax returns, GST, company and shop registrations, TDS and audit. For salaried people, shopkeepers, doctors, small factories and start-ups in Salt Lake and the rest of Kolkata. Send your papers on WhatsApp, we do the rest.",
+      "button": "See the fee table",
+      "photo": {
+        "src": "/demo/tax-consultant/images/hero.jpg",
+        "alt": "A consultant in a blue suit holding a client file, seated at the office desk"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "₹999",
+            "span": "Salaried ITR, start to e-verification"
+          },
+          {
+            "b": "2 days",
+            "span": "Usual time to file once papers are in"
+          },
+          {
+            "b": "10:30 am",
+            "span": "Office opens, Monday to Saturday"
+          }
+        ]
+      },
+      "hero-card": {
+        "items": [
+          {
+            "b": "1,400+",
+            "span": "Returns filed last year"
+          },
+          {
+            "b": "320",
+            "span": "GST clients on monthly filing"
+          },
+          {
+            "b": "0",
+            "span": "Missed deadlines in 2025–26"
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we do",
+      "h2": "Nine things most small businesses and families need.",
+      "p": "Every piece of work is checked by a qualified chartered accountant before it is filed. Starting prices below; the full table is further down.",
+      "cards": {
+        "items": [
+          {
+            "h3": "Income tax return filing",
+            "p": "Salaried, pension, rent, shares and mutual funds, freelancers and business income. We pick the right ITR form and get you the refund you are due.",
+            "from": "From ₹999"
+          },
+          {
+            "h3": "GST registration and returns",
+            "p": "New GSTIN in a week. Then GSTR-1 and GSTR-3B every month, reconciled against your purchase bills so you claim the full input credit.",
+            "from": "From ₹1,999"
+          },
+          {
+            "h3": "Company, LLP, partnership",
+            "p": "Private limited, LLP or a simple partnership deed. We tell you which one suits your size and tax situation, then register it end to end.",
+            "from": "From ₹7,999"
+          },
+          {
+            "h3": "Udyam / MSME registration",
+            "p": "The free government certificate every small business should hold. Opens the door to bank schemes and faster payment rules. Done in a day.",
+            "from": "₹499"
+          },
+          {
+            "h3": "Trade licence",
+            "p": "New licence or renewal from the Kolkata Municipal Corporation or Bidhannagar Municipality. We fill the form, pay the fee, collect the certificate.",
+            "from": "₹1,499 + govt fee"
+          },
+          {
+            "h3": "Accounting and bookkeeping",
+            "p": "For shops, clinics, agencies and small factories. Send bills on WhatsApp or hand over the file once a month. Monthly profit statement included.",
+            "from": "From ₹2,500 / month"
+          },
+          {
+            "h3": "TDS returns",
+            "p": "Quarterly 24Q and 26Q filing, challan matching, Form 16 and 16A for your staff and vendors. Late fee notices sorted when they come.",
+            "from": "From ₹1,499 / quarter"
+          },
+          {
+            "h3": "Audit",
+            "p": "Tax audit when turnover crosses the limit, statutory audit for companies, and stock audit for bank loans. Report signed by a qualified chartered accountant.",
+            "from": "From ₹15,000"
+          },
+          {
+            "h3": "Notices and replies",
+            "p": "Income tax or GST notice landed in your inbox? Bring it in. Most are routine mismatches that a clear reply closes within the deadline.",
+            "from": "From ₹2,000"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Fee table",
+      "h2": "Starting prices. No surprise at the end.",
+      "p": "Government fees, stamp duty and late fees are paid by you directly or shown separately on the bill. Our fee is quoted before we start.",
+      "th": "Work",
+      "th2": "What is included",
+      "th3": "Fee",
+      "th4": "Work",
+      "th5": "What is included",
+      "th6": "Fee",
+      "th7": "Work",
+      "th8": "What is included",
+      "th9": "Fee",
+      "tabs-note": "Fees are for the 2026–27 financial year and apply to work done at the office or over WhatsApp. For anything not listed, send a message and you get a quote the same day.",
+      "tabs-bar": {
+        "items": [
+          {
+            "label": "Individuals"
+          },
+          {
+            "label": "Shops and businesses"
+          },
+          {
+            "label": "Registrations"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "td": "ITR-1, salaried or pension",
+            "td2": "Form 16, bank interest, 80C and 80D claims, e-verification",
+            "td3": "₹999"
+          },
+          {
+            "td": "ITR with house rent income",
+            "td2": "One or two properties, home loan interest set-off",
+            "td3": "₹1,499"
+          },
+          {
+            "td": "ITR with shares and mutual funds",
+            "td2": "Capital gains statement worked out from broker reports",
+            "td3": "₹2,499"
+          },
+          {
+            "td": "ITR for freelancers and professionals",
+            "td2": "Presumptive scheme (44ADA) or full books",
+            "td3": "₹2,999"
+          },
+          {
+            "td": "Belated or revised return",
+            "td2": "Any year still open for filing",
+            "td3": "₹1,499"
+          },
+          {
+            "td": "Advance tax working <small>Four instalments a year</small>",
+            "td2": "Reminder and challan each quarter",
+            "td3": "₹1,500 / year"
+          },
+          {
+            "td": "PAN card, new or correction",
+            "td2": "Application, document check, tracking",
+            "td3": "₹299"
+          },
+          {
+            "td": "Income tax notice reply",
+            "td2": "Reading the notice, drafting and filing the reply",
+            "td3": "from ₹2,000"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "td": "Business ITR, proprietor",
+            "td2": "Profit and loss, balance sheet, 44AD if it fits",
+            "td3": "₹3,499"
+          },
+          {
+            "td": "GST monthly returns <small>GSTR-1 and GSTR-3B</small>",
+            "td2": "Up to 150 invoices a month, input credit reconciliation",
+            "td3": "₹1,500 / month"
+          },
+          {
+            "td": "GST quarterly (QRMP scheme)",
+            "td2": "For turnover under ₹5 crore",
+            "td3": "₹3,000 / quarter"
+          },
+          {
+            "td": "GST annual return <small>GSTR-9</small>",
+            "td2": "Full year reconciliation with books",
+            "td3": "₹4,999"
+          },
+          {
+            "td": "Bookkeeping, small shop",
+            "td2": "Up to 200 entries a month, monthly profit statement",
+            "td3": "₹2,500 / month"
+          },
+          {
+            "td": "Bookkeeping, with staff and stock",
+            "td2": "Up to 600 entries, payroll, stock summary",
+            "td3": "₹5,000 / month"
+          },
+          {
+            "td": "TDS quarterly return <small>24Q or 26Q</small>",
+            "td2": "Challan matching, Form 16/16A generation",
+            "td3": "₹1,499 / quarter"
+          },
+          {
+            "td": "Tax audit <small>Turnover above the limit</small>",
+            "td2": "Form 3CD, signed report, ITR filing",
+            "td3": "from ₹15,000"
+          },
+          {
+            "td": "Company annual filing <small>ROC forms AOC-4 and MGT-7</small>",
+            "td2": "Board minutes, filings, DIN KYC",
+            "td3": "from ₹8,000"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "td": "GST registration",
+            "td2": "Application, document upload, follow-up till GSTIN arrives",
+            "td3": "₹1,999"
+          },
+          {
+            "td": "Udyam / MSME registration",
+            "td2": "Certificate issued the same day in most cases",
+            "td3": "₹499"
+          },
+          {
+            "td": "Trade licence <small>KMC or Bidhannagar</small>",
+            "td2": "New or renewal, form and follow-up",
+            "td3": "₹1,499 + govt fee"
+          },
+          {
+            "td": "Partnership firm",
+            "td2": "Deed drafting, PAN, registration with the Registrar of Firms",
+            "td3": "₹7,999 + stamp duty"
+          },
+          {
+            "td": "LLP",
+            "td2": "Name approval, DSC, incorporation, LLP agreement",
+            "td3": "₹9,999 + govt fee"
+          },
+          {
+            "td": "Private limited company",
+            "td2": "Name approval, DSC, DIN, incorporation, PAN, TAN, bank account help",
+            "td3": "₹14,999 + govt fee"
+          },
+          {
+            "td": "Professional tax enrolment",
+            "td2": "West Bengal PT registration for the business and employees",
+            "td3": "₹1,499"
+          },
+          {
+            "td": "Import Export Code (IEC)",
+            "td2": "DGFT application and certificate",
+            "td3": "₹1,999"
+          },
+          {
+            "td": "TAN",
+            "td2": "Application and allotment letter",
+            "td3": "₹499"
+          }
+        ]
+      }
+    },
+    "documents": {
+      "photo": {
+        "src": "/demo/tax-consultant/images/documents.jpg",
+        "alt": "Hands going through a file of bank statements and receipts with a calculator"
+      },
+      "kicker": "Documents for ITR",
+      "h2": "What to send for your income tax return.",
+      "p": "Photograph each one on your phone and send it on WhatsApp. Not everything applies to everyone; send what you have and we ask for the rest.",
+      "docs-tip": "We download your Form 26AS and AIS from the portal ourselves and match every entry against your papers, so nothing the department already knows about is left out of the return."
+    },
+    "deadlines": {
+      "kicker": "Deadline calendar",
+      "h2": "The dates that matter in a year.",
+      "p": "Our clients get a WhatsApp reminder a week before each one. Miss a date and the late fee is often more than our fee.",
+      "cal-note": "Dates follow the current rules. The government sometimes extends a deadline; when that happens our clients get a message the same day. Always check with us before relying on a date.",
+      "cal": {
+        "items": [
+          {
+            "d": "7<small>Monthly</small>",
+            "h3": "TDS deposit",
+            "p": "Tax deducted last month goes to the government by the 7th."
+          },
+          {
+            "d": "11<small>Monthly</small>",
+            "h3": "GSTR-1",
+            "p": "Sales invoices for the previous month."
+          },
+          {
+            "d": "20<small>Monthly</small>",
+            "h3": "GSTR-3B and payment",
+            "p": "Summary return and the GST you owe after input credit."
+          },
+          {
+            "d": "15<small>Jun, Sep, Dec, Mar</small>",
+            "h3": "Advance tax",
+            "p": "Four instalments for anyone who owes more than ₹10,000 in a year."
+          },
+          {
+            "d": "31<small>May</small>",
+            "h3": "TDS return, Q4",
+            "p": "Last quarter's 24Q and 26Q. Form 16 to staff by 15 June."
+          },
+          {
+            "d": "31<small>July</small>",
+            "h3": "ITR, no audit",
+            "p": "Salaried, pension, most small businesses and professionals."
+          },
+          {
+            "d": "30<small>September</small>",
+            "h3": "Tax audit report",
+            "p": "Form 3CD for businesses above the turnover limit."
+          },
+          {
+            "d": "31<small>October</small>",
+            "h3": "ITR, audit cases",
+            "p": "Companies and businesses that needed a tax audit."
+          },
+          {
+            "d": "31<small>December</small>",
+            "h3": "GSTR-9 annual return",
+            "p": "Full-year GST reconciliation for turnover above ₹2 crore."
+          },
+          {
+            "d": "31<small>December</small>",
+            "h3": "Belated ITR, last chance",
+            "p": "Late return with late fee, for anyone who missed July."
+          },
+          {
+            "d": "30<small>September</small>",
+            "h3": "Company AGM and DIR-3 KYC",
+            "p": "Director KYC and annual meeting for private limited companies."
+          },
+          {
+            "d": "31<small>March</small>",
+            "h3": "Investments for 80C",
+            "p": "LIC, PPF, ELSS paid by this date count for the year."
+          }
+        ]
+      }
+    },
+    "shops": {
+      "kicker": "For shops and small traders",
+      "h2": "Bookkeeping that fits a shop counter, not a boardroom.",
+      "p": "Half our clients are grocery shops, medicine shops, hardware stores, sweet shops and small workshops in Salt Lake, Lake Town, Baguiati and New Town. The routine is simple and takes you ten minutes a month.",
+      "list": {
+        "items": [
+          {
+            "num": "1",
+            "b": "Photograph your purchase bills as they come",
+            "span": "Send them on WhatsApp, or drop the file at the office on the 1st of every month. Sales come straight from your billing software or your daily register."
+          },
+          {
+            "num": "2",
+            "b": "We enter, match and file",
+            "span": "Entries are done within a week. Input credit is matched against GSTR-2B so you do not pay GST twice. Your GSTR-1 and 3B are filed before the dates."
+          },
+          {
+            "num": "3",
+            "b": "You get a one-page monthly statement",
+            "span": "Sales, purchases, GST paid, profit, and cash in hand. In plain figures, in Bengali or English, so you know how the shop is doing without opening a spreadsheet."
+          },
+          {
+            "num": "4",
+            "b": "Year end is already done",
+            "span": "Because the books are kept monthly, your ITR and GSTR-9 are ready in March. No scramble, no missing bills, no late fee."
+          }
+        ]
+      },
+      "shops-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/grocery-shop.jpg",
+              "alt": "The owner of a packed grocery shop checking stock on the shelves"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/shopkeeper.jpg",
+              "alt": "A shopkeeper sitting at the counter of his small shop"
+            }
+          }
+        ]
+      }
+    },
+    "process": {
+      "kicker": "How we work",
+      "h2": "Four steps, mostly on your phone.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Tell us what you need",
+            "p": "A WhatsApp message or a visit. We ask a few questions and tell you the fee and the papers needed."
+          },
+          {
+            "h3": "Send the papers",
+            "p": "Photos on WhatsApp are fine. Originals only where the government asks for them. We confirm receipt the same day."
+          },
+          {
+            "h3": "Check before filing",
+            "p": "You get a draft to approve: the return, the application or the statement. Nothing is filed until you say yes."
+          },
+          {
+            "h3": "Filed, with proof",
+            "p": "Acknowledgement, certificate or challan sent to you on WhatsApp and email. Kept in your file at the office too."
+          }
+        ]
+      },
+      "steps-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/meeting.jpg",
+              "alt": "Two colleagues going over figures on a laptop at the office"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/invoice-check.jpg",
+              "alt": "A finger pointing at a line on an invoice on a clipboard"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/ledger.jpg",
+              "alt": "Hands working through a ledger with a calculator"
+            }
+          }
+        ]
+      }
+    },
+    "team": {
+      "kicker": "The office",
+      "h2": "A small team that knows your file.",
+      "p": "One qualified chartered accountant, two accounts executives and an office assistant. You deal with the same person every time, and the chartered accountant signs off on every return and report.",
+      "steps-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/consultant-standing.jpg",
+              "alt": "A consultant standing in the office corridor with arms folded"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/office-work.jpg",
+              "alt": "An accounts executive working at a desktop computer"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/laptop-woman.jpg",
+              "alt": "A team member working on a laptop at her desk"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/tax-consultant/images/laptop-man.jpg",
+              "alt": "A team member reviewing a return on a laptop"
+            }
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "kicker": "From clients",
+      "h2": "In their words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I run a medicine shop in Lake Town. For three years I paid GST late and paid the fine every time. Since I moved here the returns go on the 18th or 19th without me even calling. The monthly statement tells me exactly where the money went.",
+            "span": "· Lake Town"
+          },
+          {
+            "p": "Got an income tax notice about shares I had sold. I was worried sick. They read it, explained it was a mismatch, filed the reply in four days and it was closed. Fee was told up front and did not change.",
+            "span": "· Salt Lake Sector III"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "The office",
+      "h2": "BD Block, Sector I, five minutes from Karunamoyee.",
+      "b": "Address",
+      "p": "BD-27, Sector I, Salt Lake<br>Kolkata 700064 (ground floor)",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone",
+      "p2": "WhatsApp documents any time. Calls during office hours.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Friday",
+            "td2": "10:30 am – 7:00 pm"
+          },
+          {
+            "td": "Saturday",
+            "td2": "10:30 am – 3:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "Closed (WhatsApp replied Monday)"
+          },
+          {
+            "td": "July and March",
+            "td2": "Open till 9 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Mukherjee Tax & Accounts sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=BD-27%2C%20Sector%20I%2C%20Salt%20Lake%2C%20Kolkata%20700064",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Mukherjee Tax & Accounts",
+      "small": "Salt Lake · Sector I",
+      "p": "Income tax, GST, registrations, TDS, audit and bookkeeping for families and small businesses in Kolkata. Every filing checked by a qualified chartered accountant.",
+      "h4": "Office",
+      "h42": "Find us",
+      "li": "BD-27, Sector I, Salt Lake, Kolkata 700064",
+      "li2": "Mon–Fri 10:30 am – 7 pm · Sat till 3 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Services"
+          },
+          {
+            "button": "Fee table"
+          },
+          {
+            "button": "Documents for ITR"
+          },
+          {
+            "button": "Deadline calendar"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Mukherjee Tax & Accounts | Tax Consultant in Salt Lake, Kolkata",
+      "description": "Income tax returns, GST registration and monthly returns, company and LLP registration, Udyam, trade licence, TDS, audit and bookkeeping for shops. Qualified chartered accountant office in Salt Lake Sector I, Kolkata."
+    }
+  }
+}

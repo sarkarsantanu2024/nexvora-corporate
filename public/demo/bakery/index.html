@@ -276,25 +276,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets and readable small text */
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="bakery">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anjali%20Cake%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Anjali Cake House, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#4A2C21"/><path d="M10 30h24v4a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z" fill="#FFF7F0"/><path d="M11 22h22v8H11z" fill="#E8679A"/><path d="M11 22c3 0 3 3 5.5 3s2.5-3 5.5-3 3 3 5.5 3 2.5-3 5.5-3" fill="none" stroke="#FFF7F0" stroke-width="2.4" stroke-linecap="round"/><path d="M22 20v-6" stroke="#FFF7F0" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="11" r="2.2" fill="#E8679A"/></svg>
-      <span><b>Anjali Cake House</b><small>Dum Dum &middot; since 2011</small></span>
+      <span><b data-nx="header.b">Anjali Cake House</b><small data-nx="header.small">Dum Dum &middot; since 2011</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -317,124 +323,124 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
-    <span class="hero__script">Fresh every morning in Dum Dum</span>
-    <h1>The cake you have in your head, ready by tomorrow evening.</h1>
-    <p>Birthday cakes, photo cakes, eggless cakes and wedding cakes made to order. Send us the design and the weight on WhatsApp today, pick it up or get it delivered tomorrow.</p>
+    <span data-nx="top.hero-script" class="hero__script">Fresh every morning in Dum Dum</span>
+    <h1 data-nx="top.h1">The cake you have in your head, ready by tomorrow evening.</h1>
+    <p data-nx="top.p">Birthday cakes, photo cakes, eggless cakes and wedding cakes made to order. Send us the design and the weight on WhatsApp today, pick it up or get it delivered tomorrow.</p>
     <div class="hero__cta">
       <a class="btn btn--pink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anjali%20Cake%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
         Order on WhatsApp
       </a>
-      <a class="btn btn--ghost" href="#prices">See prices by weight</a>
+      <a data-nx="top.button" class="btn btn--ghost" href="#prices">See prices by weight</a>
     </div>
-    <ul class="hero__facts">
-      <li>Order 1 day ahead</li>
-      <li>Half kg from &#8377;450</li>
-      <li>Delivery within 5 km</li>
+    <ul data-nx-list="top.hero-facts" class="hero__facts">
+      <li data-nx-f="li" data-nx-item>Order 1 day ahead</li>
+      <li data-nx-f="li" data-nx-item>Half kg from &#8377;450</li>
+      <li data-nx-f="li" data-nx-item>Delivery within 5 km</li>
     </ul>
   </div>
-  <div class="hero__band">
-    <img src="/demo/bakery/images/hero.jpg" width="1200" height="1797" alt="Pink buttercream cake with piped roses and gold edges" fetchpriority="high">
-    <img src="/demo/bakery/images/birthday-gold.jpg" width="1200" height="675" alt="Birthday cake with gold lettering" loading="lazy">
-    <img src="/demo/bakery/images/choc-slices.jpg" width="1200" height="788" alt="Slices of chocolate cake with strawberries" loading="lazy">
+  <div data-nx-list="top.hero-band" class="hero__band">
+    <img data-nx-f="photo" data-nx-item src="/demo/bakery/images/hero.jpg" width="1200" height="1797" alt="Pink buttercream cake with piped roses and gold edges" fetchpriority="high">
+    <img data-nx-f="photo" data-nx-item src="/demo/bakery/images/birthday-gold.jpg" width="1200" height="675" alt="Birthday cake with gold lettering" loading="lazy">
+    <img data-nx-f="photo" data-nx-item src="/demo/bakery/images/choc-slices.jpg" width="1200" height="788" alt="Slices of chocolate cake with strawberries" loading="lazy">
   </div>
 </section>
 <div class="notice">Cakes are made to order. <b>Order by 6 pm for the next day.</b> Same-day only for plain half-kg chocolate or vanilla, if the counter has one.</div>
 
-<section class="section" id="cakes">
+<section data-nx-section="cakes" class="section" id="cakes">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Custom cakes</span>
-      <h2 class="h2">Four kinds of cake we make every day.</h2>
-      <p class="lead" style="margin:1rem auto 0">Send a photo of a cake you like, or tell us the colour, the name and the age. We send back a sketch and a price before we bake.</p>
+      <span data-nx="cakes.kicker" class="kicker">Custom cakes</span>
+      <h2 data-nx="cakes.h2" class="h2">Four kinds of cake we make every day.</h2>
+      <p data-nx="cakes.p" class="lead" style="margin:1rem auto 0">Send a photo of a cake you like, or tell us the colour, the name and the age. We send back a sketch and a price before we bake.</p>
     </div>
-    <ul class="cakes">
-      <li class="reveal"><img src="/demo/bakery/images/birthday-choc.jpg" width="1200" height="1800" alt="Chocolate birthday cakes with candles" loading="lazy"><h3>Birthday cakes</h3><p>Chocolate truffle, black forest, butterscotch, red velvet, fresh fruit. Name and age written in cream. Theme cakes with fondant toppers for children.</p><span class="from">From &#8377;450 for half kg</span></li>
-      <li class="reveal"><img src="/demo/bakery/images/fruit-cake.jpg" width="1200" height="1757" alt="Pink cake being decorated with fresh fruit" loading="lazy"><h3>Photo cakes</h3><p>Your photo printed on edible sheet and set on top. Send a clear picture on WhatsApp. Faces come out well on vanilla or butterscotch, which are lighter.</p><span class="from">From &#8377;650 for half kg</span></li>
-      <li class="reveal"><img src="/demo/bakery/images/drip-cake.jpg" width="1200" height="800" alt="Chocolate being poured down the sides of a pink cake" loading="lazy"><h3>Eggless cakes</h3><p>Every flavour in eggless, baked in a separate oven on Tuesdays, Thursdays and puja days. Same price as the egg version. Ask for pure veg cream too.</p><span class="from">Same price as regular</span></li>
-      <li class="reveal"><img src="/demo/bakery/images/wedding-cake.jpg" width="1200" height="801" alt="White wedding cake with red roses" loading="lazy"><h3>Wedding cakes</h3><p>Two and three tier cakes for the reception, 3 kg to 10 kg. Fresh flowers or sugar flowers. We deliver and set it up on the stand at the venue.</p><span class="from">From &#8377;4,500 for 3 kg</span></li>
+    <ul data-nx-list="cakes.cakes" class="cakes">
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/bakery/images/birthday-choc.jpg" width="1200" height="1800" alt="Chocolate birthday cakes with candles" loading="lazy"><h3 data-nx-f="h3">Birthday cakes</h3><p data-nx-f="p">Chocolate truffle, black forest, butterscotch, red velvet, fresh fruit. Name and age written in cream. Theme cakes with fondant toppers for children.</p><span data-nx-f="from" class="from">From &#8377;450 for half kg</span></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/bakery/images/fruit-cake.jpg" width="1200" height="1757" alt="Pink cake being decorated with fresh fruit" loading="lazy"><h3 data-nx-f="h3">Photo cakes</h3><p data-nx-f="p">Your photo printed on edible sheet and set on top. Send a clear picture on WhatsApp. Faces come out well on vanilla or butterscotch, which are lighter.</p><span data-nx-f="from" class="from">From &#8377;650 for half kg</span></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/bakery/images/drip-cake.jpg" width="1200" height="800" alt="Chocolate being poured down the sides of a pink cake" loading="lazy"><h3 data-nx-f="h3">Eggless cakes</h3><p data-nx-f="p">Every flavour in eggless, baked in a separate oven on Tuesdays, Thursdays and puja days. Same price as the egg version. Ask for pure veg cream too.</p><span data-nx-f="from" class="from">Same price as regular</span></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/bakery/images/wedding-cake.jpg" width="1200" height="801" alt="White wedding cake with red roses" loading="lazy"><h3 data-nx-f="h3">Wedding cakes</h3><p data-nx-f="p">Two and three tier cakes for the reception, 3 kg to 10 kg. Fresh flowers or sugar flowers. We deliver and set it up on the stand at the venue.</p><span data-nx-f="from" class="from">From &#8377;4,500 for 3 kg</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--pink" id="prices">
+<section data-nx-section="prices" class="section section--pink" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price by weight</span>
-      <h2 class="h2">What a cake costs, by flavour and weight.</h2>
-      <p class="lead" style="margin-top:1rem">These are the prices for a round cake with a plain cream finish and a name written on top. Fondant work, toppers and photo sheets are added as shown under the table.</p>
+      <span data-nx="prices.kicker" class="kicker">Price by weight</span>
+      <h2 data-nx="prices.h2" class="h2">What a cake costs, by flavour and weight.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">These are the prices for a round cake with a plain cream finish and a name written on top. Fondant work, toppers and photo sheets are added as shown under the table.</p>
     </div>
     <div class="tbl-wrap reveal">
       <table class="tbl">
-        <thead><tr><th scope="col">Flavour</th><th scope="col">500 g</th><th scope="col">1 kg</th><th scope="col">1.5 kg</th><th scope="col">2 kg</th></tr></thead>
-        <tbody>
-          <tr><td>Vanilla, Pineapple<small>Serves 4 to 6 per half kg</small></td><td>&#8377;450</td><td>&#8377;850</td><td>&#8377;1,250</td><td>&#8377;1,650</td></tr>
-          <tr><td>Chocolate, Butterscotch</td><td>&#8377;500</td><td>&#8377;950</td><td>&#8377;1,400</td><td>&#8377;1,850</td></tr>
-          <tr><td>Black Forest</td><td>&#8377;520</td><td>&#8377;1,000</td><td>&#8377;1,450</td><td>&#8377;1,900</td></tr>
-          <tr><td>Chocolate Truffle<small>Dark ganache, our most ordered</small></td><td>&#8377;600</td><td>&#8377;1,150</td><td>&#8377;1,700</td><td>&#8377;2,200</td></tr>
-          <tr><td>Red Velvet<small>Cream cheese frosting</small></td><td>&#8377;650</td><td>&#8377;1,250</td><td>&#8377;1,850</td><td>&#8377;2,400</td></tr>
-          <tr><td>Fresh Fruit<small>Seasonal fruit on top</small></td><td>&#8377;650</td><td>&#8377;1,250</td><td>&#8377;1,850</td><td>&#8377;2,400</td></tr>
-          <tr><td>Photo cake<small>Any flavour above, plus the sheet</small></td><td>+&#8377;150</td><td>+&#8377;200</td><td>+&#8377;200</td><td>+&#8377;250</td></tr>
+        <thead><tr><th data-nx="prices.th" scope="col">Flavour</th><th data-nx="prices.th2" scope="col">500 g</th><th data-nx="prices.th3" scope="col">1 kg</th><th data-nx="prices.th4" scope="col">1.5 kg</th><th data-nx="prices.th5" scope="col">2 kg</th></tr></thead>
+        <tbody data-nx-list="prices.list">
+          <tr data-nx-item><td data-nx-f="td">Vanilla, Pineapple<small>Serves 4 to 6 per half kg</small></td><td data-nx-f="td2">&#8377;450</td><td data-nx-f="td3">&#8377;850</td><td data-nx-f="td4">&#8377;1,250</td><td data-nx-f="td5">&#8377;1,650</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Chocolate, Butterscotch</td><td data-nx-f="td2">&#8377;500</td><td data-nx-f="td3">&#8377;950</td><td data-nx-f="td4">&#8377;1,400</td><td data-nx-f="td5">&#8377;1,850</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Black Forest</td><td data-nx-f="td2">&#8377;520</td><td data-nx-f="td3">&#8377;1,000</td><td data-nx-f="td4">&#8377;1,450</td><td data-nx-f="td5">&#8377;1,900</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Chocolate Truffle<small>Dark ganache, our most ordered</small></td><td data-nx-f="td2">&#8377;600</td><td data-nx-f="td3">&#8377;1,150</td><td data-nx-f="td4">&#8377;1,700</td><td data-nx-f="td5">&#8377;2,200</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Red Velvet<small>Cream cheese frosting</small></td><td data-nx-f="td2">&#8377;650</td><td data-nx-f="td3">&#8377;1,250</td><td data-nx-f="td4">&#8377;1,850</td><td data-nx-f="td5">&#8377;2,400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Fresh Fruit<small>Seasonal fruit on top</small></td><td data-nx-f="td2">&#8377;650</td><td data-nx-f="td3">&#8377;1,250</td><td data-nx-f="td4">&#8377;1,850</td><td data-nx-f="td5">&#8377;2,400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Photo cake<small>Any flavour above, plus the sheet</small></td><td data-nx-f="td2">+&#8377;150</td><td data-nx-f="td3">+&#8377;200</td><td data-nx-f="td4">+&#8377;200</td><td data-nx-f="td5">+&#8377;250</td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="tbl__notes reveal">
-      <li><b>Fondant and toppers</b>Fondant covering adds &#8377;300 per kg. Figures and toppers &#8377;150 to &#8377;500 each depending on size.</li>
-      <li><b>Bigger cakes</b>3 kg and above are quoted on WhatsApp. Tier cakes need three days&rsquo; notice.</li>
-      <li><b>Candles, knife, box</b>Free with every cake. Numeral candles &#8377;30. Sparkle candle &#8377;60.</li>
+    <ul data-nx-list="prices.tbl-notes" class="tbl__notes reveal">
+      <li data-nx-f="li" data-nx-item><b>Fondant and toppers</b>Fondant covering adds &#8377;300 per kg. Figures and toppers &#8377;150 to &#8377;500 each depending on size.</li>
+      <li data-nx-f="li" data-nx-item><b>Bigger cakes</b>3 kg and above are quoted on WhatsApp. Tier cakes need three days&rsquo; notice.</li>
+      <li data-nx-f="li" data-nx-item><b>Candles, knife, box</b>Free with every cake. Numeral candles &#8377;30. Sparkle candle &#8377;60.</li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="counter">
+<section data-nx-section="counter" class="section" id="counter">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">From the counter</span>
-      <h2 class="h2">Pastries, bread and cookies, baked before the shutter goes up.</h2>
-      <p class="lead" style="margin-top:1rem">No order needed. Walk in from 8 am. Bread is usually gone by noon, pastries by evening.</p>
+      <span data-nx="counter.kicker" class="kicker">From the counter</span>
+      <h2 data-nx="counter.h2" class="h2">Pastries, bread and cookies, baked before the shutter goes up.</h2>
+      <p data-nx="counter.p" class="lead" style="margin-top:1rem">No order needed. Walk in from 8 am. Bread is usually gone by noon, pastries by evening.</p>
     </div>
     <ul class="counter">
-      <li class="reveal"><img src="/demo/bakery/images/pastries.jpg" width="1200" height="1800" alt="Tray of freshly baked pastries" loading="lazy"><div><h3>Pastries</h3><ul>
-        <li><span>Chocolate truffle pastry</span><span>&#8377;70</span></li>
-        <li><span>Black forest pastry</span><span>&#8377;65</span></li>
-        <li><span>Pineapple pastry</span><span>&#8377;55</span></li>
-        <li><span>Red velvet pastry</span><span>&#8377;80</span></li>
-        <li><span>Brownie (walnut)</span><span>&#8377;60</span></li>
-        <li><span>Cupcake</span><span>&#8377;50</span></li>
+      <li class="reveal"><img data-nx="counter.photo" src="/demo/bakery/images/pastries.jpg" width="1200" height="1800" alt="Tray of freshly baked pastries" loading="lazy"><div><h3 data-nx="counter.h3">Pastries</h3><ul>
+        <li data-nx-list="counter.list"><span data-nx-f="span" data-nx-item>Chocolate truffle pastry</span><span data-nx-f="span" data-nx-item>&#8377;70</span></li>
+        <li data-nx-list="counter.list2"><span data-nx-f="span" data-nx-item>Black forest pastry</span><span data-nx-f="span" data-nx-item>&#8377;65</span></li>
+        <li data-nx-list="counter.list3"><span data-nx-f="span" data-nx-item>Pineapple pastry</span><span data-nx-f="span" data-nx-item>&#8377;55</span></li>
+        <li data-nx-list="counter.list4"><span data-nx-f="span" data-nx-item>Red velvet pastry</span><span data-nx-f="span" data-nx-item>&#8377;80</span></li>
+        <li data-nx-list="counter.list5"><span data-nx-f="span" data-nx-item>Brownie (walnut)</span><span data-nx-f="span" data-nx-item>&#8377;60</span></li>
+        <li data-nx-list="counter.list6"><span data-nx-f="span" data-nx-item>Cupcake</span><span data-nx-f="span" data-nx-item>&#8377;50</span></li>
       </ul></div></li>
-      <li class="reveal"><img src="/demo/bakery/images/breads.jpg" width="1200" height="1800" alt="Loaves of bread on a bakery shelf" loading="lazy"><div><h3>Bread and buns</h3><ul>
-        <li><span>White sandwich loaf, 400 g</span><span>&#8377;45</span></li>
-        <li><span>Brown bread, 400 g</span><span>&#8377;55</span></li>
-        <li><span>Multigrain loaf</span><span>&#8377;75</span></li>
-        <li><span>Burger buns, pack of 4</span><span>&#8377;40</span></li>
-        <li><span>Pav, pack of 6</span><span>&#8377;35</span></li>
-        <li><span>Garlic bread</span><span>&#8377;60</span></li>
+      <li class="reveal"><img data-nx="counter.photo2" src="/demo/bakery/images/breads.jpg" width="1200" height="1800" alt="Loaves of bread on a bakery shelf" loading="lazy"><div><h3 data-nx="counter.h32">Bread and buns</h3><ul>
+        <li data-nx-list="counter.list7"><span data-nx-f="span" data-nx-item>White sandwich loaf, 400 g</span><span data-nx-f="span" data-nx-item>&#8377;45</span></li>
+        <li data-nx-list="counter.list8"><span data-nx-f="span" data-nx-item>Brown bread, 400 g</span><span data-nx-f="span" data-nx-item>&#8377;55</span></li>
+        <li data-nx-list="counter.list9"><span data-nx-f="span" data-nx-item>Multigrain loaf</span><span data-nx-f="span" data-nx-item>&#8377;75</span></li>
+        <li data-nx-list="counter.list10"><span data-nx-f="span" data-nx-item>Burger buns, pack of 4</span><span data-nx-f="span" data-nx-item>&#8377;40</span></li>
+        <li data-nx-list="counter.list11"><span data-nx-f="span" data-nx-item>Pav, pack of 6</span><span data-nx-f="span" data-nx-item>&#8377;35</span></li>
+        <li data-nx-list="counter.list12"><span data-nx-f="span" data-nx-item>Garlic bread</span><span data-nx-f="span" data-nx-item>&#8377;60</span></li>
       </ul></div></li>
-      <li class="reveal"><img src="/demo/bakery/images/cookies.jpg" width="1200" height="800" alt="Coconut cookies in a glass jar" loading="lazy"><div><h3>Cookies and biscuits</h3><ul>
-        <li><span>Butter cookies, 250 g</span><span>&#8377;120</span></li>
-        <li><span>Coconut cookies, 250 g</span><span>&#8377;110</span></li>
-        <li><span>Chocolate chip, 250 g</span><span>&#8377;160</span></li>
-        <li><span>Jam cookies, 250 g</span><span>&#8377;140</span></li>
-        <li><span>Nankhatai, 250 g</span><span>&#8377;100</span></li>
-        <li><span>Gift tin, 500 g mixed</span><span>&#8377;320</span></li>
+      <li class="reveal"><img data-nx="counter.photo3" src="/demo/bakery/images/cookies.jpg" width="1200" height="800" alt="Coconut cookies in a glass jar" loading="lazy"><div><h3 data-nx="counter.h33">Cookies and biscuits</h3><ul>
+        <li data-nx-list="counter.list13"><span data-nx-f="span" data-nx-item>Butter cookies, 250 g</span><span data-nx-f="span" data-nx-item>&#8377;120</span></li>
+        <li data-nx-list="counter.list14"><span data-nx-f="span" data-nx-item>Coconut cookies, 250 g</span><span data-nx-f="span" data-nx-item>&#8377;110</span></li>
+        <li data-nx-list="counter.list15"><span data-nx-f="span" data-nx-item>Chocolate chip, 250 g</span><span data-nx-f="span" data-nx-item>&#8377;160</span></li>
+        <li data-nx-list="counter.list16"><span data-nx-f="span" data-nx-item>Jam cookies, 250 g</span><span data-nx-f="span" data-nx-item>&#8377;140</span></li>
+        <li data-nx-list="counter.list17"><span data-nx-f="span" data-nx-item>Nankhatai, 250 g</span><span data-nx-f="span" data-nx-item>&#8377;100</span></li>
+        <li data-nx-list="counter.list18"><span data-nx-f="span" data-nx-item>Gift tin, 500 g mixed</span><span data-nx-f="span" data-nx-item>&#8377;320</span></li>
       </ul></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--choc" id="order">
+<section data-nx-section="order" class="section section--choc" id="order">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">How to order</span>
-      <h2 class="h2">Four messages and your cake is booked.</h2>
+      <span data-nx="order.kicker" class="kicker">How to order</span>
+      <h2 data-nx="order.h2" class="h2">Four messages and your cake is booked.</h2>
     </div>
-    <ol class="steps reveal">
-      <li><h3>Send the details</h3><p>Flavour, weight, the name to write, and the date. A photo of a design you like if you have one. Eggless or not.</p></li>
-      <li><h3>We confirm the price</h3><p>You get the price, a sketch for theme cakes, and a pickup time. Pay &#8377;200 advance by UPI, or the full amount for cakes above 2 kg.</p></li>
-      <li><h3>We bake it tomorrow</h3><p>Cakes are baked in the morning and finished in the afternoon. We send you a photo before packing so you can ask for a change.</p></li>
-      <li><h3>Pick up or delivery</h3><p>Collect from the shop after 4 pm, or we deliver within 5 km for &#8377;60 (free above &#8377;1,500). Cakes travel in a cold box.</p></li>
+    <ol data-nx-list="order.steps" class="steps reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Send the details</h3><p data-nx-f="p">Flavour, weight, the name to write, and the date. A photo of a design you like if you have one. Eggless or not.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">We confirm the price</h3><p data-nx-f="p">You get the price, a sketch for theme cakes, and a pickup time. Pay &#8377;200 advance by UPI, or the full amount for cakes above 2 kg.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">We bake it tomorrow</h3><p data-nx-f="p">Cakes are baked in the morning and finished in the afternoon. We send you a photo before packing so you can ask for a change.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Pick up or delivery</h3><p data-nx-f="p">Collect from the shop after 4 pm, or we deliver within 5 km for &#8377;60 (free above &#8377;1,500). Cakes travel in a cold box.</p></li>
     </ol>
     <div class="hero__cta" style="justify-content:flex-start;margin-top:2.2rem">
       <a class="btn btn--pink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anjali%20Cake%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Start an order on WhatsApp</a>
@@ -443,78 +449,78 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Questions people ask</span>
-      <h2 class="h2">Before you order.</h2>
+      <span data-nx="faq.kicker" class="kicker">Questions people ask</span>
+      <h2 data-nx="faq.h2" class="h2">Before you order.</h2>
     </div>
-    <ul class="faq reveal">
-      <li><h3>Can I get a cake today?</h3><p>Only a plain half-kg chocolate or vanilla, if one is on the counter. Everything else needs an order by 6 pm the day before. For a theme or tier cake, three days.</p></li>
-      <li><h3>Which areas do you deliver to?</h3><p>Dum Dum, Nagerbazar, Lake Town, Baguiati, Belgharia, Sinthee and Dum Dum Cantonment. Roughly 5 km from the shop. Delivery is &#8377;60, free on orders above &#8377;1,500.</p></li>
-      <li><h3>Are the eggless cakes really eggless?</h3><p>Yes. They are baked in a separate oven with separate tins and bowls. If you need it on a day we do not bake eggless, tell us and we will arrange it.</p></li>
-      <li><h3>Does the photo cake taste of paper?</h3><p>No. The sheet is made of sugar and starch and melts into the cream within an hour. Faces print best on light coloured cream.</p></li>
-      <li><h3>How long does a cake keep?</h3><p>Fresh cream cakes should be eaten within 24 hours and kept in the fridge. Fondant cakes keep for two days. Take the cake out 30 minutes before cutting.</p></li>
-      <li><h3>What if I need to cancel?</h3><p>Cancel before we start baking (by 8 am on the day) and the advance comes back to you. After that the advance is kept because the cake is already made.</p></li>
+    <ul data-nx-list="faq.faq" class="faq reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Can I get a cake today?</h3><p data-nx-f="p">Only a plain half-kg chocolate or vanilla, if one is on the counter. Everything else needs an order by 6 pm the day before. For a theme or tier cake, three days.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Which areas do you deliver to?</h3><p data-nx-f="p">Dum Dum, Nagerbazar, Lake Town, Baguiati, Belgharia, Sinthee and Dum Dum Cantonment. Roughly 5 km from the shop. Delivery is &#8377;60, free on orders above &#8377;1,500.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Are the eggless cakes really eggless?</h3><p data-nx-f="p">Yes. They are baked in a separate oven with separate tins and bowls. If you need it on a day we do not bake eggless, tell us and we will arrange it.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Does the photo cake taste of paper?</h3><p data-nx-f="p">No. The sheet is made of sugar and starch and melts into the cream within an hour. Faces print best on light coloured cream.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">How long does a cake keep?</h3><p data-nx-f="p">Fresh cream cakes should be eaten within 24 hours and kept in the fridge. Fondant cakes keep for two days. Take the cake out 30 minutes before cutting.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">What if I need to cancel?</h3><p data-nx-f="p">Cancel before we start baking (by 8 am on the day) and the advance comes back to you. After that the advance is kept because the cake is already made.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--pink" id="gallery">
+<section data-nx-section="gallery" class="section section--pink" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Recent orders</span>
-      <h2 class="h2">Cakes that left the shop this month.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Recent orders</span>
+      <h2 data-nx="gallery.h2" class="h2">Cakes that left the shop this month.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/bakery/images/display.jpg" width="1200" height="1600" alt="Cakes on the shelves of the display counter" loading="lazy"></li>
-      <li><img src="/demo/bakery/images/birthday-gold.jpg" width="1200" height="675" alt="Birthday cake with gold decoration" loading="lazy"></li>
-      <li><img src="/demo/bakery/images/cake-cutting.jpg" width="1200" height="800" alt="A couple cutting their wedding cake on stage" loading="lazy"></li>
-      <li><img src="/demo/bakery/images/counter.jpg" width="1200" height="1800" alt="Baked goods on the bakery display" loading="lazy"></li>
-      <li><img src="/demo/bakery/images/pastry-plate.jpg" width="1200" height="1500" alt="Assorted pastries on a plate" loading="lazy"></li>
-      <li><img src="/demo/bakery/images/cookies-jam.jpg" width="1200" height="1800" alt="Cookies with jam centres" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/display.jpg" width="1200" height="1600" alt="Cakes on the shelves of the display counter" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/birthday-gold.jpg" width="1200" height="675" alt="Birthday cake with gold decoration" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/cake-cutting.jpg" width="1200" height="800" alt="A couple cutting their wedding cake on stage" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/counter.jpg" width="1200" height="1800" alt="Baked goods on the bakery display" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/pastry-plate.jpg" width="1200" height="1500" alt="Assorted pastries on a plate" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/bakery/images/cookies-jam.jpg" width="1200" height="1800" alt="Cookies with jam centres" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-9" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">From the WhatsApp replies.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-9.h2" class="h2">From the WhatsApp replies.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>Sent a photo of a cricket cake at 5 in the evening, got a sketch back in twenty minutes, and my son&rsquo;s cake was exactly that the next day. Truffle, 1 kg, finished in one sitting.</p><footer>Piyali <span>&middot; Nagerbazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>Ordered a 5 kg two-tier eggless cake for my parents&rsquo; anniversary. They delivered it to the hall in Lake Town and set it up. Nobody could tell it was eggless.</p><footer>Arjun <span>&middot; Lake Town</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Sent a photo of a cricket cake at 5 in the evening, got a sketch back in twenty minutes, and my son&rsquo;s cake was exactly that the next day. Truffle, 1 kg, finished in one sitting.</p><footer>Piyali <span data-nx-f="span">&middot; Nagerbazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Ordered a 5 kg two-tier eggless cake for my parents&rsquo; anniversary. They delivered it to the hall in Lake Town and set it up. Nobody could tell it was eggless.</p><footer>Arjun <span data-nx-f="span">&middot; Lake Town</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--pink" id="visit">
+<section data-nx-section="visit" class="section section--pink" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Jessore Road, a short walk from Dum Dum metro.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Jessore Road, a short walk from Dum Dum metro.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>27 Jessore Road, Dum Dum<br>Kolkata 700028</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=27%20Jessore%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700028" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">27 Jessore Road, Dum Dum<br>Kolkata 700028</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=27%20Jessore%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700028" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Every day</td><td>8:00 am &ndash; 9:30 pm</td></tr>
-              <tr><td>Cake pickups</td><td>From 4:00 pm</td></tr>
-              <tr><td>WhatsApp orders</td><td>Till 6:00 pm for next day</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Every day</td><td data-nx-f="td2">8:00 am &ndash; 9:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Cake pickups</td><td data-nx-f="td2">From 4:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">WhatsApp orders</td><td data-nx-f="td2">Till 6:00 pm for next day</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Two-wheeler parking in front. Opposite the Dum Dum post office.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Two-wheeler parking in front. Opposite the Dum Dum post office.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--choc" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anjali%20Cake%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -528,10 +534,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Tomorrow&rsquo;s cake starts with one message today.</h2>
-    <p>Flavour, weight, name and date. We reply with the price and a pickup time within the hour.</p>
+    <h2 data-nx="book.h2">Tomorrow&rsquo;s cake starts with one message today.</h2>
+    <p data-nx="book.p">Flavour, weight, name and date. We reply with the price and a pickup time within the hour.</p>
     <div class="final__cta">
       <a class="btn btn--choc" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anjali%20Cake%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -546,31 +552,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#E8679A"/><path d="M10 30h24v4a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2z" fill="#FFF7F0"/><path d="M11 22h22v8H11z" fill="#4A2C21"/><path d="M11 22c3 0 3 3 5.5 3s2.5-3 5.5-3 3 3 5.5 3 2.5-3 5.5-3" fill="none" stroke="#FFF7F0" stroke-width="2.4" stroke-linecap="round"/><path d="M22 20v-6" stroke="#FFF7F0" stroke-width="2" stroke-linecap="round"/><circle cx="22" cy="11" r="2.2" fill="#4A2C21"/></svg>
-          <span><b>Anjali Cake House</b><small>Dum Dum &middot; since 2011</small></span>
+          <span><b data-nx="footer.b">Anjali Cake House</b><small data-nx="footer.small">Dum Dum &middot; since 2011</small></span>
         </a>
-        <p>Custom cakes made to order, one day ahead. Pastries, bread and cookies fresh every morning. Delivery within 5 km of Dum Dum.</p>
+        <p data-nx="footer.p">Custom cakes made to order, one day ahead. Pastries, bread and cookies fresh every morning. Delivery within 5 km of Dum Dum.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#cakes">Custom cakes</a></li>
-          <li><a href="#prices">Price by weight</a></li>
-          <li><a href="#counter">Pastries, bread, cookies</a></li>
-          <li><a href="#order">How to order</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#cakes">Custom cakes</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price by weight</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#counter">Pastries, bread, cookies</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#order">How to order</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>27 Jessore Road, Dum Dum, Kolkata 700028</li>
+          <li data-nx="footer.li">27 Jessore Road, Dum Dum, Kolkata 700028</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Every day 8 am &ndash; 9:30 pm</li>
+          <li data-nx="footer.li2">Every day 8 am &ndash; 9:30 pm</li>
         </ul>
       </div>
     </div>
@@ -612,5 +618,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

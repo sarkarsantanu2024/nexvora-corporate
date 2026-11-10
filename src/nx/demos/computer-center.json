@@ -1,0 +1,1647 @@
+{
+  "site": "computer-center",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Digital Disha Computer Centre",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1068"
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "c",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "d",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "hero-stats",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "courses",
+      "label": {
+        "en": "Six courses. Fixed fees. Nothing extra for the certificate",
+        "bn": "Six courses. Fixed fees. Nothing extra for the certificate"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-code",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "course-code2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "course-code3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "course-code4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "course-code5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "course-code6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "course-fee6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "course-dur6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "batches",
+      "label": {
+        "en": "Six slots a day, Monday to Saturday",
+        "bn": "Six slots a day, Monday to Saturday"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "bt-foot",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "t",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "seats",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "label": {
+        "en": "Small room, your own computer, a teacher who checks your screen",
+        "bn": "Small room, your own computer, a teacher who checks your screen"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "facts",
+          "label": {
+            "en": "Small room, your own computer, a teacher who checks your screen",
+            "bn": "Small room, your own computer, a teacher who checks your screen"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "why-figs",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "certificate",
+      "label": {
+        "en": "A certificate that says what you can do, with a number anyone can check",
+        "bn": "A certificate that says what you can do, with a number anyone can check"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "l",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "n",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "seal",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "cert-pts",
+          "label": {
+            "en": "A certificate that says what you can do, with a number anyone can check",
+            "bn": "A certificate that says what you can do, with a number anyone can check"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "One room, eighteen screens",
+        "bn": "One room, eighteen screens"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "figcaption2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "figcaption4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo7",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:609"
+        },
+        {
+          "key": "figcaption7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo8",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Three notes from the register",
+        "bn": "Three notes from the register"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "rv",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "words",
+          "label": {
+            "en": "Three notes from the register",
+            "bn": "Three notes from the register"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "faq",
+          "label": {
+            "en": "Common questions",
+            "bn": "Common questions"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "a",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "First floor, above the medicine shop at Behala Chowrasta",
+        "bn": "First floor, above the medicine shop at Behala Chowrasta"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "div",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "div2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Sit in one class. Then decide",
+        "bn": "Sit in one class. Then decide"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "final-note",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "brand-name": "Digital Disha",
+      "brand-sub": "Computer Centre · Behala"
+    },
+    "section-2": {
+      "tag": "Behala Chowrasta · Since 2011",
+      "h1": "Learn the computer skills <span class=\"mark\">offices actually ask for.</span>",
+      "lede": "Basic computing, MS Office, Tally with GST, DTP, typing and web basics. One student per computer, small batches of eight, morning and evening slots. Most courses finish in two to three months.",
+      "button": "See courses and fees",
+      "span": "next_batches.txt",
+      "photo": {
+        "src": "/demo/computer-center/images/hero.jpg",
+        "alt": "Students in formal dress gathered around desktop computers at the institute"
+      },
+      "list": {
+        "items": [
+          {
+            "p": ">",
+            "c": "MS Office, morning",
+            "d": "starts <b>17 Nov</b> &middot; 3 seats"
+          },
+          {
+            "p": ">",
+            "c": "Tally Prime with GST, evening",
+            "d": "starts <b>20 Nov</b> &middot; 5 seats"
+          },
+          {
+            "p": ">",
+            "c": "Basic Computing, afternoon",
+            "d": "starts <b>24 Nov</b> &middot; 6 seats"
+          },
+          {
+            "p": ">",
+            "c": "Typing, English + Bengali",
+            "d": "join <b>any Monday</b>"
+          },
+          {
+            "p": ">",
+            "c": "Web Basics, Sunday",
+            "d": "starts <b>7 Dec</b> &middot; 8 seats"
+          }
+        ]
+      },
+      "hero-stats": {
+        "items": [
+          {
+            "b": "18",
+            "span": "computers, one per student"
+          },
+          {
+            "b": "8",
+            "span": "students per batch, maximum"
+          },
+          {
+            "b": "2,400+",
+            "span": "students certified since 2011"
+          },
+          {
+            "b": "₹1,500",
+            "span": "Basic Computing, full course"
+          }
+        ]
+      }
+    },
+    "courses": {
+      "tag": "Courses and fees",
+      "h2": "Six courses. Fixed fees. Nothing extra for the certificate.",
+      "lede": "Fees include study material, practice hours and the exam. Pay in two instalments if you prefer. A free demo class comes before any payment.",
+      "course-code": "DD-101",
+      "h3": "Basic Computing",
+      "p": "Switching on to sending email. Windows, files and folders, typing, internet, Paint, printing, online forms and payments. For beginners of any age.",
+      "course-fee": "₹1,500<small>full course</small>",
+      "course-dur": "1 month · 1 hr/day",
+      "course-code2": "DD-201",
+      "h32": "MS Office",
+      "p2": "Word, Excel and PowerPoint for office work. Letters, mail merge, formulas, charts, pivot tables, presentations. Excel gets half the course.",
+      "course-fee2": "₹3,200<small>full course</small>",
+      "course-dur2": "2 months · 1.5 hr/day",
+      "course-code3": "DD-301",
+      "h33": "Tally Prime with GST",
+      "p3": "Company creation, ledgers, vouchers, inventory, GST entries and returns, payroll basics, bank reconciliation. Practice on real-style bills.",
+      "course-fee3": "₹4,500<small>full course</small>",
+      "course-dur3": "3 months · 1.5 hr/day",
+      "course-code4": "DD-401",
+      "h34": "DTP",
+      "p4": "Photoshop, CorelDRAW and PageMaker-style layout. Visiting cards, banners, pujo invitations, Bengali typesetting. For print shop and design jobs.",
+      "course-fee4": "₹4,000<small>full course</small>",
+      "course-dur4": "3 months · 1.5 hr/day",
+      "course-code5": "DD-501",
+      "h35": "Typing, English and Bengali",
+      "p5": "Touch typing to 35+ words per minute in English, plus Bengali in Avro and Inscript. Speed tests every week. Useful for data entry and government exams.",
+      "course-fee5": "₹1,200<small>per month</small>",
+      "course-dur5": "Join any Monday",
+      "course-code6": "DD-601",
+      "h36": "Web Basics",
+      "p6": "HTML, CSS and a little JavaScript. Build a five-page website for a shop and put it online. Weekend batch, good for college students.",
+      "course-fee6": "₹3,800<small>full course</small>",
+      "course-dur6": "10 Sundays · 3 hr"
+    },
+    "batches": {
+      "tag": "Batch timings",
+      "h2": "Six slots a day, Monday to Saturday",
+      "lede": "Pick a slot when you join and keep it for the whole course. If you miss a class, you can sit in another slot that week for the same lesson.",
+      "th": "Slot",
+      "th2": "Time",
+      "th3": "Who usually comes",
+      "th4": "Seats this month",
+      "bt-foot": "Closed on Sundays except the Web Basics batch, and on major pujo days. Free practice hours: 12 noon to 2 pm and 3:30 to 5 pm for enrolled students.",
+      "list": {
+        "items": [
+          {
+            "t": "Morning 1",
+            "td": "7:00 – 8:30 am",
+            "td2": "Office-goers before work, Tally and MS Office",
+            "seats": "2 left"
+          },
+          {
+            "t": "Morning 2",
+            "td": "8:30 – 10:00 am",
+            "td2": "College students, Web Basics practice",
+            "seats": "Open"
+          },
+          {
+            "t": "Late morning",
+            "td": "10:30 am – 12:00 noon",
+            "td2": "Homemakers and retired learners, Basic Computing",
+            "seats": "Open"
+          },
+          {
+            "t": "Afternoon",
+            "td": "2:00 – 3:30 pm",
+            "td2": "School students after half day, typing",
+            "seats": "Open"
+          },
+          {
+            "t": "Evening 1",
+            "td": "5:00 – 6:30 pm",
+            "td2": "DTP and MS Office",
+            "seats": "3 left"
+          },
+          {
+            "t": "Evening 2",
+            "td": "6:30 – 8:00 pm",
+            "td2": "Working people, Tally with GST",
+            "seats": "1 left"
+          },
+          {
+            "t": "Sunday",
+            "td": "10:00 am – 1:00 pm",
+            "td2": "Web Basics only",
+            "seats": "Open"
+          }
+        ]
+      }
+    },
+    "why": {
+      "tag": "Why learn here",
+      "h2": "Small room, your own computer, a teacher who checks your screen",
+      "lede": "We are not a franchise. The same two teachers have been here since 2011 and know which mistakes a beginner makes in week one.",
+      "facts": {
+        "items": [
+          {
+            "b": "One student, one computer",
+            "span": "Nobody shares a keyboard. 18 machines, all with the current Windows and Office versions."
+          },
+          {
+            "b": "Batches of eight",
+            "span": "Small enough for the teacher to walk behind every chair in every class."
+          },
+          {
+            "b": "Free practice hours",
+            "span": "Three and a half hours a day when the room is open for enrolled students, no charge."
+          },
+          {
+            "b": "Real work, not slides",
+            "span": "Tally students enter a month of a real-style shop's bills. DTP students print a pujo invitation."
+          },
+          {
+            "b": "Bengali or English",
+            "span": "Classes are taught in whichever the batch is comfortable with. Notes are in both."
+          },
+          {
+            "b": "Help after the course",
+            "span": "Resume format, interview questions for data entry and accounts jobs, and a WhatsApp group for doubts."
+          }
+        ]
+      },
+      "why-figs": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/computer-center/images/woman-smiling.jpg",
+              "alt": "A young woman works at a laptop at a desk by a brick wall"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/computer-center/images/typing-hands.jpg",
+              "alt": "Hands typing on a laptop keyboard"
+            }
+          }
+        ]
+      }
+    },
+    "certificate": {
+      "tag": "Certificate",
+      "h2": "A certificate that says what you can do, with a number anyone can check",
+      "lede": "Every course ends with a practical exam on the computer. Pass, and you get a printed certificate with a unique ID. An employer can message us the ID and we confirm it the same day.",
+      "l": "Certificate of completion",
+      "n": "MS Office · Grade A",
+      "span": "Student",
+      "b": "Priyanka Das",
+      "span2": "Duration",
+      "b2": "Sept to Nov 2026, 48 classes",
+      "span3": "Practical exam",
+      "b3": "86 / 100",
+      "span4": "Certificate ID",
+      "b4": "DD-2026-1187",
+      "seal": "Digital<br>Disha<br>Behala",
+      "cert-pts": {
+        "items": [
+          {
+            "span": "Practical exam, not a written one. You do the tasks on screen in 60 minutes."
+          },
+          {
+            "span": "Grade printed on the certificate: A, B or C, with your typing speed where relevant."
+          },
+          {
+            "span": "One free re-sit within a month if you do not pass the first time."
+          },
+          {
+            "span": "We also prepare students for the NIELIT CCC exam and help with the registration form. The exam fee is paid to NIELIT directly."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "tag": "In the classroom",
+      "h2": "One room, eighteen screens",
+      "photo": {
+        "src": "/demo/computer-center/images/class-group.jpg",
+        "alt": "A young man in an orange t-shirt smiles while working on a laptop"
+      },
+      "figcaption": "Practice hours",
+      "photo2": {
+        "src": "/demo/computer-center/images/teacher-checking.jpg",
+        "alt": "A man in a checked shirt looks up from his laptop in the classroom"
+      },
+      "figcaption2": "Evening 1",
+      "photo3": {
+        "src": "/demo/computer-center/images/elderly-learner.jpg",
+        "alt": "A learner in a turban works at a laptop at a plain desk"
+      },
+      "figcaption3": "Basic Computing, 10:30 slot",
+      "photo4": {
+        "src": "/demo/computer-center/images/class-row.jpg",
+        "alt": "A student in school uniform works at a desktop in a computer classroom, a classmate beside him"
+      },
+      "figcaption4": "School-hours batch",
+      "photo5": {
+        "src": "/demo/computer-center/images/students-a.jpg",
+        "alt": "Two learners share a laptop at a desk and talk through the work"
+      },
+      "figcaption5": "Afternoon slot",
+      "photo6": {
+        "src": "/demo/computer-center/images/calculator-ledger.jpg",
+        "alt": "A young woman works at a desktop computer in the institute"
+      },
+      "figcaption6": "Tally practice",
+      "photo7": {
+        "src": "/demo/computer-center/images/boy-laptop.jpg",
+        "alt": "A smiling young man works on a laptop outdoors on a bench"
+      },
+      "figcaption7": "Web Basics, Sunday batch",
+      "photo8": {
+        "src": "/demo/computer-center/images/girls-computers.jpg",
+        "alt": "Young women in uniform gather around a laptop at a table"
+      },
+      "figcaption8": "Late morning"
+    },
+    "faq": {
+      "tag": "Students say",
+      "h2": "Three notes from the register",
+      "rv": "Common questions",
+      "words": {
+        "items": [
+          {
+            "p": "I did Tally here in 2024 and joined a hardware shop in Sakherbazar as their accounts person two months later. The GST return practice was exactly what the owner wanted.",
+            "span": "· Tally with GST"
+          },
+          {
+            "p": "At 58 I thought it was too late. The 10:30 batch is all people my age. I can now pay bills, video call my daughter and fill the pension form myself.",
+            "span": "· Basic Computing"
+          },
+          {
+            "p": "Excel pivot tables got me through my office interview. The teacher made us do the same sheet five different ways until it stuck.",
+            "span": "· MS Office"
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "summary": "I have never touched a computer. Can I join?",
+            "a": "Yes. Basic Computing starts from switching the machine on. About a third of our students are complete beginners, many over 50."
+          },
+          {
+            "summary": "Do I need my own laptop?",
+            "a": "No. Every student has a computer in class and free practice hours. If you do have a laptop, bring it on Saturdays and we will set it up the same way."
+          },
+          {
+            "summary": "Can I pay in instalments?",
+            "a": "Two instalments for any course over ₹3,000: half at joining, half after the first month. Cash or UPI. A receipt is given for every payment."
+          },
+          {
+            "summary": "What if I miss classes?",
+            "a": "Sit in another slot the same week for the same lesson. If you miss more than a week, we give one free catch-up session."
+          },
+          {
+            "summary": "Is the certificate government recognised?",
+            "a": "It is our own certificate with a verifiable ID; it is not a government certificate. For a government one we prepare you for the NIELIT CCC exam, which you sit at a NIELIT centre."
+          },
+          {
+            "summary": "Do you help with jobs?",
+            "a": "We do not promise placement. We do fix your resume, run mock interviews for accounts and data entry roles, and pass on openings that local shops and offices send us."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "tag": "Find us",
+      "h2": "First floor, above the medicine shop at Behala Chowrasta",
+      "div": "<b>Address</b>212 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034, West Bengal<br><span style=\"color:var(--muted);font-size:.9rem\">Behala Chowrasta metro, Gate 1, is a two-minute walk. Buses 12C, S12 and 3C stop outside.</span>",
+      "div2": "<b>Office hours</b>Mon to Sat: 7 am – 8 pm<br>Sunday: 10 am – 1 pm (Web Basics only)",
+      "b": "Phone and WhatsApp",
+      "button": "Get directions"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Digital Disha Computer Centre sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Digital Disha",
+      "brand-sub": "Computer Centre · Behala",
+      "p": "Computer training for beginners, office-goers and students. Behala Chowrasta, since 2011.",
+      "h4": "Centre"
+    },
+    "seo": {
+      "title": "Digital Disha Computer Centre | Computer Classes in Behala, Kolkata",
+      "description": "Computer training centre in Behala. Basic computing, MS Office, Tally with GST, DTP, typing and web basics. Morning and evening batches, one student per computer, certificate on completion."
+    }
+  }
+}

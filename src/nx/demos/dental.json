@@ -1,0 +1,1601 @@
+{
+  "site": "dental",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sen Dental Care",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treatments",
+      "label": {
+        "en": "What we do here, in plain words",
+        "bn": "What we do here, in plain words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "zig",
+          "label": {
+            "en": "What we do here, in plain words",
+            "bn": "What we do here, in plain words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p2",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "li2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "price",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "The same list that hangs at the reception",
+        "bn": "The same list that hangs at the reception"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee-note",
+          "type": "textarea",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-bar",
+          "label": {
+            "en": "The same list that hangs at the reception",
+            "bn": "The same list that hangs at the reception"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-visit",
+      "label": {
+        "en": "What happens, step by step",
+        "bn": "What happens, step by step"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "What happens, step by step",
+            "bn": "What happens, step by step"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "time",
+              "type": "text",
+              "label": {
+                "en": "Timings",
+                "bn": "সময়"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dentists",
+      "label": {
+        "en": "Two dentists. You see the same one every visit",
+        "bn": "Two dentists. You see the same one every visit"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "deg",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "doc-ph",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "deg2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Dr. Rajat Sen",
+            "bn": "Dr. Rajat Sen"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Dr. Anindita Sen",
+            "bn": "Dr. Anindita Sen"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Two chairs, a small waiting room, and an autoclave that runs after every patient",
+        "bn": "Two chairs, a small waiting room, and an autoclave that runs after every patient"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Two chairs, a small waiting room, and an autoclave that runs after every patient",
+            "bn": "Two chairs, a small waiting room, and an autoclave that runs after every patient"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Two notes left at the desk",
+        "bn": "Two notes left at the desk"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "kicker2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Things people ask before they come",
+            "bn": "Things people ask before they come"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "a",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Gariahat Road, first floor, above the stationery shop",
+        "bn": "Gariahat Road, first floor, above the stationery shop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "A check-up takes twenty minutes and costs ₹300",
+        "bn": "A check-up takes twenty minutes and costs ₹300"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "On this page",
+            "bn": "On this page"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Sen Dental Care",
+      "small": "Gariahat · since 2011"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/dental/images/hero.jpg",
+        "alt": "A dentist in a white coat checks a boy's teeth under the chair light"
+      },
+      "hero-open": "<span></span>Gariahat Road, two minutes from the Gariahat crossing",
+      "h1": "Teeth looked after <em>without the fear.</em>",
+      "p": "Two dentists, one chair each, and a fee list on the wall. Scaling, fillings, root canals, braces, implants and children's teeth. Come for a check-up or send a message when a tooth hurts.",
+      "button": "See the fee list",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "₹300",
+            "span": "Check-up and advice"
+          },
+          {
+            "b": "14 yrs",
+            "span": "Clinic open in Gariahat"
+          },
+          {
+            "b": "Till 9 pm",
+            "span": "Evening chamber, Mon to Sat"
+          }
+        ]
+      }
+    },
+    "treatments": {
+      "kicker": "Treatments",
+      "h2": "What we do here, in plain words.",
+      "p": "Before any work starts you will know what it is, how many sittings it takes and what it costs. If a case needs a specialist we do not have, we say so and refer you.",
+      "zig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/dental/images/tools-flatlay.jpg",
+              "alt": "Steel dental instruments laid out on a blue tray"
+            },
+            "span": "01",
+            "h3": "Scaling, polishing and fillings",
+            "p": "Scaling removes the hard tartar a brush cannot. It takes about 30 minutes and does not hurt, though gums can feel tender for a day. We suggest it once a year, twice if you chew paan or smoke.",
+            "p2": "Fillings are tooth-coloured. A small cavity is done in one sitting. You can eat after an hour.",
+            "li": "1 sitting",
+            "li2": "30 to 45 min",
+            "price": "From ₹800"
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/rct-model.jpg",
+              "alt": "A gloved hand points at a cut-away model of a tooth showing the root canals"
+            },
+            "span": "02",
+            "h3": "Root canal treatment (RCT) and crowns",
+            "p": "When decay reaches the nerve, the tooth aches at night and with hot or cold. RCT cleans the inside of the tooth and seals it, so you keep the tooth instead of pulling it. It is done under local anaesthesia and is not the painful thing people remember from twenty years ago.",
+            "p2": "Most front teeth take two sittings, back teeth two or three. A crown (cap) goes on top to protect the tooth. Metal-ceramic and full ceramic options are on the fee list.",
+            "li": "2 to 3 sittings",
+            "li2": "Local anaesthesia",
+            "price": "RCT from ₹3,500"
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/braces-model.jpg",
+              "alt": "Hands holding a model of a full set of teeth"
+            },
+            "span": "03",
+            "h3": "Braces for children and adults",
+            "p": "Crooked or crowded teeth, gaps, or an upper jaw that sticks out. Braces move teeth slowly over 12 to 24 months. Metal braces cost the least; ceramic braces are less visible. We also arrange clear aligners for suitable cases.",
+            "p2": "The best age to check a child is around 7 to 8, even if nothing is done until later. The first visit is a check and a plan, with a written cost before you decide.",
+            "li": "12 to 24 months",
+            "li2": "Monthly visits",
+            "price": "Metal from ₹28,000"
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/implant-model.jpg",
+              "alt": "A model showing a dental implant screw between two natural teeth"
+            },
+            "span": "04",
+            "h3": "Extraction and implants",
+            "p": "A tooth that cannot be saved is removed under local anaesthesia. Wisdom teeth that are stuck take a little longer and we tell you in advance. You go home the same day with written instructions.",
+            "p2": "An implant replaces a missing tooth with a titanium root and a crown. It needs healthy bone and three to four months of healing between the two stages. Bridges and dentures are the lower-cost options and we explain both.",
+            "li": "Same-day extraction",
+            "li2": "Implant in 2 stages",
+            "price": "Implant from ₹25,000"
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/kids-checkup.jpg",
+              "alt": "A dentist gently checks a young boy's teeth with a mirror while the boy sits in the green chair"
+            },
+            "span": "05",
+            "h3": "Children's dentistry",
+            "p": "The first visit for a child is just a look and a ride in the chair. No drill. We want the second visit to be easy. Milk teeth do get filled when needed because they hold the space for the adult teeth.",
+            "p2": "Fluoride application and pit-and-fissure sealants cut down cavities in school-going children. Both are quick and painless. Dr. Anindita Sen sees most of the children.",
+            "li": "From age 3",
+            "li2": "Evening slots for school children",
+            "price": "Check-up ₹300"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Fee list",
+      "h2": "The same list that hangs at the reception.",
+      "p": "Prices are for one tooth unless written otherwise. X-rays, when needed, are ₹200 each and taken in the clinic. Cash, UPI and cards accepted.",
+      "th": "Treatment",
+      "th2": "Fee",
+      "th3": "Treatment",
+      "th4": "Fee",
+      "th5": "Treatment",
+      "th6": "Fee",
+      "fee-note": "Braces and implants can be paid in instalments spread over the treatment. Ask at the desk. Fees are reviewed each April and the list is updated the same week.",
+      "tabs-bar": {
+        "items": [
+          {
+            "label": "General"
+          },
+          {
+            "label": "Root canal and crowns"
+          },
+          {
+            "label": "Braces and implants"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "td": "Check-up and advice<small>Includes a written treatment plan if needed</small>",
+            "td2": "₹300"
+          },
+          {
+            "td": "Scaling and polishing<small>Full mouth, one sitting</small>",
+            "td2": "₹1,200"
+          },
+          {
+            "td": "Tooth-coloured filling<small>Small or medium cavity</small>",
+            "td2": "₹800 to ₹1,500"
+          },
+          {
+            "td": "Simple extraction<small>Including the anaesthesia</small>",
+            "td2": "₹800"
+          },
+          {
+            "td": "Wisdom tooth removal<small>Surgical, with stitches</small>",
+            "td2": "₹3,000 to ₹5,000"
+          },
+          {
+            "td": "Child check-up with fluoride<small>Up to age 14</small>",
+            "td2": "₹600"
+          },
+          {
+            "td": "Pit and fissure sealant<small>Per tooth</small>",
+            "td2": "₹500"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "td": "Root canal, front tooth<small>Usually two sittings</small>",
+            "td2": "₹3,500"
+          },
+          {
+            "td": "Root canal, premolar<small>Two sittings</small>",
+            "td2": "₹4,500"
+          },
+          {
+            "td": "Root canal, molar<small>Two or three sittings</small>",
+            "td2": "₹5,500"
+          },
+          {
+            "td": "Re-treatment of an old root canal",
+            "td2": "₹6,500"
+          },
+          {
+            "td": "Metal-ceramic crown<small>Three-year warranty on the cap</small>",
+            "td2": "₹4,500"
+          },
+          {
+            "td": "Full ceramic (zirconia) crown<small>Looks closest to a natural tooth</small>",
+            "td2": "₹9,000"
+          },
+          {
+            "td": "Post and core build-up<small>When little tooth is left above the gum</small>",
+            "td2": "₹1,500"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "td": "Metal braces, full treatment<small>Both jaws, all monthly visits included</small>",
+            "td2": "₹28,000"
+          },
+          {
+            "td": "Ceramic braces, full treatment<small>Less visible, same timeline</small>",
+            "td2": "₹42,000"
+          },
+          {
+            "td": "Clear aligners<small>Price depends on the number of trays; quoted after a scan</small>",
+            "td2": "From ₹65,000"
+          },
+          {
+            "td": "Retainers after braces<small>One pair, included once</small>",
+            "td2": "Included"
+          },
+          {
+            "td": "Single implant with crown<small>Two stages, 3 to 4 months apart</small>",
+            "td2": "₹25,000 to ₹35,000"
+          },
+          {
+            "td": "Three-unit bridge<small>Metal-ceramic</small>",
+            "td2": "₹12,000"
+          },
+          {
+            "td": "Full denture, one jaw<small>Acrylic, with two fitting visits</small>",
+            "td2": "₹8,000"
+          }
+        ]
+      }
+    },
+    "first-visit": {
+      "kicker": "Your first visit",
+      "h2": "What happens, step by step.",
+      "p": "Set aside about 40 minutes. Nothing is drilled on the first visit unless you are in pain and ask for it.",
+      "tl": {
+        "items": [
+          {
+            "time": "0 to 5 min",
+            "h3": "Your name and the problem",
+            "p": "Tell the desk what brought you. If you have old X-rays or a prescription, show them. Give the name of any medicine you take, especially for sugar, pressure or blood thinning."
+          },
+          {
+            "time": "5 to 20 min",
+            "h3": "The check-up",
+            "p": "The dentist looks at every tooth with a mirror and probe, checks the gums, and takes an X-ray only if something needs a closer look."
+          },
+          {
+            "time": "20 to 30 min",
+            "h3": "Plan and cost, written down",
+            "p": "You get a sheet with the teeth that need work, what is urgent and what can wait, the number of sittings and the fee for each. Take it home. There is no pressure to decide today."
+          },
+          {
+            "time": "30 to 40 min",
+            "h3": "Scaling or a quick fix, if you want",
+            "p": "Many people do the scaling on the first day. If a tooth is paining we give a dressing or start the treatment so you sleep tonight."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/dental/images/chair-wide.jpg",
+              "alt": "A clean dental treatment room with the chair, light and instrument tray"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/instruments-row.jpg",
+              "alt": "Sterilised instruments lined up on a blue cloth"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/model-tools.jpg",
+              "alt": "A teeth model and dental tools on the clinic table"
+            }
+          }
+        ]
+      }
+    },
+    "dentists": {
+      "kicker": "The dentists",
+      "h2": "Two dentists. You see the same one every visit.",
+      "photo": {
+        "src": "/demo/dental/images/dentist-portrait.jpg",
+        "alt": "Dr. Rajat Sen in blue scrubs with a stethoscope, seated, holding a patient file"
+      },
+      "h3": "Dr. Rajat Sen",
+      "deg": "BDS (Dr. R. Ahmed Dental College, 2008), MDS Conservative Dentistry and Endodontics",
+      "p": "Does the root canals, crowns, implants and extractions. Worked at a dental college hospital for three years before opening this clinic with his wife in 2011. Speaks Bengali, Hindi and English.",
+      "doc-ph": "AS",
+      "h32": "Dr. Anindita Sen",
+      "deg2": "BDS (2009), MDS Orthodontics",
+      "p2": "Looks after braces, aligners and most of the children. Patient with nervous patients of every age. Evening slots on Tuesday, Thursday and Saturday are kept for school children.",
+      "p3": "Both are registered with the West Bengal Dental Council. Registration certificates are framed at the reception.",
+      "list": {
+        "items": [
+          {
+            "li": "Root canals"
+          },
+          {
+            "li": "Implants"
+          },
+          {
+            "li": "Crowns and bridges"
+          },
+          {
+            "li": "Wisdom teeth"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Braces and aligners"
+          },
+          {
+            "li": "Children's teeth"
+          },
+          {
+            "li": "Scaling and fillings"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Inside the clinic",
+      "h2": "Two chairs, a small waiting room, and an autoclave that runs after every patient.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/dental/images/chair-room.jpg",
+              "alt": "Treatment room one, with the blue dental chair by the window"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/treatment-light.jpg",
+              "alt": "A patient under the chair light during a filling"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/drill.jpg",
+              "alt": "Close-up of a dental handpiece"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/xray-room.jpg",
+              "alt": "Treatment room two with the X-ray viewer on the wall"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/kids-checkup.jpg",
+              "alt": "A boy's check-up in the evening slot"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dental/images/tools-flatlay.jpg",
+              "alt": "A sterilised instrument set opened for the next patient"
+            }
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Patients say",
+      "h2": "Two notes left at the desk.",
+      "p": "\"I had put off a root canal for two years out of fear. It took two visits and I felt nothing. I wish I had come sooner.\"",
+      "span": "· Golpark",
+      "p2": "\"My son's braces came off last month. The price we were told on day one is the price we paid. Not one rupee more.\"",
+      "span2": "· Ballygunge",
+      "kicker2": "Common questions",
+      "h22": "Things people ask before they come.",
+      "faq": {
+        "items": [
+          {
+            "summary": "Do I need an appointment?",
+            "a": "It is better to book, because each dentist has one chair. Send a WhatsApp message or call. If you walk in, you may wait 20 to 40 minutes."
+          },
+          {
+            "summary": "Does a root canal hurt?",
+            "a": "The tooth is numbed before anything is done. You feel pressure and vibration, not pain. Mild soreness for a day or two after is normal and a paracetamol is usually enough."
+          },
+          {
+            "summary": "I have diabetes or high blood pressure. Can I get an extraction?",
+            "a": "Yes, in most cases. Bring your latest sugar or pressure reading and the list of medicines. If you take a blood thinner we will talk to your physician first."
+          },
+          {
+            "summary": "Is scaling bad for teeth?",
+            "a": "No. Scaling removes tartar from the surface; it does not thin the enamel. Teeth can feel sensitive for a few days afterwards because the gums settle back."
+          },
+          {
+            "summary": "How do you sterilise instruments?",
+            "a": "Every instrument set is washed, sealed in a pouch and run through the autoclave at 134 degrees. Pouches are opened in front of you. Needles, gloves and suction tips are single use."
+          },
+          {
+            "summary": "Do you take health insurance?",
+            "a": "We give a printed bill and treatment summary that most insurers accept for reimbursement. We do not do cashless."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the clinic",
+      "h2": "Gariahat Road, first floor, above the stationery shop.",
+      "b": "Address",
+      "p": "42 Gariahat Road, Gariahat<br>Kolkata 700029",
+      "button": "Get directions →",
+      "b2": "Chamber timings",
+      "b3": "Phone and WhatsApp",
+      "p2": "Messages answered 9 am to 9 pm. Lift available; the clinic is wheelchair friendly.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday, morning",
+            "td2": "10:00 am – 2:00 pm"
+          },
+          {
+            "td": "Monday to Saturday, evening",
+            "td2": "5:00 pm – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 1:00 pm"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "A check-up takes twenty minutes and costs ₹300.",
+      "p": "Send your name and a time that suits you. We will confirm within the hour during chamber timings."
+    },
+    "footer": {
+      "b": "Sen Dental Care",
+      "small": "Gariahat · since 2011",
+      "p": "Family dental clinic. Two dentists, a printed fee list, and same-day help when a tooth hurts.",
+      "h4": "On this page",
+      "h42": "Find us",
+      "li": "42 Gariahat Road, Gariahat, Kolkata 700029",
+      "li2": "Mon–Sat 10 am – 2 pm, 5 pm – 9 pm · Sun 10 am – 1 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Treatments"
+          },
+          {
+            "button": "Fee list"
+          },
+          {
+            "button": "Your first visit"
+          },
+          {
+            "button": "The dentists"
+          },
+          {
+            "button": "Common questions"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sen Dental Care sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=42%20Gariahat%20Road%2C%20Gariahat%2C%20Kolkata%20700029",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Sen Dental Care | Dentist in Gariahat, Kolkata",
+      "description": "Family dental clinic in Gariahat, Kolkata. Scaling, filling, root canal, extraction, braces, implants and children's dentistry. Fixed fee list, evening chamber, same-day help for toothache."
+    }
+  }
+}

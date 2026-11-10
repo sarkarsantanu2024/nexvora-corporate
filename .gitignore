@@ -9,3 +9,7 @@ next-env.d.ts
 
 # Isolated output for verification builds run alongside a live dev server.
 .next-verify
+
+# Edit panel content saved during local development (file store)
+.nx-data/
+.next-*

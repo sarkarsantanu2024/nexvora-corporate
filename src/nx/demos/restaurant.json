@@ -1,0 +1,1645 @@
+{
+  "site": "restaurant",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Kutum Bari Bhojonaloy",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1594"
+        },
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "timings",
+      "label": {
+        "en": "Lunch, dinner, and tea in between",
+        "bn": "Lunch, dinner, and tea in between"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "times",
+          "label": {
+            "en": "Lunch, dinner, and tea in between",
+            "bn": "Lunch, dinner, and tea in between"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "t",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dishes",
+      "label": {
+        "en": "Five dishes we have cooked the same way since 1998",
+        "bn": "Five dishes we have cooked the same way since 1998"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dishes-hint",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "dishes",
+          "label": {
+            "en": "Five dishes we have cooked the same way since 1998",
+            "bn": "Five dishes we have cooked the same way since 1998"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1600"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "price",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "label": {
+        "en": "The full card, with today’s prices",
+        "bn": "The full card, with today’s prices"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tabs-note",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tabs-note2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tabs-note3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tabs-note4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-bar",
+          "label": {
+            "en": "The full card, with today’s prices",
+            "bn": "The full card, with today’s prices"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "mlist",
+          "label": {
+            "en": "The full card, with today’s prices",
+            "bn": "The full card, with today’s prices"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "mlist2",
+          "label": {
+            "en": "The full card, with today’s prices",
+            "bn": "The full card, with today’s prices"
+          },
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "key": "name",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "mlist3",
+          "label": {
+            "en": "The full card, with today’s prices",
+            "bn": "The full card, with today’s prices"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "mlist4",
+          "label": {
+            "en": "The full card, with today’s prices",
+            "bn": "The full card, with today’s prices"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": {
+        "en": "Within 3 km, at your door in about 40 minutes",
+        "bn": "Within 3 km, at your door in about 40 minutes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "kicker2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1593"
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Within 3 km, at your door in about 40 minutes",
+            "bn": "Within 3 km, at your door in about 40 minutes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Thirty people in the back room, with the AC on",
+            "bn": "Thirty people in the back room, with the AC on"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sunday",
+      "label": {
+        "en": "The Sunday thali. One price, no choosing",
+        "bn": "The Sunday thali. One price, no choosing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "sunday-menu",
+          "label": {
+            "en": "The Sunday thali. One price, no choosing",
+            "bn": "The Sunday thali. One price, no choosing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sunday-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "A family kitchen that grew into a restaurant",
+        "bn": "A family kitchen that grew into a restaurant"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "What comes to the table",
+        "bn": "What comes to the table"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "What comes to the table",
+            "bn": "What comes to the table"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rashbehari Avenue, opposite the Gariahat market gate",
+        "bn": "On Rashbehari Avenue, opposite the Gariahat market gate"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Lunch can be at your door in forty minutes",
+        "bn": "Lunch can be at your door in forty minutes"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Menu",
+            "bn": "Menu"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Kutum Bari Bhojonaloy",
+      "small": "Gariahat · since 1998"
+    },
+    "top": {
+      "hero-img": {
+        "src": "/demo/restaurant/images/hero.jpg",
+        "alt": "A smiling woman at a table full of Bengali dishes in clay bowls"
+      },
+      "hero-open": "<span></span>Open today 12 pm to 4 pm and 7 pm to 11 pm",
+      "h1": "Bhaat, maach and <em>a proper Bengali lunch</em>, two minutes from Gariahat crossing.",
+      "p": "Thali from ₹160, mutton kosha the way a Sunday deserves, and biryani with a real aloo in it. Eat in with the family, or get it home within 3 km on WhatsApp.",
+      "button": "See the menu"
+    },
+    "timings": {
+      "kicker": "When to come",
+      "h2": "Lunch, dinner, and tea in between.",
+      "times": {
+        "items": [
+          {
+            "h3": "Lunch",
+            "t": "12:00 pm – 4:00 pm",
+            "p": "Thali is served till 3:30. Fish and mutton items run out by 2:30 on weekends, so come early or book a table."
+          },
+          {
+            "h3": "Cafe hours",
+            "t": "4:00 pm – 7:00 pm",
+            "p": "Tea, coffee, fish fry, mughlai paratha and chop. The kitchen is on a short menu while the dinner pots are cooking."
+          },
+          {
+            "h3": "Dinner",
+            "t": "7:00 pm – 11:00 pm",
+            "p": "Full menu. Last order 10:30. Home delivery runs till 10 pm."
+          }
+        ]
+      }
+    },
+    "dishes": {
+      "kicker": "What people come for",
+      "h2": "Five dishes we have cooked the same way since 1998.",
+      "p": "Mustard oil, fresh fish from Gariahat market every morning, and no colour or ready-made paste.",
+      "dishes-hint": "Swipe to see more.",
+      "dishes": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/fish-thali.jpg",
+              "alt": "Fish thali with rice, dal, bhaja and fish curry"
+            },
+            "h3": "Maacher Thali",
+            "p": "Rice, dal, a bhaja, shukto, fish curry (rui or katla), chutney and papad.",
+            "price": "₹260"
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/mutton.jpg",
+              "alt": "Mutton kosha in a brass pot"
+            },
+            "h3": "Kosha Mangsho",
+            "p": "Slow cooked for three hours. Comes with luchi or basanti pulao.",
+            "price": "₹340 plate"
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/biryani.jpg",
+              "alt": "Plate of biryani with papad"
+            },
+            "h3": "Kolkata Biryani",
+            "p": "Light, with potato and egg. Chicken or mutton. Dum cooked in our own handi.",
+            "price": "₹240 / ₹320"
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/veg-thali.jpg",
+              "alt": "Vegetarian thali with several small bowls"
+            },
+            "h3": "Niramish Thali",
+            "p": "Rice or four luchi, dal, two sabzi, dhokar dalna, chutney and a sweet.",
+            "price": "₹160"
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/fish-curry.jpg",
+              "alt": "Fish curry with steamed rice"
+            },
+            "h3": "Bhapa Ilish",
+            "p": "Steamed hilsa in mustard. Monsoon months only, when the fish is good.",
+            "price": "₹380 piece"
+          }
+        ]
+      }
+    },
+    "menu": {
+      "kicker": "Menu and prices",
+      "h2": "The full card, with today’s prices.",
+      "p": "Tap a heading to switch. Prices include tax. We update this page whenever the fish price moves.",
+      "tabs-note": "Every thali comes with a bowl of mishti doi. Extra rice is free.",
+      "tabs-note2": "Fish is bought fresh every morning. If an item is finished we will say so on the phone before you order.",
+      "tabs-note3": "Biryani is cooked in two batches, 12:30 and 7:30. Family handi for 6 people (₹1,300 chicken, ₹1,750 mutton) needs two hours’ notice.",
+      "tabs-note4": "Cafe menu is served 4 pm to 7 pm, and as starters at dinner.",
+      "tabs-bar": {
+        "items": [
+          {
+            "label": "Thali"
+          },
+          {
+            "label": "Fish and mutton"
+          },
+          {
+            "label": "Biryani and rice"
+          },
+          {
+            "label": "Cafe snacks"
+          }
+        ]
+      },
+      "mlist": {
+        "items": [
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Niramish Thali <small>Rice or 4 luchi, dal, 2 sabzi, dhokar dalna, chutney, mishti</small>",
+            "amt": "₹160"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Dim Thali <small>Veg thali plus egg curry</small>",
+            "amt": "₹190"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Maacher Thali <small>Rui or katla curry, one piece</small>",
+            "amt": "₹260"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chicken Thali <small>Murgir jhol, 2 pieces</small>",
+            "amt": "₹280"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Mutton Thali <small>Kosha mangsho, 3 pieces</small>",
+            "amt": "₹360"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chingri Thali <small>Prawn malai curry</small>",
+            "amt": "₹390"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Ilish Thali <small>Monsoon only</small>",
+            "amt": "₹480"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Children&rsquo;s plate <small>Rice, dal, aloo bhaja, one sabzi</small>",
+            "amt": "₹110"
+          }
+        ]
+      },
+      "mlist2": {
+        "items": [
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Rui Kalia <small>One piece</small>",
+            "amt": "₹140"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Katla Jhol",
+            "amt": "₹150"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Bhetki Paturi <small>Banana leaf, mustard</small>",
+            "amt": "₹220"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chingri Malai Curry <small>4 pieces</small>",
+            "amt": "₹320"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Bhapa Ilish <small>Monsoon only</small>",
+            "amt": "₹380"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Kosha Mangsho <small>4 pieces</small>",
+            "amt": "₹340"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Murgir Jhol <small>Sunday home style, with potato</small>",
+            "amt": "₹220"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Dimer Dalna <small>2 eggs</small>",
+            "amt": "₹110"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Luchi <small>4 pieces</small>",
+            "amt": "₹50"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Steamed rice <small>Gobindobhog, per plate</small>",
+            "amt": "₹60"
+          }
+        ]
+      },
+      "mlist3": {
+        "items": [
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chicken Biryani <small>With aloo and egg</small>",
+            "amt": "₹240"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Mutton Biryani <small>With aloo and egg</small>",
+            "amt": "₹320"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chicken Chaap <small>One piece</small>",
+            "amt": "₹180"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Mutton Rezala",
+            "amt": "₹260"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Basanti Pulao <small>Sweet yellow pulao</small>",
+            "amt": "₹120"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Veg Biryani",
+            "amt": "₹180"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Egg Biryani",
+            "amt": "₹200"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Raita / Salad",
+            "amt": "₹40"
+          }
+        ]
+      },
+      "mlist4": {
+        "items": [
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Fish Fry <small>Bhetki, with kasundi</small>",
+            "amt": "₹150"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Mughlai Paratha <small>Egg or chicken</small>",
+            "amt": "₹120 / ₹160"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Mochar Chop <small>2 pieces</small>",
+            "amt": "₹60"
+          },
+          {
+            "name": "<i class=\"nonveg\" aria-hidden=\"true\"></i>Chicken Cutlet",
+            "amt": "₹130"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Ghugni <small>With chopped onion and lemon</small>",
+            "amt": "₹50"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Lebu Cha / Dudh Cha",
+            "amt": "₹20 / ₹30"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Filter Coffee",
+            "amt": "₹60"
+          },
+          {
+            "name": "<i class=\"veg\" aria-hidden=\"true\"></i>Mishti Doi <small>Clay pot</small>",
+            "amt": "₹45"
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "kicker": "Home delivery",
+      "h3": "Within 3 km, at your door in about 40 minutes.",
+      "photo": {
+        "src": "/demo/restaurant/images/clay-meal.jpg",
+        "alt": ""
+      },
+      "kicker2": "Family seating and parties",
+      "h32": "Thirty people in the back room, with the AC on.",
+      "photo2": {
+        "src": "/demo/restaurant/images/interior-2.jpg",
+        "alt": ""
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Send your order and address on WhatsApp. We confirm with the total and the time."
+          },
+          {
+            "li": "Gariahat, Ballygunge, Lake Market, Hindustan Park, Golpark, Kasba and Dhakuria are inside the circle."
+          },
+          {
+            "li": "Delivery charge ₹30. Free on orders above ₹600."
+          },
+          {
+            "li": "Pay cash or UPI at the door. Curries are packed in sealed containers, rice separately."
+          },
+          {
+            "li": "Lunch delivery 12 to 3:30. Dinner delivery 7 to 10."
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Family tables for 4 and 6 in the front hall. High chairs available."
+          },
+          {
+            "li": "The back room seats 30 for a birthday, annaprashan or office lunch. No hall charge."
+          },
+          {
+            "li": "Fixed menus from ₹350 per head (veg) and ₹520 per head (fish and mutton). Buffet or served at the table."
+          },
+          {
+            "li": "Book two days ahead with ₹2,000 advance. The rest is paid after the meal."
+          },
+          {
+            "li": "You may bring your own cake. We provide plates, candles and a knife."
+          }
+        ]
+      }
+    },
+    "sunday": {
+      "kicker": "Sunday special",
+      "h2": "The Sunday thali. One price, no choosing.",
+      "p": "Every Sunday from 12:30 until it runs out, usually by 3. The menu changes with the season but the shape stays the same.",
+      "b": "₹450",
+      "span": "per person · children under 8 half price",
+      "sunday-menu": {
+        "items": [
+          {
+            "n": "1",
+            "b": "Basanti pulao and luchi",
+            "span": "Both, because people fight otherwise."
+          },
+          {
+            "n": "2",
+            "b": "Kosha mangsho",
+            "span": "Three pieces of mutton, cooked from 7 in the morning."
+          },
+          {
+            "n": "3",
+            "b": "A fish dish",
+            "span": "Bhetki paturi in winter, chingri malai curry in summer, ilish in the monsoon."
+          },
+          {
+            "n": "4",
+            "b": "Chholar dal, beguni, chutney",
+            "span": "Tomato and date chutney with papad."
+          },
+          {
+            "n": "5",
+            "b": "Rosogolla and mishti doi",
+            "span": "From the sweet shop next door."
+          }
+        ]
+      },
+      "sunday-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/thali-top.jpg",
+              "alt": "Bengali thali seen from above with rice, luchi, fish fry and sweets"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/chicken-biryani.jpg",
+              "alt": "Chicken biryani with curry on the side"
+            }
+          }
+        ]
+      }
+    },
+    "story": {
+      "kicker": "About us",
+      "h2": "A family kitchen that grew into a restaurant.",
+      "p": "Kutum Bari means the house of relatives. Shibani Chakraborty started cooking lunch for twelve office workers from her Gariahat flat in 1998. By 2004 it was forty tiffins a day and the ground floor became a six-table eatery.",
+      "p2": "Her son Arnab runs it now with the same two cooks who came in 2004. The mutton is still cooked in the morning, the fish is still bought from Gariahat market by 7, and the mishti doi still comes from the shop next door.",
+      "p3": "We are not a fancy place. We are the place you bring your parents to on a Sunday, and the place you order from on a weekday when nobody feels like cooking.",
+      "photo": {
+        "src": "/demo/restaurant/images/interior.jpg",
+        "alt": "A wooden table for two under a Radha Krishna wall panel in the dining room"
+      }
+    },
+    "gallery": {
+      "kicker": "From the kitchen",
+      "h2": "What comes to the table.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/bengali-feast.jpg",
+              "alt": "A Bengali feast laid out with rice and several curries"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/serving.jpg",
+              "alt": "A man in a kurta serving a thali at the table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/snacks.jpg",
+              "alt": "Tray of Indian snacks"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/mutton.jpg",
+              "alt": "Mutton curry in a brass pot"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/cafe.jpg",
+              "alt": "Cafe tables with flower decoration"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/restaurant/images/fish-curry.jpg",
+              "alt": "Fish curry with rice"
+            }
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "kicker": "What customers say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "We order the fish thali every Wednesday for my in-laws. It reaches in half an hour, the rice is still hot, and the fish piece is a proper size.",
+            "span": "· Hindustan Park"
+          },
+          {
+            "p": "Booked the back room for my son’s annaprashan, 28 people. They served at the table, nobody had to get up, and the mutton finished before the speeches did.",
+            "span": "· Kasba"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Find us",
+      "h2": "On Rashbehari Avenue, opposite the Gariahat market gate.",
+      "b": "Address",
+      "p": "14B Rashbehari Avenue, Gariahat<br>Kolkata 700029",
+      "button": "Get directions →",
+      "b2": "Hours, every day",
+      "b3": "Phone and WhatsApp",
+      "p2": "Parking for four cars behind the building. Gariahat metro is a 6 minute walk.",
+      "hours": {
+        "items": [
+          {
+            "td": "Lunch",
+            "td2": "12:00 pm – 4:00 pm"
+          },
+          {
+            "td": "Cafe",
+            "td2": "4:00 pm – 7:00 pm"
+          },
+          {
+            "td": "Dinner",
+            "td2": "7:00 pm – 11:00 pm"
+          },
+          {
+            "td": "Closed",
+            "td2": "Second Tuesday of the month"
+          }
+        ]
+      }
+    },
+    "order": {
+      "h2": "Lunch can be at your door in forty minutes.",
+      "p": "Send the dishes and your address on WhatsApp. We reply with the total and the time, and the food leaves the kitchen hot."
+    },
+    "footer": {
+      "b": "Kutum Bari Bhojonaloy",
+      "small": "Gariahat · since 1998",
+      "p": "Bengali thali, fish, mutton and biryani. Lunch and dinner every day, home delivery within 3 km, a back room for thirty.",
+      "h4": "Menu",
+      "h42": "Find us",
+      "li": "14B Rashbehari Avenue, Gariahat, Kolkata 700029",
+      "li2": "Lunch 12 pm – 4 pm · Dinner 7 pm – 11 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Signature dishes"
+          },
+          {
+            "button": "Full menu and prices"
+          },
+          {
+            "button": "Sunday thali"
+          },
+          {
+            "button": "Delivery and parties"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Kutum Bari Bhojonaloy sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700029",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Kutum Bari Bhojonaloy | Bengali Restaurant and Cafe in Gariahat",
+      "description": "Bengali thali, fish, mutton and biryani in Gariahat, Kolkata. Lunch 12 to 4, dinner 7 to 11. Home delivery on WhatsApp within 3 km. Family seating and party booking for 30."
+    }
+  }
+}

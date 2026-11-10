@@ -1,0 +1,1670 @@
+{
+  "site": "idol-maker",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Pal Pratima Shilpalaya",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-side",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "A workshop in the lane where idols have been made for 300 years",
+        "bn": "A workshop in the lane where idols have been made for 300 years"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2133"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1067"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "lede2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gen",
+          "label": {
+            "en": "A workshop in the lane where idols have been made for 300 years",
+            "bn": "A workshop in the lane where idols have been made for 300 years"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "idols",
+      "label": {
+        "en": "Idols for the home, the club and the pandal",
+        "bn": "Idols for the home, the club and the pandal"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "idols",
+          "label": {
+            "en": "Idols for the home, the club and the pandal",
+            "bn": "Idols for the home, the club and the pandal"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p2",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": {
+        "en": "From bamboo and straw to chokkhu daan",
+        "bn": "From bamboo and straw to chokkhu daan"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "From bamboo and straw to chokkhu daan",
+            "bn": "From bamboo and straw to chokkhu daan"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "proc-figs",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "label": {
+        "en": "When to book, so your idol is ready in time",
+        "bn": "When to book, so your idol is ready in time"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "f10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td19",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "by10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td20",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "cal-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "abroad",
+      "label": {
+        "en": "Pujo in Toronto, London or Dubai, with an idol from this lane",
+        "bn": "Pujo in Toronto, London or Dubai, with an idol from this lane"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1200"
+        }
+      ],
+      "lists": [
+        {
+          "key": "ticks",
+          "label": {
+            "en": "Pujo in Toronto, London or Dubai, with an idol from this lane",
+            "bn": "Pujo in Toronto, London or Dubai, with an idol from this lane"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A season in the studio",
+        "bn": "A season in the studio"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1067"
+        },
+        {
+          "key": "figcaption2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2133"
+        },
+        {
+          "key": "figcaption4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "What our clients say",
+        "bn": "What our clients say"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "words",
+          "label": {
+            "en": "What our clients say",
+            "bn": "What our clients say"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Come and see her before she is painted",
+        "bn": "Come and see her before she is painted"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "div",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "div2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Tell us the festival, the size and the date",
+        "bn": "Tell us the festival, the size and the date"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "brand-name": "Pal Pratima Shilpalaya",
+      "brand-sub": "Kumartuli · Since 1952"
+    },
+    "section-2": {
+      "photo": {
+        "src": "/demo/idol-maker/images/hero.jpg",
+        "alt": "An artisan in a checked shirt looks up at unpainted clay idols in a Kumartuli workshop"
+      },
+      "kicker": "Kumartuli, Kolkata",
+      "h1": "Clay from the Ganga. <em>Three generations</em> of hands.",
+      "lede": "We make Durga, Saraswati, Kali and Lakshmi pratimas for family pujos, club pandals and Bengali associations abroad. Every idol starts as bamboo and straw in this lane, and leaves with her eyes painted by the same family that painted your grandfather's.",
+      "button": "See order dates",
+      "hero-side": {
+        "items": [
+          {
+            "b": "1952",
+            "span": "Studio founded by Nabakumar Pal"
+          },
+          {
+            "b": "60+",
+            "span": "idols made every Durga Puja"
+          },
+          {
+            "b": "14",
+            "span": "countries shipped to since 2008"
+          },
+          {
+            "b": "₹1,500",
+            "span": "Saraswati pratimas start here"
+          }
+        ]
+      }
+    },
+    "story": {
+      "photo": {
+        "src": "/demo/idol-maker/images/workshop-bw.jpg",
+        "alt": "Unpainted Durga idols with lions and demons crowd a bamboo-roofed workshop"
+      },
+      "photo2": {
+        "src": "/demo/idol-maker/images/clay-head.jpg",
+        "alt": "A freshly moulded clay face of the goddess resting on a cloth ring"
+      },
+      "kicker": "The studio",
+      "h2": "A workshop in the lane where idols have been made for 300 years",
+      "lede": "Nabakumar Pal came to Kumartuli from Krishnanagar in 1952 with one helper and a rented shed. His son Gopal built the studio's name in the club pujos of north Kolkata. Today his grandsons Sujit and Ranjit run it with twelve artisans, most of whom have been here over fifteen years.",
+      "lede2": "We still use Ganga clay, rice straw and bamboo. We still paint the eyes on Mahalaya morning. What has changed is the ledger: orders now come by WhatsApp, and crates leave for Toronto and Dubai in July.",
+      "gen": {
+        "items": [
+          {
+            "b": "3rd",
+            "span": "generation at work"
+          },
+          {
+            "b": "12",
+            "span": "artisans in the studio"
+          },
+          {
+            "b": "1,800+",
+            "span": "idols made since 1952"
+          }
+        ]
+      }
+    },
+    "idols": {
+      "kicker": "What we make",
+      "h2": "Idols for the home, the club and the pandal",
+      "lede": "Prices below are for standard clay idols with basic sholar saaj (pith decoration). Daker saaj, zari work and custom themes are quoted separately. Half the amount is paid at booking, the rest on delivery.",
+      "idols": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/durga-finished.jpg",
+              "alt": "Close-up of a painted Durga face with yellow skin, three eyes and a green sari"
+            },
+            "h3": "Durga, family pujo",
+            "p": "Ek-chala, 5 to 7 ft, with Lakshmi, Saraswati, Kartik, Ganesh",
+            "p2": "The traditional single-frame set for barir pujo. Classic Bengali face, sholar saaj, delivered to your thakur dalan by Panchami.",
+            "b": "From ₹38,000",
+            "span": "book by June"
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/unfinished-durga.jpg",
+              "alt": "A tall unpainted Durga with her family and lion, set against a wooden arch"
+            },
+            "h3": "Durga, club and barowari",
+            "p": "Panch-chala or theme, 9 to 14 ft",
+            "p2": "For pandals. We work with your theme artist or design the set ourselves. Fibreglass option for rain-prone open pandals.",
+            "b": "From ₹1,40,000",
+            "span": "book by April"
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/saraswati-finished.jpg",
+              "alt": "A grey clay Saraswati seated with a veena, before painting, with a carved arch behind"
+            },
+            "h3": "Saraswati",
+            "p": "1.5 to 6 ft, for homes, schools and clubs",
+            "p2": "Our busiest month is January. Schools get a flat rate for standard 3 ft idols ordered before Poush Sankranti.",
+            "b": "From ₹1,500",
+            "span": "book by December"
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/kali-finished.jpg",
+              "alt": "Rows of small painted Kali idols with garlands of heads lined up on a shelf"
+            },
+            "h3": "Kali",
+            "p": "2 to 10 ft, Shyama and Dakshina Kali forms",
+            "p2": "For Kali Puja and Diwali. Small household idols are kept in stock from October. Large ones need two months' notice.",
+            "b": "From ₹2,500",
+            "span": "book by August for large"
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/durga-faces.jpg",
+              "alt": "Three unpainted clay faces of the goddess drying side by side"
+            },
+            "h3": "Lakshmi, Ganesh, Viswakarma, Jagaddhatri",
+            "p": "1 to 6 ft",
+            "p2": "Seasonal idols for Kojagari Lakshmi Puja, Ganesh Chaturthi, Viswakarma Puja in factories and the Jagaddhatri pujos of Chandannagar.",
+            "b": "From ₹1,200",
+            "span": "book 3 weeks ahead"
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/carrying-idols.jpg",
+              "alt": "Two young artisans carry a small unfinished Ganesh idol down the Kumartuli lane"
+            },
+            "h3": "Fibreglass idols for abroad",
+            "p": "3 to 8 ft, reusable for 10 or more years",
+            "p2": "Light, weather-proof and crated for sea or air freight. Many associations use the same idol every year and have us repaint it.",
+            "b": "From ₹2,20,000",
+            "span": "plus freight; book by February"
+          }
+        ]
+      }
+    },
+    "process": {
+      "kicker": "How it is made",
+      "h2": "From bamboo and straw to chokkhu daan",
+      "lede": "A 10 ft Durga takes about three months. Here is what happens in that time, in the order it happens.",
+      "steps": {
+        "items": [
+          {
+            "span": "1",
+            "h3": "Kathamo <small>Bamboo frame</small>",
+            "p": "A bamboo skeleton is tied with jute rope on a wooden base. The proportions of the whole idol are fixed here, so this is the senior artisan's job."
+          },
+          {
+            "span": "2",
+            "h3": "Khor bandha <small>Straw body</small>",
+            "p": "Rice straw is bound tightly over the frame to give the figure its bulk. It is light, cheap and lets the clay grip."
+          },
+          {
+            "span": "3",
+            "h3": "Ek-mete <small>First clay coat</small>",
+            "p": "Coarse Ganga clay mixed with rice husk goes on thick. It dries for a week or two depending on the rain."
+          },
+          {
+            "span": "4",
+            "h3": "Do-mete <small>Fine clay coat</small>",
+            "p": "A smoother clay with jute fibre is applied and the surface is worked by hand. Cracks are filled; fingers, folds and faces take shape."
+          },
+          {
+            "span": "5",
+            "h3": "Mukh <small>The face</small>",
+            "p": "Faces are cast from the studio's own moulds, then finished by hand. Each family of artisans has its own face; ours is known for a slightly longer eye."
+          },
+          {
+            "span": "6",
+            "h3": "Rong <small>Painting</small>",
+            "p": "A white chalk base, then the skin colour, then the detail work. We use water-based paints that wash off in immersion."
+          },
+          {
+            "span": "7",
+            "h3": "Saaj <small>Dressing and ornaments</small>",
+            "p": "Sari, crown, weapons and the sholar or daker saaj go on. The lion gets his mane. This is the week the lane fills with visitors."
+          },
+          {
+            "span": "8",
+            "h3": "Chokkhu daan <small>Painting the eyes</small>",
+            "p": "Done last, traditionally on Mahalaya, by the head of the family. The idol is considered awake from this moment and is handled with care until delivery."
+          }
+        ]
+      },
+      "proc-figs": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/sculpting-a.jpg",
+              "alt": "An artisan's muddy hands shape the eyelid of a clay face with a bamboo tool"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/painting-eyes.jpg",
+              "alt": "An artisan paints the eye of a dressed idol with a fine brush"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/idol-maker/images/painting-saraswati.jpg",
+              "alt": "An artisan in red glasses paints the eyebrow of a white Saraswati idol"
+            }
+          }
+        ]
+      }
+    },
+    "calendar": {
+      "kicker": "Pujo order calendar",
+      "h2": "When to book, so your idol is ready in time",
+      "lede": "Festival dates move with the lunar calendar; the months below are the usual window. The \"book by\" date is when we stop taking new orders for that size.",
+      "th": "Festival",
+      "th2": "Usual month",
+      "th3": "Book by",
+      "th4": "Delivery",
+      "f": "Saraswati Puja",
+      "td": "Late January to February",
+      "by": "15 December",
+      "td2": "Day before Panchami",
+      "f2": "Annapurna and Basanti Puja",
+      "td3": "March to April",
+      "by2": "1 February",
+      "td4": "Two days before",
+      "f3": "Ganesh Chaturthi",
+      "td5": "August to September",
+      "by3": "15 July",
+      "td6": "Day before",
+      "f4": "Viswakarma Puja",
+      "td7": "17 or 18 September",
+      "by4": "20 August",
+      "td8": "16 September",
+      "f5": "Durga Puja, family",
+      "td9": "September to October",
+      "by5": "30 June",
+      "td10": "Panchami",
+      "f6": "Durga Puja, club and theme",
+      "td11": "September to October",
+      "by6": "30 April",
+      "td12": "Chaturthi",
+      "f7": "Kojagari Lakshmi Puja",
+      "td13": "October",
+      "by7": "1 September",
+      "td14": "Day before",
+      "f8": "Kali Puja",
+      "td15": "October to November",
+      "by8": "15 August (large), 1 October (small)",
+      "td16": "Day before",
+      "f9": "Jagaddhatri Puja",
+      "td17": "November",
+      "by9": "1 September",
+      "td18": "Two days before",
+      "f10": "Overseas pujos (any festival)",
+      "td19": "Ships June to August",
+      "by10": "28 February",
+      "td20": "Port or airport of your choice",
+      "cal-note": "Late orders are sometimes possible for small idols. Message us with the size and date and we will tell you honestly whether it can be done."
+    },
+    "abroad": {
+      "kicker": "Shipping abroad",
+      "h2": "Pujo in Toronto, London or Dubai, with an idol from this lane",
+      "lede": "Since 2008 we have shipped to Bengali associations in 14 countries. The idol is made in fibreglass or a light clay-and-fibre mix, packed in a wooden crate with foam, and handed to a freight agent we have worked with for years.",
+      "photo": {
+        "src": "/demo/idol-maker/images/pandal-night.jpg",
+        "alt": "A lit Durga Puja pandal at night with a thatched tower and painted walls"
+      },
+      "ticks": {
+        "items": [
+          {
+            "b": "One point of contact",
+            "span": "Sujit handles overseas orders himself, on WhatsApp, in Bengali or English. Photos at every stage."
+          },
+          {
+            "b": "Crating and paperwork",
+            "span": "Export-grade crate, fumigation certificate, invoice and packing list. Your freight agent or ours."
+          },
+          {
+            "b": "Sea or air",
+            "span": "Sea freight takes 6 to 10 weeks and costs less. Air takes a week. We advise on which once we know your date."
+          },
+          {
+            "b": "Repaint service",
+            "span": "Send photos after the pujo and we send touch-up paint and instructions, or repaint the idol on your next visit to Kolkata."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Gallery",
+      "h2": "A season in the studio",
+      "photo": {
+        "src": "/demo/idol-maker/images/unpainted-durga.jpg",
+        "alt": "A dark unpainted Durga with a detailed crown and garland in low light"
+      },
+      "figcaption": "Do-mete finished, waiting for paint",
+      "photo2": {
+        "src": "/demo/idol-maker/images/clay-head.jpg",
+        "alt": "A clay face of the goddess on a cloth ring beside a paint tin"
+      },
+      "figcaption2": "A face from our mould",
+      "photo3": {
+        "src": "/demo/idol-maker/images/sculpting-a.jpg",
+        "alt": "Hands shaping a clay face with a bamboo tool"
+      },
+      "figcaption3": "Detail work",
+      "photo4": {
+        "src": "/demo/idol-maker/images/workshop-bw.jpg",
+        "alt": "Unpainted Durga idols and lions in a bamboo-roofed shed"
+      },
+      "figcaption4": "The big shed in August",
+      "photo5": {
+        "src": "/demo/idol-maker/images/durga-finished.jpg",
+        "alt": "Painted Durga face in yellow with a green sari"
+      },
+      "figcaption5": "Ready for Panchami",
+      "photo6": {
+        "src": "/demo/idol-maker/images/kali-finished.jpg",
+        "alt": "Small painted Kali idols in a row"
+      },
+      "figcaption6": "Kali Puja stock"
+    },
+    "section-9": {
+      "kicker": "From the order book",
+      "h2": "What our clients say",
+      "words": {
+        "items": [
+          {
+            "p": "Our club has taken a Durga from the Pals since my father was secretary. In 2023 the theme artist changed the design twice in August and Ranjit-da still delivered on Chaturthi.",
+            "span": "· Bagbazar club secretary"
+          },
+          {
+            "p": "The fibreglass Durga we ordered in 2019 is still in use in Mississauga. Sujit sent us photos every fortnight while it was being made, and the crate arrived without a scratch.",
+            "span": "· Bengali association, Canada"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the studio",
+      "h2": "Come and see her before she is painted",
+      "lede": "Clients are welcome to visit during work hours. August and September are crowded; mornings are quieter. Please message before coming so someone is free to show you around.",
+      "div": "<b>Address</b>41 Banamali Sarkar Street, Kumartuli<br>Kolkata 700005, West Bengal<br><span style=\"color:var(--muted);font-size:.9rem\">Third shed on the left from the Rabindra Sarani end. Sovabazar metro is a 10-minute walk.</span>",
+      "div2": "<b>Work hours</b>Every day, 8 am to 7 pm<br>Closed on Bijoya Dashami and the day after",
+      "b": "Phone and WhatsApp",
+      "button": "Get directions"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Pal Pratima Shilpalaya sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=41%20Banamali%20Sarkar%20Street%2C%20Kumartuli%2C%20Kolkata%20700005",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Pal Pratima Shilpalaya",
+      "brand-sub": "Kumartuli · Since 1952",
+      "p": "Clay idols of Durga, Saraswati, Kali and Lakshmi. Family pujos, club pandals and overseas associations.",
+      "h4": "Studio"
+    },
+    "seo": {
+      "title": "Pal Pratima Shilpalaya | Durga, Saraswati and Kali Idols from Kumartuli",
+      "description": "Third-generation idol makers in Kumartuli, Kolkata. Clay idols of Durga, Saraswati, Kali and Lakshmi for homes, clubs and pujos abroad. Order calendar, process and prices."
+    }
+  }
+}

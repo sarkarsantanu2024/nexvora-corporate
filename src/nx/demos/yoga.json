@@ -1,0 +1,1686 @@
+{
+  "site": "yoga",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Wellness Yoga Studio",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "900:1150"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-watermark",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hero-bar",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "More Than Yoga.A Journey Towards Balance",
+        "bn": "More Than Yoga.A Journey Towards Balance"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1000:800"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "500:500"
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "programs",
+      "label": {
+        "en": "Find a Practice That Works for You",
+        "bn": "Find a Practice That Works for You"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1100:740"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:750"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1100:740"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo7",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo8",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p8",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo9",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h39",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p9",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pcard-num10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo10",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "600:800"
+        },
+        {
+          "key": "h310",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p10",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "note",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "note2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-5",
+      "label": {
+        "en": "Section 5",
+        "bn": "অংশ 5"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1800:1000"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "band-line",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "why",
+      "label": {
+        "en": "A Practice Built Around You",
+        "bn": "A Practice Built Around You"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1000"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "500:500"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "pointlist",
+          "label": {
+            "en": "A Practice Built Around You",
+            "bn": "A Practice Built Around You"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "label": {
+        "en": "Begin Your Journey in Three Simple Steps",
+        "bn": "Begin Your Journey in Three Simple Steps"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Begin Your Journey in Three Simple Steps",
+            "bn": "Begin Your Journey in Three Simple Steps"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-8",
+      "label": {
+        "en": "What Students Say",
+        "bn": "What Students Say"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1000:1000"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "rating-meta",
+          "label": {
+            "en": "What Students Say",
+            "bn": "What Students Say"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Why Choose Us?",
+        "bn": "Why Choose Us?"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "eyebrow2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-bar",
+          "label": {
+            "en": "Moments From the Mat",
+            "bn": "Moments From the Mat"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Moments From the Mat",
+            "bn": "Moments From the Mat"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "900:675"
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "Can’t Join Us in Person?",
+        "bn": "Can’t Join Us in Person?"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "online-big",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:750"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "360:640"
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "location",
+      "label": {
+        "en": "Find Wellness Yoga Studio",
+        "bn": "Find Wellness Yoga Studio"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "hours",
+          "type": "textarea",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Ready to Begin Your Practice?",
+        "bn": "Ready to Begin Your Practice?"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "final-place",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "footer-loc",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "footer-bottom",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "WELLNESS YOGA STUDIO",
+      "brand-sub": "Yoga • Meditation • Wellness"
+    },
+    "section-2": {
+      "eyebrow": "Mindfulness • Movement • Balance",
+      "h1": "Find Your Balance.<span class=\"line2\">Strengthen Your Mind &amp; Body.</span>",
+      "lede": "Discover a mindful approach to yoga with guided classes designed to support strength, flexibility, relaxation and overall well-being.",
+      "button": "Explore Our Classes",
+      "photo": {
+        "src": "/demo/yoga/images/hero-balance-pose.jpg",
+        "alt": "A woman holding tree pose beside a forest stream"
+      },
+      "hero-watermark": {
+        "items": [
+          {
+            "span": "Yoga"
+          },
+          {
+            "span": "Studio"
+          }
+        ]
+      },
+      "hero-bar": {
+        "items": [
+          {
+            "b": "Since 2014",
+            "span": "Teaching in Gariahat"
+          },
+          {
+            "b": "12 at most",
+            "span": "Students in a class"
+          },
+          {
+            "b": "7 Practices",
+            "span": "Hatha to Iyengar"
+          },
+          {
+            "b": "Online",
+            "span": "Classes Available"
+          }
+        ]
+      }
+    },
+    "about": {
+      "eyebrow": "A Space For Your Practice",
+      "h2": "More Than Yoga.<span class=\"accent\">A Journey Towards Balance.</span>",
+      "p": "At Wellness Yoga Studio, we believe yoga is more than physical exercise.",
+      "p2": "It is a journey towards better movement, greater awareness and a calmer mind.",
+      "p3": "Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.",
+      "photo": {
+        "src": "/demo/yoga/images/about-class-stretch.jpg",
+        "alt": "A teacher adjusting students' overhead stretch during class"
+      },
+      "photo2": {
+        "src": "/demo/yoga/images/about-rolled-mats.jpg",
+        "alt": "A woman in a yellow kurta sitting on her mat on a lawn"
+      },
+      "b": "12",
+      "span": "Students per class, at most"
+    },
+    "programs": {
+      "eyebrow": "Yoga Programs",
+      "h2": "Find a Practice That Works for You",
+      "lede": "Explore different approaches to yoga and find the practice that fits your goals and lifestyle.",
+      "pcard-num": "01",
+      "photo": {
+        "src": "/demo/yoga/images/program-group-lessons.jpg",
+        "alt": "An outdoor group class on a lawn with their teacher"
+      },
+      "h3": "Yoga Classes",
+      "p": "Group sessions for different levels.",
+      "pcard-num2": "02",
+      "photo2": {
+        "src": "/demo/yoga/images/program-bhakti.jpg",
+        "alt": "A man in a navy kurta seated with eyes closed and hands in namaste"
+      },
+      "h32": "Mindful Practice",
+      "p2": "Yoga, breath and mindful movement.",
+      "pcard-num3": "03",
+      "photo3": {
+        "src": "/demo/yoga/images/online-living-room.jpg",
+        "alt": "A woman practising at home on a purple mat"
+      },
+      "h33": "Online Classes",
+      "p3": "Practice from wherever you are.",
+      "pcard-num4": "01",
+      "photo4": {
+        "src": "/demo/yoga/images/program-group-lessons.jpg",
+        "alt": "An outdoor group class on a lawn with their teacher"
+      },
+      "h34": "Group Lessons",
+      "p4": "Guided group sessions in a supportive environment.",
+      "pcard-num5": "02",
+      "photo5": {
+        "src": "/demo/yoga/images/program-ashtanga.jpg",
+        "alt": "A man in white holding a deep squat with hands in namaste"
+      },
+      "h35": "Ashtanga Yoga",
+      "p5": "A dynamic practice combining movement, breath and focus.",
+      "pcard-num6": "03",
+      "photo6": {
+        "src": "/demo/yoga/images/program-hatha.jpg",
+        "alt": "A woman in a side stretch beside a wooden door"
+      },
+      "h36": "Hatha Yoga",
+      "p6": "Build strength, flexibility and awareness through traditional yoga practice.",
+      "pcard-num7": "04",
+      "photo7": {
+        "src": "/demo/yoga/images/program-bhakti.jpg",
+        "alt": "A man in a navy kurta seated with eyes closed and hands in namaste"
+      },
+      "h37": "Bhakti Yoga",
+      "p7": "A mindful practice focused on devotion, awareness and inner connection.",
+      "pcard-num8": "05",
+      "photo8": {
+        "src": "/demo/yoga/images/program-hot-yoga.jpg",
+        "alt": "A woman holding a headstand on grass among pine trees"
+      },
+      "h38": "Bikram / Hot Yoga",
+      "p8": "A challenging practice combining yoga postures with a heated environment.",
+      "pcard-num9": "06",
+      "photo9": {
+        "src": "/demo/yoga/images/program-family.jpg",
+        "alt": "Children in an outdoor yoga class"
+      },
+      "h39": "Family Yoga",
+      "p9": "A shared yoga experience for families to move, practice and connect.",
+      "pcard-num10": "07",
+      "photo10": {
+        "src": "/demo/yoga/images/program-iyengar.jpg",
+        "alt": "A woman seated in the studio with hands in namaste"
+      },
+      "h310": "Iyengar Yoga",
+      "p10": "A precise and alignment-focused approach to yoga practice.",
+      "note": "More programmes can be added: tell us what you run and they go on the site.",
+      "note2": "Message us to check which practices are running at the moment."
+    },
+    "section-5": {
+      "photo": {
+        "src": "/demo/yoga/images/band-class-wide.jpg",
+        "alt": "An outdoor yoga class on a red stone courtyard"
+      },
+      "eyebrow": "On the Mat",
+      "band-line": "A practice built around the people who come to it."
+    },
+    "why": {
+      "photo": {
+        "src": "/demo/yoga/images/why-standing-practice.jpg",
+        "alt": "A man in white holding tree pose with hands in namaste"
+      },
+      "photo2": {
+        "src": "/demo/yoga/images/why-students-inset.jpg",
+        "alt": "A class holding plank pose together"
+      },
+      "eyebrow": "Why Practice With Us?",
+      "h2": "A Practice Built Around You",
+      "pointlist": {
+        "items": [
+          {
+            "n": "01",
+            "h3": "Small Classes",
+            "p": "Never more than twelve on the mat, so every posture gets corrected."
+          },
+          {
+            "n": "02",
+            "h3": "Multiple Yoga Practices",
+            "p": "Explore different approaches to yoga and mindful movement."
+          },
+          {
+            "n": "03",
+            "h3": "Online Classes",
+            "p": "Practice from wherever you are."
+          },
+          {
+            "n": "04",
+            "h3": "Easy to Reach",
+            "p": "A short walk from the main road, with parking nearby."
+          }
+        ]
+      }
+    },
+    "section-7": {
+      "eyebrow": "Your Practice. Your Pace.",
+      "h2": "Begin Your Journey in Three Simple Steps",
+      "steps": {
+        "items": [
+          {
+            "span": "01",
+            "h3": "Choose Your Practice",
+            "p": "Explore the available yoga programs and find what suits you."
+          },
+          {
+            "span": "02",
+            "h3": "Connect With Us",
+            "p": "Ask about class timings, availability and online options."
+          },
+          {
+            "span": "03",
+            "h3": "Begin Your Practice",
+            "p": "Start your journey towards better movement, awareness and balance."
+          }
+        ]
+      }
+    },
+    "section-8": {
+      "photo": {
+        "src": "/demo/yoga/images/rating-class.jpg",
+        "alt": "A group holding their rolled mats on a hillside"
+      },
+      "eyebrow": "From the Mat",
+      "h2": "What Students Say",
+      "p": "“I came for my back and stayed for the quiet. Twelve of us, one teacher, and nobody rushes you.”",
+      "button": "See the Classes",
+      "rating-meta": {
+        "items": [
+          {
+            "span": "Since 2014"
+          },
+          {
+            "span": "Small groups"
+          },
+          {
+            "span": "Gariahat, Kolkata"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "eyebrow": "Why People Choose Us",
+      "h2": "Why Choose Us?",
+      "eyebrow2": "A Glimpse Into Our Practice",
+      "h22": "Moments From the Mat",
+      "hero-bar": {
+        "items": [
+          {
+            "b": "Since 2014",
+            "span": "Teaching in Gariahat"
+          },
+          {
+            "b": "12 at most",
+            "span": "Students in a class"
+          },
+          {
+            "b": "Online",
+            "span": "Classes Available"
+          },
+          {
+            "b": "7 Practices",
+            "span": "Hatha to Iyengar"
+          }
+        ]
+      },
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-settling-in.jpg",
+              "alt": "A woman seated on a printed mat at home"
+            },
+            "span": "Group Lessons",
+            "b": "Practising at Home",
+            "span2": "Online students follow along from home."
+          },
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-strength.jpg",
+              "alt": "A yoga class holding plank pose together on mats"
+            },
+            "span": "Ashtanga",
+            "b": "Building Strength",
+            "span2": "Movement and breath practised together."
+          },
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-mats-props.jpg",
+              "alt": "A woman in a saree seated on a mat with her arms overhead"
+            },
+            "span": "Seated Practice",
+            "b": "Room to Breathe",
+            "span2": "A seated practice, arms reaching overhead."
+          },
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-breathing.jpg",
+              "alt": "A man in a blue kurta meditating on a lawn"
+            },
+            "span": "Bhakti",
+            "b": "Sitting With the Breath",
+            "span2": "A seated practice focused on stillness."
+          },
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-basics.jpg",
+              "alt": "Students folding forward in a studio with a blue floor"
+            },
+            "span": "Hatha",
+            "b": "Working the Basics",
+            "span2": "Traditional postures worked through slowly."
+          },
+          {
+            "photo": {
+              "src": "/demo/yoga/images/gallery-side-by-side.jpg",
+              "alt": "A couple holding tree pose side by side"
+            },
+            "span": "Small Groups",
+            "b": "Room to Be Corrected",
+            "span2": "Practising side by side in a shared session."
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "eyebrow": "Practice From Anywhere",
+      "h2": "Can’t Join Us in Person?",
+      "online-big": "Practice From Wherever You Are.",
+      "lede": "Our online classes make it easier to maintain your yoga practice wherever you are.",
+      "photo": {
+        "src": "/demo/yoga/images/online-living-room.jpg",
+        "alt": "A woman practising at home on a purple mat"
+      },
+      "photo2": {
+        "src": "/demo/yoga/images/online-rolled-mat.jpg",
+        "alt": "A woman meditating on a beach"
+      }
+    },
+    "location": {
+      "eyebrow": "Visit Us",
+      "h2": "Find Wellness Yoga Studio",
+      "address": "<span class=\"label\">Studio Address</span>\r\n        14 Hindusthan Park<br>\r\n        Gariahat, Kolkata 700029<br>\r\n        West Bengal",
+      "hours": "<span class=\"label\">Class Hours</span>Monday to Saturday, 6&ndash;9 am and 5&ndash;8 pm. Sunday morning only.",
+      "button": "Get Directions",
+      "p": "Message us on WhatsApp for class timings, availability and online sessions."
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Wellness Yoga Studio sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "WELLNESS YOGA STUDIO",
+      "brand-sub": "Yoga • Meditation • Wellness",
+      "footer-tag": "Mindfulness • Movement • Balance",
+      "footer-loc": "Gariahat, Kolkata",
+      "h4": "Visit",
+      "address": "14 Hindusthan Park<br>\r\n          Gariahat, Kolkata 700029<br>\r\n          West Bengal",
+      "button": "Get Directions",
+      "h42": "Follow",
+      "footer-bottom": "© 2026 Wellness Yoga Studio. All rights reserved."
+    },
+    "seo": {
+      "title": "Wellness Yoga Studio | Yoga, Meditation and Wellness Classes",
+      "description": "Yoga, meditation and mindful movement classes, in the studio and online. Message us to find a class that suits you."
+    }
+  }
+}

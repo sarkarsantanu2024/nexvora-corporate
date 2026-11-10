@@ -1,0 +1,2178 @@
+{
+  "site": "tailor",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Rupashree Ladies Tailors",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1871"
+        },
+        {
+          "key": "hero-since",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "hero-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-stats",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Six things we do every week",
+        "bn": "Six things we do every week"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-n",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-n2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-n3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-n4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-n5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:797"
+        },
+        {
+          "key": "zig-n6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "zig-meta",
+          "label": {
+            "en": "Blouse",
+            "bn": "Blouse"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "zig-meta2",
+          "label": {
+            "en": "Salwar kameez",
+            "bn": "Salwar kameez"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "zig-meta3",
+          "label": {
+            "en": "Lehenga",
+            "bn": "Lehenga"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "zig-meta4",
+          "label": {
+            "en": "Kurti, gown and kids' wear",
+            "bn": "Kurti, gown and kids' wear"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "zig-meta5",
+          "label": {
+            "en": "Alterations",
+            "bn": "Alterations"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "zig-meta6",
+          "label": {
+            "en": "Saree fall and pico",
+            "bn": "Saree fall and pico"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "Stitching charges by garment",
+        "bn": "Stitching charges by garment"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "tabs-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "price-note",
+          "type": "textarea",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-labels",
+          "label": {
+            "en": "Stitching charges by garment",
+            "bn": "Stitching charges by garment"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": {
+        "en": "From your first message to the finished garment",
+        "bn": "From your first message to the finished garment"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tl-when",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tl-when2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tl-when3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tl-when4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tl-when5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "aside-foot",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl-days",
+          "label": {
+            "en": "Trial fitting",
+            "bn": "Trial fitting"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "tl-days2",
+          "label": {
+            "en": "Delivery",
+            "bn": "Delivery"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "What to bring",
+            "bn": "What to bring"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "One shop, two sisters, four machines",
+        "bn": "One shop, two sisters, four machines"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "band-facts",
+          "label": {
+            "en": "One shop, two sisters, four machines",
+            "bn": "One shop, two sisters, four machines"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Things customers ask before their first order",
+        "bn": "Things customers ask before their first order"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "qa",
+          "label": {
+            "en": "Things customers ask before their first order",
+            "bn": "Things customers ask before their first order"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Some of our work",
+        "bn": "Some of our work"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "strip-hint",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "In Sahapur Colony, five minutes from Behala Chowrasta",
+        "bn": "In Sahapur Colony, five minutes from Behala Chowrasta"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Send a photo of the design. We will tell you the price and the date",
+        "bn": "Send a photo of the design. We will tell you the price and the date"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Rupashree Ladies Tailors",
+      "small": "Behala · since 1998"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/tailor/images/hero.jpg",
+        "alt": "A woman in a saree stitching at a sewing machine by a sunlit window"
+      },
+      "hero-since": "<span></span>Ladies' tailoring in Behala since 1998",
+      "h1": "Stitched to <em>your</em> measurement, not a size chart.",
+      "p": "Blouse, salwar kameez, lehenga, kurti and alterations. Bring the cloth, we take the measurements, and you try it on before you pay the balance. Saree fall and pico done while you wait.",
+      "button": "See the price list",
+      "hero-note": "<b>Urgent blouse in 2 days</b> for &#8377;200 extra. Trial fitting on every order, and fitting changes after the trial are free.",
+      "hero-stats": {
+        "items": [
+          {
+            "b": "27",
+            "span": "Years in Behala"
+          },
+          {
+            "b": "5 days",
+            "span": "Blouse ready, with trial"
+          },
+          {
+            "b": "₹400",
+            "span": "Plain blouse, lining included"
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we stitch",
+      "h2": "Six things we do every week.",
+      "p": "Stitching charge only. You bring the cloth, or pick from the lining, astar and canvas we keep in the shop.",
+      "photo": {
+        "src": "/demo/tailor/images/red-fabric.jpg",
+        "alt": "A hand holding the hem of a red embroidered blouse piece among other fabrics"
+      },
+      "zig-n": "01",
+      "h3": "Blouse",
+      "p2": "Plain, princess cut, boat neck, back-open, padded. Katori and lining included. Bridal blouses with hand embroidery on request. Bring the saree too so the length and the back match.",
+      "photo2": {
+        "src": "/demo/tailor/images/salwar.jpg",
+        "alt": "A woman seated in a floral printed salwar kameez with a dupatta"
+      },
+      "zig-n2": "02",
+      "h32": "Salwar kameez",
+      "p3": "Straight cut, A-line, Anarkali, with churidar, palazzo or straight pant. Dupatta edging done free with the suit. Lining added for thin fabrics.",
+      "photo3": {
+        "src": "/demo/tailor/images/pink-lehenga.jpg",
+        "alt": "A young woman in a pink embroidered lehenga and dupatta"
+      },
+      "zig-n3": "03",
+      "h33": "Lehenga",
+      "p4": "Can-can, flared or A-line skirt with a matching blouse. We stitch the lehenga from your fabric and work, or alter a readymade one to fit. Book a month before the wedding.",
+      "photo4": {
+        "src": "/demo/tailor/images/blue-salwar.jpg",
+        "alt": "A woman seated in a blue printed kurta set with a light dupatta"
+      },
+      "zig-n4": "04",
+      "h34": "Kurti, gown and kids' wear",
+      "p5": "Office kurtis, long gowns for Pujo and reception, frocks and lehenga-choli for little girls. Ten pieces or more get a lower rate and a fixed date.",
+      "photo5": {
+        "src": "/demo/tailor/images/needle.jpg",
+        "alt": "Close-up of a sewing machine needle stitching a seam"
+      },
+      "zig-n5": "05",
+      "h35": "Alterations",
+      "p6": "Blouse loosening or tightening, sleeve change, kurti length, pant fitting, zip or hook change. Readymade clothes too. Give it before 1 pm for same-day work.",
+      "photo6": {
+        "src": "/demo/tailor/images/hand-sewing.jpg",
+        "alt": "A woman's hands hand-stitching a blue fabric"
+      },
+      "zig-n6": "06",
+      "h36": "Saree fall and pico",
+      "p7": "Fall stitched by hand, edges pico on the machine. Matching fall from our stock or yours. Bring the saree in the morning, take it back by evening.",
+      "zig-meta": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "₹400 to ₹1,500"
+          },
+          {
+            "b": "Ready in",
+            "span": "5 days, trial on day 3"
+          }
+        ]
+      },
+      "zig-meta2": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "₹750 to ₹1,800"
+          },
+          {
+            "b": "Ready in",
+            "span": "7 days"
+          }
+        ]
+      },
+      "zig-meta3": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "From ₹3,500 for the set"
+          },
+          {
+            "b": "Ready in",
+            "span": "15 days, two trials"
+          }
+        ]
+      },
+      "zig-meta4": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "Kurti ₹450 · Gown from ₹1,200"
+          },
+          {
+            "b": "Ready in",
+            "span": "7 days"
+          }
+        ]
+      },
+      "zig-meta5": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "₹100 to ₹350"
+          },
+          {
+            "b": "Ready in",
+            "span": "Same day to 2 days"
+          }
+        ]
+      },
+      "zig-meta6": {
+        "items": [
+          {
+            "b": "Charge",
+            "span": "₹120 with our fall"
+          },
+          {
+            "b": "Ready in",
+            "span": "Same day"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price list",
+      "h2": "Stitching charges by garment.",
+      "p": "Stitching charges only. Cloth, lace, buttons and embroidery work are extra and we tell you the full amount before we cut. Prices from 1 January 2026. Days count from when we have your cloth and measurements.",
+      "th": "Item",
+      "th2": "Charge",
+      "th3": "Days",
+      "th4": "Item",
+      "th5": "Charge",
+      "th6": "Days",
+      "th7": "Item",
+      "th8": "Charge",
+      "th9": "Days",
+      "th10": "Item",
+      "th11": "Charge",
+      "th12": "Days",
+      "tabs-note": "Half the amount is paid when you give the cloth, the rest at the trial. Before Durga Pujo (from mid-September) add 5 days to everything.",
+      "price-note": "Want something not on the list? Send a photo on WhatsApp and we will quote before you buy the cloth.",
+      "tabs-labels": {
+        "items": [
+          {
+            "label": "Blouse"
+          },
+          {
+            "label": "Salwar & kurti"
+          },
+          {
+            "label": "Lehenga & gown"
+          },
+          {
+            "label": "Alterations & fall-pico"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "td": "Plain blouse<small>Lining and katori included</small>",
+            "td2": "₹400",
+            "td3": "5"
+          },
+          {
+            "td": "Princess cut or boat neck",
+            "td2": "₹500",
+            "td3": "5"
+          },
+          {
+            "td": "Padded blouse",
+            "td2": "₹650",
+            "td3": "5"
+          },
+          {
+            "td": "Designer back<small>Dori, latkan, keyhole</small>",
+            "td2": "₹800",
+            "td3": "7"
+          },
+          {
+            "td": "Piping or lace border<small>Added to any blouse</small>",
+            "td2": "+₹100",
+            "td3": "same"
+          },
+          {
+            "td": "Bridal blouse<small>Heavy fabric, hand finishing</small>",
+            "td2": "₹1,200 to ₹1,500",
+            "td3": "10"
+          },
+          {
+            "td": "Urgent blouse<small>Plain or princess cut only</small>",
+            "td2": "+₹200",
+            "td3": "2"
+          },
+          {
+            "td": "Petticoat<small>Cotton or satin</small>",
+            "td2": "₹250",
+            "td3": "5"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "td": "Salwar kameez, plain<small>Kameez with salwar or churidar</small>",
+            "td2": "₹750",
+            "td3": "7"
+          },
+          {
+            "td": "Salwar kameez with lining",
+            "td2": "₹950",
+            "td3": "7"
+          },
+          {
+            "td": "Anarkali<small>With churidar</small>",
+            "td2": "₹1,500 to ₹1,800",
+            "td3": "10"
+          },
+          {
+            "td": "Kurti",
+            "td2": "₹450",
+            "td3": "7"
+          },
+          {
+            "td": "Palazzo or straight pant",
+            "td2": "₹350",
+            "td3": "5"
+          },
+          {
+            "td": "Dupatta edging<small>Free with a suit</small>",
+            "td2": "₹80",
+            "td3": "same"
+          },
+          {
+            "td": "Office kurtis, 10 or more<small>Per piece</small>",
+            "td2": "₹380",
+            "td3": "by date"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "td": "Lehenga with can-can + blouse",
+            "td2": "₹3,500 to ₹6,000",
+            "td3": "15"
+          },
+          {
+            "td": "Lehenga skirt only<small>Flared or A-line</small>",
+            "td2": "₹2,200",
+            "td3": "10"
+          },
+          {
+            "td": "Readymade lehenga fitting",
+            "td2": "₹600 to ₹1,200",
+            "td3": "5"
+          },
+          {
+            "td": "Long gown<small>Pujo, reception</small>",
+            "td2": "From ₹1,200",
+            "td3": "7"
+          },
+          {
+            "td": "Kids' frock",
+            "td2": "₹350",
+            "td3": "7"
+          },
+          {
+            "td": "Kids' lehenga-choli",
+            "td2": "₹900",
+            "td3": "7"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "td": "Saree fall and pico<small>Our fall</small>",
+            "td2": "₹120",
+            "td3": "same day"
+          },
+          {
+            "td": "Saree fall and pico<small>Your fall</small>",
+            "td2": "₹90",
+            "td3": "same day"
+          },
+          {
+            "td": "Blouse loosen or tighten",
+            "td2": "₹150",
+            "td3": "2"
+          },
+          {
+            "td": "Sleeve change",
+            "td2": "₹200",
+            "td3": "2"
+          },
+          {
+            "td": "Kurti or pant length",
+            "td2": "₹100",
+            "td3": "same day"
+          },
+          {
+            "td": "Zip or hook change",
+            "td2": "₹100 to ₹150",
+            "td3": "same day"
+          },
+          {
+            "td": "Readymade gown fitting",
+            "td2": "₹250 to ₹350",
+            "td3": "2"
+          }
+        ]
+      }
+    },
+    "process": {
+      "kicker": "How it works",
+      "h2": "From your first message to the finished garment.",
+      "p": "Measurements are taken by Rupa or Shree in a closed trial room and written on a card we keep for you. You come to the shop twice: once to measure, once for the trial.",
+      "tl-when": "Day 0",
+      "h3": "Message or visit",
+      "p2": "Send a photo of the design on WhatsApp, or walk in. We tell you the stitching charge, how much cloth to buy and the delivery date before anything else.",
+      "tl-when2": "Day 0, ten minutes",
+      "h32": "Measurements taken",
+      "p3": "Fourteen measurements for a blouse, eighteen for a suit, more for a lehenga. If you brought an old blouse that fits, we copy what you like and fix what you do not. Half the amount is paid now.",
+      "tl-when3": "Day 1 to 2",
+      "h33": "Cutting",
+      "p4": "The masterji cuts from your card. Lining, astar and canvas go in from our stock. Nothing is cut until the design and price are agreed.",
+      "tl-when4": "Blouse day 3 · suit day 5 · lehenga day 8 and 12",
+      "h34": "Trial fitting",
+      "p5": "Tacked, not finished, so anything can still change. Sleeve, neck depth, length, tightness. Changes at this stage are free. The balance is paid here.",
+      "tl-when5": "Blouse day 5 · suit day 7 · lehenga day 15",
+      "h35": "Delivery",
+      "p6": "Hooks, piping, fall and pressing are done after the trial. Your garment hangs in the front room under your name till you collect. Fall-pico and small alterations are same day: give before 1 pm, collect after 6 pm.",
+      "photo": {
+        "src": "/demo/tailor/images/tape-pins.jpg",
+        "alt": "A measuring tape and sewing pins on the cutting table"
+      },
+      "h36": "What to bring",
+      "aside-foot": "Repeat customers can skip the visit: we have your card, so just send the cloth with a reference blouse.",
+      "tl-days": {
+        "items": [
+          {
+            "span": "Urgent blouse: trial day 2 morning"
+          },
+          {
+            "span": "Lehenga: two trials"
+          }
+        ]
+      },
+      "tl-days2": {
+        "items": [
+          {
+            "span": "Same day: fall-pico, small alterations"
+          },
+          {
+            "span": "2 days: urgent blouse"
+          },
+          {
+            "span": "5 days: blouse, petticoat, kurti"
+          },
+          {
+            "span": "7 days: suit, gown, kids' wear"
+          },
+          {
+            "span": "15 days: lehenga, bridal"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Your fabric. Blouse 80 cm to 1 m (1.2 m for long sleeves); salwar kameez 2.5 m top and 2.5 m bottom; lehenga 4 to 6 m."
+          },
+          {
+            "li": "The saree the blouse is for, so the length and back match."
+          },
+          {
+            "li": "One old garment that fits you well, if you have it."
+          },
+          {
+            "li": "A photo of the design on your phone, or pick from our book."
+          },
+          {
+            "li": "Any lace, buttons or dori you want used. We stock the rest."
+          }
+        ]
+      }
+    },
+    "story": {
+      "photo": {
+        "src": "/demo/tailor/images/dresses-display.jpg",
+        "alt": "Finished pink and gold embroidered lehengas hanging in a row"
+      },
+      "kicker": "About the shop",
+      "h2": "One shop, two sisters, four machines.",
+      "p": "Rupa Mondal started stitching blouses from her Behala flat in 1998. Her sister Shree joined in 2004 and the shop in Sahapur Colony opened the next year. Today there are four machines, one masterji for cutting, and two women who do only hand finishing: hooks, piping, fall and pico.",
+      "p2": "We keep every customer's measurements on a card, so a repeat blouse needs only a phone call and the cloth. Most of our customers have been coming for ten years or more.",
+      "band-facts": {
+        "items": [
+          {
+            "b": "1998",
+            "span": "First blouse stitched"
+          },
+          {
+            "b": "4,000+",
+            "span": "Measurement cards on file"
+          },
+          {
+            "b": "4",
+            "span": "Machines, one cutting table"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Things customers ask before their first order.",
+      "qa": {
+        "items": [
+          {
+            "h3": "Do I have to bring my own cloth?",
+            "p": "For the main fabric, yes. We keep cotton lining, astar, canvas, cups, hooks and matching thread in the shop and add those to the bill at cost."
+          },
+          {
+            "h3": "Can you copy a blouse I already have?",
+            "p": "Yes. Bring it along. We measure the blouse and you, and tell you if anything should change. Most repeat customers simply hand over the cloth and a reference blouse."
+          },
+          {
+            "h3": "Can I give measurements over WhatsApp?",
+            "p": "For a repeat order, yes, we have your card. For a first order we ask you to come once; a blouse measured on the phone almost never fits right the first time."
+          },
+          {
+            "h3": "What if the fitting is not right?",
+            "p": "That is what the trial is for. Fitting changes after the trial are free. If a finished garment does not fit because of our mistake, we fix it or stitch it again at no charge."
+          },
+          {
+            "h3": "Do you do bulk orders?",
+            "p": "Yes, for school uniforms, office kurtis and wedding-party blouses. Ten pieces or more get a lower rate and a fixed date. Message us the count and the date."
+          },
+          {
+            "h3": "Do you take orders before Pujo?",
+            "p": "Yes, but add 5 days to every delivery time from mid-September, and we stop taking new Pujo orders on Mahalaya. Book your Pujo blouses in August if you can."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "From the shop",
+      "h2": "Some of our work.",
+      "strip-hint": "Swipe to see more"
+    },
+    "section-9": {
+      "kicker": "What customers say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I have had my blouses stitched here for twelve years. I give the cloth to Shree di on Monday and pick it up on Saturday. Never once a fitting problem.",
+            "span": "· Sakherbazar"
+          },
+          {
+            "p": "They stitched my daughter's reception lehenga from fabric we bought in Gariahat. Two trials, every change done without a fuss, and ready a week before the date.",
+            "span": "· Thakurpukur"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "In Sahapur Colony, five minutes from Behala Chowrasta.",
+      "b": "Address",
+      "p": "37 Sahapur Colony, Behala<br>Kolkata 700038 (first floor, above the medicine shop)",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "WhatsApp photos of designs welcome, replies 10 am to 8 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:30 am – 8:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "11:00 am – 3:00 pm"
+          },
+          {
+            "td": "Measurements taken",
+            "td2": "11 am – 7 pm"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Send a photo of the design. We will tell you the price and the date.",
+      "p": "One message with the photo and the garment. We reply within the hour during shop time, and you only need to come once for measurements."
+    },
+    "footer": {
+      "b": "Rupashree Ladies Tailors",
+      "small": "Behala · since 1998",
+      "p": "Ladies' tailoring and boutique. Blouse, salwar kameez, lehenga, alterations, fall and pico. Measurements kept on file for every customer.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "37 Sahapur Colony, Behala, Kolkata 700038",
+      "li2": "Mon–Sat 10:30 am – 8:30 pm · Sun 11 am – 3 pm",
+      "list": {
+        "items": [
+          {
+            "button": "What we stitch"
+          },
+          {
+            "button": "Price list"
+          },
+          {
+            "button": "How it works"
+          },
+          {
+            "button": "About the shop"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Rupashree Ladies Tailors sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=37%20Sahapur%20Colony%2C%20Behala%2C%20Kolkata%20700038",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Rupashree Ladies Tailors | Blouse, Salwar and Lehenga Stitching in Behala",
+      "description": "Ladies' tailor and boutique in Behala, Kolkata. Blouse, salwar kameez and lehenga stitching, alterations and fall-pico. Blouse ready in 5 days, trial fitting on every order."
+    }
+  }
+}

@@ -286,25 +286,39 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: the header's backdrop blur would make it the containing block of
+   the fixed slide-in menu, which then sits beside the page and makes it
+   scroll sideways. Plain white header below 900px. */
+@media (max-width:900px){
+  .header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
+}
+@media (max-width:760px){
+  #team .steps__photos{grid-template-columns:1fr 1fr !important}
+  #team .steps__photos img:first-child{grid-column:auto}
+  .tabs__panel{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+}
+@media (max-width:380px){.ftable th,.ftable td{padding:.7rem .5rem;font-size:.9rem}}
 </style>
+<meta name="nx-site" content="tax-consultant">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Tax%20%26%20Accounts%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mukherjee Tax and Accounts, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="#3B4F7A"/><path d="M11 30V18M19 30V13M27 30V21M35 30V10" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><path d="M9 33h26" stroke="#1E9E5A" stroke-width="3" stroke-linecap="round"/></svg>
-      <span><b>Mukherjee Tax &amp; Accounts</b><small>Salt Lake &middot; Sector I</small></span>
+      <span><b data-nx="header.b">Mukherjee Tax &amp; Accounts</b><small data-nx="header.small">Salt Lake &middot; Sector I</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -327,136 +341,136 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="hero__badge"><span></span>Qualified chartered accountant office, since 2011</p>
-      <h1>Your taxes filed on time, your books kept <mark>clean</mark>.</h1>
-      <p>Income tax returns, GST, company and shop registrations, TDS and audit. For salaried people, shopkeepers, doctors, small factories and start-ups in Salt Lake and the rest of Kolkata. Send your papers on WhatsApp, we do the rest.</p>
+      <p data-nx="top.hero-badge" class="hero__badge"><span></span>Qualified chartered accountant office, since 2011</p>
+      <h1 data-nx="top.h1">Your taxes filed on time, your books kept <mark>clean</mark>.</h1>
+      <p data-nx="top.p">Income tax returns, GST, company and shop registrations, TDS and audit. For salaried people, shopkeepers, doctors, small factories and start-ups in Salt Lake and the rest of Kolkata. Send your papers on WhatsApp, we do the rest.</p>
       <div class="hero__cta">
         <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Tax%20%26%20Accounts%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send your documents
         </a>
-        <a class="btn btn--ghost" href="#fees">See the fee table</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#fees">See the fee table</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>&#8377;999</b><span>Salaried ITR, start to e-verification</span></li>
-        <li><b>2 days</b><span>Usual time to file once papers are in</span></li>
-        <li><b>10:30 am</b><span>Office opens, Monday to Saturday</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">&#8377;999</b><span data-nx-f="span">Salaried ITR, start to e-verification</span></li>
+        <li data-nx-item><b data-nx-f="b">2 days</b><span data-nx-f="span">Usual time to file once papers are in</span></li>
+        <li data-nx-item><b data-nx-f="b">10:30 am</b><span data-nx-f="span">Office opens, Monday to Saturday</span></li>
       </ul>
     </div>
     <div class="hero__photo">
       <div class="hero__shape" aria-hidden="true"></div>
-      <img src="/demo/tax-consultant/images/hero.jpg" width="1200" height="1800" alt="A consultant in a blue suit holding a client file, seated at the office desk" fetchpriority="high">
-      <div class="hero__card">
-        <div><b>1,400+</b><span>Returns filed last year</span></div>
-        <div><b>320</b><span>GST clients on monthly filing</span></div>
-        <div><b>0</b><span>Missed deadlines in 2025&ndash;26</span></div>
+      <img data-nx="top.photo" src="/demo/tax-consultant/images/hero.jpg" width="1200" height="1800" alt="A consultant in a blue suit holding a client file, seated at the office desk" fetchpriority="high">
+      <div data-nx-list="top.hero-card" class="hero__card">
+        <div data-nx-item><b data-nx-f="b">1,400+</b><span data-nx-f="span">Returns filed last year</span></div>
+        <div data-nx-item><b data-nx-f="b">320</b><span data-nx-f="span">GST clients on monthly filing</span></div>
+        <div data-nx-item><b data-nx-f="b">0</b><span data-nx-f="span">Missed deadlines in 2025&ndash;26</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--mist" id="services">
+<section data-nx-section="services" class="section section--mist" id="services">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">What we do</span>
-      <h2 class="h2">Nine things most small businesses and families need.</h2>
-      <p class="lead" style="margin:1rem auto 0">Every piece of work is checked by a qualified chartered accountant before it is filed. Starting prices below; the full table is further down.</p>
+      <span data-nx="services.kicker" class="kicker">What we do</span>
+      <h2 data-nx="services.h2" class="h2">Nine things most small businesses and families need.</h2>
+      <p data-nx="services.p" class="lead" style="margin:1rem auto 0">Every piece of work is checked by a qualified chartered accountant before it is filed. Starting prices below; the full table is further down.</p>
     </div>
-    <ul class="cards">
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div><h3>Income tax return filing</h3><p>Salaried, pension, rent, shares and mutual funds, freelancers and business income. We pick the right ITR form and get you the refund you are due.</p><span class="from">From &#8377;999</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 15h3"/></svg></div><h3>GST registration and returns</h3><p>New GSTIN in a week. Then GSTR-1 and GSTR-3B every month, reconciled against your purchase bills so you claim the full input credit.</p><span class="from">From &#8377;1,999</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></svg></div><h3>Company, LLP, partnership</h3><p>Private limited, LLP or a simple partnership deed. We tell you which one suits your size and tax situation, then register it end to end.</p><span class="from">From &#8377;7,999</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Udyam / MSME registration</h3><p>The free government certificate every small business should hold. Opens the door to bank schemes and faster payment rules. Done in a day.</p><span class="from">&#8377;499</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v13H4zM4 7l2-4h12l2 4M9 12h6"/></svg></div><h3>Trade licence</h3><p>New licence or renewal from the Kolkata Municipal Corporation or Bidhannagar Municipality. We fill the form, pay the fee, collect the certificate.</p><span class="from">&#8377;1,499 + govt fee</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><h3>Accounting and bookkeeping</h3><p>For shops, clinics, agencies and small factories. Send bills on WhatsApp or hand over the file once a month. Monthly profit statement included.</p><span class="from">From &#8377;2,500 / month</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>TDS returns</h3><p>Quarterly 24Q and 26Q filing, challan matching, Form 16 and 16A for your staff and vendors. Late fee notices sorted when they come.</p><span class="from">From &#8377;1,499 / quarter</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6M11 8v6"/></svg></div><h3>Audit</h3><p>Tax audit when turnover crosses the limit, statutory audit for companies, and stock audit for bank loans. Report signed by a qualified chartered accountant.</p><span class="from">From &#8377;15,000</span></li>
-      <li class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 19V9l6-5 6 5v10"/><path d="M10 19v-5h4v5"/></svg></div><h3>Notices and replies</h3><p>Income tax or GST notice landed in your inbox? Bring it in. Most are routine mismatches that a clear reply closes within the deadline.</p><span class="from">From &#8377;2,000</span></li>
+    <ul data-nx-list="services.cards" class="cards">
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div><h3 data-nx-f="h3">Income tax return filing</h3><p data-nx-f="p">Salaried, pension, rent, shares and mutual funds, freelancers and business income. We pick the right ITR form and get you the refund you are due.</p><span data-nx-f="from" class="from">From &#8377;999</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M8 15h3"/></svg></div><h3 data-nx-f="h3">GST registration and returns</h3><p data-nx-f="p">New GSTIN in a week. Then GSTR-1 and GSTR-3B every month, reconciled against your purchase bills so you claim the full input credit.</p><span data-nx-f="from" class="from">From &#8377;1,999</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13"/><path d="M9 21v-6h6v6"/></svg></div><h3 data-nx-f="h3">Company, LLP, partnership</h3><p data-nx-f="p">Private limited, LLP or a simple partnership deed. We tell you which one suits your size and tax situation, then register it end to end.</p><span data-nx-f="from" class="from">From &#8377;7,999</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 data-nx-f="h3">Udyam / MSME registration</h3><p data-nx-f="p">The free government certificate every small business should hold. Opens the door to bank schemes and faster payment rules. Done in a day.</p><span data-nx-f="from" class="from">&#8377;499</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v13H4zM4 7l2-4h12l2 4M9 12h6"/></svg></div><h3 data-nx-f="h3">Trade licence</h3><p data-nx-f="p">New licence or renewal from the Kolkata Municipal Corporation or Bidhannagar Municipality. We fill the form, pay the fee, collect the certificate.</p><span data-nx-f="from" class="from">&#8377;1,499 + govt fee</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div><h3 data-nx-f="h3">Accounting and bookkeeping</h3><p data-nx-f="p">For shops, clinics, agencies and small factories. Send bills on WhatsApp or hand over the file once a month. Monthly profit statement included.</p><span data-nx-f="from" class="from">From &#8377;2,500 / month</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3 data-nx-f="h3">TDS returns</h3><p data-nx-f="p">Quarterly 24Q and 26Q filing, challan matching, Form 16 and 16A for your staff and vendors. Late fee notices sorted when they come.</p><span data-nx-f="from" class="from">From &#8377;1,499 / quarter</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11h6M11 8v6"/></svg></div><h3 data-nx-f="h3">Audit</h3><p data-nx-f="p">Tax audit when turnover crosses the limit, statutory audit for companies, and stock audit for bank loans. Report signed by a qualified chartered accountant.</p><span data-nx-f="from" class="from">From &#8377;15,000</span></li>
+      <li data-nx-item class="reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16M6 19V9l6-5 6 5v10"/><path d="M10 19v-5h4v5"/></svg></div><h3 data-nx-f="h3">Notices and replies</h3><p data-nx-f="p">Income tax or GST notice landed in your inbox? Bring it in. Most are routine mismatches that a clear reply closes within the deadline.</p><span data-nx-f="from" class="from">From &#8377;2,000</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="fees">
+<section data-nx-section="fees" class="section" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Fee table</span>
-      <h2 class="h2">Starting prices. No surprise at the end.</h2>
-      <p class="lead" style="margin-top:1rem">Government fees, stamp duty and late fees are paid by you directly or shown separately on the bill. Our fee is quoted before we start.</p>
+      <span data-nx="fees.kicker" class="kicker">Fee table</span>
+      <h2 data-nx="fees.h2" class="h2">Starting prices. No surprise at the end.</h2>
+      <p data-nx="fees.p" class="lead" style="margin-top:1rem">Government fees, stamp duty and late fees are paid by you directly or shown separately on the bill. Our fee is quoted before we start.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="fee" id="fee-a" checked>
       <input type="radio" name="fee" id="fee-b">
       <input type="radio" name="fee" id="fee-c">
-      <div class="tabs__bar" role="tablist">
-        <label for="fee-a">Individuals</label>
-        <label for="fee-b">Shops and businesses</label>
-        <label for="fee-c">Registrations</label>
+      <div data-nx-list="fees.tabs-bar" class="tabs__bar" role="tablist">
+        <label data-nx-f="label" data-nx-item for="fee-a">Individuals</label>
+        <label data-nx-f="label" data-nx-item for="fee-b">Shops and businesses</label>
+        <label data-nx-f="label" data-nx-item for="fee-c">Registrations</label>
       </div>
       <div class="tabs__panel" id="panel-a">
         <table class="ftable">
-          <thead><tr><th>Work</th><th>What is included</th><th>Fee</th></tr></thead>
-          <tbody>
-            <tr><td>ITR-1, salaried or pension</td><td>Form 16, bank interest, 80C and 80D claims, e-verification</td><td>&#8377;999</td></tr>
-            <tr><td>ITR with house rent income</td><td>One or two properties, home loan interest set-off</td><td>&#8377;1,499</td></tr>
-            <tr><td>ITR with shares and mutual funds</td><td>Capital gains statement worked out from broker reports</td><td>&#8377;2,499</td></tr>
-            <tr><td>ITR for freelancers and professionals</td><td>Presumptive scheme (44ADA) or full books</td><td>&#8377;2,999</td></tr>
-            <tr><td>Belated or revised return</td><td>Any year still open for filing</td><td>&#8377;1,499</td></tr>
-            <tr><td>Advance tax working <small>Four instalments a year</small></td><td>Reminder and challan each quarter</td><td>&#8377;1,500 / year</td></tr>
-            <tr><td>PAN card, new or correction</td><td>Application, document check, tracking</td><td>&#8377;299</td></tr>
-            <tr><td>Income tax notice reply</td><td>Reading the notice, drafting and filing the reply</td><td>from &#8377;2,000</td></tr>
+          <thead><tr><th data-nx="fees.th">Work</th><th data-nx="fees.th2">What is included</th><th data-nx="fees.th3">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list">
+            <tr data-nx-item><td data-nx-f="td">ITR-1, salaried or pension</td><td data-nx-f="td2">Form 16, bank interest, 80C and 80D claims, e-verification</td><td data-nx-f="td3">&#8377;999</td></tr>
+            <tr data-nx-item><td data-nx-f="td">ITR with house rent income</td><td data-nx-f="td2">One or two properties, home loan interest set-off</td><td data-nx-f="td3">&#8377;1,499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">ITR with shares and mutual funds</td><td data-nx-f="td2">Capital gains statement worked out from broker reports</td><td data-nx-f="td3">&#8377;2,499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">ITR for freelancers and professionals</td><td data-nx-f="td2">Presumptive scheme (44ADA) or full books</td><td data-nx-f="td3">&#8377;2,999</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Belated or revised return</td><td data-nx-f="td2">Any year still open for filing</td><td data-nx-f="td3">&#8377;1,499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Advance tax working <small>Four instalments a year</small></td><td data-nx-f="td2">Reminder and challan each quarter</td><td data-nx-f="td3">&#8377;1,500 / year</td></tr>
+            <tr data-nx-item><td data-nx-f="td">PAN card, new or correction</td><td data-nx-f="td2">Application, document check, tracking</td><td data-nx-f="td3">&#8377;299</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Income tax notice reply</td><td data-nx-f="td2">Reading the notice, drafting and filing the reply</td><td data-nx-f="td3">from &#8377;2,000</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel" id="panel-b">
         <table class="ftable">
-          <thead><tr><th>Work</th><th>What is included</th><th>Fee</th></tr></thead>
-          <tbody>
-            <tr><td>Business ITR, proprietor</td><td>Profit and loss, balance sheet, 44AD if it fits</td><td>&#8377;3,499</td></tr>
-            <tr><td>GST monthly returns <small>GSTR-1 and GSTR-3B</small></td><td>Up to 150 invoices a month, input credit reconciliation</td><td>&#8377;1,500 / month</td></tr>
-            <tr><td>GST quarterly (QRMP scheme)</td><td>For turnover under &#8377;5 crore</td><td>&#8377;3,000 / quarter</td></tr>
-            <tr><td>GST annual return <small>GSTR-9</small></td><td>Full year reconciliation with books</td><td>&#8377;4,999</td></tr>
-            <tr><td>Bookkeeping, small shop</td><td>Up to 200 entries a month, monthly profit statement</td><td>&#8377;2,500 / month</td></tr>
-            <tr><td>Bookkeeping, with staff and stock</td><td>Up to 600 entries, payroll, stock summary</td><td>&#8377;5,000 / month</td></tr>
-            <tr><td>TDS quarterly return <small>24Q or 26Q</small></td><td>Challan matching, Form 16/16A generation</td><td>&#8377;1,499 / quarter</td></tr>
-            <tr><td>Tax audit <small>Turnover above the limit</small></td><td>Form 3CD, signed report, ITR filing</td><td>from &#8377;15,000</td></tr>
-            <tr><td>Company annual filing <small>ROC forms AOC-4 and MGT-7</small></td><td>Board minutes, filings, DIN KYC</td><td>from &#8377;8,000</td></tr>
+          <thead><tr><th data-nx="fees.th4">Work</th><th data-nx="fees.th5">What is included</th><th data-nx="fees.th6">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list2">
+            <tr data-nx-item><td data-nx-f="td">Business ITR, proprietor</td><td data-nx-f="td2">Profit and loss, balance sheet, 44AD if it fits</td><td data-nx-f="td3">&#8377;3,499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">GST monthly returns <small>GSTR-1 and GSTR-3B</small></td><td data-nx-f="td2">Up to 150 invoices a month, input credit reconciliation</td><td data-nx-f="td3">&#8377;1,500 / month</td></tr>
+            <tr data-nx-item><td data-nx-f="td">GST quarterly (QRMP scheme)</td><td data-nx-f="td2">For turnover under &#8377;5 crore</td><td data-nx-f="td3">&#8377;3,000 / quarter</td></tr>
+            <tr data-nx-item><td data-nx-f="td">GST annual return <small>GSTR-9</small></td><td data-nx-f="td2">Full year reconciliation with books</td><td data-nx-f="td3">&#8377;4,999</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Bookkeeping, small shop</td><td data-nx-f="td2">Up to 200 entries a month, monthly profit statement</td><td data-nx-f="td3">&#8377;2,500 / month</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Bookkeeping, with staff and stock</td><td data-nx-f="td2">Up to 600 entries, payroll, stock summary</td><td data-nx-f="td3">&#8377;5,000 / month</td></tr>
+            <tr data-nx-item><td data-nx-f="td">TDS quarterly return <small>24Q or 26Q</small></td><td data-nx-f="td2">Challan matching, Form 16/16A generation</td><td data-nx-f="td3">&#8377;1,499 / quarter</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Tax audit <small>Turnover above the limit</small></td><td data-nx-f="td2">Form 3CD, signed report, ITR filing</td><td data-nx-f="td3">from &#8377;15,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Company annual filing <small>ROC forms AOC-4 and MGT-7</small></td><td data-nx-f="td2">Board minutes, filings, DIN KYC</td><td data-nx-f="td3">from &#8377;8,000</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel" id="panel-c">
         <table class="ftable">
-          <thead><tr><th>Work</th><th>What is included</th><th>Fee</th></tr></thead>
-          <tbody>
-            <tr><td>GST registration</td><td>Application, document upload, follow-up till GSTIN arrives</td><td>&#8377;1,999</td></tr>
-            <tr><td>Udyam / MSME registration</td><td>Certificate issued the same day in most cases</td><td>&#8377;499</td></tr>
-            <tr><td>Trade licence <small>KMC or Bidhannagar</small></td><td>New or renewal, form and follow-up</td><td>&#8377;1,499 + govt fee</td></tr>
-            <tr><td>Partnership firm</td><td>Deed drafting, PAN, registration with the Registrar of Firms</td><td>&#8377;7,999 + stamp duty</td></tr>
-            <tr><td>LLP</td><td>Name approval, DSC, incorporation, LLP agreement</td><td>&#8377;9,999 + govt fee</td></tr>
-            <tr><td>Private limited company</td><td>Name approval, DSC, DIN, incorporation, PAN, TAN, bank account help</td><td>&#8377;14,999 + govt fee</td></tr>
-            <tr><td>Professional tax enrolment</td><td>West Bengal PT registration for the business and employees</td><td>&#8377;1,499</td></tr>
-            <tr><td>Import Export Code (IEC)</td><td>DGFT application and certificate</td><td>&#8377;1,999</td></tr>
-            <tr><td>TAN</td><td>Application and allotment letter</td><td>&#8377;499</td></tr>
+          <thead><tr><th data-nx="fees.th7">Work</th><th data-nx="fees.th8">What is included</th><th data-nx="fees.th9">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list3">
+            <tr data-nx-item><td data-nx-f="td">GST registration</td><td data-nx-f="td2">Application, document upload, follow-up till GSTIN arrives</td><td data-nx-f="td3">&#8377;1,999</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Udyam / MSME registration</td><td data-nx-f="td2">Certificate issued the same day in most cases</td><td data-nx-f="td3">&#8377;499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Trade licence <small>KMC or Bidhannagar</small></td><td data-nx-f="td2">New or renewal, form and follow-up</td><td data-nx-f="td3">&#8377;1,499 + govt fee</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Partnership firm</td><td data-nx-f="td2">Deed drafting, PAN, registration with the Registrar of Firms</td><td data-nx-f="td3">&#8377;7,999 + stamp duty</td></tr>
+            <tr data-nx-item><td data-nx-f="td">LLP</td><td data-nx-f="td2">Name approval, DSC, incorporation, LLP agreement</td><td data-nx-f="td3">&#8377;9,999 + govt fee</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Private limited company</td><td data-nx-f="td2">Name approval, DSC, DIN, incorporation, PAN, TAN, bank account help</td><td data-nx-f="td3">&#8377;14,999 + govt fee</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Professional tax enrolment</td><td data-nx-f="td2">West Bengal PT registration for the business and employees</td><td data-nx-f="td3">&#8377;1,499</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Import Export Code (IEC)</td><td data-nx-f="td2">DGFT application and certificate</td><td data-nx-f="td3">&#8377;1,999</td></tr>
+            <tr data-nx-item><td data-nx-f="td">TAN</td><td data-nx-f="td2">Application and allotment letter</td><td data-nx-f="td3">&#8377;499</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <p class="tabs__note">Fees are for the 2026&ndash;27 financial year and apply to work done at the office or over WhatsApp. For anything not listed, send a message and you get a quote the same day.</p>
+    <p data-nx="fees.tabs-note" class="tabs__note">Fees are for the 2026&ndash;27 financial year and apply to work done at the office or over WhatsApp. For anything not listed, send a message and you get a quote the same day.</p>
   </div>
 </section>
 
-<section class="section section--mist" id="documents">
+<section data-nx-section="documents" class="section section--mist" id="documents">
   <div class="wrap">
     <div class="docs">
       <div class="docs__photo reveal">
-        <img src="/demo/tax-consultant/images/documents.jpg" width="1200" height="800" alt="Hands going through a file of bank statements and receipts with a calculator" loading="lazy">
+        <img data-nx="documents.photo" src="/demo/tax-consultant/images/documents.jpg" width="1200" height="800" alt="Hands going through a file of bank statements and receipts with a calculator" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="kicker">Documents for ITR</span>
-        <h2 class="h2">What to send for your income tax return.</h2>
-        <p class="lead" style="margin-top:1rem">Photograph each one on your phone and send it on WhatsApp. Not everything applies to everyone; send what you have and we ask for the rest.</p>
+        <span data-nx="documents.kicker" class="kicker">Documents for ITR</span>
+        <h2 data-nx="documents.h2" class="h2">What to send for your income tax return.</h2>
+        <p data-nx="documents.p" class="lead" style="margin-top:1rem">Photograph each one on your phone and send it on WhatsApp. Not everything applies to everyone; send what you have and we ask for the rest.</p>
         <ul class="check">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>PAN and Aadhaar (linked)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Form 16 from your employer</li>
@@ -471,138 +485,138 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Last year's ITR acknowledgement</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Bank account number and IFSC for the refund</li>
         </ul>
-        <p class="docs__tip">We download your Form 26AS and AIS from the portal ourselves and match every entry against your papers, so nothing the department already knows about is left out of the return.</p>
+        <p data-nx="documents.docs-tip" class="docs__tip">We download your Form 26AS and AIS from the portal ourselves and match every entry against your papers, so nothing the department already knows about is left out of the return.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--slate" id="deadlines">
+<section data-nx-section="deadlines" class="section section--slate" id="deadlines">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Deadline calendar</span>
-      <h2 class="h2">The dates that matter in a year.</h2>
-      <p class="lead" style="margin-top:1rem">Our clients get a WhatsApp reminder a week before each one. Miss a date and the late fee is often more than our fee.</p>
+      <span data-nx="deadlines.kicker" class="kicker">Deadline calendar</span>
+      <h2 data-nx="deadlines.h2" class="h2">The dates that matter in a year.</h2>
+      <p data-nx="deadlines.p" class="lead" style="margin-top:1rem">Our clients get a WhatsApp reminder a week before each one. Miss a date and the late fee is often more than our fee.</p>
     </div>
-    <ul class="cal">
-      <li class="reveal"><span class="d">7<small>Monthly</small></span><div><h3>TDS deposit</h3><p>Tax deducted last month goes to the government by the 7th.</p></div></li>
-      <li class="reveal"><span class="d">11<small>Monthly</small></span><div><h3>GSTR-1</h3><p>Sales invoices for the previous month.</p></div></li>
-      <li class="reveal"><span class="d">20<small>Monthly</small></span><div><h3>GSTR-3B and payment</h3><p>Summary return and the GST you owe after input credit.</p></div></li>
-      <li class="reveal"><span class="d">15<small>Jun, Sep, Dec, Mar</small></span><div><h3>Advance tax</h3><p>Four instalments for anyone who owes more than &#8377;10,000 in a year.</p></div></li>
-      <li class="reveal"><span class="d">31<small>May</small></span><div><h3>TDS return, Q4</h3><p>Last quarter's 24Q and 26Q. Form 16 to staff by 15 June.</p></div></li>
-      <li class="reveal"><span class="d">31<small>July</small></span><div><h3>ITR, no audit</h3><p>Salaried, pension, most small businesses and professionals.</p></div></li>
-      <li class="reveal"><span class="d">30<small>September</small></span><div><h3>Tax audit report</h3><p>Form 3CD for businesses above the turnover limit.</p></div></li>
-      <li class="reveal"><span class="d">31<small>October</small></span><div><h3>ITR, audit cases</h3><p>Companies and businesses that needed a tax audit.</p></div></li>
-      <li class="reveal"><span class="d">31<small>December</small></span><div><h3>GSTR-9 annual return</h3><p>Full-year GST reconciliation for turnover above &#8377;2 crore.</p></div></li>
-      <li class="reveal"><span class="d">31<small>December</small></span><div><h3>Belated ITR, last chance</h3><p>Late return with late fee, for anyone who missed July.</p></div></li>
-      <li class="reveal"><span class="d">30<small>September</small></span><div><h3>Company AGM and DIR-3 KYC</h3><p>Director KYC and annual meeting for private limited companies.</p></div></li>
-      <li class="reveal"><span class="d">31<small>March</small></span><div><h3>Investments for 80C</h3><p>LIC, PPF, ELSS paid by this date count for the year.</p></div></li>
+    <ul data-nx-list="deadlines.cal" class="cal">
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">7<small>Monthly</small></span><div><h3 data-nx-f="h3">TDS deposit</h3><p data-nx-f="p">Tax deducted last month goes to the government by the 7th.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">11<small>Monthly</small></span><div><h3 data-nx-f="h3">GSTR-1</h3><p data-nx-f="p">Sales invoices for the previous month.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">20<small>Monthly</small></span><div><h3 data-nx-f="h3">GSTR-3B and payment</h3><p data-nx-f="p">Summary return and the GST you owe after input credit.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">15<small>Jun, Sep, Dec, Mar</small></span><div><h3 data-nx-f="h3">Advance tax</h3><p data-nx-f="p">Four instalments for anyone who owes more than &#8377;10,000 in a year.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>May</small></span><div><h3 data-nx-f="h3">TDS return, Q4</h3><p data-nx-f="p">Last quarter's 24Q and 26Q. Form 16 to staff by 15 June.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>July</small></span><div><h3 data-nx-f="h3">ITR, no audit</h3><p data-nx-f="p">Salaried, pension, most small businesses and professionals.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">30<small>September</small></span><div><h3 data-nx-f="h3">Tax audit report</h3><p data-nx-f="p">Form 3CD for businesses above the turnover limit.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>October</small></span><div><h3 data-nx-f="h3">ITR, audit cases</h3><p data-nx-f="p">Companies and businesses that needed a tax audit.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>December</small></span><div><h3 data-nx-f="h3">GSTR-9 annual return</h3><p data-nx-f="p">Full-year GST reconciliation for turnover above &#8377;2 crore.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>December</small></span><div><h3 data-nx-f="h3">Belated ITR, last chance</h3><p data-nx-f="p">Late return with late fee, for anyone who missed July.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">30<small>September</small></span><div><h3 data-nx-f="h3">Company AGM and DIR-3 KYC</h3><p data-nx-f="p">Director KYC and annual meeting for private limited companies.</p></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="d" class="d">31<small>March</small></span><div><h3 data-nx-f="h3">Investments for 80C</h3><p data-nx-f="p">LIC, PPF, ELSS paid by this date count for the year.</p></div></li>
     </ul>
-    <p class="cal__note">Dates follow the current rules. The government sometimes extends a deadline; when that happens our clients get a message the same day. Always check with us before relying on a date.</p>
+    <p data-nx="deadlines.cal-note" class="cal__note">Dates follow the current rules. The government sometimes extends a deadline; when that happens our clients get a message the same day. Always check with us before relying on a date.</p>
   </div>
 </section>
 
-<section class="section" id="shops">
+<section data-nx-section="shops" class="section" id="shops">
   <div class="wrap">
     <div class="shops">
       <div class="reveal">
-        <span class="kicker">For shops and small traders</span>
-        <h2 class="h2">Bookkeeping that fits a shop counter, not a boardroom.</h2>
-        <p class="lead" style="margin-top:1rem">Half our clients are grocery shops, medicine shops, hardware stores, sweet shops and small workshops in Salt Lake, Lake Town, Baguiati and New Town. The routine is simple and takes you ten minutes a month.</p>
-        <ul>
-          <li><span class="num">1</span><div><b>Photograph your purchase bills as they come</b><span>Send them on WhatsApp, or drop the file at the office on the 1st of every month. Sales come straight from your billing software or your daily register.</span></div></li>
-          <li><span class="num">2</span><div><b>We enter, match and file</b><span>Entries are done within a week. Input credit is matched against GSTR-2B so you do not pay GST twice. Your GSTR-1 and 3B are filed before the dates.</span></div></li>
-          <li><span class="num">3</span><div><b>You get a one-page monthly statement</b><span>Sales, purchases, GST paid, profit, and cash in hand. In plain figures, in Bengali or English, so you know how the shop is doing without opening a spreadsheet.</span></div></li>
-          <li><span class="num">4</span><div><b>Year end is already done</b><span>Because the books are kept monthly, your ITR and GSTR-9 are ready in March. No scramble, no missing bills, no late fee.</span></div></li>
+        <span data-nx="shops.kicker" class="kicker">For shops and small traders</span>
+        <h2 data-nx="shops.h2" class="h2">Bookkeeping that fits a shop counter, not a boardroom.</h2>
+        <p data-nx="shops.p" class="lead" style="margin-top:1rem">Half our clients are grocery shops, medicine shops, hardware stores, sweet shops and small workshops in Salt Lake, Lake Town, Baguiati and New Town. The routine is simple and takes you ten minutes a month.</p>
+        <ul data-nx-list="shops.list">
+          <li data-nx-item><span data-nx-f="num" class="num">1</span><div><b data-nx-f="b">Photograph your purchase bills as they come</b><span data-nx-f="span">Send them on WhatsApp, or drop the file at the office on the 1st of every month. Sales come straight from your billing software or your daily register.</span></div></li>
+          <li data-nx-item><span data-nx-f="num" class="num">2</span><div><b data-nx-f="b">We enter, match and file</b><span data-nx-f="span">Entries are done within a week. Input credit is matched against GSTR-2B so you do not pay GST twice. Your GSTR-1 and 3B are filed before the dates.</span></div></li>
+          <li data-nx-item><span data-nx-f="num" class="num">3</span><div><b data-nx-f="b">You get a one-page monthly statement</b><span data-nx-f="span">Sales, purchases, GST paid, profit, and cash in hand. In plain figures, in Bengali or English, so you know how the shop is doing without opening a spreadsheet.</span></div></li>
+          <li data-nx-item><span data-nx-f="num" class="num">4</span><div><b data-nx-f="b">Year end is already done</b><span data-nx-f="span">Because the books are kept monthly, your ITR and GSTR-9 are ready in March. No scramble, no missing bills, no late fee.</span></div></li>
         </ul>
         <div class="hero__cta">
           <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Tax%20%26%20Accounts%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about shop bookkeeping</a>
           <a class="btn btn--ghost" href="tel:+919804243159">Call the office</a>
         </div>
       </div>
-      <div class="shops__photos reveal">
-        <img src="/demo/tax-consultant/images/grocery-shop.jpg" width="1200" height="1600" alt="The owner of a packed grocery shop checking stock on the shelves" loading="lazy">
-        <img src="/demo/tax-consultant/images/shopkeeper.jpg" width="1200" height="1800" alt="A shopkeeper sitting at the counter of his small shop" loading="lazy">
+      <div data-nx-list="shops.shops-photos" class="shops__photos reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/grocery-shop.jpg" width="1200" height="1600" alt="The owner of a packed grocery shop checking stock on the shelves" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/shopkeeper.jpg" width="1200" height="1800" alt="A shopkeeper sitting at the counter of his small shop" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--mist" id="process">
+<section data-nx-section="process" class="section section--mist" id="process">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">How we work</span>
-      <h2 class="h2">Four steps, mostly on your phone.</h2>
+      <span data-nx="process.kicker" class="kicker">How we work</span>
+      <h2 data-nx="process.h2" class="h2">Four steps, mostly on your phone.</h2>
     </div>
-    <ol class="steps">
-      <li class="reveal"><h3>Tell us what you need</h3><p>A WhatsApp message or a visit. We ask a few questions and tell you the fee and the papers needed.</p></li>
-      <li class="reveal"><h3>Send the papers</h3><p>Photos on WhatsApp are fine. Originals only where the government asks for them. We confirm receipt the same day.</p></li>
-      <li class="reveal"><h3>Check before filing</h3><p>You get a draft to approve: the return, the application or the statement. Nothing is filed until you say yes.</p></li>
-      <li class="reveal"><h3>Filed, with proof</h3><p>Acknowledgement, certificate or challan sent to you on WhatsApp and email. Kept in your file at the office too.</p></li>
+    <ol data-nx-list="process.steps" class="steps">
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Tell us what you need</h3><p data-nx-f="p">A WhatsApp message or a visit. We ask a few questions and tell you the fee and the papers needed.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Send the papers</h3><p data-nx-f="p">Photos on WhatsApp are fine. Originals only where the government asks for them. We confirm receipt the same day.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Check before filing</h3><p data-nx-f="p">You get a draft to approve: the return, the application or the statement. Nothing is filed until you say yes.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Filed, with proof</h3><p data-nx-f="p">Acknowledgement, certificate or challan sent to you on WhatsApp and email. Kept in your file at the office too.</p></li>
     </ol>
-    <div class="steps__photos reveal">
-      <img src="/demo/tax-consultant/images/meeting.jpg" width="1200" height="1799" alt="Two colleagues going over figures on a laptop at the office" loading="lazy">
-      <img src="/demo/tax-consultant/images/invoice-check.jpg" width="1200" height="900" alt="A finger pointing at a line on an invoice on a clipboard" loading="lazy">
-      <img src="/demo/tax-consultant/images/ledger.jpg" width="1200" height="1800" alt="Hands working through a ledger with a calculator" loading="lazy">
+    <div data-nx-list="process.steps-photos" class="steps__photos reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/meeting.jpg" width="1200" height="1799" alt="Two colleagues going over figures on a laptop at the office" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/invoice-check.jpg" width="1200" height="900" alt="A finger pointing at a line on an invoice on a clipboard" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/ledger.jpg" width="1200" height="1800" alt="Hands working through a ledger with a calculator" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section" id="team">
+<section data-nx-section="team" class="section" id="team">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The office</span>
-      <h2 class="h2">A small team that knows your file.</h2>
-      <p class="lead" style="margin-top:1rem">One qualified chartered accountant, two accounts executives and an office assistant. You deal with the same person every time, and the chartered accountant signs off on every return and report.</p>
+      <span data-nx="team.kicker" class="kicker">The office</span>
+      <h2 data-nx="team.h2" class="h2">A small team that knows your file.</h2>
+      <p data-nx="team.p" class="lead" style="margin-top:1rem">One qualified chartered accountant, two accounts executives and an office assistant. You deal with the same person every time, and the chartered accountant signs off on every return and report.</p>
     </div>
-    <div class="steps__photos reveal" style="margin-top:0;grid-template-columns:1fr 1fr 1fr 1fr">
-      <img src="/demo/tax-consultant/images/consultant-standing.jpg" width="1200" height="1800" alt="A consultant standing in the office corridor with arms folded" loading="lazy">
-      <img src="/demo/tax-consultant/images/office-work.jpg" width="1200" height="800" alt="An accounts executive working at a desktop computer" loading="lazy">
-      <img src="/demo/tax-consultant/images/laptop-woman.jpg" width="1200" height="1800" alt="A team member working on a laptop at her desk" loading="lazy">
-      <img src="/demo/tax-consultant/images/laptop-man.jpg" width="1200" height="800" alt="A team member reviewing a return on a laptop" loading="lazy">
+    <div data-nx-list="team.steps-photos" class="steps__photos reveal" style="margin-top:0;grid-template-columns:1fr 1fr 1fr 1fr">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/consultant-standing.jpg" width="1200" height="1800" alt="A consultant standing in the office corridor with arms folded" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/office-work.jpg" width="1200" height="800" alt="An accounts executive working at a desktop computer" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/laptop-woman.jpg" width="1200" height="1800" alt="A team member working on a laptop at her desk" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/tax-consultant/images/laptop-man.jpg" width="1200" height="800" alt="A team member reviewing a return on a laptop" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section section--mist">
+<section data-nx-section="section-10" class="section section--mist">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">From clients</span>
-      <h2 class="h2">In their words.</h2>
+      <span data-nx="section-10.kicker" class="kicker">From clients</span>
+      <h2 data-nx="section-10.h2" class="h2">In their words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>I run a medicine shop in Lake Town. For three years I paid GST late and paid the fine every time. Since I moved here the returns go on the 18th or 19th without me even calling. The monthly statement tells me exactly where the money went.</p><footer>Prasenjit <span>&middot; Lake Town</span></footer></blockquote>
-      <blockquote class="reveal"><p>Got an income tax notice about shares I had sold. I was worried sick. They read it, explained it was a mismatch, filed the reply in four days and it was closed. Fee was told up front and did not change.</p><footer>Sharmila <span>&middot; Salt Lake Sector III</span></footer></blockquote>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I run a medicine shop in Lake Town. For three years I paid GST late and paid the fine every time. Since I moved here the returns go on the 18th or 19th without me even calling. The monthly statement tells me exactly where the money went.</p><footer>Prasenjit <span data-nx-f="span">&middot; Lake Town</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Got an income tax notice about shares I had sold. I was worried sick. They read it, explained it was a mismatch, filed the reply in four days and it was closed. Fee was told up front and did not change.</p><footer>Sharmila <span data-nx-f="span">&middot; Salt Lake Sector III</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The office</span>
-      <h2 class="h2">BD Block, Sector I, five minutes from Karunamoyee.</h2>
+      <span data-nx="visit.kicker" class="kicker">The office</span>
+      <h2 data-nx="visit.h2" class="h2">BD Block, Sector I, five minutes from Karunamoyee.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>BD-27, Sector I, Salt Lake<br>Kolkata 700064 (ground floor)</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=BD-27%2C%20Sector%20I%2C%20Salt%20Lake%2C%20Kolkata%20700064" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">BD-27, Sector I, Salt Lake<br>Kolkata 700064 (ground floor)</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=BD-27%2C%20Sector%20I%2C%20Salt%20Lake%2C%20Kolkata%20700064" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Friday</td><td>10:30 am &ndash; 7:00 pm</td></tr>
-              <tr><td>Saturday</td><td>10:30 am &ndash; 3:00 pm</td></tr>
-              <tr><td>Sunday</td><td>Closed (WhatsApp replied Monday)</td></tr>
-              <tr><td>July and March</td><td>Open till 9 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Friday</td><td data-nx-f="td2">10:30 am &ndash; 7:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Saturday</td><td data-nx-f="td2">10:30 am &ndash; 3:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">Closed (WhatsApp replied Monday)</td></tr>
+              <tr data-nx-item><td data-nx-f="td">July and March</td><td data-nx-f="td2">Open till 9 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp documents any time. Calls during office hours.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp documents any time. Calls during office hours.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--slate" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Tax%20%26%20Accounts%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -616,10 +630,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Send your papers today. Filed in two days.</h2>
-    <p>Photograph your documents and send them on WhatsApp. We reply with the fee and anything else we need, and you approve the draft before it goes.</p>
+    <h2 data-nx="contact.h2">Send your papers today. Filed in two days.</h2>
+    <p data-nx="contact.p">Photograph your documents and send them on WhatsApp. We reply with the fee and anything else we need, and you approve the draft before it goes.</p>
     <div class="final__cta">
       <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mukherjee%20Tax%20%26%20Accounts%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -634,31 +648,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="10" fill="#fff"/><path d="M11 30V18M19 30V13M27 30V21M35 30V10" stroke="#3B4F7A" stroke-width="3.5" stroke-linecap="round"/><path d="M9 33h26" stroke="#1E9E5A" stroke-width="3" stroke-linecap="round"/></svg>
-          <span><b>Mukherjee Tax &amp; Accounts</b><small>Salt Lake &middot; Sector I</small></span>
+          <span><b data-nx="footer.b">Mukherjee Tax &amp; Accounts</b><small data-nx="footer.small">Salt Lake &middot; Sector I</small></span>
         </a>
-        <p>Income tax, GST, registrations, TDS, audit and bookkeeping for families and small businesses in Kolkata. Every filing checked by a qualified chartered accountant.</p>
+        <p data-nx="footer.p">Income tax, GST, registrations, TDS, audit and bookkeeping for families and small businesses in Kolkata. Every filing checked by a qualified chartered accountant.</p>
       </div>
       <div>
-        <h4>Office</h4>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#fees">Fee table</a></li>
-          <li><a href="#documents">Documents for ITR</a></li>
-          <li><a href="#deadlines">Deadline calendar</a></li>
+        <h4 data-nx="footer.h4">Office</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#services">Services</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Fee table</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#documents">Documents for ITR</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#deadlines">Deadline calendar</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>BD-27, Sector I, Salt Lake, Kolkata 700064</li>
+          <li data-nx="footer.li">BD-27, Sector I, Salt Lake, Kolkata 700064</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Fri 10:30 am &ndash; 7 pm &middot; Sat till 3 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Fri 10:30 am &ndash; 7 pm &middot; Sat till 3 pm</li>
         </ul>
       </div>
     </div>
@@ -700,5 +714,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

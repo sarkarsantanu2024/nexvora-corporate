@@ -1,0 +1,1450 @@
+{
+  "site": "sweets",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Mohini Mishtanna Bhandar",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-since",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1100:1400"
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Mishti the way Shyambazar has always liked it",
+            "bn": "Mishti the way Shyambazar has always liked it"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "Three generations behind one counter",
+        "bn": "Three generations behind one counter"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "700:930"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "story-facts",
+          "label": {
+            "en": "Three generations behind one counter",
+            "bn": "Three generations behind one counter"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "label": {
+        "en": "Eight sweets people cross the city for",
+        "bn": "Eight sweets people cross the city for"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "sig",
+          "label": {
+            "en": "Eight sweets people cross the city for",
+            "bn": "Eight sweets people cross the city for"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:533"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "price",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "Today’s counter",
+        "bn": "Today’s counter"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "menu-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Chhanar mishti (chhena sweets)",
+            "bn": "Chhanar mishti (chhena sweets)"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "By weight and by the pot",
+            "bn": "By weight and by the pot"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boxes",
+      "label": {
+        "en": "Boxes for Pujo, Bhai Phonta, Diwali and weddings",
+        "bn": "Boxes for Pujo, Bhai Phonta, Diwali and weddings"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:899"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "boxes-list",
+          "label": {
+            "en": "Boxes for Pujo, Bhai Phonta, Diwali and weddings",
+            "bn": "Boxes for Pujo, Bhai Phonta, Diwali and weddings"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catering",
+      "label": {
+        "en": "Sweets for 50 guests or 1,500",
+        "bn": "Sweets for 50 guests or 1,500"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Sweets for 50 guests or 1,500",
+            "bn": "Sweets for 50 guests or 1,500"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "cater-photo",
+          "label": {
+            "en": "Sweets for 50 guests or 1,500",
+            "bn": "Sweets for 50 guests or 1,500"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few photos from the shop",
+        "bn": "A few photos from the shop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "A few photos from the shop",
+            "bn": "A few photos from the shop"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Bidhan Sarani, two minutes from Shyambazar metro",
+        "bn": "On Bidhan Sarani, two minutes from Shyambazar metro"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Your box can be ready before you reach the shop",
+        "bn": "Your box can be ready before you reach the shop"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Mohini Mishtanna Bhandar",
+      "small": "Shyambazar · since 1962"
+    },
+    "top": {
+      "hero-since": "<span></span>Made fresh every morning since 1962",
+      "h1": "Mishti the way <em>Shyambazar</em> has always liked it.",
+      "p": "Rasgulla, sandesh, mishti doi and seventy other sweets from one kitchen, three generations old. Walk in from 7 am, or send us a message and your box will be ready when you arrive.",
+      "button": "See today’s prices",
+      "photo": {
+        "src": "/demo/sweets/images/hero.jpg",
+        "alt": "Trays of gulab jamun, rasgulla and sandesh on the shop counter"
+      },
+      "b": "Pujo special boxes",
+      "span": "Book by Panchami, collect any day up to Dashami.",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "1962",
+            "span": "Same family, same shop"
+          },
+          {
+            "b": "70+",
+            "span": "Sweets on the counter"
+          },
+          {
+            "b": "7 am",
+            "span": "First batch every day"
+          }
+        ]
+      }
+    },
+    "story": {
+      "photo": {
+        "src": "/demo/sweets/images/counter-display.jpg",
+        "alt": "Assorted sweets and snacks laid out on the shop display"
+      },
+      "photo2": {
+        "src": "/demo/sweets/images/serving-sweets.jpg",
+        "alt": "A woman's hands serving sweets from a brass bowl"
+      },
+      "span": "Est.<b>1962</b>",
+      "kicker": "Our story",
+      "h2": "Three generations behind one counter.",
+      "p": "Mohini Mohan Das opened this shop in 1962 with a single karai and a recipe for rasgulla he learnt in Nadia. His son added sandesh and mishti doi in the eighties. Today his grandson runs the kitchen, and the rasgulla is still made the same way, in the same brass karai, with the same morning milk from Barasat.",
+      "p2": "We do not use preservatives or colour. Whatever is on the counter was made today. What does not sell by night is given away, never kept.",
+      "story-facts": {
+        "items": [
+          {
+            "b": "60+",
+            "span": "Years in Shyambazar"
+          },
+          {
+            "b": "180 L",
+            "span": "Fresh milk every morning"
+          },
+          {
+            "b": "0",
+            "span": "Preservatives, ever"
+          }
+        ]
+      }
+    },
+    "sweets": {
+      "kicker": "What we are known for",
+      "h2": "Eight sweets people cross the city for.",
+      "p": "Prices are per piece unless marked. Everything is made in our own kitchen behind the shop.",
+      "sig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/sweets/images/rasgulla.jpg",
+              "alt": "Soft white rasgulla in syrup on a clay plate"
+            },
+            "h3": "Rasgulla",
+            "p": "Spongy, light, in thin syrup. Our oldest recipe. Also sold in tins for travel.",
+            "price": "₹12 each · tin of 20 ₹260"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/sandesh.jpg",
+              "alt": "Sandesh topped with pistachio"
+            },
+            "h3": "Sandesh",
+            "p": "Kora pak and norom pak. Nolen gur sandesh from November to February only.",
+            "price": "₹15 to ₹25 each"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/mishti-doi-clay-pot.jpg",
+              "alt": "Mishti doi set in a traditional clay pot"
+            },
+            "h3": "Mishti Doi",
+            "p": "Set overnight in clay bhaar. Caramel coloured, not too sweet. Ask for the gur version in winter.",
+            "price": "₹40 small · ₹120 for 500 g"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/chamcham.jpg",
+              "alt": "Chamcham sweets on display"
+            },
+            "h3": "Chamcham",
+            "p": "Long, chewy, rolled in khoya. A Shyambazar favourite for Bhai Phonta.",
+            "price": "₹18 each"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/kalakand.jpg",
+              "alt": "Kalakand squares with silver foil"
+            },
+            "h3": "Kalakand",
+            "p": "Grainy milk cake with a touch of cardamom. Sold by weight.",
+            "price": "₹520 per kg"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/ladoo.jpg",
+              "alt": "Motichoor ladoo with saffron garnish"
+            },
+            "h3": "Motichoor Ladoo",
+            "p": "Fine boondi, saffron, pure ghee. The pujo ladoo most families order by the hundred.",
+            "price": "₹14 each · ₹480 per kg"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/gulab-jamun.jpg",
+              "alt": "Gulab jamun in syrup"
+            },
+            "h3": "Gulab Jamun & Pantua",
+            "p": "Dark, soft, soaked through. Pantua is the Bengali cousin, fried a shade darker.",
+            "price": "₹14 each"
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/jalebi.jpg",
+              "alt": "Fresh hot jalebi"
+            },
+            "h3": "Jalebi",
+            "p": "Fried hot from 7 am to 10 am and again from 5 pm. Best eaten standing at the counter.",
+            "price": "₹320 per kg"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price list",
+      "h2": "Today’s counter.",
+      "p": "Prices change a little with the milk price. We update this list on the first of every month.",
+      "menu-note": "Want something not on the list? Call the shop. Most sweets can be made to order with one day’s notice.",
+      "list": {
+        "items": [
+          {
+            "name": "Rasgulla",
+            "amt": "₹12"
+          },
+          {
+            "name": "Rajbhog <small>Big rasgulla stuffed with kesar khoya</small>",
+            "amt": "₹30"
+          },
+          {
+            "name": "Kacha Golla",
+            "amt": "₹15"
+          },
+          {
+            "name": "Kora Pak Sandesh",
+            "amt": "₹15"
+          },
+          {
+            "name": "Nolen Gurer Sandesh <small>Winter only</small>",
+            "amt": "₹25"
+          },
+          {
+            "name": "Chamcham",
+            "amt": "₹18"
+          },
+          {
+            "name": "Rasmalai <small>Per bowl of 2</small>",
+            "amt": "₹60"
+          },
+          {
+            "name": "Chhanar Jilipi",
+            "amt": "₹16"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "name": "Mishti Doi <small>Clay pot, 500 g</small>",
+            "amt": "₹120"
+          },
+          {
+            "name": "Kalakand",
+            "amt": "₹520 / kg"
+          },
+          {
+            "name": "Motichoor Ladoo",
+            "amt": "₹480 / kg"
+          },
+          {
+            "name": "Soan Papdi",
+            "amt": "₹360 / kg"
+          },
+          {
+            "name": "Jalebi <small>Hot, morning and evening</small>",
+            "amt": "₹320 / kg"
+          },
+          {
+            "name": "Sitabhog &amp; Mihidana <small>Bardhaman style</small>",
+            "amt": "₹400 / kg"
+          },
+          {
+            "name": "Darbesh",
+            "amt": "₹440 / kg"
+          },
+          {
+            "name": "Singara &amp; Kochuri <small>Savouries, from 4 pm</small>",
+            "amt": "₹10"
+          }
+        ]
+      }
+    },
+    "boxes": {
+      "kicker": "Festival boxes",
+      "h2": "Boxes for Pujo, Bhai Phonta, Diwali and weddings.",
+      "p": "Fixed boxes, packed on the day you collect. We can print your family name or company name on the lid for orders of 25 boxes or more.",
+      "photo": {
+        "src": "/demo/sweets/images/gift-box.jpg",
+        "alt": "Assorted sweets arranged in a decorative gift box"
+      },
+      "figcaption": "Boxes are packed fresh on the morning you collect, never the night before.",
+      "boxes-list": {
+        "items": [
+          {
+            "n": "6",
+            "h3": "Chhoto box",
+            "p": "Six pieces. Two sandesh, two rasgulla, one chamcham, one ladoo.",
+            "amt": "₹110"
+          },
+          {
+            "n": "12",
+            "h3": "Pujo box",
+            "p": "Twelve pieces, mixed. The box most families send to neighbours during Durga Pujo.",
+            "amt": "₹220"
+          },
+          {
+            "n": "24",
+            "h3": "Bhai Phonta box",
+            "p": "Twenty-four pieces plus a small pot of mishti doi. Comes in a printed tin.",
+            "amt": "₹480"
+          },
+          {
+            "n": "1kg",
+            "h3": "Dry box",
+            "p": "Kalakand, soan papdi and ladoo. Keeps for a week. Good for sending out of town.",
+            "amt": "₹560"
+          }
+        ]
+      }
+    },
+    "catering": {
+      "kicker": "Weddings and events",
+      "h2": "Sweets for 50 guests or 1,500.",
+      "p": "We have supplied sweets for weddings, annaprashans and office pujas across North Kolkata for forty years. Three steps and it is done.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Tell us the date and the count",
+            "p": "Message or call with the date, number of guests and roughly what you have in mind. We reply the same day with a list and a price."
+          },
+          {
+            "h3": "Taste and fix the menu",
+            "p": "Come to the shop and taste. Pick 4 to 8 items. We take a 50% advance and the rest on delivery."
+          },
+          {
+            "h3": "Delivered on the morning",
+            "p": "Our own van delivers within Kolkata from 6 am. Sweets are packed in food-grade boxes, with mishti doi in clay pots."
+          }
+        ]
+      },
+      "cater-photo": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/sweets/images/festival-table.jpg",
+              "alt": "Women in traditional dress laying out sweets and decorations for a celebration"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/soan-papdi.jpg",
+              "alt": "Soan papdi with saffron and nuts"
+            }
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "From the counter",
+      "h2": "A few photos from the shop.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/sweets/images/serving-sweets.jpg",
+              "alt": "Sweets being served from a brass bowl"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/rasgulla.jpg",
+              "alt": "Rasgulla on a clay plate"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/kalakand.jpg",
+              "alt": "Kalakand with silver leaf"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/counter-display.jpg",
+              "alt": "The full counter display"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/jalebi.jpg",
+              "alt": "Hot jalebi"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/ladoo.jpg",
+              "alt": "Motichoor ladoo"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/gulab-jamun.jpg",
+              "alt": "Gulab jamun in syrup"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/sweets/images/sandesh.jpg",
+              "alt": "Pistachio sandesh"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "What customers say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "We have bought our Bijoya sweets here since my father’s time. The rasgulla tastes exactly as I remember it from school.",
+            "span": "· Hatibagan"
+          },
+          {
+            "p": "Ordered 300 boxes for our office Saraswati Pujo. Delivered at 7 in the morning, every box packed properly. No fuss at all.",
+            "span": "· Salt Lake Sector V"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Bidhan Sarani, two minutes from Shyambazar metro.",
+      "b": "Address",
+      "p": "71/1 Bidhan Sarani, Shyambazar<br>Kolkata 700004",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "WhatsApp orders answered 8 am to 9 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "7:00 am – 10:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "7:00 am – 2:00 pm"
+          },
+          {
+            "td": "Pujo week",
+            "td2": "Open till midnight"
+          }
+        ]
+      }
+    },
+    "order": {
+      "h2": "Your box can be ready before you reach the shop.",
+      "p": "Send the number of pieces and the time you will come. We will pack it and keep it at the counter under your name."
+    },
+    "footer": {
+      "b": "Mohini Mishtanna Bhandar",
+      "small": "Shyambazar · since 1962",
+      "p": "Bengali sweets made fresh each morning. Festival boxes, wedding orders and a counter that opens at 7.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "71/1 Bidhan Sarani, Shyambazar, Kolkata 700004",
+      "li2": "Mon–Sat 7 am – 10 pm · Sun 7 am – 2 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Our sweets"
+          },
+          {
+            "button": "Price list"
+          },
+          {
+            "button": "Festival boxes"
+          },
+          {
+            "button": "Weddings and events"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Mohini Mishtanna Bhandar sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=71%2F1%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700004",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Mohini Mishtanna Bhandar | Bengali Sweets in Shyambazar since 1962",
+      "description": "Rasgulla, sandesh, mishti doi and festival boxes made fresh every morning in Shyambazar, Kolkata. Order a box on WhatsApp or walk in from 7 am."
+    }
+  }
+}

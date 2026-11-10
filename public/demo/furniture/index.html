@@ -267,25 +267,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*::before,*::after{transition:none!important;animation:none!important}}
+/* phone: bigger tap targets, readable footer line, hours on one line */
+@media (max-width:760px){
+.footer li a,.vrow a{display:inline-flex;align-items:center;min-height:44px}
+.footer__note a{padding-block:.75rem}
+.footer .brand small{font-size:.75rem}
+.hours td:last-child{white-space:nowrap}
+}
 </style>
+<meta name="nx-site" content="furniture">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bosu%20Kaath%20Ghar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bosu Kaath Ghar, home">
       <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="12" width="34" height="22" rx="2" fill="#E9DCC7"/><rect x="3" y="6" width="34" height="8" rx="2" fill="#B9893B"/><rect x="18" y="20" width="4" height="6" rx="1" fill="#5A3A22"/><path d="M7 34v3M33 34v3" stroke="#E9DCC7" stroke-width="2.5" stroke-linecap="round"/></svg>
-      <span><b>Bosu Kaath Ghar</b><small>Furniture &amp; workshop &middot; Behala</small></span>
+      <span><b data-nx="header.b">Bosu Kaath Ghar</b><small data-nx="header.small">Furniture &amp; workshop &middot; Behala</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -307,28 +312,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
-  <img class="hero__img" src="/demo/furniture/images/hero.jpg" width="1600" height="900" alt="A wooden sofa set with cushions in a living room with a brick wall, in a Kerala home" fetchpriority="high">
+<section data-nx-section="top" class="hero" id="top">
+  <img data-nx="top.hero-img" class="hero__img" src="/demo/furniture/images/hero.jpg" width="1600" height="900" alt="A wooden sofa set with cushions in a living room with a brick wall, in a Kerala home" fetchpriority="high">
   <div class="wrap">
     <div>
-      <p class="hero__eyebrow">Behala &middot; Own workshop &middot; Since 1979</p>
-      <h1>Furniture made to last <em>forty years,</em> not four.</h1>
-      <p>Beds, almirahs, dining sets and anything you can draw on paper. Seasoned Sheesham and teak, joined by hand in our workshop behind the showroom, polished and fitted in your home.</p>
+      <p data-nx="top.hero-eyebrow" class="hero__eyebrow">Behala &middot; Own workshop &middot; Since 1979</p>
+      <h1 data-nx="top.h1">Furniture made to last <em>forty years,</em> not four.</h1>
+      <p data-nx="top.p">Beds, almirahs, dining sets and anything you can draw on paper. Seasoned Sheesham and teak, joined by hand in our workshop behind the showroom, polished and fitted in your home.</p>
       <div class="hero__cta">
         <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bosu%20Kaath%20Ghar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send a photo, get a price
         </a>
-        <a class="btn btn--outline-light" href="#make">See what we make</a>
+        <a data-nx="top.button" class="btn btn--outline-light" href="#make">See what we make</a>
       </div>
     </div>
     <div class="spec">
-      <h2>Every piece we sell</h2>
-      <ul>
-        <li><span>Wood</span><b>Seasoned Sheesham or teak</b></li>
-        <li><span>Joints</span><b>Mortise and tenon, no nails</b></li>
-        <li><span>Polish warranty</span><b>10 years</b></li>
-        <li><span>Delivery</span><b>Free within Kolkata</b></li>
+      <h2 data-nx="top.h2">Every piece we sell</h2>
+      <ul data-nx-list="top.list">
+        <li data-nx-item><span data-nx-f="span">Wood</span><b data-nx-f="b">Seasoned Sheesham or teak</b></li>
+        <li data-nx-item><span data-nx-f="span">Joints</span><b data-nx-f="b">Mortise and tenon, no nails</b></li>
+        <li data-nx-item><span data-nx-f="span">Polish warranty</span><b data-nx-f="b">10 years</b></li>
+        <li data-nx-item><span data-nx-f="span">Delivery</span><b data-nx-f="b">Free within Kolkata</b></li>
       </ul>
     </div>
   </div>
@@ -343,38 +348,38 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </ul>
 </div>
 
-<section class="section" id="make">
+<section data-nx-section="make" class="section" id="make">
   <div class="wrap">
     <div class="head reveal">
-      <span class="tag">What we make</span>
-      <h2 class="h2">Six things we make every week.</h2>
-      <p class="lead" style="margin-top:1rem">Starting prices are for Sheesham in a standard size with our regular melamine polish. Teak costs about 60% more. Any size can be changed.</p>
+      <span data-nx="make.tag" class="tag">What we make</span>
+      <h2 data-nx="make.h2" class="h2">Six things we make every week.</h2>
+      <p data-nx="make.p" class="lead" style="margin-top:1rem">Starting prices are for Sheesham in a standard size with our regular melamine polish. Teak costs about 60% more. Any size can be changed.</p>
     </div>
     <ul class="cat">
-      <li class="reveal"><img src="/demo/furniture/images/bed-frame.jpg" width="800" height="1144" alt="A wooden double bed with colourful bedding in an Indian bedroom" loading="lazy"><div class="body"><div class="row"><h3>Beds</h3><span class="from">From<b>&#8377;24,000</b></span></div><p>Box beds with hydraulic or side storage, plain slatted beds, and carved headboards for the main bedroom.</p><div class="sizes"><span>Single</span><span>Queen 5&times;6.5</span><span>King 6&times;6.5</span></div></div></li>
-      <li class="reveal"><img src="/demo/furniture/images/almirah-sunlit.jpg" width="800" height="534" alt="A wooden wardrobe and open shelves beside a bed in a bright bedroom" loading="lazy"><div class="body"><div class="row"><h3>Almirahs</h3><span class="from">From<b>&#8377;32,000</b></span></div><p>Two, three and four door. Locker inside, mirror on the door if you want it, hanging rod and shelves set to your height.</p><div class="sizes"><span>2 door</span><span>3 door</span><span>4 door</span></div></div></li>
-      <li class="reveal"><img src="/demo/furniture/images/dining-set.jpg" width="800" height="533" alt="An Indian family talking over dinner at a wooden dining table" loading="lazy"><div class="body"><div class="row"><h3>Dining sets</h3><span class="from">From<b>&#8377;28,000</b></span></div><p>Four, six and eight seater. Cushioned or plain seats. Round tables and bench sets made on request.</p><div class="sizes"><span>4 seater</span><span>6 seater</span><span>8 seater</span></div></div></li>
-      <li class="reveal"><img src="/demo/furniture/images/sofa-wooden.jpg" width="800" height="450" alt="A living room with Sheesham wood panelling and a sofa" loading="lazy"><div class="body"><div class="row"><h3>Sofa sets</h3><span class="from">From<b>&#8377;36,000</b></span></div><p>Wooden frame sofas with loose cushions, 3+1+1 or 3+2. You pick the cushion fabric from our book or bring your own.</p><div class="sizes"><span>3+1+1</span><span>3+2</span><span>L-shape</span></div></div></li>
-      <li class="reveal"><img src="/demo/furniture/images/cabinet-drawers.jpg" width="800" height="1200" alt="Carved wooden cabinets and tables in a traditional Indian room" loading="lazy"><div class="body"><div class="row"><h3>Cabinets &amp; sideboards</h3><span class="from">From<b>&#8377;14,000</b></span></div><p>Crockery units, TV units, shoe racks, chests of drawers and puja cabinets. Glass doors on request.</p><div class="sizes"><span>3 ft</span><span>4 ft</span><span>6 ft</span></div></div></li>
-      <li class="reveal"><img src="/demo/furniture/images/study-table.jpg" width="800" height="1035" alt="A couple working at a wooden table with a glass-front cabinet behind them" loading="lazy"><div class="body"><div class="row"><h3>Study &amp; work tables</h3><span class="from">From<b>&#8377;9,500</b></span></div><p>Children&rsquo;s study tables, office desks with drawers and cable holes, and dressing tables with a mirror.</p><div class="sizes"><span>3 ft</span><span>4 ft</span><span>5 ft</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo" src="/demo/furniture/images/bed-frame.jpg" width="800" height="1144" alt="A wooden double bed with colourful bedding in an Indian bedroom" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h3">Beds</h3><span data-nx="make.from" class="from">From<b>&#8377;24,000</b></span></div><p data-nx="make.p2">Box beds with hydraulic or side storage, plain slatted beds, and carved headboards for the main bedroom.</p><div data-nx-list="make.sizes" class="sizes"><span data-nx-f="span" data-nx-item>Single</span><span data-nx-f="span" data-nx-item>Queen 5&times;6.5</span><span data-nx-f="span" data-nx-item>King 6&times;6.5</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo2" src="/demo/furniture/images/almirah-sunlit.jpg" width="800" height="534" alt="A wooden wardrobe and open shelves beside a bed in a bright bedroom" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h32">Almirahs</h3><span data-nx="make.from2" class="from">From<b>&#8377;32,000</b></span></div><p data-nx="make.p3">Two, three and four door. Locker inside, mirror on the door if you want it, hanging rod and shelves set to your height.</p><div data-nx-list="make.sizes2" class="sizes"><span data-nx-f="span" data-nx-item>2 door</span><span data-nx-f="span" data-nx-item>3 door</span><span data-nx-f="span" data-nx-item>4 door</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo3" src="/demo/furniture/images/dining-set.jpg" width="800" height="533" alt="An Indian family talking over dinner at a wooden dining table" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h33">Dining sets</h3><span data-nx="make.from3" class="from">From<b>&#8377;28,000</b></span></div><p data-nx="make.p4">Four, six and eight seater. Cushioned or plain seats. Round tables and bench sets made on request.</p><div data-nx-list="make.sizes3" class="sizes"><span data-nx-f="span" data-nx-item>4 seater</span><span data-nx-f="span" data-nx-item>6 seater</span><span data-nx-f="span" data-nx-item>8 seater</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo4" src="/demo/furniture/images/sofa-wooden.jpg" width="800" height="450" alt="A living room with Sheesham wood panelling and a sofa" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h34">Sofa sets</h3><span data-nx="make.from4" class="from">From<b>&#8377;36,000</b></span></div><p data-nx="make.p5">Wooden frame sofas with loose cushions, 3+1+1 or 3+2. You pick the cushion fabric from our book or bring your own.</p><div data-nx-list="make.sizes4" class="sizes"><span data-nx-f="span" data-nx-item>3+1+1</span><span data-nx-f="span" data-nx-item>3+2</span><span data-nx-f="span" data-nx-item>L-shape</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo5" src="/demo/furniture/images/cabinet-drawers.jpg" width="800" height="1200" alt="Carved wooden cabinets and tables in a traditional Indian room" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h35">Cabinets &amp; sideboards</h3><span data-nx="make.from5" class="from">From<b>&#8377;14,000</b></span></div><p data-nx="make.p6">Crockery units, TV units, shoe racks, chests of drawers and puja cabinets. Glass doors on request.</p><div data-nx-list="make.sizes5" class="sizes"><span data-nx-f="span" data-nx-item>3 ft</span><span data-nx-f="span" data-nx-item>4 ft</span><span data-nx-f="span" data-nx-item>6 ft</span></div></div></li>
+      <li class="reveal"><img data-nx="make.photo6" src="/demo/furniture/images/study-table.jpg" width="800" height="1035" alt="A couple working at a wooden table with a glass-front cabinet behind them" loading="lazy"><div class="body"><div class="row"><h3 data-nx="make.h36">Study &amp; work tables</h3><span data-nx="make.from6" class="from">From<b>&#8377;9,500</b></span></div><p data-nx="make.p7">Children&rsquo;s study tables, office desks with drawers and cable holes, and dressing tables with a mirror.</p><div data-nx-list="make.sizes6" class="sizes"><span data-nx-f="span" data-nx-item>3 ft</span><span data-nx-f="span" data-nx-item>4 ft</span><span data-nx-f="span" data-nx-item>5 ft</span></div></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--dark" id="custom">
+<section data-nx-section="custom" class="section section--dark" id="custom">
   <div class="wrap">
     <div class="head reveal">
-      <span class="tag">Custom orders</span>
-      <h2 class="h2">Draw it on paper. We will make it in wood.</h2>
-      <p class="lead" style="margin-top:1rem">About half our work is made to order: a bed that fits an odd corner, an almirah that goes up to the ceiling, a dining table for a family of ten. This is how it goes, start to finish.</p>
+      <span data-nx="custom.tag" class="tag">Custom orders</span>
+      <h2 data-nx="custom.h2" class="h2">Draw it on paper. We will make it in wood.</h2>
+      <p data-nx="custom.p" class="lead" style="margin-top:1rem">About half our work is made to order: a bed that fits an odd corner, an almirah that goes up to the ceiling, a dining table for a family of ten. This is how it goes, start to finish.</p>
     </div>
-    <ol class="proc reveal">
-      <li><span class="when">Day 1</span><h3>Measure</h3><p>We come to your home with a tape and a notebook, or you send measurements and photos on WhatsApp.</p></li>
-      <li><span class="when">Day 2 to 3</span><h3>Drawing and quote</h3><p>A sketch with sizes, the wood, the polish shade and a fixed price. Nothing changes after you say yes.</p></li>
-      <li><span class="when">Day 4</span><h3>Pick the wood</h3><p>Come to the workshop and choose the planks yourself if you like. 50% advance to begin.</p></li>
-      <li><span class="when">Week 1 to 4</span><h3>Making</h3><p>Cut, joined and assembled by hand. We send photos every week so you see it take shape.</p></li>
-      <li><span class="when">Week 5</span><h3>Polish</h3><p>Three coats of melamine or PU, sanded between each. You approve the shade on a sample first.</p></li>
-      <li><span class="when">Week 6</span><h3>Delivery and fitting</h3><p>Our own men deliver, assemble and fit in your room. Balance paid when you are happy.</p></li>
+    <ol data-nx-list="custom.proc" class="proc reveal">
+      <li data-nx-item><span data-nx-f="when" class="when">Day 1</span><h3 data-nx-f="h3">Measure</h3><p data-nx-f="p">We come to your home with a tape and a notebook, or you send measurements and photos on WhatsApp.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">Day 2 to 3</span><h3 data-nx-f="h3">Drawing and quote</h3><p data-nx-f="p">A sketch with sizes, the wood, the polish shade and a fixed price. Nothing changes after you say yes.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">Day 4</span><h3 data-nx-f="h3">Pick the wood</h3><p data-nx-f="p">Come to the workshop and choose the planks yourself if you like. 50% advance to begin.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">Week 1 to 4</span><h3 data-nx-f="h3">Making</h3><p data-nx-f="p">Cut, joined and assembled by hand. We send photos every week so you see it take shape.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">Week 5</span><h3 data-nx-f="h3">Polish</h3><p data-nx-f="p">Three coats of melamine or PU, sanded between each. You approve the shade on a sample first.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">Week 6</span><h3 data-nx-f="h3">Delivery and fitting</h3><p data-nx-f="p">Our own men deliver, assemble and fit in your room. Balance paid when you are happy.</p></li>
     </ol>
     <div class="hero__cta" style="justify-content:center;margin-top:3rem">
       <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bosu%20Kaath%20Ghar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Start a custom order</a>
@@ -383,123 +388,123 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--sand" id="workshop">
+<section data-nx-section="workshop" class="section section--sand" id="workshop">
   <div class="wrap">
     <div class="shop">
-      <div class="shop__photos reveal">
-        <img src="/demo/furniture/images/workshop-carpenter.jpg" width="1200" height="1800" alt="A carpenter planing a plank at his bench in the workshop" loading="lazy">
-        <img src="/demo/furniture/images/chisel-carving.jpg" width="800" height="1200" alt="Close-up of a carpenter's hands checking the corner joint of a wooden frame" loading="lazy">
-        <img src="/demo/furniture/images/workshop-sanding.jpg" width="800" height="533" alt="A senior carpenter sanding wooden frames in a traditional workshop" loading="lazy">
+      <div data-nx-list="workshop.shop-photos" class="shop__photos reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/furniture/images/workshop-carpenter.jpg" width="1200" height="1800" alt="A carpenter planing a plank at his bench in the workshop" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/furniture/images/chisel-carving.jpg" width="800" height="1200" alt="Close-up of a carpenter's hands checking the corner joint of a wooden frame" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/furniture/images/workshop-sanding.jpg" width="800" height="533" alt="A senior carpenter sanding wooden frames in a traditional workshop" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="tag">The workshop</span>
-        <h2 class="h2">Behind the showroom, eleven carpenters and a wood yard.</h2>
-        <p class="lead" style="margin-top:1rem">Nirmal Bosu started with two carpenters in a tin shed in 1979. The shed is now a 4,000 sq ft workshop, but the way of working has not changed. Wood is bought in planks, stacked and air-dried in our own yard for at least eight months before anyone cuts it. That is why our doors do not warp in the monsoon.</p>
-        <p>Joints are mortise and tenon, glued and pegged. No nails in the frame, no particle board hidden behind a veneer. Open any drawer and you will see wood all the way through.</p>
-        <ul class="shop__facts">
-          <li><b>11</b><span>Carpenters and polishers</span></li>
-          <li><b>8 mo</b><span>Minimum wood seasoning</span></li>
-          <li><b>45</b><span>Years in Behala</span></li>
+        <span data-nx="workshop.tag" class="tag">The workshop</span>
+        <h2 data-nx="workshop.h2" class="h2">Behind the showroom, eleven carpenters and a wood yard.</h2>
+        <p data-nx="workshop.p" class="lead" style="margin-top:1rem">Nirmal Bosu started with two carpenters in a tin shed in 1979. The shed is now a 4,000 sq ft workshop, but the way of working has not changed. Wood is bought in planks, stacked and air-dried in our own yard for at least eight months before anyone cuts it. That is why our doors do not warp in the monsoon.</p>
+        <p data-nx="workshop.p2">Joints are mortise and tenon, glued and pegged. No nails in the frame, no particle board hidden behind a veneer. Open any drawer and you will see wood all the way through.</p>
+        <ul data-nx-list="workshop.shop-facts" class="shop__facts">
+          <li data-nx-item><b data-nx-f="b">11</b><span data-nx-f="span">Carpenters and polishers</span></li>
+          <li data-nx-item><b data-nx-f="b">8 mo</b><span data-nx-f="span">Minimum wood seasoning</span></li>
+          <li data-nx-item><b data-nx-f="b">45</b><span data-nx-f="span">Years in Behala</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="prices">
+<section data-nx-section="prices" class="section" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="tag">Price guide</span>
-      <h2 class="h2">What common pieces cost.</h2>
-      <p class="lead" style="margin-top:1rem">Honest ballpark figures so you can plan. The final price depends on size, wood and polish, and is fixed in writing before we start.</p>
+      <span data-nx="prices.tag" class="tag">Price guide</span>
+      <h2 data-nx="prices.h2" class="h2">What common pieces cost.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">Honest ballpark figures so you can plan. The final price depends on size, wood and polish, and is fixed in writing before we start.</p>
     </div>
     <div class="guide reveal">
       <table>
-        <thead><tr><th>Item</th><th>Size</th><th>Sheesham</th><th>Teak</th></tr></thead>
+        <thead><tr><th data-nx="prices.th">Item</th><th data-nx="prices.th2">Size</th><th data-nx="prices.th3">Sheesham</th><th data-nx="prices.th4">Teak</th></tr></thead>
         <tbody>
-          <tr><td>Queen box bed<small>Hydraulic storage, plain headboard</small></td><td>5 &times; 6.5 ft</td><td>&#8377;34,000</td><td>&#8377;56,000</td></tr>
-          <tr><td>King bed, slatted<small>No storage, carved headboard</small></td><td>6 &times; 6.5 ft</td><td>&#8377;38,000</td><td>&#8377;62,000</td></tr>
-          <tr><td>Three-door almirah<small>Locker, mirror, 5 shelves, hanging rod</small></td><td>5 &times; 7 ft</td><td>&#8377;48,000</td><td>&#8377;78,000</td></tr>
-          <tr><td>Six-seater dining set<small>Table plus six cushioned chairs</small></td><td>6 &times; 3 ft</td><td>&#8377;42,000</td><td>&#8377;68,000</td></tr>
-          <tr><td>Sofa set 3+1+1<small>Frame and cushions, fabric from our book</small></td><td>Standard</td><td>&#8377;46,000</td><td>&#8377;72,000</td></tr>
-          <tr><td>Crockery unit<small>Two glass doors, three drawers</small></td><td>4 &times; 6 ft</td><td>&#8377;26,000</td><td>&#8377;41,000</td></tr>
-          <tr><td>Children&rsquo;s study table<small>Two drawers, one shelf</small></td><td>3 &times; 2 ft</td><td>&#8377;9,500</td><td>&#8377;15,000</td></tr>
-          <tr><td>Re-polish an old bed or almirah<small>Strip, sand, three coats</small></td><td>Any</td><td colspan="2">&#8377;6,000 to &#8377;12,000</td></tr>
+          <tr><td data-nx="prices.td">Queen box bed<small>Hydraulic storage, plain headboard</small></td><td data-nx="prices.td2">5 &times; 6.5 ft</td><td data-nx="prices.td3">&#8377;34,000</td><td data-nx="prices.td4">&#8377;56,000</td></tr>
+          <tr><td data-nx="prices.td5">King bed, slatted<small>No storage, carved headboard</small></td><td data-nx="prices.td6">6 &times; 6.5 ft</td><td data-nx="prices.td7">&#8377;38,000</td><td data-nx="prices.td8">&#8377;62,000</td></tr>
+          <tr><td data-nx="prices.td9">Three-door almirah<small>Locker, mirror, 5 shelves, hanging rod</small></td><td data-nx="prices.td10">5 &times; 7 ft</td><td data-nx="prices.td11">&#8377;48,000</td><td data-nx="prices.td12">&#8377;78,000</td></tr>
+          <tr><td data-nx="prices.td13">Six-seater dining set<small>Table plus six cushioned chairs</small></td><td data-nx="prices.td14">6 &times; 3 ft</td><td data-nx="prices.td15">&#8377;42,000</td><td data-nx="prices.td16">&#8377;68,000</td></tr>
+          <tr><td data-nx="prices.td17">Sofa set 3+1+1<small>Frame and cushions, fabric from our book</small></td><td data-nx="prices.td18">Standard</td><td data-nx="prices.td19">&#8377;46,000</td><td data-nx="prices.td20">&#8377;72,000</td></tr>
+          <tr><td data-nx="prices.td21">Crockery unit<small>Two glass doors, three drawers</small></td><td data-nx="prices.td22">4 &times; 6 ft</td><td data-nx="prices.td23">&#8377;26,000</td><td data-nx="prices.td24">&#8377;41,000</td></tr>
+          <tr><td data-nx="prices.td25">Children&rsquo;s study table<small>Two drawers, one shelf</small></td><td data-nx="prices.td26">3 &times; 2 ft</td><td data-nx="prices.td27">&#8377;9,500</td><td data-nx="prices.td28">&#8377;15,000</td></tr>
+          <tr><td data-nx="prices.td29">Re-polish an old bed or almirah<small>Strip, sand, three coats</small></td><td data-nx="prices.td30">Any</td><td data-nx="prices.td31" colspan="2">&#8377;6,000 to &#8377;12,000</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="guide__note">Prices include delivery and fitting within Kolkata. GST extra. Old furniture taken in part exchange at a fair price.</p>
+    <p data-nx="prices.guide-note" class="guide__note">Prices include delivery and fitting within Kolkata. GST extra. Old furniture taken in part exchange at a fair price.</p>
   </div>
 </section>
 
-<section class="section section--sand" style="padding-top:0" id="gallery">
+<section data-nx-section="gallery" class="section section--sand" style="padding-top:0" id="gallery">
   <div class="wrap">
     <div class="head reveal" style="padding-top:var(--sy)">
-      <span class="tag">Recent work</span>
-      <h2 class="h2">From the workshop to people&rsquo;s homes.</h2>
+      <span data-nx="gallery.tag" class="tag">Recent work</span>
+      <h2 data-nx="gallery.h2" class="h2">From the workshop to people&rsquo;s homes.</h2>
     </div>
-    <ul class="gal reveal">
-      <li><img src="/demo/furniture/images/carving-india.jpg" width="800" height="1151" alt="A craftsman carving an intricate wooden design" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/bed-canopy.jpg" width="800" height="1200" alt="A carved wooden headboard above a neatly made bed" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/carved-floral.jpg" width="800" height="533" alt="Carved wood with a floral design" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/almirah-vintage.jpg" width="800" height="1200" alt="A traditional carved wooden storage chest with brass fittings" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/chisels-wall.jpg" width="800" height="1422" alt="An artisan carving an intricate wooden panel" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/showroom-antique.jpg" width="800" height="1200" alt="A woman in a green sari dusting a carved antique cabinet" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/dining-window.jpg" width="800" height="533" alt="A family gathered around the dining table at home" loading="lazy"></li>
-      <li><img src="/demo/furniture/images/workshop-measuring.jpg" width="800" height="533" alt="A senior carpenter sitting with finished wooden frames in the workshop" loading="lazy"></li>
+    <ul data-nx-list="gallery.gal" class="gal reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/carving-india.jpg" width="800" height="1151" alt="A craftsman carving an intricate wooden design" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/bed-canopy.jpg" width="800" height="1200" alt="A carved wooden headboard above a neatly made bed" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/carved-floral.jpg" width="800" height="533" alt="Carved wood with a floral design" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/almirah-vintage.jpg" width="800" height="1200" alt="A traditional carved wooden storage chest with brass fittings" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/chisels-wall.jpg" width="800" height="1422" alt="An artisan carving an intricate wooden panel" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/showroom-antique.jpg" width="800" height="1200" alt="A woman in a green sari dusting a carved antique cabinet" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/dining-window.jpg" width="800" height="533" alt="A family gathered around the dining table at home" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/furniture/images/workshop-measuring.jpg" width="800" height="533" alt="A senior carpenter sitting with finished wooden frames in the workshop" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="care">
+<section data-nx-section="care" class="section" id="care">
   <div class="wrap">
     <div class="head reveal">
-      <span class="tag">After it is in your home</span>
-      <h2 class="h2">We stay responsible for what we make.</h2>
+      <span data-nx="care.tag" class="tag">After it is in your home</span>
+      <h2 data-nx="care.h2" class="h2">We stay responsible for what we make.</h2>
     </div>
-    <ul class="care">
-      <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Ten-year polish warranty</h3><p>If the polish peels, cracks or clouds in ten years, we re-polish it free. Scratches from use are repaired at cost.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7 17 4l3 3-3 3M4 20l9-9M4 20h3v-3"/><path d="m10 11 3 3"/></svg><h3>Repair and re-polish</h3><p>Grandmother&rsquo;s almirah, a wobbly dining chair, a bed with a cracked plank. Bring it in or we collect it. Most repairs done in a week.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5zM7 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg><h3>Shifting house?</h3><p>We dismantle, move and refit our furniture when you change flats, within Kolkata, for a flat &#8377;1,500 per piece.</p></li>
+    <ul data-nx-list="care.care" class="care">
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><h3 data-nx-f="h3">Ten-year polish warranty</h3><p data-nx-f="p">If the polish peels, cracks or clouds in ten years, we re-polish it free. Scratches from use are repaired at cost.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 7 17 4l3 3-3 3M4 20l9-9M4 20h3v-3"/><path d="m10 11 3 3"/></svg><h3 data-nx-f="h3">Repair and re-polish</h3><p data-nx-f="p">Grandmother&rsquo;s almirah, a wobbly dining chair, a bed with a cracked plank. Bring it in or we collect it. Most repairs done in a week.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5zM7 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm11 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg><h3 data-nx-f="h3">Shifting house?</h3><p data-nx-f="p">We dismantle, move and refit our furniture when you change flats, within Kolkata, for a flat &#8377;1,500 per piece.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--sand">
+<section data-nx-section="section-9" class="section section--sand">
   <div class="wrap">
-    <div class="quotes">
-      <blockquote class="reveal"><p>Our dining table is twenty-two years old and still does not have a single loose joint. We went back last year for the children&rsquo;s beds.</p><footer>Debashis <span>&middot; Sakher Bazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>Needed an almirah to fit a 4 ft 2 in gap exactly. They measured, drew it, and it slid in with a finger&rsquo;s width to spare.</p><footer>Priyanka <span>&middot; New Alipore</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Our dining table is twenty-two years old and still does not have a single loose joint. We went back last year for the children&rsquo;s beds.</p><footer>Debashis <span data-nx-f="span">&middot; Sakher Bazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Needed an almirah to fit a 4 ft 2 in gap exactly. They measured, drew it, and it slid in with a finger&rsquo;s width to spare.</p><footer>Priyanka <span data-nx-f="span">&middot; New Alipore</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="tag">Visit</span>
-      <h2 class="h2">Showroom and workshop at Behala Chowrasta.</h2>
-      <p class="lead" style="margin-top:1rem">On Diamond Harbour Road, next to the petrol pump. The showroom is in front; walk through to see the workshop at the back. Parking inside the gate.</p>
+      <span data-nx="visit.tag" class="tag">Visit</span>
+      <h2 data-nx="visit.h2" class="h2">Showroom and workshop at Behala Chowrasta.</h2>
+      <p data-nx="visit.p" class="lead" style="margin-top:1rem">On Diamond Harbour Road, next to the petrol pump. The showroom is in front; walk through to see the workshop at the back. Parking inside the gate.</p>
     </div>
     <div class="visit">
       <div class="reveal">
         <div class="vrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>118 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p2">118 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="vrow">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Hours</b>
-            <table class="hours">
-              <tr><td>Wednesday to Monday</td><td>10:30 am &ndash; 8:30 pm</td></tr>
-              <tr><td>Tuesday</td><td>Closed</td></tr>
-              <tr><td>Home measurement visits</td><td>Any day, by appointment</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Wednesday to Monday</td><td data-nx-f="td2">10:30 am &ndash; 8:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Tuesday</td><td data-nx-f="td2">Closed</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Home measurement visits</td><td data-nx-f="td2">Any day, by appointment</td></tr>
             </table>
           </div>
         </div>
         <div class="vrow">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Send photos of what you want and we reply with a price the same day.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p3" style="font-size:.88rem;color:var(--muted)">Send photos of what you want and we reply with a price the same day.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--walnut" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bosu%20Kaath%20Ghar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -513,10 +518,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="quote">
+<section data-nx-section="quote" class="section final" id="quote">
   <div class="wrap reveal">
-    <h2>Send us a photo of the piece you want.</h2>
-    <p>A picture from a magazine, a screenshot, a rough sketch. Add the room size and we will send back a price and a date, usually within a few hours.</p>
+    <h2 data-nx="quote.h2">Send us a photo of the piece you want.</h2>
+    <p data-nx="quote.p">A picture from a magazine, a screenshot, a rough sketch. Add the room size and we will send back a price and a date, usually within a few hours.</p>
     <div class="final__cta">
       <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bosu%20Kaath%20Ghar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -531,31 +536,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="3" y="12" width="34" height="22" rx="2" fill="#E9DCC7"/><rect x="3" y="6" width="34" height="8" rx="2" fill="#B9893B"/><rect x="18" y="20" width="4" height="6" rx="1" fill="#5A3A22"/><path d="M7 34v3M33 34v3" stroke="#E9DCC7" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span><b>Bosu Kaath Ghar</b><small>Furniture &amp; workshop &middot; Behala</small></span>
+          <span><b data-nx="footer.b">Bosu Kaath Ghar</b><small data-nx="footer.small">Furniture &amp; workshop &middot; Behala</small></span>
         </a>
-        <p>Solid wood furniture made in our own workshop since 1979. Beds, almirahs, dining sets and custom pieces, delivered and fitted across Kolkata.</p>
+        <p data-nx="footer.p">Solid wood furniture made in our own workshop since 1979. Beds, almirahs, dining sets and custom pieces, delivered and fitted across Kolkata.</p>
       </div>
       <div>
-        <h4>Workshop</h4>
-        <ul>
-          <li><a href="#make">What we make</a></li>
-          <li><a href="#custom">Custom orders</a></li>
-          <li><a href="#prices">Price guide</a></li>
-          <li><a href="#care">Repair and re-polish</a></li>
+        <h4 data-nx="footer.h4">Workshop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#make">What we make</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#custom">Custom orders</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price guide</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#care">Repair and re-polish</a></li>
         </ul>
       </div>
       <div>
-        <h4>Visit</h4>
+        <h4 data-nx="footer.h42">Visit</h4>
         <ul>
-          <li>118 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
+          <li data-nx="footer.li">118 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Wed&ndash;Mon 10:30 am &ndash; 8:30 pm &middot; Tuesday closed</li>
+          <li data-nx="footer.li2">Wed&ndash;Mon 10:30 am &ndash; 8:30 pm &middot; Tuesday closed</li>
         </ul>
       </div>
     </div>
@@ -597,5 +602,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

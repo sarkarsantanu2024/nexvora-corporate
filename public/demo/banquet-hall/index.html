@@ -282,25 +282,34 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets, readable small text, rate table shows the first hall column */
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .rate{min-width:600px}
+  .rate th,.rate td{padding:.85rem .8rem}
+  .rate th:first-child,.rate td:first-child{width:190px;min-width:190px}
+  .footer__note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="banquet-hall">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rajbari%20Banquets%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Rajbari Banquets, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" fill="#D4B483"/><path d="M8 36V20l14-10 14 10v16z" fill="#33194C"/><path d="M22 10v-4M18 8h8" stroke="#33194C" stroke-width="2" stroke-linecap="round"/><path d="M16 36V26a6 6 0 0 1 12 0v10" fill="#D4B483"/><path d="M12 24h2M30 24h2" stroke="#D4B483" stroke-width="2" stroke-linecap="round"/></svg>
-      <span><b>Rajbari Banquets</b><small>Baguiati &middot; two halls</small></span>
+      <span><b data-nx="header.b">Rajbari Banquets</b><small data-nx="header.small">Baguiati &middot; two halls</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -323,115 +332,115 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__text reveal">
-      <span class="hero__eyebrow">Weddings &middot; Receptions &middot; Birthdays &middot; Corporate</span>
-      <h1>Two halls on VIP Road, <em>for 150 or 400 guests.</em></h1>
-      <p>Both air-conditioned, both with parking at the gate and rooms upstairs for the family. Bring your own caterer or use ours. The rate for the day is on this page, so you know before you call.</p>
+      <span data-nx="top.hero-eyebrow" class="hero__eyebrow">Weddings &middot; Receptions &middot; Birthdays &middot; Corporate</span>
+      <h1 data-nx="top.h1">Two halls on VIP Road, <em>for 150 or 400 guests.</em></h1>
+      <p data-nx="top.p">Both air-conditioned, both with parking at the gate and rooms upstairs for the family. Bring your own caterer or use ours. The rate for the day is on this page, so you know before you call.</p>
       <div class="hero__cta">
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rajbari%20Banquets%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Ask if your date is free
         </a>
-        <a class="btn btn--ghost-light" href="#rates">See the rate card</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#rates">See the rate card</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>150 + 400</b><span>Seats in two AC halls</span></li>
-        <li><b>40</b><span>Cars in the parking</span></li>
-        <li><b>4</b><span>AC rooms for the family</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">150 + 400</b><span data-nx-f="span">Seats in two AC halls</span></li>
+        <li data-nx-item><b data-nx-f="b">40</b><span data-nx-f="span">Cars in the parking</span></li>
+        <li data-nx-item><b data-nx-f="b">4</b><span data-nx-f="span">AC rooms for the family</span></li>
       </ul>
     </div>
     <div class="hero__photo reveal">
-      <img src="/demo/banquet-hall/images/hero.jpg" width="1200" height="800" alt="Banquet hall with chandeliers, painted ceiling and rows of covered chairs" fetchpriority="high">
-      <div class="hero__dates"><b>Dates go on WhatsApp</b><span>Send the date and the guest count. We reply within the hour with what is free and the rate.</span></div>
+      <img data-nx="top.photo" src="/demo/banquet-hall/images/hero.jpg" width="1200" height="800" alt="Banquet hall with chandeliers, painted ceiling and rows of covered chairs" fetchpriority="high">
+      <div class="hero__dates"><b data-nx="top.b">Dates go on WhatsApp</b><span data-nx="top.span">Send the date and the guest count. We reply within the hour with what is free and the rate.</span></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="halls">
+<section data-nx-section="halls" class="section" id="halls">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The two halls</span>
-      <h2 class="h2">Padma for a close gathering. Ganga for the whole para.</h2>
-      <p class="lead" style="margin-top:1rem">Both halls are on the ground floor with their own entrance, their own washrooms and their own dining area. On a big wedding you can take both.</p>
+      <span data-nx="halls.kicker" class="kicker">The two halls</span>
+      <h2 data-nx="halls.h2" class="h2">Padma for a close gathering. Ganga for the whole para.</h2>
+      <p data-nx="halls.p" class="lead" style="margin-top:1rem">Both halls are on the ground floor with their own entrance, their own washrooms and their own dining area. On a big wedding you can take both.</p>
     </div>
     <div class="halls">
       <article class="hall reveal">
-        <div class="hall__img"><img src="/demo/banquet-hall/images/hall-2.jpg" width="1200" height="800" alt="A smaller banquet hall with round tables and soft lighting" loading="lazy"><span class="hall__cap"><b>150</b>guests</span></div>
+        <div class="hall__img"><img data-nx="halls.photo" src="/demo/banquet-hall/images/hall-2.jpg" width="1200" height="800" alt="A smaller banquet hall with round tables and soft lighting" loading="lazy"><span data-nx="halls.hall-cap" class="hall__cap"><b>150</b>guests</span></div>
         <div class="hall__body">
-          <h3><small>Hall one</small>Padma</h3>
-          <p>For a birthday, annaprashan, engagement or a wedding of up to 150. Seating for 100 at a time and a buffet line along one wall.</p>
-          <ul class="spec">
-            <li><b>Floor area</b><span>2,400 sq ft</span></li>
-            <li><b>Seating</b><span>100 at tables, 150 standing</span></li>
-            <li><b>Dining</b><span>Same hall, buffet</span></li>
-            <li><b>Stage</b><span>12 ft x 8 ft</span></li>
-            <li><b>Family rooms</b><span>1 AC room</span></li>
-            <li><b>Washrooms</b><span>2 ladies, 2 gents</span></li>
+          <h3 data-nx="halls.h3"><small>Hall one</small>Padma</h3>
+          <p data-nx="halls.p2">For a birthday, annaprashan, engagement or a wedding of up to 150. Seating for 100 at a time and a buffet line along one wall.</p>
+          <ul data-nx-list="halls.spec" class="spec">
+            <li data-nx-item><b data-nx-f="b">Floor area</b><span data-nx-f="span">2,400 sq ft</span></li>
+            <li data-nx-item><b data-nx-f="b">Seating</b><span data-nx-f="span">100 at tables, 150 standing</span></li>
+            <li data-nx-item><b data-nx-f="b">Dining</b><span data-nx-f="span">Same hall, buffet</span></li>
+            <li data-nx-item><b data-nx-f="b">Stage</b><span data-nx-f="span">12 ft x 8 ft</span></li>
+            <li data-nx-item><b data-nx-f="b">Family rooms</b><span data-nx-f="span">1 AC room</span></li>
+            <li data-nx-item><b data-nx-f="b">Washrooms</b><span data-nx-f="span">2 ladies, 2 gents</span></li>
           </ul>
-          <div class="hall__from"><b>&#8377;35,000</b><span>per day, birthday rate &middot; see the rate card</span></div>
+          <div class="hall__from"><b data-nx="halls.b">&#8377;35,000</b><span data-nx="halls.span">per day, birthday rate &middot; see the rate card</span></div>
         </div>
       </article>
       <article class="hall reveal">
-        <div class="hall__img"><img src="/demo/banquet-hall/images/hall-large.jpg" width="1200" height="1800" alt="A large banquet hall with a long red carpet, chandeliers and a stage" loading="lazy"><span class="hall__cap"><b>400</b>guests</span></div>
+        <div class="hall__img"><img data-nx="halls.photo2" src="/demo/banquet-hall/images/hall-large.jpg" width="1200" height="1800" alt="A large banquet hall with a long red carpet, chandeliers and a stage" loading="lazy"><span data-nx="halls.hall-cap2" class="hall__cap"><b>400</b>guests</span></div>
         <div class="hall__body">
-          <h3><small>Hall two</small>Ganga</h3>
-          <p>For a wedding or reception of 250 to 400. A separate dining hall at the back seats 150 in one sitting, so the main hall stays for the ceremony and the guests.</p>
-          <ul class="spec">
-            <li><b>Floor area</b><span>6,000 sq ft plus dining</span></li>
-            <li><b>Seating</b><span>300 at chairs, 400 standing</span></li>
-            <li><b>Dining</b><span>Separate hall, 150 at a time</span></li>
-            <li><b>Stage</b><span>24 ft x 12 ft</span></li>
-            <li><b>Family rooms</b><span>3 AC rooms, 1 with attached bath</span></li>
-            <li><b>Washrooms</b><span>4 ladies, 4 gents</span></li>
+          <h3 data-nx="halls.h32"><small>Hall two</small>Ganga</h3>
+          <p data-nx="halls.p3">For a wedding or reception of 250 to 400. A separate dining hall at the back seats 150 in one sitting, so the main hall stays for the ceremony and the guests.</p>
+          <ul data-nx-list="halls.spec2" class="spec">
+            <li data-nx-item><b data-nx-f="b">Floor area</b><span data-nx-f="span">6,000 sq ft plus dining</span></li>
+            <li data-nx-item><b data-nx-f="b">Seating</b><span data-nx-f="span">300 at chairs, 400 standing</span></li>
+            <li data-nx-item><b data-nx-f="b">Dining</b><span data-nx-f="span">Separate hall, 150 at a time</span></li>
+            <li data-nx-item><b data-nx-f="b">Stage</b><span data-nx-f="span">24 ft x 12 ft</span></li>
+            <li data-nx-item><b data-nx-f="b">Family rooms</b><span data-nx-f="span">3 AC rooms, 1 with attached bath</span></li>
+            <li data-nx-item><b data-nx-f="b">Washrooms</b><span data-nx-f="span">4 ladies, 4 gents</span></li>
           </ul>
-          <div class="hall__from"><b>&#8377;85,000</b><span>per day, wedding rate &middot; see the rate card</span></div>
+          <div class="hall__from"><b data-nx="halls.b2">&#8377;85,000</b><span data-nx="halls.span2">per day, wedding rate &middot; see the rate card</span></div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="rates">
+<section data-nx-section="rates" class="section section--deep" id="rates">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Rate card</span>
-      <h2 class="h2">The rate for the day, by hall and by event.</h2>
-      <p class="lead" style="margin-top:1rem">One rate covers the hall from 8 in the morning to 11 at night. There is no extra charge for the family rooms, the parking or the stage.</p>
+      <span data-nx="rates.kicker" class="kicker">Rate card</span>
+      <h2 data-nx="rates.h2" class="h2">The rate for the day, by hall and by event.</h2>
+      <p data-nx="rates.p" class="lead" style="margin-top:1rem">One rate covers the hall from 8 in the morning to 11 at night. There is no extra charge for the family rooms, the parking or the stage.</p>
     </div>
     <div class="rate-wrap reveal">
       <table class="rate">
         <thead>
-          <tr><th scope="col">Event</th><th scope="col">Padma<small>150 guests</small></th><th scope="col">Ganga<small>400 guests</small></th><th scope="col">Both halls<small>Up to 550</small></th></tr>
+          <tr><th data-nx="rates.th" scope="col">Event</th><th data-nx="rates.th2" scope="col">Padma<small>150 guests</small></th><th data-nx="rates.th3" scope="col">Ganga<small>400 guests</small></th><th data-nx="rates.th4" scope="col">Both halls<small>Up to 550</small></th></tr>
         </thead>
         <tbody>
-          <tr><td><b>Wedding</b><small>Biye day with the mandap. Includes the night before for setup.</small></td><td><span class="amt">&#8377;55,000</span></td><td><span class="amt">&#8377;85,000</span><span class="sub">Most booked</span></td><td><span class="amt">&#8377;1,25,000</span></td></tr>
-          <tr><td><b>Reception</b><small>Bou bhaat or reception evening, 4 pm to 11 pm.</small></td><td><span class="amt">&#8377;45,000</span></td><td><span class="amt">&#8377;75,000</span></td><td><span class="amt">&#8377;1,10,000</span></td></tr>
-          <tr><td><b>Birthday, annaprashan, engagement</b><small>Half day, 8 hours, morning or evening.</small></td><td><span class="amt">&#8377;35,000</span></td><td><span class="amt">&#8377;60,000</span></td><td><span class="amt">&#8377;90,000</span></td></tr>
-          <tr><td><b>Corporate</b><small>Conference, dealer meet, annual day. Monday to Thursday, 9 am to 6 pm. Projector and mics included.</small></td><td><span class="amt">&#8377;28,000</span></td><td><span class="amt">&#8377;50,000</span></td><td><span class="amt">&#8377;75,000</span></td></tr>
-          <tr><td><b>Off-season discount</b><small>Ashar to Bhadra (mid June to mid September), any event.</small></td><td colspan="3"><span class="amt">20% off the rates above</span></td></tr>
+          <tr><td><b data-nx="rates.b">Wedding</b><small data-nx="rates.small">Biye day with the mandap. Includes the night before for setup.</small></td><td><span data-nx="rates.amt" class="amt">&#8377;55,000</span></td><td><span data-nx="rates.amt2" class="amt">&#8377;85,000</span><span data-nx="rates.sub" class="sub">Most booked</span></td><td><span data-nx="rates.amt3" class="amt">&#8377;1,25,000</span></td></tr>
+          <tr><td><b data-nx="rates.b2">Reception</b><small data-nx="rates.small2">Bou bhaat or reception evening, 4 pm to 11 pm.</small></td><td><span data-nx="rates.amt4" class="amt">&#8377;45,000</span></td><td><span data-nx="rates.amt5" class="amt">&#8377;75,000</span></td><td><span data-nx="rates.amt6" class="amt">&#8377;1,10,000</span></td></tr>
+          <tr><td><b data-nx="rates.b3">Birthday, annaprashan, engagement</b><small data-nx="rates.small3">Half day, 8 hours, morning or evening.</small></td><td><span data-nx="rates.amt7" class="amt">&#8377;35,000</span></td><td><span data-nx="rates.amt8" class="amt">&#8377;60,000</span></td><td><span data-nx="rates.amt9" class="amt">&#8377;90,000</span></td></tr>
+          <tr><td><b data-nx="rates.b4">Corporate</b><small data-nx="rates.small4">Conference, dealer meet, annual day. Monday to Thursday, 9 am to 6 pm. Projector and mics included.</small></td><td><span data-nx="rates.amt10" class="amt">&#8377;28,000</span></td><td><span data-nx="rates.amt11" class="amt">&#8377;50,000</span></td><td><span data-nx="rates.amt12" class="amt">&#8377;75,000</span></td></tr>
+          <tr><td><b data-nx="rates.b5">Off-season discount</b><small data-nx="rates.small5">Ashar to Bhadra (mid June to mid September), any event.</small></td><td colspan="3"><span data-nx="rates.amt13" class="amt">20% off the rates above</span></td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="rate__notes reveal">
-      <li>GST at 18% is added to the hall rate.</li>
-      <li>A refundable deposit of &#8377;10,000 is taken against breakage and returned within 3 days.</li>
-      <li>Generator backup is included. Electricity for a DJ or extra lights is charged at meter reading.</li>
-      <li>Hours after 11 pm are &#8377;3,000 per hour, allowed till midnight only.</li>
+    <ul data-nx-list="rates.rate-notes" class="rate__notes reveal">
+      <li data-nx-f="li" data-nx-item>GST at 18% is added to the hall rate.</li>
+      <li data-nx-f="li" data-nx-item>A refundable deposit of &#8377;10,000 is taken against breakage and returned within 3 days.</li>
+      <li data-nx-f="li" data-nx-item>Generator backup is included. Electricity for a DJ or extra lights is charged at meter reading.</li>
+      <li data-nx-f="li" data-nx-item>Hours after 11 pm are &#8377;3,000 per hour, allowed till midnight only.</li>
     </ul>
   </div>
 </section>
 
-<section class="section section--purple" id="included">
+<section data-nx-section="included" class="section section--purple" id="included">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What is included</span>
-      <h2 class="h2">What comes with the hall, and what does not.</h2>
+      <span data-nx="included.kicker" class="kicker">What is included</span>
+      <h2 data-nx="included.h2" class="h2">What comes with the hall, and what does not.</h2>
     </div>
-    <div class="incl">
-      <div class="incl__col reveal">
-        <h3>In the hall</h3>
+    <div data-nx-list="included.incl" class="incl">
+      <div data-nx-item class="incl__col reveal">
+        <h3 data-nx-f="h3">In the hall</h3>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Central AC, running from one hour before your start time</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Chairs with white covers and sashes in your colour</li>
@@ -441,8 +450,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Flower decoration, lighting, DJ (see below)</li>
         </ul>
       </div>
-      <div class="incl__col reveal">
-        <h3>For the family</h3>
+      <div data-nx-item class="incl__col reveal">
+        <h3 data-nx-f="h3">For the family</h3>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>AC rooms upstairs for the bride, the groom and the elders</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Rooms open from 8 am on the day, and the night before for weddings</li>
@@ -452,8 +461,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>Overnight stay for guests</li>
         </ul>
       </div>
-      <div class="incl__col reveal">
-        <h3>For the caterer</h3>
+      <div data-nx-item class="incl__col reveal">
+        <h3 data-nx-f="h3">For the caterer</h3>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Covered kitchen area with water, drainage and gas points</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Dining tables and chairs for the dining hall</li>
@@ -467,110 +476,110 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="rules">
+<section data-nx-section="rules" class="section" id="rules">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Caterer and decoration</span>
-      <h2 class="h2">Yours or ours. Both are fine.</h2>
+      <span data-nx="rules.kicker" class="kicker">Caterer and decoration</span>
+      <h2 data-nx="rules.h2" class="h2">Yours or ours. Both are fine.</h2>
     </div>
     <div class="rules">
       <div class="reveal">
-        <h3>Food: in-house or your own caterer</h3>
-        <p>Our in-house caterer serves Bengali and North Indian menus from &#8377;550 a plate (veg) and &#8377;750 (non-veg), with a tasting before you book. If you have a family caterer, bring them. There is no charge for an outside caterer and no commission.</p>
-        <p>The caterer gets the kitchen area from 6 am on the day. Cooking on open fire is allowed in the kitchen yard only. The caterer takes their rubbish away.</p>
-        <span class="tag">Outside caterer welcome</span><span class="tag">No corkage on food</span>
+        <h3 data-nx="rules.h3">Food: in-house or your own caterer</h3>
+        <p data-nx="rules.p">Our in-house caterer serves Bengali and North Indian menus from &#8377;550 a plate (veg) and &#8377;750 (non-veg), with a tasting before you book. If you have a family caterer, bring them. There is no charge for an outside caterer and no commission.</p>
+        <p data-nx="rules.p2">The caterer gets the kitchen area from 6 am on the day. Cooking on open fire is allowed in the kitchen yard only. The caterer takes their rubbish away.</p>
+        <span data-nx="rules.tag" class="tag">Outside caterer welcome</span><span data-nx="rules.tag2" class="tag">No corkage on food</span>
       </div>
       <div class="rules__img reveal">
-        <img src="/demo/banquet-hall/images/stage-red.jpg" width="1200" height="1800" alt="Wedding stage decorated with red and gold flowers" loading="lazy">
+        <img data-nx="rules.photo" src="/demo/banquet-hall/images/stage-red.jpg" width="1200" height="1800" alt="Wedding stage decorated with red and gold flowers" loading="lazy">
       </div>
       <div class="reveal">
-        <h3>Decoration: packages or your own decorator</h3>
-        <p>Our decorator does three fixed packages. Basic (stage flowers, entrance gate, chair sashes) &#8377;25,000. Standard (plus table centrepieces, ceiling drapes, name board) &#8377;45,000. Full (plus mandap, floral walkway, fairy lights outside) &#8377;80,000.</p>
-        <p>Outside decorators are allowed. They can start the evening before a wedding. Nails and tape on the walls are not allowed; stands and hooks are provided. DJ and live music till 10 pm, as the law requires.</p>
-        <span class="tag">Outside decorator allowed</span><span class="tag">Setup the night before</span>
+        <h3 data-nx="rules.h32">Decoration: packages or your own decorator</h3>
+        <p data-nx="rules.p3">Our decorator does three fixed packages. Basic (stage flowers, entrance gate, chair sashes) &#8377;25,000. Standard (plus table centrepieces, ceiling drapes, name board) &#8377;45,000. Full (plus mandap, floral walkway, fairy lights outside) &#8377;80,000.</p>
+        <p data-nx="rules.p4">Outside decorators are allowed. They can start the evening before a wedding. Nails and tape on the walls are not allowed; stands and hooks are provided. DJ and live music till 10 pm, as the law requires.</p>
+        <span data-nx="rules.tag3" class="tag">Outside decorator allowed</span><span data-nx="rules.tag4" class="tag">Setup the night before</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="booking">
+<section data-nx-section="booking" class="section section--deep" id="booking">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">How booking works</span>
-      <h2 class="h2">Five steps from a message to the wedding day.</h2>
+      <span data-nx="booking.kicker" class="kicker">How booking works</span>
+      <h2 data-nx="booking.h2" class="h2">Five steps from a message to the wedding day.</h2>
     </div>
-    <ol class="steps reveal">
-      <li><h3>Send the date</h3><p>WhatsApp the date, the event and the guest count. We tell you which hall is free and the rate.</p></li>
-      <li><h3>See the hall</h3><p>Walk in any day between 10 and 7. If there is an event on, we show you the other hall and the rooms.</p></li>
-      <li><h3>Pay the advance</h3><p>50% of the hall rate holds the date. UPI, cheque or bank transfer. You get a receipt and a booking letter.</p></li>
-      <li><h3>Plan the day</h3><p>A month before, we sit with you and your caterer and decorator for an hour and write down the timings.</p></li>
-      <li><h3>Settle after</h3><p>The balance and any extra hours are paid the next morning. The deposit comes back within 3 days.</p></li>
+    <ol data-nx-list="booking.steps" class="steps reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Send the date</h3><p data-nx-f="p">WhatsApp the date, the event and the guest count. We tell you which hall is free and the rate.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">See the hall</h3><p data-nx-f="p">Walk in any day between 10 and 7. If there is an event on, we show you the other hall and the rooms.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Pay the advance</h3><p data-nx-f="p">50% of the hall rate holds the date. UPI, cheque or bank transfer. You get a receipt and a booking letter.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Plan the day</h3><p data-nx-f="p">A month before, we sit with you and your caterer and decorator for an hour and write down the timings.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Settle after</h3><p data-nx-f="p">The balance and any extra hours are paid the next morning. The deposit comes back within 3 days.</p></li>
     </ol>
-    <p class="lead" style="margin:2.5rem auto 0;text-align:center;font-size:.95rem">Cancellation: the advance is returned in full if you cancel 90 days ahead, half if 30 days ahead, and kept after that. If we can re-book the date, you get it back anyway.</p>
+    <p data-nx="booking.p" class="lead" style="margin:2.5rem auto 0;text-align:center;font-size:.95rem">Cancellation: the advance is returned in full if you cancel 90 days ahead, half if 30 days ahead, and kept after that. If we can re-book the date, you get it back anyway.</p>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Recent events</span>
-      <h2 class="h2">Weddings and receptions held here.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Recent events</span>
+      <h2 data-nx="gallery.h2" class="h2">Weddings and receptions held here.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/banquet-hall/images/stage.jpg" width="1200" height="1799" alt="Wedding stage with bright floral arrangements" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/bengali-wedding.jpg" width="1200" height="800" alt="A Bengali wedding ceremony with the priest, bride and groom" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/mandap.jpg" width="1200" height="800" alt="Floral wedding mandap with chandeliers" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/reception-couple.jpg" width="1200" height="801" alt="A couple on a flower-decorated reception stage" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/family.jpg" width="1200" height="798" alt="A wedding couple with family on the stage" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/stage.jpg" width="1200" height="1799" alt="Wedding stage with bright floral arrangements" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/bengali-wedding.jpg" width="1200" height="800" alt="A Bengali wedding ceremony with the priest, bride and groom" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/mandap.jpg" width="1200" height="800" alt="Floral wedding mandap with chandeliers" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/reception-couple.jpg" width="1200" height="801" alt="A couple on a flower-decorated reception stage" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/family.jpg" width="1200" height="798" alt="A wedding couple with family on the stage" loading="lazy"></li>
     </ul>
-    <ul class="gallery reveal" style="margin-top:.8rem;grid-template-rows:repeat(2,minmax(140px,16vw))">
-      <li><img src="/demo/banquet-hall/images/hall-chandelier.jpg" width="1200" height="1800" alt="Banquet hall with chandeliers set for an event" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/ballroom.jpg" width="1200" height="800" alt="Ballroom set up with round tables" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/mandap-2.jpg" width="1200" height="1800" alt="Traditional wedding mandap decorated with flowers" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/seating.jpg" width="1200" height="800" alt="Banquet hall seating with decor" loading="lazy"></li>
-      <li><img src="/demo/banquet-hall/images/hall-3.jpg" width="1200" height="800" alt="Wedding hall interior with chandeliers" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery2" class="gallery reveal" style="margin-top:.8rem;grid-template-rows:repeat(2,minmax(140px,16vw))">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/hall-chandelier.jpg" width="1200" height="1800" alt="Banquet hall with chandeliers set for an event" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/ballroom.jpg" width="1200" height="800" alt="Ballroom set up with round tables" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/mandap-2.jpg" width="1200" height="1800" alt="Traditional wedding mandap decorated with flowers" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/seating.jpg" width="1200" height="800" alt="Banquet hall seating with decor" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/banquet-hall/images/hall-3.jpg" width="1200" height="800" alt="Wedding hall interior with chandeliers" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What families say</span>
-      <h2 class="h2">After the event.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What families say</span>
+      <h2 data-nx="section-9.h2" class="h2">After the event.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>We took both halls for my brother&rsquo;s wedding, 480 guests. The dining hall at the back meant nobody queued in the main hall. Parking was sorted, the rooms were clean, and the bill matched the rate card.</p><footer>Sayantani <span>&middot; Kestopur</span></footer></blockquote>
-      <blockquote class="reveal"><p>Birthday for my daughter in Padma, 120 people. We brought our own caterer and our own decorator and nobody asked for a single rupee extra. The manager stayed till the last guest left.</p><footer>Rajib <span>&middot; Baguiati</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">We took both halls for my brother&rsquo;s wedding, 480 guests. The dining hall at the back meant nobody queued in the main hall. Parking was sorted, the rooms were clean, and the bill matched the rate card.</p><footer>Sayantani <span data-nx-f="span">&middot; Kestopur</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Birthday for my daughter in Padma, 120 people. We brought our own caterer and our own decorator and nobody asked for a single rupee extra. The manager stayed till the last guest left.</p><footer>Rajib <span data-nx-f="span">&middot; Baguiati</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the hall</span>
-      <h2 class="h2">On VIP Road, next to the Baguiati flyover.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the hall</span>
+      <h2 data-nx="visit.h2" class="h2">On VIP Road, next to the Baguiati flyover.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>88 VIP Road, Baguiati<br>Kolkata 700059</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=88%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">88 VIP Road, Baguiati<br>Kolkata 700059</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=88%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours for viewing</b>
-            <table class="hours">
-              <tr><td>Every day</td><td>10:00 am &ndash; 7:00 pm</td></tr>
-              <tr><td>Event days</td><td>Hall open 8 am &ndash; 11 pm</td></tr>
-              <tr><td>Phone</td><td>9 am &ndash; 9 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours for viewing</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Every day</td><td data-nx-f="td2">10:00 am &ndash; 7:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Event days</td><td data-nx-f="td2">Hall open 8 am &ndash; 11 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Phone</td><td data-nx-f="td2">9 am &ndash; 9 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">15 minutes from the airport. Auto and bus stop at the gate.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">15 minutes from the airport. Auto and bus stop at the gate.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--purple" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rajbari%20Banquets%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -584,10 +593,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Send the date. We will tell you what is free.</h2>
-    <p>Date, event and a rough guest count. You will hear back within the hour with the hall, the rate and a time to come and see it.</p>
+    <h2 data-nx="book.h2">Send the date. We will tell you what is free.</h2>
+    <p data-nx="book.p">Date, event and a rough guest count. You will hear back within the hour with the hall, the rate and a time to come and see it.</p>
     <div class="final__cta">
       <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rajbari%20Banquets%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -602,31 +611,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" fill="#D4B483"/><path d="M8 36V20l14-10 14 10v16z" fill="#33194C"/><path d="M22 10v-4M18 8h8" stroke="#33194C" stroke-width="2" stroke-linecap="round"/><path d="M16 36V26a6 6 0 0 1 12 0v10" fill="#D4B483"/><path d="M12 24h2M30 24h2" stroke="#D4B483" stroke-width="2" stroke-linecap="round"/></svg>
-          <span><b>Rajbari Banquets</b><small>Baguiati &middot; two halls</small></span>
+          <span><b data-nx="footer.b">Rajbari Banquets</b><small data-nx="footer.small">Baguiati &middot; two halls</small></span>
         </a>
-        <p>Two AC halls for 150 and 400 guests on VIP Road. Parking, family rooms, your caterer or ours, and the rate written down before you book.</p>
+        <p data-nx="footer.p">Two AC halls for 150 and 400 guests on VIP Road. Parking, family rooms, your caterer or ours, and the rate written down before you book.</p>
       </div>
       <div>
-        <h4>The hall</h4>
-        <ul>
-          <li><a href="#halls">Padma and Ganga</a></li>
-          <li><a href="#rates">Rate card</a></li>
-          <li><a href="#included">What is included</a></li>
-          <li><a href="#booking">How booking works</a></li>
+        <h4 data-nx="footer.h4">The hall</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#halls">Padma and Ganga</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#rates">Rate card</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#included">What is included</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#booking">How booking works</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>88 VIP Road, Baguiati, Kolkata 700059</li>
+          <li data-nx="footer.li">88 VIP Road, Baguiati, Kolkata 700059</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Viewing every day 10 am &ndash; 7 pm</li>
+          <li data-nx="footer.li2">Viewing every day 10 am &ndash; 7 pm</li>
         </ul>
       </div>
     </div>
@@ -668,5 +677,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -261,6 +261,12 @@ table{border-collapse:collapse;width:100%}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:860px){.flow li::before{grid-column:1;grid-row:1/3}.flow h3,.flow p{grid-column:2}.flow p{max-width:none}}
+@media (max-width:760px){
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -293,24 +299,22 @@ table{border-collapse:collapse;width:100%}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="pharmacy">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bhattacharya Medical Hall, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#1F5E3A"/><path d="M18 10h8v8h8v8h-8v8h-8v-8h-8v-8h8v-8Z" fill="#fff"/><circle cx="34" cy="10" r="4" fill="#F5B82E"/></svg>
-      <span><b>Bhattacharya Medical Hall</b><small>Behala &middot; since 1989</small></span>
+      <span><b data-nx="header.b">Bhattacharya Medical Hall</b><small data-nx="header.small">Behala &middot; since 1989</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -333,12 +337,12 @@ table{border-collapse:collapse;width:100%}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__text">
-      <p class="hero__open"><span></span>Open every day, 7:30 am to midnight</p>
-      <h1>Your prescription, <em>at your door</em> in under two hours.</h1>
-      <p>A medicine shop on Diamond Harbour Road since 1989. Send a photo of the prescription on WhatsApp and we deliver across Behala. Generic options, baby products, BP and sugar check at the counter, and a monthly box for parents who live alone.</p>
+      <p data-nx="top.hero-open" class="hero__open"><span></span>Open every day, 7:30 am to midnight</p>
+      <h1 data-nx="top.h1">Your prescription, <em>at your door</em> in under two hours.</h1>
+      <p data-nx="top.p">A medicine shop on Diamond Harbour Road since 1989. Send a photo of the prescription on WhatsApp and we deliver across Behala. Generic options, baby products, BP and sugar check at the counter, and a monthly box for parents who live alone.</p>
       <div class="hero__cta">
         <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -348,124 +352,124 @@ table{border-collapse:collapse;width:100%}
       </div>
     </div>
     <div class="hero__band">
-      <img src="/demo/pharmacy/images/hero.jpg" width="1200" height="800" alt="The pharmacist stands behind the counter with arms folded, shelves of medicine boxes behind him" fetchpriority="high">
-      <ul class="hero__chips">
-        <li><div><b>2 hrs</b><span>Delivery inside Behala</span></div></li>
-        <li><div><b>&#8377;0</b><span>Delivery charge above &#8377;500</span></div></li>
-        <li><div><b>36 yrs</b><span>Same family, same corner</span></div></li>
-        <li><div><b>Till 12</b><span>Open late, every night</span></div></li>
+      <img data-nx="top.photo" src="/demo/pharmacy/images/hero.jpg" width="1200" height="800" alt="The pharmacist stands behind the counter with arms folded, shelves of medicine boxes behind him" fetchpriority="high">
+      <ul data-nx-list="top.hero-chips" class="hero__chips">
+        <li data-nx-item><div><b data-nx-f="b">2 hrs</b><span data-nx-f="span">Delivery inside Behala</span></div></li>
+        <li data-nx-item><div><b data-nx-f="b">&#8377;0</b><span data-nx-f="span">Delivery charge above &#8377;500</span></div></li>
+        <li data-nx-item><div><b data-nx-f="b">36 yrs</b><span data-nx-f="span">Same family, same corner</span></div></li>
+        <li data-nx-item><div><b data-nx-f="b">Till 12</b><span data-nx-f="span">Open late, every night</span></div></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="services">
+<section data-nx-section="services" class="section" id="services">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we do</span>
-      <h2 class="h2">More than handing over a strip.</h2>
-      <p class="lead">A registered pharmacist is at the counter during all hours. Ask about doses, timings, what goes with food and what does not.</p>
+      <span data-nx="services.kicker" class="kicker">What we do</span>
+      <h2 data-nx="services.h2" class="h2">More than handing over a strip.</h2>
+      <p data-nx="services.p" class="lead">A registered pharmacist is at the counter during all hours. Ask about doses, timings, what goes with food and what does not.</p>
     </div>
-    <ul class="svc">
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4V4Z"/><path d="M8 12h8M8 16h5"/></svg></div><h3>Prescription medicines</h3><p>Allopathic medicines of all the usual companies. If something is not in stock we get it by the evening or the next morning and send a message when it arrives.</p><span class="tagp">Bill with batch and expiry</span></li>
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3>Home delivery on WhatsApp</h3><p>Send a photo of the prescription and your address. We confirm the bill before sending. Delivery inside Behala in two hours, free above &#8377;500.</p><span class="tagp">7:30 am to 11 pm</span></li>
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg></div><h3>Generic medicines</h3><p>Same salt, lower price, from makers we trust. Ask and we show you both options side by side with the price. The choice is yours and your doctor's.</p><span class="tagp">Often 40 to 70% cheaper</span></li>
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div><h3>BP and sugar check</h3><p>Digital blood pressure and finger-prick sugar at the counter, any time we are open. You get the reading written on a card to show the doctor.</p><span class="tagp">BP free, sugar &#8377;30</span></li>
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4a4 4 0 0 1 4 4v1h2v11H6V9h2V8a4 4 0 0 1 4-4Z"/><path d="M9 14h6"/></svg></div><h3>Baby and mother care</h3><p>Formula, diapers, wipes, feeding bottles, oral rehydration, gripe water, nipple shields and the vitamin drops paediatricians prescribe. Pregnancy test kits too.</p><span class="tagp">Diapers by the piece</span></li>
-      <li class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Monthly medicine box</h3><p>For parents and elderly relatives who take the same medicines every month. We pack, label by time of day and deliver before the old strip runs out.</p><span class="tagp">From &#8377;99 a month</span></li>
+    <ul data-nx-list="services.svc" class="svc">
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4V4Z"/><path d="M8 12h8M8 16h5"/></svg></div><h3 data-nx-f="h3">Prescription medicines</h3><p data-nx-f="p">Allopathic medicines of all the usual companies. If something is not in stock we get it by the evening or the next morning and send a message when it arrives.</p><span data-nx-f="tagp" class="tagp">Bill with batch and expiry</span></li>
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3 data-nx-f="h3">Home delivery on WhatsApp</h3><p data-nx-f="p">Send a photo of the prescription and your address. We confirm the bill before sending. Delivery inside Behala in two hours, free above &#8377;500.</p><span data-nx-f="tagp" class="tagp">7:30 am to 11 pm</span></li>
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg></div><h3 data-nx-f="h3">Generic medicines</h3><p data-nx-f="p">Same salt, lower price, from makers we trust. Ask and we show you both options side by side with the price. The choice is yours and your doctor's.</p><span data-nx-f="tagp" class="tagp">Often 40 to 70% cheaper</span></li>
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div><h3 data-nx-f="h3">BP and sugar check</h3><p data-nx-f="p">Digital blood pressure and finger-prick sugar at the counter, any time we are open. You get the reading written on a card to show the doctor.</p><span data-nx-f="tagp" class="tagp">BP free, sugar &#8377;30</span></li>
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 4a4 4 0 0 1 4 4v1h2v11H6V9h2V8a4 4 0 0 1 4-4Z"/><path d="M9 14h6"/></svg></div><h3 data-nx-f="h3">Baby and mother care</h3><p data-nx-f="p">Formula, diapers, wipes, feeding bottles, oral rehydration, gripe water, nipple shields and the vitamin drops paediatricians prescribe. Pregnancy test kits too.</p><span data-nx-f="tagp" class="tagp">Diapers by the piece</span></li>
+      <li data-nx-item class="reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3 data-nx-f="h3">Monthly medicine box</h3><p data-nx-f="p">For parents and elderly relatives who take the same medicines every month. We pack, label by time of day and deliver before the old strip runs out.</p><span data-nx-f="tagp" class="tagp">From &#8377;99 a month</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--green" id="delivery">
+<section data-nx-section="delivery" class="section section--green" id="delivery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Home delivery</span>
-      <h2 class="h2">Three steps, no app to install.</h2>
+      <span data-nx="delivery.kicker" class="kicker">Home delivery</span>
+      <h2 data-nx="delivery.h2" class="h2">Three steps, no app to install.</h2>
     </div>
-    <ol class="flow reveal">
-      <li><h3>Send the prescription</h3><p>A clear photo on WhatsApp, with your address and the number of days you need. Old prescriptions for regular medicines are fine.</p></li>
-      <li><h3>We confirm the bill</h3><p>The pharmacist checks the stock and sends the total with each item listed. If a brand is missing we suggest a substitute and wait for your yes.</p></li>
-      <li><h3>Delivery in two hours</h3><p>Our own delivery boy, in a sealed bag with the printed bill. Pay by cash or UPI at the door. Returns of unopened strips within three days.</p></li>
+    <ol data-nx-list="delivery.flow" class="flow reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Send the prescription</h3><p data-nx-f="p">A clear photo on WhatsApp, with your address and the number of days you need. Old prescriptions for regular medicines are fine.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">We confirm the bill</h3><p data-nx-f="p">The pharmacist checks the stock and sends the total with each item listed. If a brand is missing we suggest a substitute and wait for your yes.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Delivery in two hours</h3><p data-nx-f="p">Our own delivery boy, in a sealed bag with the printed bill. Pay by cash or UPI at the door. Returns of unopened strips within three days.</p></li>
     </ol>
-    <div class="flow__photo reveal">
-      <img src="/demo/pharmacy/images/shelves-stock.jpg" width="1200" height="800" alt="The pharmacist reaches for a medicine box on a high shelf" loading="lazy">
-      <img src="/demo/pharmacy/images/counter-computer.jpg" width="1200" height="800" alt="A pharmacist checks stock on the computer at the counter" loading="lazy">
-      <img src="/demo/pharmacy/images/blister-packs.jpg" width="1200" height="800" alt="Colourful tablet strips in a row" loading="lazy">
+    <div data-nx-list="delivery.flow-photo" class="flow__photo reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/pharmacy/images/shelves-stock.jpg" width="1200" height="800" alt="The pharmacist reaches for a medicine box on a high shelf" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/pharmacy/images/counter-computer.jpg" width="1200" height="800" alt="A pharmacist checks stock on the computer at the counter" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/pharmacy/images/blister-packs.jpg" width="1200" height="800" alt="Colourful tablet strips in a row" loading="lazy">
     </div>
     <div class="flow__note reveal">
-      <p><b>Delivery areas:</b> Behala, Sakher Bazar, Parnasree, Barisha, Thakurpukur, James Long Sarani and Taratala. Beyond that, &#8377;40 per delivery, same day.</p>
+      <p data-nx="delivery.p"><b>Delivery areas:</b> Behala, Sakher Bazar, Parnasree, Barisha, Thakurpukur, James Long Sarani and Taratala. Beyond that, &#8377;40 per delivery, same day.</p>
       <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Upload prescription</a>
     </div>
   </div>
 </section>
 
-<section class="section" id="checks">
+<section data-nx-section="checks" class="section" id="checks">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">At the counter</span>
-      <h2 class="h2">Quick checks, so you do not need a clinic visit for a reading.</h2>
-      <p class="lead">We write the reading on a card with the date. Bring the card on your next doctor visit. We do not advise changing any dose; that is the doctor's call.</p>
+      <span data-nx="checks.kicker" class="kicker">At the counter</span>
+      <h2 data-nx="checks.h2" class="h2">Quick checks, so you do not need a clinic visit for a reading.</h2>
+      <p data-nx="checks.p" class="lead">We write the reading on a card with the date. Bring the card on your next doctor visit. We do not advise changing any dose; that is the doctor's call.</p>
     </div>
     <div class="checks">
-      <ul class="checks__list reveal">
-        <li><div><b>Blood pressure</b><small>Digital upper-arm machine, seated, after two minutes of rest</small></div><span class="amt free">Free</span></li>
-        <li><div><b>Blood sugar (random or fasting)</b><small>Finger prick, result in ten seconds</small></div><span class="amt">&#8377;30</span></li>
-        <li><div><b>Weight and height</b><small>BMI written on the card</small></div><span class="amt free">Free</span></li>
-        <li><div><b>Oxygen level and pulse</b><small>Finger pulse oximeter</small></div><span class="amt free">Free</span></li>
-        <li><div><b>Temperature</b><small>Infrared forehead thermometer</small></div><span class="amt free">Free</span></li>
-        <li><div><b>Injection by a nurse</b><small>Prescribed injections only, Mon to Sat, 10 am to 1 pm and 6 pm to 8 pm</small></div><span class="amt">&#8377;50</span></li>
-        <li><div><b>Nebulisation</b><small>Bring your own medicine or buy here; mask included</small></div><span class="amt">&#8377;60</span></li>
+      <ul data-nx-list="checks.checks-list" class="checks__list reveal">
+        <li data-nx-item><div><b data-nx-f="b">Blood pressure</b><small data-nx-f="small">Digital upper-arm machine, seated, after two minutes of rest</small></div><span data-nx-f="amt" class="amt free">Free</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Blood sugar (random or fasting)</b><small data-nx-f="small">Finger prick, result in ten seconds</small></div><span data-nx-f="amt" class="amt">&#8377;30</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Weight and height</b><small data-nx-f="small">BMI written on the card</small></div><span data-nx-f="amt" class="amt free">Free</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Oxygen level and pulse</b><small data-nx-f="small">Finger pulse oximeter</small></div><span data-nx-f="amt" class="amt free">Free</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Temperature</b><small data-nx-f="small">Infrared forehead thermometer</small></div><span data-nx-f="amt" class="amt free">Free</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Injection by a nurse</b><small data-nx-f="small">Prescribed injections only, Mon to Sat, 10 am to 1 pm and 6 pm to 8 pm</small></div><span data-nx-f="amt" class="amt">&#8377;50</span></li>
+        <li data-nx-item><div><b data-nx-f="b">Nebulisation</b><small data-nx-f="small">Bring your own medicine or buy here; mask included</small></div><span data-nx-f="amt" class="amt">&#8377;60</span></li>
       </ul>
-      <div class="checks__fig reveal">
-        <img src="/demo/pharmacy/images/bp-reading.jpg" width="1200" height="1800" alt="A finger presses the button on a digital blood pressure monitor on the counter" loading="lazy">
-        <img src="/demo/pharmacy/images/sugar-check.jpg" width="1200" height="2134" alt="A gloved hand pricks a fingertip with a lancet pen for a sugar test" loading="lazy">
+      <div data-nx-list="checks.checks-fig" class="checks__fig reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/pharmacy/images/bp-reading.jpg" width="1200" height="1800" alt="A finger presses the button on a digital blood pressure monitor on the counter" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/pharmacy/images/sugar-check.jpg" width="1200" height="2134" alt="A gloved hand pricks a fingertip with a lancet pen for a sugar test" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="monthly">
+<section data-nx-section="monthly" class="section section--paper" id="monthly">
   <div class="wrap sub">
     <div class="reveal">
-      <span class="kicker">Monthly medicine box</span>
-      <h2 class="h2">For parents who live alone and children who live far away.</h2>
-      <p class="lead" style="margin-top:1rem">Many of our customers are sons and daughters in Bangalore, Pune or abroad, paying for a mother in Behala. The box takes the monthly worry out of it.</p>
-      <ul class="sub__pts">
-        <li><span class="n">1</span><div><h3>Send the prescription once</h3><p>We keep it on file and note the doctor's review date. When the prescription is due to be renewed we remind you two weeks before.</p></div></li>
-        <li><span class="n">2</span><div><h3>Packed by time of day</h3><p>Strips are cut and sorted into a weekly pill organiser: morning, afternoon, night. Each medicine's name and purpose is written in Bengali and English on the lid.</p></div></li>
-        <li><span class="n">3</span><div><h3>Delivered before the last dose</h3><p>We deliver on a fixed date each month, three days before the previous box runs out. The delivery boy checks the BP if asked and sends you the reading.</p></div></li>
-        <li><span class="n">4</span><div><h3>One bill, paid from anywhere</h3><p>A UPI link or bank transfer each month, with a photo of the bill and the organiser. No advance, cancel any month.</p></div></li>
+      <span data-nx="monthly.kicker" class="kicker">Monthly medicine box</span>
+      <h2 data-nx="monthly.h2" class="h2">For parents who live alone and children who live far away.</h2>
+      <p data-nx="monthly.p" class="lead" style="margin-top:1rem">Many of our customers are sons and daughters in Bangalore, Pune or abroad, paying for a mother in Behala. The box takes the monthly worry out of it.</p>
+      <ul data-nx-list="monthly.sub-pts" class="sub__pts">
+        <li data-nx-item><span data-nx-f="n" class="n">1</span><div><h3 data-nx-f="h3">Send the prescription once</h3><p data-nx-f="p">We keep it on file and note the doctor's review date. When the prescription is due to be renewed we remind you two weeks before.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">2</span><div><h3 data-nx-f="h3">Packed by time of day</h3><p data-nx-f="p">Strips are cut and sorted into a weekly pill organiser: morning, afternoon, night. Each medicine's name and purpose is written in Bengali and English on the lid.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">3</span><div><h3 data-nx-f="h3">Delivered before the last dose</h3><p data-nx-f="p">We deliver on a fixed date each month, three days before the previous box runs out. The delivery boy checks the BP if asked and sends you the reading.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">4</span><div><h3 data-nx-f="h3">One bill, paid from anywhere</h3><p data-nx-f="p">A UPI link or bank transfer each month, with a photo of the bill and the organiser. No advance, cancel any month.</p></div></li>
       </ul>
     </div>
     <aside class="sub__card reveal">
-      <h3>Monthly box</h3>
-      <p class="amt">&#8377;99 <small>a month, plus the medicines at shop price</small></p>
-      <ul>
-        <li>Pill organiser and labelling</li>
-        <li>Free delivery on the fixed date</li>
-        <li>Prescription renewal reminder</li>
-        <li>BP check at the door on request</li>
-        <li>WhatsApp photo of every delivery</li>
-        <li>Generic substitution only if you ask</li>
+      <h3 data-nx="monthly.h3">Monthly box</h3>
+      <p data-nx="monthly.amt" class="amt">&#8377;99 <small>a month, plus the medicines at shop price</small></p>
+      <ul data-nx-list="monthly.list">
+        <li data-nx-f="li" data-nx-item>Pill organiser and labelling</li>
+        <li data-nx-f="li" data-nx-item>Free delivery on the fixed date</li>
+        <li data-nx-f="li" data-nx-item>Prescription renewal reminder</li>
+        <li data-nx-f="li" data-nx-item>BP check at the door on request</li>
+        <li data-nx-f="li" data-nx-item>WhatsApp photo of every delivery</li>
+        <li data-nx-f="li" data-nx-item>Generic substitution only if you ask</li>
       </ul>
       <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Set up a monthly box</a>
-      <p class="fine">About 140 families use the box today. Free for anyone above 80.</p>
+      <p data-nx="monthly.fine" class="fine">About 140 families use the box today. Free for anyone above 80.</p>
     </aside>
   </div>
 </section>
 
-<section class="section" id="products">
+<section data-nx-section="products" class="section" id="products">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">On the shelves</span>
-      <h2 class="h2">What you will find besides medicines.</h2>
+      <span data-nx="products.kicker" class="kicker">On the shelves</span>
+      <h2 data-nx="products.h2" class="h2">What you will find besides medicines.</h2>
     </div>
-    <ul class="shelf reveal">
-      <li><img src="/demo/pharmacy/images/formula-scoop.jpg" width="1200" height="801" alt="A scoop of baby formula powder beside a feeding bottle" loading="lazy"><div><h3>Baby care</h3><p>Formula, diapers, wipes, bottles, rash cream, vitamin drops</p></div></li>
-      <li><img src="/demo/pharmacy/images/bp-monitor.jpg" width="1200" height="800" alt="A digital blood pressure monitor on a white table" loading="lazy"><div><h3>Home devices</h3><p>BP monitors, glucometers and strips, thermometers, oximeters, nebulisers</p></div></li>
-      <li><img src="/demo/pharmacy/images/band-aids.jpg" width="1200" height="800" alt="Adhesive bandages on a blue surface" loading="lazy"><div><h3>First aid</h3><p>Bandages, antiseptic, cotton, crepe bandage, knee caps, lumbar belts</p></div></li>
-      <li><img src="/demo/pharmacy/images/syrup-spoon.jpg" width="1200" height="1800" alt="Cough syrup being poured into a spoon" loading="lazy"><div><h3>Everyday care</h3><p>ORS, antacids, cough syrup, pain balm, sanitary pads, adult diapers, sugar-free</p></div></li>
+    <ul data-nx-list="products.shelf" class="shelf reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/formula-scoop.jpg" width="1200" height="801" alt="A scoop of baby formula powder beside a feeding bottle" loading="lazy"><div><h3 data-nx-f="h3">Baby care</h3><p data-nx-f="p">Formula, diapers, wipes, bottles, rash cream, vitamin drops</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/bp-monitor.jpg" width="1200" height="800" alt="A digital blood pressure monitor on a white table" loading="lazy"><div><h3 data-nx-f="h3">Home devices</h3><p data-nx-f="p">BP monitors, glucometers and strips, thermometers, oximeters, nebulisers</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/band-aids.jpg" width="1200" height="800" alt="Adhesive bandages on a blue surface" loading="lazy"><div><h3 data-nx-f="h3">First aid</h3><p data-nx-f="p">Bandages, antiseptic, cotton, crepe bandage, knee caps, lumbar belts</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/syrup-spoon.jpg" width="1200" height="1800" alt="Cough syrup being poured into a spoon" loading="lazy"><div><h3 data-nx-f="h3">Everyday care</h3><p data-nx-f="p">ORS, antacids, cough syrup, pain balm, sanitary pads, adult diapers, sugar-free</p></div></li>
     </ul>
   </div>
 </section>
@@ -480,60 +484,60 @@ table{border-collapse:collapse;width:100%}
   </div>
 </div>
 
-<section class="section section--paper" id="gallery">
+<section data-nx-section="gallery" class="section section--paper" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">The shop</span>
-      <h2 class="h2">One counter, three people, every shelf labelled.</h2>
+      <span data-nx="gallery.kicker" class="kicker">The shop</span>
+      <h2 data-nx="gallery.h2" class="h2">One counter, three people, every shelf labelled.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/pharmacy/images/pharmacist-shelf.jpg" width="1200" height="800" alt="The pharmacist reads the label on a medicine bottle in front of the shelves" loading="lazy"></li>
-      <li><img src="/demo/pharmacy/images/capsules.jpg" width="1200" height="1800" alt="Capsules in a blister strip, close up" loading="lazy"></li>
-      <li><img src="/demo/pharmacy/images/counter-smile.jpg" width="1200" height="800" alt="A smiling pharmacist at the billing counter" loading="lazy"></li>
-      <li><img src="/demo/pharmacy/images/thermometer-pills.jpg" width="1200" height="1800" alt="A digital thermometer beside a few capsules on a plate" loading="lazy"></li>
-      <li><img src="/demo/pharmacy/images/baby-shoes.jpg" width="1200" height="1800" alt="A pair of small blue baby shoes" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/pharmacist-shelf.jpg" width="1200" height="800" alt="The pharmacist reads the label on a medicine bottle in front of the shelves" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/capsules.jpg" width="1200" height="1800" alt="Capsules in a blister strip, close up" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/counter-smile.jpg" width="1200" height="800" alt="A smiling pharmacist at the billing counter" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/thermometer-pills.jpg" width="1200" height="1800" alt="A digital thermometer beside a few capsules on a plate" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pharmacy/images/baby-shoes.jpg" width="1200" height="1800" alt="A pair of small blue baby shoes" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="words">
+<section data-nx-section="words" class="section" id="words">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Customers say</span>
-      <h2 class="h2">Two messages from the WhatsApp inbox.</h2>
+      <span data-nx="words.kicker" class="kicker">Customers say</span>
+      <h2 data-nx="words.h2" class="h2">Two messages from the WhatsApp inbox.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>"I live in Hyderabad. Ma's box reaches her on the 3rd every month and I get a photo of it on her table. That photo is worth more than the medicines."</p><footer>Priyanka <span>&middot; for her mother in Parnasree</span></footer></blockquote>
-      <blockquote class="reveal"><p>"Fever at 11 at night, the baby's paracetamol was finished. Sent a message, the boy was at the door in 25 minutes. I did not expect that."</p><footer>Tanmoy <span>&middot; Sakher Bazar</span></footer></blockquote>
+    <div data-nx-list="words.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">"I live in Hyderabad. Ma's box reaches her on the 3rd every month and I get a photo of it on her table. That photo is worth more than the medicines."</p><footer>Priyanka <span data-nx-f="span">&middot; for her mother in Parnasree</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">"Fever at 11 at night, the baby's paracetamol was finished. Sent a message, the boy was at the door in 25 minutes. I did not expect that."</p><footer>Tanmoy <span data-nx-f="span">&middot; Sakher Bazar</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="visit">
+<section data-nx-section="visit" class="section section--paper" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">Diamond Harbour Road, at the Behala Chowrasta bus stop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">Diamond Harbour Road, at the Behala Chowrasta bus stop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>118 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">118 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Shop hours</b>
-            <table class="hours">
-              <tr><td>Every day</td><td>7:30 am &ndash; 12:00 midnight</td></tr>
-              <tr><td>Home delivery</td><td>7:30 am &ndash; 11:00 pm</td></tr>
-              <tr><td>Nurse for injections</td><td>Mon&ndash;Sat, 10 am &ndash; 1 pm, 6 pm &ndash; 8 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Shop hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Every day</td><td data-nx-f="td2">7:30 am &ndash; 12:00 midnight</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Home delivery</td><td data-nx-f="td2">7:30 am &ndash; 11:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Nurse for injections</td><td data-nx-f="td2">Mon&ndash;Sat, 10 am &ndash; 1 pm, 6 pm &ndash; 8 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Drug licence number is displayed at the counter. Pharmacist in charge: Pranab Bhattacharya, B.Pharm.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Drug licence number is displayed at the counter. Pharmacist in charge: Pranab Bhattacharya, B.Pharm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -547,10 +551,10 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<section class="section final" id="order">
+<section data-nx-section="order" class="section final" id="order">
   <div class="wrap reveal">
-    <h2>Out of a medicine? Send the photo now.</h2>
-    <p>We reply with the bill in a few minutes and the packet reaches you in under two hours, anywhere in Behala.</p>
+    <h2 data-nx="order.h2">Out of a medicine? Send the photo now.</h2>
+    <p data-nx="order.p">We reply with the bill in a few minutes and the packet reaches you in under two hours, anywhere in Behala.</p>
     <div class="final__cta">
       <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Medical%20Hall%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -565,32 +569,32 @@ table{border-collapse:collapse;width:100%}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#F5B82E"/><path d="M18 10h8v8h8v8h-8v8h-8v-8h-8v-8h8v-8Z" fill="#154228"/><circle cx="34" cy="10" r="4" fill="#fff"/></svg>
-          <span><b>Bhattacharya Medical Hall</b><small>Behala &middot; since 1989</small></span>
+          <span><b data-nx="footer.b">Bhattacharya Medical Hall</b><small data-nx="footer.small">Behala &middot; since 1989</small></span>
         </a>
-        <p>Medicine shop open till midnight. Home delivery on WhatsApp, generic options, counter checks, and a monthly box for the elderly.</p>
+        <p data-nx="footer.p">Medicine shop open till midnight. Home delivery on WhatsApp, generic options, counter checks, and a monthly box for the elderly.</p>
       </div>
       <div>
-        <h4>On this page</h4>
-        <ul>
-          <li><a href="#services">What we do</a></li>
-          <li><a href="#delivery">Home delivery</a></li>
-          <li><a href="#checks">Counter checks</a></li>
-          <li><a href="#monthly">Monthly medicine box</a></li>
-          <li><a href="#products">On the shelves</a></li>
+        <h4 data-nx="footer.h4">On this page</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#services">What we do</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#delivery">Home delivery</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#checks">Counter checks</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#monthly">Monthly medicine box</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#products">On the shelves</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>118 Diamond Harbour Road, Behala, Kolkata 700034</li>
+          <li data-nx="footer.li">118 Diamond Harbour Road, Behala, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Every day 7:30 am &ndash; 12 midnight</li>
+          <li data-nx="footer.li2">Every day 7:30 am &ndash; 12 midnight</li>
         </ul>
       </div>
     </div>
@@ -632,5 +636,7 @@ table{border-collapse:collapse;width:100%}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

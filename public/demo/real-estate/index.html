@@ -307,25 +307,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone fixes */
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="real-estate">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bhattacharya Property Consultants, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#0F2A4A"/><path d="M11 22 22 12l11 10" fill="none" stroke="#C8663A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 21v11h14V21" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19.5" y="25" width="5" height="7" fill="#C8663A"/></svg>
-      <span><b>Bhattacharya Property</b><small>New Town &middot; since 2011</small></span>
+      <span><b data-nx="header.b">Bhattacharya Property</b><small data-nx="header.small">New Town &middot; since 2011</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -349,105 +354,105 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="hero__pill"><span>New</span>6 flats added this week</p>
-      <h1>Flats to buy or rent in <span>New Town, Salt Lake and Baguiati.</span></h1>
-      <p>We show you only flats we have seen ourselves. Brokerage is one month&rsquo;s rent, or 1% on a sale. Nothing else. Message us on WhatsApp and we fix a site visit for the same week.</p>
+      <p data-nx="top.hero-pill" class="hero__pill"><span>New</span>6 flats added this week</p>
+      <h1 data-nx="top.h1">Flats to buy or rent in <span>New Town, Salt Lake and Baguiati.</span></h1>
+      <p data-nx="top.p">We show you only flats we have seen ourselves. Brokerage is one month&rsquo;s rent, or 1% on a sale. Nothing else. Message us on WhatsApp and we fix a site visit for the same week.</p>
       <div class="hero__cta">
         <a class="btn btn--terra" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a site visit
         </a>
-        <a class="btn btn--ghost" href="#listings">See the flats</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#listings">See the flats</a>
       </div>
-      <ul class="hero__areas" aria-label="Areas we work in">
-        <li>New Town Action Area 1, 2, 3</li><li>Salt Lake Sector 1 to 5</li><li>Baguiati and Rajarhat</li>
+      <ul data-nx-list="top.hero-areas" class="hero__areas" aria-label="Areas we work in">
+        <li data-nx-f="li" data-nx-item>New Town Action Area 1, 2, 3</li><li data-nx-f="li" data-nx-item>Salt Lake Sector 1 to 5</li><li data-nx-f="li" data-nx-item>Baguiati and Rajarhat</li>
       </ul>
     </div>
     <div class="hero__photo">
-      <img src="/demo/real-estate/images/hero.jpg" width="1200" height="1600" alt="Tall residential towers with balconies seen from inside a housing complex" fetchpriority="high">
-      <div class="hero__stats">
-        <div><b>15</b><span>years in New Town</span></div>
-        <div><b>112</b><span>flats closed last year</span></div>
-        <div><b>3</b><span>neighbourhoods, one office</span></div>
+      <img data-nx="top.photo" src="/demo/real-estate/images/hero.jpg" width="1200" height="1600" alt="Tall residential towers with balconies seen from inside a housing complex" fetchpriority="high">
+      <div data-nx-list="top.hero-stats" class="hero__stats">
+        <div data-nx-item><b data-nx-f="b">15</b><span data-nx-f="span">years in New Town</span></div>
+        <div data-nx-item><b data-nx-f="b">112</b><span data-nx-f="span">flats closed last year</span></div>
+        <div data-nx-item><b data-nx-f="b">3</b><span data-nx-f="span">neighbourhoods, one office</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="listings">
+<section data-nx-section="listings" class="section" id="listings">
   <div class="wrap">
     <div class="head head--row reveal">
       <div>
-        <span class="kicker">Flats available now</span>
-        <h2 class="h2">Six flats we can show you this week.</h2>
-        <p class="lead" style="margin-top:1rem">Prices are what the owner has asked. Rent figures are per month, maintenance separate. Every flat here has been visited by us in the last 30 days.</p>
+        <span data-nx="listings.kicker" class="kicker">Flats available now</span>
+        <h2 data-nx="listings.h2" class="h2">Six flats we can show you this week.</h2>
+        <p data-nx="listings.p" class="lead" style="margin-top:1rem">Prices are what the owner has asked. Rent figures are per month, maintenance separate. Every flat here has been visited by us in the last 30 days.</p>
       </div>
       <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask for the full list</a>
     </div>
     <div class="filter" role="group" aria-label="Filter flats">
-      <input type="radio" name="f" id="f-all" checked><label for="f-all">All flats</label>
-      <input type="radio" name="f" id="f-sale"><label for="f-sale">For sale</label>
-      <input type="radio" name="f" id="f-rent"><label for="f-rent">For rent</label>
+      <input type="radio" name="f" id="f-all" checked><label data-nx="listings.label" for="f-all">All flats</label>
+      <input type="radio" name="f" id="f-sale"><label data-nx="listings.label2" for="f-sale">For sale</label>
+      <input type="radio" name="f" id="f-rent"><label data-nx="listings.label3" for="f-rent">For rent</label>
     <ul class="listings">
       <li class="card card--rent reveal">
-        <figure><img src="/demo/real-estate/images/living-neutral.jpg" width="1200" height="800" alt="Bright living room with a grey sofa and large windows" loading="lazy"><span class="badge">Rent</span></figure>
+        <figure><img data-nx="listings.photo" src="/demo/real-estate/images/living-neutral.jpg" width="1200" height="800" alt="Bright living room with a grey sofa and large windows" loading="lazy"><span data-nx="listings.badge" class="badge">Rent</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;21,000 <small>per month</small></p>
-          <h3>2 BHK, semi-furnished, lift and parking</h3>
-          <p class="card__loc">Action Area 1, New Town. Five minutes&rsquo; walk to the bus stand and a big market.</p>
+          <p data-nx="listings.card-price" class="card__price">&#8377;21,000 <small>per month</small></p>
+          <h3 data-nx="listings.h3">2 BHK, semi-furnished, lift and parking</h3>
+          <p data-nx="listings.card-loc" class="card__loc">Action Area 1, New Town. Five minutes&rsquo; walk to the bus stand and a big market.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>2 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>950 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>6th floor of 12</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
       </li>
       <li class="card card--sale reveal">
-        <figure><img src="/demo/real-estate/images/living-room.jpg" width="1200" height="674" alt="Living room with wooden panelling, white sofa and a balcony" loading="lazy"><span class="badge">Sale</span></figure>
+        <figure><img data-nx="listings.photo2" src="/demo/real-estate/images/living-room.jpg" width="1200" height="674" alt="Living room with wooden panelling, white sofa and a balcony" loading="lazy"><span data-nx="listings.badge2" class="badge">Sale</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;1.05 crore <small>negotiable</small></p>
-          <h3>3 BHK in a 2008 complex, two covered car parks</h3>
-          <p class="card__loc">Sector 2, Salt Lake. Near the stadium side, schools within 1 km.</p>
+          <p data-nx="listings.card-price2" class="card__price">&#8377;1.05 crore <small>negotiable</small></p>
+          <h3 data-nx="listings.h32">3 BHK in a 2008 complex, two covered car parks</h3>
+          <p data-nx="listings.card-loc2" class="card__loc">Sector 2, Salt Lake. Near the stadium side, schools within 1 km.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>3 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>1,350 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>2nd floor of 5</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
       </li>
       <li class="card card--rent reveal">
-        <figure><img src="/demo/real-estate/images/bedroom-pune.jpg" width="1200" height="800" alt="Small bedroom with a wooden bed and natural light from the window" loading="lazy"><span class="badge">Rent</span></figure>
+        <figure><img data-nx="listings.photo3" src="/demo/real-estate/images/bedroom-pune.jpg" width="1200" height="800" alt="Small bedroom with a wooden bed and natural light from the window" loading="lazy"><span data-nx="listings.badge3" class="badge">Rent</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;11,500 <small>per month</small></p>
-          <h3>1 BHK, good for one or two people</h3>
-          <p class="card__loc">Baguiati, off VIP Road. Auto stand at the gate, airport in 15 minutes.</p>
+          <p data-nx="listings.card-price3" class="card__price">&#8377;11,500 <small>per month</small></p>
+          <h3 data-nx="listings.h33">1 BHK, good for one or two people</h3>
+          <p data-nx="listings.card-loc3" class="card__loc">Baguiati, off VIP Road. Auto stand at the gate, airport in 15 minutes.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>1 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>620 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>3rd floor of 4, no lift</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
       </li>
       <li class="card card--sale reveal">
-        <figure><img src="/demo/real-estate/images/living-lux.jpg" width="1200" height="798" alt="Modern living room with a sofa, soft lighting and a television wall" loading="lazy"><span class="badge">Sale</span></figure>
+        <figure><img data-nx="listings.photo4" src="/demo/real-estate/images/living-lux.jpg" width="1200" height="798" alt="Modern living room with a sofa, soft lighting and a television wall" loading="lazy"><span data-nx="listings.badge4" class="badge">Sale</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;68 lakh <small>all inclusive</small></p>
-          <h3>2 BHK on a high floor, east facing, gated complex</h3>
-          <p class="card__loc">Action Area 2, New Town. Swimming pool, gym and a community hall in the complex.</p>
+          <p data-nx="listings.card-price4" class="card__price">&#8377;68 lakh <small>all inclusive</small></p>
+          <h3 data-nx="listings.h34">2 BHK on a high floor, east facing, gated complex</h3>
+          <p data-nx="listings.card-loc4" class="card__loc">Action Area 2, New Town. Swimming pool, gym and a community hall in the complex.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>2 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>1,050 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>9th floor of 14</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
       </li>
       <li class="card card--rent reveal">
-        <figure><img src="/demo/real-estate/images/bedroom-ahmedabad.jpg" width="1200" height="808" alt="Bedroom with red curtains, a double bed and a wardrobe" loading="lazy"><span class="badge">Rent</span></figure>
+        <figure><img data-nx="listings.photo5" src="/demo/real-estate/images/bedroom-ahmedabad.jpg" width="1200" height="808" alt="Bedroom with red curtains, a double bed and a wardrobe" loading="lazy"><span data-nx="listings.badge5" class="badge">Rent</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;32,000 <small>per month</small></p>
-          <h3>3 BHK, fully furnished, for a family or a company</h3>
-          <p class="card__loc">Sector 5 side of Salt Lake. Ten minutes to the IT offices, metro at College More.</p>
+          <p data-nx="listings.card-price5" class="card__price">&#8377;32,000 <small>per month</small></p>
+          <h3 data-nx="listings.h35">3 BHK, fully furnished, for a family or a company</h3>
+          <p data-nx="listings.card-loc5" class="card__loc">Sector 5 side of Salt Lake. Ten minutes to the IT offices, metro at College More.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>3 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>1,400 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>4th floor of 7</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
       </li>
       <li class="card card--sale reveal">
-        <figure><img src="/demo/real-estate/images/glass-doors.jpg" width="1200" height="1800" alt="Glass doors opening onto a small balcony with plants" loading="lazy"><span class="badge">Sale</span></figure>
+        <figure><img data-nx="listings.photo6" src="/demo/real-estate/images/glass-doors.jpg" width="1200" height="1800" alt="Glass doors opening onto a small balcony with plants" loading="lazy"><span data-nx="listings.badge6" class="badge">Sale</span></figure>
         <div class="card__body">
-          <p class="card__price">&#8377;48 lakh <small>registration extra</small></p>
-          <h3>2 BHK with a balcony, ready to move</h3>
-          <p class="card__loc">Chinar Park, Rajarhat. Resale flat, 2016 building, loan papers already in order.</p>
+          <p data-nx="listings.card-price6" class="card__price">&#8377;48 lakh <small>registration extra</small></p>
+          <h3 data-nx="listings.h36">2 BHK with a balcony, ready to move</h3>
+          <p data-nx="listings.card-loc6" class="card__loc">Chinar Park, Rajarhat. Resale flat, 2016 building, loan papers already in order.</p>
           <ul class="card__specs"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11v8M21 11v8M3 15h18M5 11V6h14v5"/></svg>2 BHK</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4zM4 12h16M12 4v16"/></svg>880 sq ft</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12"/></svg>5th floor of 8</li></ul>
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about this flat</a>
         </div>
@@ -457,50 +462,50 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--beige" id="areas">
+<section data-nx-section="areas" class="section section--beige" id="areas">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Where we work</span>
-      <h2 class="h2">Three neighbourhoods we know street by street.</h2>
-      <p class="lead" style="margin-top:1rem">Typical asking prices in 2026 for flats in decent condition. A flat in a new complex with a pool costs more; an older building without a lift costs less.</p>
+      <span data-nx="areas.kicker" class="kicker">Where we work</span>
+      <h2 data-nx="areas.h2" class="h2">Three neighbourhoods we know street by street.</h2>
+      <p data-nx="areas.p" class="lead" style="margin-top:1rem">Typical asking prices in 2026 for flats in decent condition. A flat in a new complex with a pool costs more; an older building without a lift costs less.</p>
     </div>
     <div class="areas">
       <article class="area reveal">
-        <img src="/demo/real-estate/images/newtown-street.jpg" width="1200" height="892" alt="Wide clean lane leading to modern residential towers in New Town, Kolkata" loading="lazy">
+        <img data-nx="areas.photo" src="/demo/real-estate/images/newtown-street.jpg" width="1200" height="892" alt="Wide clean lane leading to modern residential towers in New Town, Kolkata" loading="lazy">
         <div class="area__body">
-          <h3>New Town (Rajarhat)</h3>
-          <p>Planned roads, gated complexes, the IT offices and Eco Park. Most of our work is here. Action Area 1 is older and better connected; Action Area 2 and 3 have newer buildings.</p>
-          <ul class="area__ranges">
-            <li><b>&#8377;17,000 &ndash; 26,000</b><span>2 BHK rent per month</span></li>
-            <li><b>&#8377;58 &ndash; 80 lakh</b><span>2 BHK to buy</span></li>
-            <li><b>&#8377;26,000 &ndash; 40,000</b><span>3 BHK rent per month</span></li>
-            <li><b>&#8377;95 lakh &ndash; 1.4 crore</b><span>3 BHK to buy</span></li>
+          <h3 data-nx="areas.h3">New Town (Rajarhat)</h3>
+          <p data-nx="areas.p2">Planned roads, gated complexes, the IT offices and Eco Park. Most of our work is here. Action Area 1 is older and better connected; Action Area 2 and 3 have newer buildings.</p>
+          <ul data-nx-list="areas.area-ranges" class="area__ranges">
+            <li data-nx-item><b data-nx-f="b">&#8377;17,000 &ndash; 26,000</b><span data-nx-f="span">2 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;58 &ndash; 80 lakh</b><span data-nx-f="span">2 BHK to buy</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;26,000 &ndash; 40,000</b><span data-nx-f="span">3 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;95 lakh &ndash; 1.4 crore</b><span data-nx-f="span">3 BHK to buy</span></li>
           </ul>
         </div>
       </article>
       <article class="area reveal">
-        <img src="/demo/real-estate/images/complex-kolkata.jpg" width="1200" height="641" alt="Twin residential towers joined by a sky bridge on the edge of Salt Lake" loading="lazy">
+        <img data-nx="areas.photo2" src="/demo/real-estate/images/complex-kolkata.jpg" width="1200" height="641" alt="Twin residential towers joined by a sky bridge on the edge of Salt Lake" loading="lazy">
         <div class="area__body">
-          <h3>Salt Lake (Bidhannagar)</h3>
-          <p>Wide roads, parks in every block, metro at Sector 5 and Karunamoyee. Mostly independent houses and low-rise flats; fewer flats come up, so they go fast.</p>
-          <ul class="area__ranges">
-            <li><b>&#8377;18,000 &ndash; 28,000</b><span>2 BHK rent per month</span></li>
-            <li><b>&#8377;65 &ndash; 90 lakh</b><span>2 BHK to buy</span></li>
-            <li><b>&#8377;28,000 &ndash; 45,000</b><span>3 BHK rent per month</span></li>
-            <li><b>&#8377;1 &ndash; 1.6 crore</b><span>3 BHK to buy</span></li>
+          <h3 data-nx="areas.h32">Salt Lake (Bidhannagar)</h3>
+          <p data-nx="areas.p3">Wide roads, parks in every block, metro at Sector 5 and Karunamoyee. Mostly independent houses and low-rise flats; fewer flats come up, so they go fast.</p>
+          <ul data-nx-list="areas.area-ranges2" class="area__ranges">
+            <li data-nx-item><b data-nx-f="b">&#8377;18,000 &ndash; 28,000</b><span data-nx-f="span">2 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;65 &ndash; 90 lakh</b><span data-nx-f="span">2 BHK to buy</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;28,000 &ndash; 45,000</b><span data-nx-f="span">3 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;1 &ndash; 1.6 crore</b><span data-nx-f="span">3 BHK to buy</span></li>
           </ul>
         </div>
       </article>
       <article class="area reveal">
-        <img src="/demo/real-estate/images/balconies.jpg" width="1200" height="1800" alt="Apartment block with grilled balconies behind a flowering gulmohar tree" loading="lazy">
+        <img data-nx="areas.photo3" src="/demo/real-estate/images/balconies.jpg" width="1200" height="1800" alt="Apartment block with grilled balconies behind a flowering gulmohar tree" loading="lazy">
         <div class="area__body">
-          <h3>Baguiati and Chinar Park</h3>
-          <p>Along VIP Road, close to the airport. Smaller buildings, lower prices, lively markets. Good for first-time buyers and for people who travel for work.</p>
-          <ul class="area__ranges">
-            <li><b>&#8377;11,000 &ndash; 17,000</b><span>2 BHK rent per month</span></li>
-            <li><b>&#8377;38 &ndash; 55 lakh</b><span>2 BHK to buy</span></li>
-            <li><b>&#8377;17,000 &ndash; 25,000</b><span>3 BHK rent per month</span></li>
-            <li><b>&#8377;60 &ndash; 85 lakh</b><span>3 BHK to buy</span></li>
+          <h3 data-nx="areas.h33">Baguiati and Chinar Park</h3>
+          <p data-nx="areas.p4">Along VIP Road, close to the airport. Smaller buildings, lower prices, lively markets. Good for first-time buyers and for people who travel for work.</p>
+          <ul data-nx-list="areas.area-ranges3" class="area__ranges">
+            <li data-nx-item><b data-nx-f="b">&#8377;11,000 &ndash; 17,000</b><span data-nx-f="span">2 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;38 &ndash; 55 lakh</b><span data-nx-f="span">2 BHK to buy</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;17,000 &ndash; 25,000</b><span data-nx-f="span">3 BHK rent per month</span></li>
+            <li data-nx-item><b data-nx-f="b">&#8377;60 &ndash; 85 lakh</b><span data-nx-f="span">3 BHK to buy</span></li>
           </ul>
         </div>
       </article>
@@ -508,164 +513,164 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="fees">
+<section data-nx-section="fees" class="section" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Brokerage and charges</span>
-      <h2 class="h2">What we charge, said plainly.</h2>
-      <p class="lead" style="margin-top:1rem">Pradip Bhattacharya started this office in 2011 after ten years with a builder in Salt Lake. The rule from day one: tell the customer the fee before the first visit, and never add anything to it later.</p>
+      <span data-nx="fees.kicker" class="kicker">Brokerage and charges</span>
+      <h2 data-nx="fees.h2" class="h2">What we charge, said plainly.</h2>
+      <p data-nx="fees.p" class="lead" style="margin-top:1rem">Pradip Bhattacharya started this office in 2011 after ten years with a builder in Salt Lake. The rule from day one: tell the customer the fee before the first visit, and never add anything to it later.</p>
     </div>
     <div class="fees">
-      <ul class="fees__list reveal">
-        <li>
+      <ul data-nx-list="fees.fees-list" class="fees__list reveal">
+        <li data-nx-item>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span>
-          <div><h3>Renting a flat: one month&rsquo;s rent</h3><p>Paid once, after you sign the agreement and get the keys. If the rent is &#8377;20,000, our fee is &#8377;20,000. The owner pays us the same from their side. Nothing is due before you move in.</p></div>
+          <div><h3 data-nx-f="h3">Renting a flat: one month&rsquo;s rent</h3><p data-nx-f="p">Paid once, after you sign the agreement and get the keys. If the rent is &#8377;20,000, our fee is &#8377;20,000. The owner pays us the same from their side. Nothing is due before you move in.</p></div>
         </li>
-        <li>
+        <li data-nx-item>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 20h16M6 20V8l6-4 6 4v12M10 20v-5h4v5"/></svg></span>
-          <div><h3>Buying a flat: 1% of the sale price</h3><p>Paid at registration, not before. On a &#8377;60 lakh flat that is &#8377;60,000. It covers every visit, the price talks with the owner, and sitting with you through the paperwork.</p></div>
+          <div><h3 data-nx-f="h3">Buying a flat: 1% of the sale price</h3><p data-nx-f="p">Paid at registration, not before. On a &#8377;60 lakh flat that is &#8377;60,000. It covers every visit, the price talks with the owner, and sitting with you through the paperwork.</p></div>
         </li>
-        <li>
+        <li data-nx-item>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></span>
-          <div><h3>What is not ours</h3><p>Stamp duty, registration fee, society transfer charge, lawyer&rsquo;s fee and the police verification fee are paid directly by you to those offices. We tell you the amounts in writing before you decide.</p></div>
+          <div><h3 data-nx-f="h3">What is not ours</h3><p data-nx-f="p">Stamp duty, registration fee, society transfer charge, lawyer&rsquo;s fee and the police verification fee are paid directly by you to those offices. We tell you the amounts in writing before you decide.</p></div>
         </li>
-        <li>
+        <li data-nx-item>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></span>
-          <div><h3>No site visit charge, no listing charge</h3><p>Seeing flats costs nothing. If you do not take a flat through us, you owe us nothing. We make our fee only when a deal closes.</p></div>
+          <div><h3 data-nx-f="h3">No site visit charge, no listing charge</h3><p data-nx-f="p">Seeing flats costs nothing. If you do not take a flat through us, you owe us nothing. We make our fee only when a deal closes.</p></div>
         </li>
       </ul>
       <aside class="fees__card reveal" aria-label="Fee summary">
-        <h3>What you pay</h3>
-        <div class="row"><span>Rental, any flat</span><b>1 month&rsquo;s rent</b></div>
-        <div class="row"><span>Purchase, any flat</span><b>1% of price</b></div>
-        <div class="row"><span>Site visits</span><b>&#8377;0</b></div>
-        <p class="zero"><b>No hidden charges.</b> The fee is written on the first message we send you, and it does not change.</p>
+        <h3 data-nx="fees.h3">What you pay</h3>
+        <div class="row"><span data-nx="fees.span">Rental, any flat</span><b data-nx="fees.b">1 month&rsquo;s rent</b></div>
+        <div class="row"><span data-nx="fees.span2">Purchase, any flat</span><b data-nx="fees.b2">1% of price</b></div>
+        <div class="row"><span data-nx="fees.span3">Site visits</span><b data-nx="fees.b3">&#8377;0</b></div>
+        <p data-nx="fees.zero" class="zero"><b>No hidden charges.</b> The fee is written on the first message we send you, and it does not change.</p>
         <a class="btn btn--terra" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask a question on WhatsApp</a>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="section section--beige" id="process">
+<section data-nx-section="process" class="section section--beige" id="process">
   <div class="wrap">
     <div class="head reveal" style="margin-inline:auto;text-align:center">
-      <span class="kicker">How a site visit works</span>
-      <h2 class="h2">From first message to keys, five steps.</h2>
+      <span data-nx="process.kicker" class="kicker">How a site visit works</span>
+      <h2 data-nx="process.h2" class="h2">From first message to keys, five steps.</h2>
     </div>
-    <ol class="timeline">
-      <li class="reveal"><span class="step">Step 1</span><h3>Send us what you need</h3><p>Area, budget, BHK, and when you want to move. One WhatsApp message is enough. We reply within working hours, usually within the hour.</p></li>
-      <li class="reveal"><span class="step">Step 2</span><h3>We send a shortlist</h3><p>Three to six flats with photos, exact rent or price, floor, and the maintenance amount. No flat we have not visited ourselves.</p></li>
-      <li class="reveal"><span class="step">Step 3</span><h3>Visit, on a day that suits you</h3><p>We fix a time with the owner and come with you. Weekends and evenings are fine. Two or three flats in one trip, so you can compare them.</p></li>
-      <li class="reveal"><span class="step">Step 4</span><h3>We talk price with the owner</h3><p>You tell us what you can pay; we take it to the owner. Most rentals settle in a day. Sales take a week or two.</p></li>
-      <li class="reveal"><span class="step">Step 5</span><h3>Paperwork and keys</h3><p>Rent agreement on stamp paper, or sale deed with the lawyer. We sit with you at the registry office. Our fee is paid only at this step.</p></li>
+    <ol data-nx-list="process.timeline" class="timeline">
+      <li data-nx-item class="reveal"><span data-nx-f="step" class="step">Step 1</span><h3 data-nx-f="h3">Send us what you need</h3><p data-nx-f="p">Area, budget, BHK, and when you want to move. One WhatsApp message is enough. We reply within working hours, usually within the hour.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="step" class="step">Step 2</span><h3 data-nx-f="h3">We send a shortlist</h3><p data-nx-f="p">Three to six flats with photos, exact rent or price, floor, and the maintenance amount. No flat we have not visited ourselves.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="step" class="step">Step 3</span><h3 data-nx-f="h3">Visit, on a day that suits you</h3><p data-nx-f="p">We fix a time with the owner and come with you. Weekends and evenings are fine. Two or three flats in one trip, so you can compare them.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="step" class="step">Step 4</span><h3 data-nx-f="h3">We talk price with the owner</h3><p data-nx-f="p">You tell us what you can pay; we take it to the owner. Most rentals settle in a day. Sales take a week or two.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="step" class="step">Step 5</span><h3 data-nx-f="h3">Paperwork and keys</h3><p data-nx-f="p">Rent agreement on stamp paper, or sale deed with the lawyer. We sit with you at the registry office. Our fee is paid only at this step.</p></li>
     </ol>
-    <div class="visit-photo reveal">
-      <img src="/demo/real-estate/images/sunrise-towers.jpg" width="1200" height="800" alt="Rows of residential towers at sunrise with low houses in the foreground" loading="lazy">
-      <img src="/demo/real-estate/images/mother-son.jpg" width="1200" height="2133" alt="A woman in a maroon kurta carrying her young son outside a building" loading="lazy">
+    <div data-nx-list="process.list" class="visit-photo reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/real-estate/images/sunrise-towers.jpg" width="1200" height="800" alt="Rows of residential towers at sunrise with low houses in the foreground" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/real-estate/images/mother-son.jpg" width="1200" height="2133" alt="A woman in a maroon kurta carrying her young son outside a building" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section" id="documents">
+<section data-nx-section="documents" class="section" id="documents">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Documents checklist</span>
-      <h2 class="h2">Keep these ready and the deal closes faster.</h2>
-      <p class="lead" style="margin-top:1rem">Photocopies are fine for the first visit. Originals are needed only on the day of signing.</p>
+      <span data-nx="documents.kicker" class="kicker">Documents checklist</span>
+      <h2 data-nx="documents.h2" class="h2">Keep these ready and the deal closes faster.</h2>
+      <p data-nx="documents.p" class="lead" style="margin-top:1rem">Photocopies are fine for the first visit. Originals are needed only on the day of signing.</p>
     </div>
     <div class="docs">
       <div class="docs__col reveal">
-        <h3>If you are buying</h3>
-        <p>For the sale deed and, if you need one, the home loan.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>PAN card and Aadhaar</b><span>Of every person whose name goes on the deed.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Passport-size photos</b><span>Four each. The registry office keeps two.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Last 6 months&rsquo; bank statement</b><span>Needed by the bank for a loan, and by the lawyer to show the source of funds.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Salary slips or ITR for 2 years</b><span>Only if you are taking a loan.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>From the seller, we collect</b><span>Original deed, mutation certificate, tax receipts, society NOC and the completion certificate. We check all of it before you pay a token.</span></div></li>
+        <h3 data-nx="documents.h3">If you are buying</h3>
+        <p data-nx="documents.p2">For the sale deed and, if you need one, the home loan.</p>
+        <ul data-nx-list="documents.list">
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">PAN card and Aadhaar</b><span data-nx-f="span">Of every person whose name goes on the deed.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Passport-size photos</b><span data-nx-f="span">Four each. The registry office keeps two.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Last 6 months&rsquo; bank statement</b><span data-nx-f="span">Needed by the bank for a loan, and by the lawyer to show the source of funds.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Salary slips or ITR for 2 years</b><span data-nx-f="span">Only if you are taking a loan.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">From the seller, we collect</b><span data-nx-f="span">Original deed, mutation certificate, tax receipts, society NOC and the completion certificate. We check all of it before you pay a token.</span></div></li>
         </ul>
       </div>
       <div class="docs__col reveal">
-        <h3>If you are renting</h3>
-        <p>For the agreement and the police verification the owner must file.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Aadhaar and one more ID</b><span>Voter card, passport or driving licence.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Two passport-size photos</b><span>Of every adult who will live in the flat.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Office ID or offer letter</b><span>Owners in New Town and Salt Lake almost always ask for this.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Security deposit</b><span>Usually two months&rsquo; rent, sometimes three in Salt Lake. Returned when you leave, minus any damage.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b>Stamp paper for the agreement</b><span>We arrange it. 11-month agreement, about &#8377;1,200 including notary, split between you and the owner.</span></div></li>
+        <h3 data-nx="documents.h32">If you are renting</h3>
+        <p data-nx="documents.p3">For the agreement and the police verification the owner must file.</p>
+        <ul data-nx-list="documents.list2">
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Aadhaar and one more ID</b><span data-nx-f="span">Voter card, passport or driving licence.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Two passport-size photos</b><span data-nx-f="span">Of every adult who will live in the flat.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Office ID or offer letter</b><span data-nx-f="span">Owners in New Town and Salt Lake almost always ask for this.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Security deposit</b><span data-nx-f="span">Usually two months&rsquo; rent, sometimes three in Salt Lake. Returned when you leave, minus any damage.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg><div><b data-nx-f="b">Stamp paper for the agreement</b><span data-nx-f="span">We arrange it. 11-month agreement, about &#8377;1,200 including notary, split between you and the owner.</span></div></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--navy" id="owners">
+<section data-nx-section="owners" class="section section--navy" id="owners">
   <div class="wrap">
     <div class="owners">
       <div class="reveal">
-        <span class="kicker" style="color:#F6C7B0">For flat owners</span>
-        <h2 class="h2">Want to let or sell your flat?</h2>
-        <p class="lead" style="margin-top:1rem">We have a list of people waiting for flats in all three areas. Send us the address and a few photos, and we do the rest.</p>
-        <ul class="owners__list">
-          <li><span class="n">1</span><p>We visit, take proper photos and suggest a fair asking price from flats that actually closed nearby, not from listing sites.</p></li>
-          <li><span class="n">2</span><p>We show the flat only to people we have spoken to and checked. You are not disturbed by calls at odd hours.</p></li>
-          <li><span class="n">3</span><p>Same fee from you as from the tenant or buyer: one month&rsquo;s rent, or 1% on a sale, paid when the deal closes.</p></li>
+        <span data-nx="owners.kicker" class="kicker" style="color:#F6C7B0">For flat owners</span>
+        <h2 data-nx="owners.h2" class="h2">Want to let or sell your flat?</h2>
+        <p data-nx="owners.p" class="lead" style="margin-top:1rem">We have a list of people waiting for flats in all three areas. Send us the address and a few photos, and we do the rest.</p>
+        <ul data-nx-list="owners.owners-list" class="owners__list">
+          <li data-nx-item><span data-nx-f="n" class="n">1</span><p data-nx-f="p">We visit, take proper photos and suggest a fair asking price from flats that actually closed nearby, not from listing sites.</p></li>
+          <li data-nx-item><span data-nx-f="n" class="n">2</span><p data-nx-f="p">We show the flat only to people we have spoken to and checked. You are not disturbed by calls at odd hours.</p></li>
+          <li data-nx-item><span data-nx-f="n" class="n">3</span><p data-nx-f="p">Same fee from you as from the tenant or buyer: one month&rsquo;s rent, or 1% on a sale, paid when the deal closes.</p></li>
         </ul>
         <div class="hero__cta">
           <a class="btn btn--terra" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">List my flat on WhatsApp</a>
           <a class="btn btn--ghost-light" href="tel:+919804243159">Call the office</a>
         </div>
       </div>
-      <div class="quotes reveal">
-        <blockquote><p>We moved from Behala to New Town for my husband&rsquo;s office. Pradip da showed us five flats in one Saturday and did not push any of them. We took the third one and the fee was exactly what he said on the phone.</p><footer>Moumita <span>&middot; rented a 2 BHK in Action Area 1</span></footer></blockquote>
-        <blockquote><p>Sold my late father&rsquo;s flat in Salt Lake from Bangalore. They handled the society NOC and the buyer&rsquo;s loan people, and sent me a photo of every paper before I signed anything.</p><footer>Arnab <span>&middot; sold a 3 BHK in Sector 2</span></footer></blockquote>
+      <div data-nx-list="owners.quotes" class="quotes reveal">
+        <blockquote data-nx-item><p data-nx-f="p">We moved from Behala to New Town for my husband&rsquo;s office. Pradip da showed us five flats in one Saturday and did not push any of them. We took the third one and the fee was exactly what he said on the phone.</p><footer>Moumita <span data-nx-f="span">&middot; rented a 2 BHK in Action Area 1</span></footer></blockquote>
+        <blockquote data-nx-item><p data-nx-f="p">Sold my late father&rsquo;s flat in Salt Lake from Bangalore. They handled the society NOC and the buyer&rsquo;s loan people, and sent me a photo of every paper before I signed anything.</p><footer>Arnab <span data-nx-f="span">&middot; sold a 3 BHK in Sector 2</span></footer></blockquote>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Recent handovers</span>
-      <h2 class="h2">A few of the flats and families from the last year.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Recent handovers</span>
+      <h2 data-nx="gallery.h2" class="h2">A few of the flats and families from the last year.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><figure><img src="/demo/real-estate/images/family.jpg" width="1200" height="800" alt="A family of six in festive clothes standing in front of their housing block" loading="lazy"><figcaption>The Agarwal family, 3 BHK, Action Area 2</figcaption></figure></li>
-      <li><figure><img src="/demo/real-estate/images/living-room.jpg" width="1200" height="674" alt="Living room with wooden slat wall and a balcony view" loading="lazy"><figcaption>Sector 2, Salt Lake, sold in 2025</figcaption></figure></li>
-      <li><figure><img src="/demo/real-estate/images/rooftop-kolkata.jpg" width="1200" height="800" alt="Old Kolkata rooftops with newer towers rising behind" loading="lazy"><figcaption>Our first office was a rooftop room like this one</figcaption></figure></li>
-      <li><figure><img src="/demo/real-estate/images/glass-doors.jpg" width="1200" height="1800" alt="Balcony doors with plants in a Chinar Park flat" loading="lazy"><figcaption>Chinar Park, 2 BHK with balcony</figcaption></figure></li>
-      <li><figure><img src="/demo/real-estate/images/sunrise-towers.jpg" width="1200" height="800" alt="Residential towers at sunrise" loading="lazy"><figcaption>New Town, Action Area 3, from a 12th floor</figcaption></figure></li>
-      <li><figure><img src="/demo/real-estate/images/bedroom-pune.jpg" width="1200" height="800" alt="Simple bedroom with a wooden bed by the window" loading="lazy"><figcaption>Baguiati, 1 BHK, rented in three days</figcaption></figure></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/family.jpg" width="1200" height="800" alt="A family of six in festive clothes standing in front of their housing block" loading="lazy"><figcaption data-nx-f="figcaption">The Agarwal family, 3 BHK, Action Area 2</figcaption></figure></li>
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/living-room.jpg" width="1200" height="674" alt="Living room with wooden slat wall and a balcony view" loading="lazy"><figcaption data-nx-f="figcaption">Sector 2, Salt Lake, sold in 2025</figcaption></figure></li>
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/rooftop-kolkata.jpg" width="1200" height="800" alt="Old Kolkata rooftops with newer towers rising behind" loading="lazy"><figcaption data-nx-f="figcaption">Our first office was a rooftop room like this one</figcaption></figure></li>
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/glass-doors.jpg" width="1200" height="1800" alt="Balcony doors with plants in a Chinar Park flat" loading="lazy"><figcaption data-nx-f="figcaption">Chinar Park, 2 BHK with balcony</figcaption></figure></li>
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/sunrise-towers.jpg" width="1200" height="800" alt="Residential towers at sunrise" loading="lazy"><figcaption data-nx-f="figcaption">New Town, Action Area 3, from a 12th floor</figcaption></figure></li>
+      <li data-nx-item><figure><img data-nx-f="photo" src="/demo/real-estate/images/bedroom-pune.jpg" width="1200" height="800" alt="Simple bedroom with a wooden bed by the window" loading="lazy"><figcaption data-nx-f="figcaption">Baguiati, 1 BHK, rented in three days</figcaption></figure></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--beige" id="visit">
+<section data-nx-section="visit" class="section section--beige" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Our office</span>
-      <h2 class="h2">Action Area 1C, New Town, opposite the water tank.</h2>
+      <span data-nx="visit.kicker" class="kicker">Our office</span>
+      <h2 data-nx="visit.h2" class="h2">Action Area 1C, New Town, opposite the water tank.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>CB 48, Street No 128, Action Area 1C<br>New Town, Kolkata 700156</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=CB%2048%2C%20Street%20No%20128%2C%20Action%20Area%201C%2C%20New%20Town%2C%20Kolkata%20700156" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">CB 48, Street No 128, Action Area 1C<br>New Town, Kolkata 700156</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=CB%2048%2C%20Street%20No%20128%2C%20Action%20Area%201C%2C%20New%20Town%2C%20Kolkata%20700156" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:30 am &ndash; 7:30 pm</td></tr>
-              <tr><td>Sunday</td><td>Site visits by appointment</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:30 am &ndash; 7:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">Site visits by appointment</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Messages answered 9 am to 9 pm, every day.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Messages answered 9 am to 9 pm, every day.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -679,11 +684,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
     <div>
-      <h2>Tell us the area and the budget. We do the running around.</h2>
-      <p>One message with what you need. A shortlist by tomorrow, a site visit this week, and the fee told to you before any of it.</p>
+      <h2 data-nx="contact.h2">Tell us the area and the budget. We do the running around.</h2>
+      <p data-nx="contact.p">One message with what you need. A shortlist by tomorrow, a site visit this week, and the fee told to you before any of it.</p>
     </div>
     <div class="final__cta">
       <a class="btn btn--terra" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Property%20Consultants%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
@@ -699,32 +704,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#C8663A"/><path d="M11 22 22 12l11 10" fill="none" stroke="#0F2A4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 21v11h14V21" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><rect x="19.5" y="25" width="5" height="7" fill="#0F2A4A"/></svg>
-          <span><b>Bhattacharya Property</b><small>New Town &middot; since 2011</small></span>
+          <span><b data-nx="footer.b">Bhattacharya Property</b><small data-nx="footer.small">New Town &middot; since 2011</small></span>
         </a>
-        <p>Flats for sale and rent in New Town, Salt Lake and Baguiati. One month&rsquo;s rent or 1% on a sale. No hidden charges.</p>
+        <p data-nx="footer.p">Flats for sale and rent in New Town, Salt Lake and Baguiati. One month&rsquo;s rent or 1% on a sale. No hidden charges.</p>
       </div>
       <div>
-        <h4>On this page</h4>
-        <ul>
-          <li><a href="#listings">Flats available</a></li>
-          <li><a href="#fees">Brokerage</a></li>
-          <li><a href="#process">How a site visit works</a></li>
-          <li><a href="#documents">Documents checklist</a></li>
-          <li><a href="#owners">For owners</a></li>
+        <h4 data-nx="footer.h4">On this page</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#listings">Flats available</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Brokerage</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#process">How a site visit works</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#documents">Documents checklist</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#owners">For owners</a></li>
         </ul>
       </div>
       <div>
-        <h4>Office</h4>
+        <h4 data-nx="footer.h42">Office</h4>
         <ul>
-          <li>CB 48, Street No 128, Action Area 1C, New Town, Kolkata 700156</li>
+          <li data-nx="footer.li">CB 48, Street No 128, Action Area 1C, New Town, Kolkata 700156</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10:30 am &ndash; 7:30 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10:30 am &ndash; 7:30 pm</li>
         </ul>
       </div>
     </div>
@@ -766,5 +771,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

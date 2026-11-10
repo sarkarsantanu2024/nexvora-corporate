@@ -268,25 +268,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets, hours on one line */
+@media (max-width:760px){
+.footer li a,.visit__row a{display:inline-flex;align-items:center;min-height:44px}
+.footer__note a{padding-block:.75rem}
+.hours td:last-child{white-space:nowrap}
+}
 </style>
+<meta name="nx-site" content="garage">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Biswas%20Motor%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Biswas Motor Works, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#111"/><path d="M14 30 30 14M30 14l-2-2M12 32l2-2" stroke="#E10600" stroke-width="4" stroke-linecap="round"/><path d="m27 9 8 8-3 3-8-8z" fill="#fff"/><path d="m9 27 8 8-3 3-8-8z" fill="#fff"/></svg>
-      <span><b>Biswas Motor Works</b><small>Behala &middot; since 2004</small></span>
+      <span><b data-nx="header.b">Biswas Motor Works</b><small data-nx="header.small">Behala &middot; since 2004</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -309,80 +313,80 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="hero__bg">
-    <img src="/demo/garage/images/hero.jpg" width="1200" height="1800" alt="A mechanic bent over an open car bonnet, working on the engine under a lamp" fetchpriority="high">
+    <img data-nx="top.photo" src="/demo/garage/images/hero.jpg" width="1200" height="1800" alt="A mechanic bent over an open car bonnet, working on the engine under a lamp" fetchpriority="high">
   </div>
   <div class="wrap">
-    <p class="hero__tag">Scooters &middot; Bikes &middot; Cars</p>
-    <h1>Service done right, <span>back by evening.</span></h1>
-    <p>Twenty-two years on Diamond Harbour Road. Servicing, oil change, brakes, clutch, battery, tyres, denting-painting and car AC. Price by vehicle type, time told before we touch a spanner, and old parts handed back to you.</p>
+    <p data-nx="top.hero-tag" class="hero__tag">Scooters &middot; Bikes &middot; Cars</p>
+    <h1 data-nx="top.h1">Service done right, <span>back by evening.</span></h1>
+    <p data-nx="top.p">Twenty-two years on Diamond Harbour Road. Servicing, oil change, brakes, clutch, battery, tyres, denting-painting and car AC. Price by vehicle type, time told before we touch a spanner, and old parts handed back to you.</p>
     <div class="hero__cta">
       <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Biswas%20Motor%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
         Book a service
       </a>
-      <a class="btn btn--ghost-light" href="#prices">See prices by vehicle</a>
+      <a data-nx="top.button" class="btn btn--ghost-light" href="#prices">See prices by vehicle</a>
     </div>
-    <ul class="hero__facts">
-      <li><b>2 hrs</b><span>Scooter or bike service, while you wait</span></li>
-      <li><b>&#8377;450</b><span>Scooter general service, labour</span></li>
-      <li><b>9 am</b><span>Open Monday to Saturday, till 8 pm</span></li>
+    <ul data-nx-list="top.hero-facts" class="hero__facts">
+      <li data-nx-item><b data-nx-f="b">2 hrs</b><span data-nx-f="span">Scooter or bike service, while you wait</span></li>
+      <li data-nx-item><b data-nx-f="b">&#8377;450</b><span data-nx-f="span">Scooter general service, labour</span></li>
+      <li data-nx-item><b data-nx-f="b">9 am</b><span data-nx-f="span">Open Monday to Saturday, till 8 pm</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="services">
+<section data-nx-section="services" class="section" id="services">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we do</span>
-      <h2 class="h2">Every job a two-wheeler or car needs, under one shed.</h2>
+      <span data-nx="services.kicker" class="kicker">What we do</span>
+      <h2 data-nx="services.h2" class="h2">Every job a two-wheeler or car needs, under one shed.</h2>
     </div>
     <div class="zig">
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/garage/images/bike-engine.jpg" width="1200" height="1594" alt="A mechanic working on a motorcycle engine with the side cover off" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="services.photo" src="/demo/garage/images/bike-engine.jpg" width="1200" height="1594" alt="A mechanic working on a motorcycle engine with the side cover off" loading="lazy"></div>
         <div class="reveal">
-          <div class="zig__n" aria-hidden="true">01</div>
-          <h3>Scooter and bike servicing</h3>
-          <p>General service with engine oil change, air filter clean, chain and brake adjustment, carburettor or injector clean, and a full wash. We work on Honda, TVS, Bajaj, Hero, Suzuki, Yamaha and Royal Enfield.</p>
-          <ul>
-            <li>Engine oil and filter</li><li>Brake shoes and pads</li><li>Clutch plates and cable</li><li>Battery test and replacement</li><li>Tyre and tube change</li><li>Chain sprocket kit</li>
+          <div data-nx="services.zig-n" class="zig__n" aria-hidden="true">01</div>
+          <h3 data-nx="services.h3">Scooter and bike servicing</h3>
+          <p data-nx="services.p">General service with engine oil change, air filter clean, chain and brake adjustment, carburettor or injector clean, and a full wash. We work on Honda, TVS, Bajaj, Hero, Suzuki, Yamaha and Royal Enfield.</p>
+          <ul data-nx-list="services.list">
+            <li data-nx-f="li" data-nx-item>Engine oil and filter</li><li data-nx-f="li" data-nx-item>Brake shoes and pads</li><li data-nx-f="li" data-nx-item>Clutch plates and cable</li><li data-nx-f="li" data-nx-item>Battery test and replacement</li><li data-nx-f="li" data-nx-item>Tyre and tube change</li><li data-nx-f="li" data-nx-item>Chain sprocket kit</li>
           </ul>
           <p class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>General service: about 2 hours. Clutch or sprocket: half a day.</p>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/garage/images/oil-check.jpg" width="1200" height="1800" alt="A mechanic checking the oil level of a car with the bonnet open" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="services.photo2" src="/demo/garage/images/oil-check.jpg" width="1200" height="1800" alt="A mechanic checking the oil level of a car with the bonnet open" loading="lazy"></div>
         <div class="reveal">
-          <div class="zig__n" aria-hidden="true">02</div>
-          <h3>Car servicing and AC</h3>
-          <p>Periodic service for hatchbacks, sedans and SUVs: Maruti, Hyundai, Tata, Mahindra, Honda, Toyota, Kia. Oil and filters, brake clean, coolant and brake fluid top-up, scanner check for warning lights, wash and vacuum.</p>
-          <ul>
-            <li>Engine oil, oil and air filter</li><li>AC gas top-up and cooling coil clean</li><li>Brake pads and discs</li><li>Clutch set and bearing</li><li>Battery, alternator, starter</li><li>Wheel alignment and balancing</li>
+          <div data-nx="services.zig-n2" class="zig__n" aria-hidden="true">02</div>
+          <h3 data-nx="services.h32">Car servicing and AC</h3>
+          <p data-nx="services.p2">Periodic service for hatchbacks, sedans and SUVs: Maruti, Hyundai, Tata, Mahindra, Honda, Toyota, Kia. Oil and filters, brake clean, coolant and brake fluid top-up, scanner check for warning lights, wash and vacuum.</p>
+          <ul data-nx-list="services.list2">
+            <li data-nx-f="li" data-nx-item>Engine oil, oil and air filter</li><li data-nx-f="li" data-nx-item>AC gas top-up and cooling coil clean</li><li data-nx-f="li" data-nx-item>Brake pads and discs</li><li data-nx-f="li" data-nx-item>Clutch set and bearing</li><li data-nx-f="li" data-nx-item>Battery, alternator, starter</li><li data-nx-f="li" data-nx-item>Wheel alignment and balancing</li>
           </ul>
           <p class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>General service: same day, drop by 10 am and collect by 6 pm. AC service: 3 hours.</p>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/garage/images/tyres.jpg" width="1200" height="1796" alt="A stack of car tyres with an alloy wheel on top in the garage" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="services.photo3" src="/demo/garage/images/tyres.jpg" width="1200" height="1796" alt="A stack of car tyres with an alloy wheel on top in the garage" loading="lazy"></div>
         <div class="reveal">
-          <div class="zig__n" aria-hidden="true">03</div>
-          <h3>Tyres, battery and brakes</h3>
-          <p>We stock MRF, CEAT, Apollo and JK tyres for two-wheelers and cars, and Exide and Amaron batteries. Fitting, balancing and alignment on the spot. Brake work uses company pads and shoes, never loose ones.</p>
-          <ul>
-            <li>Tubeless puncture repair</li><li>Tyre fitting and balancing</li><li>Wheel alignment (cars)</li><li>Battery with warranty card</li><li>Brake pads, shoes, discs</li><li>Brake oil bleed</li>
+          <div data-nx="services.zig-n3" class="zig__n" aria-hidden="true">03</div>
+          <h3 data-nx="services.h33">Tyres, battery and brakes</h3>
+          <p data-nx="services.p3">We stock MRF, CEAT, Apollo and JK tyres for two-wheelers and cars, and Exide and Amaron batteries. Fitting, balancing and alignment on the spot. Brake work uses company pads and shoes, never loose ones.</p>
+          <ul data-nx-list="services.list3">
+            <li data-nx-f="li" data-nx-item>Tubeless puncture repair</li><li data-nx-f="li" data-nx-item>Tyre fitting and balancing</li><li data-nx-f="li" data-nx-item>Wheel alignment (cars)</li><li data-nx-f="li" data-nx-item>Battery with warranty card</li><li data-nx-f="li" data-nx-item>Brake pads, shoes, discs</li><li data-nx-f="li" data-nx-item>Brake oil bleed</li>
           </ul>
           <p class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Tyre or battery change: 30 to 45 minutes. Brake pads: 1 to 2 hours.</p>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/garage/images/car-wash.jpg" width="1200" height="800" alt="A customer talking to a mechanic washing her small car outside the garage" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="services.photo4" src="/demo/garage/images/car-wash.jpg" width="1200" height="800" alt="A customer talking to a mechanic washing her small car outside the garage" loading="lazy"></div>
         <div class="reveal">
-          <div class="zig__n" aria-hidden="true">04</div>
-          <h3>Denting, painting and wash</h3>
-          <p>Scratches, dents, bumper cracks and full repaint in a dust-free booth with the original shade code. Scooter panels too. Every job ends with a wash, and cars get an interior vacuum.</p>
-          <ul>
-            <li>Per-panel dent and paint</li><li>Bumper repair</li><li>Full body repaint</li><li>Scooter panel paint</li><li>Headlamp polishing</li><li>Foam wash and vacuum</li>
+          <div data-nx="services.zig-n4" class="zig__n" aria-hidden="true">04</div>
+          <h3 data-nx="services.h34">Denting, painting and wash</h3>
+          <p data-nx="services.p4">Scratches, dents, bumper cracks and full repaint in a dust-free booth with the original shade code. Scooter panels too. Every job ends with a wash, and cars get an interior vacuum.</p>
+          <ul data-nx-list="services.list4">
+            <li data-nx-f="li" data-nx-item>Per-panel dent and paint</li><li data-nx-f="li" data-nx-item>Bumper repair</li><li data-nx-f="li" data-nx-item>Full body repaint</li><li data-nx-f="li" data-nx-item>Scooter panel paint</li><li data-nx-f="li" data-nx-item>Headlamp polishing</li><li data-nx-f="li" data-nx-item>Foam wash and vacuum</li>
           </ul>
           <p class="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>One or two panels: 3 days. Full repaint: 7 to 10 days. Wash: 40 minutes.</p>
         </div>
@@ -391,154 +395,154 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--black" id="prices">
+<section data-nx-section="prices" class="section section--black" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price list</span>
-      <h2 class="h2">Labour charges by vehicle type.</h2>
-      <p class="lead" style="margin-top:1rem">These are our labour charges. Parts and oil are billed at the printed price on the packet, and you get the empty packets and old parts back. Scroll sideways on a phone.</p>
+      <span data-nx="prices.kicker" class="kicker">Price list</span>
+      <h2 data-nx="prices.h2" class="h2">Labour charges by vehicle type.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">These are our labour charges. Parts and oil are billed at the printed price on the packet, and you get the empty packets and old parts back. Scroll sideways on a phone.</p>
     </div>
     <div class="ptable__scroll reveal">
       <table class="ptable">
         <thead>
-          <tr><th scope="col">Job</th><th scope="col">Scooter</th><th scope="col">Bike</th><th scope="col">Hatchback</th><th scope="col">Sedan</th><th scope="col">SUV</th></tr>
+          <tr><th data-nx="prices.th" scope="col">Job</th><th data-nx="prices.th2" scope="col">Scooter</th><th data-nx="prices.th3" scope="col">Bike</th><th data-nx="prices.th4" scope="col">Hatchback</th><th data-nx="prices.th5" scope="col">Sedan</th><th data-nx="prices.th6" scope="col">SUV</th></tr>
         </thead>
-        <tbody>
-          <tr><td>General service <small>Labour only, oil extra</small></td><td>&#8377;450</td><td>&#8377;550</td><td>&#8377;2,200</td><td>&#8377;2,800</td><td>&#8377;3,500</td></tr>
-          <tr><td>Engine oil change <small>Oil and filter at packet price</small></td><td>&#8377;150</td><td>&#8377;200</td><td>&#8377;600</td><td>&#8377;700</td><td>&#8377;900</td></tr>
-          <tr><td>Brake pads or shoes <small>Per axle for cars</small></td><td>&#8377;200</td><td>&#8377;250</td><td>&#8377;900</td><td>&#8377;1,100</td><td>&#8377;1,400</td></tr>
-          <tr><td>Clutch work <small>Plates for two-wheelers, set for cars</small></td><td>&#8377;400</td><td>&#8377;500</td><td>&#8377;2,500</td><td>&#8377;3,000</td><td>&#8377;3,800</td></tr>
-          <tr><td>Battery fitting <small>Battery at company price, warranty card given</small></td><td>&#8377;100</td><td>&#8377;100</td><td>&#8377;300</td><td>&#8377;300</td><td>&#8377;400</td></tr>
-          <tr><td>Tyre fitting and balancing <small>Per tyre</small></td><td>&#8377;80</td><td>&#8377;100</td><td>&#8377;200</td><td>&#8377;250</td><td>&#8377;300</td></tr>
-          <tr><td>Wheel alignment</td><td class="na">n/a</td><td class="na">n/a</td><td>&#8377;450</td><td>&#8377;500</td><td>&#8377;600</td></tr>
-          <tr><td>AC service <small>Gas top-up, coil clean, filter</small></td><td class="na">n/a</td><td class="na">n/a</td><td>&#8377;1,800</td><td>&#8377;2,000</td><td>&#8377;2,500</td></tr>
-          <tr><td>Denting and painting <small>Per panel, paint included</small></td><td>&#8377;600</td><td>&#8377;800</td><td>&#8377;2,500</td><td>&#8377;3,000</td><td>&#8377;3,500</td></tr>
-          <tr><td>Foam wash <small>Cars include interior vacuum</small></td><td>&#8377;80</td><td>&#8377;100</td><td>&#8377;350</td><td>&#8377;400</td><td>&#8377;500</td></tr>
-          <tr><td>Pick-up and drop <small>Within 6 km of Behala</small></td><td>&#8377;100</td><td>&#8377;100</td><td>&#8377;300</td><td>&#8377;300</td><td>&#8377;400</td></tr>
+        <tbody data-nx-list="prices.list">
+          <tr data-nx-item><td data-nx-f="td">General service <small>Labour only, oil extra</small></td><td data-nx-f="td2">&#8377;450</td><td data-nx-f="td3">&#8377;550</td><td data-nx-f="td4">&#8377;2,200</td><td data-nx-f="td5">&#8377;2,800</td><td data-nx-f="td6">&#8377;3,500</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Engine oil change <small>Oil and filter at packet price</small></td><td data-nx-f="td2">&#8377;150</td><td data-nx-f="td3">&#8377;200</td><td data-nx-f="td4">&#8377;600</td><td data-nx-f="td5">&#8377;700</td><td data-nx-f="td6">&#8377;900</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Brake pads or shoes <small>Per axle for cars</small></td><td data-nx-f="td2">&#8377;200</td><td data-nx-f="td3">&#8377;250</td><td data-nx-f="td4">&#8377;900</td><td data-nx-f="td5">&#8377;1,100</td><td data-nx-f="td6">&#8377;1,400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Clutch work <small>Plates for two-wheelers, set for cars</small></td><td data-nx-f="td2">&#8377;400</td><td data-nx-f="td3">&#8377;500</td><td data-nx-f="td4">&#8377;2,500</td><td data-nx-f="td5">&#8377;3,000</td><td data-nx-f="td6">&#8377;3,800</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Battery fitting <small>Battery at company price, warranty card given</small></td><td data-nx-f="td2">&#8377;100</td><td data-nx-f="td3">&#8377;100</td><td data-nx-f="td4">&#8377;300</td><td data-nx-f="td5">&#8377;300</td><td data-nx-f="td6">&#8377;400</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Tyre fitting and balancing <small>Per tyre</small></td><td data-nx-f="td2">&#8377;80</td><td data-nx-f="td3">&#8377;100</td><td data-nx-f="td4">&#8377;200</td><td data-nx-f="td5">&#8377;250</td><td data-nx-f="td6">&#8377;300</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Wheel alignment</td><td data-nx-f="td2" class="na">n/a</td><td data-nx-f="td3" class="na">n/a</td><td data-nx-f="td4">&#8377;450</td><td data-nx-f="td5">&#8377;500</td><td data-nx-f="td6">&#8377;600</td></tr>
+          <tr data-nx-item><td data-nx-f="td">AC service <small>Gas top-up, coil clean, filter</small></td><td data-nx-f="td2" class="na">n/a</td><td data-nx-f="td3" class="na">n/a</td><td data-nx-f="td4">&#8377;1,800</td><td data-nx-f="td5">&#8377;2,000</td><td data-nx-f="td6">&#8377;2,500</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Denting and painting <small>Per panel, paint included</small></td><td data-nx-f="td2">&#8377;600</td><td data-nx-f="td3">&#8377;800</td><td data-nx-f="td4">&#8377;2,500</td><td data-nx-f="td5">&#8377;3,000</td><td data-nx-f="td6">&#8377;3,500</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Foam wash <small>Cars include interior vacuum</small></td><td data-nx-f="td2">&#8377;80</td><td data-nx-f="td3">&#8377;100</td><td data-nx-f="td4">&#8377;350</td><td data-nx-f="td5">&#8377;400</td><td data-nx-f="td6">&#8377;500</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Pick-up and drop <small>Within 6 km of Behala</small></td><td data-nx-f="td2">&#8377;100</td><td data-nx-f="td3">&#8377;100</td><td data-nx-f="td4">&#8377;300</td><td data-nx-f="td5">&#8377;300</td><td data-nx-f="td6">&#8377;400</td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="ptable__notes reveal">
-      <li><b>Estimate before work</b>You get the full estimate on WhatsApp, parts and labour separate. Nothing is replaced without your yes.</li>
-      <li><b>Old parts returned</b>Every replaced part and every empty oil can goes in a bag with your bill, so you see exactly what was changed.</li>
-      <li><b>Warranty on labour</b>If a job we did goes wrong within 30 days, we redo it free. Parts carry the maker's warranty.</li>
+    <ul data-nx-list="prices.ptable-notes" class="ptable__notes reveal">
+      <li data-nx-f="li" data-nx-item><b>Estimate before work</b>You get the full estimate on WhatsApp, parts and labour separate. Nothing is replaced without your yes.</li>
+      <li data-nx-f="li" data-nx-item><b>Old parts returned</b>Every replaced part and every empty oil can goes in a bag with your bill, so you see exactly what was changed.</li>
+      <li data-nx-f="li" data-nx-item><b>Warranty on labour</b>If a job we did goes wrong within 30 days, we redo it free. Parts carry the maker's warranty.</li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="check">
+<section data-nx-section="check" class="section" id="check">
   <div class="wrap">
     <div class="check">
       <div class="check__photo reveal">
-        <img src="/demo/garage/images/car-check.jpg" width="1200" height="1712" alt="Two mechanics looking into the engine bay of a car with the bonnet open" loading="lazy">
+        <img data-nx="check.photo" src="/demo/garage/images/car-check.jpg" width="1200" height="1712" alt="Two mechanics looking into the engine bay of a car with the bonnet open" loading="lazy">
       </div>
       <div class="reveal">
-        <span class="kicker">Free with every service</span>
-        <h2 class="h2">The 10-point check.</h2>
-        <p class="lead" style="margin-top:1rem">Done on every vehicle that comes in, whether for a full service or a puncture. You get a photo of the sheet on WhatsApp with anything that needs attention marked in red. No charge, no pressure to fix it here.</p>
-        <ol>
-          <li>Engine oil level and colour<span>Low or black oil is the first sign of trouble</span></li>
-          <li>Brake pad and shoe thickness<span>Measured, not guessed</span></li>
-          <li>Tyre tread depth and pressure<span>All tyres, including the spare</span></li>
-          <li>Battery voltage and terminals<span>Load test, terminals cleaned</span></li>
-          <li>All lights and horn<span>Headlamp, indicators, brake light, number plate light</span></li>
-          <li>Chain or belt condition<span>Slack, wear, lubrication</span></li>
-          <li>Coolant and brake fluid<span>Level and condition (cars)</span></li>
-          <li>Suspension and steering play<span>Shockers, bushes, tie rods</span></li>
-          <li>Clutch and accelerator cables<span>Free play and fraying</span></li>
-          <li>Leaks underneath<span>Oil, coolant, fuel</span></li>
+        <span data-nx="check.kicker" class="kicker">Free with every service</span>
+        <h2 data-nx="check.h2" class="h2">The 10-point check.</h2>
+        <p data-nx="check.p" class="lead" style="margin-top:1rem">Done on every vehicle that comes in, whether for a full service or a puncture. You get a photo of the sheet on WhatsApp with anything that needs attention marked in red. No charge, no pressure to fix it here.</p>
+        <ol data-nx-list="check.list">
+          <li data-nx-f="li" data-nx-item>Engine oil level and colour<span>Low or black oil is the first sign of trouble</span></li>
+          <li data-nx-f="li" data-nx-item>Brake pad and shoe thickness<span>Measured, not guessed</span></li>
+          <li data-nx-f="li" data-nx-item>Tyre tread depth and pressure<span>All tyres, including the spare</span></li>
+          <li data-nx-f="li" data-nx-item>Battery voltage and terminals<span>Load test, terminals cleaned</span></li>
+          <li data-nx-f="li" data-nx-item>All lights and horn<span>Headlamp, indicators, brake light, number plate light</span></li>
+          <li data-nx-f="li" data-nx-item>Chain or belt condition<span>Slack, wear, lubrication</span></li>
+          <li data-nx-f="li" data-nx-item>Coolant and brake fluid<span>Level and condition (cars)</span></li>
+          <li data-nx-f="li" data-nx-item>Suspension and steering play<span>Shockers, bushes, tie rods</span></li>
+          <li data-nx-f="li" data-nx-item>Clutch and accelerator cables<span>Free play and fraying</span></li>
+          <li data-nx-f="li" data-nx-item>Leaks underneath<span>Oil, coolant, fuel</span></li>
         </ol>
-        <p class="check__free"><b>Free</b> &nbsp; Even if you only come for a puncture or a wash.</p>
+        <p data-nx="check.check-free" class="check__free"><b>Free</b> &nbsp; Even if you only come for a puncture or a wash.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--black" id="extras">
+<section data-nx-section="extras" class="section section--black" id="extras">
   <div class="wrap">
     <div class="extras">
       <div class="reveal">
-        <span class="kicker">Three things customers ask about</span>
-        <h2 class="h2">Pick-up, spares and insurance.</h2>
-        <ul class="extras__list" style="margin-top:1.8rem">
-          <li>
+        <span data-nx="extras.kicker" class="kicker">Three things customers ask about</span>
+        <h2 data-nx="extras.h2" class="h2">Pick-up, spares and insurance.</h2>
+        <ul data-nx-list="extras.extras-list" class="extras__list" style="margin-top:1.8rem">
+          <li data-nx-item>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V8a2 2 0 0 1 2-2h9v10M14 10h4l3 3v3h-7"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg>
-            <div><h3>Pick-up and drop</h3><p>Our rider collects your scooter or bike, or a driver collects your car, from your home or office between 9 am and 11 am and brings it back by evening. Within 6 km of the garage: Behala, Thakurpukur, Joka, Taratala, New Alipore, Sakherbazar. Charges are in the price table.</p></div>
+            <div><h3 data-nx-f="h3">Pick-up and drop</h3><p data-nx-f="p">Our rider collects your scooter or bike, or a driver collects your car, from your home or office between 9 am and 11 am and brings it back by evening. Within 6 km of the garage: Behala, Thakurpukur, Joka, Taratala, New Alipore, Sakherbazar. Charges are in the price table.</p></div>
           </li>
-          <li>
+          <li data-nx-item>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V7l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
-            <div><h3>Genuine spares</h3><p>Company parts from authorised distributors, with the box and the bill. If a genuine part is out of stock we tell you, and you choose between waiting and a named aftermarket brand. We do not fit unmarked parts.</p></div>
+            <div><h3 data-nx-f="h3">Genuine spares</h3><p data-nx-f="p">Company parts from authorised distributors, with the box and the bill. If a genuine part is out of stock we tell you, and you choose between waiting and a named aftermarket brand. We do not fit unmarked parts.</p></div>
           </li>
-          <li>
+          <li data-nx-item>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
-            <div><h3>Insurance claim help</h3><p>Had an accident? Bring the car or bike in. We photograph the damage, prepare the estimate in the format the insurer wants, and deal with the surveyor who comes to inspect. Cashless with most major insurers; for others we give you every paper for reimbursement.</p></div>
+            <div><h3 data-nx-f="h3">Insurance claim help</h3><p data-nx-f="p">Had an accident? Bring the car or bike in. We photograph the damage, prepare the estimate in the format the insurer wants, and deal with the surveyor who comes to inspect. Cashless with most major insurers; for others we give you every paper for reimbursement.</p></div>
           </li>
         </ul>
       </div>
       <figure class="extras__photo reveal" style="margin:0">
-        <img src="/demo/garage/images/ambassador-tyres.jpg" width="1200" height="800" alt="A yellow Ambassador taxi parked beside stacks of tyres outside a Kolkata garage" loading="lazy">
-        <figcaption>Kolkata's taxis have been coming to this road for tyres for forty years. We learnt the trade here.</figcaption>
+        <img data-nx="extras.photo" src="/demo/garage/images/ambassador-tyres.jpg" width="1200" height="800" alt="A yellow Ambassador taxi parked beside stacks of tyres outside a Kolkata garage" loading="lazy">
+        <figcaption data-nx="extras.figcaption">Kolkata's taxis have been coming to this road for tyres for forty years. We learnt the trade here.</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<section class="section section--pale" id="gallery">
+<section data-nx-section="gallery" class="section section--pale" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">The garage</span>
-      <h2 class="h2">Photos from the floor.</h2>
+      <span data-nx="gallery.kicker" class="kicker">The garage</span>
+      <h2 data-nx="gallery.h2" class="h2">Photos from the floor.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/garage/images/bengali-sign.jpg" width="1200" height="1800" alt="A mechanic working on a wheel on the ground in front of a wall with a Bengali sign" loading="lazy"></li>
-      <li><img src="/demo/garage/images/engine-hands.jpg" width="1200" height="795" alt="Two mechanics' hands working together inside an engine bay" loading="lazy"></li>
-      <li><img src="/demo/garage/images/tools.jpg" width="1200" height="1600" alt="Spanners and hand tools laid out on the workshop bench" loading="lazy"></li>
-      <li><img src="/demo/garage/images/tyre-shop.jpg" width="1200" height="1611" alt="A tyre repairer working in front of his shop with a Hindi signboard" loading="lazy"></li>
-      <li><img src="/demo/garage/images/workshop.jpg" width="1200" height="800" alt="A car raised on a lift inside the service bay" loading="lazy"></li>
-      <li><img src="/demo/garage/images/carburetor.jpg" width="1200" height="1680" alt="Close-up of a mechanic's hands cleaning a carburettor" loading="lazy"></li>
-      <li><img src="/demo/garage/images/elderly-engine.jpg" width="1200" height="1800" alt="A senior mechanic working on a two-wheeler engine on the floor" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/bengali-sign.jpg" width="1200" height="1800" alt="A mechanic working on a wheel on the ground in front of a wall with a Bengali sign" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/engine-hands.jpg" width="1200" height="795" alt="Two mechanics' hands working together inside an engine bay" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/tools.jpg" width="1200" height="1600" alt="Spanners and hand tools laid out on the workshop bench" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/tyre-shop.jpg" width="1200" height="1611" alt="A tyre repairer working in front of his shop with a Hindi signboard" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/workshop.jpg" width="1200" height="800" alt="A car raised on a lift inside the service bay" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/carburetor.jpg" width="1200" height="1680" alt="Close-up of a mechanic's hands cleaning a carburettor" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/garage/images/elderly-engine.jpg" width="1200" height="1800" alt="A senior mechanic working on a two-wheeler engine on the floor" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-8" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">From customers</span>
-      <h2 class="h2">What they say.</h2>
+      <span data-nx="section-8.kicker" class="kicker">From customers</span>
+      <h2 data-nx="section-8.h2" class="h2">What they say.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>My Activa was giving 35 to the litre. After their service and a carburettor clean it does 48. They showed me the old air filter, black as coal, and charged exactly what the board said.</p><footer>Soumen <span>&middot; Thakurpukur</span></footer></blockquote>
-      <blockquote class="reveal"><p>Someone scraped my Swift in the parking lot. They handled the whole insurance claim, the surveyor came to the garage, and I paid only the &#8377;1,000 excess. The door colour matches perfectly.</p><footer>Debjani <span>&middot; New Alipore</span></footer></blockquote>
+    <div data-nx-list="section-8.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">My Activa was giving 35 to the litre. After their service and a carburettor clean it does 48. They showed me the old air filter, black as coal, and charged exactly what the board said.</p><footer>Soumen <span data-nx-f="span">&middot; Thakurpukur</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Someone scraped my Swift in the parking lot. They handled the whole insurance claim, the surveyor came to the garage, and I paid only the &#8377;1,000 excess. The door colour matches perfectly.</p><footer>Debjani <span data-nx-f="span">&middot; New Alipore</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--pale" id="visit">
+<section data-nx-section="visit" class="section section--pale" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Find the garage</span>
-      <h2 class="h2">Diamond Harbour Road, opposite Behala Chowrasta bus stop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Find the garage</span>
+      <h2 data-nx="visit.h2" class="h2">Diamond Harbour Road, opposite Behala Chowrasta bus stop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>112 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=112%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">112 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=112%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Garage hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>9:00 am &ndash; 8:00 pm</td></tr>
-              <tr><td>Sunday</td><td>9:00 am &ndash; 1:00 pm</td></tr>
-              <tr><td>Drop for same-day service</td><td>Before 10:30 am</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Garage hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">9:00 am &ndash; 8:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">9:00 am &ndash; 1:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Drop for same-day service</td><td data-nx-f="td2">Before 10:30 am</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp a photo of the problem and your vehicle number. We reply within the hour during garage time.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp a photo of the problem and your vehicle number. We reply within the hour during garage time.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Biswas%20Motor%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -552,10 +556,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Book a slot. Drop by 10:30, collect by evening.</h2>
-    <p>Send your vehicle type, what needs doing and a day. We confirm the slot, the estimate and whether you want pick-up.</p>
+    <h2 data-nx="book.h2">Book a slot. Drop by 10:30, collect by evening.</h2>
+    <p data-nx="book.p">Send your vehicle type, what needs doing and a day. We confirm the slot, the estimate and whether you want pick-up.</p>
     <div class="final__cta">
       <a class="btn btn--black" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Biswas%20Motor%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -570,31 +574,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#E10600"/><path d="M14 30 30 14M30 14l-2-2M12 32l2-2" stroke="#111" stroke-width="4" stroke-linecap="round"/><path d="m27 9 8 8-3 3-8-8z" fill="#fff"/><path d="m9 27 8 8-3 3-8-8z" fill="#fff"/></svg>
-          <span><b>Biswas Motor Works</b><small>Behala &middot; since 2004</small></span>
+          <span><b data-nx="footer.b">Biswas Motor Works</b><small data-nx="footer.small">Behala &middot; since 2004</small></span>
         </a>
-        <p>Two-wheeler and car service garage on Diamond Harbour Road. Servicing, brakes, clutch, battery, tyres, denting-painting, AC, pick-up and drop, insurance claim help.</p>
+        <p data-nx="footer.p">Two-wheeler and car service garage on Diamond Harbour Road. Servicing, brakes, clutch, battery, tyres, denting-painting, AC, pick-up and drop, insurance claim help.</p>
       </div>
       <div>
-        <h4>Garage</h4>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#prices">Prices by vehicle</a></li>
-          <li><a href="#check">10-point free check</a></li>
-          <li><a href="#extras">Pick-up and insurance</a></li>
+        <h4 data-nx="footer.h4">Garage</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#services">Services</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Prices by vehicle</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#check">10-point free check</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#extras">Pick-up and insurance</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>112 Diamond Harbour Road, Behala, Kolkata 700034</li>
+          <li data-nx="footer.li">112 Diamond Harbour Road, Behala, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 9 am &ndash; 8 pm &middot; Sun 9 am &ndash; 1 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 9 am &ndash; 8 pm &middot; Sun 9 am &ndash; 1 pm</li>
         </ul>
       </div>
     </div>
@@ -636,5 +640,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

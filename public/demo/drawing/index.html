@@ -253,6 +253,15 @@ tr:last-child td{border-bottom:0}
 .footer__sample a{text-decoration:underline; color:#fff}
 .footer__copy{margin-top:.8rem; font-size:.8rem; color:rgba(255,255,255,.45)}
 @media (min-width:800px){.footer__grid{grid-template-columns:1.4fr 1fr 1fr}}
+/* phone: taped photos fill their column and the caption sits under the photo */
+@media (max-width:799px){
+  .tape{margin:0;padding-bottom:.6rem}
+  .tape figcaption{position:static;padding-top:.5rem;line-height:1.3}
+  .gallery .tape{padding-bottom:.6rem}
+  .footer ul li+li{margin-top:0}
+  .footer li a,.footer address a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__sample a{padding-block:.7rem}
+}
 
 /* floating social dock: small brand-coloured circles on the right edge,
    off-screen while scrolling, slides in 2.5s after scrolling stops */
@@ -287,19 +296,16 @@ tr:last-child td{border-bottom:0}
   *{transition-duration:.01ms !important}
 }
 </style>
+<meta name="nx-site" content="drawing">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demostrip">
-  <div class="wrap demostrip__in">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="demostrip__mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="demostrip__cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header" id="top">
+<header data-nx-section="top" class="header" id="top">
   <div class="wrap header__in">
     <a class="brand" href="#top">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
@@ -308,7 +314,7 @@ tr:last-child td{border-bottom:0}
         <rect x="19" y="19" width="10" height="10" fill="#1D4ED8"/>
         <path d="M11 29l6-9 4 6" fill="#F4C20D"/>
       </svg>
-      <span><span class="brand__name">Rong Tuli Art School</span><span class="brand__sub">drawing &amp; painting, since 2009</span></span>
+      <span><span data-nx="top.brand-name" class="brand__name">Rong Tuli Art School</span><span data-nx="top.brand-sub" class="brand__sub">drawing &amp; painting, since 2009</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <ul>
@@ -324,6 +330,7 @@ tr:last-child td{border-bottom:0}
       <a class="btn btn--white" href="tel:+919804243159">Call</a>
       <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Join a trial class</a>
     </div>
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -360,112 +367,112 @@ tr:last-child td{border-bottom:0}
 <main id="main">
 
 <!-- Hero -->
-<section class="hero">
+<section data-nx-section="section-2" class="hero">
   <div class="wrap">
     <div class="hero__head">
-      <span class="scribble">Bhowanipore, Kolkata</span>
-      <h1 class="h-xl">Everyone can draw. <br>We teach you <span class="hand">how.</span></h1>
-      <p class="lede">Pencil, watercolour and sketching classes for children from age 6 and adults of any age. Small batches, patient teachers, and a proper portfolio if you are aiming for an art college.</p>
+      <span data-nx="section-2.scribble" class="scribble">Bhowanipore, Kolkata</span>
+      <h1 data-nx="section-2.h1" class="h-xl">Everyone can draw. <br>We teach you <span class="hand">how.</span></h1>
+      <p data-nx="section-2.lede" class="lede">Pencil, watercolour and sketching classes for children from age 6 and adults of any age. Small batches, patient teachers, and a proper portfolio if you are aiming for an art college.</p>
       <div class="btn-row">
         <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a free trial class
         </a>
-        <a class="btn btn--white" href="#courses">See the courses</a>
+        <a data-nx="section-2.button" class="btn btn--white" href="#courses">See the courses</a>
       </div>
-      <ul class="hero__meta">
-        <li><i style="background:var(--red)"></i>Kids 6&ndash;12</li>
-        <li><i style="background:var(--blue)"></i>Teens &amp; exam prep</li>
-        <li><i style="background:var(--yellow)"></i>Adult hobby batches</li>
-        <li><i style="background:var(--green)"></i>Weekend only options</li>
+      <ul data-nx-list="section-2.hero-meta" class="hero__meta">
+        <li data-nx-f="li" data-nx-item><i style="background:var(--red)"></i>Kids 6&ndash;12</li>
+        <li data-nx-f="li" data-nx-item><i style="background:var(--blue)"></i>Teens &amp; exam prep</li>
+        <li data-nx-f="li" data-nx-item><i style="background:var(--yellow)"></i>Adult hobby batches</li>
+        <li data-nx-f="li" data-nx-item><i style="background:var(--green)"></i>Weekend only options</li>
       </ul>
     </div>
-    <div class="collage">
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/hero.jpg" width="1600" height="1067" alt="Two girls drawing at a long table in an art class while the teacher sharpens a pencil" fetchpriority="high"></div><figcaption>Kids' batch, Thursday</figcaption></figure>
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/child-colour-pencils.jpg" width="1200" height="1887" alt="Girl colouring a printed sheet with crayons at a low table" loading="lazy"></div><figcaption>Kids' batch, age 7</figcaption></figure>
-      <figure class="tape"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a Pattachitra design on a tin cup with a fine brush" loading="lazy"></div><figcaption>Fine brushwork practice</figcaption></figure>
+    <div data-nx-list="section-2.collage" class="collage">
+      <figure data-nx-item class="tape"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/hero.jpg" width="1600" height="1067" alt="Two girls drawing at a long table in an art class while the teacher sharpens a pencil" fetchpriority="high"></div><figcaption data-nx-f="figcaption">Kids' batch, Thursday</figcaption></figure>
+      <figure data-nx-item class="tape"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/child-colour-pencils.jpg" width="1200" height="1887" alt="Girl colouring a printed sheet with crayons at a low table" loading="lazy"></div><figcaption data-nx-f="figcaption">Kids' batch, age 7</figcaption></figure>
+      <figure data-nx-item class="tape"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a Pattachitra design on a tin cup with a fine brush" loading="lazy"></div><figcaption data-nx-f="figcaption">Fine brushwork practice</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- About -->
-<section class="section section--white" id="about">
+<section data-nx-section="about" class="section section--white" id="about">
   <div class="wrap about">
     <div class="about__text reveal">
-      <span class="scribble scribble--blue">About us</span>
-      <h2 class="h-lg">A two-room art school on Sarat Bose Road</h2>
-      <p style="margin-top:1.2rem">Rong Tuli was started in 2009 by Debjani Ghosh, a Government College of Art &amp; Craft graduate, after years of teaching from her verandah. The school now has two rooms with north light, a shelf of 400 reference books and a kettle that is always on.</p>
-      <p>We teach drawing the old way: look first, then draw. Children start with shapes and shading. Adults start wherever they are. Exam students work on a timed portfolio from day one.</p>
-      <p>Every student gets a folder. At the end of each term we put the work up on the wall and invite parents in.</p>
-      <ul class="numbers">
-        <li><b>2009</b><span>Teaching since</span></li>
-        <li><b>110</b><span>Students this term</span></li>
-        <li><b>38</b><span>Art college admissions since 2015</span></li>
-        <li><b>8</b><span>Students per batch, maximum</span></li>
+      <span data-nx="about.scribble" class="scribble scribble--blue">About us</span>
+      <h2 data-nx="about.h2" class="h-lg">A two-room art school on Sarat Bose Road</h2>
+      <p data-nx="about.p" style="margin-top:1.2rem">Rong Tuli was started in 2009 by Debjani Ghosh, a Government College of Art &amp; Craft graduate, after years of teaching from her verandah. The school now has two rooms with north light, a shelf of 400 reference books and a kettle that is always on.</p>
+      <p data-nx="about.p2">We teach drawing the old way: look first, then draw. Children start with shapes and shading. Adults start wherever they are. Exam students work on a timed portfolio from day one.</p>
+      <p data-nx="about.p3">Every student gets a folder. At the end of each term we put the work up on the wall and invite parents in.</p>
+      <ul data-nx-list="about.numbers" class="numbers">
+        <li data-nx-item><b data-nx-f="b">2009</b><span data-nx-f="span">Teaching since</span></li>
+        <li data-nx-item><b data-nx-f="b">110</b><span data-nx-f="span">Students this term</span></li>
+        <li data-nx-item><b data-nx-f="b">38</b><span data-nx-f="span">Art college admissions since 2015</span></li>
+        <li data-nx-item><b data-nx-f="b">8</b><span data-nx-f="span">Students per batch, maximum</span></li>
       </ul>
     </div>
     <figure class="about__fig tape reveal">
-      <div class="ph"><img src="/demo/drawing/images/teacher-with-student.jpg" width="1200" height="1800" alt="Woman in a red kurta painting an alpona design on the floor" loading="lazy"></div>
-      <figcaption>Debjani di painting alpona before the Pujo show</figcaption>
+      <div class="ph"><img data-nx="about.photo" src="/demo/drawing/images/teacher-with-student.jpg" width="1200" height="1800" alt="Woman in a red kurta painting an alpona design on the floor" loading="lazy"></div>
+      <figcaption data-nx="about.figcaption">Debjani di painting alpona before the Pujo show</figcaption>
     </figure>
   </div>
 </section>
 
 <!-- Courses -->
-<section class="section" id="courses">
+<section data-nx-section="courses" class="section" id="courses">
   <div class="wrap">
     <div class="center reveal">
-      <span class="scribble">What we teach</span>
-      <h2 class="h-lg">Five courses, colour-coded</h2>
-      <p class="lede">Pick by age and by what you want to make. Each course runs in three-month terms. You can join mid-term and pay for the months left.</p>
+      <span data-nx="courses.scribble" class="scribble">What we teach</span>
+      <h2 data-nx="courses.h2" class="h-lg">Five courses, colour-coded</h2>
+      <p data-nx="courses.lede" class="lede">Pick by age and by what you want to make. Each course runs in three-month terms. You can join mid-term and pay for the months left.</p>
     </div>
     <div class="courses">
       <article class="course course--red reveal">
-        <figure class="ph"><img src="/demo/drawing/images/kids-art-class.jpg" width="1200" height="839" alt="Young girl in a blue shirt drawing with crayons beside her teacher" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo" src="/demo/drawing/images/kids-art-class.jpg" width="1200" height="839" alt="Young girl in a blue shirt drawing with crayons beside her teacher" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Kids' drawing (6&ndash;12)</h3>
-          <p>Shapes, shading, colour pencils, oil pastels and poster colour. One finished picture every week to take home. Handwriting improves as a side effect.</p>
-          <div class="course__row"><span class="chip">Age 6&ndash;12</span><span class="chip">90 min</span><span class="chip">Twice a week</span></div>
+          <h3 data-nx="courses.h3">Kids' drawing (6&ndash;12)</h3>
+          <p data-nx="courses.p">Shapes, shading, colour pencils, oil pastels and poster colour. One finished picture every week to take home. Handwriting improves as a side effect.</p>
+          <div data-nx-list="courses.course-row" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">Age 6&ndash;12</span><span data-nx-f="chip" data-nx-item class="chip">90 min</span><span data-nx-f="chip" data-nx-item class="chip">Twice a week</span></div>
         </div>
       </article>
       <article class="course course--grey reveal">
-        <figure class="ph"><img src="/demo/drawing/images/pencil-sketching.jpg" width="1200" height="1800" alt="Artist's hand painting the eye of a clay idol with a fine brush" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo2" src="/demo/drawing/images/pencil-sketching.jpg" width="1200" height="1800" alt="Artist's hand painting the eye of a clay idol with a fine brush" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Pencil &amp; sketching</h3>
-          <p>Still life, perspective, light and shadow, graphite and charcoal. The foundation for everything else. Good for teens and adults who want to draw "properly".</p>
-          <div class="course__row"><span class="chip">Age 13+</span><span class="chip">2 hours</span><span class="chip">Twice a week</span></div>
+          <h3 data-nx="courses.h32">Pencil &amp; sketching</h3>
+          <p data-nx="courses.p2">Still life, perspective, light and shadow, graphite and charcoal. The foundation for everything else. Good for teens and adults who want to draw "properly".</p>
+          <div data-nx-list="courses.course-row2" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">Age 13+</span><span data-nx-f="chip" data-nx-item class="chip">2 hours</span><span data-nx-f="chip" data-nx-item class="chip">Twice a week</span></div>
         </div>
       </article>
       <article class="course course--blue reveal">
-        <figure class="ph"><img src="/demo/drawing/images/watercolour-palette.jpg" width="800" height="1067" alt="Green alpona-style fish painted on paper with a brush beside it" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo3" src="/demo/drawing/images/watercolour-palette.jpg" width="800" height="1067" alt="Green alpona-style fish painted on paper with a brush beside it" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Watercolour</h3>
-          <p>Washes, wet-on-wet, Kolkata street scenes and the lakes. We paint outdoors at Rabindra Sarobar one Sunday a month in winter.</p>
-          <div class="course__row"><span class="chip">Age 14+</span><span class="chip">2 hours</span><span class="chip">Once or twice a week</span></div>
+          <h3 data-nx="courses.h33">Watercolour</h3>
+          <p data-nx="courses.p3">Washes, wet-on-wet, Kolkata street scenes and the lakes. We paint outdoors at Rabindra Sarobar one Sunday a month in winter.</p>
+          <div data-nx-list="courses.course-row3" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">Age 14+</span><span data-nx-f="chip" data-nx-item class="chip">2 hours</span><span data-nx-f="chip" data-nx-item class="chip">Once or twice a week</span></div>
         </div>
       </article>
       <article class="course course--yellow reveal">
-        <figure class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine Pattachitra lines on a small wooden box" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo4" src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine Pattachitra lines on a small wooden box" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Art college exam prep</h3>
-          <p>For Government College of Art &amp; Craft, Rabindra Bharati, Kala Bhavana and NIFT/NID. Timed object drawing, memory drawing, composition and a 20-sheet portfolio. Mock tests every month.</p>
-          <div class="course__row"><span class="chip">Class 10&ndash;12 &amp; gap year</span><span class="chip">3 hours</span><span class="chip">Thrice a week</span></div>
+          <h3 data-nx="courses.h34">Art college exam prep</h3>
+          <p data-nx="courses.p4">For Government College of Art &amp; Craft, Rabindra Bharati, Kala Bhavana and NIFT/NID. Timed object drawing, memory drawing, composition and a 20-sheet portfolio. Mock tests every month.</p>
+          <div data-nx-list="courses.course-row4" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">Class 10&ndash;12 &amp; gap year</span><span data-nx-f="chip" data-nx-item class="chip">3 hours</span><span data-nx-f="chip" data-nx-item class="chip">Thrice a week</span></div>
         </div>
       </article>
       <article class="course course--green reveal">
-        <figure class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman in a studio painting a large colourful mask" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo5" src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman in a studio painting a large colourful mask" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Weekend hobby batch (adults)</h3>
-          <p>Saturday afternoons. No exams, no homework. Pencil, pen-and-ink or watercolour, your choice. Most students are 25 to 60 and have not drawn since school.</p>
-          <div class="course__row"><span class="chip">Age 18+</span><span class="chip">2 hours</span><span class="chip">Saturdays</span></div>
+          <h3 data-nx="courses.h35">Weekend hobby batch (adults)</h3>
+          <p data-nx="courses.p5">Saturday afternoons. No exams, no homework. Pencil, pen-and-ink or watercolour, your choice. Most students are 25 to 60 and have not drawn since school.</p>
+          <div data-nx-list="courses.course-row5" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">Age 18+</span><span data-nx-f="chip" data-nx-item class="chip">2 hours</span><span data-nx-f="chip" data-nx-item class="chip">Saturdays</span></div>
         </div>
       </article>
       <article class="course course--grey reveal">
-        <figure class="ph"><img src="/demo/drawing/images/charcoal-box.jpg" width="800" height="1200" alt="Hands painting red alta on a dancer's feet" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="courses.photo6" src="/demo/drawing/images/charcoal-box.jpg" width="800" height="1200" alt="Hands painting red alta on a dancer's feet" loading="lazy"></figure>
         <div class="course__body">
-          <h3>Short workshops</h3>
-          <p>Two-day workshops in the school holidays: alpona, Pujo-theme poster, charcoal portrait, urban sketching. Announced on our WhatsApp group a month ahead.</p>
-          <div class="course__row"><span class="chip">All ages</span><span class="chip">2 days</span><span class="chip">&#8377;600 &ndash; &#8377;900</span></div>
+          <h3 data-nx="courses.h36">Short workshops</h3>
+          <p data-nx="courses.p6">Two-day workshops in the school holidays: alpona, Pujo-theme poster, charcoal portrait, urban sketching. Announced on our WhatsApp group a month ahead.</p>
+          <div data-nx-list="courses.course-row6" class="course__row"><span data-nx-f="chip" data-nx-item class="chip">All ages</span><span data-nx-f="chip" data-nx-item class="chip">2 days</span><span data-nx-f="chip" data-nx-item class="chip">&#8377;600 &ndash; &#8377;900</span></div>
         </div>
       </article>
     </div>
@@ -473,127 +480,127 @@ tr:last-child td{border-bottom:0}
 </section>
 
 <!-- Batches & fees -->
-<section class="section section--white" id="batches">
+<section data-nx-section="batches" class="section section--white" id="batches">
   <div class="wrap">
     <div class="reveal">
-      <span class="scribble scribble--blue">Batches &amp; fees</span>
-      <h2 class="h-lg">Weekly timetable</h2>
-      <p class="lede">Fees are per month, paid in the first week. Paper and basic materials for kids are included. Older students bring their own (list below).</p>
+      <span data-nx="batches.scribble" class="scribble scribble--blue">Batches &amp; fees</span>
+      <h2 data-nx="batches.h2" class="h-lg">Weekly timetable</h2>
+      <p data-nx="batches.lede" class="lede">Fees are per month, paid in the first week. Paper and basic materials for kids are included. Older students bring their own (list below).</p>
     </div>
     <div class="table-wrap reveal">
       <table>
-        <thead><tr><th scope="col">Course</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Batch size</th><th scope="col">Monthly fee</th></tr></thead>
-        <tbody>
-          <tr><td><span class="dot" style="background:var(--red)"></span><b>Kids' drawing A</b></td><td>Mon, Thu</td><td>4:30 &ndash; 6:00 pm</td><td>8</td><td class="fee">&#8377;900</td></tr>
-          <tr><td><span class="dot" style="background:var(--red)"></span><b>Kids' drawing B</b></td><td>Sat, Sun</td><td>10:00 &ndash; 11:30 am</td><td>8</td><td class="fee">&#8377;900</td></tr>
-          <tr><td><span class="dot" style="background:var(--pencil-light)"></span><b>Pencil &amp; sketching</b></td><td>Tue, Fri</td><td>5:00 &ndash; 7:00 pm</td><td>8</td><td class="fee">&#8377;1,200</td></tr>
-          <tr><td><span class="dot" style="background:var(--blue)"></span><b>Watercolour</b></td><td>Wed, Sun</td><td>Wed 5 &ndash; 7 pm, Sun 7 &ndash; 9 am</td><td>6</td><td class="fee">&#8377;1,300</td></tr>
-          <tr><td><span class="dot" style="background:var(--yellow)"></span><b>Exam prep</b></td><td>Mon, Wed, Fri</td><td>6:00 &ndash; 9:00 pm</td><td>6</td><td class="fee">&#8377;2,500</td></tr>
-          <tr><td><span class="dot" style="background:var(--green)"></span><b>Weekend hobby (adults)</b></td><td>Sat</td><td>3:00 &ndash; 5:00 pm</td><td>8</td><td class="fee">&#8377;1,000</td></tr>
+        <thead><tr><th data-nx="batches.th" scope="col">Course</th><th data-nx="batches.th2" scope="col">Days</th><th data-nx="batches.th3" scope="col">Time</th><th data-nx="batches.th4" scope="col">Batch size</th><th data-nx="batches.th5" scope="col">Monthly fee</th></tr></thead>
+        <tbody data-nx-list="batches.list">
+          <tr data-nx-item><td><span class="dot" style="background:var(--red)"></span><b data-nx-f="b">Kids' drawing A</b></td><td data-nx-f="td">Mon, Thu</td><td data-nx-f="td2">4:30 &ndash; 6:00 pm</td><td data-nx-f="td3">8</td><td data-nx-f="fee" class="fee">&#8377;900</td></tr>
+          <tr data-nx-item><td><span class="dot" style="background:var(--red)"></span><b data-nx-f="b">Kids' drawing B</b></td><td data-nx-f="td">Sat, Sun</td><td data-nx-f="td2">10:00 &ndash; 11:30 am</td><td data-nx-f="td3">8</td><td data-nx-f="fee" class="fee">&#8377;900</td></tr>
+          <tr data-nx-item><td><span class="dot" style="background:var(--pencil-light)"></span><b data-nx-f="b">Pencil &amp; sketching</b></td><td data-nx-f="td">Tue, Fri</td><td data-nx-f="td2">5:00 &ndash; 7:00 pm</td><td data-nx-f="td3">8</td><td data-nx-f="fee" class="fee">&#8377;1,200</td></tr>
+          <tr data-nx-item><td><span class="dot" style="background:var(--blue)"></span><b data-nx-f="b">Watercolour</b></td><td data-nx-f="td">Wed, Sun</td><td data-nx-f="td2">Wed 5 &ndash; 7 pm, Sun 7 &ndash; 9 am</td><td data-nx-f="td3">6</td><td data-nx-f="fee" class="fee">&#8377;1,300</td></tr>
+          <tr data-nx-item><td><span class="dot" style="background:var(--yellow)"></span><b data-nx-f="b">Exam prep</b></td><td data-nx-f="td">Mon, Wed, Fri</td><td data-nx-f="td2">6:00 &ndash; 9:00 pm</td><td data-nx-f="td3">6</td><td data-nx-f="fee" class="fee">&#8377;2,500</td></tr>
+          <tr data-nx-item><td><span class="dot" style="background:var(--green)"></span><b data-nx-f="b">Weekend hobby (adults)</b></td><td data-nx-f="td">Sat</td><td data-nx-f="td2">3:00 &ndash; 5:00 pm</td><td data-nx-f="td3">8</td><td data-nx-f="fee" class="fee">&#8377;1,000</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note">Admission &#8377;300 once, includes the folder and a sketchbook. Pay three months together and the third month is &#8377;200 off. Trial class is free, no admission needed for it.</p>
+    <p data-nx="batches.note" class="note">Admission &#8377;300 once, includes the folder and a sketchbook. Pay three months together and the third month is &#8377;200 off. Trial class is free, no admission needed for it.</p>
   </div>
 </section>
 
 <!-- Materials -->
-<section class="section" id="materials">
+<section data-nx-section="materials" class="section" id="materials">
   <div class="wrap">
     <div class="center reveal">
-      <span class="scribble scribble--green">Before your first class</span>
-      <h2 class="h-lg">What to bring</h2>
-      <p class="lede">All of this is available at the stationery shop below us or at any art shop on College Street. Bring what you have; we lend the rest for the first month.</p>
+      <span data-nx="materials.scribble" class="scribble scribble--green">Before your first class</span>
+      <h2 data-nx="materials.h2" class="h-lg">What to bring</h2>
+      <p data-nx="materials.lede" class="lede">All of this is available at the stationery shop below us or at any art shop on College Street. Bring what you have; we lend the rest for the first month.</p>
     </div>
     <div class="materials">
       <div class="matbox reveal">
-        <h3><i style="background:var(--red)"></i>Kids' drawing</h3>
-        <ul>
-          <li>A4 drawing copy, 100 pages</li>
-          <li>HB and 2B pencils, eraser, sharpener</li>
-          <li>24-shade colour pencils</li>
-          <li>Oil pastels, 25 shades</li>
-          <li>An old shirt or apron</li>
+        <h3 data-nx="materials.h3"><i style="background:var(--red)"></i>Kids' drawing</h3>
+        <ul data-nx-list="materials.list">
+          <li data-nx-f="li" data-nx-item>A4 drawing copy, 100 pages</li>
+          <li data-nx-f="li" data-nx-item>HB and 2B pencils, eraser, sharpener</li>
+          <li data-nx-f="li" data-nx-item>24-shade colour pencils</li>
+          <li data-nx-f="li" data-nx-item>Oil pastels, 25 shades</li>
+          <li data-nx-f="li" data-nx-item>An old shirt or apron</li>
         </ul>
-        <small>We supply paper, poster colour and brushes.</small>
+        <small data-nx="materials.small">We supply paper, poster colour and brushes.</small>
       </div>
       <div class="matbox reveal">
-        <h3><i style="background:var(--pencil-light)"></i>Pencil, sketching, exam prep</h3>
-        <ul>
-          <li>Cartridge paper, A3 and half-imperial</li>
-          <li>Pencils 2H to 8B, charcoal sticks</li>
-          <li>Kneaded eraser, blending stump</li>
-          <li>Drawing board 18 x 24 inch with clips</li>
-          <li>Fixative spray (exam prep only)</li>
+        <h3 data-nx="materials.h32"><i style="background:var(--pencil-light)"></i>Pencil, sketching, exam prep</h3>
+        <ul data-nx-list="materials.list2">
+          <li data-nx-f="li" data-nx-item>Cartridge paper, A3 and half-imperial</li>
+          <li data-nx-f="li" data-nx-item>Pencils 2H to 8B, charcoal sticks</li>
+          <li data-nx-f="li" data-nx-item>Kneaded eraser, blending stump</li>
+          <li data-nx-f="li" data-nx-item>Drawing board 18 x 24 inch with clips</li>
+          <li data-nx-f="li" data-nx-item>Fixative spray (exam prep only)</li>
         </ul>
-        <small>Exam students also need a portfolio bag before the mock tests.</small>
+        <small data-nx="materials.small2">Exam students also need a portfolio bag before the mock tests.</small>
       </div>
       <div class="matbox reveal">
-        <h3><i style="background:var(--blue)"></i>Watercolour &amp; hobby</h3>
-        <ul>
-          <li>Watercolour paper, 300 gsm, A4 pad</li>
-          <li>12-pan watercolour set</li>
-          <li>Round brushes no. 2, 6, 10 and a 1-inch flat</li>
-          <li>Two water jars, cloth rag</li>
-          <li>Masking tape</li>
+        <h3 data-nx="materials.h33"><i style="background:var(--blue)"></i>Watercolour &amp; hobby</h3>
+        <ul data-nx-list="materials.list3">
+          <li data-nx-f="li" data-nx-item>Watercolour paper, 300 gsm, A4 pad</li>
+          <li data-nx-f="li" data-nx-item>12-pan watercolour set</li>
+          <li data-nx-f="li" data-nx-item>Round brushes no. 2, 6, 10 and a 1-inch flat</li>
+          <li data-nx-f="li" data-nx-item>Two water jars, cloth rag</li>
+          <li data-nx-f="li" data-nx-item>Masking tape</li>
         </ul>
-        <small>A student-grade set costs about &#8377;450 to &#8377;700.</small>
+        <small data-nx="materials.small3">A student-grade set costs about &#8377;450 to &#8377;700.</small>
       </div>
     </div>
   </div>
 </section>
 
 <!-- How a term works -->
-<section class="section section--ink">
+<section data-nx-section="section-7" class="section section--ink">
   <div class="wrap">
     <div class="center reveal">
-      <span class="scribble" style="color:var(--yellow)">How it works</span>
-      <h2 class="h-lg">A term at Rong Tuli</h2>
-      <p class="lede">Three months, one theme, one wall show at the end. This is the same for a six-year-old and a sixty-year-old.</p>
+      <span data-nx="section-7.scribble" class="scribble" style="color:var(--yellow)">How it works</span>
+      <h2 data-nx="section-7.h2" class="h-lg">A term at Rong Tuli</h2>
+      <p data-nx="section-7.lede" class="lede">Three months, one theme, one wall show at the end. This is the same for a six-year-old and a sixty-year-old.</p>
     </div>
-    <ol class="steps">
-      <li class="step reveal"><h3>Trial class</h3><p>Come for one free class. We watch how you hold the pencil and suggest a batch. No admission fee for the trial.</p></li>
-      <li class="step reveal"><h3>Weeks 1 to 4</h3><p>Basics for the term's theme: lines, shapes, tone. Everyone draws the same still life so progress is easy to see.</p></li>
-      <li class="step reveal"><h3>Weeks 5 to 10</h3><p>Your own work. Teacher sits with each student for ten minutes every class. Corrections are drawn on tracing paper, never on your sheet.</p></li>
-      <li class="step reveal"><h3>Wall show</h3><p>Last Sunday of the term. Work goes up on the studio wall, parents and friends come, tea is served. Then a new term begins.</p></li>
+    <ol data-nx-list="section-7.steps" class="steps">
+      <li data-nx-item class="step reveal"><h3 data-nx-f="h3">Trial class</h3><p data-nx-f="p">Come for one free class. We watch how you hold the pencil and suggest a batch. No admission fee for the trial.</p></li>
+      <li data-nx-item class="step reveal"><h3 data-nx-f="h3">Weeks 1 to 4</h3><p data-nx-f="p">Basics for the term's theme: lines, shapes, tone. Everyone draws the same still life so progress is easy to see.</p></li>
+      <li data-nx-item class="step reveal"><h3 data-nx-f="h3">Weeks 5 to 10</h3><p data-nx-f="p">Your own work. Teacher sits with each student for ten minutes every class. Corrections are drawn on tracing paper, never on your sheet.</p></li>
+      <li data-nx-item class="step reveal"><h3 data-nx-f="h3">Wall show</h3><p data-nx-f="p">Last Sunday of the term. Work goes up on the studio wall, parents and friends come, tea is served. Then a new term begins.</p></li>
     </ol>
   </div>
 </section>
 
 <!-- Gallery -->
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="center reveal">
-      <span class="scribble">On the wall</span>
-      <h2 class="h-lg">From the studio</h2>
+      <span data-nx="gallery.scribble" class="scribble">On the wall</span>
+      <h2 data-nx="gallery.h2" class="h-lg">From the studio</h2>
     </div>
-    <div class="gallery">
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/kids-canvas-easels.jpg" width="1200" height="800" alt="Smiling boy holding out a fistful of crayons in a courtyard" loading="lazy"></div><figcaption>Crayon day, kids' batch</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/eye-sketches.jpg" width="800" height="533" alt="Child's hands painted in saffron, white and green" loading="lazy"></div><figcaption>Independence Day hand-paint</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/brushes-holder.jpg" width="800" height="1067" alt="Artisan painting a wooden fish surrounded by Pattachitra plates" loading="lazy"></div><figcaption>Pattachitra workshop day</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/oil-pastels.jpg" width="800" height="1200" alt="Pattachitra scroll painting of deer, fish and birds" loading="lazy"></div><figcaption>Pattachitra scroll, reference shelf</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/childrens-drawings-wall.jpg" width="1200" height="1800" alt="Stack of hand-painted Pattachitra wooden plates" loading="lazy"></div><figcaption>Folk-art plates, term project</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a design on a tin cup" loading="lazy"></div><figcaption>Folk-art brushwork, Sunday</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine lines on a small wooden box" loading="lazy"></div><figcaption>Fine-line practice, exam batch</figcaption></figure>
-      <figure class="tape reveal"><div class="ph"><img src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman painting a colourful mask in the studio" loading="lazy"></div><figcaption>Saturday hobby batch</figcaption></figure>
+    <div data-nx-list="gallery.gallery" class="gallery">
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/kids-canvas-easels.jpg" width="1200" height="800" alt="Smiling boy holding out a fistful of crayons in a courtyard" loading="lazy"></div><figcaption data-nx-f="figcaption">Crayon day, kids' batch</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/eye-sketches.jpg" width="800" height="533" alt="Child's hands painted in saffron, white and green" loading="lazy"></div><figcaption data-nx-f="figcaption">Independence Day hand-paint</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/brushes-holder.jpg" width="800" height="1067" alt="Artisan painting a wooden fish surrounded by Pattachitra plates" loading="lazy"></div><figcaption data-nx-f="figcaption">Pattachitra workshop day</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/oil-pastels.jpg" width="800" height="1200" alt="Pattachitra scroll painting of deer, fish and birds" loading="lazy"></div><figcaption data-nx-f="figcaption">Pattachitra scroll, reference shelf</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/childrens-drawings-wall.jpg" width="1200" height="1800" alt="Stack of hand-painted Pattachitra wooden plates" loading="lazy"></div><figcaption data-nx-f="figcaption">Folk-art plates, term project</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/watercolour-hand.jpg" width="1200" height="1800" alt="Hands painting a design on a tin cup" loading="lazy"></div><figcaption data-nx-f="figcaption">Folk-art brushwork, Sunday</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/portrait-sketchbook.jpg" width="1200" height="1600" alt="Artisan painting fine lines on a small wooden box" loading="lazy"></div><figcaption data-nx-f="figcaption">Fine-line practice, exam batch</figcaption></figure>
+      <figure data-nx-item class="tape reveal"><div class="ph"><img data-nx-f="photo" src="/demo/drawing/images/adults-studio.jpg" width="1200" height="1800" alt="Woman painting a colourful mask in the studio" loading="lazy"></div><figcaption data-nx-f="figcaption">Saturday hobby batch</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- Quotes -->
-<section class="section section--white">
+<section data-nx-section="section-9" class="section section--white">
   <div class="wrap">
     <div class="center reveal">
-      <span class="scribble scribble--blue">Students and parents</span>
-      <h2 class="h-lg">In their words</h2>
+      <span data-nx="section-9.scribble" class="scribble scribble--blue">Students and parents</span>
+      <h2 data-nx="section-9.h2" class="h-lg">In their words</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="quote reveal">
-        <p>My son could not sit still for ten minutes. After a year at Rong Tuli he draws for an hour at home without being asked. His school art teacher noticed before we did.</p>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">My son could not sit still for ten minutes. After a year at Rong Tuli he draws for an hour at home without being asked. His school art teacher noticed before we did.</p>
         <footer>Sudeshna, parent, Hazra</footer>
       </blockquote>
-      <blockquote class="quote reveal">
-        <p>I joined the exam prep batch in Class 11 with no portfolio at all. Debjani di made me draw one object a day for a year. I got into Government Art College in 2024.</p>
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">I joined the exam prep batch in Class 11 with no portfolio at all. Debjani di made me draw one object a day for a year. I got into Government Art College in 2024.</p>
         <footer>Rohan, former student</footer>
       </blockquote>
     </div>
@@ -601,11 +608,11 @@ tr:last-child td{border-bottom:0}
 </section>
 
 <!-- Visit -->
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="reveal">
-      <span class="scribble scribble--green">Find us</span>
-      <h2 class="h-lg">Near Jadubabur Bazar, Bhowanipore</h2>
+      <span data-nx="visit.scribble" class="scribble scribble--green">Find us</span>
+      <h2 data-nx="visit.h2" class="h-lg">Near Jadubabur Bazar, Bhowanipore</h2>
     </div>
     <div class="visit">
       <div class="visit__map reveal">
@@ -613,20 +620,20 @@ tr:last-child td{border-bottom:0}
       </div>
       <div class="visit__info reveal">
         <div class="visit__block">
-          <h3>Address</h3>
-          <address>Rong Tuli Art School<br>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025<br>Above Maa Tara Stationery, 5 minutes' walk from Jatin Das Park metro</address>
+          <h3 data-nx="visit.h3">Address</h3>
+          <address data-nx="visit.address">Rong Tuli Art School<br>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025<br>Above Maa Tara Stationery, 5 minutes' walk from Jatin Das Park metro</address>
         </div>
         <div class="visit__block">
-          <h3>Studio hours</h3>
+          <h3 data-nx="visit.h32">Studio hours</h3>
           <ul class="hours">
-            <li><span>Monday &ndash; Friday</span><span>4:00 &ndash; 9:00 pm</span></li>
-            <li><span>Saturday</span><span>10:00 am &ndash; 6:00 pm</span></li>
-            <li><span>Sunday</span><span>7:00 am &ndash; 12:00 noon</span></li>
-            <li><span>Closed</span><span>Durga Pujo, Saptami to Dashami</span></li>
+            <li data-nx-list="visit.list"><span data-nx-f="span" data-nx-item>Monday &ndash; Friday</span><span data-nx-f="span" data-nx-item>4:00 &ndash; 9:00 pm</span></li>
+            <li data-nx-list="visit.list2"><span data-nx-f="span" data-nx-item>Saturday</span><span data-nx-f="span" data-nx-item>10:00 am &ndash; 6:00 pm</span></li>
+            <li data-nx-list="visit.list3"><span data-nx-f="span" data-nx-item>Sunday</span><span data-nx-f="span" data-nx-item>7:00 am &ndash; 12:00 noon</span></li>
+            <li data-nx-list="visit.list4"><span data-nx-f="span" data-nx-item>Closed</span><span data-nx-f="span" data-nx-item>Durga Pujo, Saptami to Dashami</span></li>
           </ul>
         </div>
         <div class="visit__links">
-          <a class="btn btn--blue" href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a>
+          <a data-nx="visit.button" class="btn btn--blue" href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a>
           <a class="btn btn--white" href="tel:+919804243159">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
             Call us
@@ -638,11 +645,11 @@ tr:last-child td{border-bottom:0}
 </section>
 
 <!-- Final CTA -->
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap center reveal">
-    <span class="scribble" style="color:var(--ink)">First class is free</span>
-    <h2 class="h-lg">Bring a pencil this Saturday</h2>
-    <p class="lede">Message us the age of the student and what you want to learn. We will reply with the batch to come to and what to bring.</p>
+    <span data-nx="contact.scribble" class="scribble" style="color:var(--ink)">First class is free</span>
+    <h2 data-nx="contact.h2" class="h-lg">Bring a pencil this Saturday</h2>
+    <p data-nx="contact.lede" class="lede">Message us the age of the student and what you want to learn. We will reply with the batch to come to and what to bring.</p>
     <div class="btn-row" style="justify-content:center">
       <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Rong%20Tuli%20Art%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -658,7 +665,7 @@ tr:last-child td{border-bottom:0}
 
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
@@ -669,9 +676,9 @@ tr:last-child td{border-bottom:0}
             <rect x="19" y="19" width="10" height="10" fill="#1D4ED8"/>
             <path d="M11 29l6-9 4 6" fill="#F4C20D"/>
           </svg>
-          <span><span class="brand__name">Rong Tuli Art School</span><span class="brand__sub">drawing &amp; painting, since 2009</span></span>
+          <span><span data-nx="footer.brand-name" class="brand__name">Rong Tuli Art School</span><span data-nx="footer.brand-sub" class="brand__sub">drawing &amp; painting, since 2009</span></span>
         </a>
-        <p class="footer__tag">Drawing, sketching, watercolour and art-college preparation for children and adults in Bhowanipore.</p>
+        <p data-nx="footer.footer-tag" class="footer__tag">Drawing, sketching, watercolour and art-college preparation for children and adults in Bhowanipore.</p>
       </div>
       <nav aria-label="Footer">
         <h4>Pages</h4>
@@ -684,16 +691,16 @@ tr:last-child td{border-bottom:0}
         </ul>
       </nav>
       <div>
-        <h4>Visit</h4>
-        <address>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025</address>
+        <h4 data-nx="footer.h4">Visit</h4>
+        <address data-nx="footer.address">45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025</address>
         <ul style="margin-top:.8rem">
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a></li>
+          <li><a data-nx="footer.button" href="https://www.google.com/maps/search/?api=1&amp;query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025" target="_blank" rel="noopener">Get directions</a></li>
         </ul>
       </div>
     </div>
     <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples.</p>
-    <p class="footer__copy">&copy; 2026 Rong Tuli Art School</p>
+    <p data-nx="footer.footer-copy" class="footer__copy">&copy; 2026 Rong Tuli Art School</p>
   </div>
 </footer>
 
@@ -770,5 +777,7 @@ tr:last-child td{border-bottom:0}
   } else {items.forEach(function(el){el.classList.add("is-in");});}
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

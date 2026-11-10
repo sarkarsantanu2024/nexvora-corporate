@@ -247,29 +247,35 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn,.dock,.dock__btn,.dock__btn::after,.to-top{transition:none}}
+/* phone: bigger tap targets and readable small text */
+@media (max-width:760px){
+  .footer li{margin-top:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer .note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="abacus">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="strip" role="note">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-    <a class="get" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sankhya Abacus Academy, home">
       <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="9" fill="#1B2559"/><path d="M13 18h22M13 30h22" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="19" cy="18" r="4" fill="#F97316"/><circle cx="29" cy="18" r="4" fill="#F97316"/><circle cx="24" cy="30" r="4" fill="#F97316"/></svg>
-      <span>Sankhya<small>Abacus Academy</small></span>
+      <span data-nx="header.span">Sankhya<small>Abacus Academy</small></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#gains">What your child gains</a><a href="#levels">Levels</a><a href="#fees">Fees</a><a href="#class">A class</a><a href="#faq">Parent FAQs</a><a href="#visit">Visit</a>
     </nav>
     <a class="btn btn-orange hdr-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Book a free demo class</a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
@@ -287,12 +293,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </aside>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <span class="eyebrow">Lake Town, Kolkata &middot; Since 2014</span>
-      <h1>Your child does <span>3-digit sums in their head</span> by Level 4.</h1>
-      <p class="lede">Abacus and mental arithmetic for children aged 5 to 14. Two classes a week, eight children to a batch, one teacher who knows every child's name. Come for a free demo class on a Saturday and watch it happen.</p>
+      <span data-nx="top.eyebrow" class="eyebrow">Lake Town, Kolkata &middot; Since 2014</span>
+      <h1 data-nx="top.h1">Your child does <span>3-digit sums in their head</span> by Level 4.</h1>
+      <p data-nx="top.lede" class="lede">Abacus and mental arithmetic for children aged 5 to 14. Two classes a week, eight children to a batch, one teacher who knows every child's name. Come for a free demo class on a Saturday and watch it happen.</p>
       <div class="hero-act">
         <a class="btn btn-orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Book a free demo class</a>
         <a class="btn btn-line" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp</a>
@@ -304,159 +310,159 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       </ul>
     </div>
     <div class="hero-pic">
-      <img src="/demo/abacus/images/hero.jpg" alt="Two young girls working at a classroom desk with crayons and worksheets" width="1600" height="1067" fetchpriority="high">
-      <div class="note"><b>460+ children</b>have completed at least one level with us since 2014.</div>
+      <img data-nx="top.photo" src="/demo/abacus/images/hero.jpg" alt="Two young girls working at a classroom desk with crayons and worksheets" width="1600" height="1067" fetchpriority="high">
+      <div data-nx="top.note" class="note"><b>460+ children</b>have completed at least one level with us since 2014.</div>
     </div>
   </div>
 </section>
 
-<section class="sec sec-cream" id="gains">
+<section data-nx-section="gains" class="sec sec-cream" id="gains">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">What your child gains</span>
-      <h2 class="h2">Four things parents notice within a year</h2>
-      <p class="lede">The abacus itself is only the first year. After that the child pictures it in the head and moves the beads with the mind. That is the real skill.</p>
+      <span data-nx="gains.eyebrow" class="eyebrow">What your child gains</span>
+      <h2 data-nx="gains.h2" class="h2">Four things parents notice within a year</h2>
+      <p data-nx="gains.lede" class="lede">The abacus itself is only the first year. After that the child pictures it in the head and moves the beads with the mind. That is the real skill.</p>
     </div>
-    <ul class="gains">
-      <li class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div><h3>Concentration</h3><p>A child doing ten-row sums in the head cannot think about anything else. Teachers tell us the same child sits still in school too.</p></li>
-      <li class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16l5-5 4 4 7-7"/><path d="M14 8h6v6"/></svg></div><h3>Speed with accuracy</h3><p>By Level 4 most children add fifteen two-digit numbers in under thirty seconds without paper, and get it right. School maths stops being a fear.</p></li>
-      <li class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a7 7 0 0 0-7 7c0 2.6 1.5 4.5 3 5.7V19h8v-2.3c1.5-1.2 3-3.1 3-5.7a7 7 0 0 0-7-7Z"/><path d="M10 22h4"/></svg></div><h3>Memory and listening</h3><p>Dictation sums train the child to hold numbers in the head while listening. Spelling and tables improve as a side effect.</p></li>
-      <li class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v5a6 6 0 0 1-12 0V4Z"/><path d="M6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg></div><h3>Confidence</h3><p>Every level ends with a certificate. Every year there is a competition hall. Finishing a paper on a stage at seven is something a child keeps.</p></li>
+    <ul data-nx-list="gains.gains" class="gains">
+      <li data-nx-item class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></div><h3 data-nx-f="h3">Concentration</h3><p data-nx-f="p">A child doing ten-row sums in the head cannot think about anything else. Teachers tell us the same child sits still in school too.</p></li>
+      <li data-nx-item class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16l5-5 4 4 7-7"/><path d="M14 8h6v6"/></svg></div><h3 data-nx-f="h3">Speed with accuracy</h3><p data-nx-f="p">By Level 4 most children add fifteen two-digit numbers in under thirty seconds without paper, and get it right. School maths stops being a fear.</p></li>
+      <li data-nx-item class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a7 7 0 0 0-7 7c0 2.6 1.5 4.5 3 5.7V19h8v-2.3c1.5-1.2 3-3.1 3-5.7a7 7 0 0 0-7-7Z"/><path d="M10 22h4"/></svg></div><h3 data-nx-f="h3">Memory and listening</h3><p data-nx-f="p">Dictation sums train the child to hold numbers in the head while listening. Spelling and tables improve as a side effect.</p></li>
+      <li data-nx-item class="card gain rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v5a6 6 0 0 1-12 0V4Z"/><path d="M6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg></div><h3 data-nx-f="h3">Confidence</h3><p data-nx-f="p">Every level ends with a certificate. Every year there is a competition hall. Finishing a paper on a stage at seven is something a child keeps.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="sec" id="levels">
+<section data-nx-section="levels" class="sec" id="levels">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">The eight levels</span>
-      <h2 class="h2">What your child can do at the end of each level</h2>
-      <p class="lede">Each level takes three to four months. There is a written and a speed test at the end, with a certificate from our affiliating body. The full course takes about two and a half years.</p>
+      <span data-nx="levels.eyebrow" class="eyebrow">The eight levels</span>
+      <h2 data-nx="levels.h2" class="h2">What your child can do at the end of each level</h2>
+      <p data-nx="levels.lede" class="lede">Each level takes three to four months. There is a written and a speed test at the end, with a certificate from our affiliating body. The full course takes about two and a half years.</p>
     </div>
-    <ol class="steps">
-      <li class="step rv"><span class="n">1</span><h3><small>Level 1</small>Knows the beads</h3><p>Adds and subtracts single digits on the abacus. Holds it correctly, moves beads with the right fingers.</p></li>
-      <li class="step rv"><span class="n">2</span><h3><small>Level 2</small>Two-digit sums</h3><p>Uses the five and ten formulas to add and subtract two-digit numbers on the abacus.</p></li>
-      <li class="step rv"><span class="n">3</span><h3><small>Level 3</small>Eyes closed</h3><p>Pictures the abacus and does two-digit sums without touching it. First mental arithmetic.</p></li>
-      <li class="step rv"><span class="n">4</span><h3><small>Level 4</small>3-digit, in the head</h3><p>Adds and subtracts three-digit numbers mentally. Multiplies two digits by one. Sits a first competition.</p></li>
-      <li class="step rv"><span class="n">5</span><h3><small>Level 5</small>Division</h3><p>Divides on the abacus and mentally. Understands decimals. Ten-row mental sums.</p></li>
-      <li class="step rv"><span class="n">6</span><h3><small>Level 6</small>Mixed sums</h3><p>All four operations mixed in one paper. Negative numbers. Two-digit by two-digit mentally.</p></li>
-      <li class="step rv"><span class="n">7</span><h3><small>Level 7</small>Decimals and percent</h3><p>Decimal multiplication and division, percentages, fifteen-row dictation sums.</p></li>
-      <li class="step rv"><span class="n">8</span><h3><small>Level 8</small>Grand level</h3><p>Full speed and accuracy, square roots. Eligible for the national grand competition.</p></li>
+    <ol data-nx-list="levels.steps" class="steps">
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">1</span><h3 data-nx-f="h3"><small>Level 1</small>Knows the beads</h3><p data-nx-f="p">Adds and subtracts single digits on the abacus. Holds it correctly, moves beads with the right fingers.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">2</span><h3 data-nx-f="h3"><small>Level 2</small>Two-digit sums</h3><p data-nx-f="p">Uses the five and ten formulas to add and subtract two-digit numbers on the abacus.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">3</span><h3 data-nx-f="h3"><small>Level 3</small>Eyes closed</h3><p data-nx-f="p">Pictures the abacus and does two-digit sums without touching it. First mental arithmetic.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">4</span><h3 data-nx-f="h3"><small>Level 4</small>3-digit, in the head</h3><p data-nx-f="p">Adds and subtracts three-digit numbers mentally. Multiplies two digits by one. Sits a first competition.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">5</span><h3 data-nx-f="h3"><small>Level 5</small>Division</h3><p data-nx-f="p">Divides on the abacus and mentally. Understands decimals. Ten-row mental sums.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">6</span><h3 data-nx-f="h3"><small>Level 6</small>Mixed sums</h3><p data-nx-f="p">All four operations mixed in one paper. Negative numbers. Two-digit by two-digit mentally.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">7</span><h3 data-nx-f="h3"><small>Level 7</small>Decimals and percent</h3><p data-nx-f="p">Decimal multiplication and division, percentages, fifteen-row dictation sums.</p></li>
+      <li data-nx-item class="step rv"><span data-nx-f="n" class="n">8</span><h3 data-nx-f="h3"><small>Level 8</small>Grand level</h3><p data-nx-f="p">Full speed and accuracy, square roots. Eligible for the national grand competition.</p></li>
     </ol>
-    <p class="stepnote">A child can start at any age from 5 to 14. Older children move through Levels 1 to 3 faster and sit in a separate batch so nobody feels out of place.</p>
+    <p data-nx="levels.stepnote" class="stepnote">A child can start at any age from 5 to 14. Older children move through Levels 1 to 3 faster and sit in a separate batch so nobody feels out of place.</p>
   </div>
 </section>
 
-<section class="sec sec-cream" id="fees">
+<section data-nx-section="fees" class="sec sec-cream" id="fees">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">Fees</span>
-      <h2 class="h2">One plain fee card</h2>
-      <p class="lede">Same classes, same teacher, whichever way you pay. No admission fee. Leave with two weeks' notice.</p>
+      <span data-nx="fees.eyebrow" class="eyebrow">Fees</span>
+      <h2 data-nx="fees.h2" class="h2">One plain fee card</h2>
+      <p data-nx="fees.lede" class="lede">Same classes, same teacher, whichever way you pay. No admission fee. Leave with two weeks' notice.</p>
     </div>
     <div class="fees">
-      <div class="card fee rv"><h3>Monthly</h3><p class="amt">&#8377;900<small> / month</small></p><p class="per">8 classes a month, 1 hour each</p><a class="btn btn-line" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start monthly</a></div>
-      <div class="card fee pop rv"><span class="tag">Most parents choose</span><h3>Quarterly</h3><p class="amt">&#8377;2,550<small> / 3 months</small></p><p class="per">24 classes, paid once a quarter</p><span class="save">Save &#8377;150</span><a class="btn btn-orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start quarterly</a></div>
-      <div class="card fee rv"><h3>Yearly</h3><p class="amt">&#8377;9,600<small> / year</small></p><p class="per">96 classes, two level exams included</p><span class="save">Save &#8377;1,200</span><a class="btn btn-line" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start yearly</a></div>
+      <div class="card fee rv"><h3 data-nx="fees.h3">Monthly</h3><p data-nx="fees.amt" class="amt">&#8377;900<small> / month</small></p><p data-nx="fees.per" class="per">8 classes a month, 1 hour each</p><a class="btn btn-line" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start monthly</a></div>
+      <div class="card fee pop rv"><span data-nx="fees.tag" class="tag">Most parents choose</span><h3 data-nx="fees.h32">Quarterly</h3><p data-nx="fees.amt2" class="amt">&#8377;2,550<small> / 3 months</small></p><p data-nx="fees.per2" class="per">24 classes, paid once a quarter</p><span data-nx="fees.save" class="save">Save &#8377;150</span><a class="btn btn-orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start quarterly</a></div>
+      <div class="card fee rv"><h3 data-nx="fees.h33">Yearly</h3><p data-nx="fees.amt3" class="amt">&#8377;9,600<small> / year</small></p><p data-nx="fees.per3" class="per">96 classes, two level exams included</p><span data-nx="fees.save2" class="save">Save &#8377;1,200</span><a class="btn btn-line" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Start yearly</a></div>
     </div>
     <div class="card incl rv">
-      <h3>Included in every plan</h3>
+      <h3 data-nx="fees.h34">Included in every plan</h3>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Two one-hour classes a week, batch of eight</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Practice book for the level and weekly homework sheets</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Monthly progress note to parents on WhatsApp</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Make-up class in another batch if one is missed</li>
       </ul>
-      <p class="one">Paid once: starter kit &#8377;1,200 (17-rod abacus, Level 1 book, bag). Level exam and certificate &#8377;300 per level (free on the yearly plan). Sibling: &#8377;150 off the second child each month.</p>
+      <p data-nx="fees.one" class="one">Paid once: starter kit &#8377;1,200 (17-rod abacus, Level 1 book, bag). Level exam and certificate &#8377;300 per level (free on the yearly plan). Sibling: &#8377;150 off the second child each month.</p>
     </div>
   </div>
 </section>
 
-<section class="sec run" id="class">
+<section data-nx-section="class" class="sec run" id="class">
   <div class="wrap">
-    <div class="rv"><img src="/demo/abacus/images/desk-boy.jpg" alt="A young boy sitting at a green desk in a classroom with blue doors" width="800" height="450" loading="lazy"></div>
+    <div class="rv"><img data-nx="class.photo" src="/demo/abacus/images/desk-boy.jpg" alt="A young boy sitting at a green desk in a classroom with blue doors" width="800" height="450" loading="lazy"></div>
     <div class="rv">
-      <span class="eyebrow">How a class runs</span>
-      <h2 class="h2">Forty-five minutes, the same shape every time</h2>
-      <p class="lede">Children settle faster when they know what comes next. Every class follows this order.</p>
-      <ol class="tl">
-        <li><b><small>0-5 min</small>Flash cards</b><p>Quick number pictures to wake the mind up. Children call out the answers together.</p></li>
-        <li><b><small>5-20 min</small>New lesson on the abacus</b><p>The teacher shows one new idea on the big abacus. Children copy it on their own, one sum at a time.</p></li>
-        <li><b><small>20-35 min</small>Practice sheet</b><p>Twenty sums at the child's own pace. The teacher walks the room and corrects fingers, not just answers.</p></li>
-        <li><b><small>35-42 min</small>Mental round</b><p>Abacus goes into the bag. Dictation sums, eyes closed, answers written down.</p></li>
-        <li><b><small>42-45 min</small>Homework and star</b><p>One page for home. A star in the book for effort, not for marks.</p></li>
+      <span data-nx="class.eyebrow" class="eyebrow">How a class runs</span>
+      <h2 data-nx="class.h2" class="h2">Forty-five minutes, the same shape every time</h2>
+      <p data-nx="class.lede" class="lede">Children settle faster when they know what comes next. Every class follows this order.</p>
+      <ol data-nx-list="class.tl" class="tl">
+        <li data-nx-item><b data-nx-f="b"><small>0-5 min</small>Flash cards</b><p data-nx-f="p">Quick number pictures to wake the mind up. Children call out the answers together.</p></li>
+        <li data-nx-item><b data-nx-f="b"><small>5-20 min</small>New lesson on the abacus</b><p data-nx-f="p">The teacher shows one new idea on the big abacus. Children copy it on their own, one sum at a time.</p></li>
+        <li data-nx-item><b data-nx-f="b"><small>20-35 min</small>Practice sheet</b><p data-nx-f="p">Twenty sums at the child's own pace. The teacher walks the room and corrects fingers, not just answers.</p></li>
+        <li data-nx-item><b data-nx-f="b"><small>35-42 min</small>Mental round</b><p data-nx-f="p">Abacus goes into the bag. Dictation sums, eyes closed, answers written down.</p></li>
+        <li data-nx-item><b data-nx-f="b"><small>42-45 min</small>Homework and star</b><p data-nx-f="p">One page for home. A star in the book for effort, not for marks.</p></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="sec sec-cream" id="gallery">
+<section data-nx-section="gallery" class="sec sec-cream" id="gallery">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">Gallery</span>
-      <h2 class="h2">Our children, in and out of class</h2>
+      <span data-nx="gallery.eyebrow" class="eyebrow">Gallery</span>
+      <h2 data-nx="gallery.h2" class="h2">Our children, in and out of class</h2>
     </div>
-    <div class="gal">
-      <figure class="rv"><img src="/demo/abacus/images/writing-numbers.jpg" alt="A girl writing sums in a lined notebook with a pencil" width="800" height="1200" loading="lazy"></figure>
-      <figure class="rv"><img src="/demo/abacus/images/classroom.jpg" alt="Schoolgirls in white uniforms listening in a classroom" width="1200" height="800" loading="lazy"></figure>
-      <figure class="rv"><img src="/demo/abacus/images/siblings.jpg" alt="A brother and sister in glasses standing together" width="1200" height="800" loading="lazy"></figure>
-      <figure class="rv"><img src="/demo/abacus/images/friends.jpg" alt="Four children laughing under an alphabet wall" width="1200" height="800" loading="lazy"></figure>
-      <figure class="rv"><img src="/demo/abacus/images/notebook-boy.jpg" alt="A smiling boy sitting cross-legged with a notebook" width="800" height="533" loading="lazy"></figure>
-      <figure class="rv"><img src="/demo/abacus/images/test-girl.jpg" alt="A girl concentrating on a written test at a blue desk" width="800" height="1067" loading="lazy"></figure>
+    <div data-nx-list="gallery.gal" class="gal">
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/writing-numbers.jpg" alt="A girl writing sums in a lined notebook with a pencil" width="800" height="1200" loading="lazy"></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/classroom.jpg" alt="Schoolgirls in white uniforms listening in a classroom" width="1200" height="800" loading="lazy"></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/siblings.jpg" alt="A brother and sister in glasses standing together" width="1200" height="800" loading="lazy"></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/friends.jpg" alt="Four children laughing under an alphabet wall" width="1200" height="800" loading="lazy"></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/notebook-boy.jpg" alt="A smiling boy sitting cross-legged with a notebook" width="800" height="533" loading="lazy"></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/abacus/images/test-girl.jpg" alt="A girl concentrating on a written test at a blue desk" width="800" height="1067" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
-<section class="sec trust" id="parents">
+<section data-nx-section="parents" class="sec trust" id="parents">
   <div class="wrap">
-    <div class="pics rv">
-      <img src="/demo/abacus/images/laughing.jpg" alt="Two young children laughing on a window ledge" width="800" height="1019" loading="lazy">
-      <img src="/demo/abacus/images/competition.jpg" alt="A crowd of schoolchildren in uniform sitting at an event" width="800" height="1200" loading="lazy">
+    <div data-nx-list="parents.pics" class="pics rv">
+      <img data-nx-f="photo" data-nx-item src="/demo/abacus/images/laughing.jpg" alt="Two young children laughing on a window ledge" width="800" height="1019" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/abacus/images/competition.jpg" alt="A crowd of schoolchildren in uniform sitting at an event" width="800" height="1200" loading="lazy">
     </div>
     <div>
       <div class="rv">
-        <span class="eyebrow">Parents say</span>
-        <h2 class="h2">Two honest notes from parents</h2>
+        <span data-nx="parents.eyebrow" class="eyebrow">Parents say</span>
+        <h2 data-nx="parents.h2" class="h2">Two honest notes from parents</h2>
       </div>
-      <div class="quotes" style="margin-top:1.6rem">
-        <blockquote class="card quote rv"><p>My daughter counted on her fingers in Class 2. A year later her class teacher asked me what had changed. Now she does the shop bill before the shopkeeper does.</p><footer>Moumita<span>Mother of Ahana, 8, Bangur</span></footer></blockquote>
-        <blockquote class="card quote rv"><p>At the demo they told us our son was too young and to come back in six months. We did. That honesty is why we have stayed four years.</p><footer>Sudeshna<span>Mother of Aryan, 11, Sreebhumi</span></footer></blockquote>
+      <div data-nx-list="parents.quotes" class="quotes" style="margin-top:1.6rem">
+        <blockquote data-nx-item class="card quote rv"><p data-nx-f="p">My daughter counted on her fingers in Class 2. A year later her class teacher asked me what had changed. Now she does the shop bill before the shopkeeper does.</p><footer>Moumita<span data-nx-f="span">Mother of Ahana, 8, Bangur</span></footer></blockquote>
+        <blockquote data-nx-item class="card quote rv"><p data-nx-f="p">At the demo they told us our son was too young and to come back in six months. We did. That honesty is why we have stayed four years.</p><footer>Sudeshna<span data-nx-f="span">Mother of Aryan, 11, Sreebhumi</span></footer></blockquote>
       </div>
     </div>
   </div>
 </section>
 
-<section class="sec sec-cream" id="faq">
+<section data-nx-section="faq" class="sec sec-cream" id="faq">
   <div class="wrap">
     <div class="center rv">
-      <span class="eyebrow">Parent FAQs</span>
-      <h2 class="h2">Questions we are asked at every demo</h2>
+      <span data-nx="faq.eyebrow" class="eyebrow">Parent FAQs</span>
+      <h2 data-nx="faq.h2" class="h2">Questions we are asked at every demo</h2>
     </div>
-    <div class="faq">
-      <details class="rv"><summary>What is the right age to start?</summary><p>Five to seven is ideal. The child should know numbers 1 to 100 and be able to sit for 45 minutes. We take children up to 14; older children join a separate batch and move faster.</p></details>
-      <details class="rv"><summary>Will it clash with school maths?</summary><p>No. Abacus gives the answer; school teaches the method. Children write school sums the school's way and use the mental picture to check. Teachers usually notice only that the child is faster.</p></details>
-      <details class="rv"><summary>How much practice at home?</summary><p>Ten minutes a day from the practice book. Not more. Parents do not need to know abacus to help; the book has answers at the back.</p></details>
-      <details class="rv"><summary>What if my child misses a class?</summary><p>Tell us and the child sits in another batch the same week. If a whole month is missed for illness or travel, we pause the fee for that month.</p></details>
-      <details class="rv"><summary>Is the certificate recognised?</summary><p>Level certificates come from our affiliating abacus association and are accepted at state and national competitions. They are not a school-board qualification and we do not claim they are.</p></details>
-      <details class="rv"><summary>Can we try before paying?</summary><p>Yes. The Saturday demo class is free and parents sit in. If the child enjoys it, you join from the next week. If we think the child is too young, we say so and ask you to come back later.</p></details>
+    <div data-nx-list="faq.faq" class="faq">
+      <details data-nx-item class="rv"><summary data-nx-f="summary">What is the right age to start?</summary><p data-nx-f="p">Five to seven is ideal. The child should know numbers 1 to 100 and be able to sit for 45 minutes. We take children up to 14; older children join a separate batch and move faster.</p></details>
+      <details data-nx-item class="rv"><summary data-nx-f="summary">Will it clash with school maths?</summary><p data-nx-f="p">No. Abacus gives the answer; school teaches the method. Children write school sums the school's way and use the mental picture to check. Teachers usually notice only that the child is faster.</p></details>
+      <details data-nx-item class="rv"><summary data-nx-f="summary">How much practice at home?</summary><p data-nx-f="p">Ten minutes a day from the practice book. Not more. Parents do not need to know abacus to help; the book has answers at the back.</p></details>
+      <details data-nx-item class="rv"><summary data-nx-f="summary">What if my child misses a class?</summary><p data-nx-f="p">Tell us and the child sits in another batch the same week. If a whole month is missed for illness or travel, we pause the fee for that month.</p></details>
+      <details data-nx-item class="rv"><summary data-nx-f="summary">Is the certificate recognised?</summary><p data-nx-f="p">Level certificates come from our affiliating abacus association and are accepted at state and national competitions. They are not a school-board qualification and we do not claim they are.</p></details>
+      <details data-nx-item class="rv"><summary data-nx-f="summary">Can we try before paying?</summary><p data-nx-f="p">Yes. The Saturday demo class is free and parents sit in. If the child enjoys it, you join from the next week. If we think the child is too young, we say so and ask you to come back later.</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec visit" id="visit">
+<section data-nx-section="visit" class="sec visit" id="visit">
   <div class="wrap">
     <div class="rv">
-      <span class="eyebrow">Visit us</span>
-      <h2 class="h2">Second floor, Jessore Road, Lake Town</h2>
+      <span data-nx="visit.eyebrow" class="eyebrow">Visit us</span>
+      <h2 data-nx="visit.h2" class="h2">Second floor, Jessore Road, Lake Town</h2>
       <div class="info">
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Address</h3>
-          <p>Sankhya Abacus Academy<br>8/3 Jessore Road, Lake Town<br>Kolkata 700089<br>Opposite the Lake Town Block A bus stop. Lift available.</p>
-          <p style="margin-top:.8rem"><a class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></p>
+          <p data-nx="visit.p">Sankhya Abacus Academy<br>8/3 Jessore Road, Lake Town<br>Kolkata 700089<br>Opposite the Lake Town Block A bus stop. Lift available.</p>
+          <p style="margin-top:.8rem"><a data-nx="visit.button" class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></p>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Class hours</h3>
-          <div class="hours"><b>Mon to Thu</b><span>4.00 pm - 7.30 pm</span><b>Friday</b><span>Closed</span><b>Sat and Sun</b><span>9.00 am - 1.00 pm</span><b>Free demo</b><span>Saturday 10.00 am</span></div>
+          <div class="hours"><b data-nx="visit.b">Mon to Thu</b><span data-nx="visit.span">4.00 pm - 7.30 pm</span><b data-nx="visit.b2">Friday</b><span data-nx="visit.span2">Closed</span><b data-nx="visit.b3">Sat and Sun</b><span data-nx="visit.span3">9.00 am - 1.00 pm</span><b data-nx="visit.b4">Free demo</b><span data-nx="visit.span4">Saturday 10.00 am</span></div>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call or message</h3>
@@ -470,12 +476,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="final" id="contact">
-  <img src="/demo/abacus/images/jumping.jpg" alt="" width="1600" height="1067" loading="lazy">
+<section data-nx-section="contact" class="final" id="contact">
+  <img data-nx="contact.photo" src="/demo/abacus/images/jumping.jpg" alt="" width="1600" height="1067" loading="lazy">
   <div class="wrap rv">
-    <span class="eyebrow" style="color:#FDBA74">Free demo class</span>
-    <h2 class="h2">Bring your child this Saturday at 10</h2>
-    <p class="lede center">Send the child's name and age on WhatsApp. We reply with the next Saturday that has a seat.</p>
+    <span data-nx="contact.eyebrow" class="eyebrow" style="color:#FDBA74">Free demo class</span>
+    <h2 data-nx="contact.h2" class="h2">Bring your child this Saturday at 10</h2>
+    <p data-nx="contact.lede" class="lede center">Send the child's name and age on WhatsApp. We reply with the next Saturday that has a seat.</p>
     <div class="hero-act">
       <a class="btn btn-orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book a free demo class</a>
       <a class="btn btn-line" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
@@ -484,19 +490,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="9" fill="#F97316"/><path d="M13 18h22M13 30h22" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="19" cy="18" r="4" fill="#1B2559"/><circle cx="29" cy="18" r="4" fill="#1B2559"/><circle cx="24" cy="30" r="4" fill="#1B2559"/></svg><span>Sankhya<small>Abacus Academy</small></span></a>
-      <p style="margin-top:1rem;max-width:38ch">Abacus and mental arithmetic for children aged 5 to 14. Lake Town, Kolkata, since 2014.</p>
+      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="9" fill="#F97316"/><path d="M13 18h22M13 30h22" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="19" cy="18" r="4" fill="#1B2559"/><circle cx="29" cy="18" r="4" fill="#1B2559"/><circle cx="24" cy="30" r="4" fill="#1B2559"/></svg><span data-nx="footer.span">Sankhya<small>Abacus Academy</small></span></a>
+      <p data-nx="footer.p" style="margin-top:1rem;max-width:38ch">Abacus and mental arithmetic for children aged 5 to 14. Lake Town, Kolkata, since 2014.</p>
     </div>
     <div>
-      <h4>Learn</h4>
-      <ul><li><a href="#gains">What your child gains</a></li><li><a href="#levels">The eight levels</a></li><li><a href="#fees">Fees</a></li><li><a href="#class">How a class runs</a></li><li><a href="#faq">Parent FAQs</a></li></ul>
+      <h4 data-nx="footer.h4">Learn</h4>
+      <ul data-nx-list="footer.list"><li data-nx-item><a data-nx-f="button" href="#gains">What your child gains</a></li><li data-nx-item><a data-nx-f="button" href="#levels">The eight levels</a></li><li data-nx-item><a data-nx-f="button" href="#fees">Fees</a></li><li data-nx-item><a data-nx-f="button" href="#class">How a class runs</a></li><li data-nx-item><a data-nx-f="button" href="#faq">Parent FAQs</a></li></ul>
     </div>
     <div>
-      <h4>Contact</h4>
-      <ul><li>8/3 Jessore Road, Lake Town, Kolkata 700089</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></li></ul>
+      <h4 data-nx="footer.h42">Contact</h4>
+      <ul><li data-nx="footer.li">8/3 Jessore Road, Lake Town, Kolkata 700089</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sankhya%20Abacus%20Academy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a data-nx="footer.button" href="https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089">Get directions</a></li></ul>
     </div>
     <p class="note">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. &copy; 2026 Sankhya Abacus Academy.</p>
   </div>
@@ -536,5 +542,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

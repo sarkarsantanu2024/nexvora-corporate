@@ -1,0 +1,1812 @@
+{
+  "site": "drawing",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Rong Tuli Art School",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-meta",
+          "label": {
+            "en": "Everyone can draw. We teach you how",
+            "bn": "Everyone can draw. We teach you how"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "collage",
+          "label": {
+            "en": "Everyone can draw. We teach you how",
+            "bn": "Everyone can draw. We teach you how"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1600:1067"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "A two-room art school on Sarat Bose Road",
+        "bn": "A two-room art school on Sarat Bose Road"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "numbers",
+          "label": {
+            "en": "A two-room art school on Sarat Bose Road",
+            "bn": "A two-room art school on Sarat Bose Road"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "courses",
+      "label": {
+        "en": "Five courses, colour-coded",
+        "bn": "Five courses, colour-coded"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:839"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1067"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "course-row",
+          "label": {
+            "en": "Kids' drawing (6–12)",
+            "bn": "Kids' drawing (6–12)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "course-row2",
+          "label": {
+            "en": "Pencil & sketching",
+            "bn": "Pencil & sketching"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "course-row3",
+          "label": {
+            "en": "Watercolour",
+            "bn": "Watercolour"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "course-row4",
+          "label": {
+            "en": "Art college exam prep",
+            "bn": "Art college exam prep"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "course-row5",
+          "label": {
+            "en": "Weekend hobby batch (adults)",
+            "bn": "Weekend hobby batch (adults)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "course-row6",
+          "label": {
+            "en": "Short workshops",
+            "bn": "Short workshops"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "batches",
+      "label": {
+        "en": "Weekly timetable",
+        "bn": "Weekly timetable"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "label": {
+        "en": "What to bring",
+        "bn": "What to bring"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Kids' drawing",
+            "bn": "Kids' drawing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Pencil, sketching, exam prep",
+            "bn": "Pencil, sketching, exam prep"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Watercolour & hobby",
+            "bn": "Watercolour & hobby"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "label": {
+        "en": "A term at Rong Tuli",
+        "bn": "A term at Rong Tuli"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From the studio",
+        "bn": "From the studio"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their words",
+        "bn": "In their words"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Near Jadubabur Bazar, Bhowanipore",
+        "bn": "Near Jadubabur Bazar, Bhowanipore"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Studio hours",
+            "bn": "Studio hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Studio hours",
+            "bn": "Studio hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Studio hours",
+            "bn": "Studio hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Studio hours",
+            "bn": "Studio hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Bring a pencil this Saturday",
+        "bn": "Bring a pencil this Saturday"
+      },
+      "fields": [
+        {
+          "key": "scribble",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "footer-copy",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "Rong Tuli Art School",
+      "brand-sub": "drawing & painting, since 2009"
+    },
+    "section-2": {
+      "scribble": "Bhowanipore, Kolkata",
+      "h1": "Everyone can draw. <br>We teach you <span class=\"hand\">how.</span>",
+      "lede": "Pencil, watercolour and sketching classes for children from age 6 and adults of any age. Small batches, patient teachers, and a proper portfolio if you are aiming for an art college.",
+      "button": "See the courses",
+      "hero-meta": {
+        "items": [
+          {
+            "li": "<i style=\"background:var(--red)\"></i>Kids 6&ndash;12"
+          },
+          {
+            "li": "<i style=\"background:var(--blue)\"></i>Teens &amp; exam prep"
+          },
+          {
+            "li": "<i style=\"background:var(--yellow)\"></i>Adult hobby batches"
+          },
+          {
+            "li": "<i style=\"background:var(--green)\"></i>Weekend only options"
+          }
+        ]
+      },
+      "collage": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/drawing/images/hero.jpg",
+              "alt": "Two girls drawing at a long table in an art class while the teacher sharpens a pencil"
+            },
+            "figcaption": "Kids' batch, Thursday"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/child-colour-pencils.jpg",
+              "alt": "Girl colouring a printed sheet with crayons at a low table"
+            },
+            "figcaption": "Kids' batch, age 7"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/watercolour-hand.jpg",
+              "alt": "Hands painting a Pattachitra design on a tin cup with a fine brush"
+            },
+            "figcaption": "Fine brushwork practice"
+          }
+        ]
+      }
+    },
+    "about": {
+      "scribble": "About us",
+      "h2": "A two-room art school on Sarat Bose Road",
+      "p": "Rong Tuli was started in 2009 by Debjani Ghosh, a Government College of Art & Craft graduate, after years of teaching from her verandah. The school now has two rooms with north light, a shelf of 400 reference books and a kettle that is always on.",
+      "p2": "We teach drawing the old way: look first, then draw. Children start with shapes and shading. Adults start wherever they are. Exam students work on a timed portfolio from day one.",
+      "p3": "Every student gets a folder. At the end of each term we put the work up on the wall and invite parents in.",
+      "photo": {
+        "src": "/demo/drawing/images/teacher-with-student.jpg",
+        "alt": "Woman in a red kurta painting an alpona design on the floor"
+      },
+      "figcaption": "Debjani di painting alpona before the Pujo show",
+      "numbers": {
+        "items": [
+          {
+            "b": "2009",
+            "span": "Teaching since"
+          },
+          {
+            "b": "110",
+            "span": "Students this term"
+          },
+          {
+            "b": "38",
+            "span": "Art college admissions since 2015"
+          },
+          {
+            "b": "8",
+            "span": "Students per batch, maximum"
+          }
+        ]
+      }
+    },
+    "courses": {
+      "scribble": "What we teach",
+      "h2": "Five courses, colour-coded",
+      "lede": "Pick by age and by what you want to make. Each course runs in three-month terms. You can join mid-term and pay for the months left.",
+      "photo": {
+        "src": "/demo/drawing/images/kids-art-class.jpg",
+        "alt": "Young girl in a blue shirt drawing with crayons beside her teacher"
+      },
+      "h3": "Kids' drawing (6–12)",
+      "p": "Shapes, shading, colour pencils, oil pastels and poster colour. One finished picture every week to take home. Handwriting improves as a side effect.",
+      "photo2": {
+        "src": "/demo/drawing/images/pencil-sketching.jpg",
+        "alt": "Artist's hand painting the eye of a clay idol with a fine brush"
+      },
+      "h32": "Pencil & sketching",
+      "p2": "Still life, perspective, light and shadow, graphite and charcoal. The foundation for everything else. Good for teens and adults who want to draw \"properly\".",
+      "photo3": {
+        "src": "/demo/drawing/images/watercolour-palette.jpg",
+        "alt": "Green alpona-style fish painted on paper with a brush beside it"
+      },
+      "h33": "Watercolour",
+      "p3": "Washes, wet-on-wet, Kolkata street scenes and the lakes. We paint outdoors at Rabindra Sarobar one Sunday a month in winter.",
+      "photo4": {
+        "src": "/demo/drawing/images/portrait-sketchbook.jpg",
+        "alt": "Artisan painting fine Pattachitra lines on a small wooden box"
+      },
+      "h34": "Art college exam prep",
+      "p4": "For Government College of Art & Craft, Rabindra Bharati, Kala Bhavana and NIFT/NID. Timed object drawing, memory drawing, composition and a 20-sheet portfolio. Mock tests every month.",
+      "photo5": {
+        "src": "/demo/drawing/images/adults-studio.jpg",
+        "alt": "Woman in a studio painting a large colourful mask"
+      },
+      "h35": "Weekend hobby batch (adults)",
+      "p5": "Saturday afternoons. No exams, no homework. Pencil, pen-and-ink or watercolour, your choice. Most students are 25 to 60 and have not drawn since school.",
+      "photo6": {
+        "src": "/demo/drawing/images/charcoal-box.jpg",
+        "alt": "Hands painting red alta on a dancer's feet"
+      },
+      "h36": "Short workshops",
+      "p6": "Two-day workshops in the school holidays: alpona, Pujo-theme poster, charcoal portrait, urban sketching. Announced on our WhatsApp group a month ahead.",
+      "course-row": {
+        "items": [
+          {
+            "chip": "Age 6–12"
+          },
+          {
+            "chip": "90 min"
+          },
+          {
+            "chip": "Twice a week"
+          }
+        ]
+      },
+      "course-row2": {
+        "items": [
+          {
+            "chip": "Age 13+"
+          },
+          {
+            "chip": "2 hours"
+          },
+          {
+            "chip": "Twice a week"
+          }
+        ]
+      },
+      "course-row3": {
+        "items": [
+          {
+            "chip": "Age 14+"
+          },
+          {
+            "chip": "2 hours"
+          },
+          {
+            "chip": "Once or twice a week"
+          }
+        ]
+      },
+      "course-row4": {
+        "items": [
+          {
+            "chip": "Class 10–12 & gap year"
+          },
+          {
+            "chip": "3 hours"
+          },
+          {
+            "chip": "Thrice a week"
+          }
+        ]
+      },
+      "course-row5": {
+        "items": [
+          {
+            "chip": "Age 18+"
+          },
+          {
+            "chip": "2 hours"
+          },
+          {
+            "chip": "Saturdays"
+          }
+        ]
+      },
+      "course-row6": {
+        "items": [
+          {
+            "chip": "All ages"
+          },
+          {
+            "chip": "2 days"
+          },
+          {
+            "chip": "₹600 – ₹900"
+          }
+        ]
+      }
+    },
+    "batches": {
+      "scribble": "Batches & fees",
+      "h2": "Weekly timetable",
+      "lede": "Fees are per month, paid in the first week. Paper and basic materials for kids are included. Older students bring their own (list below).",
+      "th": "Course",
+      "th2": "Days",
+      "th3": "Time",
+      "th4": "Batch size",
+      "th5": "Monthly fee",
+      "note": "Admission ₹300 once, includes the folder and a sketchbook. Pay three months together and the third month is ₹200 off. Trial class is free, no admission needed for it.",
+      "list": {
+        "items": [
+          {
+            "b": "Kids' drawing A",
+            "td": "Mon, Thu",
+            "td2": "4:30 – 6:00 pm",
+            "td3": "8",
+            "fee": "₹900"
+          },
+          {
+            "b": "Kids' drawing B",
+            "td": "Sat, Sun",
+            "td2": "10:00 – 11:30 am",
+            "td3": "8",
+            "fee": "₹900"
+          },
+          {
+            "b": "Pencil & sketching",
+            "td": "Tue, Fri",
+            "td2": "5:00 – 7:00 pm",
+            "td3": "8",
+            "fee": "₹1,200"
+          },
+          {
+            "b": "Watercolour",
+            "td": "Wed, Sun",
+            "td2": "Wed 5 – 7 pm, Sun 7 – 9 am",
+            "td3": "6",
+            "fee": "₹1,300"
+          },
+          {
+            "b": "Exam prep",
+            "td": "Mon, Wed, Fri",
+            "td2": "6:00 – 9:00 pm",
+            "td3": "6",
+            "fee": "₹2,500"
+          },
+          {
+            "b": "Weekend hobby (adults)",
+            "td": "Sat",
+            "td2": "3:00 – 5:00 pm",
+            "td3": "8",
+            "fee": "₹1,000"
+          }
+        ]
+      }
+    },
+    "materials": {
+      "scribble": "Before your first class",
+      "h2": "What to bring",
+      "lede": "All of this is available at the stationery shop below us or at any art shop on College Street. Bring what you have; we lend the rest for the first month.",
+      "h3": "<i style=\"background:var(--red)\"></i>Kids' drawing",
+      "small": "We supply paper, poster colour and brushes.",
+      "h32": "<i style=\"background:var(--pencil-light)\"></i>Pencil, sketching, exam prep",
+      "small2": "Exam students also need a portfolio bag before the mock tests.",
+      "h33": "<i style=\"background:var(--blue)\"></i>Watercolour &amp; hobby",
+      "small3": "A student-grade set costs about ₹450 to ₹700.",
+      "list": {
+        "items": [
+          {
+            "li": "A4 drawing copy, 100 pages"
+          },
+          {
+            "li": "HB and 2B pencils, eraser, sharpener"
+          },
+          {
+            "li": "24-shade colour pencils"
+          },
+          {
+            "li": "Oil pastels, 25 shades"
+          },
+          {
+            "li": "An old shirt or apron"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Cartridge paper, A3 and half-imperial"
+          },
+          {
+            "li": "Pencils 2H to 8B, charcoal sticks"
+          },
+          {
+            "li": "Kneaded eraser, blending stump"
+          },
+          {
+            "li": "Drawing board 18 x 24 inch with clips"
+          },
+          {
+            "li": "Fixative spray (exam prep only)"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Watercolour paper, 300 gsm, A4 pad"
+          },
+          {
+            "li": "12-pan watercolour set"
+          },
+          {
+            "li": "Round brushes no. 2, 6, 10 and a 1-inch flat"
+          },
+          {
+            "li": "Two water jars, cloth rag"
+          },
+          {
+            "li": "Masking tape"
+          }
+        ]
+      }
+    },
+    "section-7": {
+      "scribble": "How it works",
+      "h2": "A term at Rong Tuli",
+      "lede": "Three months, one theme, one wall show at the end. This is the same for a six-year-old and a sixty-year-old.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Trial class",
+            "p": "Come for one free class. We watch how you hold the pencil and suggest a batch. No admission fee for the trial."
+          },
+          {
+            "h3": "Weeks 1 to 4",
+            "p": "Basics for the term's theme: lines, shapes, tone. Everyone draws the same still life so progress is easy to see."
+          },
+          {
+            "h3": "Weeks 5 to 10",
+            "p": "Your own work. Teacher sits with each student for ten minutes every class. Corrections are drawn on tracing paper, never on your sheet."
+          },
+          {
+            "h3": "Wall show",
+            "p": "Last Sunday of the term. Work goes up on the studio wall, parents and friends come, tea is served. Then a new term begins."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "scribble": "On the wall",
+      "h2": "From the studio",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/drawing/images/kids-canvas-easels.jpg",
+              "alt": "Smiling boy holding out a fistful of crayons in a courtyard"
+            },
+            "figcaption": "Crayon day, kids' batch"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/eye-sketches.jpg",
+              "alt": "Child's hands painted in saffron, white and green"
+            },
+            "figcaption": "Independence Day hand-paint"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/brushes-holder.jpg",
+              "alt": "Artisan painting a wooden fish surrounded by Pattachitra plates"
+            },
+            "figcaption": "Pattachitra workshop day"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/oil-pastels.jpg",
+              "alt": "Pattachitra scroll painting of deer, fish and birds"
+            },
+            "figcaption": "Pattachitra scroll, reference shelf"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/childrens-drawings-wall.jpg",
+              "alt": "Stack of hand-painted Pattachitra wooden plates"
+            },
+            "figcaption": "Folk-art plates, term project"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/watercolour-hand.jpg",
+              "alt": "Hands painting a design on a tin cup"
+            },
+            "figcaption": "Folk-art brushwork, Sunday"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/portrait-sketchbook.jpg",
+              "alt": "Artisan painting fine lines on a small wooden box"
+            },
+            "figcaption": "Fine-line practice, exam batch"
+          },
+          {
+            "photo": {
+              "src": "/demo/drawing/images/adults-studio.jpg",
+              "alt": "Woman painting a colourful mask in the studio"
+            },
+            "figcaption": "Saturday hobby batch"
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "scribble": "Students and parents",
+      "h2": "In their words",
+      "quotes": {
+        "items": [
+          {
+            "p": "My son could not sit still for ten minutes. After a year at Rong Tuli he draws for an hour at home without being asked. His school art teacher noticed before we did."
+          },
+          {
+            "p": "I joined the exam prep batch in Class 11 with no portfolio at all. Debjani di made me draw one object a day for a year. I got into Government Art College in 2024."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "scribble": "Find us",
+      "h2": "Near Jadubabur Bazar, Bhowanipore",
+      "h3": "Address",
+      "address": "Rong Tuli Art School<br>45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025<br>Above Maa Tara Stationery, 5 minutes' walk from Jatin Das Park metro",
+      "h32": "Studio hours",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "span": "Monday – Friday"
+          },
+          {
+            "span": "4:00 – 9:00 pm"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Saturday"
+          },
+          {
+            "span": "10:00 am – 6:00 pm"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Sunday"
+          },
+          {
+            "span": "7:00 am – 12:00 noon"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Closed"
+          },
+          {
+            "span": "Durga Pujo, Saptami to Dashami"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Rong Tuli Art School sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=45%2F1%20Sarat%20Bose%20Road%2C%20Bhowanipore%2C%20Kolkata%20700025",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Rong Tuli Art School",
+      "brand-sub": "drawing & painting, since 2009",
+      "footer-tag": "Drawing, sketching, watercolour and art-college preparation for children and adults in Bhowanipore.",
+      "h4": "Visit",
+      "address": "45/1 Sarat Bose Road, 2nd floor<br>Bhowanipore, Kolkata 700025",
+      "button": "Get directions",
+      "footer-copy": "© 2026 Rong Tuli Art School"
+    },
+    "seo": {
+      "title": "Rong Tuli Art School | Drawing and painting classes in Bhowanipore, Kolkata",
+      "description": "Drawing and art school at Sarat Bose Road, Kolkata. Pencil, watercolour and sketching classes for children and adults, exam preparation for art colleges, weekend hobby batches."
+    }
+  }
+}

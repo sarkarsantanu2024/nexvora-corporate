@@ -297,25 +297,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone fixes */
+@media (max-width:760px){
+  .hero::before{background:linear-gradient(180deg,rgba(43,26,20,.35) 0%,rgba(43,26,20,.6) 40%,rgba(94,20,9,.94) 100%)}
+  .duo__card img{opacity:.16}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="restaurant">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Kutum Bari Bhojonaloy, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="8" fill="#9E2612"/><ellipse cx="22" cy="26" rx="14" ry="5" fill="#D9A21B"/><path d="M8 26c0 5 6 9 14 9s14-4 14-9" fill="none" stroke="#FBF4E6" stroke-width="2.5"/><path d="M15 16c0-4 3-5 3-8M22 15c0-4 3-5 3-8M29 16c0-4 3-5 3-8" fill="none" stroke="#FBF4E6" stroke-width="2" stroke-linecap="round"/></svg>
-      <span><b>Kutum Bari Bhojonaloy</b><small>Gariahat &middot; since 1998</small></span>
+      <span><b data-nx="header.b">Kutum Bari Bhojonaloy</b><small data-nx="header.small">Gariahat &middot; since 1998</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -338,18 +345,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
-  <img class="hero__img" src="/demo/restaurant/images/hero.jpg" width="1200" height="1594" alt="A smiling woman at a table full of Bengali dishes in clay bowls" fetchpriority="high">
+<section data-nx-section="top" class="hero" id="top">
+  <img data-nx="top.hero-img" class="hero__img" src="/demo/restaurant/images/hero.jpg" width="1200" height="1594" alt="A smiling woman at a table full of Bengali dishes in clay bowls" fetchpriority="high">
   <div class="wrap">
-    <p class="hero__open"><span></span>Open today 12 pm to 4 pm and 7 pm to 11 pm</p>
-    <h1>Bhaat, maach and <em>a proper Bengali lunch</em>, two minutes from Gariahat crossing.</h1>
-    <p>Thali from &#8377;160, mutton kosha the way a Sunday deserves, and biryani with a real aloo in it. Eat in with the family, or get it home within 3 km on WhatsApp.</p>
+    <p data-nx="top.hero-open" class="hero__open"><span></span>Open today 12 pm to 4 pm and 7 pm to 11 pm</p>
+    <h1 data-nx="top.h1">Bhaat, maach and <em>a proper Bengali lunch</em>, two minutes from Gariahat crossing.</h1>
+    <p data-nx="top.p">Thali from &#8377;160, mutton kosha the way a Sunday deserves, and biryani with a real aloo in it. Eat in with the family, or get it home within 3 km on WhatsApp.</p>
     <div class="hero__cta">
       <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
         Order on WhatsApp
       </a>
-      <a class="btn btn--ghost-light" href="#menu">See the menu</a>
+      <a data-nx="top.button" class="btn btn--ghost-light" href="#menu">See the menu</a>
     </div>
   </div>
 </section>
@@ -361,248 +368,248 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </ul>
 </div>
 
-<section class="section" id="timings">
+<section data-nx-section="timings" class="section" id="timings">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">When to come</span>
-      <h2 class="h2">Lunch, dinner, and tea in between.</h2>
+      <span data-nx="timings.kicker" class="kicker">When to come</span>
+      <h2 data-nx="timings.h2" class="h2">Lunch, dinner, and tea in between.</h2>
     </div>
-    <ul class="times">
-      <li class="reveal"><h3>Lunch</h3><p class="t">12:00 pm &ndash; 4:00 pm</p><p>Thali is served till 3:30. Fish and mutton items run out by 2:30 on weekends, so come early or book a table.</p></li>
-      <li class="reveal"><h3>Cafe hours</h3><p class="t">4:00 pm &ndash; 7:00 pm</p><p>Tea, coffee, fish fry, mughlai paratha and chop. The kitchen is on a short menu while the dinner pots are cooking.</p></li>
-      <li class="reveal"><h3>Dinner</h3><p class="t">7:00 pm &ndash; 11:00 pm</p><p>Full menu. Last order 10:30. Home delivery runs till 10 pm.</p></li>
+    <ul data-nx-list="timings.times" class="times">
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Lunch</h3><p data-nx-f="t" class="t">12:00 pm &ndash; 4:00 pm</p><p data-nx-f="p">Thali is served till 3:30. Fish and mutton items run out by 2:30 on weekends, so come early or book a table.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Cafe hours</h3><p data-nx-f="t" class="t">4:00 pm &ndash; 7:00 pm</p><p data-nx-f="p">Tea, coffee, fish fry, mughlai paratha and chop. The kitchen is on a short menu while the dinner pots are cooking.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Dinner</h3><p data-nx-f="t" class="t">7:00 pm &ndash; 11:00 pm</p><p data-nx-f="p">Full menu. Last order 10:30. Home delivery runs till 10 pm.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep" id="dishes">
+<section data-nx-section="dishes" class="section section--deep" id="dishes">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What people come for</span>
-      <h2 class="h2">Five dishes we have cooked the same way since 1998.</h2>
-      <p class="lead" style="margin-top:1rem">Mustard oil, fresh fish from Gariahat market every morning, and no colour or ready-made paste.</p>
+      <span data-nx="dishes.kicker" class="kicker">What people come for</span>
+      <h2 data-nx="dishes.h2" class="h2">Five dishes we have cooked the same way since 1998.</h2>
+      <p data-nx="dishes.p" class="lead" style="margin-top:1rem">Mustard oil, fresh fish from Gariahat market every morning, and no colour or ready-made paste.</p>
     </div>
-    <ul class="dishes reveal">
-      <li><img src="/demo/restaurant/images/fish-thali.jpg" width="1200" height="1600" alt="Fish thali with rice, dal, bhaja and fish curry" loading="lazy"><div><h3>Maacher Thali</h3><p>Rice, dal, a bhaja, shukto, fish curry (rui or katla), chutney and papad.</p><span class="price">&#8377;260</span></div></li>
-      <li><img src="/demo/restaurant/images/mutton.jpg" width="1200" height="800" alt="Mutton kosha in a brass pot" loading="lazy"><div><h3>Kosha Mangsho</h3><p>Slow cooked for three hours. Comes with luchi or basanti pulao.</p><span class="price">&#8377;340 plate</span></div></li>
-      <li><img src="/demo/restaurant/images/biryani.jpg" width="1200" height="2133" alt="Plate of biryani with papad" loading="lazy"><div><h3>Kolkata Biryani</h3><p>Light, with potato and egg. Chicken or mutton. Dum cooked in our own handi.</p><span class="price">&#8377;240 / &#8377;320</span></div></li>
-      <li><img src="/demo/restaurant/images/veg-thali.jpg" width="1200" height="1600" alt="Vegetarian thali with several small bowls" loading="lazy"><div><h3>Niramish Thali</h3><p>Rice or four luchi, dal, two sabzi, dhokar dalna, chutney and a sweet.</p><span class="price">&#8377;160</span></div></li>
-      <li><img src="/demo/restaurant/images/fish-curry.jpg" width="1200" height="1600" alt="Fish curry with steamed rice" loading="lazy"><div><h3>Bhapa Ilish</h3><p>Steamed hilsa in mustard. Monsoon months only, when the fish is good.</p><span class="price">&#8377;380 piece</span></div></li>
+    <ul data-nx-list="dishes.dishes" class="dishes reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/fish-thali.jpg" width="1200" height="1600" alt="Fish thali with rice, dal, bhaja and fish curry" loading="lazy"><div><h3 data-nx-f="h3">Maacher Thali</h3><p data-nx-f="p">Rice, dal, a bhaja, shukto, fish curry (rui or katla), chutney and papad.</p><span data-nx-f="price" class="price">&#8377;260</span></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/mutton.jpg" width="1200" height="800" alt="Mutton kosha in a brass pot" loading="lazy"><div><h3 data-nx-f="h3">Kosha Mangsho</h3><p data-nx-f="p">Slow cooked for three hours. Comes with luchi or basanti pulao.</p><span data-nx-f="price" class="price">&#8377;340 plate</span></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/biryani.jpg" width="1200" height="2133" alt="Plate of biryani with papad" loading="lazy"><div><h3 data-nx-f="h3">Kolkata Biryani</h3><p data-nx-f="p">Light, with potato and egg. Chicken or mutton. Dum cooked in our own handi.</p><span data-nx-f="price" class="price">&#8377;240 / &#8377;320</span></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/veg-thali.jpg" width="1200" height="1600" alt="Vegetarian thali with several small bowls" loading="lazy"><div><h3 data-nx-f="h3">Niramish Thali</h3><p data-nx-f="p">Rice or four luchi, dal, two sabzi, dhokar dalna, chutney and a sweet.</p><span data-nx-f="price" class="price">&#8377;160</span></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/fish-curry.jpg" width="1200" height="1600" alt="Fish curry with steamed rice" loading="lazy"><div><h3 data-nx-f="h3">Bhapa Ilish</h3><p data-nx-f="p">Steamed hilsa in mustard. Monsoon months only, when the fish is good.</p><span data-nx-f="price" class="price">&#8377;380 piece</span></div></li>
     </ul>
-    <p class="dishes__hint">Swipe to see more.</p>
+    <p data-nx="dishes.dishes-hint" class="dishes__hint">Swipe to see more.</p>
   </div>
 </section>
 
-<section class="section" id="menu">
+<section data-nx-section="menu" class="section" id="menu">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Menu and prices</span>
-      <h2 class="h2">The full card, with today&rsquo;s prices.</h2>
-      <p class="lead" style="margin-top:1rem">Tap a heading to switch. Prices include tax. We update this page whenever the fish price moves.</p>
+      <span data-nx="menu.kicker" class="kicker">Menu and prices</span>
+      <h2 data-nx="menu.h2" class="h2">The full card, with today&rsquo;s prices.</h2>
+      <p data-nx="menu.p" class="lead" style="margin-top:1rem">Tap a heading to switch. Prices include tax. We update this page whenever the fish price moves.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="menu-tab" id="tab-thali" checked>
       <input type="radio" name="menu-tab" id="tab-fish">
       <input type="radio" name="menu-tab" id="tab-biryani">
       <input type="radio" name="menu-tab" id="tab-snacks">
-      <div class="tabs__bar">
-        <label for="tab-thali">Thali</label>
-        <label for="tab-fish">Fish and mutton</label>
-        <label for="tab-biryani">Biryani and rice</label>
-        <label for="tab-snacks">Cafe snacks</label>
+      <div data-nx-list="menu.tabs-bar" class="tabs__bar">
+        <label data-nx-f="label" data-nx-item for="tab-thali">Thali</label>
+        <label data-nx-f="label" data-nx-item for="tab-fish">Fish and mutton</label>
+        <label data-nx-f="label" data-nx-item for="tab-biryani">Biryani and rice</label>
+        <label data-nx-f="label" data-nx-item for="tab-snacks">Cafe snacks</label>
       </div>
       <div class="tabs__panel tabs__panel--thali">
-        <ul class="mlist">
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Niramish Thali <small>Rice or 4 luchi, dal, 2 sabzi, dhokar dalna, chutney, mishti</small></span><span class="dots"></span><span class="amt">&#8377;160</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Dim Thali <small>Veg thali plus egg curry</small></span><span class="dots"></span><span class="amt">&#8377;190</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Maacher Thali <small>Rui or katla curry, one piece</small></span><span class="dots"></span><span class="amt">&#8377;260</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Thali <small>Murgir jhol, 2 pieces</small></span><span class="dots"></span><span class="amt">&#8377;280</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Thali <small>Kosha mangsho, 3 pieces</small></span><span class="dots"></span><span class="amt">&#8377;360</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chingri Thali <small>Prawn malai curry</small></span><span class="dots"></span><span class="amt">&#8377;390</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Ilish Thali <small>Monsoon only</small></span><span class="dots"></span><span class="amt">&#8377;480</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Children&rsquo;s plate <small>Rice, dal, aloo bhaja, one sabzi</small></span><span class="dots"></span><span class="amt">&#8377;110</span></li>
+        <ul data-nx-list="menu.mlist" class="mlist">
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Niramish Thali <small>Rice or 4 luchi, dal, 2 sabzi, dhokar dalna, chutney, mishti</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;160</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Dim Thali <small>Veg thali plus egg curry</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;190</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Maacher Thali <small>Rui or katla curry, one piece</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;260</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Thali <small>Murgir jhol, 2 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;280</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Thali <small>Kosha mangsho, 3 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;360</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chingri Thali <small>Prawn malai curry</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;390</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Ilish Thali <small>Monsoon only</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;480</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Children&rsquo;s plate <small>Rice, dal, aloo bhaja, one sabzi</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;110</span></li>
         </ul>
-        <p class="tabs__note">Every thali comes with a bowl of mishti doi. Extra rice is free.</p>
+        <p data-nx="menu.tabs-note" class="tabs__note">Every thali comes with a bowl of mishti doi. Extra rice is free.</p>
       </div>
       <div class="tabs__panel tabs__panel--fish">
-        <ul class="mlist">
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Rui Kalia <small>One piece</small></span><span class="dots"></span><span class="amt">&#8377;140</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Katla Jhol</span><span class="dots"></span><span class="amt">&#8377;150</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Bhetki Paturi <small>Banana leaf, mustard</small></span><span class="dots"></span><span class="amt">&#8377;220</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chingri Malai Curry <small>4 pieces</small></span><span class="dots"></span><span class="amt">&#8377;320</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Bhapa Ilish <small>Monsoon only</small></span><span class="dots"></span><span class="amt">&#8377;380</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Kosha Mangsho <small>4 pieces</small></span><span class="dots"></span><span class="amt">&#8377;340</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Murgir Jhol <small>Sunday home style, with potato</small></span><span class="dots"></span><span class="amt">&#8377;220</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Dimer Dalna <small>2 eggs</small></span><span class="dots"></span><span class="amt">&#8377;110</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Luchi <small>4 pieces</small></span><span class="dots"></span><span class="amt">&#8377;50</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Steamed rice <small>Gobindobhog, per plate</small></span><span class="dots"></span><span class="amt">&#8377;60</span></li>
+        <ul data-nx-list="menu.mlist2" class="mlist">
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Rui Kalia <small>One piece</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;140</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Katla Jhol</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;150</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Bhetki Paturi <small>Banana leaf, mustard</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;220</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chingri Malai Curry <small>4 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;320</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Bhapa Ilish <small>Monsoon only</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;380</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Kosha Mangsho <small>4 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;340</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Murgir Jhol <small>Sunday home style, with potato</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;220</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Dimer Dalna <small>2 eggs</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;110</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Luchi <small>4 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;50</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Steamed rice <small>Gobindobhog, per plate</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;60</span></li>
         </ul>
-        <p class="tabs__note">Fish is bought fresh every morning. If an item is finished we will say so on the phone before you order.</p>
+        <p data-nx="menu.tabs-note2" class="tabs__note">Fish is bought fresh every morning. If an item is finished we will say so on the phone before you order.</p>
       </div>
       <div class="tabs__panel tabs__panel--biryani">
-        <ul class="mlist">
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Biryani <small>With aloo and egg</small></span><span class="dots"></span><span class="amt">&#8377;240</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Biryani <small>With aloo and egg</small></span><span class="dots"></span><span class="amt">&#8377;320</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Chaap <small>One piece</small></span><span class="dots"></span><span class="amt">&#8377;180</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Rezala</span><span class="dots"></span><span class="amt">&#8377;260</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Basanti Pulao <small>Sweet yellow pulao</small></span><span class="dots"></span><span class="amt">&#8377;120</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Veg Biryani</span><span class="dots"></span><span class="amt">&#8377;180</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Egg Biryani</span><span class="dots"></span><span class="amt">&#8377;200</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Raita / Salad</span><span class="dots"></span><span class="amt">&#8377;40</span></li>
+        <ul data-nx-list="menu.mlist3" class="mlist">
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Biryani <small>With aloo and egg</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;240</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Biryani <small>With aloo and egg</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;320</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Chaap <small>One piece</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;180</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Mutton Rezala</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;260</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Basanti Pulao <small>Sweet yellow pulao</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;120</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Veg Biryani</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;180</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Egg Biryani</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;200</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Raita / Salad</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;40</span></li>
         </ul>
-        <p class="tabs__note">Biryani is cooked in two batches, 12:30 and 7:30. Family handi for 6 people (&#8377;1,300 chicken, &#8377;1,750 mutton) needs two hours&rsquo; notice.</p>
+        <p data-nx="menu.tabs-note3" class="tabs__note">Biryani is cooked in two batches, 12:30 and 7:30. Family handi for 6 people (&#8377;1,300 chicken, &#8377;1,750 mutton) needs two hours&rsquo; notice.</p>
       </div>
       <div class="tabs__panel tabs__panel--snacks">
-        <ul class="mlist">
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Fish Fry <small>Bhetki, with kasundi</small></span><span class="dots"></span><span class="amt">&#8377;150</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Mughlai Paratha <small>Egg or chicken</small></span><span class="dots"></span><span class="amt">&#8377;120 / &#8377;160</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Mochar Chop <small>2 pieces</small></span><span class="dots"></span><span class="amt">&#8377;60</span></li>
-          <li><span class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Cutlet</span><span class="dots"></span><span class="amt">&#8377;130</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Ghugni <small>With chopped onion and lemon</small></span><span class="dots"></span><span class="amt">&#8377;50</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Lebu Cha / Dudh Cha</span><span class="dots"></span><span class="amt">&#8377;20 / &#8377;30</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Filter Coffee</span><span class="dots"></span><span class="amt">&#8377;60</span></li>
-          <li><span class="name"><i class="veg" aria-hidden="true"></i>Mishti Doi <small>Clay pot</small></span><span class="dots"></span><span class="amt">&#8377;45</span></li>
+        <ul data-nx-list="menu.mlist4" class="mlist">
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Fish Fry <small>Bhetki, with kasundi</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;150</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Mughlai Paratha <small>Egg or chicken</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;120 / &#8377;160</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Mochar Chop <small>2 pieces</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;60</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="nonveg" aria-hidden="true"></i>Chicken Cutlet</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;130</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Ghugni <small>With chopped onion and lemon</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;50</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Lebu Cha / Dudh Cha</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;20 / &#8377;30</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Filter Coffee</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;60</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name"><i class="veg" aria-hidden="true"></i>Mishti Doi <small>Clay pot</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;45</span></li>
         </ul>
-        <p class="tabs__note">Cafe menu is served 4 pm to 7 pm, and as starters at dinner.</p>
+        <p data-nx="menu.tabs-note4" class="tabs__note">Cafe menu is served 4 pm to 7 pm, and as starters at dinner.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="delivery">
+<section data-nx-section="delivery" class="section section--deep" id="delivery">
   <div class="wrap">
     <div class="duo">
       <div class="duo__card duo__card--red reveal">
-        <span class="kicker" style="color:var(--mustard)">Home delivery</span>
-        <h3>Within 3 km, at your door in about 40 minutes.</h3>
-        <ul>
-          <li>Send your order and address on WhatsApp. We confirm with the total and the time.</li>
-          <li>Gariahat, Ballygunge, Lake Market, Hindustan Park, Golpark, Kasba and Dhakuria are inside the circle.</li>
-          <li>Delivery charge &#8377;30. Free on orders above &#8377;600.</li>
-          <li>Pay cash or UPI at the door. Curries are packed in sealed containers, rice separately.</li>
-          <li>Lunch delivery 12 to 3:30. Dinner delivery 7 to 10.</li>
+        <span data-nx="delivery.kicker" class="kicker" style="color:var(--mustard)">Home delivery</span>
+        <h3 data-nx="delivery.h3">Within 3 km, at your door in about 40 minutes.</h3>
+        <ul data-nx-list="delivery.list">
+          <li data-nx-f="li" data-nx-item>Send your order and address on WhatsApp. We confirm with the total and the time.</li>
+          <li data-nx-f="li" data-nx-item>Gariahat, Ballygunge, Lake Market, Hindustan Park, Golpark, Kasba and Dhakuria are inside the circle.</li>
+          <li data-nx-f="li" data-nx-item>Delivery charge &#8377;30. Free on orders above &#8377;600.</li>
+          <li data-nx-f="li" data-nx-item>Pay cash or UPI at the door. Curries are packed in sealed containers, rice separately.</li>
+          <li data-nx-f="li" data-nx-item>Lunch delivery 12 to 3:30. Dinner delivery 7 to 10.</li>
         </ul>
         <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Order for delivery</a>
-        <img src="/demo/restaurant/images/clay-meal.jpg" width="1200" height="800" alt="" aria-hidden="true" loading="lazy">
+        <img data-nx="delivery.photo" src="/demo/restaurant/images/clay-meal.jpg" width="1200" height="800" alt="" aria-hidden="true" loading="lazy">
       </div>
       <div class="duo__card duo__card--mustard reveal">
-        <span class="kicker" style="color:var(--red-dark)">Family seating and parties</span>
-        <h3>Thirty people in the back room, with the AC on.</h3>
-        <ul>
-          <li>Family tables for 4 and 6 in the front hall. High chairs available.</li>
-          <li>The back room seats 30 for a birthday, annaprashan or office lunch. No hall charge.</li>
-          <li>Fixed menus from &#8377;350 per head (veg) and &#8377;520 per head (fish and mutton). Buffet or served at the table.</li>
-          <li>Book two days ahead with &#8377;2,000 advance. The rest is paid after the meal.</li>
-          <li>You may bring your own cake. We provide plates, candles and a knife.</li>
+        <span data-nx="delivery.kicker2" class="kicker" style="color:var(--red-dark)">Family seating and parties</span>
+        <h3 data-nx="delivery.h32">Thirty people in the back room, with the AC on.</h3>
+        <ul data-nx-list="delivery.list2">
+          <li data-nx-f="li" data-nx-item>Family tables for 4 and 6 in the front hall. High chairs available.</li>
+          <li data-nx-f="li" data-nx-item>The back room seats 30 for a birthday, annaprashan or office lunch. No hall charge.</li>
+          <li data-nx-f="li" data-nx-item>Fixed menus from &#8377;350 per head (veg) and &#8377;520 per head (fish and mutton). Buffet or served at the table.</li>
+          <li data-nx-f="li" data-nx-item>Book two days ahead with &#8377;2,000 advance. The rest is paid after the meal.</li>
+          <li data-nx-f="li" data-nx-item>You may bring your own cake. We provide plates, candles and a knife.</li>
         </ul>
         <a class="btn btn--red" href="tel:+919804243159">Call to book the room</a>
-        <img src="/demo/restaurant/images/interior-2.jpg" width="1200" height="1593" alt="" aria-hidden="true" loading="lazy">
+        <img data-nx="delivery.photo2" src="/demo/restaurant/images/interior-2.jpg" width="1200" height="1593" alt="" aria-hidden="true" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--red" id="sunday">
+<section data-nx-section="sunday" class="section section--red" id="sunday">
   <div class="wrap">
     <div class="sunday">
       <div class="reveal">
-        <span class="kicker">Sunday special</span>
-        <h2 class="h2">The Sunday thali. One price, no choosing.</h2>
-        <p class="lead" style="margin-top:1rem">Every Sunday from 12:30 until it runs out, usually by 3. The menu changes with the season but the shape stays the same.</p>
-        <ul class="sunday__menu" style="margin-top:1.5rem">
-          <li><span class="n">1</span><div><b>Basanti pulao and luchi</b><span>Both, because people fight otherwise.</span></div></li>
-          <li><span class="n">2</span><div><b>Kosha mangsho</b><span>Three pieces of mutton, cooked from 7 in the morning.</span></div></li>
-          <li><span class="n">3</span><div><b>A fish dish</b><span>Bhetki paturi in winter, chingri malai curry in summer, ilish in the monsoon.</span></div></li>
-          <li><span class="n">4</span><div><b>Chholar dal, beguni, chutney</b><span>Tomato and date chutney with papad.</span></div></li>
-          <li><span class="n">5</span><div><b>Rosogolla and mishti doi</b><span>From the sweet shop next door.</span></div></li>
+        <span data-nx="sunday.kicker" class="kicker">Sunday special</span>
+        <h2 data-nx="sunday.h2" class="h2">The Sunday thali. One price, no choosing.</h2>
+        <p data-nx="sunday.p" class="lead" style="margin-top:1rem">Every Sunday from 12:30 until it runs out, usually by 3. The menu changes with the season but the shape stays the same.</p>
+        <ul data-nx-list="sunday.sunday-menu" class="sunday__menu" style="margin-top:1.5rem">
+          <li data-nx-item><span data-nx-f="n" class="n">1</span><div><b data-nx-f="b">Basanti pulao and luchi</b><span data-nx-f="span">Both, because people fight otherwise.</span></div></li>
+          <li data-nx-item><span data-nx-f="n" class="n">2</span><div><b data-nx-f="b">Kosha mangsho</b><span data-nx-f="span">Three pieces of mutton, cooked from 7 in the morning.</span></div></li>
+          <li data-nx-item><span data-nx-f="n" class="n">3</span><div><b data-nx-f="b">A fish dish</b><span data-nx-f="span">Bhetki paturi in winter, chingri malai curry in summer, ilish in the monsoon.</span></div></li>
+          <li data-nx-item><span data-nx-f="n" class="n">4</span><div><b data-nx-f="b">Chholar dal, beguni, chutney</b><span data-nx-f="span">Tomato and date chutney with papad.</span></div></li>
+          <li data-nx-item><span data-nx-f="n" class="n">5</span><div><b data-nx-f="b">Rosogolla and mishti doi</b><span data-nx-f="span">From the sweet shop next door.</span></div></li>
         </ul>
-        <div class="sunday__price"><b>&#8377;450</b><span>per person &middot; children under 8 half price</span></div>
+        <div class="sunday__price"><b data-nx="sunday.b">&#8377;450</b><span data-nx="sunday.span">per person &middot; children under 8 half price</span></div>
         <div class="hero__cta">
           <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a Sunday table</a>
           <a class="btn btn--ghost-light" href="tel:+919804243159">Call +91 98042 43159</a>
         </div>
       </div>
-      <div class="sunday__photos reveal">
-        <img src="/demo/restaurant/images/thali-top.jpg" width="1200" height="1600" alt="Bengali thali seen from above with rice, luchi, fish fry and sweets" loading="lazy">
-        <img src="/demo/restaurant/images/chicken-biryani.jpg" width="1200" height="800" alt="Chicken biryani with curry on the side" loading="lazy">
+      <div data-nx-list="sunday.sunday-photos" class="sunday__photos reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/restaurant/images/thali-top.jpg" width="1200" height="1600" alt="Bengali thali seen from above with rice, luchi, fish fry and sweets" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/restaurant/images/chicken-biryani.jpg" width="1200" height="800" alt="Chicken biryani with curry on the side" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="story">
+<section data-nx-section="story" class="section" id="story">
   <div class="wrap">
     <div class="story">
       <div class="reveal">
-        <span class="kicker">About us</span>
-        <h2 class="h2">A family kitchen that grew into a restaurant.</h2>
-        <p class="lead" style="margin-top:1rem">Kutum Bari means the house of relatives. Shibani Chakraborty started cooking lunch for twelve office workers from her Gariahat flat in 1998. By 2004 it was forty tiffins a day and the ground floor became a six-table eatery.</p>
-        <p>Her son Arnab runs it now with the same two cooks who came in 2004. The mutton is still cooked in the morning, the fish is still bought from Gariahat market by 7, and the mishti doi still comes from the shop next door.</p>
-        <p>We are not a fancy place. We are the place you bring your parents to on a Sunday, and the place you order from on a weekday when nobody feels like cooking.</p>
+        <span data-nx="story.kicker" class="kicker">About us</span>
+        <h2 data-nx="story.h2" class="h2">A family kitchen that grew into a restaurant.</h2>
+        <p data-nx="story.p" class="lead" style="margin-top:1rem">Kutum Bari means the house of relatives. Shibani Chakraborty started cooking lunch for twelve office workers from her Gariahat flat in 1998. By 2004 it was forty tiffins a day and the ground floor became a six-table eatery.</p>
+        <p data-nx="story.p2">Her son Arnab runs it now with the same two cooks who came in 2004. The mutton is still cooked in the morning, the fish is still bought from Gariahat market by 7, and the mishti doi still comes from the shop next door.</p>
+        <p data-nx="story.p3">We are not a fancy place. We are the place you bring your parents to on a Sunday, and the place you order from on a weekday when nobody feels like cooking.</p>
       </div>
       <div class="story__frame reveal">
-        <img src="/demo/restaurant/images/interior.jpg" width="1200" height="1600" alt="A wooden table for two under a Radha Krishna wall panel in the dining room" loading="lazy">
+        <img data-nx="story.photo" src="/demo/restaurant/images/interior.jpg" width="1200" height="1600" alt="A wooden table for two under a Radha Krishna wall panel in the dining room" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="gallery">
+<section data-nx-section="gallery" class="section section--deep" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">From the kitchen</span>
-      <h2 class="h2">What comes to the table.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From the kitchen</span>
+      <h2 data-nx="gallery.h2" class="h2">What comes to the table.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/restaurant/images/bengali-feast.jpg" width="1200" height="900" alt="A Bengali feast laid out with rice and several curries" loading="lazy"></li>
-      <li><img src="/demo/restaurant/images/serving.jpg" width="1200" height="800" alt="A man in a kurta serving a thali at the table" loading="lazy"></li>
-      <li><img src="/demo/restaurant/images/snacks.jpg" width="1200" height="1600" alt="Tray of Indian snacks" loading="lazy"></li>
-      <li><img src="/demo/restaurant/images/mutton.jpg" width="1200" height="800" alt="Mutton curry in a brass pot" loading="lazy"></li>
-      <li><img src="/demo/restaurant/images/cafe.jpg" width="1200" height="1606" alt="Cafe tables with flower decoration" loading="lazy"></li>
-      <li><img src="/demo/restaurant/images/fish-curry.jpg" width="1200" height="1600" alt="Fish curry with rice" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/bengali-feast.jpg" width="1200" height="900" alt="A Bengali feast laid out with rice and several curries" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/serving.jpg" width="1200" height="800" alt="A man in a kurta serving a thali at the table" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/snacks.jpg" width="1200" height="1600" alt="Tray of Indian snacks" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/mutton.jpg" width="1200" height="800" alt="Mutton curry in a brass pot" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/cafe.jpg" width="1200" height="1606" alt="Cafe tables with flower decoration" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/restaurant/images/fish-curry.jpg" width="1200" height="1600" alt="Fish curry with rice" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-10" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-10.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-10.h2" class="h2">In their own words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>We order the fish thali every Wednesday for my in-laws. It reaches in half an hour, the rice is still hot, and the fish piece is a proper size.</p><footer>Rituparna <span>&middot; Hindustan Park</span></footer></blockquote>
-      <blockquote class="reveal"><p>Booked the back room for my son&rsquo;s annaprashan, 28 people. They served at the table, nobody had to get up, and the mutton finished before the speeches did.</p><footer>Debashis <span>&middot; Kasba</span></footer></blockquote>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">We order the fish thali every Wednesday for my in-laws. It reaches in half an hour, the rice is still hot, and the fish piece is a proper size.</p><footer>Rituparna <span data-nx-f="span">&middot; Hindustan Park</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Booked the back room for my son&rsquo;s annaprashan, 28 people. They served at the table, nobody had to get up, and the mutton finished before the speeches did.</p><footer>Debashis <span data-nx-f="span">&middot; Kasba</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="visit">
+<section data-nx-section="visit" class="section section--deep" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Find us</span>
-      <h2 class="h2">On Rashbehari Avenue, opposite the Gariahat market gate.</h2>
+      <span data-nx="visit.kicker" class="kicker">Find us</span>
+      <h2 data-nx="visit.h2" class="h2">On Rashbehari Avenue, opposite the Gariahat market gate.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>14B Rashbehari Avenue, Gariahat<br>Kolkata 700029</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">14B Rashbehari Avenue, Gariahat<br>Kolkata 700029</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Hours, every day</b>
-            <table class="hours">
-              <tr><td>Lunch</td><td>12:00 pm &ndash; 4:00 pm</td></tr>
-              <tr><td>Cafe</td><td>4:00 pm &ndash; 7:00 pm</td></tr>
-              <tr><td>Dinner</td><td>7:00 pm &ndash; 11:00 pm</td></tr>
-              <tr><td>Closed</td><td>Second Tuesday of the month</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Hours, every day</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Lunch</td><td data-nx-f="td2">12:00 pm &ndash; 4:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Cafe</td><td data-nx-f="td2">4:00 pm &ndash; 7:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Dinner</td><td data-nx-f="td2">7:00 pm &ndash; 11:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Closed</td><td data-nx-f="td2">Second Tuesday of the month</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Parking for four cars behind the building. Gariahat metro is a 6 minute walk.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Parking for four cars behind the building. Gariahat metro is a 6 minute walk.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--red" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -616,10 +623,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="order">
+<section data-nx-section="order" class="section final" id="order">
   <div class="wrap reveal">
-    <h2>Lunch can be at your door in forty minutes.</h2>
-    <p>Send the dishes and your address on WhatsApp. We reply with the total and the time, and the food leaves the kitchen hot.</p>
+    <h2 data-nx="order.h2">Lunch can be at your door in forty minutes.</h2>
+    <p data-nx="order.p">Send the dishes and your address on WhatsApp. We reply with the total and the time, and the food leaves the kitchen hot.</p>
     <div class="final__cta">
       <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kutum%20Bari%20Bhojonaloy%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -634,31 +641,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="8" fill="#D9A21B"/><ellipse cx="22" cy="26" rx="14" ry="5" fill="#9E2612"/><path d="M8 26c0 5 6 9 14 9s14-4 14-9" fill="none" stroke="#5E1409" stroke-width="2.5"/><path d="M15 16c0-4 3-5 3-8M22 15c0-4 3-5 3-8M29 16c0-4 3-5 3-8" fill="none" stroke="#5E1409" stroke-width="2" stroke-linecap="round"/></svg>
-          <span><b>Kutum Bari Bhojonaloy</b><small>Gariahat &middot; since 1998</small></span>
+          <span><b data-nx="footer.b">Kutum Bari Bhojonaloy</b><small data-nx="footer.small">Gariahat &middot; since 1998</small></span>
         </a>
-        <p>Bengali thali, fish, mutton and biryani. Lunch and dinner every day, home delivery within 3 km, a back room for thirty.</p>
+        <p data-nx="footer.p">Bengali thali, fish, mutton and biryani. Lunch and dinner every day, home delivery within 3 km, a back room for thirty.</p>
       </div>
       <div>
-        <h4>Menu</h4>
-        <ul>
-          <li><a href="#dishes">Signature dishes</a></li>
-          <li><a href="#menu">Full menu and prices</a></li>
-          <li><a href="#sunday">Sunday thali</a></li>
-          <li><a href="#delivery">Delivery and parties</a></li>
+        <h4 data-nx="footer.h4">Menu</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#dishes">Signature dishes</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#menu">Full menu and prices</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#sunday">Sunday thali</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#delivery">Delivery and parties</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>14B Rashbehari Avenue, Gariahat, Kolkata 700029</li>
+          <li data-nx="footer.li">14B Rashbehari Avenue, Gariahat, Kolkata 700029</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Lunch 12 pm &ndash; 4 pm &middot; Dinner 7 pm &ndash; 11 pm</li>
+          <li data-nx="footer.li2">Lunch 12 pm &ndash; 4 pm &middot; Dinner 7 pm &ndash; 11 pm</li>
         </ul>
       </div>
     </div>
@@ -700,5 +707,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

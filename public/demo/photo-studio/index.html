@@ -275,25 +275,35 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone fixes */
+@media (max-width:900px){
+  .header{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .hero__facts{background:linear-gradient(180deg,rgba(18,18,18,.55),rgba(18,18,18,.95));padding-top:2.5rem}
+}
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="photo-studio">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Chhobighar Studio, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="6" fill="#F5EFE6"/><rect x="8" y="14" width="28" height="20" rx="3" fill="#121212"/><rect x="16" y="10" width="12" height="5" rx="1.5" fill="#121212"/><circle cx="22" cy="24" r="7" fill="#F5EFE6"/><circle cx="22" cy="24" r="4" fill="#D4A017"/><circle cx="31" cy="19" r="1.6" fill="#D4A017"/></svg>
-      <span><b>Chhobighar</b><small>Studio &middot; Behala</small></span>
+      <span><b data-nx="header.b">Chhobighar</b><small data-nx="header.small">Studio &middot; Behala</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -316,62 +326,62 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__top">
-      <h1>Passport photo in ten minutes. <span>Wedding album in ten days.</span></h1>
+      <h1 data-nx="top.h1">Passport photo in ten minutes. <span>Wedding album in ten days.</span></h1>
       <div class="hero__side">
-        <p>A photo studio on Diamond Harbour Road since 1998. Walk in for passport photos, book us for a wedding, bring the baby for the annaprashan shoot, or send your shop's products for clean white-background photos.</p>
+        <p data-nx="top.p">A photo studio on Diamond Harbour Road since 1998. Walk in for passport photos, book us for a wedding, bring the baby for the annaprashan shoot, or send your shop's products for clean white-background photos.</p>
         <div class="hero__cta">
           <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
             Check a wedding date
           </a>
-          <a class="btn btn--ghost" href="#prices">Price list</a>
+          <a data-nx="top.button" class="btn btn--ghost" href="#prices">Price list</a>
         </div>
       </div>
     </div>
     <div class="hero__band">
-      <img src="/demo/photo-studio/images/hero.jpg" width="1200" height="1600" alt="A photographer in a checked shirt raising his camera with a long lens at a pandal" fetchpriority="high">
-      <ul class="hero__facts">
-        <li><b>10 min</b><span>Passport photos, printed while you wait</span></li>
-        <li><b>420+</b><span>Weddings covered since 1998</span></li>
-        <li><b>10 days</b><span>Edited photos delivered after the wedding</span></li>
+      <img data-nx="top.photo" src="/demo/photo-studio/images/hero.jpg" width="1200" height="1600" alt="A photographer in a checked shirt raising his camera with a long lens at a pandal" fetchpriority="high">
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">10 min</b><span data-nx-f="span">Passport photos, printed while you wait</span></li>
+        <li data-nx-item><b data-nx-f="b">420+</b><span data-nx-f="span">Weddings covered since 1998</span></li>
+        <li data-nx-item><b data-nx-f="b">10 days</b><span data-nx-f="span">Edited photos delivered after the wedding</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="services">
+<section data-nx-section="services" class="section" id="services">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we do</span>
-      <h2 class="h2">Seven things, done every week for twenty-seven years.</h2>
+      <span data-nx="services.kicker" class="kicker">What we do</span>
+      <h2 data-nx="services.h2" class="h2">Seven things, done every week for twenty-seven years.</h2>
     </div>
-    <ol class="svc">
-      <li class="reveal"><span class="n">01</span><div><h3>Passport and visa photos</h3><p>White or light-blue background, correct size for Indian passport, US, UK, Schengen and most visa forms. Shot, checked and printed in ten minutes. Soft copy sent on WhatsApp for online forms.</p><span class="from">8 copies &#8377;80</span></div></li>
-      <li class="reveal"><span class="n">02</span><div><h3>Wedding photography and video</h3><p>Aiburobhat to bou bhaat. Two photographers on the main day, candid and traditional both, with a cinematic highlight video. Three packages below.</p><span class="from">From &#8377;35,000</span></div></li>
-      <li class="reveal"><span class="n">03</span><div><h3>Pre-wedding shoot</h3><p>Half a day at Prinsep Ghat, Santiniketan, Victoria or a location you choose. Two outfit changes, 60 edited photos, one short reel.</p><span class="from">&#8377;12,000 half day</span></div></li>
-      <li class="reveal"><span class="n">04</span><div><h3>Baby and family shoots</h3><p>Newborn, annaprashan, first birthday. In the studio or at home. Props, a warm room and a patient photographer who waits for the smile.</p><span class="from">&#8377;4,500 per hour</span></div></li>
-      <li class="reveal"><span class="n">05</span><div><h3>Product photos for shops</h3><p>White background, correct colour, ready for Meesho, Amazon, Instagram or your own website. Sarees, jewellery, food, furniture. Bring the goods, collect the files by evening.</p><span class="from">&#8377;60 per photo, min 20</span></div></li>
-      <li class="reveal"><span class="n">06</span><div><h3>Photo printing and framing</h3><p>Lab prints from 4x6 to 24x36 on the same day. Frames made in our own workshop in wood, metal and fibre. Old photos restored and reprinted.</p><span class="from">4x6 print &#8377;10</span></div></li>
-      <li class="reveal"><span class="n">07</span><div><h3>Drone add-on</h3><p>Aerial shots and video of the venue, the baraat and the bidaay. Licensed pilot, insured drone, flown only where permitted. Add to any wedding package.</p><span class="from">&#8377;8,000 per day</span></div></li>
+    <ol data-nx-list="services.svc" class="svc">
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">01</span><div><h3 data-nx-f="h3">Passport and visa photos</h3><p data-nx-f="p">White or light-blue background, correct size for Indian passport, US, UK, Schengen and most visa forms. Shot, checked and printed in ten minutes. Soft copy sent on WhatsApp for online forms.</p><span data-nx-f="from" class="from">8 copies &#8377;80</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">02</span><div><h3 data-nx-f="h3">Wedding photography and video</h3><p data-nx-f="p">Aiburobhat to bou bhaat. Two photographers on the main day, candid and traditional both, with a cinematic highlight video. Three packages below.</p><span data-nx-f="from" class="from">From &#8377;35,000</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">03</span><div><h3 data-nx-f="h3">Pre-wedding shoot</h3><p data-nx-f="p">Half a day at Prinsep Ghat, Santiniketan, Victoria or a location you choose. Two outfit changes, 60 edited photos, one short reel.</p><span data-nx-f="from" class="from">&#8377;12,000 half day</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">04</span><div><h3 data-nx-f="h3">Baby and family shoots</h3><p data-nx-f="p">Newborn, annaprashan, first birthday. In the studio or at home. Props, a warm room and a patient photographer who waits for the smile.</p><span data-nx-f="from" class="from">&#8377;4,500 per hour</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">05</span><div><h3 data-nx-f="h3">Product photos for shops</h3><p data-nx-f="p">White background, correct colour, ready for Meesho, Amazon, Instagram or your own website. Sarees, jewellery, food, furniture. Bring the goods, collect the files by evening.</p><span data-nx-f="from" class="from">&#8377;60 per photo, min 20</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">06</span><div><h3 data-nx-f="h3">Photo printing and framing</h3><p data-nx-f="p">Lab prints from 4x6 to 24x36 on the same day. Frames made in our own workshop in wood, metal and fibre. Old photos restored and reprinted.</p><span data-nx-f="from" class="from">4x6 print &#8377;10</span></div></li>
+      <li data-nx-item class="reveal"><span data-nx-f="n" class="n">07</span><div><h3 data-nx-f="h3">Drone add-on</h3><p data-nx-f="p">Aerial shots and video of the venue, the baraat and the bidaay. Licensed pilot, insured drone, flown only where permitted. Add to any wedding package.</p><span data-nx-f="from" class="from">&#8377;8,000 per day</span></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section section--cream" id="weddings">
+<section data-nx-section="weddings" class="section section--cream" id="weddings">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Wedding packages</span>
-      <h2 class="h2">Three packages. Nothing hidden in the footnotes.</h2>
-      <p class="lead" style="margin-top:1rem">Prices are for weddings within Kolkata. Outside the city, add travel and stay at cost. Fifty percent to book the date, the rest on delivery of the album.</p>
+      <span data-nx="weddings.kicker" class="kicker">Wedding packages</span>
+      <h2 data-nx="weddings.h2" class="h2">Three packages. Nothing hidden in the footnotes.</h2>
+      <p data-nx="weddings.p" class="lead" style="margin-top:1rem">Prices are for weddings within Kolkata. Outside the city, add travel and stay at cost. Fifty percent to book the date, the rest on delivery of the album.</p>
     </div>
     <ul class="pk">
       <li class="reveal">
-        <h3>Basic</h3>
-        <p class="price">&#8377;35,000</p>
-        <p class="for">One day, one photographer. For a small wedding or a reception alone.</p>
+        <h3 data-nx="weddings.h3">Basic</h3>
+        <p data-nx="weddings.price" class="price">&#8377;35,000</p>
+        <p data-nx="weddings.for" class="for">One day, one photographer. For a small wedding or a reception alone.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Up to 8 hours on the day</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>300 edited photos, all raw files on a pen drive</li>
@@ -381,10 +391,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <a class="btn btn--ghost-dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about Basic</a>
       </li>
       <li class="reveal hot">
-        <span class="tag">Most booked</span>
-        <h3>Standard</h3>
-        <p class="price">&#8377;65,000</p>
-        <p class="for">Two days, photo and video. The wedding and the reception, start to finish.</p>
+        <span data-nx="weddings.tag" class="tag">Most booked</span>
+        <h3 data-nx="weddings.h32">Standard</h3>
+        <p data-nx="weddings.price2" class="price">&#8377;65,000</p>
+        <p data-nx="weddings.for2" class="for">Two days, photo and video. The wedding and the reception, start to finish.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Two photographers, one videographer</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>600 edited photos, candid and traditional</li>
@@ -394,9 +404,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Check the date</a>
       </li>
       <li class="reveal">
-        <h3>Premium</h3>
-        <p class="price">&#8377;1,10,000</p>
-        <p class="for">Three days with drone and pre-wedding included. Mehendi, wedding, reception.</p>
+        <h3 data-nx="weddings.h33">Premium</h3>
+        <p data-nx="weddings.price3" class="price">&#8377;1,10,000</p>
+        <p data-nx="weddings.for3" class="for">Three days with drone and pre-wedding included. Mehendi, wedding, reception.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Everything in Standard, for three days</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Drone on the wedding day</li>
@@ -409,156 +419,156 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="shoots">
+<section data-nx-section="shoots" class="section" id="shoots">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Shoots</span>
-      <h2 class="h2">Before the wedding, after the baby, and for the shop.</h2>
-      <p class="lead" style="margin-top:1rem">Swipe on your phone.</p>
+      <span data-nx="shoots.kicker" class="kicker">Shoots</span>
+      <h2 data-nx="shoots.h2" class="h2">Before the wedding, after the baby, and for the shop.</h2>
+      <p data-nx="shoots.p" class="lead" style="margin-top:1rem">Swipe on your phone.</p>
     </div>
-    <ul class="shoots reveal">
-      <li><img src="/demo/photo-studio/images/couple-santiniketan.jpg" width="1200" height="800" alt="A couple dancing under a thatched roof, she in a green gown and he in a printed shirt" loading="lazy"><div><h3>Pre-wedding</h3><p>Half a day, two outfits, 60 edited photos and one reel. Santiniketan, Prinsep Ghat or a place of your own.</p><b>&#8377;12,000 half day &middot; &#8377;20,000 full day</b></div></li>
-      <li><img src="/demo/photo-studio/images/baby-traditional.jpg" width="1200" height="1798" alt="A baby in a white and blue outfit sitting on a marble floor" loading="lazy"><div><h3>Baby and annaprashan</h3><p>One hour at the studio or your home. We bring the props and the patience. 25 edited photos, two prints framed.</p><b>&#8377;4,500 per hour</b></div></li>
-      <li><img src="/demo/photo-studio/images/product-shoe.jpg" width="1200" height="1600" alt="A camera on a tripod photographing a black sneaker on a white background" loading="lazy"><div><h3>Product photos for shops</h3><p>Clean white background, true colour, cut-out ready. For sarees, jewellery, food and anything that sells online.</p><b>&#8377;60 per photo, minimum 20</b></div></li>
+    <ul data-nx-list="shoots.shoots" class="shoots reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/couple-santiniketan.jpg" width="1200" height="800" alt="A couple dancing under a thatched roof, she in a green gown and he in a printed shirt" loading="lazy"><div><h3 data-nx-f="h3">Pre-wedding</h3><p data-nx-f="p">Half a day, two outfits, 60 edited photos and one reel. Santiniketan, Prinsep Ghat or a place of your own.</p><b data-nx-f="b">&#8377;12,000 half day &middot; &#8377;20,000 full day</b></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/baby-traditional.jpg" width="1200" height="1798" alt="A baby in a white and blue outfit sitting on a marble floor" loading="lazy"><div><h3 data-nx-f="h3">Baby and annaprashan</h3><p data-nx-f="p">One hour at the studio or your home. We bring the props and the patience. 25 edited photos, two prints framed.</p><b data-nx-f="b">&#8377;4,500 per hour</b></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/product-shoe.jpg" width="1200" height="1600" alt="A camera on a tripod photographing a black sneaker on a white background" loading="lazy"><div><h3 data-nx-f="h3">Product photos for shops</h3><p data-nx-f="p">Clean white background, true colour, cut-out ready. For sarees, jewellery, food and anything that sells online.</p><b data-nx-f="b">&#8377;60 per photo, minimum 20</b></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--2" id="prices">
+<section data-nx-section="prices" class="section section--2" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price list</span>
-      <h2 class="h2">Everything, with the price next to it.</h2>
-      <p class="lead" style="margin-top:1rem">Updated January 2026. GST is included in every figure here. Cash, UPI or card at the counter.</p>
+      <span data-nx="prices.kicker" class="kicker">Price list</span>
+      <h2 data-nx="prices.h2" class="h2">Everything, with the price next to it.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">Updated January 2026. GST is included in every figure here. Cash, UPI or card at the counter.</p>
     </div>
     <div class="tbl reveal">
       <table>
         <caption class="sr-only">Services and prices</caption>
-        <thead><tr><th scope="col">Service</th><th scope="col">What you get</th><th scope="col">Time</th><th scope="col">Price</th></tr></thead>
+        <thead><tr><th data-nx="prices.th" scope="col">Service</th><th data-nx="prices.th2" scope="col">What you get</th><th data-nx="prices.th3" scope="col">Time</th><th data-nx="prices.th4" scope="col">Price</th></tr></thead>
         <tbody>
-          <tr><td><b>Passport photos</b><small>Indian passport, Aadhaar, PAN, school forms</small></td><td>8 copies plus soft copy on WhatsApp</td><td>10 minutes</td><td class="fee">&#8377;80<small>16 copies &#8377;120</small></td></tr>
-          <tr><td><b>Visa photos</b><small>US 2x2, UK, Schengen, Canada and others</small></td><td>6 copies plus soft copy to the exact spec</td><td>15 minutes</td><td class="fee">&#8377;150</td></tr>
-          <tr><td><b>Studio portrait</b><small>Matrimonial, LinkedIn, office ID, family</small></td><td>20 minutes in the studio, 5 edited photos</td><td>Same day</td><td class="fee">&#8377;600</td></tr>
-          <tr><td><b>Pre-wedding shoot</b></td><td>Half day, 2 outfits, 60 edited photos, 1 reel</td><td>7 days</td><td class="fee">&#8377;12,000<small>full day &#8377;20,000</small></td></tr>
-          <tr><td><b>Baby or family shoot</b></td><td>1 hour, studio or home, 25 edited photos, 2 framed prints</td><td>5 days</td><td class="fee">&#8377;4,500</td></tr>
-          <tr><td><b>Product photography</b><small>White or coloured background</small></td><td>Per edited photo, cut-out ready, minimum 20</td><td>Same day for up to 40</td><td class="fee">&#8377;60<small>per photo</small></td></tr>
-          <tr><td><b>Event coverage</b><small>Birthday, rice ceremony, office function</small></td><td>Per hour, one photographer, 50 edited photos per hour</td><td>3 days</td><td class="fee">&#8377;2,500<small>per hour</small></td></tr>
-          <tr><td><b>Drone add-on</b></td><td>Aerial photo and video, licensed pilot</td><td>With the package</td><td class="fee">&#8377;8,000<small>per day</small></td></tr>
-          <tr><td><b>Photo restoration</b><small>Old, torn or faded prints</small></td><td>Scan, repair, reprint at the original size</td><td>3 to 7 days</td><td class="fee">from &#8377;400</td></tr>
+          <tr><td><b data-nx="prices.b">Passport photos</b><small data-nx="prices.small">Indian passport, Aadhaar, PAN, school forms</small></td><td data-nx="prices.td">8 copies plus soft copy on WhatsApp</td><td data-nx="prices.td2">10 minutes</td><td data-nx="prices.fee" class="fee">&#8377;80<small>16 copies &#8377;120</small></td></tr>
+          <tr><td><b data-nx="prices.b2">Visa photos</b><small data-nx="prices.small2">US 2x2, UK, Schengen, Canada and others</small></td><td data-nx="prices.td3">6 copies plus soft copy to the exact spec</td><td data-nx="prices.td4">15 minutes</td><td data-nx="prices.fee2" class="fee">&#8377;150</td></tr>
+          <tr><td><b data-nx="prices.b3">Studio portrait</b><small data-nx="prices.small3">Matrimonial, LinkedIn, office ID, family</small></td><td data-nx="prices.td5">20 minutes in the studio, 5 edited photos</td><td data-nx="prices.td6">Same day</td><td data-nx="prices.fee3" class="fee">&#8377;600</td></tr>
+          <tr><td><b data-nx="prices.b4">Pre-wedding shoot</b></td><td data-nx="prices.td7">Half day, 2 outfits, 60 edited photos, 1 reel</td><td data-nx="prices.td8">7 days</td><td data-nx="prices.fee4" class="fee">&#8377;12,000<small>full day &#8377;20,000</small></td></tr>
+          <tr><td><b data-nx="prices.b5">Baby or family shoot</b></td><td data-nx="prices.td9">1 hour, studio or home, 25 edited photos, 2 framed prints</td><td data-nx="prices.td10">5 days</td><td data-nx="prices.fee5" class="fee">&#8377;4,500</td></tr>
+          <tr><td><b data-nx="prices.b6">Product photography</b><small data-nx="prices.small4">White or coloured background</small></td><td data-nx="prices.td11">Per edited photo, cut-out ready, minimum 20</td><td data-nx="prices.td12">Same day for up to 40</td><td data-nx="prices.fee6" class="fee">&#8377;60<small>per photo</small></td></tr>
+          <tr><td><b data-nx="prices.b7">Event coverage</b><small data-nx="prices.small5">Birthday, rice ceremony, office function</small></td><td data-nx="prices.td13">Per hour, one photographer, 50 edited photos per hour</td><td data-nx="prices.td14">3 days</td><td data-nx="prices.fee7" class="fee">&#8377;2,500<small>per hour</small></td></tr>
+          <tr><td><b data-nx="prices.b8">Drone add-on</b></td><td data-nx="prices.td15">Aerial photo and video, licensed pilot</td><td data-nx="prices.td16">With the package</td><td data-nx="prices.fee8" class="fee">&#8377;8,000<small>per day</small></td></tr>
+          <tr><td><b data-nx="prices.b9">Photo restoration</b><small data-nx="prices.small6">Old, torn or faded prints</small></td><td data-nx="prices.td17">Scan, repair, reprint at the original size</td><td data-nx="prices.td18">3 to 7 days</td><td data-nx="prices.fee9" class="fee">from &#8377;400</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="tnote">Wedding packages are on the cards above. Anything not listed, send a message with what you need and we reply with a price the same day.</p>
+    <p data-nx="prices.tnote" class="tnote">Wedding packages are on the cards above. Anything not listed, send a message with what you need and we reply with a price the same day.</p>
   </div>
 </section>
 
-<section class="section section--cream" id="print">
+<section data-nx-section="print" class="section section--cream" id="print">
   <div class="wrap">
     <div class="split">
-      <img class="reveal" src="/demo/photo-studio/images/framing.jpg" width="1200" height="1799" alt="Hands measuring a framed photograph with a tape measure on a wooden table" loading="lazy">
+      <img data-nx="print.photo" class="reveal" src="/demo/photo-studio/images/framing.jpg" width="1200" height="1799" alt="Hands measuring a framed photograph with a tape measure on a wooden table" loading="lazy">
       <div class="reveal">
-        <span class="kicker">Printing and framing</span>
-        <h3>Prints from the lab in an hour. Frames from our own workshop.</h3>
-        <p>We print on a proper photo lab machine, not an inkjet, so the colours last. Frames are cut and joined behind the shop. Bring a phone photo and leave with it on the wall.</p>
-        <ul>
-          <li><span>4x6 print, glossy or matte</span><b>&#8377;10</b></li>
-          <li><span>8x12 print</span><b>&#8377;120</b></li>
-          <li><span>12x18 print</span><b>&#8377;280</b></li>
-          <li><span>24x36 canvas print</span><b>&#8377;2,400</b></li>
-          <li><span>Wooden frame, 8x12 with glass</span><b>from &#8377;350</b></li>
-          <li><span>Collage frame, 6 photos</span><b>from &#8377;900</b></li>
+        <span data-nx="print.kicker" class="kicker">Printing and framing</span>
+        <h3 data-nx="print.h3">Prints from the lab in an hour. Frames from our own workshop.</h3>
+        <p data-nx="print.p">We print on a proper photo lab machine, not an inkjet, so the colours last. Frames are cut and joined behind the shop. Bring a phone photo and leave with it on the wall.</p>
+        <ul data-nx-list="print.list">
+          <li data-nx-item><span data-nx-f="span">4x6 print, glossy or matte</span><b data-nx-f="b">&#8377;10</b></li>
+          <li data-nx-item><span data-nx-f="span">8x12 print</span><b data-nx-f="b">&#8377;120</b></li>
+          <li data-nx-item><span data-nx-f="span">12x18 print</span><b data-nx-f="b">&#8377;280</b></li>
+          <li data-nx-item><span data-nx-f="span">24x36 canvas print</span><b data-nx-f="b">&#8377;2,400</b></li>
+          <li data-nx-item><span data-nx-f="span">Wooden frame, 8x12 with glass</span><b data-nx-f="b">from &#8377;350</b></li>
+          <li data-nx-item><span data-nx-f="span">Collage frame, 6 photos</span><b data-nx-f="b">from &#8377;900</b></li>
         </ul>
       </div>
     </div>
     <div class="split">
-      <img class="reveal" src="/demo/photo-studio/images/drone.jpg" width="1200" height="802" alt="Hands holding a folded camera drone outdoors" loading="lazy">
+      <img data-nx="print.photo2" class="reveal" src="/demo/photo-studio/images/drone.jpg" width="1200" height="802" alt="Hands holding a folded camera drone outdoors" loading="lazy">
       <div class="reveal">
-        <span class="kicker">Drone add-on</span>
-        <h3>The whole venue in one shot, and the baraat from above.</h3>
-        <p>Our pilot is licensed and the drone is insured. We check the venue's permission and the no-fly zones before the day, so you are never told "not allowed here" at the last minute. Added to any wedding package or booked alone for a house-warming or a shop opening.</p>
-        <ul>
-          <li><span>Wedding day, with any package</span><b>&#8377;8,000</b></li>
-          <li><span>Single event, 2 hours, photo and video</span><b>&#8377;5,000</b></li>
-          <li><span>Property or shop exterior, 10 photos and 1 clip</span><b>&#8377;3,500</b></li>
+        <span data-nx="print.kicker2" class="kicker">Drone add-on</span>
+        <h3 data-nx="print.h32">The whole venue in one shot, and the baraat from above.</h3>
+        <p data-nx="print.p2">Our pilot is licensed and the drone is insured. We check the venue's permission and the no-fly zones before the day, so you are never told "not allowed here" at the last minute. Added to any wedding package or booked alone for a house-warming or a shop opening.</p>
+        <ul data-nx-list="print.list2">
+          <li data-nx-item><span data-nx-f="span">Wedding day, with any package</span><b data-nx-f="b">&#8377;8,000</b></li>
+          <li data-nx-item><span data-nx-f="span">Single event, 2 hours, photo and video</span><b data-nx-f="b">&#8377;5,000</b></li>
+          <li data-nx-item><span data-nx-f="span">Property or shop exterior, 10 photos and 1 clip</span><b data-nx-f="b">&#8377;3,500</b></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="how">
+<section data-nx-section="how" class="section" id="how">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Booking a wedding</span>
-      <h2 class="h2">Four steps from the first message to the album.</h2>
+      <span data-nx="how.kicker" class="kicker">Booking a wedding</span>
+      <h2 data-nx="how.h2" class="h2">Four steps from the first message to the album.</h2>
     </div>
-    <ol class="steps">
-      <li class="reveal"><h3>Send the dates</h3><p>Message the wedding and reception dates. We tell you the same day whether we are free and which package fits.</p></li>
-      <li class="reveal"><h3>Meet at the studio</h3><p>Come and see three real albums, not a brochure. Pick the package. Fifty percent books the date; we give a written receipt.</p></li>
-      <li class="reveal"><h3>The days themselves</h3><p>We reach an hour before the first ritual. Thirty photos reach your family WhatsApp group that night.</p></li>
-      <li class="reveal"><h3>Ten days later</h3><p>All edited photos on a pen drive and a private link. Album proofs for approval, then the printed album within three weeks.</p></li>
+    <ol data-nx-list="how.steps" class="steps">
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Send the dates</h3><p data-nx-f="p">Message the wedding and reception dates. We tell you the same day whether we are free and which package fits.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Meet at the studio</h3><p data-nx-f="p">Come and see three real albums, not a brochure. Pick the package. Fifty percent books the date; we give a written receipt.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">The days themselves</h3><p data-nx-f="p">We reach an hour before the first ritual. Thirty photos reach your family WhatsApp group that night.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Ten days later</h3><p data-nx-f="p">All edited photos on a pen drive and a private link. Album proofs for approval, then the printed album within three weeks.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section section--2" id="gallery">
+<section data-nx-section="gallery" class="section section--2" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Recent work</span>
-      <h2 class="h2">From the last season.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Recent work</span>
+      <h2 data-nx="gallery.h2" class="h2">From the last season.</h2>
     </div>
-    <ul class="gal reveal">
-      <li><img src="/demo/photo-studio/images/haldi.jpg" width="1200" height="800" alt="A groom in white surrounded by women in yellow sarees throwing marigold petals at a haldi ceremony" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/garland-exchange.jpg" width="1200" height="800" alt="Bride and groom exchanging garlands on a red and gold stage" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/mehndi-hands.jpg" width="1200" height="800" alt="A bride's mehndi-covered hands resting on the groom's cream sherwani" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/prewedding-kolkata.jpg" width="1200" height="857" alt="A couple in a park, she in a red gown kissing his cheek" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/wedding-couple.jpg" width="1200" height="800" alt="A bride and groom in traditional wedding dress, close view" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/portrait-man.jpg" width="1200" height="1200" alt="A studio portrait of a smiling man in a white shirt on a black background" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/studio-backdrop.jpg" width="1200" height="800" alt="The studio floor with two softboxes and a plain paper backdrop" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/product-setup.jpg" width="1200" height="1803" alt="A product photography set with softbox, reflector and a camera on a tripod" loading="lazy"></li>
-      <li><img src="/demo/photo-studio/images/lenses.jpg" width="1200" height="797" alt="A row of camera lenses and a camera body on a table" loading="lazy"></li>
+    <ul data-nx-list="gallery.gal" class="gal reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/haldi.jpg" width="1200" height="800" alt="A groom in white surrounded by women in yellow sarees throwing marigold petals at a haldi ceremony" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/garland-exchange.jpg" width="1200" height="800" alt="Bride and groom exchanging garlands on a red and gold stage" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/mehndi-hands.jpg" width="1200" height="800" alt="A bride's mehndi-covered hands resting on the groom's cream sherwani" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/prewedding-kolkata.jpg" width="1200" height="857" alt="A couple in a park, she in a red gown kissing his cheek" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/wedding-couple.jpg" width="1200" height="800" alt="A bride and groom in traditional wedding dress, close view" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/portrait-man.jpg" width="1200" height="1200" alt="A studio portrait of a smiling man in a white shirt on a black background" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/studio-backdrop.jpg" width="1200" height="800" alt="The studio floor with two softboxes and a plain paper backdrop" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/product-setup.jpg" width="1200" height="1803" alt="A product photography set with softbox, reflector and a camera on a tripod" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/photo-studio/images/lenses.jpg" width="1200" height="797" alt="A row of camera lenses and a camera body on a table" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-10" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Clients</span>
-      <h2 class="h2">Two of them, in their words.</h2>
+      <span data-nx="section-10.kicker" class="kicker">Clients</span>
+      <h2 data-nx="section-10.h2" class="h2">Two of them, in their words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>We booked Standard for my sister's wedding in Thakurpukur. Thirty photos were in the family group before the bou bhaat ended. My mother has not stopped forwarding them.</p><footer>Arka <span>&middot; Thakurpukur, December wedding</span></footer></blockquote>
-      <blockquote class="reveal"><p>I sell sarees on Instagram. Took forty pieces to the studio on a Tuesday, had forty clean photos by evening. Sales that week were double. Now I go every month.</p><footer>Moumita <span>&middot; Behala, saree seller</span></footer></blockquote>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">We booked Standard for my sister's wedding in Thakurpukur. Thirty photos were in the family group before the bou bhaat ended. My mother has not stopped forwarding them.</p><footer>Arka <span data-nx-f="span">&middot; Thakurpukur, December wedding</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I sell sarees on Instagram. Took forty pieces to the studio on a Tuesday, had forty clean photos by evening. Sales that week were double. Now I go every month.</p><footer>Moumita <span data-nx-f="span">&middot; Behala, saree seller</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--2" id="visit">
+<section data-nx-section="visit" class="section section--2" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit</span>
-      <h2 class="h2">Diamond Harbour Road, opposite Behala tram depot.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit</span>
+      <h2 data-nx="visit.h2" class="h2">Diamond Harbour Road, opposite Behala tram depot.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>14B Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=14B%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">14B Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=14B%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Studio hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:00 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 2:00 pm</td></tr>
-              <tr><td>Passport photos</td><td>Walk in, no booking</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Studio hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:00 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 2:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Passport photos</td><td data-nx-f="td2">Walk in, no booking</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">On a shoot day we may not pick up. WhatsApp is read by evening.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">On a shoot day we may not pick up. WhatsApp is read by evening.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--mustard" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -572,10 +582,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Send us the date. We will tell you today if we are free.</h2>
-    <p>Wedding, pre-wedding, baby shoot or forty saree photos. One message with what and when is enough to start.</p>
+    <h2 data-nx="contact.h2">Send us the date. We will tell you today if we are free.</h2>
+    <p data-nx="contact.p">Wedding, pre-wedding, baby shoot or forty saree photos. One message with what and when is enough to start.</p>
     <div class="final__cta">
       <a class="btn btn--cream" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chhobighar%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -590,31 +600,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="6" fill="#D4A017"/><rect x="8" y="14" width="28" height="20" rx="3" fill="#121212"/><rect x="16" y="10" width="12" height="5" rx="1.5" fill="#121212"/><circle cx="22" cy="24" r="7" fill="#F5EFE6"/><circle cx="22" cy="24" r="4" fill="#D4A017"/><circle cx="31" cy="19" r="1.6" fill="#D4A017"/></svg>
-          <span><b>Chhobighar</b><small>Studio &middot; Behala</small></span>
+          <span><b data-nx="footer.b">Chhobighar</b><small data-nx="footer.small">Studio &middot; Behala</small></span>
         </a>
-        <p>Passport photos, weddings, pre-wedding and baby shoots, product photos, printing and framing. On Diamond Harbour Road since 1998.</p>
+        <p data-nx="footer.p">Passport photos, weddings, pre-wedding and baby shoots, product photos, printing and framing. On Diamond Harbour Road since 1998.</p>
       </div>
       <div>
-        <h4>Studio</h4>
-        <ul>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#weddings">Wedding packages</a></li>
-          <li><a href="#prices">Price list</a></li>
-          <li><a href="#print">Printing and framing</a></li>
+        <h4 data-nx="footer.h4">Studio</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#services">Services</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#weddings">Wedding packages</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#print">Printing and framing</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>14B Diamond Harbour Road, Behala, Kolkata 700034</li>
+          <li data-nx="footer.li">14B Diamond Harbour Road, Behala, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10 am &ndash; 9 pm &middot; Sun 10 am &ndash; 2 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10 am &ndash; 9 pm &middot; Sun 10 am &ndash; 2 pm</li>
         </ul>
       </div>
     </div>
@@ -656,5 +666,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

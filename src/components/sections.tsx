@@ -1046,15 +1046,15 @@ export function Pricing() {
       <Reveal delay={100}>
         <div id="plans" className="mt-12 scroll-mt-32">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Or take the lot together: three website plans
+            Or take the lot together: four website plans
           </h2>
           <p className="mt-3 max-w-2xl text-slate-600">
-            Every website I build is one of these three. Pick the one that
+            Every website I build is one of these four. Pick the one that
             fits, and if you are not sure, ask me and I will tell you which
             one you actually need.
           </p>
 
-          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2 2xl:grid-cols-4">
             {PACKAGES.map((p) => (
               <div
                 key={p.id}
@@ -1089,6 +1089,11 @@ export function Pricing() {
                     {rupees(p.price)}
                   </span>
                 </div>
+                {p.running ? (
+                  <p className="mt-2 rounded-xl bg-brand-50 px-3 py-2 text-sm font-semibold leading-snug text-brand-800">
+                    Then {rupees(p.running.monthly)}/month (or {rupees(p.running.yearly)} a year) from month {p.running.freeMonths + 1}, for {p.running.what}. The first {p.running.freeMonths} months are free.
+                  </p>
+                ) : null}
 
                 <ul className="mt-6 flex-1 space-y-2.5 border-t border-slate-100 pt-6 text-sm text-slate-700">
                   {p.includes.map((line) => (
@@ -1120,7 +1125,7 @@ export function Pricing() {
             ))}
           </div>
 
-          {/* The free first month, said once under all three plans rather
+          {/* The free first month, said once under all four plans rather
               than explained three times inside the cards. */}
           <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-7">
             <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-emerald-900">
@@ -1154,10 +1159,10 @@ export function Pricing() {
             </p>
           </div>
 
-          {/* The same three plans as a table, for the reader who wants to
+          {/* The same four plans as a table, for the reader who wants to
               compare rather than read. */}
           <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
-            <table className="w-full min-w-[560px] text-sm">
+            <table className="w-full min-w-[760px] text-sm">
               <caption className="sr-only">
                 What each website plan includes
               </caption>
@@ -1193,7 +1198,7 @@ export function Pricing() {
                       <td
                         key={PACKAGES[i].id}
                         className={`px-4 py-3 text-center ${
-                          v === "No" ? "text-slate-400" : "font-semibold text-slate-900"
+                          v === "No" || v === "None" ? "text-slate-400" : "font-semibold text-slate-900"
                         }`}
                       >
                         {v}
@@ -1531,9 +1536,9 @@ export function Examples() {
 /**
  * The sample websites, one card each.
  *
- * Every card opens its demo in a new tab, because a demo is a whole other
- * website with its own header and nothing of ours on it — a reader who
- * finishes looking wants this page still open behind it. The card picture
+ * Every card opens its demo in the same tab, so the visitor feels they have
+ * walked into that business's own website; the strip at the top of every
+ * demo brings them back here. The card picture
  * is the demo's own hero photograph, served from its folder, so the card can
  * never show a design the demo no longer has.
  */
@@ -1555,6 +1560,11 @@ export function Demos() {
           Yours comes with your own name, photographs and prices, at the
           website price on the Price page.
         </p>
+        <p className="mt-3 text-slate-600">
+          Every sample has a <b className="font-semibold text-slate-800">Login</b> button at the top. Log in with
+          username <b className="font-semibold text-slate-800">demo</b> and password <b className="font-semibold text-slate-800">123</b> to
+          see the owner&apos;s side: the edit panel from the Run it yourself plan and the business dashboard from the Run my whole business plan, filled with sample records. Nothing you do there is saved anywhere but your own phone or computer.
+        </p>
       </Reveal>
 
       {DEMO_GROUPS.map((group) => (
@@ -1565,11 +1575,10 @@ export function Demos() {
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {DEMOS.filter((d) => d.group === group).map((d, i) => (
           <Reveal key={d.slug} delay={(i % 3) * 80} className="h-full">
+            <div className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-5">
             <a
               href={`/demo/${d.slug}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-5"
+              className="flex flex-1 flex-col"
             >
               <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200">
                 <Image
@@ -1601,6 +1610,7 @@ export function Demos() {
                 Open the sample
               </p>
             </a>
+            </div>
           </Reveal>
         ))}
       </div>

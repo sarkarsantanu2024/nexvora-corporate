@@ -591,7 +591,20 @@ table{border-collapse:collapse; width:100%}
   *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
   .reveal{opacity:1; transform:none}
 }
+
+/* Phone: stack the about-list bold and text, raise tiny labels, bigger tap targets */
+@media (max-width:599px){
+  .checks li{display:block; position:relative; padding-left:1.7rem}
+  .checks li::before{position:absolute; left:0; top:.3rem; margin-top:0}
+  .hero__badge span,.plan__flag,.footer .brand__sub{font-size:.75rem}
+  .footer__links li + li{margin-top:0}
+  .footer__links a,.footer__contact a{display:inline-flex; align-items:center; min-height:44px}
+  .footer__sample a{padding-block:.75rem}
+}
 </style>
+<meta name="nx-site" content="gym">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 
 <body>
@@ -600,18 +613,10 @@ table{border-collapse:collapse; width:100%}
 <!-- ========================== DEMO BAR ===========================
      Remove this strip and its styles before the site goes live.
      ============================================================== -->
-<div class="demobar">
-  <div class="wrap demobar__inner">
-    <a class="demobar__home" href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&middot;</span>by Nexvora Technologies</a>
-    <span class="demobar__links">
-      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-    </span>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
 <!-- ============================ HEADER ============================ -->
-<header class="header" id="top">
+<header data-nx-section="top" class="header" id="top">
   <div class="wrap header__inner">
     <a class="brand" href="#top" aria-label="Iron Para Gym, back to top">
       <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
@@ -622,8 +627,8 @@ table{border-collapse:collapse; width:100%}
         <rect x="13" y="18.5" width="14" height="3" fill="#fff"/>
       </svg>
       <span class="brand__text">
-        <span class="brand__name">IRON <em>PARA</em> GYM</span>
-        <span class="brand__sub">Jodhpur Park &bull; Since 2016</span>
+        <span data-nx="top.brand-name" class="brand__name">IRON <em>PARA</em> GYM</span>
+        <span data-nx="top.brand-sub" class="brand__sub">Jodhpur Park &bull; Since 2016</span>
       </span>
     </a>
 
@@ -649,6 +654,7 @@ table{border-collapse:collapse; width:100%}
       </a>
     </div>
 
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -674,68 +680,68 @@ table{border-collapse:collapse; width:100%}
 <main id="main">
 
 <!-- ============================ HERO ============================ -->
-<section class="hero">
+<section data-nx-section="section-2" class="hero">
   <div class="wrap">
     <div class="hero__grid">
       <div class="hero__content reveal" data-anim="fade-right">
-        <p class="tag">Jodhpur Park &bull; Kolkata</p>
-        <h1>Lift. Sweat.<br><span class="amber">Go home.</span><br><span class="outline">Come back</span> tomorrow.</h1>
-        <p class="lede">A proper neighbourhood gym. Free weights, machines, cardio, Zumba and yoga in the evening, trainers who learn your name. Open from 5:30 in the morning, six days a week.</p>
+        <p data-nx="section-2.tag" class="tag">Jodhpur Park &bull; Kolkata</p>
+        <h1 data-nx="section-2.h1">Lift. Sweat.<br><span class="amber">Go home.</span><br><span class="outline">Come back</span> tomorrow.</h1>
+        <p data-nx="section-2.lede" class="lede">A proper neighbourhood gym. Free weights, machines, cardio, Zumba and yoga in the evening, trainers who learn your name. Open from 5:30 in the morning, six days a week.</p>
         <div class="btn-row">
           <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask on WhatsApp</a>
-          <a class="btn btn--ghost" href="#plans">See the plans</a>
+          <a data-nx="section-2.button" class="btn btn--ghost" href="#plans">See the plans</a>
         </div>
-        <p class="hero__meta"><span>Monthly from &#8377;1,200</span><span>First visit free</span><span>Women's hour daily</span></p>
+        <p data-nx-list="section-2.hero-meta" class="hero__meta"><span data-nx-f="span" data-nx-item>Monthly from &#8377;1,200</span><span data-nx-f="span" data-nx-item>First visit free</span><span data-nx-f="span" data-nx-item>Women's hour daily</span></p>
       </div>
 
       <div class="hero__figure reveal" data-anim="fade-left" data-delay="150">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" fetchpriority="high" decoding="async">
+          <img data-nx="section-2.photo" src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" fetchpriority="high" decoding="async">
         </figure>
         <div class="hero__badge">
-          <b>5:30 am</b>
-          <span>Doors open</span>
+          <b data-nx="section-2.b">5:30 am</b>
+          <span data-nx="section-2.span">Doors open</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="facts reveal" data-delay="300">
-    <ul>
-      <li><b>Since 2016</b><span>In Jodhpur Park</span></li>
-      <li><b>2,400 sq ft</b><span>One floor, no stairs</span></li>
-      <li><b>3 trainers</b><span>On the floor, every shift</span></li>
-      <li><b>6 days</b><span>5:30 am to 10 pm</span></li>
+    <ul data-nx-list="section-2.list">
+      <li data-nx-item><b data-nx-f="b">Since 2016</b><span data-nx-f="span">In Jodhpur Park</span></li>
+      <li data-nx-item><b data-nx-f="b">2,400 sq ft</b><span data-nx-f="span">One floor, no stairs</span></li>
+      <li data-nx-item><b data-nx-f="b">3 trainers</b><span data-nx-f="span">On the floor, every shift</span></li>
+      <li data-nx-item><b data-nx-f="b">6 days</b><span data-nx-f="span">5:30 am to 10 pm</span></li>
     </ul>
   </div>
 </section>
 
 <!-- ============================ ABOUT ============================ -->
-<section class="section section--ink2 about" id="about">
+<section data-nx-section="about" class="section section--ink2 about" id="about">
   <div class="wrap about__grid">
     <div class="about__figure reveal" data-anim="fade-right">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph ph--main">
-        <img src="/demo/gym/images/tyre-flip.jpg" alt="A man flipping a large tractor tyre on the gym floor" width="1200" height="1600" loading="lazy" decoding="async">
+        <img data-nx="about.photo" src="/demo/gym/images/tyre-flip.jpg" alt="A man flipping a large tractor tyre on the gym floor" width="1200" height="1600" loading="lazy" decoding="async">
       </figure>
       <figure class="ph ph--inset">
-        <img src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async">
+        <img data-nx="about.photo2" src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async">
       </figure>
     </div>
 
     <div class="about__text reveal" data-anim="fade-left">
-      <p class="tag">About the gym</p>
-      <h2 class="h-lg">A para gym,<br>not a mall gym.</h2>
-      <div class="lede">
-        <p>Iron Para Gym opened in 2016 on the ground floor of a house in Jodhpur Park. The owner, Subrata Ghosh, still runs the morning shift himself.</p>
-        <p>It is one big room. Free weights on one side, machines and cardio on the other, a mat area at the back for classes and stretching. There is a fan over every rack and an AC that works in summer.</p>
+      <p data-nx="about.tag" class="tag">About the gym</p>
+      <h2 data-nx="about.h2" class="h-lg">A para gym,<br>not a mall gym.</h2>
+      <div data-nx-list="about.lede" class="lede">
+        <p data-nx-f="p" data-nx-item>Iron Para Gym opened in 2016 on the ground floor of a house in Jodhpur Park. The owner, Subrata Ghosh, still runs the morning shift himself.</p>
+        <p data-nx-f="p" data-nx-item>It is one big room. Free weights on one side, machines and cardio on the other, a mat area at the back for classes and stretching. There is a fan over every rack and an AC that works in summer.</p>
       </div>
-      <ul class="checks">
-        <li><b>Plates up to 20 kg, dumbbells to 40 kg.</b> Two squat racks, a flat and incline bench, a Smith machine.</li>
-        <li><b>Trainers on the floor, not at the desk.</b> Ask anyone in a black T-shirt for help with form.</li>
-        <li><b>No sales pressure.</b> Plans are on this page. Pay for the month you want, nothing more.</li>
-        <li><b>Women's hour 11 am to 1 pm.</b> Women only on the floor, Monday to Saturday.</li>
+      <ul data-nx-list="about.checks" class="checks">
+        <li data-nx-f="li" data-nx-item><b>Plates up to 20 kg, dumbbells to 40 kg.</b> Two squat racks, a flat and incline bench, a Smith machine.</li>
+        <li data-nx-f="li" data-nx-item><b>Trainers on the floor, not at the desk.</b> Ask anyone in a black T-shirt for help with form.</li>
+        <li data-nx-f="li" data-nx-item><b>No sales pressure.</b> Plans are on this page. Pay for the month you want, nothing more.</li>
+        <li data-nx-f="li" data-nx-item><b>Women's hour 11 am to 1 pm.</b> Women only on the floor, Monday to Saturday.</li>
       </ul>
     </div>
   </div>
@@ -744,54 +750,54 @@ table{border-collapse:collapse; width:100%}
 <div class="stripe" aria-hidden="true"></div>
 
 <!-- ============================ FACILITIES ============================ -->
-<section class="section" id="facilities">
+<section data-nx-section="facilities" class="section" id="facilities">
   <div class="wrap">
     <div class="head reveal">
-      <p class="tag">What's inside</p>
-      <h2 class="h-lg">Everything you need. Nothing you'll pay for and never use.</h2>
-      <p class="lede">All of this is included in every membership. Group classes too.</p>
+      <p data-nx="facilities.tag" class="tag">What's inside</p>
+      <h2 data-nx="facilities.h2" class="h-lg">Everything you need. Nothing you'll pay for and never use.</h2>
+      <p data-nx="facilities.lede" class="lede">All of this is included in every membership. Group classes too.</p>
     </div>
 
     <div class="fcards">
       <article class="fcard reveal">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
-        <figure class="ph"><img src="/demo/gym/images/preacher-curl.jpg" alt="A man doing preacher curls on a red bench" width="1200" height="1797" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx="facilities.photo" src="/demo/gym/images/preacher-curl.jpg" alt="A man doing preacher curls on a red bench" width="1200" height="1797" loading="lazy" decoding="async"></figure>
         <div class="fcard__body">
-          <span class="fcard__num">01</span>
-          <h3>Free weights</h3>
-          <p>Two squat racks, flat and incline benches, a deadlift platform, dumbbells from 2.5 to 40 kg.</p>
+          <span data-nx="facilities.fcard-num" class="fcard__num">01</span>
+          <h3 data-nx="facilities.h3">Free weights</h3>
+          <p data-nx="facilities.p">Two squat racks, flat and incline benches, a deadlift platform, dumbbells from 2.5 to 40 kg.</p>
         </div>
       </article>
       <article class="fcard reveal" data-delay="80">
-        <figure class="ph"><img src="/demo/gym/images/triceps-cable.jpg" alt="A man doing triceps pushdowns on a cable machine" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx="facilities.photo2" src="/demo/gym/images/triceps-cable.jpg" alt="A man doing triceps pushdowns on a cable machine" width="1200" height="800" loading="lazy" decoding="async"></figure>
         <div class="fcard__body">
-          <span class="fcard__num">02</span>
-          <h3>Machines</h3>
-          <p>Cable crossover, lat pulldown, leg press, leg curl and extension, chest press, Smith machine.</p>
+          <span data-nx="facilities.fcard-num2" class="fcard__num">02</span>
+          <h3 data-nx="facilities.h32">Machines</h3>
+          <p data-nx="facilities.p2">Cable crossover, lat pulldown, leg press, leg curl and extension, chest press, Smith machine.</p>
         </div>
       </article>
       <article class="fcard reveal" data-delay="160">
-        <figure class="ph"><img src="/demo/gym/images/battle-ropes.jpg" alt="A man swinging battle ropes" width="1200" height="1800" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx="facilities.photo3" src="/demo/gym/images/battle-ropes.jpg" alt="A man swinging battle ropes" width="1200" height="1800" loading="lazy" decoding="async"></figure>
         <div class="fcard__body">
-          <span class="fcard__num">03</span>
-          <h3>Cardio &amp; functional</h3>
-          <p>Four treadmills, two cross-trainers, two bikes, a rower, battle ropes, kettlebells and a tyre.</p>
+          <span data-nx="facilities.fcard-num3" class="fcard__num">03</span>
+          <h3 data-nx="facilities.h33">Cardio &amp; functional</h3>
+          <p data-nx="facilities.p3">Four treadmills, two cross-trainers, two bikes, a rower, battle ropes, kettlebells and a tyre.</p>
         </div>
       </article>
       <article class="fcard reveal" data-delay="240">
-        <figure class="ph"><img src="/demo/gym/images/group-class.jpg" alt="A group sitting cross-legged on yoga mats on a lawn" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx="facilities.photo4" src="/demo/gym/images/group-class.jpg" alt="A group sitting cross-legged on yoga mats on a lawn" width="1200" height="800" loading="lazy" decoding="async"></figure>
         <div class="fcard__body">
-          <span class="fcard__num">04</span>
-          <h3>Group classes</h3>
-          <p>Zumba, yoga, HIIT and a Sunday stretch class on the mat area. Timetable below. Included.</p>
+          <span data-nx="facilities.fcard-num4" class="fcard__num">04</span>
+          <h3 data-nx="facilities.h34">Group classes</h3>
+          <p data-nx="facilities.p4">Zumba, yoga, HIIT and a Sunday stretch class on the mat area. Timetable below. Included.</p>
         </div>
       </article>
       <article class="fcard reveal" data-delay="320">
-        <figure class="ph"><img src="/demo/gym/images/personal-training.jpg" alt="A trainer correcting a woman's posture in a standing stretch" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx="facilities.photo5" src="/demo/gym/images/personal-training.jpg" alt="A trainer correcting a woman's posture in a standing stretch" width="1200" height="800" loading="lazy" decoding="async"></figure>
         <div class="fcard__body">
-          <span class="fcard__num">05</span>
-          <h3>Personal training</h3>
-          <p>One trainer, one plan written for you, twelve sessions a month. Booked in advance so you get the slot you want.</p>
+          <span data-nx="facilities.fcard-num5" class="fcard__num">05</span>
+          <h3 data-nx="facilities.h35">Personal training</h3>
+          <p data-nx="facilities.p5">One trainer, one plan written for you, twelve sessions a month. Booked in advance so you get the slot you want.</p>
         </div>
       </article>
       <article class="fcard fcard--plain reveal" data-delay="400">
@@ -799,37 +805,37 @@ table{border-collapse:collapse; width:100%}
           <span class="fcard__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 9h18M3 15h18"/></svg>
           </span>
-          <span class="fcard__num">06</span>
-          <h3>Changing room &amp; lockers</h3>
-          <p>Separate changing rooms for men and women, 40 day-lockers (bring your own lock), a shower, filtered drinking water, first-aid box at the desk.</p>
+          <span data-nx="facilities.fcard-num6" class="fcard__num">06</span>
+          <h3 data-nx="facilities.h36">Changing room &amp; lockers</h3>
+          <p data-nx="facilities.p6">Separate changing rooms for men and women, 40 day-lockers (bring your own lock), a shower, filtered drinking water, first-aid box at the desk.</p>
         </div>
       </article>
     </div>
-    <p class="facilities__note">We do not have a steam room, a pool or a juice bar. We keep the fees low instead.</p>
+    <p data-nx="facilities.facilities-note" class="facilities__note">We do not have a steam room, a pool or a juice bar. We keep the fees low instead.</p>
   </div>
 </section>
 
 <!-- ============================ CLASSES ============================ -->
-<section class="section section--ink2" id="classes">
+<section data-nx-section="classes" class="section section--ink2" id="classes">
   <div class="wrap">
     <div class="head reveal">
-      <p class="tag">Group classes</p>
-      <h2 class="h-lg">The weekly timetable</h2>
-      <p class="lede">Classes run on the mat area at the back. Come five minutes early. All of them are included in every plan; no extra booking, just turn up.</p>
+      <p data-nx="classes.tag" class="tag">Group classes</p>
+      <h2 data-nx="classes.h2" class="h-lg">The weekly timetable</h2>
+      <p data-nx="classes.lede" class="lede">Classes run on the mat area at the back. Come five minutes early. All of them are included in every plan; no extra booking, just turn up.</p>
     </div>
 
     <div class="classes__grid" style="margin-top:3rem">
       <div class="tablewrap reveal">
         <table class="table">
           <thead>
-            <tr><th scope="col">Class</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Level</th><th scope="col">Takes it</th></tr>
+            <tr><th data-nx="classes.th" scope="col">Class</th><th data-nx="classes.th2" scope="col">Days</th><th data-nx="classes.th3" scope="col">Time</th><th data-nx="classes.th4" scope="col">Level</th><th data-nx="classes.th5" scope="col">Takes it</th></tr>
           </thead>
-          <tbody>
-            <tr><td>HIIT circuit</td><td>Mon &bull; Wed &bull; Fri</td><td>6:00 &ndash; 6:45 am</td><td><span class="pill">All levels</span></td><td>Rohit</td></tr>
-            <tr><td>Yoga</td><td>Tue &bull; Thu &bull; Sat</td><td>6:30 &ndash; 7:30 am</td><td><span class="pill pill--w">Beginner</span></td><td>Priya</td></tr>
-            <tr><td>Women's strength</td><td>Tue &bull; Thu</td><td>11:30 am &ndash; 12:30 pm</td><td><span class="pill">All levels</span></td><td>Priya</td></tr>
-            <tr><td>Zumba</td><td>Mon &bull; Wed &bull; Fri</td><td>7:00 &ndash; 8:00 pm</td><td><span class="pill">All levels</span></td><td>Guest instructor</td></tr>
-            <tr><td>Stretch &amp; mobility</td><td>Sun</td><td>8:00 &ndash; 9:00 am</td><td><span class="pill pill--w">Beginner</span></td><td>Arjun</td></tr>
+          <tbody data-nx-list="classes.list">
+            <tr data-nx-item><td data-nx-f="td">HIIT circuit</td><td data-nx-f="td2">Mon &bull; Wed &bull; Fri</td><td data-nx-f="td3">6:00 &ndash; 6:45 am</td><td><span data-nx-f="pill" class="pill">All levels</span></td><td data-nx-f="td4">Rohit</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Yoga</td><td data-nx-f="td2">Tue &bull; Thu &bull; Sat</td><td data-nx-f="td3">6:30 &ndash; 7:30 am</td><td><span data-nx-f="pill" class="pill pill--w">Beginner</span></td><td data-nx-f="td4">Priya</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Women's strength</td><td data-nx-f="td2">Tue &bull; Thu</td><td data-nx-f="td3">11:30 am &ndash; 12:30 pm</td><td><span data-nx-f="pill" class="pill">All levels</span></td><td data-nx-f="td4">Priya</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Zumba</td><td data-nx-f="td2">Mon &bull; Wed &bull; Fri</td><td data-nx-f="td3">7:00 &ndash; 8:00 pm</td><td><span data-nx-f="pill" class="pill">All levels</span></td><td data-nx-f="td4">Guest instructor</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Stretch &amp; mobility</td><td data-nx-f="td2">Sun</td><td data-nx-f="td3">8:00 &ndash; 9:00 am</td><td><span data-nx-f="pill" class="pill pill--w">Beginner</span></td><td data-nx-f="td4">Arjun</td></tr>
           </tbody>
         </table>
       </div>
@@ -837,162 +843,162 @@ table{border-collapse:collapse; width:100%}
       <div class="classes__side reveal" data-anim="fade-left">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/gym/images/yoga-class.jpg" alt="Two women seated in a yoga pose with arms raised" width="1200" height="800" loading="lazy" decoding="async">
+          <img data-nx="classes.photo" src="/demo/gym/images/yoga-class.jpg" alt="Two women seated in a yoga pose with arms raised" width="1200" height="800" loading="lazy" decoding="async">
         </figure>
         <blockquote class="quote">
-          <p>"I joined for the 6 am HIIT class and stayed for the people. Nobody stares, nobody sells you anything."</p>
+          <p data-nx="classes.p">"I joined for the 6 am HIIT class and stayed for the people. Nobody stares, nobody sells you anything."</p>
           <footer>Moumita, member since 2022</footer>
         </blockquote>
       </div>
     </div>
-    <p class="table__note">Zumba is taken by a visiting instructor. If she is on leave the slot becomes an open mat hour. We post changes on the noticeboard and on WhatsApp.</p>
+    <p data-nx="classes.table-note" class="table__note">Zumba is taken by a visiting instructor. If she is on leave the slot becomes an open mat hour. We post changes on the noticeboard and on WhatsApp.</p>
   </div>
 </section>
 
 <div class="stripe" aria-hidden="true"></div>
 
 <!-- ============================ PLANS ============================ -->
-<section class="section section--paper" id="plans">
+<section data-nx-section="plans" class="section section--paper" id="plans">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="tag">Membership</p>
-      <h2 class="h-lg">Three plans. The price is the price.</h2>
-      <p class="lede">Every plan covers the whole gym and every class. Pay cash, UPI or card at the desk. There is a one-time admission fee of &#8377;500 on your first plan.</p>
+      <p data-nx="plans.tag" class="tag">Membership</p>
+      <h2 data-nx="plans.h2" class="h-lg">Three plans. The price is the price.</h2>
+      <p data-nx="plans.lede" class="lede">Every plan covers the whole gym and every class. Pay cash, UPI or card at the desk. There is a one-time admission fee of &#8377;500 on your first plan.</p>
     </div>
 
     <div class="plans">
       <article class="plan reveal">
-        <span class="plan__name">MONTHLY</span>
-        <p class="plan__price">&#8377;1,200<small>/ month</small></p>
-        <p class="plan__per">Good for trying us out.</p>
-        <ul>
-          <li>Full gym, 5:30 am to 10 pm</li>
-          <li>All group classes</li>
-          <li>Day-locker use</li>
-          <li>Starter plan written on day one</li>
+        <span data-nx="plans.plan-name" class="plan__name">MONTHLY</span>
+        <p data-nx="plans.plan-price" class="plan__price">&#8377;1,200<small>/ month</small></p>
+        <p data-nx="plans.plan-per" class="plan__per">Good for trying us out.</p>
+        <ul data-nx-list="plans.list">
+          <li data-nx-f="li" data-nx-item>Full gym, 5:30 am to 10 pm</li>
+          <li data-nx-f="li" data-nx-item>All group classes</li>
+          <li data-nx-f="li" data-nx-item>Day-locker use</li>
+          <li data-nx-f="li" data-nx-item>Starter plan written on day one</li>
         </ul>
         <a class="btn btn--ghost-dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about monthly</a>
       </article>
 
       <article class="plan plan--hot reveal" data-delay="100">
-        <span class="plan__flag">Most members pick this</span>
-        <span class="plan__name">QUARTERLY</span>
-        <p class="plan__price">&#8377;3,000<small>/ 3 months</small></p>
-        <p class="plan__per">Works out to &#8377;1,000 a month.</p>
-        <ul>
-          <li>Everything in Monthly</li>
-          <li>One free freeze of up to 10 days</li>
-          <li>Body measurements taken each month</li>
-          <li>Plan reviewed by a trainer every 4 weeks</li>
+        <span data-nx="plans.plan-flag" class="plan__flag">Most members pick this</span>
+        <span data-nx="plans.plan-name2" class="plan__name">QUARTERLY</span>
+        <p data-nx="plans.plan-price2" class="plan__price">&#8377;3,000<small>/ 3 months</small></p>
+        <p data-nx="plans.plan-per2" class="plan__per">Works out to &#8377;1,000 a month.</p>
+        <ul data-nx-list="plans.list2">
+          <li data-nx-f="li" data-nx-item>Everything in Monthly</li>
+          <li data-nx-f="li" data-nx-item>One free freeze of up to 10 days</li>
+          <li data-nx-f="li" data-nx-item>Body measurements taken each month</li>
+          <li data-nx-f="li" data-nx-item>Plan reviewed by a trainer every 4 weeks</li>
         </ul>
         <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about quarterly</a>
       </article>
 
       <article class="plan reveal" data-delay="200">
-        <span class="plan__name">YEARLY</span>
-        <p class="plan__price">&#8377;9,600<small>/ year</small></p>
-        <p class="plan__per">Works out to &#8377;800 a month.</p>
-        <ul>
-          <li>Everything in Quarterly</li>
-          <li>Freeze up to 30 days in the year</li>
-          <li>Admission fee waived</li>
-          <li>Two guest passes for a friend</li>
+        <span data-nx="plans.plan-name3" class="plan__name">YEARLY</span>
+        <p data-nx="plans.plan-price3" class="plan__price">&#8377;9,600<small>/ year</small></p>
+        <p data-nx="plans.plan-per3" class="plan__per">Works out to &#8377;800 a month.</p>
+        <ul data-nx-list="plans.list3">
+          <li data-nx-f="li" data-nx-item>Everything in Quarterly</li>
+          <li data-nx-f="li" data-nx-item>Freeze up to 30 days in the year</li>
+          <li data-nx-f="li" data-nx-item>Admission fee waived</li>
+          <li data-nx-f="li" data-nx-item>Two guest passes for a friend</li>
         </ul>
         <a class="btn btn--ghost-dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about yearly</a>
       </article>
     </div>
 
-    <div class="plans__extra">
-      <div class="extra reveal">
+    <div data-nx-list="plans.plans-extra" class="plans__extra">
+      <div data-nx-item class="extra reveal">
         <div>
-          <h3>Personal training</h3>
-          <p>12 one-hour sessions a month with one trainer. Added on top of any plan.</p>
+          <h3 data-nx-f="h3">Personal training</h3>
+          <p data-nx-f="p">12 one-hour sessions a month with one trainer. Added on top of any plan.</p>
         </div>
-        <b>&#8377;3,500<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / month</small></b>
+        <b data-nx-f="b">&#8377;3,500<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / month</small></b>
       </div>
-      <div class="extra reveal" data-delay="100">
+      <div data-nx-item class="extra reveal" data-delay="100">
         <div>
-          <h3>Day pass</h3>
-          <p>One visit, full gym, any class running that day. Your first visit is free.</p>
+          <h3 data-nx-f="h3">Day pass</h3>
+          <p data-nx-f="p">One visit, full gym, any class running that day. Your first visit is free.</p>
         </div>
-        <b>&#8377;150<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / day</small></b>
+        <b data-nx-f="b">&#8377;150<small style="font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57"> / day</small></b>
       </div>
     </div>
-    <p class="plans__note">Students with a valid college ID get &#8377;100 off the monthly plan. No refunds once a plan has started, but you can freeze it as shown above. Prices are examples for this sample site.</p>
+    <p data-nx="plans.plans-note" class="plans__note">Students with a valid college ID get &#8377;100 off the monthly plan. No refunds once a plan has started, but you can freeze it as shown above. Prices are examples for this sample site.</p>
   </div>
 </section>
 
 <!-- ============================ TIMINGS ============================ -->
-<section class="section" id="timings">
+<section data-nx-section="timings" class="section" id="timings">
   <div class="wrap">
     <div class="head reveal">
-      <p class="tag">Timings</p>
-      <h2 class="h-lg">When the doors are open</h2>
+      <p data-nx="timings.tag" class="tag">Timings</p>
+      <h2 data-nx="timings.h2" class="h-lg">When the doors are open</h2>
     </div>
     <div class="tablewrap reveal">
       <table class="table">
         <thead>
-          <tr><th scope="col">Day</th><th scope="col">Open</th><th scope="col">Women's hour</th><th scope="col">Quietest</th></tr>
+          <tr><th data-nx="timings.th" scope="col">Day</th><th data-nx="timings.th2" scope="col">Open</th><th data-nx="timings.th3" scope="col">Women's hour</th><th data-nx="timings.th4" scope="col">Quietest</th></tr>
         </thead>
         <tbody>
-          <tr><td>Monday &ndash; Friday</td><td>5:30 am &ndash; 10:00 pm</td><td>11:00 am &ndash; 1:00 pm</td><td>2 pm &ndash; 5 pm</td></tr>
-          <tr><td>Saturday</td><td>5:30 am &ndash; 10:00 pm</td><td>11:00 am &ndash; 1:00 pm</td><td>After 7 pm</td></tr>
-          <tr><td>Sunday</td><td>6:00 am &ndash; 1:00 pm</td><td>Closed</td><td>After 10 am</td></tr>
-          <tr><td>Closed</td><td colspan="3">Durga Pujo (Ashtami to Dashami), Kali Pujo, Holi, 15 August, 26 January</td></tr>
+          <tr><td data-nx="timings.td">Monday &ndash; Friday</td><td data-nx="timings.td2">5:30 am &ndash; 10:00 pm</td><td data-nx="timings.td3">11:00 am &ndash; 1:00 pm</td><td data-nx="timings.td4">2 pm &ndash; 5 pm</td></tr>
+          <tr><td data-nx="timings.td5">Saturday</td><td data-nx="timings.td6">5:30 am &ndash; 10:00 pm</td><td data-nx="timings.td7">11:00 am &ndash; 1:00 pm</td><td data-nx="timings.td8">After 7 pm</td></tr>
+          <tr><td data-nx="timings.td9">Sunday</td><td data-nx="timings.td10">6:00 am &ndash; 1:00 pm</td><td data-nx="timings.td11">Closed</td><td data-nx="timings.td12">After 10 am</td></tr>
+          <tr><td data-nx="timings.td13">Closed</td><td data-nx="timings.td14" colspan="3">Durga Pujo (Ashtami to Dashami), Kali Pujo, Holi, 15 August, 26 January</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="table__note">Last entry is 45 minutes before closing. The busiest hours are 6 to 8 in the morning and 6 to 9 in the evening.</p>
+    <p data-nx="timings.table-note" class="table__note">Last entry is 45 minutes before closing. The busiest hours are 6 to 8 in the morning and 6 to 9 in the evening.</p>
   </div>
 </section>
 
 <!-- ============================ TRAINERS ============================ -->
-<section class="section section--ink2" id="trainers">
+<section data-nx-section="trainers" class="section section--ink2" id="trainers">
   <div class="wrap">
     <div class="head reveal">
-      <p class="tag">Trainers</p>
-      <h2 class="h-lg">Three people who know the floor</h2>
-      <p class="lede">All three are certified fitness trainers and first-aid trained. One of them is on the floor at every hour we are open.</p>
+      <p data-nx="trainers.tag" class="tag">Trainers</p>
+      <h2 data-nx="trainers.h2" class="h-lg">Three people who know the floor</h2>
+      <p data-nx="trainers.lede" class="lede">All three are certified fitness trainers and first-aid trained. One of them is on the floor at every hour we are open.</p>
     </div>
 
-    <div class="trainers">
-      <article class="trainer reveal">
+    <div data-nx-list="trainers.trainers" class="trainers">
+      <article data-nx-item class="trainer reveal">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
-        <figure class="ph"><img src="/demo/gym/images/trainer-arjun.jpg" alt="Arjun, a young man in an olive T-shirt standing in the gym" width="800" height="1066" loading="lazy" decoding="async"></figure>
+        <figure class="ph"><img data-nx-f="photo" src="/demo/gym/images/trainer-arjun.jpg" alt="Arjun, a young man in an olive T-shirt standing in the gym" width="800" height="1066" loading="lazy" decoding="async"></figure>
         <div>
-          <h3>Arjun Das</h3>
-          <p class="trainer__role">Strength &bull; Head trainer</p>
-          <p>Runs the morning shift. Teaches the squat, bench and deadlift from scratch and writes most of the beginner plans.</p>
+          <h3 data-nx-f="h3">Arjun Das</h3>
+          <p data-nx-f="p" class="trainer__role">Strength &bull; Head trainer</p>
+          <p data-nx-f="p2">Runs the morning shift. Teaches the squat, bench and deadlift from scratch and writes most of the beginner plans.</p>
           <dl>
-            <dt>At the gym</dt><dd>Since 2016</dd>
-            <dt>Shift</dt><dd>5:30 am &ndash; 1:30 pm</dd>
-            <dt>Also takes</dt><dd>Sunday stretch class</dd>
+            <dt data-nx-f="dt">At the gym</dt><dd data-nx-f="dd">Since 2016</dd>
+            <dt data-nx-f="dt2">Shift</dt><dd data-nx-f="dd2">5:30 am &ndash; 1:30 pm</dd>
+            <dt data-nx-f="dt3">Also takes</dt><dd data-nx-f="dd3">Sunday stretch class</dd>
           </dl>
         </div>
       </article>
-      <article class="trainer reveal" data-delay="100">
-        <figure class="ph"><img src="/demo/gym/images/trainer-rohit.jpg" alt="Rohit, a young man in a red vest smiling next to a punching bag" width="800" height="1422" loading="lazy" decoding="async"></figure>
+      <article data-nx-item class="trainer reveal" data-delay="100">
+        <figure class="ph"><img data-nx-f="photo" src="/demo/gym/images/trainer-rohit.jpg" alt="Rohit, a young man in a red vest smiling next to a punching bag" width="800" height="1422" loading="lazy" decoding="async"></figure>
         <div>
-          <h3>Rohit Mondal</h3>
-          <p class="trainer__role">Functional &bull; HIIT</p>
-          <p>Takes the 6 am circuit class and the evening floor. Kettlebells, ropes, boxing basics on the bag, and conditioning for school and college athletes.</p>
+          <h3 data-nx-f="h3">Rohit Mondal</h3>
+          <p data-nx-f="p" class="trainer__role">Functional &bull; HIIT</p>
+          <p data-nx-f="p2">Takes the 6 am circuit class and the evening floor. Kettlebells, ropes, boxing basics on the bag, and conditioning for school and college athletes.</p>
           <dl>
-            <dt>At the gym</dt><dd>Since 2019</dd>
-            <dt>Shift</dt><dd>5:30 &ndash; 9 am, 4 &ndash; 10 pm</dd>
-            <dt>Also takes</dt><dd>HIIT circuit</dd>
+            <dt data-nx-f="dt">At the gym</dt><dd data-nx-f="dd">Since 2019</dd>
+            <dt data-nx-f="dt2">Shift</dt><dd data-nx-f="dd2">5:30 &ndash; 9 am, 4 &ndash; 10 pm</dd>
+            <dt data-nx-f="dt3">Also takes</dt><dd data-nx-f="dd3">HIIT circuit</dd>
           </dl>
         </div>
       </article>
-      <article class="trainer reveal" data-delay="200">
-        <figure class="ph"><img src="/demo/gym/images/trainer-priya.jpg" alt="Priya, a woman holding a dumbbell in the gym" width="800" height="1200" loading="lazy" decoding="async"></figure>
+      <article data-nx-item class="trainer reveal" data-delay="200">
+        <figure class="ph"><img data-nx-f="photo" src="/demo/gym/images/trainer-priya.jpg" alt="Priya, a woman holding a dumbbell in the gym" width="800" height="1200" loading="lazy" decoding="async"></figure>
         <div>
-          <h3>Priya Sen</h3>
-          <p class="trainer__role">Women's strength &bull; Yoga</p>
-          <p>Runs the women's hour and the morning yoga class. Works with beginners, new mothers and anyone coming back after a long gap.</p>
+          <h3 data-nx-f="h3">Priya Sen</h3>
+          <p data-nx-f="p" class="trainer__role">Women's strength &bull; Yoga</p>
+          <p data-nx-f="p2">Runs the women's hour and the morning yoga class. Works with beginners, new mothers and anyone coming back after a long gap.</p>
           <dl>
-            <dt>At the gym</dt><dd>Since 2020</dd>
-            <dt>Shift</dt><dd>6 am &ndash; 1 pm</dd>
-            <dt>Also takes</dt><dd>Yoga, women's strength</dd>
+            <dt data-nx-f="dt">At the gym</dt><dd data-nx-f="dd">Since 2020</dd>
+            <dt data-nx-f="dt2">Shift</dt><dd data-nx-f="dd2">6 am &ndash; 1 pm</dd>
+            <dt data-nx-f="dt3">Also takes</dt><dd data-nx-f="dd3">Yoga, women's strength</dd>
           </dl>
         </div>
       </article>
@@ -1001,78 +1007,78 @@ table{border-collapse:collapse; width:100%}
 </section>
 
 <!-- ============================ FIRST DAY ============================ -->
-<section class="section" id="first-day">
+<section data-nx-section="first-day" class="section" id="first-day">
   <div class="wrap rules__grid">
     <div class="reveal" data-anim="fade-right">
-      <p class="tag">Your first day</p>
-      <h2 class="h-lg">How it goes</h2>
-      <ol class="steps">
-        <li><span class="n">1</span><div><h3>Walk in, any open hour</h3><p>No appointment. Your first visit is free. Say you are new at the desk.</p></div></li>
-        <li><span class="n">2</span><div><h3>Ten minutes with a trainer</h3><p>We ask what you want, check for old injuries, measure height, weight and waist.</p></div></li>
-        <li><span class="n">3</span><div><h3>A tour and a first workout</h3><p>The trainer shows you every machine and walks you through a light first session.</p></div></li>
-        <li><span class="n">4</span><div><h3>Pick a plan, or don't</h3><p>Pay at the desk if you want to continue. Nobody will call you if you don't.</p></div></li>
+      <p data-nx="first-day.tag" class="tag">Your first day</p>
+      <h2 data-nx="first-day.h2" class="h-lg">How it goes</h2>
+      <ol data-nx-list="first-day.steps" class="steps">
+        <li data-nx-item><span data-nx-f="n" class="n">1</span><div><h3 data-nx-f="h3">Walk in, any open hour</h3><p data-nx-f="p">No appointment. Your first visit is free. Say you are new at the desk.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">2</span><div><h3 data-nx-f="h3">Ten minutes with a trainer</h3><p data-nx-f="p">We ask what you want, check for old injuries, measure height, weight and waist.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">3</span><div><h3 data-nx-f="h3">A tour and a first workout</h3><p data-nx-f="p">The trainer shows you every machine and walks you through a light first session.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">4</span><div><h3 data-nx-f="h3">Pick a plan, or don't</h3><p data-nx-f="p">Pay at the desk if you want to continue. Nobody will call you if you don't.</p></div></li>
       </ol>
     </div>
     <div class="rulebox reveal" data-anim="fade-left">
-      <h3>Bring and know</h3>
-      <ul>
-        <li>Indoor shoes. Outdoor shoes stay in the rack at the door.</li>
-        <li>A towel and a water bottle. We have filtered water, not disposable cups.</li>
-        <li>A lock for the day-locker. Lockers are emptied at closing.</li>
-        <li>Re-rack your plates and wipe the bench after use.</li>
-        <li>Phone calls off the floor, please. Photos are fine if nobody else is in them.</li>
-        <li>Tell a trainer about any injury, heart condition or pregnancy before starting.</li>
-        <li>Children under 14 are not allowed on the floor.</li>
+      <h3 data-nx="first-day.h3">Bring and know</h3>
+      <ul data-nx-list="first-day.list">
+        <li data-nx-f="li" data-nx-item>Indoor shoes. Outdoor shoes stay in the rack at the door.</li>
+        <li data-nx-f="li" data-nx-item>A towel and a water bottle. We have filtered water, not disposable cups.</li>
+        <li data-nx-f="li" data-nx-item>A lock for the day-locker. Lockers are emptied at closing.</li>
+        <li data-nx-f="li" data-nx-item>Re-rack your plates and wipe the bench after use.</li>
+        <li data-nx-f="li" data-nx-item>Phone calls off the floor, please. Photos are fine if nobody else is in them.</li>
+        <li data-nx-f="li" data-nx-item>Tell a trainer about any injury, heart condition or pregnancy before starting.</li>
+        <li data-nx-f="li" data-nx-item>Children under 14 are not allowed on the floor.</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- ============================ GALLERY ============================ -->
-<section class="section section--ink2" id="gallery">
+<section data-nx-section="gallery" class="section section--ink2" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <p class="tag">Gallery</p>
-      <h2 class="h-lg">On the floor</h2>
+      <p data-nx="gallery.tag" class="tag">Gallery</p>
+      <h2 data-nx="gallery.h2" class="h-lg">On the floor</h2>
     </div>
-    <div class="gallery">
+    <div data-nx-list="gallery.gallery" class="gallery">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
-      <figure class="gallery__item reveal"><span class="ph"><img src="/demo/gym/images/women-dumbbells.jpg" alt="A woman holding two dumbbells at her sides" width="800" height="1200" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Women's hour</figcaption></figure>
-      <figure class="gallery__item reveal" data-delay="60"><span class="ph"><img src="/demo/gym/images/cable-row.jpg" alt="A man doing a seated cable row" width="1200" height="1800" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Cable row</figcaption></figure>
-      <figure class="gallery__item reveal" data-delay="120"><span class="ph"><img src="/demo/gym/images/push-ups.jpg" alt="A man doing push-ups on a wooden ledge outdoors" width="1200" height="800" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Sunday outdoors</figcaption></figure>
-      <figure class="gallery__item reveal" data-delay="180"><span class="ph"><img src="/demo/gym/images/triceps-rope.jpg" alt="A triceps rope hanging from a cable machine with a ceiling fan behind" width="1200" height="1602" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Cable station</figcaption></figure>
-      <figure class="gallery__item reveal" data-delay="240"><span class="ph"><img src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Dumbbell rack</figcaption></figure>
-      <figure class="gallery__item reveal" data-delay="300"><span class="ph"><img src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async"></span><figcaption class="gallery__cap">Squat rack</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/women-dumbbells.jpg" alt="A woman holding two dumbbells at her sides" width="800" height="1200" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Women's hour</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal" data-delay="60"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/cable-row.jpg" alt="A man doing a seated cable row" width="1200" height="1800" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Cable row</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal" data-delay="120"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/push-ups.jpg" alt="A man doing push-ups on a wooden ledge outdoors" width="1200" height="800" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Sunday outdoors</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal" data-delay="180"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/triceps-rope.jpg" alt="A triceps rope hanging from a cable machine with a ceiling fan behind" width="1200" height="1602" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Cable station</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal" data-delay="240"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/hero.jpg" alt="A young man doing a dumbbell curl in front of the dumbbell rack" width="1200" height="1600" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Dumbbell rack</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal" data-delay="300"><span class="ph"><img data-nx-f="photo" src="/demo/gym/images/squat.jpg" alt="A man holding a barbell front squat at the bottom" width="1200" height="1425" loading="lazy" decoding="async"></span><figcaption data-nx-f="figcaption" class="gallery__cap">Squat rack</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- ============================ VISIT ============================ -->
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap visit__grid">
     <div class="reveal" data-anim="fade-right">
-      <p class="tag">Visit</p>
-      <h2 class="h-lg">Find us</h2>
-      <address class="address">
+      <p data-nx="visit.tag" class="tag">Visit</p>
+      <h2 data-nx="visit.h2" class="h-lg">Find us</h2>
+      <address data-nx="visit.address" class="address">
         <span class="label">Address</span>
         41 Jodhpur Park, ground floor<br>
         Near the Jodhpur Park post office<br>
         Kolkata 700068, West Bengal
       </address>
       <div class="hours">
-        <span class="label">Hours</span>
-        <table>
-          <tr><td>Monday to Saturday</td><td>5:30 am &ndash; 10:00 pm</td></tr>
-          <tr><td>Sunday</td><td>6:00 am &ndash; 1:00 pm</td></tr>
-          <tr><td>Women's hour (Mon&ndash;Sat)</td><td>11:00 am &ndash; 1:00 pm</td></tr>
+        <span data-nx="visit.label" class="label">Hours</span>
+        <table data-nx-list="visit.list">
+          <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">5:30 am &ndash; 10:00 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">6:00 am &ndash; 1:00 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Women's hour (Mon&ndash;Sat)</td><td data-nx-f="td2">11:00 am &ndash; 1:00 pm</td></tr>
         </table>
       </div>
       <div class="btn-row">
         <a class="btn btn--amber" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
         <a class="btn btn--ghost" href="tel:+919804243159">Call Us</a>
-        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
+        <a data-nx="visit.button" class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
       </div>
-      <p class="visit__note">Two-wheeler parking in the lane. Dhakuria station is a 10-minute walk; buses stop at Jodhpur Park on Prince Anwar Shah Road.</p>
+      <p data-nx="visit.visit-note" class="visit__note">Two-wheeler parking in the lane. Dhakuria station is a 10-minute walk; buses stop at Jodhpur Park on Prince Anwar Shah Road.</p>
     </div>
 
     <div class="reveal" data-anim="fade-left">
@@ -1089,17 +1095,17 @@ table{border-collapse:collapse; width:100%}
 </section>
 
 <!-- ============================ FINAL CTA ============================ -->
-<section class="section section--amber final" id="contact">
+<section data-nx-section="contact" class="section section--amber final" id="contact">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="tag">First visit free</p>
-      <h2 class="h-xl">Come in tomorrow morning.</h2>
-      <p class="lede">Message us the time you want to come. We will have a trainer ready at the door.</p>
+      <p data-nx="contact.tag" class="tag">First visit free</p>
+      <h2 data-nx="contact.h2" class="h-xl">Come in tomorrow morning.</h2>
+      <p data-nx="contact.lede" class="lede">Message us the time you want to come. We will have a trainer ready at the door.</p>
       <div class="btn-row">
         <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Iron%20Para%20Gym%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
         <a class="btn btn--ghost-dark" href="tel:+919804243159">Call Us</a>
       </div>
-      <p class="final__place">41 Jodhpur Park &bull; Kolkata 700068</p>
+      <p data-nx="contact.final-place" class="final__place">41 Jodhpur Park &bull; Kolkata 700068</p>
     </div>
   </div>
 </section>
@@ -1107,7 +1113,7 @@ table{border-collapse:collapse; width:100%}
 </main>
 
 <!-- ============================ FOOTER ============================ -->
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
@@ -1120,12 +1126,12 @@ table{border-collapse:collapse; width:100%}
             <rect x="13" y="18.5" width="14" height="3" fill="#fff"/>
           </svg>
           <span class="brand__text">
-            <span class="brand__name">IRON <em>PARA</em> GYM</span>
-            <span class="brand__sub">Jodhpur Park &bull; Since 2016</span>
+            <span data-nx="footer.brand-name" class="brand__name">IRON <em>PARA</em> GYM</span>
+            <span data-nx="footer.brand-sub" class="brand__sub">Jodhpur Park &bull; Since 2016</span>
           </span>
         </a>
-        <p class="footer__tag">Weights, cardio, classes, trainers. No frills, fair fees.</p>
-        <p class="footer__loc">Jodhpur Park, Kolkata</p>
+        <p data-nx="footer.footer-tag" class="footer__tag">Weights, cardio, classes, trainers. No frills, fair fees.</p>
+        <p data-nx="footer.footer-loc" class="footer__loc">Jodhpur Park, Kolkata</p>
       </div>
 
       <nav aria-label="Footer">
@@ -1141,17 +1147,17 @@ table{border-collapse:collapse; width:100%}
       </nav>
 
       <div class="footer__contact">
-        <h4>Visit</h4>
-        <address>
+        <h4 data-nx="footer.h4">Visit</h4>
+        <address data-nx="footer.address">
           41 Jodhpur Park, ground floor<br>
           Kolkata 700068<br>
           West Bengal
         </address>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
+        <a data-nx="footer.button" href="https://www.google.com/maps/search/?api=1&amp;query=41%20Jodhpur%20Park%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get Directions</a>
       </div>
 
       <div>
-        <h4>Follow</h4>
+        <h4 data-nx="footer.h42">Follow</h4>
         <div class="socials">
           <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
@@ -1169,7 +1175,7 @@ table{border-collapse:collapse; width:100%}
       </div>
     </div>
 
-    <p class="footer__bottom">&copy; 2026 Iron Para Gym. All rights reserved.</p>
+    <p data-nx="footer.footer-bottom" class="footer__bottom">&copy; 2026 Iron Para Gym. All rights reserved.</p>
     <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
   </div>
 </footer>
@@ -1310,5 +1316,7 @@ table{border-collapse:collapse; width:100%}
   }
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

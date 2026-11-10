@@ -1,0 +1,1544 @@
+{
+  "site": "spoken-english",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Uttaran Spoken English Centre",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "hero-pill",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Speak English without stopping to think in three months",
+            "bn": "Speak English without stopping to think in three months"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "who",
+      "label": {
+        "en": "Three kinds of people sit in our classes",
+        "bn": "Three kinds of people sit in our classes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "who",
+          "label": {
+            "en": "Three kinds of people sit in our classes",
+            "bn": "Three kinds of people sit in our classes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "tag",
+              "type": "text",
+              "label": {
+                "en": "Small label",
+                "bn": "ছোট লেবেল"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "label": {
+        "en": "From the first sentence to the interview chair",
+        "bn": "From the first sentence to the interview chair"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "levels",
+          "label": {
+            "en": "From the first sentence to the interview chair",
+            "bn": "From the first sentence to the interview chair"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "for",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "batches",
+      "label": {
+        "en": "Pick the time, we keep the seat",
+        "bn": "Pick the time, we keep the seat"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "time",
+          "type": "text",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "time2",
+          "type": "text",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "time3",
+          "type": "text",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Morning",
+            "bn": "Morning"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Evening",
+            "bn": "Evening"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Weekend",
+            "bn": "Weekend"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "What a course costs, in one table",
+        "bn": "What a course costs, in one table"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "What a course costs, in one table",
+            "bn": "What a course costs, in one table"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "small",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "fnote",
+          "label": {
+            "en": "What a course costs, in one table",
+            "bn": "What a course costs, in one table"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "class",
+      "label": {
+        "en": "You talk for forty minutes. The teacher talks for twenty",
+        "bn": "You talk for forty minutes. The teacher talks for twenty"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "inside-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:831"
+            }
+          ]
+        },
+        {
+          "key": "check",
+          "label": {
+            "en": "You talk for forty minutes. The teacher talks for twenty",
+            "bn": "You talk for forty minutes. The teacher talks for twenty"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "trainers",
+          "label": {
+            "en": "You talk for forty minutes. The teacher talks for twenty",
+            "bn": "You talk for forty minutes. The teacher talks for twenty"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few faces from the centre",
+        "bn": "A few faces from the centre"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you message us",
+        "bn": "Before you message us"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Before you message us",
+            "bn": "Before you message us"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "Two students, two reasons",
+        "bn": "Two students, two reasons"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two students, two reasons",
+            "bn": "Two students, two reasons"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Second floor, above the pharmacy at Baguiati crossing",
+        "bn": "Second floor, above the pharmacy at Baguiati crossing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Come and sit in one class. Then decide",
+        "bn": "Come and sit in one class. Then decide"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Courses",
+            "bn": "Courses"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Uttaran Spoken English",
+      "small": "Baguiati · since 2014"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/spoken-english/images/hero.jpg",
+        "alt": ""
+      },
+      "hero-pill": "First demo class is free. No fee, no form.",
+      "h1": "Speak English <span>without stopping to think</span> in three months.",
+      "p": "A small centre on VIP Road for students, housewives and job seekers. Ten people to a batch, so everyone speaks in every class. Morning, evening and weekend timings. Teachers who explain in Bengali when you are stuck.",
+      "button": "See course fees",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "10",
+            "span": "Students per batch, never more"
+          },
+          {
+            "b": "3 months",
+            "span": "One course, start to finish"
+          },
+          {
+            "b": "7 am to 9 pm",
+            "span": "Batches through the day"
+          }
+        ]
+      }
+    },
+    "who": {
+      "kicker": "Who joins",
+      "h2": "Three kinds of people sit in our classes.",
+      "p": "Each has a different reason, so we keep separate batches where it helps. A college student and a housewife returning to work are not taught the same way.",
+      "who": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/girls-classroom.jpg",
+              "alt": "A classroom of schoolgirls in white uniforms listening to a lesson"
+            },
+            "h3": "School and college students",
+            "p": "Class 8 upwards. For viva, presentations, college interviews and simply to stop being scared of the English-medium crowd. Grammar fixed on the way, not taught as a separate subject.",
+            "tag": "Evening and weekend batches"
+          },
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/women-batch.jpg",
+              "alt": "A group of women in sarees attending a class in front of a blackboard"
+            },
+            "h3": "Housewives and returning mothers",
+            "p": "A women-only morning batch at 11. For parent-teacher meetings, the bank, the doctor, travel, and going back to work after a gap. Many start from zero. That is fine.",
+            "tag": "Women-only batch, 11 am"
+          },
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/mock-interview.jpg",
+              "alt": "A woman in a blazer speaking with a man in a suit during an interview"
+            },
+            "h3": "Job seekers and working people",
+            "p": "Interview answers, self-introduction, telephone English, writing a plain email. Mock interviews every Saturday with feedback on the spot. Early morning and late evening batches.",
+            "tag": "7 am and 8 pm batches"
+          }
+        ]
+      }
+    },
+    "levels": {
+      "kicker": "Levels",
+      "h2": "From the first sentence to the interview chair.",
+      "p": "Everyone gives a short speaking test on the demo day. We put you in the level that fits, not in whichever batch has a seat.",
+      "levels": {
+        "items": [
+          {
+            "h3": "Beginner",
+            "for": "For those who cannot form a sentence",
+            "p": "Everyday words, simple present and past, asking and answering questions. Spoken in class from day one, reading and writing kept small."
+          },
+          {
+            "h3": "Intermediate",
+            "for": "Can speak, but slowly and with mistakes",
+            "p": "Tenses sorted out, common mistakes Bengali speakers make, longer answers, telling a story, describing your work and your day."
+          },
+          {
+            "h3": "Fluent conversation",
+            "for": "Speaks, but wants to sound natural",
+            "p": "Group discussion, debate, telephone English, pronunciation of the sounds we usually get wrong, idioms people actually use."
+          },
+          {
+            "h3": "Interview-ready",
+            "for": "Has a job interview or campus placement coming",
+            "p": "Self-introduction, HR questions, body language, dress, email writing, mock interview on camera with playback. Personality development is in this level."
+          }
+        ]
+      }
+    },
+    "batches": {
+      "kicker": "Batch timings",
+      "h2": "Pick the time, we keep the seat.",
+      "p": "Each batch runs three days a week for one hour. Ten students is the limit. If a batch is full we tell you the next start date rather than squeezing you in.",
+      "h3": "Morning",
+      "time": "7 am · 9 am · 11 am",
+      "h32": "Evening",
+      "time2": "5 pm · 6:30 pm · 8 pm",
+      "h33": "Weekend",
+      "time3": "Sat and Sun, 8 am to 1 pm",
+      "list": {
+        "items": [
+          {
+            "li": "7 am: office-goers and job seekers"
+          },
+          {
+            "li": "9 am: college students"
+          },
+          {
+            "li": "11 am: women-only batch"
+          },
+          {
+            "li": "Mon, Wed, Fri or Tue, Thu, Sat"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "5 pm: school students, Class 8 to 12"
+          },
+          {
+            "li": "6:30 pm: mixed adult batch"
+          },
+          {
+            "li": "8 pm: working people, interview level"
+          },
+          {
+            "li": "Mon, Wed, Fri or Tue, Thu, Sat"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Two hours each day, same 3-month course"
+          },
+          {
+            "li": "Good for those who travel on weekdays"
+          },
+          {
+            "li": "Saturday mock interviews open to all levels"
+          },
+          {
+            "li": "Sunday group discussion practice"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Course fees",
+      "h2": "What a course costs, in one table.",
+      "p": "Every course is three months. Pay the full fee at the start or in three monthly parts, no extra charge. Cash or UPI, receipt given.",
+      "th": "Course",
+      "th2": "Level",
+      "th3": "Duration",
+      "th4": "Classes",
+      "th5": "Fee",
+      "list": {
+        "items": [
+          {
+            "b": "Basic Spoken English",
+            "small": "Start from zero, finish speaking in short sentences",
+            "td": "Beginner",
+            "td2": "3 months",
+            "td3": "3 days a week, 1 hour",
+            "fee": "&#8377;3,600<small>&#8377;1,200 a month</small>"
+          },
+          {
+            "b": "Spoken English, Intermediate",
+            "small": "Fix the mistakes, speak longer",
+            "td": "Intermediate",
+            "td2": "3 months",
+            "td3": "3 days a week, 1 hour",
+            "fee": "&#8377;3,900<small>&#8377;1,300 a month</small>"
+          },
+          {
+            "b": "Fluency and Conversation",
+            "small": "Group discussion, debate, pronunciation",
+            "td": "Fluent",
+            "td2": "3 months",
+            "td3": "3 days a week, 1 hour",
+            "fee": "&#8377;4,500<small>&#8377;1,500 a month</small>"
+          },
+          {
+            "b": "Personality Development and Interview Skills",
+            "small": "Mock interviews on camera, email writing, presentation",
+            "td": "Interview-ready",
+            "td2": "3 months",
+            "td3": "3 days a week, 1 hour, plus Saturday mock interview",
+            "fee": "&#8377;5,400<small>&#8377;1,800 a month</small>"
+          },
+          {
+            "b": "Weekend course",
+            "small": "Any level, Saturday and Sunday",
+            "td": "Any",
+            "td2": "3 months",
+            "td3": "2 days a week, 2 hours",
+            "fee": "&#8377;4,200<small>&#8377;1,400 a month</small>"
+          },
+          {
+            "b": "School students, Class 8 to 12",
+            "small": "Spoken English with viva and presentation practice",
+            "td": "Beginner to Intermediate",
+            "td2": "3 months",
+            "td3": "3 days a week, 1 hour",
+            "fee": "&#8377;3,000<small>&#8377;1,000 a month</small>"
+          }
+        ]
+      },
+      "fnote": {
+        "items": [
+          {
+            "li": "<b>Admission &#8377;300</b>, once. Printed workbook &#8377;250. Nothing else is charged."
+          },
+          {
+            "li": "<b>Repeat for free.</b> If you finish a level and want to sit through it again, the next three months cost nothing."
+          },
+          {
+            "li": "<b>Two from one family:</b> &#8377;300 off the second person's course fee."
+          }
+        ]
+      }
+    },
+    "class": {
+      "kicker": "Inside a class",
+      "h2": "You talk for forty minutes. The teacher talks for twenty.",
+      "p": "Most people who come to us have studied English for ten years in school and still cannot order food in it. The missing piece is not grammar. It is practice, in front of people, with someone correcting you kindly.",
+      "inside-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/teacher-whiteboard.jpg",
+              "alt": "A teacher in a turban and blazer writing on a whiteboard"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/group-practice.jpg",
+              "alt": "Three young adults laughing while holding papers in a discussion"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/spoken-english/images/chalkboard-spelling.jpg",
+              "alt": "A chalkboard with spelling lists written in neat handwriting"
+            }
+          }
+        ]
+      },
+      "check": {
+        "items": [
+          {
+            "b": "Every student speaks in every class",
+            "span": "Ten seats means ten turns. Nobody hides at the back."
+          },
+          {
+            "b": "Mistakes corrected after you finish, not during",
+            "span": "You complete your sentence. Then the teacher shows the better way. Confidence first."
+          },
+          {
+            "b": "Bengali allowed for explaining, not for answering",
+            "span": "If you do not understand a word, ask in Bengali. Reply in English, however broken."
+          },
+          {
+            "b": "Recorded on your phone once a month",
+            "span": "You hear yourself in month one and month three. The difference is the report card."
+          }
+        ]
+      },
+      "trainers": {
+        "items": [
+          {
+            "b": "Debashree Mukherjee",
+            "span": "M.A. English, 14 years teaching. Runs the women's batch and the beginner levels. Founded the centre in 2014."
+          },
+          {
+            "b": "Arnab Chakraborty",
+            "span": "Former HR executive, 9 years here. Takes the interview-ready level and every Saturday mock interview."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Our students",
+      "h2": "A few faces from the centre.",
+      "p": "Swipe on your phone to see more."
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Before you message us.",
+      "faq": {
+        "items": [
+          {
+            "summary": "I cannot speak a single sentence. Can I still join?",
+            "p": "Yes. About a third of every beginner batch starts exactly there. The first two weeks are only listening and repeating. Nobody is asked to make a speech on day one."
+          },
+          {
+            "summary": "I am 45 and a housewife. Will I be in a class with college students?",
+            "p": "No. The 11 am batch is women only and most are between 30 and 55. If that time does not suit you, tell us and we will find a mixed batch where you will be comfortable."
+          },
+          {
+            "summary": "How does the free demo class work?",
+            "p": "Message or call with your name and the time you prefer. Come and sit through one full class of the level we think fits you. At the end you decide. There is no form to fill and nobody follows up more than once."
+          },
+          {
+            "summary": "What if I miss classes?",
+            "p": "Each lesson runs in two or three batches a week, so you can attend the same lesson in another batch that week. If you travel for a month, we pause your course and you join the next batch at the same point."
+          },
+          {
+            "summary": "Do you give a certificate?",
+            "p": "Yes, a centre certificate with the level and attendance after the course. We say plainly that it is our own certificate, not a university one. Employers care about how you speak in the interview, and that is what we work on."
+          },
+          {
+            "summary": "Is there a batch for IELTS or for studying abroad?",
+            "p": "Not at present. We do spoken English and interview preparation and we do them properly. If you need IELTS coaching we will tell you honestly and suggest you look elsewhere."
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "kicker": "In their words",
+      "h2": "Two students, two reasons.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I joined the 11 am batch after fifteen years at home. In the second month I spoke to my daughter's class teacher in English for the first time. She did not know I had been practising.",
+            "span": "· Kestopur, women's batch"
+          },
+          {
+            "p": "Three interviews, three rejections, then I came here. Arnab Sir made me do my self-introduction twenty times on camera. Fourth interview, I got the job in Sector V.",
+            "span": "· Baguiati, interview-ready level"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the centre",
+      "h2": "Second floor, above the pharmacy at Baguiati crossing.",
+      "b": "Address",
+      "p": "112 VIP Road, 2nd floor, Baguiati<br>Kolkata 700059",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone",
+      "p2": "WhatsApp is answered between classes, usually within the hour.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "7:00 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "8:00 am – 1:00 pm"
+          },
+          {
+            "td": "Demo classes",
+            "td2": "Any batch, any day"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Uttaran Spoken English Centre sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=112%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Uttaran Spoken English",
+      "small": "Baguiati · since 2014",
+      "p": "Spoken English and personality development for students, housewives and job seekers. Ten to a batch, three months to a course.",
+      "h4": "Courses",
+      "h42": "Find us",
+      "li": "112 VIP Road, 2nd floor, Baguiati, Kolkata 700059",
+      "li2": "Mon–Sat 7 am – 9 pm · Sun 8 am – 1 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Levels"
+          },
+          {
+            "button": "Batch timings"
+          },
+          {
+            "button": "Course fees"
+          },
+          {
+            "button": "Common questions"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Uttaran Spoken English Centre | Spoken English and Personality Development in Baguiati",
+      "description": "Spoken English and personality development classes in Baguiati, Kolkata. Batches of 10, morning, evening and weekend timings, 3-month courses from beginner to interview-ready. First demo class is free."
+    }
+  }
+}

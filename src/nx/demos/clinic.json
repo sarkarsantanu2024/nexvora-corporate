@@ -1,0 +1,1323 @@
+{
+  "site": "clinic",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Mukherjee Clinic",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-kicker",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "textarea",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "status",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "A family doctor you can walk in to see.Dr. Sayan Mukherjee, MBBS, MD (General Medicine)",
+            "bn": "A family doctor you can walk in to see.Dr. Sayan Mukherjee, MBBS, MD (General Medicine)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctor",
+      "label": {
+        "en": "Dr. Sayan Mukherjee",
+        "bn": "Dr. Sayan Mukherjee"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "about-fig",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        },
+        {
+          "key": "quals",
+          "label": {
+            "en": "Dr. Sayan Mukherjee",
+            "bn": "Dr. Sayan Mukherjee"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Everyday illness, long-term conditions, and the check-ups in between",
+        "bn": "Everyday illness, long-term conditions, and the check-ups in between"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "svc",
+          "label": {
+            "en": "Everyday illness, long-term conditions, and the check-ups in between",
+            "bn": "Everyday illness, long-term conditions, and the check-ups in between"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timings",
+      "label": {
+        "en": "Chamber timings",
+        "bn": "Chamber timings"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-note",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-foot",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-note2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-foot2",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Weekly timings",
+            "bn": "Weekly timings"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "day",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "fees",
+          "label": {
+            "en": "Fees",
+            "bn": "Fees"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "div",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bring",
+      "label": {
+        "en": "What to bring with you",
+        "bn": "What to bring with you"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "check",
+          "label": {
+            "en": "What to bring with you",
+            "bn": "What to bring with you"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "div",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "bring-fig",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "label": {
+        "en": "No appointment. Four simple steps",
+        "bn": "No appointment. Four simple steps"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "No appointment. Four simple steps",
+            "bn": "No appointment. Four simple steps"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A small clinic, kept clean and quiet",
+        "bn": "A small clinic, kept clean and quiet"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:675"
+        },
+        {
+          "key": "figcaption4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:741"
+        },
+        {
+          "key": "figcaption5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Two notes from the chamber register",
+        "bn": "Two notes from the chamber register"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "rv",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "words",
+          "label": {
+            "en": "Two notes from the chamber register",
+            "bn": "Two notes from the chamber register"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "faq",
+          "label": {
+            "en": "Common questions",
+            "bn": "Common questions"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "a",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rashbehari Avenue, two minutes from Kalighat metro",
+        "bn": "On Rashbehari Avenue, two minutes from Kalighat metro"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "div",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "div2",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Not feeling well? Come in today",
+        "bn": "Not feeling well? Come in today"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "final-hours",
+          "type": "text",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "brand-name": "Mukherjee Clinic",
+      "brand-sub": "Dr. Sayan Mukherjee · General Physician"
+    },
+    "section-2": {
+      "hero-kicker": "Kalighat, Kolkata · Chamber since 2009",
+      "h1": "A family doctor you can walk in to see.<span class=\"sub\">Dr. Sayan Mukherjee, MBBS, MD (General Medicine)</span>",
+      "lede": "Fever, cough, sugar, pressure, stomach trouble, a child who is not eating. Most things a family needs a doctor for, in one chamber on Rashbehari Avenue. No appointment needed. Come in during chamber hours and take a token.",
+      "button": "See timings & fees",
+      "photo": {
+        "src": "/demo/clinic/images/hero.jpg",
+        "alt": "Dr. Sayan Mukherjee in a white coat with a stethoscope, arms folded"
+      },
+      "status": "Chamber hours",
+      "b": "Mon to Sat, 9 am to 1 pm and 6 pm to 9 pm",
+      "p": "Sunday morning only, 9 am to 12 noon.",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "16 yrs",
+            "span": "in practice"
+          },
+          {
+            "b": "₹400",
+            "span": "consultation fee"
+          },
+          {
+            "b": "2 shifts",
+            "span": "morning & evening"
+          }
+        ]
+      }
+    },
+    "doctor": {
+      "h2": "Dr. Sayan Mukherjee",
+      "lede": "Dr. Mukherjee finished his MBBS at Medical College Kolkata in 2006 and his MD in General Medicine from NRS Medical College in 2010. He worked in the medicine department of a government hospital for six years before opening this chamber. He speaks Bengali, Hindi and English, and he will explain your reports in whichever one you prefer.",
+      "about-fig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/clinic/images/doctor-glasses.jpg",
+              "alt": "Dr. Mukherjee looking at the camera, stethoscope around his neck"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/clinic/images/desk-stethoscope.jpg",
+              "alt": "A doctor's hand holding a stethoscope"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/clinic/images/hands-on-table.jpg",
+              "alt": "An elderly woman's hands with rings, folded as she waits her turn"
+            }
+          }
+        ]
+      },
+      "quals": {
+        "items": [
+          {
+            "b": "MBBS, 2006",
+            "span": "Medical College and Hospital, Kolkata"
+          },
+          {
+            "b": "MD (General Medicine), 2010",
+            "span": "NRS Medical College, Kolkata"
+          },
+          {
+            "b": "Six years in a government hospital",
+            "span": "Medicine department, 2010 to 2016"
+          },
+          {
+            "b": "Own chamber since 2009",
+            "span": "Evening practice first, full time from 2016"
+          }
+        ]
+      }
+    },
+    "services": {
+      "h2": "Everyday illness, long-term conditions, and the check-ups in between",
+      "lede": "If something needs a specialist, Dr. Mukherjee will say so and write a referral. He will not keep you waiting on a problem he cannot fix here.",
+      "svc": {
+        "items": [
+          {
+            "h3": "Fever, cold and infections",
+            "p": "Viral fever, dengue and malaria season, throat and chest infections, stomach upsets, typhoid follow-up."
+          },
+          {
+            "h3": "Blood pressure and heart",
+            "p": "Pressure checks, medicine adjustment, cholesterol reports, ECG in the chamber when needed."
+          },
+          {
+            "h3": "Diabetes care",
+            "p": "Sugar testing, HbA1c review, diet advice in plain words, insulin guidance for those who need it."
+          },
+          {
+            "h3": "Children and teenagers",
+            "p": "Fever, worms, poor appetite, growth worries, school health certificates. Vaccination advice."
+          },
+          {
+            "h3": "Elderly care",
+            "p": "Joint pain, weakness, memory worries, multiple medicines checked together so nothing clashes."
+          },
+          {
+            "h3": "Reports and check-ups",
+            "p": "Blood sugar and pressure done in the chamber. Full blood tests collected here by a tie-up lab, reports in two days."
+          }
+        ]
+      }
+    },
+    "timings": {
+      "h2": "Chamber timings",
+      "lede": "Tokens are given at the desk from 30 minutes before each shift. Around 20 patients are seen per shift, so come early on Mondays and after holidays.",
+      "h3": "Weekly timings",
+      "card-note": "Closed on public holidays",
+      "th": "Day",
+      "th2": "Morning",
+      "th3": "Evening",
+      "card-foot": "Thursday evening the doctor visits a hospital OPD. On Sundays the chamber closes once the morning tokens are done.",
+      "h32": "Fees",
+      "card-note2": "Cash or UPI",
+      "card-foot2": "Senior citizens above 70 pay ₹300 for a first consultation. Fees are printed at the desk and do not change by time of day.",
+      "list": {
+        "items": [
+          {
+            "day": "Monday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "6:00 pm – 9:00 pm"
+          },
+          {
+            "day": "Tuesday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "6:00 pm – 9:00 pm"
+          },
+          {
+            "day": "Wednesday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "6:00 pm – 9:00 pm"
+          },
+          {
+            "day": "Thursday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "No evening chamber"
+          },
+          {
+            "day": "Friday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "6:00 pm – 9:00 pm"
+          },
+          {
+            "day": "Saturday",
+            "td": "9:00 am – 1:00 pm",
+            "td2": "6:00 pm – 9:00 pm"
+          },
+          {
+            "day": "Sunday",
+            "td": "9:00 am – 12:00 noon",
+            "td2": "Closed"
+          }
+        ]
+      },
+      "fees": {
+        "items": [
+          {
+            "div": "First consultation<small>Includes pressure and weight check</small>",
+            "b": "₹400"
+          },
+          {
+            "div": "Follow-up within 10 days<small>Same complaint, bring the old prescription</small>",
+            "b": "₹200"
+          },
+          {
+            "div": "Report review only<small>If you were asked to get tests done</small>",
+            "b": "Free"
+          },
+          {
+            "div": "Blood sugar (fasting or PP)<small>Done in the chamber, result in 5 minutes</small>",
+            "b": "₹60"
+          },
+          {
+            "div": "ECG<small>Done in the chamber, read by the doctor</small>",
+            "b": "₹250"
+          },
+          {
+            "div": "Fitness or sick certificate<small>After consultation, on letterhead</small>",
+            "b": "₹100"
+          }
+        ]
+      }
+    },
+    "bring": {
+      "h2": "What to bring with you",
+      "lede": "Five minutes of preparation at home saves a second visit. Bring what you have; if you have none of these, come anyway.",
+      "check": {
+        "items": [
+          {
+            "div": "<b>Old prescriptions</b> from any doctor, even if the problem seems unrelated."
+          },
+          {
+            "div": "<b>Recent test reports</b>, blood tests, X-rays, USG, in the original or on your phone."
+          },
+          {
+            "div": "<b>The medicines you take now</b>, or a photo of the strips. Names matter more than you think."
+          },
+          {
+            "div": "<b>A note of your symptoms</b>: when it started, what makes it worse, any fever readings."
+          },
+          {
+            "div": "<b>For sugar tests</b>, come fasting in the morning shift. Water is fine."
+          },
+          {
+            "div": "<b>For children</b>, the vaccination card and school health form if there is one."
+          }
+        ]
+      },
+      "bring-fig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/clinic/images/consult-blood-pressure.jpg",
+              "alt": "A doctor checks a patient's blood pressure at the chamber desk"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/clinic/images/pulse-oximeter.jpg",
+              "alt": "An elderly patient's hands resting on her sari"
+            }
+          }
+        ]
+      }
+    },
+    "section-7": {
+      "h2": "No appointment. Four simple steps.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Take a token",
+            "p": "Come in during chamber hours. Tell the desk your name and the problem in one line. You get a number."
+          },
+          {
+            "h3": "Pressure and weight",
+            "p": "The assistant notes your blood pressure, weight and temperature while you wait. This is included in the fee."
+          },
+          {
+            "h3": "See the doctor",
+            "p": "Usually 10 to 15 minutes. He examines, reads your reports, and explains what he thinks is going on."
+          },
+          {
+            "h3": "Prescription and next step",
+            "p": "A written prescription with generic names where possible, and a clear note on when to come back, if at all."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "h2": "A small clinic, kept clean and quiet",
+      "photo": {
+        "src": "/demo/clinic/images/doctor-seated.jpg",
+        "alt": "Dr. Mukherjee standing with arms folded in the consultation room"
+      },
+      "figcaption": "Consultation room",
+      "photo2": {
+        "src": "/demo/clinic/images/waiting-room.jpg",
+        "alt": "A doctor listens to a patient's chest with a stethoscope across the desk"
+      },
+      "figcaption2": "At the chamber desk",
+      "photo3": {
+        "src": "/demo/clinic/images/reception-desk.jpg",
+        "alt": "A doctor examines a patient lying on the examination bed"
+      },
+      "figcaption3": "Examination room",
+      "photo4": {
+        "src": "/demo/clinic/images/otoscope-boy.jpg",
+        "alt": "A boy having his ear checked with an otoscope"
+      },
+      "figcaption4": "Child check-up",
+      "photo5": {
+        "src": "/demo/clinic/images/child-temperature.jpg",
+        "alt": "A young boy rests his head on a pillow at the clinic, waiting to be seen"
+      },
+      "figcaption5": "Fever season"
+    },
+    "faq": {
+      "h2": "Two notes from the chamber register",
+      "rv": "Common questions",
+      "words": {
+        "items": [
+          {
+            "p": "“My father has been his patient for ten years. He remembers which medicines Baba cannot take without looking at the file.”",
+            "span": "· Kalighat"
+          },
+          {
+            "p": "“He told me plainly that my sugar was high and what to stop eating. No lecture, just a list. It worked.”",
+            "span": "· Hazra Road"
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "summary": "Do I need an appointment?",
+            "a": "No. Walk in during chamber hours and take a token at the desk. If you are coming from far, send a WhatsApp message first and the desk will tell you how long the queue is."
+          },
+          {
+            "summary": "Does the doctor do home visits?",
+            "a": "Only for bed-ridden patients already under his care, within Kalighat, Bhowanipore and Hazra, and only after the evening chamber. The fee is ₹1,200. Call the desk to arrange it."
+          },
+          {
+            "summary": "Can I show reports on WhatsApp?",
+            "a": "You can send them so they are ready when you come, but the doctor will not advise on WhatsApp alone. A short visit is needed to examine you."
+          },
+          {
+            "summary": "Is there a lift or ramp?",
+            "a": "The chamber is on the ground floor with one small step at the entrance. A folding ramp is kept at the desk for wheelchairs."
+          },
+          {
+            "summary": "Which languages does the doctor speak?",
+            "a": "Bengali, Hindi and English. Prescriptions are written in English with the dose explained in your language."
+          },
+          {
+            "summary": "Is a pharmacy nearby?",
+            "a": "There are three medicine shops within 200 metres on Rashbehari Avenue. The chamber does not sell medicines and has no tie-up with any shop."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "h2": "On Rashbehari Avenue, two minutes from Kalighat metro",
+      "div": "<b>Address</b>18B Rashbehari Avenue, Kalighat<br>Kolkata 700026, West Bengal<br><span style=\"color:var(--muted);font-size:.9rem\">Ground floor, next to the blue post box. Gate 2 of Kalighat metro is 150 metres away.</span>",
+      "div2": "<b>Chamber hours</b>Mon to Sat: 9 am – 1 pm, 6 pm – 9 pm<br>Thursday: morning only<br>Sunday: 9 am – 12 noon",
+      "b": "Phone and WhatsApp",
+      "button": "Get directions"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Mukherjee Clinic sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=18B%20Rashbehari%20Avenue%2C%20Kalighat%2C%20Kolkata%20700026",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Mukherjee Clinic",
+      "brand-sub": "Dr. Sayan Mukherjee · MBBS, MD",
+      "p": "General physician chamber in Kalighat. Walk in, take a token, get seen.",
+      "h4": "Chamber"
+    },
+    "seo": {
+      "title": "Mukherjee Clinic | Dr. Sayan Mukherjee, General Physician, Kalighat",
+      "description": "General physician chamber in Kalighat, Kolkata. Fever, diabetes, blood pressure, child and elderly care. Morning and evening timings, fixed fees, no appointment needed."
+    }
+  }
+}

@@ -277,6 +277,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(251,247,236,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:760px){
+  .masonry .cap small,.footer .brand small{font-size:.76rem}
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
+@media (max-width:480px){
+  .masonry{grid-template-columns:1fr;grid-auto-rows:230px}
+  .masonry li.tall,.masonry li.wide{grid-column:span 1;grid-row:span 1}
+  .masonry .bar{flex-wrap:wrap}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -309,24 +320,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="jewellery">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Swarnalata Jewellers, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#0F3D2E"/><path d="M22 7l4.5 8.5L36 17l-6.5 6.5L31 33l-9-4.5L13 33l1.5-9.5L8 17l9.5-1.5Z" fill="#C9A227"/><circle cx="22" cy="21" r="4" fill="#0F3D2E"/><circle cx="22" cy="21" r="1.8" fill="#FBF7EC"/></svg>
-      <span><b>Swarnalata Jewellers</b><small>Gariahat &middot; since 1984</small></span>
+      <span><b data-nx="header.b">Swarnalata Jewellers</b><small data-nx="header.small">Gariahat &middot; since 1984</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -351,25 +360,25 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 <main id="main">
 <!-- 1. hero -->
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="hero__bg" aria-hidden="true">
-    <img src="/demo/jewellery/images/hero.jpg" width="1200" height="1594" alt="" fetchpriority="high">
+    <img data-nx="top.photo" src="/demo/jewellery/images/hero.jpg" width="1200" height="1594" alt="" fetchpriority="high">
   </div>
   <div class="wrap">
-    <p class="hero__since"><span></span>BIS hallmarked &middot; Gariahat since 1984</p>
-    <h1>Gold you can weigh, <em>check and trust.</em></h1>
-    <p>Every piece in our shop is 22K or 18K BIS hallmarked, weighed in front of you, and billed with the rate, the making charge and the GST written out on one line each. Bridal sets, everyday gold, silver for puja and gifts.</p>
+    <p data-nx="top.hero-since" class="hero__since"><span></span>BIS hallmarked &middot; Gariahat since 1984</p>
+    <h1 data-nx="top.h1">Gold you can weigh, <em>check and trust.</em></h1>
+    <p data-nx="top.p">Every piece in our shop is 22K or 18K BIS hallmarked, weighed in front of you, and billed with the rate, the making charge and the GST written out on one line each. Bridal sets, everyday gold, silver for puja and gifts.</p>
     <div class="hero__cta">
       <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
         Ask today&rsquo;s gold rate
       </a>
-      <a class="btn btn--ghost-light" href="#collections">See the collections</a>
+      <a data-nx="top.button" class="btn btn--ghost-light" href="#collections">See the collections</a>
     </div>
-    <ul class="hero__facts">
-      <li><b>1984</b><span>Same family, same counter</span></li>
-      <li><b>100%</b><span>BIS hallmarked gold</span></li>
-      <li><b>11 + 1</b><span>Months savings scheme</span></li>
+    <ul data-nx-list="top.hero-facts" class="hero__facts">
+      <li data-nx-item><b data-nx-f="b">1984</b><span data-nx-f="span">Same family, same counter</span></li>
+      <li data-nx-item><b data-nx-f="b">100%</b><span data-nx-f="span">BIS hallmarked gold</span></li>
+      <li data-nx-item><b data-nx-f="b">11 + 1</b><span data-nx-f="span">Months savings scheme</span></li>
     </ul>
   </div>
 </section>
@@ -384,73 +393,73 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </div>
 
 <!-- 2. collections masonry -->
-<section class="section" id="collections">
+<section data-nx-section="collections" class="section" id="collections">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Collections by occasion</span>
-      <h2 class="h2">Gold and silver for every occasion in the family.</h2>
-      <p class="lead" style="margin:1rem auto 0">Starting prices are for the lightest piece in each group at a 22K rate of &#8377;9,800 per gram, including making charge and GST. The final price changes with the day&rsquo;s rate and the weight you pick.</p>
+      <span data-nx="collections.kicker" class="kicker">Collections by occasion</span>
+      <h2 data-nx="collections.h2" class="h2">Gold and silver for every occasion in the family.</h2>
+      <p data-nx="collections.p" class="lead" style="margin:1rem auto 0">Starting prices are for the lightest piece in each group at a 22K rate of &#8377;9,800 per gram, including making charge and GST. The final price changes with the day&rsquo;s rate and the weight you pick.</p>
       <div class="rule"></div>
     </div>
     <ul class="masonry reveal">
-      <li class="tall"><img src="/demo/jewellery/images/bridal-set.jpg" width="1200" height="1500" alt="A heavy gold bridal set with two long necklaces, a choker and jhumkas on a display bust" loading="lazy"><div class="cap"><small>Wedding</small><h3>Bridal sets</h3><p>Sita haar, choker, kaan, tikli, mantasha and chur made as one matched set. Order 6 to 8 weeks before the wedding.</p><div class="bar"><span>About 40 g</span><b>From &#8377;4,50,000</b></div></div></li>
-      <li><img src="/demo/jewellery/images/jhumka.jpg" width="1200" height="1800" alt="A gold jhumka earring with pearl drops on a woman's ear" loading="lazy"><div class="cap"><small>Pujo</small><h3>Earrings and jhumka</h3><p>Studs from 1.5 g, jhumkas from 4 g, in 22K and lighter 18K.</p><div class="bar"><span>Studs 1.5 g</span><b>From &#8377;16,500</b></div></div></li>
-      <li><img src="/demo/jewellery/images/pendant-saree.jpg" width="1200" height="1920" alt="A gold pendant with a red stone on a thin chain, worn with a yellow saree" loading="lazy"><div class="cap"><small>Everyday</small><h3>Chains and pendants</h3><p>Chains from 3 g for daily wear, with a weight slip.</p><div class="bar"><span>3 g chain</span><b>From &#8377;33,000</b></div></div></li>
-      <li class="wide"><img src="/demo/jewellery/images/bangles-display.jpg" width="1200" height="802" alt="Four carved gold bangles with stone work stacked on a dark cloth" loading="lazy"><div class="cap"><small>Wedding &middot; Gift</small><h3>Bangles and chur</h3><p>Plain, carved and stone-set, sold as pairs. We make shankha-pola with gold caps for brides.</p><div class="bar"><span>8 g pair</span><b>From &#8377;88,000</b></div></div></li>
-      <li class="tall"><img src="/demo/jewellery/images/kundan-set.jpg" width="1200" height="1600" alt="A kundan necklace set with matching earrings and maang tikka on white cloth" loading="lazy"><div class="cap"><small>Reception</small><h3>Kundan and polki sets</h3><p>Lighter sets for the reception and bou bhaat. Gold base with set stones, so the weight stays lower than a plain gold set.</p><div class="bar"><span>Gold base</span><b>From &#8377;1,65,000</b></div></div></li>
-      <li><img src="/demo/jewellery/images/chandelier-earrings.jpg" width="1200" height="1800" alt="Gold chandelier earrings with green stones and pearls on a display stand" loading="lazy"><div class="cap"><small>Occasion</small><h3>Stone-set gold</h3><p>Emerald, ruby and pearl in 22K. Stone weight written on the bill.</p><div class="bar"><span>Stones billed apart</span><b>From &#8377;42,000</b></div></div></li>
-      <li><img src="/demo/jewellery/images/mehendi-bracelets.jpg" width="1200" height="798" alt="A bride's hand with mehendi wearing gold bangles and two rings" loading="lazy"><div class="cap"><small>Annaprashan &middot; Gift</small><h3>Rings and baby gold</h3><p>Rings from 2 g. Baby bangles, a tiny chain, or a coin of 1 g, 2 g or 5 g in a gift box.</p><div class="bar"><span>1 g coin</span><b>From &#8377;10,900</b></div></div></li>
-      <li class="wide"><img src="/demo/jewellery/images/anklet.jpg" width="1200" height="1800" alt="A silver anklet with coloured stones on a foot painted with alta" loading="lazy"><div class="cap"><small>Silver</small><h3>Silver: payel, puja and gifts</h3><p>Payel and toe rings, silver pradeep, kosha-kushi, Lakshmi feet, baby bowls and spoons. All 92.5 silver, sold by weight.</p><div class="bar"><span>Payel, per pair</span><b>From &#8377;2,800</b></div></div></li>
+      <li class="tall"><img data-nx="collections.photo" src="/demo/jewellery/images/bridal-set.jpg" width="1200" height="1500" alt="A heavy gold bridal set with two long necklaces, a choker and jhumkas on a display bust" loading="lazy"><div class="cap"><small data-nx="collections.small">Wedding</small><h3 data-nx="collections.h3">Bridal sets</h3><p data-nx="collections.p2">Sita haar, choker, kaan, tikli, mantasha and chur made as one matched set. Order 6 to 8 weeks before the wedding.</p><div class="bar"><span data-nx="collections.span">About 40 g</span><b data-nx="collections.b">From &#8377;4,50,000</b></div></div></li>
+      <li><img data-nx="collections.photo2" src="/demo/jewellery/images/jhumka.jpg" width="1200" height="1800" alt="A gold jhumka earring with pearl drops on a woman's ear" loading="lazy"><div class="cap"><small data-nx="collections.small2">Pujo</small><h3 data-nx="collections.h32">Earrings and jhumka</h3><p data-nx="collections.p3">Studs from 1.5 g, jhumkas from 4 g, in 22K and lighter 18K.</p><div class="bar"><span data-nx="collections.span2">Studs 1.5 g</span><b data-nx="collections.b2">From &#8377;16,500</b></div></div></li>
+      <li><img data-nx="collections.photo3" src="/demo/jewellery/images/pendant-saree.jpg" width="1200" height="1920" alt="A gold pendant with a red stone on a thin chain, worn with a yellow saree" loading="lazy"><div class="cap"><small data-nx="collections.small3">Everyday</small><h3 data-nx="collections.h33">Chains and pendants</h3><p data-nx="collections.p4">Chains from 3 g for daily wear, with a weight slip.</p><div class="bar"><span data-nx="collections.span3">3 g chain</span><b data-nx="collections.b3">From &#8377;33,000</b></div></div></li>
+      <li class="wide"><img data-nx="collections.photo4" src="/demo/jewellery/images/bangles-display.jpg" width="1200" height="802" alt="Four carved gold bangles with stone work stacked on a dark cloth" loading="lazy"><div class="cap"><small data-nx="collections.small4">Wedding &middot; Gift</small><h3 data-nx="collections.h34">Bangles and chur</h3><p data-nx="collections.p5">Plain, carved and stone-set, sold as pairs. We make shankha-pola with gold caps for brides.</p><div class="bar"><span data-nx="collections.span4">8 g pair</span><b data-nx="collections.b4">From &#8377;88,000</b></div></div></li>
+      <li class="tall"><img data-nx="collections.photo5" src="/demo/jewellery/images/kundan-set.jpg" width="1200" height="1600" alt="A kundan necklace set with matching earrings and maang tikka on white cloth" loading="lazy"><div class="cap"><small data-nx="collections.small5">Reception</small><h3 data-nx="collections.h35">Kundan and polki sets</h3><p data-nx="collections.p6">Lighter sets for the reception and bou bhaat. Gold base with set stones, so the weight stays lower than a plain gold set.</p><div class="bar"><span data-nx="collections.span5">Gold base</span><b data-nx="collections.b5">From &#8377;1,65,000</b></div></div></li>
+      <li><img data-nx="collections.photo6" src="/demo/jewellery/images/chandelier-earrings.jpg" width="1200" height="1800" alt="Gold chandelier earrings with green stones and pearls on a display stand" loading="lazy"><div class="cap"><small data-nx="collections.small6">Occasion</small><h3 data-nx="collections.h36">Stone-set gold</h3><p data-nx="collections.p7">Emerald, ruby and pearl in 22K. Stone weight written on the bill.</p><div class="bar"><span data-nx="collections.span6">Stones billed apart</span><b data-nx="collections.b6">From &#8377;42,000</b></div></div></li>
+      <li><img data-nx="collections.photo7" src="/demo/jewellery/images/mehendi-bracelets.jpg" width="1200" height="798" alt="A bride's hand with mehendi wearing gold bangles and two rings" loading="lazy"><div class="cap"><small data-nx="collections.small7">Annaprashan &middot; Gift</small><h3 data-nx="collections.h37">Rings and baby gold</h3><p data-nx="collections.p8">Rings from 2 g. Baby bangles, a tiny chain, or a coin of 1 g, 2 g or 5 g in a gift box.</p><div class="bar"><span data-nx="collections.span7">1 g coin</span><b data-nx="collections.b7">From &#8377;10,900</b></div></div></li>
+      <li class="wide"><img data-nx="collections.photo8" src="/demo/jewellery/images/anklet.jpg" width="1200" height="1800" alt="A silver anklet with coloured stones on a foot painted with alta" loading="lazy"><div class="cap"><small data-nx="collections.small8">Silver</small><h3 data-nx="collections.h38">Silver: payel, puja and gifts</h3><p data-nx="collections.p9">Payel and toe rings, silver pradeep, kosha-kushi, Lakshmi feet, baby bowls and spoons. All 92.5 silver, sold by weight.</p><div class="bar"><span data-nx="collections.span8">Payel, per pair</span><b data-nx="collections.b8">From &#8377;2,800</b></div></div></li>
     </ul>
   </div>
 </section>
 
 <!-- 3. charges + hallmark, sticky bill -->
-<section class="section section--deep" id="charges">
+<section data-nx-section="charges" class="section section--deep" id="charges">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Making charges and hallmark</span>
-      <h2 class="h2">What you pay for, and how you know the gold is real.</h2>
+      <span data-nx="charges.kicker" class="kicker">Making charges and hallmark</span>
+      <h2 data-nx="charges.h2" class="h2">What you pay for, and how you know the gold is real.</h2>
       <div class="rule"></div>
     </div>
     <div class="explain">
       <div class="prose reveal" id="hallmark">
-        <h3><span class="n">Bill</span>Four lines, nothing else</h3>
-        <p>A gold bill has only four parts: the weight of gold, the day&rsquo;s rate, the making charge for the work, and 3% GST. Wastage is not charged separately. The making charge is the whole labour cost. GST of 3% is added on the total of gold value plus making charge. If you bring old gold, its value comes off before GST is worked out.</p>
-        <h3><span class="n">Making</span>How we charge for the work</h3>
-        <p>Simple work costs less, fine work costs more. The charge is fixed before we start and is written on the estimate you take home.</p>
+        <h3 data-nx="charges.h3"><span class="n">Bill</span>Four lines, nothing else</h3>
+        <p data-nx="charges.p">A gold bill has only four parts: the weight of gold, the day&rsquo;s rate, the making charge for the work, and 3% GST. Wastage is not charged separately. The making charge is the whole labour cost. GST of 3% is added on the total of gold value plus making charge. If you bring old gold, its value comes off before GST is worked out.</p>
+        <h3 data-nx="charges.h32"><span class="n">Making</span>How we charge for the work</h3>
+        <p data-nx="charges.p2">Simple work costs less, fine work costs more. The charge is fixed before we start and is written on the estimate you take home.</p>
         <dl class="rates">
-          <dt>Machine-made chains, per gram of gold</dt><dd>&#8377;350 / g</dd>
-          <dt>Plain bangles, rings, studs</dt><dd>8%</dd>
-          <dt>Carved and filigree work (jhumka, kaan, pendants)</dt><dd>12% to 14%</dd>
-          <dt>Stone-set and kundan, stone weight billed separately</dt><dd>16% to 18%</dd>
-          <dt>Bridal sets made to order, fixed after the design is agreed</dt><dd>14% to 20%</dd>
-          <dt>Silver items, on the silver value</dt><dd>15% to 25%</dd>
-          <dt>Gold coins of 1 g, 2 g, 5 g and 10 g</dt><dd>&#8377;300 to &#8377;600</dd>
+          <dt data-nx="charges.dt">Machine-made chains, per gram of gold</dt><dd data-nx="charges.dd">&#8377;350 / g</dd>
+          <dt data-nx="charges.dt2">Plain bangles, rings, studs</dt><dd data-nx="charges.dd2">8%</dd>
+          <dt data-nx="charges.dt3">Carved and filigree work (jhumka, kaan, pendants)</dt><dd data-nx="charges.dd3">12% to 14%</dd>
+          <dt data-nx="charges.dt4">Stone-set and kundan, stone weight billed separately</dt><dd data-nx="charges.dd4">16% to 18%</dd>
+          <dt data-nx="charges.dt5">Bridal sets made to order, fixed after the design is agreed</dt><dd data-nx="charges.dd5">14% to 20%</dd>
+          <dt data-nx="charges.dt6">Silver items, on the silver value</dt><dd data-nx="charges.dd6">15% to 25%</dd>
+          <dt data-nx="charges.dt7">Gold coins of 1 g, 2 g, 5 g and 10 g</dt><dd data-nx="charges.dd7">&#8377;300 to &#8377;600</dd>
         </dl>
-        <h3><span class="n">916</span>22K gold is stamped 916</h3>
-        <p>91.6% pure. This is what most Bengali ornaments are made in: bangles, haar, kaan, chur. Soft enough for fine carving, which is why the old designs are all in 22K.</p>
-        <h3><span class="n">750</span>18K gold is stamped 750</h3>
-        <p>75% pure, harder, better for stone setting and thin everyday chains. Priced lower per gram. A good choice for a daily-wear chain that will not bend.</p>
-        <h3><span class="n">925</span>Silver is 92.5</h3>
-        <p>Sterling silver for payel, puja items and gifts. Hallmarked where the piece is large enough to take a stamp.</p>
-        <h3><span class="n">HUID</span>A 6-digit code on every piece</h3>
-        <p>Since 2023 every gold ornament sold in India must carry a BIS hallmark with a unique 6-digit HUID. Ours do. Type the number into the BIS Care app at the counter and see the purity record before you pay. We will show you where the stamp is with a loupe.</p>
-        <h3><span class="n">XRF</span>Free purity check on any gold</h3>
-        <p>Our XRF machine reads purity in two minutes without scratching the piece. Bring gold from anywhere, bought from anyone, and we will test it for no charge and tell you the real karat.</p>
+        <h3 data-nx="charges.h33"><span class="n">916</span>22K gold is stamped 916</h3>
+        <p data-nx="charges.p3">91.6% pure. This is what most Bengali ornaments are made in: bangles, haar, kaan, chur. Soft enough for fine carving, which is why the old designs are all in 22K.</p>
+        <h3 data-nx="charges.h34"><span class="n">750</span>18K gold is stamped 750</h3>
+        <p data-nx="charges.p4">75% pure, harder, better for stone setting and thin everyday chains. Priced lower per gram. A good choice for a daily-wear chain that will not bend.</p>
+        <h3 data-nx="charges.h35"><span class="n">925</span>Silver is 92.5</h3>
+        <p data-nx="charges.p5">Sterling silver for payel, puja items and gifts. Hallmarked where the piece is large enough to take a stamp.</p>
+        <h3 data-nx="charges.h36"><span class="n">HUID</span>A 6-digit code on every piece</h3>
+        <p data-nx="charges.p6">Since 2023 every gold ornament sold in India must carry a BIS hallmark with a unique 6-digit HUID. Ours do. Type the number into the BIS Care app at the counter and see the purity record before you pay. We will show you where the stamp is with a loupe.</p>
+        <h3 data-nx="charges.h37"><span class="n">XRF</span>Free purity check on any gold</h3>
+        <p data-nx="charges.p7">Our XRF machine reads purity in two minutes without scratching the piece. Bring gold from anywhere, bought from anyone, and we will test it for no charge and tell you the real karat.</p>
       </div>
       <div class="sticky reveal">
         <div class="card">
-          <h3>Example bill: one carved bangle</h3>
+          <h3 data-nx="charges.h38">Example bill: one carved bangle</h3>
           <table class="bill">
-            <tr><td>Net gold weight <small>Weighed in front of you</small></td><td>10.000 g</td></tr>
-            <tr><td>22K rate on the day <small>Example rate for this bill</small></td><td>&#8377;9,800 / g</td></tr>
-            <tr><td>Gold value <small>10 g &times; &#8377;9,800</small></td><td>&#8377;98,000</td></tr>
-            <tr><td>Making charge <small>12% carved work</small></td><td>&#8377;11,760</td></tr>
-            <tr><td>GST <small>3% on &#8377;1,09,760</small></td><td>&#8377;3,293</td></tr>
-            <tr class="total"><td>You pay</td><td>&#8377;1,13,053</td></tr>
+            <tr><td data-nx="charges.td">Net gold weight <small>Weighed in front of you</small></td><td data-nx="charges.td2">10.000 g</td></tr>
+            <tr><td data-nx="charges.td3">22K rate on the day <small>Example rate for this bill</small></td><td data-nx="charges.td4">&#8377;9,800 / g</td></tr>
+            <tr><td data-nx="charges.td5">Gold value <small>10 g &times; &#8377;9,800</small></td><td data-nx="charges.td6">&#8377;98,000</td></tr>
+            <tr><td data-nx="charges.td7">Making charge <small>12% carved work</small></td><td data-nx="charges.td8">&#8377;11,760</td></tr>
+            <tr><td data-nx="charges.td9">GST <small>3% on &#8377;1,09,760</small></td><td data-nx="charges.td10">&#8377;3,293</td></tr>
+            <tr class="total"><td data-nx="charges.td11">You pay</td><td data-nx="charges.td12">&#8377;1,13,053</td></tr>
           </table>
-          <p class="note">Card EMI of 3, 6 or 9 months is available on bills above &#8377;25,000. Payments above &#8377;2 lakh need a PAN card by law.</p>
+          <p data-nx="charges.note" class="note">Card EMI of 3, 6 or 9 months is available on bills above &#8377;25,000. Payments above &#8377;2 lakh need a PAN card by law.</p>
           <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" style="margin-top:1.2rem;width:100%">Ask for an estimate</a>
         </div>
       </div>
@@ -459,55 +468,55 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 
 <!-- 4. exchange steps -->
-<section class="section section--green" id="exchange">
+<section data-nx-section="exchange" class="section section--green" id="exchange">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Old gold exchange</span>
-      <h2 class="h2">Four steps, all of them in front of you.</h2>
+      <span data-nx="exchange.kicker" class="kicker">Old gold exchange</span>
+      <h2 data-nx="exchange.h2" class="h2">Four steps, all of them in front of you.</h2>
       <div class="rule"></div>
     </div>
-    <ol class="flow reveal">
-      <li><h3>We weigh it</h3><p>On a digital scale that is checked every month. You see the number on the display, not on a slip.</p></li>
-      <li><h3>We test the purity</h3><p>On the XRF machine, not on a touchstone. Old 22K often reads 21K; you get the real value, not a guess.</p></li>
-      <li><h3>Stones and lac come off</h3><p>By weight only. Nothing else is deducted on gold bought from us. On gold from other shops, 2% to 4% for melting loss.</p></li>
-      <li><h3>The value goes on your bill</h3><p>At the day&rsquo;s rate, before GST. Or take it as cash if the gold was bought here with a bill.</p></li>
+    <ol data-nx-list="exchange.flow" class="flow reveal">
+      <li data-nx-item><h3 data-nx-f="h3">We weigh it</h3><p data-nx-f="p">On a digital scale that is checked every month. You see the number on the display, not on a slip.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">We test the purity</h3><p data-nx-f="p">On the XRF machine, not on a touchstone. Old 22K often reads 21K; you get the real value, not a guess.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Stones and lac come off</h3><p data-nx-f="p">By weight only. Nothing else is deducted on gold bought from us. On gold from other shops, 2% to 4% for melting loss.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">The value goes on your bill</h3><p data-nx-f="p">At the day&rsquo;s rate, before GST. Or take it as cash if the gold was bought here with a bill.</p></li>
     </ol>
-    <div class="exchange__photo reveal">
-      <img src="/demo/jewellery/images/mehndi-bangles.jpg" width="1200" height="800" alt="Old carved gold bangles on a bride's hands with mehndi" loading="lazy">
-      <img src="/demo/jewellery/images/ornate-display.jpg" width="1200" height="802" alt="A gold pendant with red and green stones next to beaded bangles on a brown cloth" loading="lazy">
+    <div data-nx-list="exchange.exchange-photo" class="exchange__photo reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/jewellery/images/mehndi-bangles.jpg" width="1200" height="800" alt="Old carved gold bangles on a bride's hands with mehndi" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/jewellery/images/ornate-display.jpg" width="1200" height="802" alt="A gold pendant with red and green stones next to beaded bangles on a brown cloth" loading="lazy">
     </div>
   </div>
 </section>
 
 <!-- 5. savings scheme table -->
-<section class="section" id="scheme">
+<section data-nx-section="scheme" class="section" id="scheme">
   <div class="wrap">
     <div class="scheme-wrap">
       <div class="reveal">
-        <span class="kicker">Swarna Sanchay savings scheme</span>
-        <h2 class="h2">Pay 11 months. We pay the 12th.</h2>
+        <span data-nx="scheme.kicker" class="kicker">Swarna Sanchay savings scheme</span>
+        <h2 data-nx="scheme.h2" class="h2">Pay 11 months. We pay the 12th.</h2>
         <div class="rule"></div>
-        <p class="lead" style="margin-top:1.2rem">Choose a monthly amount from &#8377;2,000 to &#8377;25,000. Pay it for 11 months at the counter or by UPI. In the 12th month we add one full instalment from our side. Use the total on any gold jewellery in the shop at that day&rsquo;s rate.</p>
-        <p style="margin-top:1rem;color:var(--muted)">The shop&rsquo;s share is given as a discount on jewellery, not as cash. If you stop early, you get back what you paid, in jewellery, with making charge. A passbook is given on the first payment, and a WhatsApp message on every one after that.</p>
+        <p data-nx="scheme.p" class="lead" style="margin-top:1.2rem">Choose a monthly amount from &#8377;2,000 to &#8377;25,000. Pay it for 11 months at the counter or by UPI. In the 12th month we add one full instalment from our side. Use the total on any gold jewellery in the shop at that day&rsquo;s rate.</p>
+        <p data-nx="scheme.p2" style="margin-top:1rem;color:var(--muted)">The shop&rsquo;s share is given as a discount on jewellery, not as cash. If you stop early, you get back what you paid, in jewellery, with making charge. A passbook is given on the first payment, and a WhatsApp message on every one after that.</p>
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener" style="margin-top:1.6rem">Open a savings account</a>
       </div>
       <table class="scheme reveal">
-        <caption>Example at &#8377;5,000 a month. The same table works for any amount from &#8377;2,000 to &#8377;25,000.</caption>
-        <thead><tr><th>Month</th><th>You pay</th><th>Saved so far</th></tr></thead>
+        <caption data-nx="scheme.caption">Example at &#8377;5,000 a month. The same table works for any amount from &#8377;2,000 to &#8377;25,000.</caption>
+        <thead><tr><th data-nx="scheme.th">Month</th><th data-nx="scheme.th2">You pay</th><th data-nx="scheme.th3">Saved so far</th></tr></thead>
         <tbody>
-          <tr><td>Month 1</td><td>&#8377;5,000</td><td>&#8377;5,000</td></tr>
-          <tr><td>Month 2</td><td>&#8377;5,000</td><td>&#8377;10,000</td></tr>
-          <tr><td>Month 3</td><td>&#8377;5,000</td><td>&#8377;15,000</td></tr>
-          <tr><td>Month 4</td><td>&#8377;5,000</td><td>&#8377;20,000</td></tr>
-          <tr><td>Month 5</td><td>&#8377;5,000</td><td>&#8377;25,000</td></tr>
-          <tr><td>Month 6</td><td>&#8377;5,000</td><td>&#8377;30,000</td></tr>
-          <tr><td>Month 7</td><td>&#8377;5,000</td><td>&#8377;35,000</td></tr>
-          <tr><td>Month 8</td><td>&#8377;5,000</td><td>&#8377;40,000</td></tr>
-          <tr><td>Month 9</td><td>&#8377;5,000</td><td>&#8377;45,000</td></tr>
-          <tr><td>Month 10</td><td>&#8377;5,000</td><td>&#8377;50,000</td></tr>
-          <tr><td>Month 11</td><td>&#8377;5,000</td><td>&#8377;55,000</td></tr>
-          <tr class="shop"><td>Month 12: the shop pays</td><td>&#8377;5,000</td><td>&#8377;60,000</td></tr>
-          <tr class="sum"><td>You can spend</td><td></td><td>&#8377;60,000</td></tr>
+          <tr><td data-nx="scheme.td">Month 1</td><td data-nx="scheme.td2">&#8377;5,000</td><td data-nx="scheme.td3">&#8377;5,000</td></tr>
+          <tr><td data-nx="scheme.td4">Month 2</td><td data-nx="scheme.td5">&#8377;5,000</td><td data-nx="scheme.td6">&#8377;10,000</td></tr>
+          <tr><td data-nx="scheme.td7">Month 3</td><td data-nx="scheme.td8">&#8377;5,000</td><td data-nx="scheme.td9">&#8377;15,000</td></tr>
+          <tr><td data-nx="scheme.td10">Month 4</td><td data-nx="scheme.td11">&#8377;5,000</td><td data-nx="scheme.td12">&#8377;20,000</td></tr>
+          <tr><td data-nx="scheme.td13">Month 5</td><td data-nx="scheme.td14">&#8377;5,000</td><td data-nx="scheme.td15">&#8377;25,000</td></tr>
+          <tr><td data-nx="scheme.td16">Month 6</td><td data-nx="scheme.td17">&#8377;5,000</td><td data-nx="scheme.td18">&#8377;30,000</td></tr>
+          <tr><td data-nx="scheme.td19">Month 7</td><td data-nx="scheme.td20">&#8377;5,000</td><td data-nx="scheme.td21">&#8377;35,000</td></tr>
+          <tr><td data-nx="scheme.td22">Month 8</td><td data-nx="scheme.td23">&#8377;5,000</td><td data-nx="scheme.td24">&#8377;40,000</td></tr>
+          <tr><td data-nx="scheme.td25">Month 9</td><td data-nx="scheme.td26">&#8377;5,000</td><td data-nx="scheme.td27">&#8377;45,000</td></tr>
+          <tr><td data-nx="scheme.td28">Month 10</td><td data-nx="scheme.td29">&#8377;5,000</td><td data-nx="scheme.td30">&#8377;50,000</td></tr>
+          <tr><td data-nx="scheme.td31">Month 11</td><td data-nx="scheme.td32">&#8377;5,000</td><td data-nx="scheme.td33">&#8377;55,000</td></tr>
+          <tr class="shop"><td data-nx="scheme.td34">Month 12: the shop pays</td><td data-nx="scheme.td35">&#8377;5,000</td><td data-nx="scheme.td36">&#8377;60,000</td></tr>
+          <tr class="sum"><td data-nx="scheme.td37">You can spend</td><td></td><td data-nx="scheme.td38">&#8377;60,000</td></tr>
         </tbody>
       </table>
     </div>
@@ -515,101 +524,101 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 
 <!-- 6. story -->
-<section class="section section--deep" id="story">
+<section data-nx-section="story" class="section section--deep" id="story">
   <div class="wrap">
     <div class="story">
       <div class="reveal">
-        <span class="kicker">Our shop</span>
-        <h2 class="h2">Forty years on Rash Behari Avenue.</h2>
+        <span data-nx="story.kicker" class="kicker">Our shop</span>
+        <h2 data-nx="story.h2" class="h2">Forty years on Rash Behari Avenue.</h2>
         <div class="rule"></div>
-        <p class="lead" style="margin-top:1.2rem">Swarnalata Jewellers was opened in 1984 by Nirmal Chandra Dutta, a goldsmith from Sinthee who had made ornaments for other shops for twenty years before he put his own name on a board. His son and daughter-in-law run the shop today. Four of our karigars have been with us for more than fifteen years.</p>
-        <p>We are a small shop and we like it that way. You sit, you are shown pieces one at a time, and nobody hurries you. Every price is worked out on paper in front of you: weight, rate, making charge, GST. If you want to come back the next day with your mother, the piece will be kept aside.</p>
-        <ul class="story__facts">
-          <li><b>40+</b><span>Years in Gariahat</span></li>
-          <li><b>6</b><span>Karigars in our own workshop</span></li>
-          <li><b>0</b><span>Hidden charges on the bill</span></li>
+        <p data-nx="story.p" class="lead" style="margin-top:1.2rem">Swarnalata Jewellers was opened in 1984 by Nirmal Chandra Dutta, a goldsmith from Sinthee who had made ornaments for other shops for twenty years before he put his own name on a board. His son and daughter-in-law run the shop today. Four of our karigars have been with us for more than fifteen years.</p>
+        <p data-nx="story.p2">We are a small shop and we like it that way. You sit, you are shown pieces one at a time, and nobody hurries you. Every price is worked out on paper in front of you: weight, rate, making charge, GST. If you want to come back the next day with your mother, the piece will be kept aside.</p>
+        <ul data-nx-list="story.story-facts" class="story__facts">
+          <li data-nx-item><b data-nx-f="b">40+</b><span data-nx-f="span">Years in Gariahat</span></li>
+          <li data-nx-item><b data-nx-f="b">6</b><span data-nx-f="span">Karigars in our own workshop</span></li>
+          <li data-nx-item><b data-nx-f="b">0</b><span data-nx-f="span">Hidden charges on the bill</span></li>
         </ul>
       </div>
-      <div class="story__stack reveal">
-        <img src="/demo/jewellery/images/crafting.jpg" width="1200" height="1800" alt="A karigar's hands working on a gold piece under a lamp in the workshop" loading="lazy">
-        <img src="/demo/jewellery/images/pendant-making.jpg" width="1200" height="800" alt="A gold pendant being soldered with a small torch on the workshop bench" loading="lazy">
+      <div data-nx-list="story.story-stack" class="story__stack reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/jewellery/images/crafting.jpg" width="1200" height="1800" alt="A karigar's hands working on a gold piece under a lamp in the workshop" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/jewellery/images/pendant-making.jpg" width="1200" height="800" alt="A gold pendant being soldered with a small torch on the workshop bench" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
 <!-- 7. faq accordion -->
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Questions people ask at the counter</span>
-      <h2 class="h2">Before you buy.</h2>
+      <span data-nx="faq.kicker" class="kicker">Questions people ask at the counter</span>
+      <h2 data-nx="faq.h2" class="h2">Before you buy.</h2>
       <div class="rule"></div>
     </div>
-    <div class="acc reveal">
-      <details><summary>Can I order a design I saw somewhere else?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Yes. Bring a photo or a drawing. Our karigars will tell you the weight it will come to and the making charge, and we fix the price before work starts. Most made-to-order pieces take 2 to 4 weeks; bridal sets take 6 to 8.</p></details>
-      <details><summary>What if a piece breaks or a stone falls out?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Repairs on gold bought from us are free for the first year, except for lost stones. After that we charge only for the work. Pieces from other shops are repaired at a small charge after a purity check.</p></details>
-      <details><summary>Do you buy back gold?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Yes. Gold bought here with a bill is bought back at the day&rsquo;s rate with no deduction except stone weight. Gold from elsewhere is bought after an XRF test with 2% to 4% deducted for melting.</p></details>
-      <details><summary>How do I pay?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>Cash, UPI, debit and credit cards, bank transfer. Card EMI of 3, 6 or 9 months on bills above &#8377;25,000. Payments above &#8377;2 lakh need a PAN card by law.</p></details>
-      <details><summary>Will the price change between my visit and my pickup?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>For made-to-order pieces the rate is fixed on the day you pay the advance, whichever way the market moves. For ready pieces the price is the rate on the day you buy.</p></details>
-      <details><summary>Do you come home to show bridal pieces?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>For bridal orders above &#8377;3 lakh, yes, within Kolkata. Call a week ahead. For everything else we would rather you come to the shop, where the light and the scale are.</p></details>
+    <div data-nx-list="faq.acc" class="acc reveal">
+      <details data-nx-item><summary>Can I order a design I saw somewhere else?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">Yes. Bring a photo or a drawing. Our karigars will tell you the weight it will come to and the making charge, and we fix the price before work starts. Most made-to-order pieces take 2 to 4 weeks; bridal sets take 6 to 8.</p></details>
+      <details data-nx-item><summary>What if a piece breaks or a stone falls out?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">Repairs on gold bought from us are free for the first year, except for lost stones. After that we charge only for the work. Pieces from other shops are repaired at a small charge after a purity check.</p></details>
+      <details data-nx-item><summary>Do you buy back gold?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">Yes. Gold bought here with a bill is bought back at the day&rsquo;s rate with no deduction except stone weight. Gold from elsewhere is bought after an XRF test with 2% to 4% deducted for melting.</p></details>
+      <details data-nx-item><summary>How do I pay?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">Cash, UPI, debit and credit cards, bank transfer. Card EMI of 3, 6 or 9 months on bills above &#8377;25,000. Payments above &#8377;2 lakh need a PAN card by law.</p></details>
+      <details data-nx-item><summary>Will the price change between my visit and my pickup?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">For made-to-order pieces the rate is fixed on the day you pay the advance, whichever way the market moves. For ready pieces the price is the rate on the day you buy.</p></details>
+      <details data-nx-item><summary>Do you come home to show bridal pieces?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p data-nx-f="p">For bridal orders above &#8377;3 lakh, yes, within Kolkata. Call a week ahead. For everything else we would rather you come to the shop, where the light and the scale are.</p></details>
     </div>
   </div>
 </section>
 
 <!-- 8. gallery -->
-<section class="section section--deep" id="gallery" style="padding-top:0">
+<section data-nx-section="gallery" class="section section--deep" id="gallery" style="padding-top:0">
   <div class="wrap">
     <div class="head head--center reveal" style="padding-top:var(--sy)">
-      <span class="kicker">From the shop</span>
-      <h2 class="h2">A few pieces and the people who wear them.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From the shop</span>
+      <h2 data-nx="gallery.h2" class="h2">A few pieces and the people who wear them.</h2>
       <div class="rule"></div>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/jewellery/images/bride.jpg" width="1200" height="1800" alt="A bride in a silk saree wearing a long temple necklace, bangles and a waist chain" loading="lazy"></li>
-      <li><img src="/demo/jewellery/images/kundan-set.jpg" width="1200" height="1600" alt="A kundan necklace set with blue beads and matching earrings" loading="lazy"></li>
-      <li><img src="/demo/jewellery/images/wedding-display.jpg" width="1200" height="1800" alt="A bridal choker, bangles, tikli and earrings laid out on a red tray with flowers" loading="lazy"></li>
-      <li><img src="/demo/jewellery/images/jhumka.jpg" width="1200" height="1800" alt="A gold jhumka worn on the ear" loading="lazy"></li>
-      <li><img src="/demo/jewellery/images/anklet.jpg" width="1200" height="1800" alt="A silver payel on a foot with alta" loading="lazy"></li>
-      <li><img src="/demo/jewellery/images/chandelier-earrings.jpg" width="1200" height="1800" alt="Gold and green stone earrings on a stand" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/bride.jpg" width="1200" height="1800" alt="A bride in a silk saree wearing a long temple necklace, bangles and a waist chain" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/kundan-set.jpg" width="1200" height="1600" alt="A kundan necklace set with blue beads and matching earrings" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/wedding-display.jpg" width="1200" height="1800" alt="A bridal choker, bangles, tikli and earrings laid out on a red tray with flowers" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/jhumka.jpg" width="1200" height="1800" alt="A gold jhumka worn on the ear" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/anklet.jpg" width="1200" height="1800" alt="A silver payel on a foot with alta" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/jewellery/images/chandelier-earrings.jpg" width="1200" height="1800" alt="Gold and green stone earrings on a stand" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
 <!-- 9. quote band -->
-<section class="band" aria-label="What customers say">
-  <div class="wrap">
-    <blockquote class="reveal"><p>My mother bought her wedding chur here in 1989. We went back for my daughter&rsquo;s set last winter. They showed us the bill on paper before we agreed to anything, and the weight was exactly what was written.</p><footer>Mousumi <span>&middot; Ballygunge</span></footer></blockquote>
-    <blockquote class="reveal"><p>I put &#8377;5,000 a month into the scheme for my son&rsquo;s annaprashan. The passbook was simple, and when the day came the 12th month was added without my asking. Bought a chain and a coin.</p><footer>Debasish <span>&middot; Kasba</span></footer></blockquote>
+<section data-nx-section="section-10" class="band" aria-label="What customers say">
+  <div data-nx-list="section-10.list" class="wrap">
+    <blockquote data-nx-item class="reveal"><p data-nx-f="p">My mother bought her wedding chur here in 1989. We went back for my daughter&rsquo;s set last winter. They showed us the bill on paper before we agreed to anything, and the weight was exactly what was written.</p><footer>Mousumi <span data-nx-f="span">&middot; Ballygunge</span></footer></blockquote>
+    <blockquote data-nx-item class="reveal"><p data-nx-f="p">I put &#8377;5,000 a month into the scheme for my son&rsquo;s annaprashan. The passbook was simple, and when the day came the 12th month was added without my asking. Bought a chain and a coin.</p><footer>Debasish <span data-nx-f="span">&middot; Kasba</span></footer></blockquote>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Rash Behari Avenue, a short walk from Gariahat crossing.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Rash Behari Avenue, a short walk from Gariahat crossing.</h2>
       <div class="rule"></div>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>212 Rash Behari Avenue, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=212%20Rash%20Behari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">212 Rash Behari Avenue, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=212%20Rash%20Behari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>11:00 am &ndash; 8:30 pm</td></tr>
-              <tr><td>Sunday</td><td>11:00 am &ndash; 3:00 pm</td></tr>
-              <tr><td>Dhanteras and Pujo week</td><td>Open till 10 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">11:00 am &ndash; 8:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">11:00 am &ndash; 3:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Dhanteras and Pujo week</td><td data-nx-f="td2">Open till 10 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Daily rate sent on WhatsApp at 10 am. Messages answered till 9 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Daily rate sent on WhatsApp at 10 am. Messages answered till 9 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--green" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -623,10 +632,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Send us a photo of what you have in mind.</h2>
-    <p>We will reply with the weight it will come to, the making charge and today&rsquo;s rate, so you know the price before you leave home.</p>
+    <h2 data-nx="contact.h2">Send us a photo of what you have in mind.</h2>
+    <p data-nx="contact.p">We will reply with the weight it will come to, the making charge and today&rsquo;s rate, so you know the price before you leave home.</p>
     <div class="final__cta">
       <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Swarnalata%20Jewellers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -641,32 +650,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#C9A227"/><path d="M22 7l4.5 8.5L36 17l-6.5 6.5L31 33l-9-4.5L13 33l1.5-9.5L8 17l9.5-1.5Z" fill="#0F3D2E"/><circle cx="22" cy="21" r="4" fill="#C9A227"/><circle cx="22" cy="21" r="1.8" fill="#0F3D2E"/></svg>
-          <span><b>Swarnalata Jewellers</b><small>Gariahat &middot; since 1984</small></span>
+          <span><b data-nx="footer.b">Swarnalata Jewellers</b><small data-nx="footer.small">Gariahat &middot; since 1984</small></span>
         </a>
-        <p>BIS hallmarked gold and silver. Bridal sets made to order, old gold exchange, and an 11-month savings scheme.</p>
+        <p data-nx="footer.p">BIS hallmarked gold and silver. Bridal sets made to order, old gold exchange, and an 11-month savings scheme.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#collections">Collections</a></li>
-          <li><a href="#charges">Making charges and hallmark</a></li>
-          <li><a href="#exchange">Old gold exchange</a></li>
-          <li><a href="#scheme">Savings scheme</a></li>
-          <li><a href="#faq">Questions</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#collections">Collections</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#charges">Making charges and hallmark</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#exchange">Old gold exchange</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#scheme">Savings scheme</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>212 Rash Behari Avenue, Gariahat, Kolkata 700019</li>
+          <li data-nx="footer.li">212 Rash Behari Avenue, Gariahat, Kolkata 700019</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 11 am &ndash; 8:30 pm &middot; Sun 11 am &ndash; 3 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 11 am &ndash; 8:30 pm &middot; Sun 11 am &ndash; 3 pm</li>
         </ul>
       </div>
     </div>
@@ -708,5 +717,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

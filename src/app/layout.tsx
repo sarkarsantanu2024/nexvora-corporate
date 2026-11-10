@@ -5,6 +5,7 @@ import { ContactDock } from "@/components/contact-dock";
 import { PriceCalculator } from "@/components/price-calculator";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SiteChrome } from "@/components/site-chrome";
 import { CONTACT, NAV_LINKS, OG_IMAGE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -224,12 +225,19 @@ export default function RootLayout({
       <body className="bg-white font-sans text-ink antialiased">
         {/* Chrome lives here rather than in each page, so a new route cannot
             ship without the header, the footer or the two contact buttons. */}
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-        <PriceCalculator />
-        <ContactDock />
-        <BackToTop />
+        <SiteChrome
+          header={<SiteHeader />}
+          footer={<SiteFooter />}
+          extras={
+            <>
+              <PriceCalculator />
+              <ContactDock />
+              <BackToTop />
+            </>
+          }
+        >
+          {children}
+        </SiteChrome>
         {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
       </body>
     </html>

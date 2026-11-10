@@ -1,0 +1,1484 @@
+{
+  "site": "play-school",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Chotto Pakhi Play School",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:900"
+        },
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-badges",
+          "label": {
+            "en": "A small school where little ones learn by playing",
+            "bn": "A small school where little ones learn by playing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "badge",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "A ground-floor house with a garden, run by two sisters",
+        "bn": "A ground-floor house with a garden, run by two sisters"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "facts",
+          "label": {
+            "en": "A ground-floor house with a garden, run by two sisters",
+            "bn": "A ground-floor house with a garden, run by two sisters"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "about-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classes",
+      "label": {
+        "en": "Three classes, one small building",
+        "bn": "Three classes, one small building"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "prog-age",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "prog-age2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "prog-age3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "lede2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "day",
+      "label": {
+        "en": "What a Tuesday looks like",
+        "bn": "What a Tuesday looks like"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "day",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Timings",
+                "bn": "সময়"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "label": {
+        "en": "What we do to keep children safe",
+        "bn": "What we do to keep children safe"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "safety",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "label": {
+        "en": "Sixty children. Every one of them known by name",
+        "bn": "Sixty children. Every one of them known by name"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A peek inside",
+        "bn": "A peek inside"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1000"
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "photo7",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "photo8",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:675"
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "admissions",
+      "label": {
+        "en": "How to join",
+        "bn": "How to join"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "adm-steps",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "In their words",
+        "bn": "In their words"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Behind Jodhpur Park market",
+        "bn": "Behind Jodhpur Park market"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "School hours",
+            "bn": "School hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "School hours",
+            "bn": "School hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "School hours",
+            "bn": "School hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "School hours",
+            "bn": "School hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Come and see a morning here",
+        "bn": "Come and see a morning here"
+      },
+      "fields": [
+        {
+          "key": "pill",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "footer-copy",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "Chotto Pakhi Play School",
+      "brand-sub": "Ages 2 to 5 · Jodhpur Park"
+    },
+    "section-2": {
+      "hero-img": {
+        "src": "/demo/play-school/images/hero.jpg",
+        "alt": "Three small girls in checked school uniforms sitting in a row in class"
+      },
+      "pill": "Admissions open for 2026–27",
+      "h1": "A small school where <span>little ones</span> learn by playing.",
+      "lede": "Playgroup, Nursery and KG for children aged 2 to 5 in Jodhpur Park, Kolkata. Eight children to one teacher, a garden to run in, and a day that ends with a story.",
+      "button": "Classes & fees",
+      "hero-badges": {
+        "items": [
+          {
+            "badge": "<i style=\"background:var(--sky)\"></i>Since 2014"
+          },
+          {
+            "badge": "<i style=\"background:var(--sun)\"></i>1 teacher : 8 children"
+          },
+          {
+            "badge": "<i style=\"background:var(--mint)\"></i>9 am to 12:30 pm"
+          }
+        ]
+      }
+    },
+    "about": {
+      "pill": "About us",
+      "h2": "A ground-floor house with a garden, run by two sisters",
+      "p": "Chotto Pakhi means \"little bird\". We opened in 2014 in our family house on Jodhpur Park with eleven children. Today there are sixty, in three small classes, taught by six teachers and two helpers who have all been with us for more than four years.",
+      "p2": "We follow a play-based plan: every week has a theme (rain, vegetables, the post office) and every lesson is a game, a song or something to make with your hands. Reading and writing start gently in KG, so children walk into Class 1 at any Kolkata school without fear.",
+      "p3": "We speak English and Bengali in class, and a little Hindi where a child needs it.",
+      "facts": {
+        "items": [
+          {
+            "b": "2014",
+            "span": "Open since"
+          },
+          {
+            "b": "60",
+            "span": "Children, three classes"
+          },
+          {
+            "b": "1 : 8",
+            "span": "Teacher to child"
+          },
+          {
+            "b": "6",
+            "span": "Teachers, all trained in Montessori or NTT"
+          }
+        ]
+      },
+      "about-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/play-school/images/wooden-blocks.jpg",
+              "alt": "Smiling boy building a tall tower of pink blocks on a mat"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/play-school/images/story-time.jpg",
+              "alt": "Young boy reading a notebook sitting cross-legged on temple steps"
+            }
+          }
+        ]
+      }
+    },
+    "classes": {
+      "pill": "Classes & fees",
+      "h2": "Three classes, one small building",
+      "lede": "Children move up by age each April. Fees are per month, paid quarterly. No donation, no hidden charges. Books and craft material are included in the annual charge.",
+      "photo": {
+        "src": "/demo/play-school/images/clay-dough.jpg",
+        "alt": "Two small children working with a wooden board together on a red mat"
+      },
+      "prog-age": "Ages 2 to 3",
+      "h3": "Playgroup",
+      "p": "First time away from home. Two hours a day to start, then three. Parents may sit in the garden for the first two weeks.",
+      "b": "₹2,200",
+      "span": "per month · 9:30 to 12:00",
+      "photo2": {
+        "src": "/demo/play-school/images/art-table.jpg",
+        "alt": "Girl pouring water from a jug into glasses on a wooden tray"
+      },
+      "prog-age2": "Ages 3 to 4",
+      "h32": "Nursery",
+      "p2": "Letters and numbers through songs, stories and the weekly theme. Lots of cutting, sticking and painting. Fine motor skills before pencils.",
+      "b2": "₹2,500",
+      "span2": "per month · 9:00 to 12:30",
+      "photo3": {
+        "src": "/demo/play-school/images/blackboard-drawing.jpg",
+        "alt": "Girl pointing at a map of India on an easel"
+      },
+      "prog-age3": "Ages 4 to 5",
+      "h33": "KG",
+      "p3": "Reading three-letter words, writing their name, simple sums. We prepare children for Class 1 interviews at South Point, DPS and other nearby schools.",
+      "b3": "₹2,800",
+      "span3": "per month · 9:00 to 12:30",
+      "lede2": "Admission ₹5,000 once. Annual charge ₹4,500 for books, craft material and two uniforms. Day-care till 4 pm available for ₹1,800 a month, with lunch from home."
+    },
+    "day": {
+      "pill": "A day at school",
+      "h2": "What a Tuesday looks like",
+      "lede": "The same shape every day, so children know what comes next. Nursery and KG timings shown; Playgroup starts half an hour later.",
+      "day": {
+        "items": [
+          {
+            "span": "9:00 am",
+            "h3": "Arrival and free play",
+            "p": "Shoes off, bags on hooks. Blocks, puzzles and the book corner while everyone arrives."
+          },
+          {
+            "span": "9:30 am",
+            "h3": "Circle time",
+            "p": "Good-morning song, weather, the day's theme. Everyone gets to say one thing."
+          },
+          {
+            "span": "10:00 am",
+            "h3": "Learning through play",
+            "p": "Letters, numbers or the theme, taught with games and things to touch. Twenty-five minutes, then a change."
+          },
+          {
+            "span": "10:30 am",
+            "h3": "Tiffin",
+            "p": "Children eat from home. We wash hands together and sit at the long table. No chips or chocolate, please."
+          },
+          {
+            "span": "11:00 am",
+            "h3": "Garden or music",
+            "p": "Slides and swings in the garden on dry days, music and movement indoors in the rains."
+          },
+          {
+            "span": "11:40 am",
+            "h3": "Art and craft",
+            "p": "Paint, clay, paper tearing, pasting. Aprons on. Something goes home in the bag most days."
+          },
+          {
+            "span": "12:15 pm",
+            "h3": "Story and goodbye",
+            "p": "One story on the mat, then the goodbye song. Children are handed only to the adult on the pick-up card."
+          },
+          {
+            "span": "12:30 pm",
+            "h3": "Day-care continues",
+            "p": "For children staying on: lunch, a nap on their own mat, quiet play. Pick-up any time till 4 pm."
+          }
+        ]
+      }
+    },
+    "safety": {
+      "pill": "Safety",
+      "h2": "What we do to keep children safe",
+      "lede": "Plain facts, not promises. Ask to see any of this when you visit.",
+      "safety": {
+        "items": [
+          {
+            "h3": "CCTV in every room",
+            "p": "Six cameras including the garden and the gate. Recordings are kept for 30 days. Parents can ask to see footage."
+          },
+          {
+            "h3": "Pick-up card",
+            "p": "Each child has two photo cards. We hand a child only to the person holding one. Phone us before sending anyone else."
+          },
+          {
+            "h3": "First aid and a doctor nearby",
+            "p": "Two teachers are first-aid trained. Dr Sengupta's clinic is 200 metres away and on call during school hours."
+          },
+          {
+            "h3": "Filtered water, clean toilets",
+            "p": "RO water, child-height toilets and basins, cleaned twice a day. Soap, not sanitiser, for small hands."
+          },
+          {
+            "h3": "Ground floor only",
+            "p": "No stairs for children. Rounded furniture edges, socket covers, gates on both doors, a soft floor under the slide."
+          },
+          {
+            "h3": "Same faces every day",
+            "p": "All staff have been with us four years or more, with police verification on file. No substitute teachers from outside."
+          }
+        ]
+      }
+    },
+    "section-7": {
+      "photo": {
+        "src": "/demo/play-school/images/letters-wall.jpg",
+        "alt": "Smiling children sitting by a wall painted with big colourful letters"
+      },
+      "pill": "Small on purpose",
+      "h2": "Sixty children. Every one of them known by name.",
+      "p": "We have never taken more than twenty children in a class, and we do not plan to. A teacher who knows that Rudra skips breakfast and Aarohi is scared of the slide is worth more than a bigger building."
+    },
+    "gallery": {
+      "pill": "Gallery",
+      "h2": "A peek inside",
+      "photo": {
+        "src": "/demo/play-school/images/playground-slides.jpg",
+        "alt": "Small boy sitting at the top of a blue slide"
+      },
+      "photo2": {
+        "src": "/demo/play-school/images/abacus-girl.jpg",
+        "alt": "Girl in a teal dress sitting on a bench at a school event"
+      },
+      "photo3": {
+        "src": "/demo/play-school/images/toy-shelves.jpg",
+        "alt": "Smiling girl in a yellow top reading a book outdoors"
+      },
+      "photo4": {
+        "src": "/demo/play-school/images/exercise-time.jpg",
+        "alt": "Children holding hands in a big circle in a school courtyard"
+      },
+      "photo5": {
+        "src": "/demo/play-school/images/hand-painting.jpg",
+        "alt": "Two small children peeking round a doorway and laughing"
+      },
+      "photo6": {
+        "src": "/demo/play-school/images/colour-matching.jpg",
+        "alt": "Girl matching wooden letter tiles on a tray"
+      },
+      "photo7": {
+        "src": "/demo/play-school/images/group-photo.jpg",
+        "alt": "Children sitting on the floor writing letters on slates"
+      },
+      "photo8": {
+        "src": "/demo/play-school/images/classroom.jpg",
+        "alt": "Classroom with boys in blue uniforms sitting at desks"
+      }
+    },
+    "admissions": {
+      "pill": "Admissions 2026–27",
+      "h2": "How to join",
+      "lede": "The session starts in April. We take children all year if a seat is free. There is no test for the child and no interview for parents, only a visit.",
+      "h3": "What to bring for admission",
+      "small": "Admission ₹5,000 and the first quarter's fee are paid on the day of admission. UPI or cash.",
+      "adm-steps": {
+        "items": [
+          {
+            "h3": "Message or call us",
+            "p": "Tell us your child's date of birth and which class you are thinking of. We will suggest a day to visit."
+          },
+          {
+            "h3": "Visit during school hours",
+            "p": "Come between 10 and 11:30 am with your child. See a class, meet the teacher, sit in the garden. Takes about forty minutes."
+          },
+          {
+            "h3": "Fill the form",
+            "p": "A two-page form and the documents listed here. We confirm the seat the same day if one is free."
+          },
+          {
+            "h3": "Settling-in week",
+            "p": "Short days for the first week, a parent nearby. Most children are happy to stay alone by day four or five."
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "pill": "Parents say",
+      "h2": "In their words",
+      "quotes": {
+        "items": [
+          {
+            "p": "Our daughter cried for three days and then would not leave at pick-up time. She came home singing Bengali rhymes we had forgotten. She got into Class 1 at her first interview."
+          },
+          {
+            "p": "What I liked is that the same teachers are there every year. They know my son's tiffin habits and his moods. It feels like a home, not a franchise."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "pill": "Visit us",
+      "h2": "Behind Jodhpur Park market",
+      "h3": "Address",
+      "address": "Chotto Pakhi Play School<br>8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068<br>Yellow gate, two houses from the Jodhpur Park post office",
+      "h32": "School hours",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "span": "Monday – Friday"
+          },
+          {
+            "span": "9:00 am – 12:30 pm"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Day-care"
+          },
+          {
+            "span": "till 4:00 pm"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Office for visits"
+          },
+          {
+            "span": "10:00 – 11:30 am, Mon – Sat"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Closed"
+          },
+          {
+            "span": "Sundays, Pujo holidays, summer break in May"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Chotto Pakhi Play School sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=8B%20Jodhpur%20Park%2C%20Lake%20Gardens%2C%20Kolkata%20700068",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Chotto Pakhi Play School",
+      "brand-sub": "Ages 2 to 5 · Jodhpur Park",
+      "footer-tag": "Playgroup, Nursery and KG in a small garden house in south Kolkata, since 2014.",
+      "h4": "Visit",
+      "address": "8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068",
+      "button": "Get directions",
+      "footer-copy": "© 2026 Chotto Pakhi Play School"
+    },
+    "seo": {
+      "title": "Chotto Pakhi Play School | Playgroup, Nursery and KG in Jodhpur Park, Kolkata",
+      "description": "Play school for ages 2 to 5 in Jodhpur Park, Kolkata. Playgroup, Nursery and KG with small classes, a safe building and a day built around play. Admissions open for the new session."
+    }
+  }
+}

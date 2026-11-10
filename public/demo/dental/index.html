@@ -97,6 +97,8 @@ table{border-collapse:collapse;width:100%}
 .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .3s;z-index:150}
 .backdrop.is-open{opacity:1;pointer-events:auto}
 @media (max-width:900px){
+  /* the blur would make the header the containing block of the fixed drawer, pushing the page 330px wider */
+  .header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
   .nav{position:fixed;top:0;right:0;bottom:0;width:min(84vw,360px);background:#fff;z-index:160;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:4.5rem var(--gutter) 1.5rem;transform:translateX(100%);transition:transform .45s cubic-bezier(.22,1,.36,1);box-shadow:-20px 0 40px -30px rgba(0,0,0,.5);overflow-y:auto}
   .nav.is-open{transform:translateX(0)}
   .nav a{padding:.75rem 0;min-height:48px;display:flex;align-items:center;border-bottom:1px solid var(--line);font-size:1.05rem}
@@ -131,7 +133,7 @@ table{border-collapse:collapse;width:100%}
 .alert .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.5rem;padding-block:.9rem;font-size:.95rem}
 .alert svg{width:22px;height:22px;color:var(--mint-deep);flex:none}
 .alert b{font-family:var(--display);color:var(--sky-deep)}
-.alert a{font-weight:700;color:var(--mint-deep)}
+.alert a{font-weight:700;color:var(--mint-deep);display:inline-flex;align-items:center;min-height:44px}
 
 /* treatments: alternating zigzag */
 .zig{display:grid;gap:clamp(2.5rem,6vw,4.5rem)}
@@ -253,6 +255,12 @@ table{border-collapse:collapse;width:100%}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone: comfortable tap targets */
+@media (max-width:760px){
+  .visit__row a,.footer li a,.footer address a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer__note a{padding-block:.7rem}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -285,24 +293,22 @@ table{border-collapse:collapse;width:100%}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="dental">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sen%20Dental%20Care%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sen Dental Care, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="#0B6E99"/><path d="M22 10c-3.2 0-5 2.2-6.6 2.2S13 10 11 11.6c-2.4 2-1.4 7.4.4 12.2 1.6 4.4 3 8.2 4.8 8.2 1.6 0 1.6-5.4 3.4-5.4h4.8c1.8 0 1.8 5.4 3.4 5.4 1.8 0 3.2-3.8 4.8-8.2 1.8-4.8 2.8-10.2.4-12.2-2-1.6-3 .6-4.4.6S25.2 10 22 10Z" fill="#fff"/><circle cx="30" cy="13" r="2.5" fill="#2FB59A"/></svg>
-      <span><b>Sen Dental Care</b><small>Gariahat &middot; since 2011</small></span>
+      <span><b data-nx="header.b">Sen Dental Care</b><small data-nx="header.small">Gariahat &middot; since 2011</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -325,25 +331,25 @@ table{border-collapse:collapse;width:100%}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
-  <img src="/demo/dental/images/hero.jpg" width="1200" height="800" alt="A dentist in a white coat checks a boy's teeth under the chair light" fetchpriority="high">
+<section data-nx-section="top" class="hero" id="top">
+  <img data-nx="top.photo" src="/demo/dental/images/hero.jpg" width="1200" height="800" alt="A dentist in a white coat checks a boy's teeth under the chair light" fetchpriority="high">
   <div class="wrap">
     <div>
-      <p class="hero__open"><span></span>Gariahat Road, two minutes from the Gariahat crossing</p>
-      <h1>Teeth looked after <em>without the fear.</em></h1>
-      <p>Two dentists, one chair each, and a fee list on the wall. Scaling, fillings, root canals, braces, implants and children's teeth. Come for a check-up or send a message when a tooth hurts.</p>
+      <p data-nx="top.hero-open" class="hero__open"><span></span>Gariahat Road, two minutes from the Gariahat crossing</p>
+      <h1 data-nx="top.h1">Teeth looked after <em>without the fear.</em></h1>
+      <p data-nx="top.p">Two dentists, one chair each, and a fee list on the wall. Scaling, fillings, root canals, braces, implants and children's teeth. Come for a check-up or send a message when a tooth hurts.</p>
       <div class="hero__cta">
         <a class="btn btn--mint" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sen%20Dental%20Care%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a check-up
         </a>
-        <a class="btn btn--ghost-light" href="#fees">See the fee list</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#fees">See the fee list</a>
       </div>
     </div>
-    <ul class="hero__facts">
-      <li><b>&#8377;300</b><span>Check-up and advice</span></li>
-      <li><b>14 yrs</b><span>Clinic open in Gariahat</span></li>
-      <li><b>Till 9 pm</b><span>Evening chamber, Mon to Sat</span></li>
+    <ul data-nx-list="top.hero-facts" class="hero__facts">
+      <li data-nx-item><b data-nx-f="b">&#8377;300</b><span data-nx-f="span">Check-up and advice</span></li>
+      <li data-nx-item><b data-nx-f="b">14 yrs</b><span data-nx-f="span">Clinic open in Gariahat</span></li>
+      <li data-nx-item><b data-nx-f="b">Till 9 pm</b><span data-nx-f="span">Evening chamber, Mon to Sat</span></li>
     </ul>
   </div>
 </section>
@@ -356,242 +362,242 @@ table{border-collapse:collapse;width:100%}
   </div>
 </div>
 
-<section class="section" id="treatments">
+<section data-nx-section="treatments" class="section" id="treatments">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Treatments</span>
-      <h2 class="h2">What we do here, in plain words.</h2>
-      <p class="lead">Before any work starts you will know what it is, how many sittings it takes and what it costs. If a case needs a specialist we do not have, we say so and refer you.</p>
+      <span data-nx="treatments.kicker" class="kicker">Treatments</span>
+      <h2 data-nx="treatments.h2" class="h2">What we do here, in plain words.</h2>
+      <p data-nx="treatments.p" class="lead">Before any work starts you will know what it is, how many sittings it takes and what it costs. If a case needs a specialist we do not have, we say so and refer you.</p>
     </div>
-    <div class="zig">
-      <div class="zig__row reveal">
-        <div class="zig__fig"><img src="/demo/dental/images/tools-flatlay.jpg" width="1200" height="1800" alt="Steel dental instruments laid out on a blue tray" loading="lazy"><span class="zig__num">01</span></div>
+    <div data-nx-list="treatments.zig" class="zig">
+      <div data-nx-item class="zig__row reveal">
+        <div class="zig__fig"><img data-nx-f="photo" src="/demo/dental/images/tools-flatlay.jpg" width="1200" height="1800" alt="Steel dental instruments laid out on a blue tray" loading="lazy"><span data-nx-f="span" class="zig__num">01</span></div>
         <div>
-          <h3>Scaling, polishing and fillings</h3>
-          <p>Scaling removes the hard tartar a brush cannot. It takes about 30 minutes and does not hurt, though gums can feel tender for a day. We suggest it once a year, twice if you chew paan or smoke.</p>
-          <p>Fillings are tooth-coloured. A small cavity is done in one sitting. You can eat after an hour.</p>
-          <ul class="zig__meta"><li>1 sitting</li><li>30 to 45 min</li><li class="price">From &#8377;800</li></ul>
+          <h3 data-nx-f="h3">Scaling, polishing and fillings</h3>
+          <p data-nx-f="p">Scaling removes the hard tartar a brush cannot. It takes about 30 minutes and does not hurt, though gums can feel tender for a day. We suggest it once a year, twice if you chew paan or smoke.</p>
+          <p data-nx-f="p2">Fillings are tooth-coloured. A small cavity is done in one sitting. You can eat after an hour.</p>
+          <ul class="zig__meta"><li data-nx-f="li">1 sitting</li><li data-nx-f="li2">30 to 45 min</li><li data-nx-f="price" class="price">From &#8377;800</li></ul>
         </div>
       </div>
-      <div class="zig__row reveal">
-        <div class="zig__fig"><img src="/demo/dental/images/rct-model.jpg" width="1200" height="800" alt="A gloved hand points at a cut-away model of a tooth showing the root canals" loading="lazy"><span class="zig__num">02</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <div class="zig__fig"><img data-nx-f="photo" src="/demo/dental/images/rct-model.jpg" width="1200" height="800" alt="A gloved hand points at a cut-away model of a tooth showing the root canals" loading="lazy"><span data-nx-f="span" class="zig__num">02</span></div>
         <div>
-          <h3>Root canal treatment (RCT) and crowns</h3>
-          <p>When decay reaches the nerve, the tooth aches at night and with hot or cold. RCT cleans the inside of the tooth and seals it, so you keep the tooth instead of pulling it. It is done under local anaesthesia and is not the painful thing people remember from twenty years ago.</p>
-          <p>Most front teeth take two sittings, back teeth two or three. A crown (cap) goes on top to protect the tooth. Metal-ceramic and full ceramic options are on the fee list.</p>
-          <ul class="zig__meta"><li>2 to 3 sittings</li><li>Local anaesthesia</li><li class="price">RCT from &#8377;3,500</li></ul>
+          <h3 data-nx-f="h3">Root canal treatment (RCT) and crowns</h3>
+          <p data-nx-f="p">When decay reaches the nerve, the tooth aches at night and with hot or cold. RCT cleans the inside of the tooth and seals it, so you keep the tooth instead of pulling it. It is done under local anaesthesia and is not the painful thing people remember from twenty years ago.</p>
+          <p data-nx-f="p2">Most front teeth take two sittings, back teeth two or three. A crown (cap) goes on top to protect the tooth. Metal-ceramic and full ceramic options are on the fee list.</p>
+          <ul class="zig__meta"><li data-nx-f="li">2 to 3 sittings</li><li data-nx-f="li2">Local anaesthesia</li><li data-nx-f="price" class="price">RCT from &#8377;3,500</li></ul>
         </div>
       </div>
-      <div class="zig__row reveal">
-        <div class="zig__fig"><img src="/demo/dental/images/braces-model.jpg" width="1200" height="1800" alt="Hands holding a model of a full set of teeth" loading="lazy"><span class="zig__num">03</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <div class="zig__fig"><img data-nx-f="photo" src="/demo/dental/images/braces-model.jpg" width="1200" height="1800" alt="Hands holding a model of a full set of teeth" loading="lazy"><span data-nx-f="span" class="zig__num">03</span></div>
         <div>
-          <h3>Braces for children and adults</h3>
-          <p>Crooked or crowded teeth, gaps, or an upper jaw that sticks out. Braces move teeth slowly over 12 to 24 months. Metal braces cost the least; ceramic braces are less visible. We also arrange clear aligners for suitable cases.</p>
-          <p>The best age to check a child is around 7 to 8, even if nothing is done until later. The first visit is a check and a plan, with a written cost before you decide.</p>
-          <ul class="zig__meta"><li>12 to 24 months</li><li>Monthly visits</li><li class="price">Metal from &#8377;28,000</li></ul>
+          <h3 data-nx-f="h3">Braces for children and adults</h3>
+          <p data-nx-f="p">Crooked or crowded teeth, gaps, or an upper jaw that sticks out. Braces move teeth slowly over 12 to 24 months. Metal braces cost the least; ceramic braces are less visible. We also arrange clear aligners for suitable cases.</p>
+          <p data-nx-f="p2">The best age to check a child is around 7 to 8, even if nothing is done until later. The first visit is a check and a plan, with a written cost before you decide.</p>
+          <ul class="zig__meta"><li data-nx-f="li">12 to 24 months</li><li data-nx-f="li2">Monthly visits</li><li data-nx-f="price" class="price">Metal from &#8377;28,000</li></ul>
         </div>
       </div>
-      <div class="zig__row reveal">
-        <div class="zig__fig"><img src="/demo/dental/images/implant-model.jpg" width="1200" height="800" alt="A model showing a dental implant screw between two natural teeth" loading="lazy"><span class="zig__num">04</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <div class="zig__fig"><img data-nx-f="photo" src="/demo/dental/images/implant-model.jpg" width="1200" height="800" alt="A model showing a dental implant screw between two natural teeth" loading="lazy"><span data-nx-f="span" class="zig__num">04</span></div>
         <div>
-          <h3>Extraction and implants</h3>
-          <p>A tooth that cannot be saved is removed under local anaesthesia. Wisdom teeth that are stuck take a little longer and we tell you in advance. You go home the same day with written instructions.</p>
-          <p>An implant replaces a missing tooth with a titanium root and a crown. It needs healthy bone and three to four months of healing between the two stages. Bridges and dentures are the lower-cost options and we explain both.</p>
-          <ul class="zig__meta"><li>Same-day extraction</li><li>Implant in 2 stages</li><li class="price">Implant from &#8377;25,000</li></ul>
+          <h3 data-nx-f="h3">Extraction and implants</h3>
+          <p data-nx-f="p">A tooth that cannot be saved is removed under local anaesthesia. Wisdom teeth that are stuck take a little longer and we tell you in advance. You go home the same day with written instructions.</p>
+          <p data-nx-f="p2">An implant replaces a missing tooth with a titanium root and a crown. It needs healthy bone and three to four months of healing between the two stages. Bridges and dentures are the lower-cost options and we explain both.</p>
+          <ul class="zig__meta"><li data-nx-f="li">Same-day extraction</li><li data-nx-f="li2">Implant in 2 stages</li><li data-nx-f="price" class="price">Implant from &#8377;25,000</li></ul>
         </div>
       </div>
-      <div class="zig__row reveal">
-        <div class="zig__fig"><img src="/demo/dental/images/kids-checkup.jpg" width="1200" height="800" alt="A dentist gently checks a young boy's teeth with a mirror while the boy sits in the green chair" loading="lazy"><span class="zig__num">05</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <div class="zig__fig"><img data-nx-f="photo" src="/demo/dental/images/kids-checkup.jpg" width="1200" height="800" alt="A dentist gently checks a young boy's teeth with a mirror while the boy sits in the green chair" loading="lazy"><span data-nx-f="span" class="zig__num">05</span></div>
         <div>
-          <h3>Children's dentistry</h3>
-          <p>The first visit for a child is just a look and a ride in the chair. No drill. We want the second visit to be easy. Milk teeth do get filled when needed because they hold the space for the adult teeth.</p>
-          <p>Fluoride application and pit-and-fissure sealants cut down cavities in school-going children. Both are quick and painless. Dr. Anindita Sen sees most of the children.</p>
-          <ul class="zig__meta"><li>From age 3</li><li>Evening slots for school children</li><li class="price">Check-up &#8377;300</li></ul>
+          <h3 data-nx-f="h3">Children's dentistry</h3>
+          <p data-nx-f="p">The first visit for a child is just a look and a ride in the chair. No drill. We want the second visit to be easy. Milk teeth do get filled when needed because they hold the space for the adult teeth.</p>
+          <p data-nx-f="p2">Fluoride application and pit-and-fissure sealants cut down cavities in school-going children. Both are quick and painless. Dr. Anindita Sen sees most of the children.</p>
+          <ul class="zig__meta"><li data-nx-f="li">From age 3</li><li data-nx-f="li2">Evening slots for school children</li><li data-nx-f="price" class="price">Check-up &#8377;300</li></ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="fees">
+<section data-nx-section="fees" class="section section--paper" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Fee list</span>
-      <h2 class="h2">The same list that hangs at the reception.</h2>
-      <p class="lead">Prices are for one tooth unless written otherwise. X-rays, when needed, are &#8377;200 each and taken in the clinic. Cash, UPI and cards accepted.</p>
+      <span data-nx="fees.kicker" class="kicker">Fee list</span>
+      <h2 data-nx="fees.h2" class="h2">The same list that hangs at the reception.</h2>
+      <p data-nx="fees.p" class="lead">Prices are for one tooth unless written otherwise. X-rays, when needed, are &#8377;200 each and taken in the clinic. Cash, UPI and cards accepted.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="fee-tab" id="t1" checked>
       <input type="radio" name="fee-tab" id="t2">
       <input type="radio" name="fee-tab" id="t3">
-      <div class="tabs__bar" role="tablist">
-        <label for="t1">General</label>
-        <label for="t2">Root canal and crowns</label>
-        <label for="t3">Braces and implants</label>
+      <div data-nx-list="fees.tabs-bar" class="tabs__bar" role="tablist">
+        <label data-nx-f="label" data-nx-item for="t1">General</label>
+        <label data-nx-f="label" data-nx-item for="t2">Root canal and crowns</label>
+        <label data-nx-f="label" data-nx-item for="t3">Braces and implants</label>
       </div>
       <div class="tabs__panel p1">
         <table class="fee">
-          <thead><tr><th scope="col">Treatment</th><th scope="col">Fee</th></tr></thead>
-          <tbody>
-            <tr><td>Check-up and advice<small>Includes a written treatment plan if needed</small></td><td>&#8377;300</td></tr>
-            <tr><td>Scaling and polishing<small>Full mouth, one sitting</small></td><td>&#8377;1,200</td></tr>
-            <tr><td>Tooth-coloured filling<small>Small or medium cavity</small></td><td>&#8377;800 to &#8377;1,500</td></tr>
-            <tr><td>Simple extraction<small>Including the anaesthesia</small></td><td>&#8377;800</td></tr>
-            <tr><td>Wisdom tooth removal<small>Surgical, with stitches</small></td><td>&#8377;3,000 to &#8377;5,000</td></tr>
-            <tr><td>Child check-up with fluoride<small>Up to age 14</small></td><td>&#8377;600</td></tr>
-            <tr><td>Pit and fissure sealant<small>Per tooth</small></td><td>&#8377;500</td></tr>
+          <thead><tr><th data-nx="fees.th" scope="col">Treatment</th><th data-nx="fees.th2" scope="col">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list">
+            <tr data-nx-item><td data-nx-f="td">Check-up and advice<small>Includes a written treatment plan if needed</small></td><td data-nx-f="td2">&#8377;300</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Scaling and polishing<small>Full mouth, one sitting</small></td><td data-nx-f="td2">&#8377;1,200</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Tooth-coloured filling<small>Small or medium cavity</small></td><td data-nx-f="td2">&#8377;800 to &#8377;1,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Simple extraction<small>Including the anaesthesia</small></td><td data-nx-f="td2">&#8377;800</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Wisdom tooth removal<small>Surgical, with stitches</small></td><td data-nx-f="td2">&#8377;3,000 to &#8377;5,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Child check-up with fluoride<small>Up to age 14</small></td><td data-nx-f="td2">&#8377;600</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Pit and fissure sealant<small>Per tooth</small></td><td data-nx-f="td2">&#8377;500</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel p2">
         <table class="fee">
-          <thead><tr><th scope="col">Treatment</th><th scope="col">Fee</th></tr></thead>
-          <tbody>
-            <tr><td>Root canal, front tooth<small>Usually two sittings</small></td><td>&#8377;3,500</td></tr>
-            <tr><td>Root canal, premolar<small>Two sittings</small></td><td>&#8377;4,500</td></tr>
-            <tr><td>Root canal, molar<small>Two or three sittings</small></td><td>&#8377;5,500</td></tr>
-            <tr><td>Re-treatment of an old root canal</td><td>&#8377;6,500</td></tr>
-            <tr><td>Metal-ceramic crown<small>Three-year warranty on the cap</small></td><td>&#8377;4,500</td></tr>
-            <tr><td>Full ceramic (zirconia) crown<small>Looks closest to a natural tooth</small></td><td>&#8377;9,000</td></tr>
-            <tr><td>Post and core build-up<small>When little tooth is left above the gum</small></td><td>&#8377;1,500</td></tr>
+          <thead><tr><th data-nx="fees.th3" scope="col">Treatment</th><th data-nx="fees.th4" scope="col">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list2">
+            <tr data-nx-item><td data-nx-f="td">Root canal, front tooth<small>Usually two sittings</small></td><td data-nx-f="td2">&#8377;3,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Root canal, premolar<small>Two sittings</small></td><td data-nx-f="td2">&#8377;4,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Root canal, molar<small>Two or three sittings</small></td><td data-nx-f="td2">&#8377;5,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Re-treatment of an old root canal</td><td data-nx-f="td2">&#8377;6,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Metal-ceramic crown<small>Three-year warranty on the cap</small></td><td data-nx-f="td2">&#8377;4,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Full ceramic (zirconia) crown<small>Looks closest to a natural tooth</small></td><td data-nx-f="td2">&#8377;9,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Post and core build-up<small>When little tooth is left above the gum</small></td><td data-nx-f="td2">&#8377;1,500</td></tr>
           </tbody>
         </table>
       </div>
       <div class="tabs__panel p3">
         <table class="fee">
-          <thead><tr><th scope="col">Treatment</th><th scope="col">Fee</th></tr></thead>
-          <tbody>
-            <tr><td>Metal braces, full treatment<small>Both jaws, all monthly visits included</small></td><td>&#8377;28,000</td></tr>
-            <tr><td>Ceramic braces, full treatment<small>Less visible, same timeline</small></td><td>&#8377;42,000</td></tr>
-            <tr><td>Clear aligners<small>Price depends on the number of trays; quoted after a scan</small></td><td>From &#8377;65,000</td></tr>
-            <tr><td>Retainers after braces<small>One pair, included once</small></td><td>Included</td></tr>
-            <tr><td>Single implant with crown<small>Two stages, 3 to 4 months apart</small></td><td>&#8377;25,000 to &#8377;35,000</td></tr>
-            <tr><td>Three-unit bridge<small>Metal-ceramic</small></td><td>&#8377;12,000</td></tr>
-            <tr><td>Full denture, one jaw<small>Acrylic, with two fitting visits</small></td><td>&#8377;8,000</td></tr>
+          <thead><tr><th data-nx="fees.th5" scope="col">Treatment</th><th data-nx="fees.th6" scope="col">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list3">
+            <tr data-nx-item><td data-nx-f="td">Metal braces, full treatment<small>Both jaws, all monthly visits included</small></td><td data-nx-f="td2">&#8377;28,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Ceramic braces, full treatment<small>Less visible, same timeline</small></td><td data-nx-f="td2">&#8377;42,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Clear aligners<small>Price depends on the number of trays; quoted after a scan</small></td><td data-nx-f="td2">From &#8377;65,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Retainers after braces<small>One pair, included once</small></td><td data-nx-f="td2">Included</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Single implant with crown<small>Two stages, 3 to 4 months apart</small></td><td data-nx-f="td2">&#8377;25,000 to &#8377;35,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Three-unit bridge<small>Metal-ceramic</small></td><td data-nx-f="td2">&#8377;12,000</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Full denture, one jaw<small>Acrylic, with two fitting visits</small></td><td data-nx-f="td2">&#8377;8,000</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fee__note">Braces and implants can be paid in instalments spread over the treatment. Ask at the desk. Fees are reviewed each April and the list is updated the same week.</p>
+      <p data-nx="fees.fee-note" class="fee__note">Braces and implants can be paid in instalments spread over the treatment. Ask at the desk. Fees are reviewed each April and the list is updated the same week.</p>
     </div>
   </div>
 </section>
 
-<section class="section section--sky" id="first-visit">
+<section data-nx-section="first-visit" class="section section--sky" id="first-visit">
   <div class="wrap visit-grid">
     <div class="reveal">
-      <span class="kicker">Your first visit</span>
-      <h2 class="h2">What happens, step by step.</h2>
-      <p class="lead" style="margin-bottom:2rem">Set aside about 40 minutes. Nothing is drilled on the first visit unless you are in pain and ask for it.</p>
-      <ol class="tl">
-        <li><span class="time">0 to 5 min</span><h3>Your name and the problem</h3><p>Tell the desk what brought you. If you have old X-rays or a prescription, show them. Give the name of any medicine you take, especially for sugar, pressure or blood thinning.</p></li>
-        <li><span class="time">5 to 20 min</span><h3>The check-up</h3><p>The dentist looks at every tooth with a mirror and probe, checks the gums, and takes an X-ray only if something needs a closer look.</p></li>
-        <li><span class="time">20 to 30 min</span><h3>Plan and cost, written down</h3><p>You get a sheet with the teeth that need work, what is urgent and what can wait, the number of sittings and the fee for each. Take it home. There is no pressure to decide today.</p></li>
-        <li><span class="time">30 to 40 min</span><h3>Scaling or a quick fix, if you want</h3><p>Many people do the scaling on the first day. If a tooth is paining we give a dressing or start the treatment so you sleep tonight.</p></li>
+      <span data-nx="first-visit.kicker" class="kicker">Your first visit</span>
+      <h2 data-nx="first-visit.h2" class="h2">What happens, step by step.</h2>
+      <p data-nx="first-visit.p" class="lead" style="margin-bottom:2rem">Set aside about 40 minutes. Nothing is drilled on the first visit unless you are in pain and ask for it.</p>
+      <ol data-nx-list="first-visit.tl" class="tl">
+        <li data-nx-item><span data-nx-f="time" class="time">0 to 5 min</span><h3 data-nx-f="h3">Your name and the problem</h3><p data-nx-f="p">Tell the desk what brought you. If you have old X-rays or a prescription, show them. Give the name of any medicine you take, especially for sugar, pressure or blood thinning.</p></li>
+        <li data-nx-item><span data-nx-f="time" class="time">5 to 20 min</span><h3 data-nx-f="h3">The check-up</h3><p data-nx-f="p">The dentist looks at every tooth with a mirror and probe, checks the gums, and takes an X-ray only if something needs a closer look.</p></li>
+        <li data-nx-item><span data-nx-f="time" class="time">20 to 30 min</span><h3 data-nx-f="h3">Plan and cost, written down</h3><p data-nx-f="p">You get a sheet with the teeth that need work, what is urgent and what can wait, the number of sittings and the fee for each. Take it home. There is no pressure to decide today.</p></li>
+        <li data-nx-item><span data-nx-f="time" class="time">30 to 40 min</span><h3 data-nx-f="h3">Scaling or a quick fix, if you want</h3><p data-nx-f="p">Many people do the scaling on the first day. If a tooth is paining we give a dressing or start the treatment so you sleep tonight.</p></li>
       </ol>
     </div>
-    <div class="visit-grid__photos reveal">
-      <img src="/demo/dental/images/chair-wide.jpg" width="1200" height="801" alt="A clean dental treatment room with the chair, light and instrument tray" loading="lazy">
-      <img src="/demo/dental/images/instruments-row.jpg" width="1200" height="1800" alt="Sterilised instruments lined up on a blue cloth" loading="lazy">
-      <img src="/demo/dental/images/model-tools.jpg" width="1200" height="1800" alt="A teeth model and dental tools on the clinic table" loading="lazy">
+    <div data-nx-list="first-visit.list" class="visit-grid__photos reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/dental/images/chair-wide.jpg" width="1200" height="801" alt="A clean dental treatment room with the chair, light and instrument tray" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/dental/images/instruments-row.jpg" width="1200" height="1800" alt="Sterilised instruments lined up on a blue cloth" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/dental/images/model-tools.jpg" width="1200" height="1800" alt="A teeth model and dental tools on the clinic table" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section" id="dentists">
+<section data-nx-section="dentists" class="section" id="dentists">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The dentists</span>
-      <h2 class="h2">Two dentists. You see the same one every visit.</h2>
+      <span data-nx="dentists.kicker" class="kicker">The dentists</span>
+      <h2 data-nx="dentists.h2" class="h2">Two dentists. You see the same one every visit.</h2>
     </div>
     <div class="docs">
       <article class="doc reveal">
-        <img src="/demo/dental/images/dentist-portrait.jpg" width="1200" height="800" alt="Dr. Rajat Sen in blue scrubs with a stethoscope, seated, holding a patient file" loading="lazy">
+        <img data-nx="dentists.photo" src="/demo/dental/images/dentist-portrait.jpg" width="1200" height="800" alt="Dr. Rajat Sen in blue scrubs with a stethoscope, seated, holding a patient file" loading="lazy">
         <div>
-          <h3>Dr. Rajat Sen</h3>
-          <p class="deg">BDS (Dr. R. Ahmed Dental College, 2008), MDS Conservative Dentistry and Endodontics</p>
-          <p>Does the root canals, crowns, implants and extractions. Worked at a dental college hospital for three years before opening this clinic with his wife in 2011. Speaks Bengali, Hindi and English.</p>
-          <ul><li>Root canals</li><li>Implants</li><li>Crowns and bridges</li><li>Wisdom teeth</li></ul>
+          <h3 data-nx="dentists.h3">Dr. Rajat Sen</h3>
+          <p data-nx="dentists.deg" class="deg">BDS (Dr. R. Ahmed Dental College, 2008), MDS Conservative Dentistry and Endodontics</p>
+          <p data-nx="dentists.p">Does the root canals, crowns, implants and extractions. Worked at a dental college hospital for three years before opening this clinic with his wife in 2011. Speaks Bengali, Hindi and English.</p>
+          <ul data-nx-list="dentists.list"><li data-nx-f="li" data-nx-item>Root canals</li><li data-nx-f="li" data-nx-item>Implants</li><li data-nx-f="li" data-nx-item>Crowns and bridges</li><li data-nx-f="li" data-nx-item>Wisdom teeth</li></ul>
         </div>
       </article>
       <article class="doc reveal">
-        <div class="doc__ph" aria-hidden="true">AS</div>
+        <div data-nx="dentists.doc-ph" class="doc__ph" aria-hidden="true">AS</div>
         <div>
-          <h3>Dr. Anindita Sen</h3>
-          <p class="deg">BDS (2009), MDS Orthodontics</p>
-          <p>Looks after braces, aligners and most of the children. Patient with nervous patients of every age. Evening slots on Tuesday, Thursday and Saturday are kept for school children.</p>
-          <ul><li>Braces and aligners</li><li>Children's teeth</li><li>Scaling and fillings</li></ul>
+          <h3 data-nx="dentists.h32">Dr. Anindita Sen</h3>
+          <p data-nx="dentists.deg2" class="deg">BDS (2009), MDS Orthodontics</p>
+          <p data-nx="dentists.p2">Looks after braces, aligners and most of the children. Patient with nervous patients of every age. Evening slots on Tuesday, Thursday and Saturday are kept for school children.</p>
+          <ul data-nx-list="dentists.list2"><li data-nx-f="li" data-nx-item>Braces and aligners</li><li data-nx-f="li" data-nx-item>Children's teeth</li><li data-nx-f="li" data-nx-item>Scaling and fillings</li></ul>
         </div>
       </article>
     </div>
-    <p class="lead" style="margin-top:1.5rem;font-size:.92rem">Both are registered with the West Bengal Dental Council. Registration certificates are framed at the reception.</p>
+    <p data-nx="dentists.p3" class="lead" style="margin-top:1.5rem;font-size:.92rem">Both are registered with the West Bengal Dental Council. Registration certificates are framed at the reception.</p>
   </div>
 </section>
 
-<section class="section section--paper" id="gallery">
+<section data-nx-section="gallery" class="section section--paper" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Inside the clinic</span>
-      <h2 class="h2">Two chairs, a small waiting room, and an autoclave that runs after every patient.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Inside the clinic</span>
+      <h2 data-nx="gallery.h2" class="h2">Two chairs, a small waiting room, and an autoclave that runs after every patient.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/dental/images/chair-room.jpg" width="1200" height="1800" alt="Treatment room one, with the blue dental chair by the window" loading="lazy"></li>
-      <li><img src="/demo/dental/images/treatment-light.jpg" width="1200" height="1599" alt="A patient under the chair light during a filling" loading="lazy"></li>
-      <li><img src="/demo/dental/images/drill.jpg" width="1200" height="1800" alt="Close-up of a dental handpiece" loading="lazy"></li>
-      <li><img src="/demo/dental/images/xray-room.jpg" width="1200" height="1800" alt="Treatment room two with the X-ray viewer on the wall" loading="lazy"></li>
-      <li><img src="/demo/dental/images/kids-checkup.jpg" width="1200" height="800" alt="A boy's check-up in the evening slot" loading="lazy"></li>
-      <li><img src="/demo/dental/images/tools-flatlay.jpg" width="1200" height="1800" alt="A sterilised instrument set opened for the next patient" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/chair-room.jpg" width="1200" height="1800" alt="Treatment room one, with the blue dental chair by the window" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/treatment-light.jpg" width="1200" height="1599" alt="A patient under the chair light during a filling" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/drill.jpg" width="1200" height="1800" alt="Close-up of a dental handpiece" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/xray-room.jpg" width="1200" height="1800" alt="Treatment room two with the X-ray viewer on the wall" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/kids-checkup.jpg" width="1200" height="800" alt="A boy's check-up in the evening slot" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/dental/images/tools-flatlay.jpg" width="1200" height="1800" alt="A sterilised instrument set opened for the next patient" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap two">
     <div class="reveal">
-      <span class="kicker">Patients say</span>
-      <h2 class="h2" style="margin-bottom:1.5rem">Two notes left at the desk.</h2>
-      <blockquote class="quote"><p>"I had put off a root canal for two years out of fear. It took two visits and I felt nothing. I wish I had come sooner."</p><footer>Moumita <span>&middot; Golpark</span></footer></blockquote>
-      <blockquote class="quote"><p>"My son's braces came off last month. The price we were told on day one is the price we paid. Not one rupee more."</p><footer>Sanjib <span>&middot; Ballygunge</span></footer></blockquote>
+      <span data-nx="faq.kicker" class="kicker">Patients say</span>
+      <h2 data-nx="faq.h2" class="h2" style="margin-bottom:1.5rem">Two notes left at the desk.</h2>
+      <blockquote class="quote"><p data-nx="faq.p">"I had put off a root canal for two years out of fear. It took two visits and I felt nothing. I wish I had come sooner."</p><footer>Moumita <span data-nx="faq.span">&middot; Golpark</span></footer></blockquote>
+      <blockquote class="quote"><p data-nx="faq.p2">"My son's braces came off last month. The price we were told on day one is the price we paid. Not one rupee more."</p><footer>Sanjib <span data-nx="faq.span2">&middot; Ballygunge</span></footer></blockquote>
     </div>
     <div class="reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2" style="margin-bottom:1.5rem">Things people ask before they come.</h2>
-      <div class="faq">
-        <details><summary>Do I need an appointment?</summary><div class="a">It is better to book, because each dentist has one chair. Send a WhatsApp message or call. If you walk in, you may wait 20 to 40 minutes.</div></details>
-        <details><summary>Does a root canal hurt?</summary><div class="a">The tooth is numbed before anything is done. You feel pressure and vibration, not pain. Mild soreness for a day or two after is normal and a paracetamol is usually enough.</div></details>
-        <details><summary>I have diabetes or high blood pressure. Can I get an extraction?</summary><div class="a">Yes, in most cases. Bring your latest sugar or pressure reading and the list of medicines. If you take a blood thinner we will talk to your physician first.</div></details>
-        <details><summary>Is scaling bad for teeth?</summary><div class="a">No. Scaling removes tartar from the surface; it does not thin the enamel. Teeth can feel sensitive for a few days afterwards because the gums settle back.</div></details>
-        <details><summary>How do you sterilise instruments?</summary><div class="a">Every instrument set is washed, sealed in a pouch and run through the autoclave at 134 degrees. Pouches are opened in front of you. Needles, gloves and suction tips are single use.</div></details>
-        <details><summary>Do you take health insurance?</summary><div class="a">We give a printed bill and treatment summary that most insurers accept for reimbursement. We do not do cashless.</div></details>
+      <span data-nx="faq.kicker2" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h22" class="h2" style="margin-bottom:1.5rem">Things people ask before they come.</h2>
+      <div data-nx-list="faq.faq" class="faq">
+        <details data-nx-item><summary data-nx-f="summary">Do I need an appointment?</summary><div data-nx-f="a" class="a">It is better to book, because each dentist has one chair. Send a WhatsApp message or call. If you walk in, you may wait 20 to 40 minutes.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Does a root canal hurt?</summary><div data-nx-f="a" class="a">The tooth is numbed before anything is done. You feel pressure and vibration, not pain. Mild soreness for a day or two after is normal and a paracetamol is usually enough.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">I have diabetes or high blood pressure. Can I get an extraction?</summary><div data-nx-f="a" class="a">Yes, in most cases. Bring your latest sugar or pressure reading and the list of medicines. If you take a blood thinner we will talk to your physician first.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Is scaling bad for teeth?</summary><div data-nx-f="a" class="a">No. Scaling removes tartar from the surface; it does not thin the enamel. Teeth can feel sensitive for a few days afterwards because the gums settle back.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">How do you sterilise instruments?</summary><div data-nx-f="a" class="a">Every instrument set is washed, sealed in a pouch and run through the autoclave at 134 degrees. Pouches are opened in front of you. Needles, gloves and suction tips are single use.</div></details>
+        <details data-nx-item><summary data-nx-f="summary">Do you take health insurance?</summary><div data-nx-f="a" class="a">We give a printed bill and treatment summary that most insurers accept for reimbursement. We do not do cashless.</div></details>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="visit">
+<section data-nx-section="visit" class="section section--paper" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the clinic</span>
-      <h2 class="h2">Gariahat Road, first floor, above the stationery shop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the clinic</span>
+      <h2 data-nx="visit.h2" class="h2">Gariahat Road, first floor, above the stationery shop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>42 Gariahat Road, Gariahat<br>Kolkata 700029</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=42%20Gariahat%20Road%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">42 Gariahat Road, Gariahat<br>Kolkata 700029</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=42%20Gariahat%20Road%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Chamber timings</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday, morning</td><td>10:00 am &ndash; 2:00 pm</td></tr>
-              <tr><td>Monday to Saturday, evening</td><td>5:00 pm &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 1:00 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Chamber timings</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday, morning</td><td data-nx-f="td2">10:00 am &ndash; 2:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday, evening</td><td data-nx-f="td2">5:00 pm &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 1:00 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Messages answered 9 am to 9 pm. Lift available; the clinic is wheelchair friendly.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Messages answered 9 am to 9 pm. Lift available; the clinic is wheelchair friendly.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--sky" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sen%20Dental%20Care%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -605,10 +611,10 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>A check-up takes twenty minutes and costs &#8377;300.</h2>
-    <p>Send your name and a time that suits you. We will confirm within the hour during chamber timings.</p>
+    <h2 data-nx="book.h2">A check-up takes twenty minutes and costs &#8377;300.</h2>
+    <p data-nx="book.p">Send your name and a time that suits you. We will confirm within the hour during chamber timings.</p>
     <div class="final__cta">
       <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sen%20Dental%20Care%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -623,32 +629,32 @@ table{border-collapse:collapse;width:100%}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="#2FB59A"/><path d="M22 10c-3.2 0-5 2.2-6.6 2.2S13 10 11 11.6c-2.4 2-1.4 7.4.4 12.2 1.6 4.4 3 8.2 4.8 8.2 1.6 0 1.6-5.4 3.4-5.4h4.8c1.8 0 1.8 5.4 3.4 5.4 1.8 0 3.2-3.8 4.8-8.2 1.8-4.8 2.8-10.2.4-12.2-2-1.6-3 .6-4.4.6S25.2 10 22 10Z" fill="#fff"/><circle cx="30" cy="13" r="2.5" fill="#0B6E99"/></svg>
-          <span><b>Sen Dental Care</b><small>Gariahat &middot; since 2011</small></span>
+          <span><b data-nx="footer.b">Sen Dental Care</b><small data-nx="footer.small">Gariahat &middot; since 2011</small></span>
         </a>
-        <p>Family dental clinic. Two dentists, a printed fee list, and same-day help when a tooth hurts.</p>
+        <p data-nx="footer.p">Family dental clinic. Two dentists, a printed fee list, and same-day help when a tooth hurts.</p>
       </div>
       <div>
-        <h4>On this page</h4>
-        <ul>
-          <li><a href="#treatments">Treatments</a></li>
-          <li><a href="#fees">Fee list</a></li>
-          <li><a href="#first-visit">Your first visit</a></li>
-          <li><a href="#dentists">The dentists</a></li>
-          <li><a href="#faq">Common questions</a></li>
+        <h4 data-nx="footer.h4">On this page</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#treatments">Treatments</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Fee list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#first-visit">Your first visit</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#dentists">The dentists</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Common questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>42 Gariahat Road, Gariahat, Kolkata 700029</li>
+          <li data-nx="footer.li">42 Gariahat Road, Gariahat, Kolkata 700029</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10 am &ndash; 2 pm, 5 pm &ndash; 9 pm &middot; Sun 10 am &ndash; 1 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10 am &ndash; 2 pm, 5 pm &ndash; 9 pm &middot; Sun 10 am &ndash; 1 pm</li>
         </ul>
       </div>
     </div>
@@ -690,5 +696,7 @@ table{border-collapse:collapse;width:100%}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

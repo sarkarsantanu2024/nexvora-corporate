@@ -1,0 +1,2160 @@
+{
+  "site": "hardware-paint",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bhowmick Hardware & Paints",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stock",
+      "label": {
+        "en": "Six counters under one roof",
+        "bn": "Six counters under one roof"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "stock",
+          "label": {
+            "en": "Six counters under one roof",
+            "bn": "Six counters under one roof"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paints",
+      "label": {
+        "en": "Which paint for which wall",
+        "bn": "Which paint for which wall"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-num2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-num3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-num4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "zig-price",
+          "label": {
+            "en": "Emulsion, inside and outside",
+            "bn": "Emulsion, inside and outside"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "zig-price2",
+          "label": {
+            "en": "Enamel for grills, doors and windows",
+            "bn": "Enamel for grills, doors and windows"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "zig-price3",
+          "label": {
+            "en": "Distemper for rented rooms and ceilings",
+            "bn": "Distemper for rented rooms and ceilings"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "zig-price4",
+          "label": {
+            "en": "Shade matching, primer and putty",
+            "bn": "Shade matching, primer and putty"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "What things cost at our counter",
+        "bn": "What things cost at our counter"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td19",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td20",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td21",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td22",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td23",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td24",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td25",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td26",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td27",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td28",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td29",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td30",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td31",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td32",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td33",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td34",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td35",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td36",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td37",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td38",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td39",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td40",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td41",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td42",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td43",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td44",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td45",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td46",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td47",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td48",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td49",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td50",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td51",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td52",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td53",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td54",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td55",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td56",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td57",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td58",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td59",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td60",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td61",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td62",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td63",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td64",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td65",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td66",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td67",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "ptable-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contractors",
+      "label": {
+        "en": "Site rates for anyone buying for a site",
+        "bn": "Site rates for anyone buying for a site"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "contract-list",
+          "label": {
+            "en": "Site rates for anyone buying for a site",
+            "bn": "Site rates for anyone buying for a site"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "How a bulk order works",
+            "bn": "How a bulk order works"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": {
+        "en": "The van, and a painter who turns up",
+        "bn": "The van, and a painter who turns up"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:877"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:900"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Delivery by our own van",
+            "bn": "Delivery by our own van"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Need a painter or a plumber?",
+            "bn": "Need a painter or a plumber?"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Things people ask before they come",
+        "bn": "Things people ask before they come"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Things people ask before they come",
+            "bn": "Things people ask before they come"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "div",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A look at the shelves",
+        "bn": "A look at the shelves"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "From the people who buy here",
+        "bn": "From the people who buy here"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "From the people who buy here",
+            "bn": "From the people who buy here"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Diamond Harbour Road, opposite Behala Chowrasta bus stop",
+        "bn": "On Diamond Harbour Road, opposite Behala Chowrasta bus stop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Send the list. We pack it before you arrive",
+        "bn": "Send the list. We pack it before you arrive"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bhowmick Hardware & Paints",
+      "small": "Behala Chowrasta · since 1994"
+    },
+    "top": {
+      "hero-img": {
+        "src": "/demo/hardware-paint/images/hero.jpg",
+        "alt": "The shopkeeper bent over a workbench in front of a wall hung with caster wheels and fittings"
+      },
+      "hero-open": "<span></span>Open 9 am to 9 pm, Monday to Saturday",
+      "h1": "Paint, pipe, wire and <em>every small thing</em> in between.",
+      "p": "One shop on Diamond Harbour Road for the whole job. Emulsion matched to your shade in twenty minutes, plumbing and electrical fittings by the piece, tools, and cement and sand delivered to your gate by our own van.",
+      "button": "See sample prices",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "1994",
+            "span": "Same shop, same family"
+          },
+          {
+            "b": "2,400+",
+            "span": "Shades we can mix"
+          },
+          {
+            "b": "Same day",
+            "span": "Van delivery in Behala"
+          }
+        ]
+      }
+    },
+    "stock": {
+      "kicker": "What we stock",
+      "h2": "Six counters under one roof.",
+      "p": "If it goes into a house, a shop or a flat, we most likely have it. If we do not, we get it in two days.",
+      "stock": {
+        "items": [
+          {
+            "h3": "Paints",
+            "p": "Emulsion, enamel, distemper, primer, putty, brushes and rollers. Shade matching on the spot."
+          },
+          {
+            "h3": "Plumbing",
+            "p": "PVC, CPVC and GI pipe, taps, elbows, valves, tank fittings, Teflon and solvent."
+          },
+          {
+            "h3": "Electrical",
+            "p": "Copper wire by the coil, modular switches, MCBs, boards, fans, LED bulbs and tube lights."
+          },
+          {
+            "h3": "Tools",
+            "p": "Hammers, spanners, drill bits, hacksaws, measuring tape, levels. Drill machines on order."
+          },
+          {
+            "h3": "Cement & sand",
+            "p": "Cement by the bag, sand and stone chips by the cft, bricks by the hundred. Delivered, not carried."
+          },
+          {
+            "h3": "Hardware & fittings",
+            "p": "Hinges, locks, tower bolts, screws by weight, wall plugs, door closers, curtain rods."
+          }
+        ]
+      }
+    },
+    "paints": {
+      "kicker": "Paints",
+      "h2": "Which paint for which wall.",
+      "p": "Bring a photo, a swatch or a piece of the old wall. We mix the shade while you wait and write the code on the tin so you can buy the same shade next year.",
+      "photo": {
+        "src": "/demo/hardware-paint/images/roller.jpg",
+        "alt": "A paint roller resting on a ladder beside a half-painted red wall"
+      },
+      "zig-num": "01",
+      "h3": "Emulsion, inside and outside",
+      "p2": "Washable interior emulsion for bedrooms and living rooms. Weather-proof exterior emulsion for the front of the house and the terrace wall. Economy, mid and premium grades on the shelf. One litre covers about 100 sq ft in two coats.",
+      "photo2": {
+        "src": "/demo/hardware-paint/images/painter-ladder.jpg",
+        "alt": "Two painters on a bamboo ladder painting a tall outside wall blue"
+      },
+      "zig-num2": "02",
+      "h32": "Enamel for grills, doors and windows",
+      "p3": "Oil-based gloss enamel for iron grills, gates, wooden doors and window frames. Dries hard, resists rust, cleans with a wet cloth. Available in matt too for furniture.",
+      "photo3": {
+        "src": "/demo/hardware-paint/images/painter-delhi.jpg",
+        "alt": "A painter seated on a rope platform applying white paint to a building wall"
+      },
+      "zig-num3": "03",
+      "h33": "Distemper for rented rooms and ceilings",
+      "p4": "The cheapest clean wall you can get. Acrylic distemper for ceilings, staircases, godowns and rented flats where you repaint every two years. Sold by the kilo, mixed with water at home.",
+      "photo4": {
+        "src": "/demo/hardware-paint/images/swatches.jpg",
+        "alt": "A spread of paint colour swatches fanned out on a table"
+      },
+      "zig-num4": "04",
+      "h34": "Shade matching, primer and putty",
+      "p5": "Our tinting machine mixes over 2,400 shades from four base whites. Bring any colour and we match it. Before the colour goes on, the wall needs putty to fill and primer to hold. We will tell you how much you need if you give us the room size.",
+      "zig-price": {
+        "items": [
+          {
+            "li": "Economy interior <b>&#8377;190 / L</b>"
+          },
+          {
+            "li": "Premium interior <b>&#8377;460 / L</b>"
+          },
+          {
+            "li": "Exterior weather-proof <b>&#8377;380 / L</b>"
+          }
+        ]
+      },
+      "zig-price2": {
+        "items": [
+          {
+            "li": "Synthetic enamel <b>&#8377;290 / L</b>"
+          },
+          {
+            "li": "Red oxide metal primer <b>&#8377;210 / L</b>"
+          },
+          {
+            "li": "Wood primer <b>&#8377;240 / L</b>"
+          }
+        ]
+      },
+      "zig-price3": {
+        "items": [
+          {
+            "li": "Acrylic distemper <b>&#8377;85 / kg</b>"
+          },
+          {
+            "li": "Oil-bound distemper <b>&#8377;120 / kg</b>"
+          },
+          {
+            "li": "Lime (chuna), 5 kg bag <b>&#8377;60</b>"
+          }
+        ]
+      },
+      "zig-price4": {
+        "items": [
+          {
+            "li": "Shade matching <b>Free with the tin</b>"
+          },
+          {
+            "li": "Wall putty, 20 kg <b>&#8377;720</b>"
+          },
+          {
+            "li": "Cement primer <b>&#8377;180 / L</b>"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price list sample",
+      "h2": "What things cost at our counter.",
+      "p": "A sample from the full list. Prices include GST and change with the market, so confirm on WhatsApp before you come for a big order.",
+      "p2": "Swipe the table sideways to see all columns.",
+      "th": "Item",
+      "th2": "Pack",
+      "th3": "Price",
+      "td": "Paint and painting",
+      "td2": "Interior emulsion, economy<small>White and 40 ready shades</small>",
+      "td3": "10 L bucket",
+      "td4": "₹1,850",
+      "td5": "Interior emulsion, premium<small>Any tinted shade</small>",
+      "td6": "4 L tin",
+      "td7": "₹1,780",
+      "td8": "Exterior emulsion, weather-proof",
+      "td9": "10 L bucket",
+      "td10": "₹3,600",
+      "td11": "Synthetic enamel",
+      "td12": "1 L tin",
+      "td13": "₹290",
+      "td14": "Wall putty",
+      "td15": "20 kg bag",
+      "td16": "₹720",
+      "td17": "Roller with handle, 9 inch",
+      "td18": "1 piece",
+      "td19": "₹140",
+      "td20": "Paint brush, 4 inch",
+      "td21": "1 piece",
+      "td22": "₹95",
+      "td23": "Plumbing",
+      "td24": "PVC pipe, 1 inch<small>For drain and overflow</small>",
+      "td25": "3 m length",
+      "td26": "₹190",
+      "td27": "CPVC pipe, 3/4 inch<small>For hot and cold supply</small>",
+      "td28": "3 m length",
+      "td29": "₹360",
+      "td30": "Bib cock tap, brass with chrome",
+      "td31": "1 piece",
+      "td32": "₹420",
+      "td33": "Overhead tank, 500 L, 3 layer",
+      "td34": "1 piece",
+      "td35": "₹3,900",
+      "td36": "Ball valve, 1 inch",
+      "td37": "1 piece",
+      "td38": "₹260",
+      "td39": "Electrical",
+      "td40": "Copper wire, 1.5 sq mm<small>For lights and fans</small>",
+      "td41": "90 m coil",
+      "td42": "₹1,750",
+      "td43": "Copper wire, 2.5 sq mm<small>For AC and geyser points</small>",
+      "td44": "90 m coil",
+      "td45": "₹2,850",
+      "td46": "Modular switch, 6 A",
+      "td47": "1 piece",
+      "td48": "₹55",
+      "td49": "MCB, 32 A single pole",
+      "td50": "1 piece",
+      "td51": "₹240",
+      "td52": "LED bulb, 9 W",
+      "td53": "1 piece",
+      "td54": "₹85",
+      "td55": "Building material (on order, delivered)",
+      "td56": "Cement, grade 43<small>Minimum 10 bags for delivery</small>",
+      "td57": "50 kg bag",
+      "td58": "₹420",
+      "td59": "River sand",
+      "td60": "per 100 cft",
+      "td61": "₹6,500",
+      "td62": "Stone chips, 3/4 inch",
+      "td63": "per 100 cft",
+      "td64": "₹7,200",
+      "td65": "Red bricks, first class",
+      "td66": "per 1,000",
+      "td67": "₹11,500",
+      "ptable-note": "Delivery inside Behala is free on bills above ₹3,000. Below that, ₹150 for the van. Cement and sand are always delivered, never sold over the counter."
+    },
+    "contractors": {
+      "kicker": "For contractors and painters",
+      "h2": "Site rates for anyone buying for a site.",
+      "p": "Thirty-odd painters and masons in Behala buy from us every week. Here is what they get that a walk-in customer does not.",
+      "h3": "How a bulk order works",
+      "contract-list": {
+        "items": [
+          {
+            "b": "8 to 12 percent off the counter price",
+            "p": "On paint above 40 litres, wire above 5 coils, cement above 50 bags. The rate is written on the bill, not whispered."
+          },
+          {
+            "b": "One GST bill for the whole site",
+            "p": "Give us the owner's or the firm's GST number once. Every delivery goes on the same account and one bill comes at the end of the month."
+          },
+          {
+            "b": "Delivery straight to the floor",
+            "p": "Our van and two helpers carry cement and paint to the floor you are working on, up to the fourth floor without a lift."
+          },
+          {
+            "b": "Return what is unopened",
+            "p": "Sealed tins and unopened bags come back within 15 days for full credit. Tinted shades are the exception, since nobody else will buy them."
+          },
+          {
+            "b": "Fifteen days credit after the third job",
+            "p": "New contractors pay on delivery. Once we have done three sites together, the account runs on fifteen days credit."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "b": "Send the list",
+            "p": "WhatsApp the item list with quantities, the site address and the floor. A photo of the engineer's list is fine."
+          },
+          {
+            "b": "Get the rate in an hour",
+            "p": "We reply with the site rate, the delivery day and the total. Nothing moves until you say yes."
+          },
+          {
+            "b": "Van arrives, you sign",
+            "p": "Count the bags at the gate, sign the challan, and the material goes up. Payment on delivery or on account."
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "kicker": "Two things customers ask for most",
+      "h2": "The van, and a painter who turns up.",
+      "photo": {
+        "src": "/demo/hardware-paint/images/unloading.jpg",
+        "alt": "Two workers unloading cement bags from the back of a truck"
+      },
+      "h3": "Delivery by our own van",
+      "p": "A Tata Ace and two helpers leave the shop twice a day, at 11 am and at 4 pm. Orders placed before 10 am go on the morning run.",
+      "photo2": {
+        "src": "/demo/hardware-paint/images/shop-shelves.jpg",
+        "alt": "A wall of hand tools, spanners, pliers and cutting discs hung on hooks in the shop"
+      },
+      "h32": "Need a painter or a plumber?",
+      "p2": "We do not paint houses ourselves, but we know who does it well because we see their work and hear from their customers. Ask at the counter and we will give you two names.",
+      "list": {
+        "items": [
+          {
+            "li": "Free inside Behala on bills above ₹3,000"
+          },
+          {
+            "li": "Thakurpukur, Joka, New Alipore and Taratala: ₹250 flat"
+          },
+          {
+            "li": "Cement, sand and bricks are delivered within 48 hours of order"
+          },
+          {
+            "li": "Helpers carry up to the fourth floor at no extra charge"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Painters charge about ₹14 to ₹22 per sq ft for two coats, labour only"
+          },
+          {
+            "li": "Plumbers and electricians for small jobs, usually within two days"
+          },
+          {
+            "li": "They buy the material here, so if something is wrong we hear about it"
+          },
+          {
+            "li": "You pay them directly. We take nothing from either side"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Things people ask before they come.",
+      "faq": {
+        "items": [
+          {
+            "summary": "Can you match a shade from a photo or an old wall?",
+            "div": "Yes. A chip of the old paint is best, a swatch card from any company is fine, and a photo works for most shades. The machine takes about twenty minutes. We write the shade code on your tin so the same colour can be mixed again later."
+          },
+          {
+            "summary": "Do you deliver, and what does it cost?",
+            "div": "Our van delivers twice a day inside Behala. It is free on bills above ₹3,000 and ₹150 below that. Nearby areas such as Thakurpukur, Joka and New Alipore are ₹250 flat. Cement, sand and bricks are always delivered."
+          },
+          {
+            "summary": "How long does cement or sand take?",
+            "div": "We do not keep cement in the shop. Order today and it comes from the depot within 48 hours, usually next day. Sand and stone chips take two to three days because the truck is shared with other orders. Minimum 10 bags of cement for delivery."
+          },
+          {
+            "summary": "Can I return paint I did not use?",
+            "div": "Sealed tins of white or ready shades, yes, within 15 days with the bill. Tinted shades mixed for you cannot be returned because nobody else will buy that colour. Opened tins cannot be returned either."
+          },
+          {
+            "summary": "Do you give a GST bill?",
+            "div": "Every sale gets a printed bill with our GST number. If you want the bill in a firm's name with its GST number, tell us before billing and it goes on the bill."
+          },
+          {
+            "summary": "Do you give credit to contractors?",
+            "div": "Not on the first job. After three sites bought and paid on time, a contractor's account runs on fifteen days credit with a monthly statement. Walk-in customers pay at the counter, by cash, UPI or card."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Inside the shop",
+      "h2": "A look at the shelves."
+    },
+    "section-10": {
+      "kicker": "What customers say",
+      "h2": "From the people who buy here.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I took a photo of my mother's old bedroom wall and they matched it. Nobody can tell where the new patch starts. The tin had the code written on it for next time.",
+            "span": "· Sakher Bazar"
+          },
+          {
+            "p": "I paint flats in Behala and Joka. Sixty litres a month from here, one bill, delivered to the floor. They tell me when a shade is going to look different in daylight, which has saved me twice.",
+            "span": "· painting contractor, Thakurpukur"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Diamond Harbour Road, opposite Behala Chowrasta bus stop.",
+      "b": "Address",
+      "p": "214 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "WhatsApp lists answered within the hour during shop time.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "9:00 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "9:00 am – 1:00 pm"
+          },
+          {
+            "td": "Van runs",
+            "td2": "11 am and 4 pm"
+          }
+        ]
+      }
+    },
+    "order": {
+      "h2": "Send the list. <em>We pack it</em> before you arrive.",
+      "p": "Photograph the engineer's list or type what you need. We reply with the price and keep it ready at the counter, or put it on the next van."
+    },
+    "footer": {
+      "b": "Bhowmick Hardware & Paints",
+      "small": "Behala Chowrasta · since 1994",
+      "p": "Paint with shade matching, plumbing and electrical fittings, tools, and cement and sand delivered by our own van.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "214 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034",
+      "li2": "Mon–Sat 9 am – 9 pm · Sun 9 am – 1 pm",
+      "list": {
+        "items": [
+          {
+            "button": "What we stock"
+          },
+          {
+            "button": "Paints"
+          },
+          {
+            "button": "Price list"
+          },
+          {
+            "button": "Contractor rates"
+          },
+          {
+            "button": "Questions"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bhowmick Hardware & Paints sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=214%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Bhowmick Hardware & Paints | Paint, Plumbing, Electrical and Tools in Behala",
+      "description": "Emulsion, enamel and distemper with shade matching, plumbing and electrical fittings, tools, cement and sand on order. Van delivery across Behala. Bulk rates for contractors."
+    }
+  }
+}

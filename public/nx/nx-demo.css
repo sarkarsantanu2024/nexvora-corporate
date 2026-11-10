@@ -1,0 +1,60 @@
+/* Nexvora demos: the shared pieces every sample website carries.
+   Loaded by every demo (scripts/nx-strip.mjs adds the link). */
+
+/* The strip at the very top: the same on all 38 samples. */
+.nx-strip{background:#0a0d14;color:#fff;font:600 .84rem/1.3 system-ui,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.01em}
+.nx-strip__wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:40px;padding:.3rem clamp(1rem,3vw,2rem)}
+.nx-strip__text{opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nx-strip__text a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45)}
+.nx-strip__text a:hover{border-bottom-color:#fff}
+.nx-strip__all{display:inline-flex;align-items:center;gap:.45rem;color:#fff;text-decoration:none;min-height:32px;padding:.2rem .6rem;border-radius:8px;flex:none}
+.nx-strip__all:hover{background:rgba(255,255,255,.12)}
+.nx-strip__all svg{width:20px;height:20px}
+.nx-strip__all span{font-weight:700}
+@media (max-width:640px){.nx-strip__all span{display:none}.nx-strip__all{padding:.2rem .4rem}}
+
+/* Login and language, placed inside the site's own header so they take the
+   header's colours: text in currentColor, a faint border, no background. */
+.nx-lang{display:inline-flex;align-items:center;gap:.15rem;flex:none;color:inherit;position:relative}
+/* A hairline separates them from the site's own menu. */
+.nx-lang::before{content:"";width:1px;height:20px;background:currentColor;opacity:.22;margin-right:.45rem;flex:none}
+/* On a laptop the controls may sit inside the site's own <nav>, so these
+   rules carry extra specificity to beat the site's ".nav a" styling. */
+.nx-lang .nx-login.nx-login,.nx-lang .nx-lang__btn.nx-lang__btn{font:inherit;letter-spacing:.01em;color:inherit;background:transparent;border:0;box-shadow:none;border-radius:10px;min-height:38px;margin:0;padding:.35rem .6rem;display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;text-decoration:none;text-transform:none;cursor:pointer;opacity:.78;transition:opacity .15s,background .15s;line-height:1;position:static;transform:none}
+.nx-lang .nx-login::before,.nx-lang .nx-login::after,.nx-lang .nx-lang__btn::before,.nx-lang .nx-lang__btn::after{content:none!important}
+.nx-lang .nx-login.nx-login:hover,.nx-lang .nx-lang__btn.nx-lang__btn:hover,.nx-lang .nx-lang__dd.is-open .nx-lang__btn{opacity:1;color:inherit;background:rgba(127,127,127,.14);text-decoration:none;transform:none}
+.nx-lang .nx-login.nx-login:focus-visible,.nx-lang .nx-lang__btn.nx-lang__btn:focus-visible{outline:2px solid currentColor;outline-offset:2px;opacity:1}
+.nx-lang .nx-login svg,.nx-lang .nx-lang__btn svg{width:1.15em;height:1.15em;min-width:16px;min-height:16px;flex:none;stroke-width:1.9;fill:none}
+.nx-lang__code{font-size:.9em;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.nx-lang__chev{width:12px!important;height:12px!important;opacity:.6;margin-left:-.15rem;transition:transform .15s}
+.nx-lang__dd.is-open .nx-lang__chev{transform:rotate(180deg)}
+.nx-lang__dd{position:relative}
+.nx-lang__menu{position:absolute;right:0;top:calc(100% + 8px);z-index:500;min-width:176px;margin:0;padding:.35rem;list-style:none;background:#fff;color:#111;border-radius:14px;box-shadow:0 18px 44px -14px rgba(0,0,0,.4),0 0 0 1px rgba(0,0,0,.06);display:none;font:500 .95rem/1.2 system-ui,"Segoe UI",Roboto,"Noto Sans Bengali","Noto Sans Devanagari","Nirmala UI",Arial,sans-serif}
+.nx-lang__dd.is-open .nx-lang__menu{display:block;animation:nx-pop .14s ease-out}
+@keyframes nx-pop{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.nx-lang__menu li{padding:.6rem .85rem;border-radius:9px;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:.6rem}
+.nx-lang__menu li::before{content:attr(data-code);font-size:.7rem;font-weight:700;letter-spacing:.06em;color:#6b7280;width:1.7rem;flex:none}
+.nx-lang__menu li:hover,.nx-lang__menu li:focus-visible{background:#f1f4f9;outline:none}
+.nx-lang__menu li[aria-selected="true"]{color:#1d4ed8;font-weight:600}
+.nx-lang__menu li[aria-selected="true"]::after{content:"✓";margin-left:auto;padding-left:.75rem}
+/* Phone: icons only, and the header shows the logo alone, not the business
+   name, so nothing wraps next to the three buttons. */
+@media (max-width:760px){
+  header .brand > :not(svg):not(img){display:none!important}
+  header .brand{gap:0}
+  .nx-lang{gap:0}
+  .nx-lang::before{display:none}
+  .nx-lang .nx-login.nx-login,.nx-lang .nx-lang__btn.nx-lang__btn{padding:0;width:40px;height:40px;min-height:40px;justify-content:center;border-radius:50%;opacity:.85}
+  .nx-login span,.nx-lang__btn span,.nx-lang__chev{display:none}
+  .nx-lang .nx-login svg,.nx-lang .nx-lang__btn svg{width:21px;height:21px}
+}
+
+/* The menu drawer no longer dims the page behind it. The invisible layer
+   stays so a tap outside the drawer still closes it. */
+.backdrop,.backdrop.is-open{background:transparent!important}
+
+/* Google's page translation: keep its bar and tooltips out of the way. */
+#nx-gt{display:none}
+.goog-te-banner-frame,.skiptranslate iframe,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}
+body{top:0!important}
+.goog-tooltip,.goog-text-highlight{display:none!important;background:none!important;box-shadow:none!important}

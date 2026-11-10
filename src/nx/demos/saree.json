@@ -1,0 +1,1285 @@
+{
+  "site": "saree",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sreemoyee Sarees",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "textlink",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "900:1150"
+        },
+        {
+          "key": "hero-caption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-meta",
+          "label": {
+            "en": "Sarees woven by hand, chosen slowly",
+            "bn": "Sarees woven by hand, chosen slowly"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "div",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collection",
+      "label": {
+        "en": "What is on the shelves this season",
+        "bn": "What is on the shelves this season"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "coll",
+          "label": {
+            "en": "What is on the shelves this season",
+            "bn": "What is on the shelves this season"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "from",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "handloom",
+      "label": {
+        "en": "We buy from the loom, not the wholesaler",
+        "bn": "We buy from the loom, not the wholesaler"
+      },
+      "fields": [
+        {
+          "key": "band-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "band-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bridal",
+      "label": {
+        "en": "One afternoon, the whole trousseau",
+        "bn": "One afternoon, the whole trousseau"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "bridal-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1200"
+            }
+          ]
+        },
+        {
+          "key": "bridal-list",
+          "label": {
+            "en": "One afternoon, the whole trousseau",
+            "bn": "One afternoon, the whole trousseau"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "div",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stitching",
+      "label": {
+        "en": "Measured downstairs, stitched upstairs",
+        "bn": "Measured downstairs, stitched upstairs"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:450"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "stitch-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A look inside",
+        "bn": "A look inside"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "A look inside",
+            "bn": "A look inside"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Because a saree is never just a saree",
+        "bn": "Because a saree is never just a saree"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "serv",
+          "label": {
+            "en": "Because a saree is never just a saree",
+            "bn": "Because a saree is never just a saree"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "Section 9",
+        "bn": "অংশ 9"
+      },
+      "fields": [],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Gariahat Road, opposite the tram line",
+        "bn": "On Gariahat Road, opposite the tram line"
+      },
+      "fields": [
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "dt2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Tell us the occasion. We will pull out the right shelf",
+        "bn": "Tell us the occasion. We will pull out the right shelf"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Sreemoyee",
+      "small": "Sarees · Gariahat"
+    },
+    "top": {
+      "hero-eyebrow": "Gariahat · Handloom · Since 1984",
+      "h1": "Sarees woven <em>by hand,</em> chosen slowly.",
+      "p": "Tant from Phulia, Jamdani from Shantipur, Baluchari from Bishnupur and Benarasi for the wedding day. One floor, no rush, tea while you look. Blouse stitching upstairs.",
+      "textlink": "See the collection",
+      "photo": {
+        "src": "/demo/saree/images/hero.jpg",
+        "alt": "A woman in a red handloom saree with gold thread work, standing against a carved stone wall"
+      },
+      "hero-caption": "Phulia Tant · Red with zari border",
+      "hero-meta": {
+        "items": [
+          {
+            "div": "<b>1984</b>Open in Gariahat"
+          },
+          {
+            "div": "<b>40+</b>Weaver families"
+          },
+          {
+            "div": "<b>3 days</b>Blouse stitching"
+          }
+        ]
+      }
+    },
+    "collection": {
+      "num": "The collection",
+      "h2": "What is on the <em>shelves</em> this season.",
+      "p": "Prices are starting prices for the plainest piece in each weave. We will always tell you which village a saree came from and who wove it, if we know.",
+      "coll": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/saree/images/silk-pattern.jpg",
+              "alt": "Close-up of a silk saree with a traditional woven pattern"
+            },
+            "h3": "Jamdani",
+            "from": "From<b>&#8377;3,200</b>",
+            "p": "Fine cotton with motifs woven in by hand, from Shantipur and Phulia. Light enough for a Kolkata October."
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/green-saree.jpg",
+              "alt": "A woman wearing a green saree"
+            },
+            "h3": "Tant",
+            "from": "From<b>&#8377;850</b>",
+            "p": "Starched cotton with a woven border. Our biggest shelf. Over 200 pieces in plain, checked and floral."
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/banarasi-blue.jpg",
+              "alt": "Blue Benarasi silk saree with gold zari work"
+            },
+            "h3": "Benarasi",
+            "from": "From<b>&#8377;9,500</b>",
+            "p": "Katan silk with zari. Bridal reds and a few unusual blues and greens for the reception."
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/lavender-saree.jpg",
+              "alt": "A woman in a lavender saree, portrait"
+            },
+            "h3": "Linen & Khadi",
+            "from": "From<b>&#8377;1,900</b>",
+            "p": "Handspun and handwoven. Plain colours, a thin border. Popular with teachers and doctors."
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/orange-saree.jpg",
+              "alt": "A woman in an orange silk saree with traditional jewellery"
+            },
+            "h3": "Baluchari",
+            "from": "From<b>&#8377;7,800</b>",
+            "p": "Bishnupur silk with stories from the epics woven into the pallu. Each one takes a weaver a week."
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/folded-stacks.jpg",
+              "alt": "Stacks of folded sarees and fabrics on a shelf"
+            },
+            "h3": "Garad & Korial",
+            "from": "From<b>&#8377;4,200</b>",
+            "p": "White silk with a red border, for Ashtami anjali and the bride’s shubho drishti."
+          }
+        ]
+      }
+    },
+    "handloom": {
+      "band-img": {
+        "src": "/demo/saree/images/loom-hands.jpg",
+        "alt": ""
+      },
+      "num": "Handloom",
+      "h2": "We buy from the <em>loom,</em> not the wholesaler.",
+      "p": "Twice a month someone from the shop takes the train to Phulia and Shantipur. We sit with the weaver families we have known since the eighties, see what is on the loom and pay on the spot. It means fewer middlemen, a fairer price for the weaver and a saree you can trace back to a house and a name.",
+      "p2": "Everything marked handloom in the shop carries a tag with the weaver’s village. Ask us and we will tell you more.",
+      "band-facts": {
+        "items": [
+          {
+            "b": "40+",
+            "span": "Weaver families"
+          },
+          {
+            "b": "2",
+            "span": "Buying trips a month"
+          },
+          {
+            "b": "6",
+            "span": "Weaving districts"
+          },
+          {
+            "b": "0",
+            "span": "Powerloom sold as handloom"
+          }
+        ]
+      }
+    },
+    "bridal": {
+      "num": "For the bride",
+      "h2": "One afternoon, the whole <em>trousseau.</em>",
+      "p": "Book a bridal sitting and we close a corner of the shop for you and your family for two hours. Tea, a chair for grandmother, and every Benarasi we have laid out one by one.",
+      "bridal-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/saree/images/bride-saree.jpg",
+              "alt": "A bride in a traditional red saree and gold jewellery"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/bride-red.jpg",
+              "alt": "An Indian bride in a red saree, close portrait"
+            }
+          }
+        ]
+      },
+      "bridal-list": {
+        "items": [
+          {
+            "div": "<b>The wedding Benarasi</b>: red, maroon or rani pink, &#8377;9,500 to &#8377;48,000."
+          },
+          {
+            "div": "<b>Reception saree</b>: Kanjivaram, Paithani or a dark Benarasi."
+          },
+          {
+            "div": "<b>Shubho drishti Korial</b>: white silk with red border, from &#8377;4,200."
+          },
+          {
+            "div": "<b>Tattva sarees</b>: 7, 11 or 21 sarees for the gift trays, priced as a set."
+          },
+          {
+            "div": "<b>Blouses for all of them</b>: measured here, stitched upstairs, ready in 5 days."
+          }
+        ]
+      }
+    },
+    "stitching": {
+      "num": "Blouse stitching",
+      "h2": "Measured downstairs, <em>stitched</em> upstairs.",
+      "p": "Two tailors have worked with us for over fifteen years. Bring your own fabric or pick a blouse piece from the shop. Fall and pico is done while you wait if the shop is not busy.",
+      "photo": {
+        "src": "/demo/saree/images/blouse-stitching.jpg",
+        "alt": "An elderly Indian tailor at his sewing machine in a small workshop"
+      },
+      "figcaption": "Blouse fittings on the first floor. One free alteration within a month.",
+      "th": "Work",
+      "th2": "Ready in",
+      "th3": "Price",
+      "stitch-note": "Fabric charges extra if you take a blouse piece from the shop. Rush orders in 24 hours at 1.5 times the price, if the tailors agree.",
+      "list": {
+        "items": [
+          {
+            "td": "Fall and pico<small>Fall cloth included</small>",
+            "td2": "Same day",
+            "td3": "₹120"
+          },
+          {
+            "td": "Simple blouse<small>Plain, princess cut or back hook</small>",
+            "td2": "3 days",
+            "td3": "₹450"
+          },
+          {
+            "td": "Lined blouse<small>With cotton lining and padding</small>",
+            "td2": "4 days",
+            "td3": "₹750"
+          },
+          {
+            "td": "Designer blouse<small>Boat neck, deep back, piping, latkans</small>",
+            "td2": "5 to 7 days",
+            "td3": "₹1,200+"
+          },
+          {
+            "td": "Bridal blouse<small>Zardozi or thread work by hand</small>",
+            "td2": "2 to 3 weeks",
+            "td3": "₹3,500+"
+          },
+          {
+            "td": "Petticoat<small>Cotton or satin, any colour</small>",
+            "td2": "2 days",
+            "td3": "₹350"
+          },
+          {
+            "td": "Alteration<small>Loosening, tightening, sleeve change</small>",
+            "td2": "1 to 2 days",
+            "td3": "₹150+"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "num": "In the shop",
+      "h2": "A look <em>inside.</em>",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/saree/images/shop-mannequin.jpg",
+              "alt": "A customer looking at a yellow saree on a mannequin"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/loom-threads.jpg",
+              "alt": "A weaver in a turban working at a handloom"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/yellow-fabric-hand.jpg",
+              "alt": "A hand holding a bright yellow fabric"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/embroidery.jpg",
+              "alt": "An artisan sewing embroidery on yellow fabric"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/shop-browsing.jpg",
+              "alt": "A woman in a saree holding up a blue and white saree at a busy market"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/saree/images/choosing-fabric.jpg",
+              "alt": "Two shopkeepers behind a counter stacked with colourful sarees"
+            }
+          }
+        ]
+      }
+    },
+    "services": {
+      "num": "Small things we do",
+      "h2": "Because a saree is never <em>just</em> a saree.",
+      "serv": {
+        "items": [
+          {
+            "h3": "Home trial",
+            "p": "Within 5 km of Gariahat we bring up to 8 sarees to your home for a bridal or elderly customer. ₹300, adjusted on purchase."
+          },
+          {
+            "h3": "Gift packing",
+            "p": "Tattva trays and gift boxes packed in the shop with a hand-written card. Free for sets of 5 or more."
+          },
+          {
+            "h3": "Courier anywhere",
+            "p": "We send sarees across India and abroad. Photos and a video on WhatsApp before we pack."
+          },
+          {
+            "h3": "Care and repair",
+            "p": "Starching, dry cleaning and zari repair through people we trust. Ask at the counter for a date."
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "quotes": {
+        "items": [
+          {
+            "p": "They remembered which Tant my mother bought three years ago and found a matching one for me. That does not happen in a mall."
+          },
+          {
+            "p": "Bought my daughter’s wedding Benarasi here. No pressure, no hurry, and the blouses fitted first time."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "num": "Visit",
+      "h2": "On Gariahat Road, opposite the <em>tram line.</em>",
+      "p": "A first-floor shop with the sign in magenta. Stairs on the left of the sweet shop at the entrance. Parking on the side lane after 7 pm.",
+      "dt": "Address",
+      "button": "Get directions",
+      "dt2": "Hours",
+      "dt3": "Phone and WhatsApp",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "11:00 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "11:00 am – 6:00 pm"
+          },
+          {
+            "td": "Bridal sittings",
+            "td2": "By appointment, any day"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sreemoyee Sarees sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=9%2F1A%20Gariahat%20Road%2C%20Kolkata%20700019",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Sreemoyee",
+      "small": "Sarees · Gariahat",
+      "p": "Handloom and bridal sarees from Bengal’s weaving villages, with blouse stitching in-house. In Gariahat since 1984.",
+      "h4": "Shop",
+      "h42": "Visit",
+      "li": "9/1A Gariahat Road, 1st floor, Kolkata 700019",
+      "li2": "Mon–Sat 11 am – 9 pm · Sun 11 am – 6 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Collection"
+          },
+          {
+            "button": "Handloom"
+          },
+          {
+            "button": "Bridal sittings"
+          },
+          {
+            "button": "Blouse stitching"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Sreemoyee Sarees | Handloom, Tant, Jamdani and Bridal Sarees, Gariahat",
+      "description": "Handloom Tant, Jamdani, Baluchari and bridal Benarasi sarees in Gariahat, Kolkata, with blouse stitching done in-house. Open every day from 11 am."
+    }
+  }
+}

@@ -1,0 +1,1656 @@
+{
+  "site": "banquet-hall",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Rajbari Banquets",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Two halls on VIP Road, for 150 or 400 guests",
+            "bn": "Two halls on VIP Road, for 150 or 400 guests"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "halls",
+      "label": {
+        "en": "Padma for a close gathering. Ganga for the whole para",
+        "bn": "Padma for a close gathering. Ganga for the whole para"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "hall-cap",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "hall-cap2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "spec",
+          "label": {
+            "en": "Hall onePadma",
+            "bn": "Hall onePadma"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec2",
+          "label": {
+            "en": "Hall twoGanga",
+            "bn": "Hall twoGanga"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rates",
+      "label": {
+        "en": "The rate for the day, by hall and by event",
+        "bn": "The rate for the day, by hall and by event"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "sub",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt9",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small4",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt11",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "amt12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "amt13",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "rate-notes",
+          "label": {
+            "en": "The rate for the day, by hall and by event",
+            "bn": "The rate for the day, by hall and by event"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "included",
+      "label": {
+        "en": "What comes with the hall, and what does not",
+        "bn": "What comes with the hall, and what does not"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "incl",
+          "label": {
+            "en": "What comes with the hall, and what does not",
+            "bn": "What comes with the hall, and what does not"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "label": {
+        "en": "Yours or ours. Both are fine",
+        "bn": "Yours or ours. Both are fine"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "tag2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag3",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "tag4",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "booking",
+      "label": {
+        "en": "Five steps from a message to the wedding day",
+        "bn": "Five steps from a message to the wedding day"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Five steps from a message to the wedding day",
+            "bn": "Five steps from a message to the wedding day"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Weddings and receptions held here",
+        "bn": "Weddings and receptions held here"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Weddings and receptions held here",
+            "bn": "Weddings and receptions held here"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1799"
+            }
+          ]
+        },
+        {
+          "key": "gallery2",
+          "label": {
+            "en": "Weddings and receptions held here",
+            "bn": "Weddings and receptions held here"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "After the event",
+        "bn": "After the event"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "After the event",
+            "bn": "After the event"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On VIP Road, next to the Baguiati flyover",
+        "bn": "On VIP Road, next to the Baguiati flyover"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Send the date. We will tell you what is free",
+        "bn": "Send the date. We will tell you what is free"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "The hall",
+            "bn": "The hall"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Rajbari Banquets",
+      "small": "Baguiati · two halls"
+    },
+    "top": {
+      "hero-eyebrow": "Weddings · Receptions · Birthdays · Corporate",
+      "h1": "Two halls on VIP Road, <em>for 150 or 400 guests.</em>",
+      "p": "Both air-conditioned, both with parking at the gate and rooms upstairs for the family. Bring your own caterer or use ours. The rate for the day is on this page, so you know before you call.",
+      "button": "See the rate card",
+      "photo": {
+        "src": "/demo/banquet-hall/images/hero.jpg",
+        "alt": "Banquet hall with chandeliers, painted ceiling and rows of covered chairs"
+      },
+      "b": "Dates go on WhatsApp",
+      "span": "Send the date and the guest count. We reply within the hour with what is free and the rate.",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "150 + 400",
+            "span": "Seats in two AC halls"
+          },
+          {
+            "b": "40",
+            "span": "Cars in the parking"
+          },
+          {
+            "b": "4",
+            "span": "AC rooms for the family"
+          }
+        ]
+      }
+    },
+    "halls": {
+      "kicker": "The two halls",
+      "h2": "Padma for a close gathering. Ganga for the whole para.",
+      "p": "Both halls are on the ground floor with their own entrance, their own washrooms and their own dining area. On a big wedding you can take both.",
+      "photo": {
+        "src": "/demo/banquet-hall/images/hall-2.jpg",
+        "alt": "A smaller banquet hall with round tables and soft lighting"
+      },
+      "hall-cap": "<b>150</b>guests",
+      "h3": "<small>Hall one</small>Padma",
+      "p2": "For a birthday, annaprashan, engagement or a wedding of up to 150. Seating for 100 at a time and a buffet line along one wall.",
+      "b": "₹35,000",
+      "span": "per day, birthday rate · see the rate card",
+      "photo2": {
+        "src": "/demo/banquet-hall/images/hall-large.jpg",
+        "alt": "A large banquet hall with a long red carpet, chandeliers and a stage"
+      },
+      "hall-cap2": "<b>400</b>guests",
+      "h32": "<small>Hall two</small>Ganga",
+      "p3": "For a wedding or reception of 250 to 400. A separate dining hall at the back seats 150 in one sitting, so the main hall stays for the ceremony and the guests.",
+      "b2": "₹85,000",
+      "span2": "per day, wedding rate · see the rate card",
+      "spec": {
+        "items": [
+          {
+            "b": "Floor area",
+            "span": "2,400 sq ft"
+          },
+          {
+            "b": "Seating",
+            "span": "100 at tables, 150 standing"
+          },
+          {
+            "b": "Dining",
+            "span": "Same hall, buffet"
+          },
+          {
+            "b": "Stage",
+            "span": "12 ft x 8 ft"
+          },
+          {
+            "b": "Family rooms",
+            "span": "1 AC room"
+          },
+          {
+            "b": "Washrooms",
+            "span": "2 ladies, 2 gents"
+          }
+        ]
+      },
+      "spec2": {
+        "items": [
+          {
+            "b": "Floor area",
+            "span": "6,000 sq ft plus dining"
+          },
+          {
+            "b": "Seating",
+            "span": "300 at chairs, 400 standing"
+          },
+          {
+            "b": "Dining",
+            "span": "Separate hall, 150 at a time"
+          },
+          {
+            "b": "Stage",
+            "span": "24 ft x 12 ft"
+          },
+          {
+            "b": "Family rooms",
+            "span": "3 AC rooms, 1 with attached bath"
+          },
+          {
+            "b": "Washrooms",
+            "span": "4 ladies, 4 gents"
+          }
+        ]
+      }
+    },
+    "rates": {
+      "kicker": "Rate card",
+      "h2": "The rate for the day, by hall and by event.",
+      "p": "One rate covers the hall from 8 in the morning to 11 at night. There is no extra charge for the family rooms, the parking or the stage.",
+      "th": "Event",
+      "th2": "Padma<small>150 guests</small>",
+      "th3": "Ganga<small>400 guests</small>",
+      "th4": "Both halls<small>Up to 550</small>",
+      "b": "Wedding",
+      "small": "Biye day with the mandap. Includes the night before for setup.",
+      "amt": "₹55,000",
+      "amt2": "₹85,000",
+      "sub": "Most booked",
+      "amt3": "₹1,25,000",
+      "b2": "Reception",
+      "small2": "Bou bhaat or reception evening, 4 pm to 11 pm.",
+      "amt4": "₹45,000",
+      "amt5": "₹75,000",
+      "amt6": "₹1,10,000",
+      "b3": "Birthday, annaprashan, engagement",
+      "small3": "Half day, 8 hours, morning or evening.",
+      "amt7": "₹35,000",
+      "amt8": "₹60,000",
+      "amt9": "₹90,000",
+      "b4": "Corporate",
+      "small4": "Conference, dealer meet, annual day. Monday to Thursday, 9 am to 6 pm. Projector and mics included.",
+      "amt10": "₹28,000",
+      "amt11": "₹50,000",
+      "amt12": "₹75,000",
+      "b5": "Off-season discount",
+      "small5": "Ashar to Bhadra (mid June to mid September), any event.",
+      "amt13": "20% off the rates above",
+      "rate-notes": {
+        "items": [
+          {
+            "li": "GST at 18% is added to the hall rate."
+          },
+          {
+            "li": "A refundable deposit of ₹10,000 is taken against breakage and returned within 3 days."
+          },
+          {
+            "li": "Generator backup is included. Electricity for a DJ or extra lights is charged at meter reading."
+          },
+          {
+            "li": "Hours after 11 pm are ₹3,000 per hour, allowed till midnight only."
+          }
+        ]
+      }
+    },
+    "included": {
+      "kicker": "What is included",
+      "h2": "What comes with the hall, and what does not.",
+      "incl": {
+        "items": [
+          {
+            "h3": "In the hall"
+          },
+          {
+            "h3": "For the family"
+          },
+          {
+            "h3": "For the caterer"
+          }
+        ]
+      }
+    },
+    "rules": {
+      "kicker": "Caterer and decoration",
+      "h2": "Yours or ours. Both are fine.",
+      "h3": "Food: in-house or your own caterer",
+      "p": "Our in-house caterer serves Bengali and North Indian menus from ₹550 a plate (veg) and ₹750 (non-veg), with a tasting before you book. If you have a family caterer, bring them. There is no charge for an outside caterer and no commission.",
+      "p2": "The caterer gets the kitchen area from 6 am on the day. Cooking on open fire is allowed in the kitchen yard only. The caterer takes their rubbish away.",
+      "tag": "Outside caterer welcome",
+      "tag2": "No corkage on food",
+      "photo": {
+        "src": "/demo/banquet-hall/images/stage-red.jpg",
+        "alt": "Wedding stage decorated with red and gold flowers"
+      },
+      "h32": "Decoration: packages or your own decorator",
+      "p3": "Our decorator does three fixed packages. Basic (stage flowers, entrance gate, chair sashes) ₹25,000. Standard (plus table centrepieces, ceiling drapes, name board) ₹45,000. Full (plus mandap, floral walkway, fairy lights outside) ₹80,000.",
+      "p4": "Outside decorators are allowed. They can start the evening before a wedding. Nails and tape on the walls are not allowed; stands and hooks are provided. DJ and live music till 10 pm, as the law requires.",
+      "tag3": "Outside decorator allowed",
+      "tag4": "Setup the night before"
+    },
+    "booking": {
+      "kicker": "How booking works",
+      "h2": "Five steps from a message to the wedding day.",
+      "p": "Cancellation: the advance is returned in full if you cancel 90 days ahead, half if 30 days ahead, and kept after that. If we can re-book the date, you get it back anyway.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Send the date",
+            "p": "WhatsApp the date, the event and the guest count. We tell you which hall is free and the rate."
+          },
+          {
+            "h3": "See the hall",
+            "p": "Walk in any day between 10 and 7. If there is an event on, we show you the other hall and the rooms."
+          },
+          {
+            "h3": "Pay the advance",
+            "p": "50% of the hall rate holds the date. UPI, cheque or bank transfer. You get a receipt and a booking letter."
+          },
+          {
+            "h3": "Plan the day",
+            "p": "A month before, we sit with you and your caterer and decorator for an hour and write down the timings."
+          },
+          {
+            "h3": "Settle after",
+            "p": "The balance and any extra hours are paid the next morning. The deposit comes back within 3 days."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Recent events",
+      "h2": "Weddings and receptions held here.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/stage.jpg",
+              "alt": "Wedding stage with bright floral arrangements"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/bengali-wedding.jpg",
+              "alt": "A Bengali wedding ceremony with the priest, bride and groom"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/mandap.jpg",
+              "alt": "Floral wedding mandap with chandeliers"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/reception-couple.jpg",
+              "alt": "A couple on a flower-decorated reception stage"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/family.jpg",
+              "alt": "A wedding couple with family on the stage"
+            }
+          }
+        ]
+      },
+      "gallery2": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/hall-chandelier.jpg",
+              "alt": "Banquet hall with chandeliers set for an event"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/ballroom.jpg",
+              "alt": "Ballroom set up with round tables"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/mandap-2.jpg",
+              "alt": "Traditional wedding mandap decorated with flowers"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/seating.jpg",
+              "alt": "Banquet hall seating with decor"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/banquet-hall/images/hall-3.jpg",
+              "alt": "Wedding hall interior with chandeliers"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "What families say",
+      "h2": "After the event.",
+      "quotes": {
+        "items": [
+          {
+            "p": "We took both halls for my brother’s wedding, 480 guests. The dining hall at the back meant nobody queued in the main hall. Parking was sorted, the rooms were clean, and the bill matched the rate card.",
+            "span": "· Kestopur"
+          },
+          {
+            "p": "Birthday for my daughter in Padma, 120 people. We brought our own caterer and our own decorator and nobody asked for a single rupee extra. The manager stayed till the last guest left.",
+            "span": "· Baguiati"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the hall",
+      "h2": "On VIP Road, next to the Baguiati flyover.",
+      "b": "Address",
+      "p": "88 VIP Road, Baguiati<br>Kolkata 700059",
+      "button": "Get directions →",
+      "b2": "Office hours for viewing",
+      "b3": "Phone and WhatsApp",
+      "p2": "15 minutes from the airport. Auto and bus stop at the gate.",
+      "hours": {
+        "items": [
+          {
+            "td": "Every day",
+            "td2": "10:00 am – 7:00 pm"
+          },
+          {
+            "td": "Event days",
+            "td2": "Hall open 8 am – 11 pm"
+          },
+          {
+            "td": "Phone",
+            "td2": "9 am – 9 pm"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Send the date. We will tell you what is free.",
+      "p": "Date, event and a rough guest count. You will hear back within the hour with the hall, the rate and a time to come and see it."
+    },
+    "footer": {
+      "b": "Rajbari Banquets",
+      "small": "Baguiati · two halls",
+      "p": "Two AC halls for 150 and 400 guests on VIP Road. Parking, family rooms, your caterer or ours, and the rate written down before you book.",
+      "h4": "The hall",
+      "h42": "Find us",
+      "li": "88 VIP Road, Baguiati, Kolkata 700059",
+      "li2": "Viewing every day 10 am – 7 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Padma and Ganga"
+          },
+          {
+            "button": "Rate card"
+          },
+          {
+            "button": "What is included"
+          },
+          {
+            "button": "How booking works"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Rajbari Banquets sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=88%20VIP%20Road%2C%20Baguiati%2C%20Kolkata%20700059",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Rajbari Banquets | Marriage and Banquet Hall in Baguiati, Kolkata",
+      "description": "Two AC banquet halls in Baguiati, Kolkata for 150 and 400 guests. Parking, family rooms, in-house or outside caterer allowed. Rate card per day for weddings, receptions, birthdays and corporate events. Check dates on WhatsApp."
+    }
+  }
+}

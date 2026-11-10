@@ -1,0 +1,1808 @@
+{
+  "site": "photo-studio",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Chhobighar Studio",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Seven things, done every week for twenty-seven years",
+        "bn": "Seven things, done every week for twenty-seven years"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "svc",
+          "label": {
+            "en": "Seven things, done every week for twenty-seven years",
+            "bn": "Seven things, done every week for twenty-seven years"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "from",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weddings",
+      "label": {
+        "en": "Three packages. Nothing hidden in the footnotes",
+        "bn": "Three packages. Nothing hidden in the footnotes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "price",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "for",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "price2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "for2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "price3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "for3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "shoots",
+      "label": {
+        "en": "Before the wedding, after the baby, and for the shop",
+        "bn": "Before the wedding, after the baby, and for the shop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "shoots",
+          "label": {
+            "en": "Before the wedding, after the baby, and for the shop",
+            "bn": "Before the wedding, after the baby, and for the shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "Everything, with the price next to it",
+        "bn": "Everything, with the price next to it"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "b6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "b9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "small6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee9",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "tnote",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "print",
+      "label": {
+        "en": "Prints from the lab in an hour. Frames from our own workshop",
+        "bn": "Prints from the lab in an hour. Frames from our own workshop"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:802"
+        },
+        {
+          "key": "kicker2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Prints from the lab in an hour. Frames from our own workshop",
+            "bn": "Prints from the lab in an hour. Frames from our own workshop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "The whole venue in one shot, and the baraat from above",
+            "bn": "The whole venue in one shot, and the baraat from above"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": {
+        "en": "Four steps from the first message to the album",
+        "bn": "Four steps from the first message to the album"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Four steps from the first message to the album",
+            "bn": "Four steps from the first message to the album"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From the last season",
+        "bn": "From the last season"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "From the last season",
+            "bn": "From the last season"
+          },
+          "min": 1,
+          "max": 18,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "Two of them, in their words",
+        "bn": "Two of them, in their words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two of them, in their words",
+            "bn": "Two of them, in their words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Diamond Harbour Road, opposite Behala tram depot",
+        "bn": "Diamond Harbour Road, opposite Behala tram depot"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send us the date. We will tell you today if we are free",
+        "bn": "Send us the date. We will tell you today if we are free"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Studio",
+            "bn": "Studio"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Chhobighar",
+      "small": "Studio · Behala"
+    },
+    "top": {
+      "h1": "Passport photo in ten minutes. <span>Wedding album in ten days.</span>",
+      "p": "A photo studio on Diamond Harbour Road since 1998. Walk in for passport photos, book us for a wedding, bring the baby for the annaprashan shoot, or send your shop's products for clean white-background photos.",
+      "button": "Price list",
+      "photo": {
+        "src": "/demo/photo-studio/images/hero.jpg",
+        "alt": "A photographer in a checked shirt raising his camera with a long lens at a pandal"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "10 min",
+            "span": "Passport photos, printed while you wait"
+          },
+          {
+            "b": "420+",
+            "span": "Weddings covered since 1998"
+          },
+          {
+            "b": "10 days",
+            "span": "Edited photos delivered after the wedding"
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we do",
+      "h2": "Seven things, done every week for twenty-seven years.",
+      "svc": {
+        "items": [
+          {
+            "n": "01",
+            "h3": "Passport and visa photos",
+            "p": "White or light-blue background, correct size for Indian passport, US, UK, Schengen and most visa forms. Shot, checked and printed in ten minutes. Soft copy sent on WhatsApp for online forms.",
+            "from": "8 copies ₹80"
+          },
+          {
+            "n": "02",
+            "h3": "Wedding photography and video",
+            "p": "Aiburobhat to bou bhaat. Two photographers on the main day, candid and traditional both, with a cinematic highlight video. Three packages below.",
+            "from": "From ₹35,000"
+          },
+          {
+            "n": "03",
+            "h3": "Pre-wedding shoot",
+            "p": "Half a day at Prinsep Ghat, Santiniketan, Victoria or a location you choose. Two outfit changes, 60 edited photos, one short reel.",
+            "from": "₹12,000 half day"
+          },
+          {
+            "n": "04",
+            "h3": "Baby and family shoots",
+            "p": "Newborn, annaprashan, first birthday. In the studio or at home. Props, a warm room and a patient photographer who waits for the smile.",
+            "from": "₹4,500 per hour"
+          },
+          {
+            "n": "05",
+            "h3": "Product photos for shops",
+            "p": "White background, correct colour, ready for Meesho, Amazon, Instagram or your own website. Sarees, jewellery, food, furniture. Bring the goods, collect the files by evening.",
+            "from": "₹60 per photo, min 20"
+          },
+          {
+            "n": "06",
+            "h3": "Photo printing and framing",
+            "p": "Lab prints from 4x6 to 24x36 on the same day. Frames made in our own workshop in wood, metal and fibre. Old photos restored and reprinted.",
+            "from": "4x6 print ₹10"
+          },
+          {
+            "n": "07",
+            "h3": "Drone add-on",
+            "p": "Aerial shots and video of the venue, the baraat and the bidaay. Licensed pilot, insured drone, flown only where permitted. Add to any wedding package.",
+            "from": "₹8,000 per day"
+          }
+        ]
+      }
+    },
+    "weddings": {
+      "kicker": "Wedding packages",
+      "h2": "Three packages. Nothing hidden in the footnotes.",
+      "p": "Prices are for weddings within Kolkata. Outside the city, add travel and stay at cost. Fifty percent to book the date, the rest on delivery of the album.",
+      "h3": "Basic",
+      "price": "₹35,000",
+      "for": "One day, one photographer. For a small wedding or a reception alone.",
+      "tag": "Most booked",
+      "h32": "Standard",
+      "price2": "₹65,000",
+      "for2": "Two days, photo and video. The wedding and the reception, start to finish.",
+      "h33": "Premium",
+      "price3": "₹1,10,000",
+      "for3": "Three days with drone and pre-wedding included. Mehendi, wedding, reception."
+    },
+    "shoots": {
+      "kicker": "Shoots",
+      "h2": "Before the wedding, after the baby, and for the shop.",
+      "p": "Swipe on your phone.",
+      "shoots": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/couple-santiniketan.jpg",
+              "alt": "A couple dancing under a thatched roof, she in a green gown and he in a printed shirt"
+            },
+            "h3": "Pre-wedding",
+            "p": "Half a day, two outfits, 60 edited photos and one reel. Santiniketan, Prinsep Ghat or a place of your own.",
+            "b": "₹12,000 half day · ₹20,000 full day"
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/baby-traditional.jpg",
+              "alt": "A baby in a white and blue outfit sitting on a marble floor"
+            },
+            "h3": "Baby and annaprashan",
+            "p": "One hour at the studio or your home. We bring the props and the patience. 25 edited photos, two prints framed.",
+            "b": "₹4,500 per hour"
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/product-shoe.jpg",
+              "alt": "A camera on a tripod photographing a black sneaker on a white background"
+            },
+            "h3": "Product photos for shops",
+            "p": "Clean white background, true colour, cut-out ready. For sarees, jewellery, food and anything that sells online.",
+            "b": "₹60 per photo, minimum 20"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price list",
+      "h2": "Everything, with the price next to it.",
+      "p": "Updated January 2026. GST is included in every figure here. Cash, UPI or card at the counter.",
+      "th": "Service",
+      "th2": "What you get",
+      "th3": "Time",
+      "th4": "Price",
+      "b": "Passport photos",
+      "small": "Indian passport, Aadhaar, PAN, school forms",
+      "td": "8 copies plus soft copy on WhatsApp",
+      "td2": "10 minutes",
+      "fee": "&#8377;80<small>16 copies &#8377;120</small>",
+      "b2": "Visa photos",
+      "small2": "US 2x2, UK, Schengen, Canada and others",
+      "td3": "6 copies plus soft copy to the exact spec",
+      "td4": "15 minutes",
+      "fee2": "₹150",
+      "b3": "Studio portrait",
+      "small3": "Matrimonial, LinkedIn, office ID, family",
+      "td5": "20 minutes in the studio, 5 edited photos",
+      "td6": "Same day",
+      "fee3": "₹600",
+      "b4": "Pre-wedding shoot",
+      "td7": "Half day, 2 outfits, 60 edited photos, 1 reel",
+      "td8": "7 days",
+      "fee4": "&#8377;12,000<small>full day &#8377;20,000</small>",
+      "b5": "Baby or family shoot",
+      "td9": "1 hour, studio or home, 25 edited photos, 2 framed prints",
+      "td10": "5 days",
+      "fee5": "₹4,500",
+      "b6": "Product photography",
+      "small4": "White or coloured background",
+      "td11": "Per edited photo, cut-out ready, minimum 20",
+      "td12": "Same day for up to 40",
+      "fee6": "&#8377;60<small>per photo</small>",
+      "b7": "Event coverage",
+      "small5": "Birthday, rice ceremony, office function",
+      "td13": "Per hour, one photographer, 50 edited photos per hour",
+      "td14": "3 days",
+      "fee7": "&#8377;2,500<small>per hour</small>",
+      "b8": "Drone add-on",
+      "td15": "Aerial photo and video, licensed pilot",
+      "td16": "With the package",
+      "fee8": "&#8377;8,000<small>per day</small>",
+      "b9": "Photo restoration",
+      "small6": "Old, torn or faded prints",
+      "td17": "Scan, repair, reprint at the original size",
+      "td18": "3 to 7 days",
+      "fee9": "from ₹400",
+      "tnote": "Wedding packages are on the cards above. Anything not listed, send a message with what you need and we reply with a price the same day."
+    },
+    "print": {
+      "photo": {
+        "src": "/demo/photo-studio/images/framing.jpg",
+        "alt": "Hands measuring a framed photograph with a tape measure on a wooden table"
+      },
+      "kicker": "Printing and framing",
+      "h3": "Prints from the lab in an hour. Frames from our own workshop.",
+      "p": "We print on a proper photo lab machine, not an inkjet, so the colours last. Frames are cut and joined behind the shop. Bring a phone photo and leave with it on the wall.",
+      "photo2": {
+        "src": "/demo/photo-studio/images/drone.jpg",
+        "alt": "Hands holding a folded camera drone outdoors"
+      },
+      "kicker2": "Drone add-on",
+      "h32": "The whole venue in one shot, and the baraat from above.",
+      "p2": "Our pilot is licensed and the drone is insured. We check the venue's permission and the no-fly zones before the day, so you are never told \"not allowed here\" at the last minute. Added to any wedding package or booked alone for a house-warming or a shop opening.",
+      "list": {
+        "items": [
+          {
+            "span": "4x6 print, glossy or matte",
+            "b": "₹10"
+          },
+          {
+            "span": "8x12 print",
+            "b": "₹120"
+          },
+          {
+            "span": "12x18 print",
+            "b": "₹280"
+          },
+          {
+            "span": "24x36 canvas print",
+            "b": "₹2,400"
+          },
+          {
+            "span": "Wooden frame, 8x12 with glass",
+            "b": "from ₹350"
+          },
+          {
+            "span": "Collage frame, 6 photos",
+            "b": "from ₹900"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Wedding day, with any package",
+            "b": "₹8,000"
+          },
+          {
+            "span": "Single event, 2 hours, photo and video",
+            "b": "₹5,000"
+          },
+          {
+            "span": "Property or shop exterior, 10 photos and 1 clip",
+            "b": "₹3,500"
+          }
+        ]
+      }
+    },
+    "how": {
+      "kicker": "Booking a wedding",
+      "h2": "Four steps from the first message to the album.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Send the dates",
+            "p": "Message the wedding and reception dates. We tell you the same day whether we are free and which package fits."
+          },
+          {
+            "h3": "Meet at the studio",
+            "p": "Come and see three real albums, not a brochure. Pick the package. Fifty percent books the date; we give a written receipt."
+          },
+          {
+            "h3": "The days themselves",
+            "p": "We reach an hour before the first ritual. Thirty photos reach your family WhatsApp group that night."
+          },
+          {
+            "h3": "Ten days later",
+            "p": "All edited photos on a pen drive and a private link. Album proofs for approval, then the printed album within three weeks."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Recent work",
+      "h2": "From the last season.",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/haldi.jpg",
+              "alt": "A groom in white surrounded by women in yellow sarees throwing marigold petals at a haldi ceremony"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/garland-exchange.jpg",
+              "alt": "Bride and groom exchanging garlands on a red and gold stage"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/mehndi-hands.jpg",
+              "alt": "A bride's mehndi-covered hands resting on the groom's cream sherwani"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/prewedding-kolkata.jpg",
+              "alt": "A couple in a park, she in a red gown kissing his cheek"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/wedding-couple.jpg",
+              "alt": "A bride and groom in traditional wedding dress, close view"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/portrait-man.jpg",
+              "alt": "A studio portrait of a smiling man in a white shirt on a black background"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/studio-backdrop.jpg",
+              "alt": "The studio floor with two softboxes and a plain paper backdrop"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/product-setup.jpg",
+              "alt": "A product photography set with softbox, reflector and a camera on a tripod"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/photo-studio/images/lenses.jpg",
+              "alt": "A row of camera lenses and a camera body on a table"
+            }
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "kicker": "Clients",
+      "h2": "Two of them, in their words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "We booked Standard for my sister's wedding in Thakurpukur. Thirty photos were in the family group before the bou bhaat ended. My mother has not stopped forwarding them.",
+            "span": "· Thakurpukur, December wedding"
+          },
+          {
+            "p": "I sell sarees on Instagram. Took forty pieces to the studio on a Tuesday, had forty clean photos by evening. Sales that week were double. Now I go every month.",
+            "span": "· Behala, saree seller"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit",
+      "h2": "Diamond Harbour Road, opposite Behala tram depot.",
+      "b": "Address",
+      "p": "14B Diamond Harbour Road, Behala<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Studio hours",
+      "b3": "Phone",
+      "p2": "On a shoot day we may not pick up. WhatsApp is read by evening.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:00 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 2:00 pm"
+          },
+          {
+            "td": "Passport photos",
+            "td2": "Walk in, no booking"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Chhobighar Studio sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=14B%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Chhobighar",
+      "small": "Studio · Behala",
+      "p": "Passport photos, weddings, pre-wedding and baby shoots, product photos, printing and framing. On Diamond Harbour Road since 1998.",
+      "h4": "Studio",
+      "h42": "Find us",
+      "li": "14B Diamond Harbour Road, Behala, Kolkata 700034",
+      "li2": "Mon–Sat 10 am – 9 pm · Sun 10 am – 2 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Services"
+          },
+          {
+            "button": "Wedding packages"
+          },
+          {
+            "button": "Price list"
+          },
+          {
+            "button": "Printing and framing"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Chhobighar Studio | Photo Studio in Behala, Kolkata",
+      "description": "Passport photos in 10 minutes, wedding photography and video packages, pre-wedding, baby and product shoots, photo printing and framing in Behala, Kolkata. Drone add-on available."
+    }
+  }
+}

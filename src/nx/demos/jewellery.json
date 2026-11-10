@@ -1,0 +1,2347 @@
+{
+  "site": "jewellery",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Swarnalata Jewellers",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1594"
+        },
+        {
+          "key": "hero-since",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Gold you can weigh, check and trust",
+            "bn": "Gold you can weigh, check and trust"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collections",
+      "label": {
+        "en": "Gold and silver for every occasion in the family",
+        "bn": "Gold and silver for every occasion in the family"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1500"
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1920"
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:802"
+        },
+        {
+          "key": "small4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "small5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "small6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo7",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:798"
+        },
+        {
+          "key": "small7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p8",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo8",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "small8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p9",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "charges",
+      "label": {
+        "en": "What you pay for, and how you know the gold is real",
+        "bn": "What you pay for, and how you know the gold is real"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "dt2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p7",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "exchange",
+      "label": {
+        "en": "Four steps, all of them in front of you",
+        "bn": "Four steps, all of them in front of you"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "flow",
+          "label": {
+            "en": "Four steps, all of them in front of you",
+            "bn": "Four steps, all of them in front of you"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "exchange-photo",
+          "label": {
+            "en": "Four steps, all of them in front of you",
+            "bn": "Four steps, all of them in front of you"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scheme",
+      "label": {
+        "en": "Pay 11 months. We pay the 12th",
+        "bn": "Pay 11 months. We pay the 12th"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "caption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td19",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td20",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td21",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td22",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td23",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td24",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td25",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td26",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td27",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td28",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td29",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td30",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td31",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td32",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td33",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td34",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td35",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td36",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td37",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td38",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "Forty years on Rash Behari Avenue",
+        "bn": "Forty years on Rash Behari Avenue"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "story-facts",
+          "label": {
+            "en": "Forty years on Rash Behari Avenue",
+            "bn": "Forty years on Rash Behari Avenue"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "story-stack",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you buy",
+        "bn": "Before you buy"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "acc",
+          "label": {
+            "en": "Before you buy",
+            "bn": "Before you buy"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few pieces and the people who wear them",
+        "bn": "A few pieces and the people who wear them"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "A few pieces and the people who wear them",
+            "bn": "A few pieces and the people who wear them"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-10",
+      "label": {
+        "en": "Section 10",
+        "bn": "অংশ 10"
+      },
+      "fields": [],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rash Behari Avenue, a short walk from Gariahat crossing",
+        "bn": "On Rash Behari Avenue, a short walk from Gariahat crossing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send us a photo of what you have in mind",
+        "bn": "Send us a photo of what you have in mind"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Swarnalata Jewellers",
+      "small": "Gariahat · since 1984"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/jewellery/images/hero.jpg",
+        "alt": ""
+      },
+      "hero-since": "<span></span>BIS hallmarked &middot; Gariahat since 1984",
+      "h1": "Gold you can weigh, <em>check and trust.</em>",
+      "p": "Every piece in our shop is 22K or 18K BIS hallmarked, weighed in front of you, and billed with the rate, the making charge and the GST written out on one line each. Bridal sets, everyday gold, silver for puja and gifts.",
+      "button": "See the collections",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "1984",
+            "span": "Same family, same counter"
+          },
+          {
+            "b": "100%",
+            "span": "BIS hallmarked gold"
+          },
+          {
+            "b": "11 + 1",
+            "span": "Months savings scheme"
+          }
+        ]
+      }
+    },
+    "collections": {
+      "kicker": "Collections by occasion",
+      "h2": "Gold and silver for every occasion in the family.",
+      "p": "Starting prices are for the lightest piece in each group at a 22K rate of ₹9,800 per gram, including making charge and GST. The final price changes with the day’s rate and the weight you pick.",
+      "photo": {
+        "src": "/demo/jewellery/images/bridal-set.jpg",
+        "alt": "A heavy gold bridal set with two long necklaces, a choker and jhumkas on a display bust"
+      },
+      "small": "Wedding",
+      "h3": "Bridal sets",
+      "p2": "Sita haar, choker, kaan, tikli, mantasha and chur made as one matched set. Order 6 to 8 weeks before the wedding.",
+      "span": "About 40 g",
+      "b": "From ₹4,50,000",
+      "photo2": {
+        "src": "/demo/jewellery/images/jhumka.jpg",
+        "alt": "A gold jhumka earring with pearl drops on a woman's ear"
+      },
+      "small2": "Pujo",
+      "h32": "Earrings and jhumka",
+      "p3": "Studs from 1.5 g, jhumkas from 4 g, in 22K and lighter 18K.",
+      "span2": "Studs 1.5 g",
+      "b2": "From ₹16,500",
+      "photo3": {
+        "src": "/demo/jewellery/images/pendant-saree.jpg",
+        "alt": "A gold pendant with a red stone on a thin chain, worn with a yellow saree"
+      },
+      "small3": "Everyday",
+      "h33": "Chains and pendants",
+      "p4": "Chains from 3 g for daily wear, with a weight slip.",
+      "span3": "3 g chain",
+      "b3": "From ₹33,000",
+      "photo4": {
+        "src": "/demo/jewellery/images/bangles-display.jpg",
+        "alt": "Four carved gold bangles with stone work stacked on a dark cloth"
+      },
+      "small4": "Wedding · Gift",
+      "h34": "Bangles and chur",
+      "p5": "Plain, carved and stone-set, sold as pairs. We make shankha-pola with gold caps for brides.",
+      "span4": "8 g pair",
+      "b4": "From ₹88,000",
+      "photo5": {
+        "src": "/demo/jewellery/images/kundan-set.jpg",
+        "alt": "A kundan necklace set with matching earrings and maang tikka on white cloth"
+      },
+      "small5": "Reception",
+      "h35": "Kundan and polki sets",
+      "p6": "Lighter sets for the reception and bou bhaat. Gold base with set stones, so the weight stays lower than a plain gold set.",
+      "span5": "Gold base",
+      "b5": "From ₹1,65,000",
+      "photo6": {
+        "src": "/demo/jewellery/images/chandelier-earrings.jpg",
+        "alt": "Gold chandelier earrings with green stones and pearls on a display stand"
+      },
+      "small6": "Occasion",
+      "h36": "Stone-set gold",
+      "p7": "Emerald, ruby and pearl in 22K. Stone weight written on the bill.",
+      "span6": "Stones billed apart",
+      "b6": "From ₹42,000",
+      "photo7": {
+        "src": "/demo/jewellery/images/mehendi-bracelets.jpg",
+        "alt": "A bride's hand with mehendi wearing gold bangles and two rings"
+      },
+      "small7": "Annaprashan · Gift",
+      "h37": "Rings and baby gold",
+      "p8": "Rings from 2 g. Baby bangles, a tiny chain, or a coin of 1 g, 2 g or 5 g in a gift box.",
+      "span7": "1 g coin",
+      "b7": "From ₹10,900",
+      "photo8": {
+        "src": "/demo/jewellery/images/anklet.jpg",
+        "alt": "A silver anklet with coloured stones on a foot painted with alta"
+      },
+      "small8": "Silver",
+      "h38": "Silver: payel, puja and gifts",
+      "p9": "Payel and toe rings, silver pradeep, kosha-kushi, Lakshmi feet, baby bowls and spoons. All 92.5 silver, sold by weight.",
+      "span8": "Payel, per pair",
+      "b8": "From ₹2,800"
+    },
+    "charges": {
+      "kicker": "Making charges and hallmark",
+      "h2": "What you pay for, and how you know the gold is real.",
+      "h3": "<span class=\"n\">Bill</span>Four lines, nothing else",
+      "p": "A gold bill has only four parts: the weight of gold, the day’s rate, the making charge for the work, and 3% GST. Wastage is not charged separately. The making charge is the whole labour cost. GST of 3% is added on the total of gold value plus making charge. If you bring old gold, its value comes off before GST is worked out.",
+      "h32": "<span class=\"n\">Making</span>How we charge for the work",
+      "p2": "Simple work costs less, fine work costs more. The charge is fixed before we start and is written on the estimate you take home.",
+      "dt": "Machine-made chains, per gram of gold",
+      "dd": "₹350 / g",
+      "dt2": "Plain bangles, rings, studs",
+      "dd2": "8%",
+      "dt3": "Carved and filigree work (jhumka, kaan, pendants)",
+      "dd3": "12% to 14%",
+      "dt4": "Stone-set and kundan, stone weight billed separately",
+      "dd4": "16% to 18%",
+      "dt5": "Bridal sets made to order, fixed after the design is agreed",
+      "dd5": "14% to 20%",
+      "dt6": "Silver items, on the silver value",
+      "dd6": "15% to 25%",
+      "dt7": "Gold coins of 1 g, 2 g, 5 g and 10 g",
+      "dd7": "₹300 to ₹600",
+      "h33": "<span class=\"n\">916</span>22K gold is stamped 916",
+      "p3": "91.6% pure. This is what most Bengali ornaments are made in: bangles, haar, kaan, chur. Soft enough for fine carving, which is why the old designs are all in 22K.",
+      "h34": "<span class=\"n\">750</span>18K gold is stamped 750",
+      "p4": "75% pure, harder, better for stone setting and thin everyday chains. Priced lower per gram. A good choice for a daily-wear chain that will not bend.",
+      "h35": "<span class=\"n\">925</span>Silver is 92.5",
+      "p5": "Sterling silver for payel, puja items and gifts. Hallmarked where the piece is large enough to take a stamp.",
+      "h36": "<span class=\"n\">HUID</span>A 6-digit code on every piece",
+      "p6": "Since 2023 every gold ornament sold in India must carry a BIS hallmark with a unique 6-digit HUID. Ours do. Type the number into the BIS Care app at the counter and see the purity record before you pay. We will show you where the stamp is with a loupe.",
+      "h37": "<span class=\"n\">XRF</span>Free purity check on any gold",
+      "p7": "Our XRF machine reads purity in two minutes without scratching the piece. Bring gold from anywhere, bought from anyone, and we will test it for no charge and tell you the real karat.",
+      "h38": "Example bill: one carved bangle",
+      "td": "Net gold weight <small>Weighed in front of you</small>",
+      "td2": "10.000 g",
+      "td3": "22K rate on the day <small>Example rate for this bill</small>",
+      "td4": "₹9,800 / g",
+      "td5": "Gold value <small>10 g &times; &#8377;9,800</small>",
+      "td6": "₹98,000",
+      "td7": "Making charge <small>12% carved work</small>",
+      "td8": "₹11,760",
+      "td9": "GST <small>3% on &#8377;1,09,760</small>",
+      "td10": "₹3,293",
+      "td11": "You pay",
+      "td12": "₹1,13,053",
+      "note": "Card EMI of 3, 6 or 9 months is available on bills above ₹25,000. Payments above ₹2 lakh need a PAN card by law."
+    },
+    "exchange": {
+      "kicker": "Old gold exchange",
+      "h2": "Four steps, all of them in front of you.",
+      "flow": {
+        "items": [
+          {
+            "h3": "We weigh it",
+            "p": "On a digital scale that is checked every month. You see the number on the display, not on a slip."
+          },
+          {
+            "h3": "We test the purity",
+            "p": "On the XRF machine, not on a touchstone. Old 22K often reads 21K; you get the real value, not a guess."
+          },
+          {
+            "h3": "Stones and lac come off",
+            "p": "By weight only. Nothing else is deducted on gold bought from us. On gold from other shops, 2% to 4% for melting loss."
+          },
+          {
+            "h3": "The value goes on your bill",
+            "p": "At the day’s rate, before GST. Or take it as cash if the gold was bought here with a bill."
+          }
+        ]
+      },
+      "exchange-photo": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/mehndi-bangles.jpg",
+              "alt": "Old carved gold bangles on a bride's hands with mehndi"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/ornate-display.jpg",
+              "alt": "A gold pendant with red and green stones next to beaded bangles on a brown cloth"
+            }
+          }
+        ]
+      }
+    },
+    "scheme": {
+      "kicker": "Swarna Sanchay savings scheme",
+      "h2": "Pay 11 months. We pay the 12th.",
+      "p": "Choose a monthly amount from ₹2,000 to ₹25,000. Pay it for 11 months at the counter or by UPI. In the 12th month we add one full instalment from our side. Use the total on any gold jewellery in the shop at that day’s rate.",
+      "p2": "The shop’s share is given as a discount on jewellery, not as cash. If you stop early, you get back what you paid, in jewellery, with making charge. A passbook is given on the first payment, and a WhatsApp message on every one after that.",
+      "caption": "Example at ₹5,000 a month. The same table works for any amount from ₹2,000 to ₹25,000.",
+      "th": "Month",
+      "th2": "You pay",
+      "th3": "Saved so far",
+      "td": "Month 1",
+      "td2": "₹5,000",
+      "td3": "₹5,000",
+      "td4": "Month 2",
+      "td5": "₹5,000",
+      "td6": "₹10,000",
+      "td7": "Month 3",
+      "td8": "₹5,000",
+      "td9": "₹15,000",
+      "td10": "Month 4",
+      "td11": "₹5,000",
+      "td12": "₹20,000",
+      "td13": "Month 5",
+      "td14": "₹5,000",
+      "td15": "₹25,000",
+      "td16": "Month 6",
+      "td17": "₹5,000",
+      "td18": "₹30,000",
+      "td19": "Month 7",
+      "td20": "₹5,000",
+      "td21": "₹35,000",
+      "td22": "Month 8",
+      "td23": "₹5,000",
+      "td24": "₹40,000",
+      "td25": "Month 9",
+      "td26": "₹5,000",
+      "td27": "₹45,000",
+      "td28": "Month 10",
+      "td29": "₹5,000",
+      "td30": "₹50,000",
+      "td31": "Month 11",
+      "td32": "₹5,000",
+      "td33": "₹55,000",
+      "td34": "Month 12: the shop pays",
+      "td35": "₹5,000",
+      "td36": "₹60,000",
+      "td37": "You can spend",
+      "td38": "₹60,000"
+    },
+    "story": {
+      "kicker": "Our shop",
+      "h2": "Forty years on Rash Behari Avenue.",
+      "p": "Swarnalata Jewellers was opened in 1984 by Nirmal Chandra Dutta, a goldsmith from Sinthee who had made ornaments for other shops for twenty years before he put his own name on a board. His son and daughter-in-law run the shop today. Four of our karigars have been with us for more than fifteen years.",
+      "p2": "We are a small shop and we like it that way. You sit, you are shown pieces one at a time, and nobody hurries you. Every price is worked out on paper in front of you: weight, rate, making charge, GST. If you want to come back the next day with your mother, the piece will be kept aside.",
+      "story-facts": {
+        "items": [
+          {
+            "b": "40+",
+            "span": "Years in Gariahat"
+          },
+          {
+            "b": "6",
+            "span": "Karigars in our own workshop"
+          },
+          {
+            "b": "0",
+            "span": "Hidden charges on the bill"
+          }
+        ]
+      },
+      "story-stack": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/crafting.jpg",
+              "alt": "A karigar's hands working on a gold piece under a lamp in the workshop"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/pendant-making.jpg",
+              "alt": "A gold pendant being soldered with a small torch on the workshop bench"
+            }
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Questions people ask at the counter",
+      "h2": "Before you buy.",
+      "acc": {
+        "items": [
+          {
+            "p": "Yes. Bring a photo or a drawing. Our karigars will tell you the weight it will come to and the making charge, and we fix the price before work starts. Most made-to-order pieces take 2 to 4 weeks; bridal sets take 6 to 8."
+          },
+          {
+            "p": "Repairs on gold bought from us are free for the first year, except for lost stones. After that we charge only for the work. Pieces from other shops are repaired at a small charge after a purity check."
+          },
+          {
+            "p": "Yes. Gold bought here with a bill is bought back at the day’s rate with no deduction except stone weight. Gold from elsewhere is bought after an XRF test with 2% to 4% deducted for melting."
+          },
+          {
+            "p": "Cash, UPI, debit and credit cards, bank transfer. Card EMI of 3, 6 or 9 months on bills above ₹25,000. Payments above ₹2 lakh need a PAN card by law."
+          },
+          {
+            "p": "For made-to-order pieces the rate is fixed on the day you pay the advance, whichever way the market moves. For ready pieces the price is the rate on the day you buy."
+          },
+          {
+            "p": "For bridal orders above ₹3 lakh, yes, within Kolkata. Call a week ahead. For everything else we would rather you come to the shop, where the light and the scale are."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "From the shop",
+      "h2": "A few pieces and the people who wear them.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/bride.jpg",
+              "alt": "A bride in a silk saree wearing a long temple necklace, bangles and a waist chain"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/kundan-set.jpg",
+              "alt": "A kundan necklace set with blue beads and matching earrings"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/wedding-display.jpg",
+              "alt": "A bridal choker, bangles, tikli and earrings laid out on a red tray with flowers"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/jhumka.jpg",
+              "alt": "A gold jhumka worn on the ear"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/anklet.jpg",
+              "alt": "A silver payel on a foot with alta"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/jewellery/images/chandelier-earrings.jpg",
+              "alt": "Gold and green stone earrings on a stand"
+            }
+          }
+        ]
+      }
+    },
+    "section-10": {
+      "list": {
+        "items": [
+          {
+            "p": "My mother bought her wedding chur here in 1989. We went back for my daughter’s set last winter. They showed us the bill on paper before we agreed to anything, and the weight was exactly what was written.",
+            "span": "· Ballygunge"
+          },
+          {
+            "p": "I put ₹5,000 a month into the scheme for my son’s annaprashan. The passbook was simple, and when the day came the 12th month was added without my asking. Bought a chain and a coin.",
+            "span": "· Kasba"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Rash Behari Avenue, a short walk from Gariahat crossing.",
+      "b": "Address",
+      "p": "212 Rash Behari Avenue, Gariahat<br>Kolkata 700019",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "Daily rate sent on WhatsApp at 10 am. Messages answered till 9 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "11:00 am – 8:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "11:00 am – 3:00 pm"
+          },
+          {
+            "td": "Dhanteras and Pujo week",
+            "td2": "Open till 10 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Swarnalata Jewellers sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=212%20Rash%20Behari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Swarnalata Jewellers",
+      "small": "Gariahat · since 1984",
+      "p": "BIS hallmarked gold and silver. Bridal sets made to order, old gold exchange, and an 11-month savings scheme.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "212 Rash Behari Avenue, Gariahat, Kolkata 700019",
+      "li2": "Mon–Sat 11 am – 8:30 pm · Sun 11 am – 3 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Collections"
+          },
+          {
+            "button": "Making charges and hallmark"
+          },
+          {
+            "button": "Old gold exchange"
+          },
+          {
+            "button": "Savings scheme"
+          },
+          {
+            "button": "Questions"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Swarnalata Jewellers | Gold and Silver Jewellery in Gariahat since 1984",
+      "description": "BIS hallmarked gold and silver jewellery in Gariahat, Kolkata. Bridal sets, everyday gold, silver puja items, old gold exchange and an 11-month savings scheme. Open 11 am to 8:30 pm."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+// Every word the panel says, in English and Bengali. Plain words only: the
+// person reading this runs a shop and has never seen a content system.
+export type Lang = "en" | "bn";
+
+export const T = {
+  panelName: { en: "Edit panel", bn: "এডিট প্যানেল" },
+  mySite: { en: "My website", bn: "আমার ওয়েবসাইট" },
+  viewSite: { en: "View my website", bn: "আমার ওয়েবসাইট দেখুন" },
+  preview: { en: "Preview changes", bn: "পরিবর্তন প্রিভিউ করুন" },
+  publish: { en: "Publish changes", bn: "পরিবর্তন প্রকাশ করুন" },
+  publishing: { en: "Publishing...", bn: "প্রকাশ হচ্ছে..." },
+  published: { en: "Your website is updated.", bn: "আপনার ওয়েবসাইট আপডেট হয়েছে।" },
+  nothingToPublish: { en: "No new changes to publish.", bn: "প্রকাশ করার মতো নতুন পরিবর্তন নেই।" },
+  undo: { en: "Undo last publish", bn: "শেষ প্রকাশ বাতিল করুন" },
+  undone: { en: "Your website is back to the earlier version.", bn: "আপনার ওয়েবসাইট আগের অবস্থায় ফিরে গেছে।" },
+  nothingToUndo: { en: "There is no earlier version to go back to.", bn: "ফিরে যাওয়ার মতো আগের কোনো সংস্করণ নেই।" },
+  saved: { en: "Saved", bn: "সেভ হয়েছে" },
+  saving: { en: "Saving...", bn: "সেভ হচ্ছে..." },
+  saveError: { en: "Could not save. Check your internet and try again.", bn: "সেভ করা যায়নি। ইন্টারনেট দেখে আবার চেষ্টা করুন।" },
+  unpublished: { en: "You have changes that are not on your website yet.", bn: "আপনার কিছু পরিবর্তন এখনো ওয়েবসাইটে যায়নি।" },
+  sections: { en: "What do you want to change?", bn: "কী বদলাতে চান?" },
+  sectionHelp: { en: "Tap a part of your website to change what is in it. The design stays the same.", bn: "ওয়েবসাইটের যে অংশ বদলাতে চান সেটিতে চাপ দিন। ডিজাইন একই থাকবে।" },
+  back: { en: "Back", bn: "পিছনে" },
+  done: { en: "Done", bn: "হয়ে গেছে" },
+  addNew: { en: "Add new", bn: "নতুন যোগ করুন" },
+  maxReached: { en: "This list is full. Remove one to add another.", bn: "এই তালিকা পূর্ণ। নতুন যোগ করতে একটি সরান।" },
+  minReached: { en: "At least one item must stay in this list.", bn: "এই তালিকায় অন্তত একটি আইটেম থাকতে হবে।" },
+  edit: { en: "Edit", bn: "বদলান" },
+  remove: { en: "Remove", bn: "সরান" },
+  confirmRemove: { en: "Remove this item? You can publish only when you are happy with the result.", bn: "এই আইটেমটি সরাবেন? খুশি হলে তবেই প্রকাশ করুন।" },
+  moveUp: { en: "Move up", bn: "উপরে তুলুন" },
+  moveDown: { en: "Move down", bn: "নিচে নামান" },
+  changePhoto: { en: "Change photo", bn: "ছবি বদলান" },
+  photoHelp: { en: "Pick a photo from your phone. It is made smaller automatically.", bn: "ফোন থেকে একটি ছবি বেছে নিন। এটি নিজে থেকেই ছোট হয়ে যাবে।" },
+  photoAlt: { en: "Describe this photo (for Google)", bn: "এই ছবিটি কী, লিখুন (গুগলের জন্য)" },
+  photoTooBig: { en: "That photo is too large. Please pick one under 10 MB.", bn: "ছবিটি খুব বড়। ১০ এমবি-র কম ছবি দিন।" },
+  linkText: { en: "Text on the button", bn: "বোতামের লেখা" },
+  linkHref: { en: "Where it opens (web address)", bn: "কোথায় খুলবে (ওয়েব ঠিকানা)" },
+  phoneHelp: { en: "10 digit mobile number", bn: "১০ সংখ্যার মোবাইল নম্বর" },
+  phoneError: { en: "Please enter a 10 digit mobile number.", bn: "১০ সংখ্যার মোবাইল নম্বর দিন।" },
+  urlError: { en: "Please paste a full web address starting with https://", bn: "https:// দিয়ে শুরু পুরো ওয়েব ঠিকানা দিন।" },
+  socialError: { en: "This link does not look like it belongs to that website.", bn: "এই লিংকটি ওই ওয়েবসাইটের বলে মনে হচ্ছে না।" },
+  help: { en: "Need help? WhatsApp us", bn: "সাহায্য লাগবে? হোয়াটসঅ্যাপ করুন" },
+  helpMessage: { en: "Hello, I need help with my website panel. My site is", bn: "Hello, I need help with my website panel. My site is" },
+  language: { en: "বাংলা", bn: "English" },
+  tryTitle: { en: "Try the edit panel", bn: "এডিট প্যানেল চেষ্টা করে দেখুন" },
+  tryIntro: {
+    en: "Pick any sample website below, change its text, prices or photos, press Publish, and open the sample to see your change. Nothing is saved on our side; it stays in this browser only.",
+    bn: "নিচের যেকোনো নমুনা ওয়েবসাইট বেছে নিন, লেখা, দাম বা ছবি বদলান, Publish চাপুন, তারপর নমুনাটি খুলে আপনার পরিবর্তন দেখুন। আমাদের দিকে কিছু সেভ হয় না; শুধু এই ব্রাউজারে থাকে।",
+  },
+  openPanel: { en: "Open the panel", bn: "প্যানেল খুলুন" },
+  login: { en: "Log in", bn: "লগ ইন করুন" },
+  loginIntro: { en: "Use the phone number and password Nexvora gave you.", bn: "Nexvora আপনাকে যে ফোন নম্বর ও পাসওয়ার্ড দিয়েছে সেটি দিন।" },
+  phone: { en: "Mobile number", bn: "মোবাইল নম্বর" },
+  password: { en: "Password", bn: "পাসওয়ার্ড" },
+  wrongLogin: { en: "That number or password is not right.", bn: "নম্বর বা পাসওয়ার্ড ঠিক নেই।" },
+  locked: { en: "Too many tries. Please wait 15 minutes and try again.", bn: "অনেকবার ভুল হয়েছে। ১৫ মিনিট পরে আবার চেষ্টা করুন।" },
+  forgot: { en: "Forgot your password? WhatsApp Nexvora at +91 98042 43159 and we will reset it for you.", bn: "পাসওয়ার্ড ভুলে গেছেন? +91 98042 43159 নম্বরে Nexvora-কে হোয়াটসঅ্যাপ করুন, আমরা নতুন করে দেব।" },
+  newPassword: { en: "Choose a new password", bn: "নতুন পাসওয়ার্ড দিন" },
+  newPasswordIntro: { en: "This is your first login. Please choose a password only you know.", bn: "এটি আপনার প্রথম লগ ইন। শুধু আপনি জানেন এমন একটি পাসওয়ার্ড দিন।" },
+  logout: { en: "Log out", bn: "লগ আউট" },
+  notAllowed: { en: "You do not have access to this website.", bn: "এই ওয়েবসাইটে আপনার প্রবেশাধিকার নেই।" },
+  resetDemo: { en: "Put back the original demo text", bn: "ডেমোর আসল লেখা ফিরিয়ে আনুন" },
+  items: { en: "items", bn: "টি আইটেম" },
+  previewNote: { en: "Opens in a new tab with a note that customers cannot see it yet.", bn: "নতুন ট্যাবে খুলবে, সঙ্গে লেখা থাকবে যে গ্রাহকরা এখনো এটি দেখছেন না।" },
+} as const;
+
+export type TKey = keyof typeof T;
+
+export function t(lang: Lang, key: TKey): string {
+  return T[key][lang];
+}

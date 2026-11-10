@@ -1,0 +1,1906 @@
+{
+  "site": "real-estate",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bhattacharya Property Consultants",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-pill",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-areas",
+          "label": {
+            "en": "Flats to buy or rent in New Town, Salt Lake and Baguiati",
+            "bn": "Flats to buy or rent in New Town, Salt Lake and Baguiati"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hero-stats",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listings",
+      "label": {
+        "en": "Six flats we can show you this week",
+        "bn": "Six flats we can show you this week"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "label",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "badge",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:674"
+        },
+        {
+          "key": "badge2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "badge3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:798"
+        },
+        {
+          "key": "badge4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:808"
+        },
+        {
+          "key": "badge5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc5",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "badge6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "card-price6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "card-loc6",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "areas",
+      "label": {
+        "en": "Three neighbourhoods we know street by street",
+        "bn": "Three neighbourhoods we know street by street"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:892"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:641"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "area-ranges",
+          "label": {
+            "en": "New Town (Rajarhat)",
+            "bn": "New Town (Rajarhat)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "area-ranges2",
+          "label": {
+            "en": "Salt Lake (Bidhannagar)",
+            "bn": "Salt Lake (Bidhannagar)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "area-ranges3",
+          "label": {
+            "en": "Baguiati and Chinar Park",
+            "bn": "Baguiati and Chinar Park"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "What we charge, said plainly",
+        "bn": "What we charge, said plainly"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "zero",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "fees-list",
+          "label": {
+            "en": "What we charge, said plainly",
+            "bn": "What we charge, said plainly"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": {
+        "en": "From first message to keys, five steps",
+        "bn": "From first message to keys, five steps"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "timeline",
+          "label": {
+            "en": "From first message to keys, five steps",
+            "bn": "From first message to keys, five steps"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "step",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "From first message to keys, five steps",
+            "bn": "From first message to keys, five steps"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "label": {
+        "en": "Keep these ready and the deal closes faster",
+        "bn": "Keep these ready and the deal closes faster"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "If you are buying",
+            "bn": "If you are buying"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "If you are renting",
+            "bn": "If you are renting"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "owners",
+      "label": {
+        "en": "Want to let or sell your flat?",
+        "bn": "Want to let or sell your flat?"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "owners-list",
+          "label": {
+            "en": "Want to let or sell your flat?",
+            "bn": "Want to let or sell your flat?"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few of the flats and families from the last year",
+        "bn": "A few of the flats and families from the last year"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "A few of the flats and families from the last year",
+            "bn": "A few of the flats and families from the last year"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Action Area 1C, New Town, opposite the water tank",
+        "bn": "Action Area 1C, New Town, opposite the water tank"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Tell us the area and the budget. We do the running around",
+        "bn": "Tell us the area and the budget. We do the running around"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "On this page",
+            "bn": "On this page"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bhattacharya Property",
+      "small": "New Town · since 2011"
+    },
+    "top": {
+      "hero-pill": "<span>New</span>6 flats added this week",
+      "h1": "Flats to buy or rent in <span>New Town, Salt Lake and Baguiati.</span>",
+      "p": "We show you only flats we have seen ourselves. Brokerage is one month’s rent, or 1% on a sale. Nothing else. Message us on WhatsApp and we fix a site visit for the same week.",
+      "button": "See the flats",
+      "photo": {
+        "src": "/demo/real-estate/images/hero.jpg",
+        "alt": "Tall residential towers with balconies seen from inside a housing complex"
+      },
+      "hero-areas": {
+        "items": [
+          {
+            "li": "New Town Action Area 1, 2, 3"
+          },
+          {
+            "li": "Salt Lake Sector 1 to 5"
+          },
+          {
+            "li": "Baguiati and Rajarhat"
+          }
+        ]
+      },
+      "hero-stats": {
+        "items": [
+          {
+            "b": "15",
+            "span": "years in New Town"
+          },
+          {
+            "b": "112",
+            "span": "flats closed last year"
+          },
+          {
+            "b": "3",
+            "span": "neighbourhoods, one office"
+          }
+        ]
+      }
+    },
+    "listings": {
+      "kicker": "Flats available now",
+      "h2": "Six flats we can show you this week.",
+      "p": "Prices are what the owner has asked. Rent figures are per month, maintenance separate. Every flat here has been visited by us in the last 30 days.",
+      "label": "All flats",
+      "label2": "For sale",
+      "label3": "For rent",
+      "photo": {
+        "src": "/demo/real-estate/images/living-neutral.jpg",
+        "alt": "Bright living room with a grey sofa and large windows"
+      },
+      "badge": "Rent",
+      "card-price": "&#8377;21,000 <small>per month</small>",
+      "h3": "2 BHK, semi-furnished, lift and parking",
+      "card-loc": "Action Area 1, New Town. Five minutes’ walk to the bus stand and a big market.",
+      "photo2": {
+        "src": "/demo/real-estate/images/living-room.jpg",
+        "alt": "Living room with wooden panelling, white sofa and a balcony"
+      },
+      "badge2": "Sale",
+      "card-price2": "&#8377;1.05 crore <small>negotiable</small>",
+      "h32": "3 BHK in a 2008 complex, two covered car parks",
+      "card-loc2": "Sector 2, Salt Lake. Near the stadium side, schools within 1 km.",
+      "photo3": {
+        "src": "/demo/real-estate/images/bedroom-pune.jpg",
+        "alt": "Small bedroom with a wooden bed and natural light from the window"
+      },
+      "badge3": "Rent",
+      "card-price3": "&#8377;11,500 <small>per month</small>",
+      "h33": "1 BHK, good for one or two people",
+      "card-loc3": "Baguiati, off VIP Road. Auto stand at the gate, airport in 15 minutes.",
+      "photo4": {
+        "src": "/demo/real-estate/images/living-lux.jpg",
+        "alt": "Modern living room with a sofa, soft lighting and a television wall"
+      },
+      "badge4": "Sale",
+      "card-price4": "&#8377;68 lakh <small>all inclusive</small>",
+      "h34": "2 BHK on a high floor, east facing, gated complex",
+      "card-loc4": "Action Area 2, New Town. Swimming pool, gym and a community hall in the complex.",
+      "photo5": {
+        "src": "/demo/real-estate/images/bedroom-ahmedabad.jpg",
+        "alt": "Bedroom with red curtains, a double bed and a wardrobe"
+      },
+      "badge5": "Rent",
+      "card-price5": "&#8377;32,000 <small>per month</small>",
+      "h35": "3 BHK, fully furnished, for a family or a company",
+      "card-loc5": "Sector 5 side of Salt Lake. Ten minutes to the IT offices, metro at College More.",
+      "photo6": {
+        "src": "/demo/real-estate/images/glass-doors.jpg",
+        "alt": "Glass doors opening onto a small balcony with plants"
+      },
+      "badge6": "Sale",
+      "card-price6": "&#8377;48 lakh <small>registration extra</small>",
+      "h36": "2 BHK with a balcony, ready to move",
+      "card-loc6": "Chinar Park, Rajarhat. Resale flat, 2016 building, loan papers already in order."
+    },
+    "areas": {
+      "kicker": "Where we work",
+      "h2": "Three neighbourhoods we know street by street.",
+      "p": "Typical asking prices in 2026 for flats in decent condition. A flat in a new complex with a pool costs more; an older building without a lift costs less.",
+      "photo": {
+        "src": "/demo/real-estate/images/newtown-street.jpg",
+        "alt": "Wide clean lane leading to modern residential towers in New Town, Kolkata"
+      },
+      "h3": "New Town (Rajarhat)",
+      "p2": "Planned roads, gated complexes, the IT offices and Eco Park. Most of our work is here. Action Area 1 is older and better connected; Action Area 2 and 3 have newer buildings.",
+      "photo2": {
+        "src": "/demo/real-estate/images/complex-kolkata.jpg",
+        "alt": "Twin residential towers joined by a sky bridge on the edge of Salt Lake"
+      },
+      "h32": "Salt Lake (Bidhannagar)",
+      "p3": "Wide roads, parks in every block, metro at Sector 5 and Karunamoyee. Mostly independent houses and low-rise flats; fewer flats come up, so they go fast.",
+      "photo3": {
+        "src": "/demo/real-estate/images/balconies.jpg",
+        "alt": "Apartment block with grilled balconies behind a flowering gulmohar tree"
+      },
+      "h33": "Baguiati and Chinar Park",
+      "p4": "Along VIP Road, close to the airport. Smaller buildings, lower prices, lively markets. Good for first-time buyers and for people who travel for work.",
+      "area-ranges": {
+        "items": [
+          {
+            "b": "₹17,000 – 26,000",
+            "span": "2 BHK rent per month"
+          },
+          {
+            "b": "₹58 – 80 lakh",
+            "span": "2 BHK to buy"
+          },
+          {
+            "b": "₹26,000 – 40,000",
+            "span": "3 BHK rent per month"
+          },
+          {
+            "b": "₹95 lakh – 1.4 crore",
+            "span": "3 BHK to buy"
+          }
+        ]
+      },
+      "area-ranges2": {
+        "items": [
+          {
+            "b": "₹18,000 – 28,000",
+            "span": "2 BHK rent per month"
+          },
+          {
+            "b": "₹65 – 90 lakh",
+            "span": "2 BHK to buy"
+          },
+          {
+            "b": "₹28,000 – 45,000",
+            "span": "3 BHK rent per month"
+          },
+          {
+            "b": "₹1 – 1.6 crore",
+            "span": "3 BHK to buy"
+          }
+        ]
+      },
+      "area-ranges3": {
+        "items": [
+          {
+            "b": "₹11,000 – 17,000",
+            "span": "2 BHK rent per month"
+          },
+          {
+            "b": "₹38 – 55 lakh",
+            "span": "2 BHK to buy"
+          },
+          {
+            "b": "₹17,000 – 25,000",
+            "span": "3 BHK rent per month"
+          },
+          {
+            "b": "₹60 – 85 lakh",
+            "span": "3 BHK to buy"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Brokerage and charges",
+      "h2": "What we charge, said plainly.",
+      "p": "Pradip Bhattacharya started this office in 2011 after ten years with a builder in Salt Lake. The rule from day one: tell the customer the fee before the first visit, and never add anything to it later.",
+      "h3": "What you pay",
+      "span": "Rental, any flat",
+      "b": "1 month’s rent",
+      "span2": "Purchase, any flat",
+      "b2": "1% of price",
+      "span3": "Site visits",
+      "b3": "₹0",
+      "zero": "<b>No hidden charges.</b> The fee is written on the first message we send you, and it does not change.",
+      "fees-list": {
+        "items": [
+          {
+            "h3": "Renting a flat: one month’s rent",
+            "p": "Paid once, after you sign the agreement and get the keys. If the rent is ₹20,000, our fee is ₹20,000. The owner pays us the same from their side. Nothing is due before you move in."
+          },
+          {
+            "h3": "Buying a flat: 1% of the sale price",
+            "p": "Paid at registration, not before. On a ₹60 lakh flat that is ₹60,000. It covers every visit, the price talks with the owner, and sitting with you through the paperwork."
+          },
+          {
+            "h3": "What is not ours",
+            "p": "Stamp duty, registration fee, society transfer charge, lawyer’s fee and the police verification fee are paid directly by you to those offices. We tell you the amounts in writing before you decide."
+          },
+          {
+            "h3": "No site visit charge, no listing charge",
+            "p": "Seeing flats costs nothing. If you do not take a flat through us, you owe us nothing. We make our fee only when a deal closes."
+          }
+        ]
+      }
+    },
+    "process": {
+      "kicker": "How a site visit works",
+      "h2": "From first message to keys, five steps.",
+      "timeline": {
+        "items": [
+          {
+            "step": "Step 1",
+            "h3": "Send us what you need",
+            "p": "Area, budget, BHK, and when you want to move. One WhatsApp message is enough. We reply within working hours, usually within the hour."
+          },
+          {
+            "step": "Step 2",
+            "h3": "We send a shortlist",
+            "p": "Three to six flats with photos, exact rent or price, floor, and the maintenance amount. No flat we have not visited ourselves."
+          },
+          {
+            "step": "Step 3",
+            "h3": "Visit, on a day that suits you",
+            "p": "We fix a time with the owner and come with you. Weekends and evenings are fine. Two or three flats in one trip, so you can compare them."
+          },
+          {
+            "step": "Step 4",
+            "h3": "We talk price with the owner",
+            "p": "You tell us what you can pay; we take it to the owner. Most rentals settle in a day. Sales take a week or two."
+          },
+          {
+            "step": "Step 5",
+            "h3": "Paperwork and keys",
+            "p": "Rent agreement on stamp paper, or sale deed with the lawyer. We sit with you at the registry office. Our fee is paid only at this step."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/sunrise-towers.jpg",
+              "alt": "Rows of residential towers at sunrise with low houses in the foreground"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/mother-son.jpg",
+              "alt": "A woman in a maroon kurta carrying her young son outside a building"
+            }
+          }
+        ]
+      }
+    },
+    "documents": {
+      "kicker": "Documents checklist",
+      "h2": "Keep these ready and the deal closes faster.",
+      "p": "Photocopies are fine for the first visit. Originals are needed only on the day of signing.",
+      "h3": "If you are buying",
+      "p2": "For the sale deed and, if you need one, the home loan.",
+      "h32": "If you are renting",
+      "p3": "For the agreement and the police verification the owner must file.",
+      "list": {
+        "items": [
+          {
+            "b": "PAN card and Aadhaar",
+            "span": "Of every person whose name goes on the deed."
+          },
+          {
+            "b": "Passport-size photos",
+            "span": "Four each. The registry office keeps two."
+          },
+          {
+            "b": "Last 6 months’ bank statement",
+            "span": "Needed by the bank for a loan, and by the lawyer to show the source of funds."
+          },
+          {
+            "b": "Salary slips or ITR for 2 years",
+            "span": "Only if you are taking a loan."
+          },
+          {
+            "b": "From the seller, we collect",
+            "span": "Original deed, mutation certificate, tax receipts, society NOC and the completion certificate. We check all of it before you pay a token."
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "b": "Aadhaar and one more ID",
+            "span": "Voter card, passport or driving licence."
+          },
+          {
+            "b": "Two passport-size photos",
+            "span": "Of every adult who will live in the flat."
+          },
+          {
+            "b": "Office ID or offer letter",
+            "span": "Owners in New Town and Salt Lake almost always ask for this."
+          },
+          {
+            "b": "Security deposit",
+            "span": "Usually two months’ rent, sometimes three in Salt Lake. Returned when you leave, minus any damage."
+          },
+          {
+            "b": "Stamp paper for the agreement",
+            "span": "We arrange it. 11-month agreement, about ₹1,200 including notary, split between you and the owner."
+          }
+        ]
+      }
+    },
+    "owners": {
+      "kicker": "For flat owners",
+      "h2": "Want to let or sell your flat?",
+      "p": "We have a list of people waiting for flats in all three areas. Send us the address and a few photos, and we do the rest.",
+      "owners-list": {
+        "items": [
+          {
+            "n": "1",
+            "p": "We visit, take proper photos and suggest a fair asking price from flats that actually closed nearby, not from listing sites."
+          },
+          {
+            "n": "2",
+            "p": "We show the flat only to people we have spoken to and checked. You are not disturbed by calls at odd hours."
+          },
+          {
+            "n": "3",
+            "p": "Same fee from you as from the tenant or buyer: one month’s rent, or 1% on a sale, paid when the deal closes."
+          }
+        ]
+      },
+      "quotes": {
+        "items": [
+          {
+            "p": "We moved from Behala to New Town for my husband’s office. Pradip da showed us five flats in one Saturday and did not push any of them. We took the third one and the fee was exactly what he said on the phone.",
+            "span": "· rented a 2 BHK in Action Area 1"
+          },
+          {
+            "p": "Sold my late father’s flat in Salt Lake from Bangalore. They handled the society NOC and the buyer’s loan people, and sent me a photo of every paper before I signed anything.",
+            "span": "· sold a 3 BHK in Sector 2"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Recent handovers",
+      "h2": "A few of the flats and families from the last year.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/family.jpg",
+              "alt": "A family of six in festive clothes standing in front of their housing block"
+            },
+            "figcaption": "The Agarwal family, 3 BHK, Action Area 2"
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/living-room.jpg",
+              "alt": "Living room with wooden slat wall and a balcony view"
+            },
+            "figcaption": "Sector 2, Salt Lake, sold in 2025"
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/rooftop-kolkata.jpg",
+              "alt": "Old Kolkata rooftops with newer towers rising behind"
+            },
+            "figcaption": "Our first office was a rooftop room like this one"
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/glass-doors.jpg",
+              "alt": "Balcony doors with plants in a Chinar Park flat"
+            },
+            "figcaption": "Chinar Park, 2 BHK with balcony"
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/sunrise-towers.jpg",
+              "alt": "Residential towers at sunrise"
+            },
+            "figcaption": "New Town, Action Area 3, from a 12th floor"
+          },
+          {
+            "photo": {
+              "src": "/demo/real-estate/images/bedroom-pune.jpg",
+              "alt": "Simple bedroom with a wooden bed by the window"
+            },
+            "figcaption": "Baguiati, 1 BHK, rented in three days"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Our office",
+      "h2": "Action Area 1C, New Town, opposite the water tank.",
+      "b": "Address",
+      "p": "CB 48, Street No 128, Action Area 1C<br>New Town, Kolkata 700156",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Messages answered 9 am to 9 pm, every day.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:30 am – 7:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "Site visits by appointment"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bhattacharya Property Consultants sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=CB%2048%2C%20Street%20No%20128%2C%20Action%20Area%201C%2C%20New%20Town%2C%20Kolkata%20700156",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Bhattacharya Property",
+      "small": "New Town · since 2011",
+      "p": "Flats for sale and rent in New Town, Salt Lake and Baguiati. One month’s rent or 1% on a sale. No hidden charges.",
+      "h4": "On this page",
+      "h42": "Office",
+      "li": "CB 48, Street No 128, Action Area 1C, New Town, Kolkata 700156",
+      "li2": "Mon–Sat 10:30 am – 7:30 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Flats available"
+          },
+          {
+            "button": "Brokerage"
+          },
+          {
+            "button": "How a site visit works"
+          },
+          {
+            "button": "Documents checklist"
+          },
+          {
+            "button": "For owners"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Bhattacharya Property Consultants | Flats for Sale and Rent in New Town, Salt Lake and Baguiati",
+      "description": "Flats for sale and rent in New Town, Salt Lake and Baguiati. Brokerage is one month's rent or 1% of the sale price, nothing hidden. Book a site visit on WhatsApp."
+    }
+  }
+}

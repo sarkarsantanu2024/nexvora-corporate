@@ -1,0 +1,1859 @@
+{
+  "site": "bakery",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Anjali Cake House",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-script",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "The cake you have in your head, ready by tomorrow evening",
+            "bn": "The cake you have in your head, ready by tomorrow evening"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hero-band",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1797"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cakes",
+      "label": {
+        "en": "Four kinds of cake we make every day",
+        "bn": "Four kinds of cake we make every day"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "cakes",
+          "label": {
+            "en": "Four kinds of cake we make every day",
+            "bn": "Four kinds of cake we make every day"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "from",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "What a cake costs, by flavour and weight",
+        "bn": "What a cake costs, by flavour and weight"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "What a cake costs, by flavour and weight",
+            "bn": "What a cake costs, by flavour and weight"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td5",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "tbl-notes",
+          "label": {
+            "en": "What a cake costs, by flavour and weight",
+            "bn": "What a cake costs, by flavour and weight"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "label": {
+        "en": "Pastries, bread and cookies, baked before the shutter goes up",
+        "bn": "Pastries, bread and cookies, baked before the shutter goes up"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list5",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list6",
+          "label": {
+            "en": "Pastries",
+            "bn": "Pastries"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list7",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list8",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list9",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list10",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list11",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list12",
+          "label": {
+            "en": "Bread and buns",
+            "bn": "Bread and buns"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list13",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list14",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list15",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list16",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list17",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list18",
+          "label": {
+            "en": "Cookies and biscuits",
+            "bn": "Cookies and biscuits"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Four messages and your cake is booked",
+        "bn": "Four messages and your cake is booked"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Four messages and your cake is booked",
+            "bn": "Four messages and your cake is booked"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you order",
+        "bn": "Before you order"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Before you order",
+            "bn": "Before you order"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Cakes that left the shop this month",
+        "bn": "Cakes that left the shop this month"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Cakes that left the shop this month",
+            "bn": "Cakes that left the shop this month"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "From the WhatsApp replies",
+        "bn": "From the WhatsApp replies"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "From the WhatsApp replies",
+            "bn": "From the WhatsApp replies"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Jessore Road, a short walk from Dum Dum metro",
+        "bn": "On Jessore Road, a short walk from Dum Dum metro"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Tomorrow’s cake starts with one message today",
+        "bn": "Tomorrow’s cake starts with one message today"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Anjali Cake House",
+      "small": "Dum Dum · since 2011"
+    },
+    "top": {
+      "hero-script": "Fresh every morning in Dum Dum",
+      "h1": "The cake you have in your head, ready by tomorrow evening.",
+      "p": "Birthday cakes, photo cakes, eggless cakes and wedding cakes made to order. Send us the design and the weight on WhatsApp today, pick it up or get it delivered tomorrow.",
+      "button": "See prices by weight",
+      "hero-facts": {
+        "items": [
+          {
+            "li": "Order 1 day ahead"
+          },
+          {
+            "li": "Half kg from ₹450"
+          },
+          {
+            "li": "Delivery within 5 km"
+          }
+        ]
+      },
+      "hero-band": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/bakery/images/hero.jpg",
+              "alt": "Pink buttercream cake with piped roses and gold edges"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/birthday-gold.jpg",
+              "alt": "Birthday cake with gold lettering"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/choc-slices.jpg",
+              "alt": "Slices of chocolate cake with strawberries"
+            }
+          }
+        ]
+      }
+    },
+    "cakes": {
+      "kicker": "Custom cakes",
+      "h2": "Four kinds of cake we make every day.",
+      "p": "Send a photo of a cake you like, or tell us the colour, the name and the age. We send back a sketch and a price before we bake.",
+      "cakes": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/bakery/images/birthday-choc.jpg",
+              "alt": "Chocolate birthday cakes with candles"
+            },
+            "h3": "Birthday cakes",
+            "p": "Chocolate truffle, black forest, butterscotch, red velvet, fresh fruit. Name and age written in cream. Theme cakes with fondant toppers for children.",
+            "from": "From ₹450 for half kg"
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/fruit-cake.jpg",
+              "alt": "Pink cake being decorated with fresh fruit"
+            },
+            "h3": "Photo cakes",
+            "p": "Your photo printed on edible sheet and set on top. Send a clear picture on WhatsApp. Faces come out well on vanilla or butterscotch, which are lighter.",
+            "from": "From ₹650 for half kg"
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/drip-cake.jpg",
+              "alt": "Chocolate being poured down the sides of a pink cake"
+            },
+            "h3": "Eggless cakes",
+            "p": "Every flavour in eggless, baked in a separate oven on Tuesdays, Thursdays and puja days. Same price as the egg version. Ask for pure veg cream too.",
+            "from": "Same price as regular"
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/wedding-cake.jpg",
+              "alt": "White wedding cake with red roses"
+            },
+            "h3": "Wedding cakes",
+            "p": "Two and three tier cakes for the reception, 3 kg to 10 kg. Fresh flowers or sugar flowers. We deliver and set it up on the stand at the venue.",
+            "from": "From ₹4,500 for 3 kg"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price by weight",
+      "h2": "What a cake costs, by flavour and weight.",
+      "p": "These are the prices for a round cake with a plain cream finish and a name written on top. Fondant work, toppers and photo sheets are added as shown under the table.",
+      "th": "Flavour",
+      "th2": "500 g",
+      "th3": "1 kg",
+      "th4": "1.5 kg",
+      "th5": "2 kg",
+      "list": {
+        "items": [
+          {
+            "td": "Vanilla, Pineapple<small>Serves 4 to 6 per half kg</small>",
+            "td2": "₹450",
+            "td3": "₹850",
+            "td4": "₹1,250",
+            "td5": "₹1,650"
+          },
+          {
+            "td": "Chocolate, Butterscotch",
+            "td2": "₹500",
+            "td3": "₹950",
+            "td4": "₹1,400",
+            "td5": "₹1,850"
+          },
+          {
+            "td": "Black Forest",
+            "td2": "₹520",
+            "td3": "₹1,000",
+            "td4": "₹1,450",
+            "td5": "₹1,900"
+          },
+          {
+            "td": "Chocolate Truffle<small>Dark ganache, our most ordered</small>",
+            "td2": "₹600",
+            "td3": "₹1,150",
+            "td4": "₹1,700",
+            "td5": "₹2,200"
+          },
+          {
+            "td": "Red Velvet<small>Cream cheese frosting</small>",
+            "td2": "₹650",
+            "td3": "₹1,250",
+            "td4": "₹1,850",
+            "td5": "₹2,400"
+          },
+          {
+            "td": "Fresh Fruit<small>Seasonal fruit on top</small>",
+            "td2": "₹650",
+            "td3": "₹1,250",
+            "td4": "₹1,850",
+            "td5": "₹2,400"
+          },
+          {
+            "td": "Photo cake<small>Any flavour above, plus the sheet</small>",
+            "td2": "+₹150",
+            "td3": "+₹200",
+            "td4": "+₹200",
+            "td5": "+₹250"
+          }
+        ]
+      },
+      "tbl-notes": {
+        "items": [
+          {
+            "li": "<b>Fondant and toppers</b>Fondant covering adds &#8377;300 per kg. Figures and toppers &#8377;150 to &#8377;500 each depending on size."
+          },
+          {
+            "li": "<b>Bigger cakes</b>3 kg and above are quoted on WhatsApp. Tier cakes need three days&rsquo; notice."
+          },
+          {
+            "li": "<b>Candles, knife, box</b>Free with every cake. Numeral candles &#8377;30. Sparkle candle &#8377;60."
+          }
+        ]
+      }
+    },
+    "counter": {
+      "kicker": "From the counter",
+      "h2": "Pastries, bread and cookies, baked before the shutter goes up.",
+      "p": "No order needed. Walk in from 8 am. Bread is usually gone by noon, pastries by evening.",
+      "photo": {
+        "src": "/demo/bakery/images/pastries.jpg",
+        "alt": "Tray of freshly baked pastries"
+      },
+      "h3": "Pastries",
+      "photo2": {
+        "src": "/demo/bakery/images/breads.jpg",
+        "alt": "Loaves of bread on a bakery shelf"
+      },
+      "h32": "Bread and buns",
+      "photo3": {
+        "src": "/demo/bakery/images/cookies.jpg",
+        "alt": "Coconut cookies in a glass jar"
+      },
+      "h33": "Cookies and biscuits",
+      "list": {
+        "items": [
+          {
+            "span": "Chocolate truffle pastry"
+          },
+          {
+            "span": "₹70"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Black forest pastry"
+          },
+          {
+            "span": "₹65"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Pineapple pastry"
+          },
+          {
+            "span": "₹55"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Red velvet pastry"
+          },
+          {
+            "span": "₹80"
+          }
+        ]
+      },
+      "list5": {
+        "items": [
+          {
+            "span": "Brownie (walnut)"
+          },
+          {
+            "span": "₹60"
+          }
+        ]
+      },
+      "list6": {
+        "items": [
+          {
+            "span": "Cupcake"
+          },
+          {
+            "span": "₹50"
+          }
+        ]
+      },
+      "list7": {
+        "items": [
+          {
+            "span": "White sandwich loaf, 400 g"
+          },
+          {
+            "span": "₹45"
+          }
+        ]
+      },
+      "list8": {
+        "items": [
+          {
+            "span": "Brown bread, 400 g"
+          },
+          {
+            "span": "₹55"
+          }
+        ]
+      },
+      "list9": {
+        "items": [
+          {
+            "span": "Multigrain loaf"
+          },
+          {
+            "span": "₹75"
+          }
+        ]
+      },
+      "list10": {
+        "items": [
+          {
+            "span": "Burger buns, pack of 4"
+          },
+          {
+            "span": "₹40"
+          }
+        ]
+      },
+      "list11": {
+        "items": [
+          {
+            "span": "Pav, pack of 6"
+          },
+          {
+            "span": "₹35"
+          }
+        ]
+      },
+      "list12": {
+        "items": [
+          {
+            "span": "Garlic bread"
+          },
+          {
+            "span": "₹60"
+          }
+        ]
+      },
+      "list13": {
+        "items": [
+          {
+            "span": "Butter cookies, 250 g"
+          },
+          {
+            "span": "₹120"
+          }
+        ]
+      },
+      "list14": {
+        "items": [
+          {
+            "span": "Coconut cookies, 250 g"
+          },
+          {
+            "span": "₹110"
+          }
+        ]
+      },
+      "list15": {
+        "items": [
+          {
+            "span": "Chocolate chip, 250 g"
+          },
+          {
+            "span": "₹160"
+          }
+        ]
+      },
+      "list16": {
+        "items": [
+          {
+            "span": "Jam cookies, 250 g"
+          },
+          {
+            "span": "₹140"
+          }
+        ]
+      },
+      "list17": {
+        "items": [
+          {
+            "span": "Nankhatai, 250 g"
+          },
+          {
+            "span": "₹100"
+          }
+        ]
+      },
+      "list18": {
+        "items": [
+          {
+            "span": "Gift tin, 500 g mixed"
+          },
+          {
+            "span": "₹320"
+          }
+        ]
+      }
+    },
+    "order": {
+      "kicker": "How to order",
+      "h2": "Four messages and your cake is booked.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Send the details",
+            "p": "Flavour, weight, the name to write, and the date. A photo of a design you like if you have one. Eggless or not."
+          },
+          {
+            "h3": "We confirm the price",
+            "p": "You get the price, a sketch for theme cakes, and a pickup time. Pay ₹200 advance by UPI, or the full amount for cakes above 2 kg."
+          },
+          {
+            "h3": "We bake it tomorrow",
+            "p": "Cakes are baked in the morning and finished in the afternoon. We send you a photo before packing so you can ask for a change."
+          },
+          {
+            "h3": "Pick up or delivery",
+            "p": "Collect from the shop after 4 pm, or we deliver within 5 km for ₹60 (free above ₹1,500). Cakes travel in a cold box."
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Questions people ask",
+      "h2": "Before you order.",
+      "faq": {
+        "items": [
+          {
+            "h3": "Can I get a cake today?",
+            "p": "Only a plain half-kg chocolate or vanilla, if one is on the counter. Everything else needs an order by 6 pm the day before. For a theme or tier cake, three days."
+          },
+          {
+            "h3": "Which areas do you deliver to?",
+            "p": "Dum Dum, Nagerbazar, Lake Town, Baguiati, Belgharia, Sinthee and Dum Dum Cantonment. Roughly 5 km from the shop. Delivery is ₹60, free on orders above ₹1,500."
+          },
+          {
+            "h3": "Are the eggless cakes really eggless?",
+            "p": "Yes. They are baked in a separate oven with separate tins and bowls. If you need it on a day we do not bake eggless, tell us and we will arrange it."
+          },
+          {
+            "h3": "Does the photo cake taste of paper?",
+            "p": "No. The sheet is made of sugar and starch and melts into the cream within an hour. Faces print best on light coloured cream."
+          },
+          {
+            "h3": "How long does a cake keep?",
+            "p": "Fresh cream cakes should be eaten within 24 hours and kept in the fridge. Fondant cakes keep for two days. Take the cake out 30 minutes before cutting."
+          },
+          {
+            "h3": "What if I need to cancel?",
+            "p": "Cancel before we start baking (by 8 am on the day) and the advance comes back to you. After that the advance is kept because the cake is already made."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Recent orders",
+      "h2": "Cakes that left the shop this month.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/bakery/images/display.jpg",
+              "alt": "Cakes on the shelves of the display counter"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/birthday-gold.jpg",
+              "alt": "Birthday cake with gold decoration"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/cake-cutting.jpg",
+              "alt": "A couple cutting their wedding cake on stage"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/counter.jpg",
+              "alt": "Baked goods on the bakery display"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/pastry-plate.jpg",
+              "alt": "Assorted pastries on a plate"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/bakery/images/cookies-jam.jpg",
+              "alt": "Cookies with jam centres"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "What customers say",
+      "h2": "From the WhatsApp replies.",
+      "quotes": {
+        "items": [
+          {
+            "p": "Sent a photo of a cricket cake at 5 in the evening, got a sketch back in twenty minutes, and my son’s cake was exactly that the next day. Truffle, 1 kg, finished in one sitting.",
+            "span": "· Nagerbazar"
+          },
+          {
+            "p": "Ordered a 5 kg two-tier eggless cake for my parents’ anniversary. They delivered it to the hall in Lake Town and set it up. Nobody could tell it was eggless.",
+            "span": "· Lake Town"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Jessore Road, a short walk from Dum Dum metro.",
+      "b": "Address",
+      "p": "27 Jessore Road, Dum Dum<br>Kolkata 700028",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Two-wheeler parking in front. Opposite the Dum Dum post office.",
+      "hours": {
+        "items": [
+          {
+            "td": "Every day",
+            "td2": "8:00 am – 9:30 pm"
+          },
+          {
+            "td": "Cake pickups",
+            "td2": "From 4:00 pm"
+          },
+          {
+            "td": "WhatsApp orders",
+            "td2": "Till 6:00 pm for next day"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Tomorrow’s cake starts with one message today.",
+      "p": "Flavour, weight, name and date. We reply with the price and a pickup time within the hour."
+    },
+    "footer": {
+      "b": "Anjali Cake House",
+      "small": "Dum Dum · since 2011",
+      "p": "Custom cakes made to order, one day ahead. Pastries, bread and cookies fresh every morning. Delivery within 5 km of Dum Dum.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "27 Jessore Road, Dum Dum, Kolkata 700028",
+      "li2": "Every day 8 am – 9:30 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Custom cakes"
+          },
+          {
+            "button": "Price by weight"
+          },
+          {
+            "button": "Pastries, bread, cookies"
+          },
+          {
+            "button": "How to order"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Anjali Cake House sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=27%20Jessore%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700028",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Anjali Cake House | Custom Cakes and Bakery in Dum Dum, Kolkata",
+      "description": "Custom birthday cakes, photo cakes, eggless cakes and wedding cakes in Dum Dum, Kolkata. Order one day ahead on WhatsApp. Pastries, bread and cookies fresh every morning. Delivery within 5 km."
+    }
+  }
+}

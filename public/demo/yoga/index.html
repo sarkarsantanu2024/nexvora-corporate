@@ -817,7 +817,23 @@ body:not(.sample) .demo-only{display:none !important}
 /* Trust line under the Why Choose Us heading — same shape as the
    bar under the banner, so the page keeps one language. */
 .trustbar{margin-top:2.5rem; margin-bottom:3rem}
+/* phone: readable small print, finger-sized links, no image bleed in the band */
+@media (max-width:899px){
+  .brand{min-height:44px}
+  .brand__sub{font-size:.75rem}
+  .about__badge span{font-size:.75rem}
+  .address .label,.hours .label{font-size:.75rem}
+  .footer h4{font-size:.75rem}
+  .footer__contact a{padding-top:1rem;margin-top:-.1rem}
+  .footer__sample a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+  .band__bg img{transform:none}
+}
+/* Laptop: decorative badge and phone mock-up bleed a few px past the edge; never let that scroll the page sideways. */
+html,body{overflow-x:clip}
 </style>
+<meta name="nx-site" content="yoga">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 
 <body>
@@ -826,18 +842,10 @@ body:not(.sample) .demo-only{display:none !important}
 <!-- ========================== DEMO BAR ===========================
      Remove this strip and its styles before the site goes live.
      ============================================================== -->
-<div class="demobar">
-  <div class="wrap demobar__inner">
-    <a class="demobar__home" href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&middot;</span>by Nexvora Technologies</a>
-    <span class="demobar__links">
-      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-    </span>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
 <!-- ============================ HEADER ============================ -->
-<header class="header" id="top">
+<header data-nx-section="top" class="header" id="top">
   <div class="wrap header__inner">
     <a class="brand" href="#top" aria-label="Wellness Yoga Studio, back to top">
       <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
@@ -847,8 +855,8 @@ body:not(.sample) .demo-only{display:none !important}
         <circle cx="20" cy="21" r="2" fill="currentColor"/>
       </svg>
       <span class="brand__text">
-        <span class="brand__name">WELLNESS YOGA STUDIO</span>
-        <span class="brand__sub">Yoga &bull; Meditation &bull; Wellness</span>
+        <span data-nx="top.brand-name" class="brand__name">WELLNESS YOGA STUDIO</span>
+        <span data-nx="top.brand-sub" class="brand__sub">Yoga &bull; Meditation &bull; Wellness</span>
       </span>
     </a>
 
@@ -875,6 +883,7 @@ body:not(.sample) .demo-only{display:none !important}
       </a>
     </div>
 
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -902,20 +911,20 @@ body:not(.sample) .demo-only{display:none !important}
 <main id="main">
 
 <!-- ============================ HERO ============================ -->
-<section class="hero">
-  <div class="hero__watermark" aria-hidden="true"><span>Yoga</span><span>Studio</span></div>
+<section data-nx-section="section-2" class="hero">
+  <div data-nx-list="section-2.hero-watermark" class="hero__watermark" aria-hidden="true"><span data-nx-f="span" data-nx-item>Yoga</span><span data-nx-f="span" data-nx-item>Studio</span></div>
 
   <div class="wrap">
    <div class="hero__grid">
     <div class="hero__content reveal" data-anim="fade-right">
-      <p class="eyebrow">Mindfulness &bull; Movement &bull; Balance</p>
-      <h1>Find Your Balance.<span class="line2">Strengthen Your Mind &amp; Body.</span></h1>
-      <p class="lede">Discover a mindful approach to yoga with guided classes designed to support strength, flexibility, relaxation and overall well-being.</p>
+      <p data-nx="section-2.eyebrow" class="eyebrow">Mindfulness &bull; Movement &bull; Balance</p>
+      <h1 data-nx="section-2.h1">Find Your Balance.<span class="line2">Strengthen Your Mind &amp; Body.</span></h1>
+      <p data-nx="section-2.lede" class="lede">Discover a mindful approach to yoga with guided classes designed to support strength, flexibility, relaxation and overall well-being.</p>
 
       <div class="btn-row">
           <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
           <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
-  <a class="btn btn--ghost demo-off" href="#programs">Explore Our Classes</a>
+  <a data-nx="section-2.button" class="btn btn--ghost demo-off" href="#programs">Explore Our Classes</a>
       </div>
 
     </div>
@@ -925,42 +934,42 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="hero__ring hero__ring--inner" aria-hidden="true"></div>
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph arch">
-        <img src="/demo/yoga/images/hero-balance-pose.jpg" alt="A woman holding tree pose beside a forest stream" width="900" height="1150" fetchpriority="high" decoding="async">
+        <img data-nx="section-2.photo" src="/demo/yoga/images/hero-balance-pose.jpg" alt="A woman holding tree pose beside a forest stream" width="900" height="1150" fetchpriority="high" decoding="async">
       </figure>
     </div>
    </div>
 
-    <ul class="hero__bar reveal" data-anim="zoom-in-up" data-delay="320">
-      <li>
-        <b>Since 2014</b>
-        <span>Teaching in Gariahat</span>
+    <ul data-nx-list="section-2.hero-bar" class="hero__bar reveal" data-anim="zoom-in-up" data-delay="320">
+      <li data-nx-item>
+        <b data-nx-f="b">Since 2014</b>
+        <span data-nx-f="span">Teaching in Gariahat</span>
       </li>
-      <li>
-        <b>12 at most</b>
-        <span>Students in a class</span>
+      <li data-nx-item>
+        <b data-nx-f="b">12 at most</b>
+        <span data-nx-f="span">Students in a class</span>
       </li>
-      <li>
-        <b>7 Practices</b>
-        <span>Hatha to Iyengar</span>
+      <li data-nx-item>
+        <b data-nx-f="b">7 Practices</b>
+        <span data-nx-f="span">Hatha to Iyengar</span>
       </li>
-      <li>
-        <b>Online</b>
-        <span>Classes Available</span>
+      <li data-nx-item>
+        <b data-nx-f="b">Online</b>
+        <span data-nx-f="span">Classes Available</span>
       </li>
     </ul>
   </div>
 </section>
 
 <!-- ============================ ABOUT ============================ -->
-<section class="section section--shell about" id="about">
+<section data-nx-section="about" class="section section--shell about" id="about">
   <div class="wrap about__grid">
     <div class="about__text reveal" data-anim="fade-right">
-      <p class="eyebrow">A Space For Your Practice</p>
-      <h2 class="h-lg">More Than Yoga.<span class="accent">A Journey Towards Balance.</span></h2>
+      <p data-nx="about.eyebrow" class="eyebrow">A Space For Your Practice</p>
+      <h2 data-nx="about.h2" class="h-lg">More Than Yoga.<span class="accent">A Journey Towards Balance.</span></h2>
       <div class="lede">
-        <p>At Wellness Yoga Studio, we believe yoga is more than physical exercise.</p>
-        <p>It is a journey towards better movement, greater awareness and a calmer mind.</p>
-        <p class="demo-off">Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.</p>
+        <p data-nx="about.p">At Wellness Yoga Studio, we believe yoga is more than physical exercise.</p>
+        <p data-nx="about.p2">It is a journey towards better movement, greater awareness and a calmer mind.</p>
+        <p data-nx="about.p3" class="demo-off">Whether you are beginning your yoga journey or looking to deepen your practice, explore a class that suits your needs.</p>
       </div>
             <a class="link-cta demo-off" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Talk to Us on WhatsApp &rarr;</a>
     </div>
@@ -968,26 +977,26 @@ body:not(.sample) .demo-only{display:none !important}
     <div class="about__figure reveal" data-anim="fade-left">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph">
-        <img src="/demo/yoga/images/about-class-stretch.jpg" alt="A teacher adjusting students' overhead stretch during class" width="1000" height="800" loading="lazy" decoding="async">
+        <img data-nx="about.photo" src="/demo/yoga/images/about-class-stretch.jpg" alt="A teacher adjusting students' overhead stretch during class" width="1000" height="800" loading="lazy" decoding="async">
       </figure>
       <figure class="ph about__inset">
-        <img src="/demo/yoga/images/about-rolled-mats.jpg" alt="A woman in a yellow kurta sitting on her mat on a lawn" width="500" height="500" loading="lazy" decoding="async">
+        <img data-nx="about.photo2" src="/demo/yoga/images/about-rolled-mats.jpg" alt="A woman in a yellow kurta sitting on her mat on a lawn" width="500" height="500" loading="lazy" decoding="async">
       </figure>
       <div class="about__badge">
-        <b>12</b>
-        <span>Students per class, at most</span>
+        <b data-nx="about.b">12</b>
+        <span data-nx="about.span">Students per class, at most</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ PROGRAMS ============================ -->
-<section class="section" id="programs">
+<section data-nx-section="programs" class="section" id="programs">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">Yoga Programs</p>
-      <h2 class="h-lg">Find a Practice That Works for You</h2>
-      <p class="lede">Explore different approaches to yoga and find the practice that fits your goals and lifestyle.</p>
+      <p data-nx="programs.eyebrow" class="eyebrow">Yoga Programs</p>
+      <h2 data-nx="programs.h2" class="h-lg">Find a Practice That Works for You</h2>
+      <p data-nx="programs.lede" class="lede">Explore different approaches to yoga and find the practice that fits your goals and lifestyle.</p>
     </div>
 
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
@@ -996,126 +1005,126 @@ body:not(.sample) .demo-only{display:none !important}
            seven real programmes below. -->
       <li class="pcard pcard--wide reveal demo-only" data-anim="zoom-in-up">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">01</span>
-          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num" class="pcard__num" aria-hidden="true">01</span>
+          <span class="ph"><img data-nx="programs.photo" src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Yoga Classes</h3>
-          <p>Group sessions for different levels.</p>
+          <h3 data-nx="programs.h3">Yoga Classes</h3>
+          <p data-nx="programs.p">Group sessions for different levels.</p>
         </div>
       </li>
       <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">02</span>
-          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num2" class="pcard__num" aria-hidden="true">02</span>
+          <span class="ph"><img data-nx="programs.photo2" src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Mindful Practice</h3>
-          <p>Yoga, breath and mindful movement.</p>
+          <h3 data-nx="programs.h32">Mindful Practice</h3>
+          <p data-nx="programs.p2">Yoga, breath and mindful movement.</p>
         </div>
       </li>
       <li class="pcard reveal demo-only" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">03</span>
-          <span class="ph"><img src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num3" class="pcard__num" aria-hidden="true">03</span>
+          <span class="ph"><img data-nx="programs.photo3" src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Online Classes</h3>
-          <p>Practice from wherever you are.</p>
+          <h3 data-nx="programs.h33">Online Classes</h3>
+          <p data-nx="programs.p3">Practice from wherever you are.</p>
         </div>
       </li>
       
       <!-- The seven real programmes. -->
       <li class="pcard pcard--wide reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">01</span>
-          <span class="ph"><img src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num4" class="pcard__num" aria-hidden="true">01</span>
+          <span class="ph"><img data-nx="programs.photo4" src="/demo/yoga/images/program-group-lessons.jpg" alt="An outdoor group class on a lawn with their teacher" width="1100" height="740" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Group Lessons</h3>
-          <p>Guided group sessions in a supportive environment.</p>
+          <h3 data-nx="programs.h34">Group Lessons</h3>
+          <p data-nx="programs.p4">Guided group sessions in a supportive environment.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">02</span>
-          <span class="ph"><img src="/demo/yoga/images/program-ashtanga.jpg" alt="A man in white holding a deep squat with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num5" class="pcard__num" aria-hidden="true">02</span>
+          <span class="ph"><img data-nx="programs.photo5" src="/demo/yoga/images/program-ashtanga.jpg" alt="A man in white holding a deep squat with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Ashtanga Yoga</h3>
-          <p>A dynamic practice combining movement, breath and focus.</p>
+          <h3 data-nx="programs.h35">Ashtanga Yoga</h3>
+          <p data-nx="programs.p5">A dynamic practice combining movement, breath and focus.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">03</span>
-          <span class="ph"><img src="/demo/yoga/images/program-hatha.jpg" alt="A woman in a side stretch beside a wooden door" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num6" class="pcard__num" aria-hidden="true">03</span>
+          <span class="ph"><img data-nx="programs.photo6" src="/demo/yoga/images/program-hatha.jpg" alt="A woman in a side stretch beside a wooden door" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Hatha Yoga</h3>
-          <p>Build strength, flexibility and awareness through traditional yoga practice.</p>
+          <h3 data-nx="programs.h36">Hatha Yoga</h3>
+          <p data-nx="programs.p6">Build strength, flexibility and awareness through traditional yoga practice.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="240">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">04</span>
-          <span class="ph"><img src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num7" class="pcard__num" aria-hidden="true">04</span>
+          <span class="ph"><img data-nx="programs.photo7" src="/demo/yoga/images/program-bhakti.jpg" alt="A man in a navy kurta seated with eyes closed and hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Bhakti Yoga</h3>
-          <p>A mindful practice focused on devotion, awareness and inner connection.</p>
+          <h3 data-nx="programs.h37">Bhakti Yoga</h3>
+          <p data-nx="programs.p7">A mindful practice focused on devotion, awareness and inner connection.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">05</span>
-          <span class="ph"><img src="/demo/yoga/images/program-hot-yoga.jpg" alt="A woman holding a headstand on grass among pine trees" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num8" class="pcard__num" aria-hidden="true">05</span>
+          <span class="ph"><img data-nx="programs.photo8" src="/demo/yoga/images/program-hot-yoga.jpg" alt="A woman holding a headstand on grass among pine trees" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Bikram / Hot Yoga</h3>
-          <p>A challenging practice combining yoga postures with a heated environment.</p>
+          <h3 data-nx="programs.h38">Bikram / Hot Yoga</h3>
+          <p data-nx="programs.p8">A challenging practice combining yoga postures with a heated environment.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="80">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">06</span>
-          <span class="ph"><img src="/demo/yoga/images/program-family.jpg" alt="Children in an outdoor yoga class" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num9" class="pcard__num" aria-hidden="true">06</span>
+          <span class="ph"><img data-nx="programs.photo9" src="/demo/yoga/images/program-family.jpg" alt="Children in an outdoor yoga class" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Family Yoga</h3>
-          <p>A shared yoga experience for families to move, practice and connect.</p>
+          <h3 data-nx="programs.h39">Family Yoga</h3>
+          <p data-nx="programs.p9">A shared yoga experience for families to move, practice and connect.</p>
         </div>
       </li>
       <li class="pcard reveal demo-off" data-anim="zoom-in-up" data-delay="160">
         <figure class="pcard__media">
-          <span class="pcard__num" aria-hidden="true">07</span>
-          <span class="ph"><img src="/demo/yoga/images/program-iyengar.jpg" alt="A woman seated in the studio with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
+          <span data-nx="programs.pcard-num10" class="pcard__num" aria-hidden="true">07</span>
+          <span class="ph"><img data-nx="programs.photo10" src="/demo/yoga/images/program-iyengar.jpg" alt="A woman seated in the studio with hands in namaste" width="600" height="800" loading="lazy" decoding="async"></span>
         </figure>
         <div class="pcard__body">
-          <h3>Iyengar Yoga</h3>
-          <p>A precise and alignment-focused approach to yoga practice.</p>
+          <h3 data-nx="programs.h310">Iyengar Yoga</h3>
+          <p data-nx="programs.p10">A precise and alignment-focused approach to yoga practice.</p>
         </div>
       </li>
     </ul>
 
     <div class="programs__foot reveal">
             <a class="link-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask About Classes &rarr;</a>
-      <p class="note demo-only">More programmes can be added: tell us what you run and they go on the site.</p>
-      <p class="note demo-off">Message us to check which practices are running at the moment.</p>
+      <p data-nx="programs.note" class="note demo-only">More programmes can be added: tell us what you run and they go on the site.</p>
+      <p data-nx="programs.note2" class="note demo-off">Message us to check which practices are running at the moment.</p>
     </div>
   </div>
 </section>
 
 <!-- ============================ IMAGE BAND ============================ -->
-<section class="band demo-off">
+<section data-nx-section="section-5" class="band demo-off">
   <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
   <figure class="band__bg">
-    <img src="/demo/yoga/images/band-class-wide.jpg" alt="An outdoor yoga class on a red stone courtyard" width="1800" height="1000" loading="lazy" decoding="async">
+    <img data-nx="section-5.photo" src="/demo/yoga/images/band-class-wide.jpg" alt="An outdoor yoga class on a red stone courtyard" width="1800" height="1000" loading="lazy" decoding="async">
   </figure>
   <div class="wrap band__inner">
     <div class="reveal" data-anim="fade-right">
-      <p class="eyebrow eyebrow--light">On the Mat</p>
-      <p class="band__line">A practice built around the people who come to it.</p>
+      <p data-nx="section-5.eyebrow" class="eyebrow eyebrow--light">On the Mat</p>
+      <p data-nx="section-5.band-line" class="band__line">A practice built around the people who come to it.</p>
       <div class="btn-row">
           <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
           <a class="btn btn--outline-light" href="tel:+919804243159">Call Us</a>
@@ -1125,49 +1134,49 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ WHY US ============================ -->
-<section class="section section--sage why demo-off" id="why">
+<section data-nx-section="why" class="section section--sage why demo-off" id="why">
   <div class="wrap split">
     <div class="split__media reveal" data-anim="fade-right">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph">
-        <img src="/demo/yoga/images/why-standing-practice.jpg" alt="A man in white holding tree pose with hands in namaste" width="800" height="1000" loading="lazy" decoding="async">
+        <img data-nx="why.photo" src="/demo/yoga/images/why-standing-practice.jpg" alt="A man in white holding tree pose with hands in namaste" width="800" height="1000" loading="lazy" decoding="async">
       </figure>
       <figure class="ph ph--small">
-        <img src="/demo/yoga/images/why-students-inset.jpg" alt="A class holding plank pose together" width="500" height="500" loading="lazy" decoding="async">
+        <img data-nx="why.photo2" src="/demo/yoga/images/why-students-inset.jpg" alt="A class holding plank pose together" width="500" height="500" loading="lazy" decoding="async">
       </figure>
     </div>
 
     <div class="reveal" data-anim="fade-left">
-      <p class="eyebrow">Why Practice With Us?</p>
-      <h2 class="h-lg">A Practice Built Around You</h2>
+      <p data-nx="why.eyebrow" class="eyebrow">Why Practice With Us?</p>
+      <h2 data-nx="why.h2" class="h-lg">A Practice Built Around You</h2>
 
-      <ul class="pointlist">
-        <li>
-          <span class="n" aria-hidden="true">01</span>
+      <ul data-nx-list="why.pointlist" class="pointlist">
+        <li data-nx-item>
+          <span data-nx-f="n" class="n" aria-hidden="true">01</span>
           <div>
-            <h3>Small Classes</h3>
-            <p>Never more than twelve on the mat, so every posture gets corrected.</p>
+            <h3 data-nx-f="h3">Small Classes</h3>
+            <p data-nx-f="p">Never more than twelve on the mat, so every posture gets corrected.</p>
           </div>
         </li>
-        <li>
-          <span class="n" aria-hidden="true">02</span>
+        <li data-nx-item>
+          <span data-nx-f="n" class="n" aria-hidden="true">02</span>
           <div>
-            <h3>Multiple Yoga Practices</h3>
-            <p>Explore different approaches to yoga and mindful movement.</p>
+            <h3 data-nx-f="h3">Multiple Yoga Practices</h3>
+            <p data-nx-f="p">Explore different approaches to yoga and mindful movement.</p>
           </div>
         </li>
-        <li>
-          <span class="n" aria-hidden="true">03</span>
+        <li data-nx-item>
+          <span data-nx-f="n" class="n" aria-hidden="true">03</span>
           <div>
-            <h3>Online Classes</h3>
-            <p>Practice from wherever you are.</p>
+            <h3 data-nx-f="h3">Online Classes</h3>
+            <p data-nx-f="p">Practice from wherever you are.</p>
           </div>
         </li>
-        <li>
-          <span class="n" aria-hidden="true">04</span>
+        <li data-nx-item>
+          <span data-nx-f="n" class="n" aria-hidden="true">04</span>
           <div>
-            <h3>Easy to Reach</h3>
-            <p>A short walk from the main road, with parking nearby.</p>
+            <h3 data-nx-f="h3">Easy to Reach</h3>
+            <p data-nx-f="p">A short walk from the main road, with parking nearby.</p>
           </div>
         </li>
       </ul>
@@ -1176,7 +1185,7 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ JOURNEY ============================ -->
-<section class="section section--forest journey demo-off">
+<section data-nx-section="section-7" class="section section--forest journey demo-off">
   <!-- Abstract backdrop: the brand's three circles, turning slowly -->
   <div class="journey__glow journey__glow--1" aria-hidden="true"></div>
   <div class="journey__glow journey__glow--2" aria-hidden="true"></div>
@@ -1199,25 +1208,25 @@ body:not(.sample) .demo-only{display:none !important}
 
   <div class="wrap">
     <div class="head reveal">
-      <p class="eyebrow eyebrow--light">Your Practice. Your Pace.</p>
-      <h2 class="h-lg">Begin Your Journey in Three Simple Steps</h2>
+      <p data-nx="section-7.eyebrow" class="eyebrow eyebrow--light">Your Practice. Your Pace.</p>
+      <h2 data-nx="section-7.h2" class="h-lg">Begin Your Journey in Three Simple Steps</h2>
     </div>
 
-    <ol class="steps">
-      <li class="step reveal" data-anim="fade-up">
-        <span class="step__num" aria-hidden="true">01</span>
-        <h3>Choose Your Practice</h3>
-        <p>Explore the available yoga programs and find what suits you.</p>
+    <ol data-nx-list="section-7.steps" class="steps">
+      <li data-nx-item class="step reveal" data-anim="fade-up">
+        <span data-nx-f="span" class="step__num" aria-hidden="true">01</span>
+        <h3 data-nx-f="h3">Choose Your Practice</h3>
+        <p data-nx-f="p">Explore the available yoga programs and find what suits you.</p>
       </li>
-      <li class="step reveal" data-anim="fade-up" data-delay="120">
-        <span class="step__num" aria-hidden="true">02</span>
-        <h3>Connect With Us</h3>
-        <p>Ask about class timings, availability and online options.</p>
+      <li data-nx-item class="step reveal" data-anim="fade-up" data-delay="120">
+        <span data-nx-f="span" class="step__num" aria-hidden="true">02</span>
+        <h3 data-nx-f="h3">Connect With Us</h3>
+        <p data-nx-f="p">Ask about class timings, availability and online options.</p>
       </li>
-      <li class="step reveal" data-anim="fade-up" data-delay="240">
-        <span class="step__num" aria-hidden="true">03</span>
-        <h3>Begin Your Practice</h3>
-        <p>Start your journey towards better movement, awareness and balance.</p>
+      <li data-nx-item class="step reveal" data-anim="fade-up" data-delay="240">
+        <span data-nx-f="span" class="step__num" aria-hidden="true">03</span>
+        <h3 data-nx-f="h3">Begin Your Practice</h3>
+        <p data-nx-f="p">Start your journey towards better movement, awareness and balance.</p>
       </li>
     </ol>
 
@@ -1229,33 +1238,33 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ RATING ============================ -->
-<section class="section section--shell demo-off">
+<section data-nx-section="section-8" class="section section--shell demo-off">
   <div class="wrap">
     <div class="rating reveal" data-anim="zoom-in">
       <div class="rating__media">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/yoga/images/rating-class.jpg" alt="A group holding their rolled mats on a hillside" width="1000" height="1000" loading="lazy" decoding="async">
+          <img data-nx="section-8.photo" src="/demo/yoga/images/rating-class.jpg" alt="A group holding their rolled mats on a hillside" width="1000" height="1000" loading="lazy" decoding="async">
         </figure>
       </div>
 
       <div class="rating__panel">
-        <p class="eyebrow">From the Mat</p>
-        <h2 class="h-md">What Students Say</h2>
+        <p data-nx="section-8.eyebrow" class="eyebrow">From the Mat</p>
+        <h2 data-nx="section-8.h2" class="h-md">What Students Say</h2>
 
         <blockquote class="rating__quote">
-          <p>&ldquo;I came for my back and stayed for the quiet. Twelve of us, one teacher, and nobody rushes you.&rdquo;</p>
+          <p data-nx="section-8.p">&ldquo;I came for my back and stayed for the quiet. Twelve of us, one teacher, and nobody rushes you.&rdquo;</p>
           <footer>Rina, Hatha evening batch</footer>
         </blockquote>
 
-        <p class="rating__meta">
-          <span>Since 2014</span>
-          <span>Small groups</span>
-          <span>Gariahat, Kolkata</span>
+        <p data-nx-list="section-8.rating-meta" class="rating__meta">
+          <span data-nx-f="span" data-nx-item>Since 2014</span>
+          <span data-nx-f="span" data-nx-item>Small groups</span>
+          <span data-nx-f="span" data-nx-item>Gariahat, Kolkata</span>
         </p>
 
         <div class="btn-row">
-    <a class="btn btn--ghost" href="#programs">See the Classes</a>
+    <a data-nx="section-8.button" class="btn btn--ghost" href="#programs">See the Classes</a>
     <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
         </div>
       </div>
@@ -1264,84 +1273,84 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ GALLERY ============================ -->
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal demo-only">
-      <p class="eyebrow">Why People Choose Us</p>
-      <h2 class="h-lg">Why Choose Us?</h2>
+      <p data-nx="gallery.eyebrow" class="eyebrow">Why People Choose Us</p>
+      <h2 data-nx="gallery.h2" class="h-lg">Why Choose Us?</h2>
     </div>
     <div class="head head--center reveal demo-off">
-      <p class="eyebrow">A Glimpse Into Our Practice</p>
-      <h2 class="h-lg">Moments From the Mat</h2>
+      <p data-nx="gallery.eyebrow2" class="eyebrow">A Glimpse Into Our Practice</p>
+      <h2 data-nx="gallery.h22" class="h-lg">Moments From the Mat</h2>
     </div>
 
-    <ul class="hero__bar trustbar reveal demo-only" data-anim="zoom-in-up">
-      <li>
-        <b>Since 2014</b>
-        <span>Teaching in Gariahat</span>
+    <ul data-nx-list="gallery.hero-bar" class="hero__bar trustbar reveal demo-only" data-anim="zoom-in-up">
+      <li data-nx-item>
+        <b data-nx-f="b">Since 2014</b>
+        <span data-nx-f="span">Teaching in Gariahat</span>
       </li>
-      <li>
-        <b>12 at most</b>
-        <span>Students in a class</span>
+      <li data-nx-item>
+        <b data-nx-f="b">12 at most</b>
+        <span data-nx-f="span">Students in a class</span>
       </li>
-      <li>
-        <b>Online</b>
-        <span>Classes Available</span>
+      <li data-nx-item>
+        <b data-nx-f="b">Online</b>
+        <span data-nx-f="span">Classes Available</span>
       </li>
-      <li>
-        <b>7 Practices</b>
-        <span>Hatha to Iyengar</span>
+      <li data-nx-item>
+        <b data-nx-f="b">7 Practices</b>
+        <span data-nx-f="span">Hatha to Iyengar</span>
       </li>
     </ul>
 
     <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
-    <div class="gallery">
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-settling-in.jpg" alt="A woman seated on a printed mat at home" width="900" height="675" loading="lazy" decoding="async"></span>
+    <div data-nx-list="gallery.gallery" class="gallery">
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-settling-in.jpg" alt="A woman seated on a printed mat at home" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Group Lessons</span>
-          <b>Practising at Home</b>
-          <span>Online students follow along from home.</span>
+          <span data-nx-f="span" class="gallery__tag">Group Lessons</span>
+          <b data-nx-f="b">Practising at Home</b>
+          <span data-nx-f="span2">Online students follow along from home.</span>
         </figcaption>
       </figure>
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-strength.jpg" alt="A yoga class holding plank pose together on mats" width="900" height="675" loading="lazy" decoding="async"></span>
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-strength.jpg" alt="A yoga class holding plank pose together on mats" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Ashtanga</span>
-          <b>Building Strength</b>
-          <span>Movement and breath practised together.</span>
+          <span data-nx-f="span" class="gallery__tag">Ashtanga</span>
+          <b data-nx-f="b">Building Strength</b>
+          <span data-nx-f="span2">Movement and breath practised together.</span>
         </figcaption>
       </figure>
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-mats-props.jpg" alt="A woman in a saree seated on a mat with her arms overhead" width="900" height="675" loading="lazy" decoding="async"></span>
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-mats-props.jpg" alt="A woman in a saree seated on a mat with her arms overhead" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Seated Practice</span>
-          <b>Room to Breathe</b>
-          <span>A seated practice, arms reaching overhead.</span>
+          <span data-nx-f="span" class="gallery__tag">Seated Practice</span>
+          <b data-nx-f="b">Room to Breathe</b>
+          <span data-nx-f="span2">A seated practice, arms reaching overhead.</span>
         </figcaption>
       </figure>
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-breathing.jpg" alt="A man in a blue kurta meditating on a lawn" width="900" height="675" loading="lazy" decoding="async"></span>
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-breathing.jpg" alt="A man in a blue kurta meditating on a lawn" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Bhakti</span>
-          <b>Sitting With the Breath</b>
-          <span>A seated practice focused on stillness.</span>
+          <span data-nx-f="span" class="gallery__tag">Bhakti</span>
+          <b data-nx-f="b">Sitting With the Breath</b>
+          <span data-nx-f="span2">A seated practice focused on stillness.</span>
         </figcaption>
       </figure>
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-basics.jpg" alt="Students folding forward in a studio with a blue floor" width="900" height="675" loading="lazy" decoding="async"></span>
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" data-delay="80" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-basics.jpg" alt="Students folding forward in a studio with a blue floor" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Hatha</span>
-          <b>Working the Basics</b>
-          <span>Traditional postures worked through slowly.</span>
+          <span data-nx-f="span" class="gallery__tag">Hatha</span>
+          <b data-nx-f="b">Working the Basics</b>
+          <span data-nx-f="span2">Traditional postures worked through slowly.</span>
         </figcaption>
       </figure>
-      <figure class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
-        <span class="ph"><img src="/demo/yoga/images/gallery-side-by-side.jpg" alt="A couple holding tree pose side by side" width="900" height="675" loading="lazy" decoding="async"></span>
+      <figure data-nx-item class="gallery__item reveal" data-anim="zoom-in-up" data-delay="160" tabindex="0">
+        <span class="ph"><img data-nx-f="photo" src="/demo/yoga/images/gallery-side-by-side.jpg" alt="A couple holding tree pose side by side" width="900" height="675" loading="lazy" decoding="async"></span>
         <figcaption class="gallery__cap">
-          <span class="gallery__tag">Small Groups</span>
-          <b>Room to Be Corrected</b>
-          <span>Practising side by side in a shared session.</span>
+          <span data-nx-f="span" class="gallery__tag">Small Groups</span>
+          <b data-nx-f="b">Room to Be Corrected</b>
+          <span data-nx-f="span2">Practising side by side in a shared session.</span>
         </figcaption>
       </figure>
     </div>
@@ -1349,13 +1358,13 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ ONLINE ============================ -->
-<section class="section section--shell demo-off">
+<section data-nx-section="section-10" class="section section--shell demo-off">
   <div class="wrap online__grid">
     <div class="reveal" data-anim="fade-right">
-      <p class="eyebrow">Practice From Anywhere</p>
-      <h2 class="h-lg">Can&rsquo;t Join Us in Person?</h2>
-      <p class="online__big">Practice From Wherever You Are.</p>
-      <p class="lede">Our online classes make it easier to maintain your yoga practice wherever you are.</p>
+      <p data-nx="section-10.eyebrow" class="eyebrow">Practice From Anywhere</p>
+      <h2 data-nx="section-10.h2" class="h-lg">Can&rsquo;t Join Us in Person?</h2>
+      <p data-nx="section-10.online-big" class="online__big">Practice From Wherever You Are.</p>
+      <p data-nx="section-10.lede" class="lede">Our online classes make it easier to maintain your yoga practice wherever you are.</p>
       <div class="btn-row">
           <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask About Online Classes</a>
           <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
@@ -1366,12 +1375,12 @@ body:not(.sample) .demo-only{display:none !important}
       <div class="device">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async">
+          <img data-nx="section-10.photo" src="/demo/yoga/images/online-living-room.jpg" alt="A woman practising at home on a purple mat" width="1200" height="750" loading="lazy" decoding="async">
         </figure>
         <div class="device__foot" aria-hidden="true"></div>
         <div class="device__phone">
           <figure class="ph">
-            <img src="/demo/yoga/images/online-rolled-mat.jpg" alt="A woman meditating on a beach" width="360" height="640" loading="lazy" decoding="async">
+            <img data-nx="section-10.photo2" src="/demo/yoga/images/online-rolled-mat.jpg" alt="A woman meditating on a beach" width="360" height="640" loading="lazy" decoding="async">
           </figure>
         </div>
       </div>
@@ -1380,27 +1389,27 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ LOCATION ============================ -->
-<section class="section demo-off" id="location">
+<section data-nx-section="location" class="section demo-off" id="location">
   <div class="wrap location__grid">
     <div class="reveal" data-anim="fade-right">
-      <p class="eyebrow">Visit Us</p>
-      <h2 class="h-lg">Find Wellness Yoga Studio</h2>
+      <p data-nx="location.eyebrow" class="eyebrow">Visit Us</p>
+      <h2 data-nx="location.h2" class="h-lg">Find Wellness Yoga Studio</h2>
 
-      <address class="address">
+      <address data-nx="location.address" class="address">
         <span class="label">Studio Address</span>
         14 Hindusthan Park<br>
         Gariahat, Kolkata 700029<br>
         West Bengal
       </address>
-      <p class="hours"><span class="label">Class Hours</span>Monday to Saturday, 6&ndash;9 am and 5&ndash;8 pm. Sunday morning only.</p>
+      <p data-nx="location.hours" class="hours"><span class="label">Class Hours</span>Monday to Saturday, 6&ndash;9 am and 5&ndash;8 pm. Sunday morning only.</p>
 
       <div class="btn-row">
-  <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
+  <a data-nx="location.button" class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
           <a class="btn btn--solid" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp Us</a>
           <a class="btn btn--sand" href="tel:+919804243159">Call Us</a>
       </div>
 
-      <p class="contact-note">Message us on WhatsApp for class timings, availability and online sessions.</p>
+      <p data-nx="location.p" class="contact-note">Message us on WhatsApp for class timings, availability and online sessions.</p>
     </div>
 
     <div class="reveal" data-anim="fade-left">
@@ -1417,18 +1426,18 @@ body:not(.sample) .demo-only{display:none !important}
 </section>
 
 <!-- ============================ FINAL CTA ============================ -->
-<section class="section section--forest final" id="contact">
+<section data-nx-section="contact" class="section section--forest final" id="contact">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow eyebrow--light">Ready to Begin?</p>
-      <h2 class="h-lg">Ready to Begin Your Practice?</h2>
-      <p class="lede">Ask about classes, timings or online sessions.</p>
+      <p data-nx="contact.eyebrow" class="eyebrow eyebrow--light">Ready to Begin?</p>
+      <h2 data-nx="contact.h2" class="h-lg">Ready to Begin Your Practice?</h2>
+      <p data-nx="contact.lede" class="lede">Ask about classes, timings or online sessions.</p>
       <div class="btn-row">
           <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Wellness%20Yoga%20Studio%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Talk to Us on WhatsApp</a>
-  <a class="btn btn--outline-light demo-only" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
+  <a data-nx="contact.button" class="btn btn--outline-light demo-only" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
           <a class="btn btn--outline-light demo-off" href="tel:+919804243159">Call Us</a>
       </div>
-      <p class="final__place demo-only">Gariahat, Kolkata</p>
+      <p data-nx="contact.final-place" class="final__place demo-only">Gariahat, Kolkata</p>
     </div>
   </div>
 </section>
@@ -1436,7 +1445,7 @@ body:not(.sample) .demo-only{display:none !important}
 </main>
 
 <!-- ============================ FOOTER ============================ -->
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
@@ -1448,12 +1457,12 @@ body:not(.sample) .demo-only{display:none !important}
             <circle cx="20" cy="21" r="2" fill="currentColor"/>
           </svg>
           <span class="brand__text">
-            <span class="brand__name">WELLNESS YOGA STUDIO</span>
-            <span class="brand__sub">Yoga &bull; Meditation &bull; Wellness</span>
+            <span data-nx="footer.brand-name" class="brand__name">WELLNESS YOGA STUDIO</span>
+            <span data-nx="footer.brand-sub" class="brand__sub">Yoga &bull; Meditation &bull; Wellness</span>
           </span>
         </a>
-        <p class="footer__tag">Mindfulness &bull; Movement &bull; Balance</p>
-        <p class="footer__loc">Gariahat, Kolkata</p>
+        <p data-nx="footer.footer-tag" class="footer__tag">Mindfulness &bull; Movement &bull; Balance</p>
+        <p data-nx="footer.footer-loc" class="footer__loc">Gariahat, Kolkata</p>
       </div>
 
       <nav aria-label="Footer">
@@ -1468,17 +1477,17 @@ body:not(.sample) .demo-only{display:none !important}
       </nav>
 
       <div class="footer__contact">
-        <h4>Visit</h4>
-        <address>
+        <h4 data-nx="footer.h4">Visit</h4>
+        <address data-nx="footer.address">
           14 Hindusthan Park<br>
           Gariahat, Kolkata 700029<br>
           West Bengal
         </address>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
+        <a data-nx="footer.button" href="https://www.google.com/maps/search/?api=1&amp;query=14%20Hindusthan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get Directions</a>
       </div>
 
       <div>
-        <h4>Follow</h4>
+        <h4 data-nx="footer.h42">Follow</h4>
         <div class="socials">
           <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
@@ -1496,7 +1505,7 @@ body:not(.sample) .demo-only{display:none !important}
       </div>
     </div>
 
-    <p class="footer__bottom">&copy; 2026 Wellness Yoga Studio. All rights reserved.</p>
+    <p data-nx="footer.footer-bottom" class="footer__bottom">&copy; 2026 Wellness Yoga Studio. All rights reserved.</p>
     <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The studio, its address and its timings are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
   </div>
 </footer>
@@ -1650,5 +1659,7 @@ body:not(.sample) .demo-only{display:none !important}
   });
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

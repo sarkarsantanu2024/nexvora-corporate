@@ -295,25 +295,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets */
+@media (max-width:760px){
+.footer li a,.visit__row a{display:inline-flex;align-items:center;min-height:44px}
+.footer__note a{padding-block:.75rem}
+}
 </style>
+<meta name="nx-site" content="hardware-paint">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bhowmick Hardware and Paints, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#2B3139"/><path d="M6 30h32v8H6z" fill="#F5C518"/><path d="M12 8h20v14H12z" fill="#F5C518"/><path d="M19 22h6v8h-6z" fill="#E6E9ED"/><path d="M15 12h14M15 16h14" stroke="#2B3139" stroke-width="2"/></svg>
-      <span><b>Bhowmick Hardware &amp; Paints</b><small>Behala Chowrasta &middot; since 1994</small></span>
+      <span><b data-nx="header.b">Bhowmick Hardware &amp; Paints</b><small data-nx="header.small">Behala Chowrasta &middot; since 1994</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -336,105 +339,105 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
-  <img class="hero__img" src="/demo/hardware-paint/images/hero.jpg" width="1200" height="1600" alt="The shopkeeper bent over a workbench in front of a wall hung with caster wheels and fittings" fetchpriority="high">
+<section data-nx-section="top" class="hero" id="top">
+  <img data-nx="top.hero-img" class="hero__img" src="/demo/hardware-paint/images/hero.jpg" width="1200" height="1600" alt="The shopkeeper bent over a workbench in front of a wall hung with caster wheels and fittings" fetchpriority="high">
   <div class="wrap">
     <div>
-      <p class="hero__open"><span></span>Open 9 am to 9 pm, Monday to Saturday</p>
-      <h1>Paint, pipe, wire and <em>every small thing</em> in between.</h1>
-      <p>One shop on Diamond Harbour Road for the whole job. Emulsion matched to your shade in twenty minutes, plumbing and electrical fittings by the piece, tools, and cement and sand delivered to your gate by our own van.</p>
+      <p data-nx="top.hero-open" class="hero__open"><span></span>Open 9 am to 9 pm, Monday to Saturday</p>
+      <h1 data-nx="top.h1">Paint, pipe, wire and <em>every small thing</em> in between.</h1>
+      <p data-nx="top.p">One shop on Diamond Harbour Road for the whole job. Emulsion matched to your shade in twenty minutes, plumbing and electrical fittings by the piece, tools, and cement and sand delivered to your gate by our own van.</p>
       <div class="hero__cta">
         <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send your list on WhatsApp
         </a>
-        <a class="btn btn--ghost-light" href="#prices">See sample prices</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#prices">See sample prices</a>
       </div>
     </div>
-    <ul class="hero__facts">
-      <li><b>1994</b><span>Same shop, same family</span></li>
-      <li><b>2,400+</b><span>Shades we can mix</span></li>
-      <li><b>Same day</b><span>Van delivery in Behala</span></li>
+    <ul data-nx-list="top.hero-facts" class="hero__facts">
+      <li data-nx-item><b data-nx-f="b">1994</b><span data-nx-f="span">Same shop, same family</span></li>
+      <li data-nx-item><b data-nx-f="b">2,400+</b><span data-nx-f="span">Shades we can mix</span></li>
+      <li data-nx-item><b data-nx-f="b">Same day</b><span data-nx-f="span">Van delivery in Behala</span></li>
     </ul>
   </div>
 </section>
 <div class="hazard" aria-hidden="true"></div>
 
-<section class="section section--white" id="stock">
+<section data-nx-section="stock" class="section section--white" id="stock">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we stock</span>
-      <h2 class="h2">Six counters under one roof.</h2>
-      <p class="lead" style="margin-top:1rem">If it goes into a house, a shop or a flat, we most likely have it. If we do not, we get it in two days.</p>
+      <span data-nx="stock.kicker" class="kicker">What we stock</span>
+      <h2 data-nx="stock.h2" class="h2">Six counters under one roof.</h2>
+      <p data-nx="stock.p" class="lead" style="margin-top:1rem">If it goes into a house, a shop or a flat, we most likely have it. If we do not, we get it in two days.</p>
     </div>
-    <ul class="stock">
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v6H5zM8 9v12h8V9"/><path d="M11 14h2"/></svg><h3>Paints</h3><p>Emulsion, enamel, distemper, primer, putty, brushes and rollers. Shade matching on the spot.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h8a2 2 0 0 1 2 2v9"/><path d="M3 14h8"/><path d="M13 5v3"/><path d="M9 5h8"/></svg><h3>Plumbing</h3><p>PVC, CPVC and GI pipe, taps, elbows, valves, tank fittings, Teflon and solvent.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Electrical</h3><p>Copper wire by the coil, modular switches, MCBs, boards, fans, LED bulbs and tube lights.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4 20 10l-2 2-6-6z"/><path d="M12 6 4 14v6h6l8-8"/></svg><h3>Tools</h3><p>Hammers, spanners, drill bits, hacksaws, measuring tape, levels. Drill machines on order.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg><h3>Cement &amp; sand</h3><p>Cement by the bag, sand and stone chips by the cft, bricks by the hundred. Delivered, not carried.</p></li>
-      <li class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg><h3>Hardware &amp; fittings</h3><p>Hinges, locks, tower bolts, screws by weight, wall plugs, door closers, curtain rods.</p></li>
+    <ul data-nx-list="stock.stock" class="stock">
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h14v6H5zM8 9v12h8V9"/><path d="M11 14h2"/></svg><h3 data-nx-f="h3">Paints</h3><p data-nx-f="p">Emulsion, enamel, distemper, primer, putty, brushes and rollers. Shade matching on the spot.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h8a2 2 0 0 1 2 2v9"/><path d="M3 14h8"/><path d="M13 5v3"/><path d="M9 5h8"/></svg><h3 data-nx-f="h3">Plumbing</h3><p data-nx-f="p">PVC, CPVC and GI pipe, taps, elbows, valves, tank fittings, Teflon and solvent.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3 data-nx-f="h3">Electrical</h3><p data-nx-f="p">Copper wire by the coil, modular switches, MCBs, boards, fans, LED bulbs and tube lights.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4 20 10l-2 2-6-6z"/><path d="M12 6 4 14v6h6l8-8"/></svg><h3 data-nx-f="h3">Tools</h3><p data-nx-f="p">Hammers, spanners, drill bits, hacksaws, measuring tape, levels. Drill machines on order.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"/><path d="M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg><h3 data-nx-f="h3">Cement &amp; sand</h3><p data-nx-f="p">Cement by the bag, sand and stone chips by the cft, bricks by the hundred. Delivered, not carried.</p></li>
+      <li data-nx-item class="reveal"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg><h3 data-nx-f="h3">Hardware &amp; fittings</h3><p data-nx-f="p">Hinges, locks, tower bolts, screws by weight, wall plugs, door closers, curtain rods.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="paints">
+<section data-nx-section="paints" class="section" id="paints">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Paints</span>
-      <h2 class="h2">Which paint for which wall.</h2>
-      <p class="lead" style="margin-top:1rem">Bring a photo, a swatch or a piece of the old wall. We mix the shade while you wait and write the code on the tin so you can buy the same shade next year.</p>
+      <span data-nx="paints.kicker" class="kicker">Paints</span>
+      <h2 data-nx="paints.h2" class="h2">Which paint for which wall.</h2>
+      <p data-nx="paints.p" class="lead" style="margin-top:1rem">Bring a photo, a swatch or a piece of the old wall. We mix the shade while you wait and write the code on the tin so you can buy the same shade next year.</p>
     </div>
     <div class="zig">
       <div class="zig__row reveal">
-        <div class="zig__photo"><img src="/demo/hardware-paint/images/roller.jpg" width="1200" height="800" alt="A paint roller resting on a ladder beside a half-painted red wall" loading="lazy"></div>
+        <div class="zig__photo"><img data-nx="paints.photo" src="/demo/hardware-paint/images/roller.jpg" width="1200" height="800" alt="A paint roller resting on a ladder beside a half-painted red wall" loading="lazy"></div>
         <div>
-          <span class="zig__num" aria-hidden="true">01</span>
-          <h3>Emulsion, inside and outside</h3>
-          <p>Washable interior emulsion for bedrooms and living rooms. Weather-proof exterior emulsion for the front of the house and the terrace wall. Economy, mid and premium grades on the shelf. One litre covers about 100 sq ft in two coats.</p>
-          <ul class="zig__price">
-            <li>Economy interior <b>&#8377;190 / L</b></li>
-            <li>Premium interior <b>&#8377;460 / L</b></li>
-            <li>Exterior weather-proof <b>&#8377;380 / L</b></li>
+          <span data-nx="paints.zig-num" class="zig__num" aria-hidden="true">01</span>
+          <h3 data-nx="paints.h3">Emulsion, inside and outside</h3>
+          <p data-nx="paints.p2">Washable interior emulsion for bedrooms and living rooms. Weather-proof exterior emulsion for the front of the house and the terrace wall. Economy, mid and premium grades on the shelf. One litre covers about 100 sq ft in two coats.</p>
+          <ul data-nx-list="paints.zig-price" class="zig__price">
+            <li data-nx-f="li" data-nx-item>Economy interior <b>&#8377;190 / L</b></li>
+            <li data-nx-f="li" data-nx-item>Premium interior <b>&#8377;460 / L</b></li>
+            <li data-nx-f="li" data-nx-item>Exterior weather-proof <b>&#8377;380 / L</b></li>
           </ul>
         </div>
       </div>
       <div class="zig__row reveal">
-        <div class="zig__photo"><img src="/demo/hardware-paint/images/painter-ladder.jpg" width="1200" height="1800" alt="Two painters on a bamboo ladder painting a tall outside wall blue" loading="lazy"></div>
+        <div class="zig__photo"><img data-nx="paints.photo2" src="/demo/hardware-paint/images/painter-ladder.jpg" width="1200" height="1800" alt="Two painters on a bamboo ladder painting a tall outside wall blue" loading="lazy"></div>
         <div>
-          <span class="zig__num" aria-hidden="true">02</span>
-          <h3>Enamel for grills, doors and windows</h3>
-          <p>Oil-based gloss enamel for iron grills, gates, wooden doors and window frames. Dries hard, resists rust, cleans with a wet cloth. Available in matt too for furniture.</p>
-          <ul class="zig__price">
-            <li>Synthetic enamel <b>&#8377;290 / L</b></li>
-            <li>Red oxide metal primer <b>&#8377;210 / L</b></li>
-            <li>Wood primer <b>&#8377;240 / L</b></li>
+          <span data-nx="paints.zig-num2" class="zig__num" aria-hidden="true">02</span>
+          <h3 data-nx="paints.h32">Enamel for grills, doors and windows</h3>
+          <p data-nx="paints.p3">Oil-based gloss enamel for iron grills, gates, wooden doors and window frames. Dries hard, resists rust, cleans with a wet cloth. Available in matt too for furniture.</p>
+          <ul data-nx-list="paints.zig-price2" class="zig__price">
+            <li data-nx-f="li" data-nx-item>Synthetic enamel <b>&#8377;290 / L</b></li>
+            <li data-nx-f="li" data-nx-item>Red oxide metal primer <b>&#8377;210 / L</b></li>
+            <li data-nx-f="li" data-nx-item>Wood primer <b>&#8377;240 / L</b></li>
           </ul>
         </div>
       </div>
       <div class="zig__row reveal">
-        <div class="zig__photo"><img src="/demo/hardware-paint/images/painter-delhi.jpg" width="1200" height="800" alt="A painter seated on a rope platform applying white paint to a building wall" loading="lazy"></div>
+        <div class="zig__photo"><img data-nx="paints.photo3" src="/demo/hardware-paint/images/painter-delhi.jpg" width="1200" height="800" alt="A painter seated on a rope platform applying white paint to a building wall" loading="lazy"></div>
         <div>
-          <span class="zig__num" aria-hidden="true">03</span>
-          <h3>Distemper for rented rooms and ceilings</h3>
-          <p>The cheapest clean wall you can get. Acrylic distemper for ceilings, staircases, godowns and rented flats where you repaint every two years. Sold by the kilo, mixed with water at home.</p>
-          <ul class="zig__price">
-            <li>Acrylic distemper <b>&#8377;85 / kg</b></li>
-            <li>Oil-bound distemper <b>&#8377;120 / kg</b></li>
-            <li>Lime (chuna), 5 kg bag <b>&#8377;60</b></li>
+          <span data-nx="paints.zig-num3" class="zig__num" aria-hidden="true">03</span>
+          <h3 data-nx="paints.h33">Distemper for rented rooms and ceilings</h3>
+          <p data-nx="paints.p4">The cheapest clean wall you can get. Acrylic distemper for ceilings, staircases, godowns and rented flats where you repaint every two years. Sold by the kilo, mixed with water at home.</p>
+          <ul data-nx-list="paints.zig-price3" class="zig__price">
+            <li data-nx-f="li" data-nx-item>Acrylic distemper <b>&#8377;85 / kg</b></li>
+            <li data-nx-f="li" data-nx-item>Oil-bound distemper <b>&#8377;120 / kg</b></li>
+            <li data-nx-f="li" data-nx-item>Lime (chuna), 5 kg bag <b>&#8377;60</b></li>
           </ul>
         </div>
       </div>
       <div class="zig__row reveal">
-        <div class="zig__photo"><img src="/demo/hardware-paint/images/swatches.jpg" width="1200" height="1800" alt="A spread of paint colour swatches fanned out on a table" loading="lazy"></div>
+        <div class="zig__photo"><img data-nx="paints.photo4" src="/demo/hardware-paint/images/swatches.jpg" width="1200" height="1800" alt="A spread of paint colour swatches fanned out on a table" loading="lazy"></div>
         <div>
-          <span class="zig__num" aria-hidden="true">04</span>
-          <h3>Shade matching, primer and putty</h3>
-          <p>Our tinting machine mixes over 2,400 shades from four base whites. Bring any colour and we match it. Before the colour goes on, the wall needs putty to fill and primer to hold. We will tell you how much you need if you give us the room size.</p>
-          <ul class="zig__price">
-            <li>Shade matching <b>Free with the tin</b></li>
-            <li>Wall putty, 20 kg <b>&#8377;720</b></li>
-            <li>Cement primer <b>&#8377;180 / L</b></li>
+          <span data-nx="paints.zig-num4" class="zig__num" aria-hidden="true">04</span>
+          <h3 data-nx="paints.h34">Shade matching, primer and putty</h3>
+          <p data-nx="paints.p5">Our tinting machine mixes over 2,400 shades from four base whites. Bring any colour and we match it. Before the colour goes on, the wall needs putty to fill and primer to hold. We will tell you how much you need if you give us the room size.</p>
+          <ul data-nx-list="paints.zig-price4" class="zig__price">
+            <li data-nx-f="li" data-nx-item>Shade matching <b>Free with the tin</b></li>
+            <li data-nx-f="li" data-nx-item>Wall putty, 20 kg <b>&#8377;720</b></li>
+            <li data-nx-f="li" data-nx-item>Cement primer <b>&#8377;180 / L</b></li>
           </ul>
         </div>
       </div>
@@ -442,71 +445,71 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--white" id="prices">
+<section data-nx-section="prices" class="section section--white" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price list sample</span>
-      <h2 class="h2">What things cost at our counter.</h2>
-      <p class="lead" style="margin-top:1rem">A sample from the full list. Prices include GST and change with the market, so confirm on WhatsApp before you come for a big order.</p>
+      <span data-nx="prices.kicker" class="kicker">Price list sample</span>
+      <h2 data-nx="prices.h2" class="h2">What things cost at our counter.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">A sample from the full list. Prices include GST and change with the market, so confirm on WhatsApp before you come for a big order.</p>
     </div>
-    <p class="scroll-hint">Swipe the table sideways to see all columns.</p>
+    <p data-nx="prices.p2" class="scroll-hint">Swipe the table sideways to see all columns.</p>
     <div class="ptable reveal">
       <table>
-        <thead><tr><th>Item</th><th>Pack</th><th>Price</th></tr></thead>
+        <thead><tr><th data-nx="prices.th">Item</th><th data-nx="prices.th2">Pack</th><th data-nx="prices.th3">Price</th></tr></thead>
         <tbody>
-          <tr class="grp"><td colspan="3">Paint and painting</td></tr>
-          <tr><td>Interior emulsion, economy<small>White and 40 ready shades</small></td><td>10 L bucket</td><td>&#8377;1,850</td></tr>
-          <tr><td>Interior emulsion, premium<small>Any tinted shade</small></td><td>4 L tin</td><td>&#8377;1,780</td></tr>
-          <tr><td>Exterior emulsion, weather-proof</td><td>10 L bucket</td><td>&#8377;3,600</td></tr>
-          <tr><td>Synthetic enamel</td><td>1 L tin</td><td>&#8377;290</td></tr>
-          <tr><td>Wall putty</td><td>20 kg bag</td><td>&#8377;720</td></tr>
-          <tr><td>Roller with handle, 9 inch</td><td>1 piece</td><td>&#8377;140</td></tr>
-          <tr><td>Paint brush, 4 inch</td><td>1 piece</td><td>&#8377;95</td></tr>
-          <tr class="grp"><td colspan="3">Plumbing</td></tr>
-          <tr><td>PVC pipe, 1 inch<small>For drain and overflow</small></td><td>3 m length</td><td>&#8377;190</td></tr>
-          <tr><td>CPVC pipe, 3/4 inch<small>For hot and cold supply</small></td><td>3 m length</td><td>&#8377;360</td></tr>
-          <tr><td>Bib cock tap, brass with chrome</td><td>1 piece</td><td>&#8377;420</td></tr>
-          <tr><td>Overhead tank, 500 L, 3 layer</td><td>1 piece</td><td>&#8377;3,900</td></tr>
-          <tr><td>Ball valve, 1 inch</td><td>1 piece</td><td>&#8377;260</td></tr>
-          <tr class="grp"><td colspan="3">Electrical</td></tr>
-          <tr><td>Copper wire, 1.5 sq mm<small>For lights and fans</small></td><td>90 m coil</td><td>&#8377;1,750</td></tr>
-          <tr><td>Copper wire, 2.5 sq mm<small>For AC and geyser points</small></td><td>90 m coil</td><td>&#8377;2,850</td></tr>
-          <tr><td>Modular switch, 6 A</td><td>1 piece</td><td>&#8377;55</td></tr>
-          <tr><td>MCB, 32 A single pole</td><td>1 piece</td><td>&#8377;240</td></tr>
-          <tr><td>LED bulb, 9 W</td><td>1 piece</td><td>&#8377;85</td></tr>
-          <tr class="grp"><td colspan="3">Building material (on order, delivered)</td></tr>
-          <tr><td>Cement, grade 43<small>Minimum 10 bags for delivery</small></td><td>50 kg bag</td><td>&#8377;420</td></tr>
-          <tr><td>River sand</td><td>per 100 cft</td><td>&#8377;6,500</td></tr>
-          <tr><td>Stone chips, 3/4 inch</td><td>per 100 cft</td><td>&#8377;7,200</td></tr>
-          <tr><td>Red bricks, first class</td><td>per 1,000</td><td>&#8377;11,500</td></tr>
+          <tr class="grp"><td data-nx="prices.td" colspan="3">Paint and painting</td></tr>
+          <tr><td data-nx="prices.td2">Interior emulsion, economy<small>White and 40 ready shades</small></td><td data-nx="prices.td3">10 L bucket</td><td data-nx="prices.td4">&#8377;1,850</td></tr>
+          <tr><td data-nx="prices.td5">Interior emulsion, premium<small>Any tinted shade</small></td><td data-nx="prices.td6">4 L tin</td><td data-nx="prices.td7">&#8377;1,780</td></tr>
+          <tr><td data-nx="prices.td8">Exterior emulsion, weather-proof</td><td data-nx="prices.td9">10 L bucket</td><td data-nx="prices.td10">&#8377;3,600</td></tr>
+          <tr><td data-nx="prices.td11">Synthetic enamel</td><td data-nx="prices.td12">1 L tin</td><td data-nx="prices.td13">&#8377;290</td></tr>
+          <tr><td data-nx="prices.td14">Wall putty</td><td data-nx="prices.td15">20 kg bag</td><td data-nx="prices.td16">&#8377;720</td></tr>
+          <tr><td data-nx="prices.td17">Roller with handle, 9 inch</td><td data-nx="prices.td18">1 piece</td><td data-nx="prices.td19">&#8377;140</td></tr>
+          <tr><td data-nx="prices.td20">Paint brush, 4 inch</td><td data-nx="prices.td21">1 piece</td><td data-nx="prices.td22">&#8377;95</td></tr>
+          <tr class="grp"><td data-nx="prices.td23" colspan="3">Plumbing</td></tr>
+          <tr><td data-nx="prices.td24">PVC pipe, 1 inch<small>For drain and overflow</small></td><td data-nx="prices.td25">3 m length</td><td data-nx="prices.td26">&#8377;190</td></tr>
+          <tr><td data-nx="prices.td27">CPVC pipe, 3/4 inch<small>For hot and cold supply</small></td><td data-nx="prices.td28">3 m length</td><td data-nx="prices.td29">&#8377;360</td></tr>
+          <tr><td data-nx="prices.td30">Bib cock tap, brass with chrome</td><td data-nx="prices.td31">1 piece</td><td data-nx="prices.td32">&#8377;420</td></tr>
+          <tr><td data-nx="prices.td33">Overhead tank, 500 L, 3 layer</td><td data-nx="prices.td34">1 piece</td><td data-nx="prices.td35">&#8377;3,900</td></tr>
+          <tr><td data-nx="prices.td36">Ball valve, 1 inch</td><td data-nx="prices.td37">1 piece</td><td data-nx="prices.td38">&#8377;260</td></tr>
+          <tr class="grp"><td data-nx="prices.td39" colspan="3">Electrical</td></tr>
+          <tr><td data-nx="prices.td40">Copper wire, 1.5 sq mm<small>For lights and fans</small></td><td data-nx="prices.td41">90 m coil</td><td data-nx="prices.td42">&#8377;1,750</td></tr>
+          <tr><td data-nx="prices.td43">Copper wire, 2.5 sq mm<small>For AC and geyser points</small></td><td data-nx="prices.td44">90 m coil</td><td data-nx="prices.td45">&#8377;2,850</td></tr>
+          <tr><td data-nx="prices.td46">Modular switch, 6 A</td><td data-nx="prices.td47">1 piece</td><td data-nx="prices.td48">&#8377;55</td></tr>
+          <tr><td data-nx="prices.td49">MCB, 32 A single pole</td><td data-nx="prices.td50">1 piece</td><td data-nx="prices.td51">&#8377;240</td></tr>
+          <tr><td data-nx="prices.td52">LED bulb, 9 W</td><td data-nx="prices.td53">1 piece</td><td data-nx="prices.td54">&#8377;85</td></tr>
+          <tr class="grp"><td data-nx="prices.td55" colspan="3">Building material (on order, delivered)</td></tr>
+          <tr><td data-nx="prices.td56">Cement, grade 43<small>Minimum 10 bags for delivery</small></td><td data-nx="prices.td57">50 kg bag</td><td data-nx="prices.td58">&#8377;420</td></tr>
+          <tr><td data-nx="prices.td59">River sand</td><td data-nx="prices.td60">per 100 cft</td><td data-nx="prices.td61">&#8377;6,500</td></tr>
+          <tr><td data-nx="prices.td62">Stone chips, 3/4 inch</td><td data-nx="prices.td63">per 100 cft</td><td data-nx="prices.td64">&#8377;7,200</td></tr>
+          <tr><td data-nx="prices.td65">Red bricks, first class</td><td data-nx="prices.td66">per 1,000</td><td data-nx="prices.td67">&#8377;11,500</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="ptable__note">Delivery inside Behala is free on bills above &#8377;3,000. Below that, &#8377;150 for the van. Cement and sand are always delivered, never sold over the counter.</p>
+    <p data-nx="prices.ptable-note" class="ptable__note">Delivery inside Behala is free on bills above &#8377;3,000. Below that, &#8377;150 for the van. Cement and sand are always delivered, never sold over the counter.</p>
   </div>
 </section>
 
-<section class="section section--steel" id="contractors">
+<section data-nx-section="contractors" class="section section--steel" id="contractors">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">For contractors and painters</span>
-      <h2 class="h2">Site rates for anyone buying for a site.</h2>
-      <p class="lead" style="margin-top:1rem">Thirty-odd painters and masons in Behala buy from us every week. Here is what they get that a walk-in customer does not.</p>
+      <span data-nx="contractors.kicker" class="kicker">For contractors and painters</span>
+      <h2 data-nx="contractors.h2" class="h2">Site rates for anyone buying for a site.</h2>
+      <p data-nx="contractors.p" class="lead" style="margin-top:1rem">Thirty-odd painters and masons in Behala buy from us every week. Here is what they get that a walk-in customer does not.</p>
     </div>
     <div class="contract">
-      <ul class="contract__list reveal">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>8 to 12 percent off the counter price</b><p>On paint above 40 litres, wire above 5 coils, cement above 50 bags. The rate is written on the bill, not whispered.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>One GST bill for the whole site</b><p>Give us the owner's or the firm's GST number once. Every delivery goes on the same account and one bill comes at the end of the month.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Delivery straight to the floor</b><p>Our van and two helpers carry cement and paint to the floor you are working on, up to the fourth floor without a lift.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Return what is unopened</b><p>Sealed tins and unopened bags come back within 15 days for full credit. Tinted shades are the exception, since nobody else will buy them.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Fifteen days credit after the third job</b><p>New contractors pay on delivery. Once we have done three sites together, the account runs on fifteen days credit.</p></div></li>
+      <ul data-nx-list="contractors.contract-list" class="contract__list reveal">
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b data-nx-f="b">8 to 12 percent off the counter price</b><p data-nx-f="p">On paint above 40 litres, wire above 5 coils, cement above 50 bags. The rate is written on the bill, not whispered.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b data-nx-f="b">One GST bill for the whole site</b><p data-nx-f="p">Give us the owner's or the firm's GST number once. Every delivery goes on the same account and one bill comes at the end of the month.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b data-nx-f="b">Delivery straight to the floor</b><p data-nx-f="p">Our van and two helpers carry cement and paint to the floor you are working on, up to the fourth floor without a lift.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b data-nx-f="b">Return what is unopened</b><p data-nx-f="p">Sealed tins and unopened bags come back within 15 days for full credit. Tinted shades are the exception, since nobody else will buy them.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b data-nx-f="b">Fifteen days credit after the third job</b><p data-nx-f="p">New contractors pay on delivery. Once we have done three sites together, the account runs on fifteen days credit.</p></div></li>
       </ul>
       <div class="contract__card reveal">
-        <h3>How a bulk order works</h3>
-        <ol>
-          <li><div><b>Send the list</b><p>WhatsApp the item list with quantities, the site address and the floor. A photo of the engineer's list is fine.</p></div></li>
-          <li><div><b>Get the rate in an hour</b><p>We reply with the site rate, the delivery day and the total. Nothing moves until you say yes.</p></div></li>
-          <li><div><b>Van arrives, you sign</b><p>Count the bags at the gate, sign the challan, and the material goes up. Payment on delivery or on account.</p></div></li>
+        <h3 data-nx="contractors.h3">How a bulk order works</h3>
+        <ol data-nx-list="contractors.list">
+          <li data-nx-item><div><b data-nx-f="b">Send the list</b><p data-nx-f="p">WhatsApp the item list with quantities, the site address and the floor. A photo of the engineer's list is fine.</p></div></li>
+          <li data-nx-item><div><b data-nx-f="b">Get the rate in an hour</b><p data-nx-f="p">We reply with the site rate, the delivery day and the total. Nothing moves until you say yes.</p></div></li>
+          <li data-nx-item><div><b data-nx-f="b">Van arrives, you sign</b><p data-nx-f="p">Count the bags at the gate, sign the challan, and the material goes up. Payment on delivery or on account.</p></div></li>
         </ol>
         <a class="btn btn--steel" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Send a site list</a>
       </div>
@@ -514,37 +517,37 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="delivery">
+<section data-nx-section="delivery" class="section" id="delivery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Two things customers ask for most</span>
-      <h2 class="h2">The van, and a painter who turns up.</h2>
+      <span data-nx="delivery.kicker" class="kicker">Two things customers ask for most</span>
+      <h2 data-nx="delivery.h2" class="h2">The van, and a painter who turns up.</h2>
     </div>
     <div class="twin">
       <article class="twin__card reveal">
-        <img src="/demo/hardware-paint/images/unloading.jpg" width="1200" height="877" alt="Two workers unloading cement bags from the back of a truck" loading="lazy">
+        <img data-nx="delivery.photo" src="/demo/hardware-paint/images/unloading.jpg" width="1200" height="877" alt="Two workers unloading cement bags from the back of a truck" loading="lazy">
         <div class="twin__body">
-          <h3>Delivery by our own van</h3>
-          <p>A Tata Ace and two helpers leave the shop twice a day, at 11 am and at 4 pm. Orders placed before 10 am go on the morning run.</p>
-          <ul>
-            <li>Free inside Behala on bills above &#8377;3,000</li>
-            <li>Thakurpukur, Joka, New Alipore and Taratala: &#8377;250 flat</li>
-            <li>Cement, sand and bricks are delivered within 48 hours of order</li>
-            <li>Helpers carry up to the fourth floor at no extra charge</li>
+          <h3 data-nx="delivery.h3">Delivery by our own van</h3>
+          <p data-nx="delivery.p">A Tata Ace and two helpers leave the shop twice a day, at 11 am and at 4 pm. Orders placed before 10 am go on the morning run.</p>
+          <ul data-nx-list="delivery.list">
+            <li data-nx-f="li" data-nx-item>Free inside Behala on bills above &#8377;3,000</li>
+            <li data-nx-f="li" data-nx-item>Thakurpukur, Joka, New Alipore and Taratala: &#8377;250 flat</li>
+            <li data-nx-f="li" data-nx-item>Cement, sand and bricks are delivered within 48 hours of order</li>
+            <li data-nx-f="li" data-nx-item>Helpers carry up to the fourth floor at no extra charge</li>
           </ul>
           <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a delivery</a>
         </div>
       </article>
       <article class="twin__card reveal">
-        <img src="/demo/hardware-paint/images/shop-shelves.jpg" width="1200" height="900" alt="A wall of hand tools, spanners, pliers and cutting discs hung on hooks in the shop" loading="lazy">
+        <img data-nx="delivery.photo2" src="/demo/hardware-paint/images/shop-shelves.jpg" width="1200" height="900" alt="A wall of hand tools, spanners, pliers and cutting discs hung on hooks in the shop" loading="lazy">
         <div class="twin__body">
-          <h3>Need a painter or a plumber?</h3>
-          <p>We do not paint houses ourselves, but we know who does it well because we see their work and hear from their customers. Ask at the counter and we will give you two names.</p>
-          <ul>
-            <li>Painters charge about &#8377;14 to &#8377;22 per sq ft for two coats, labour only</li>
-            <li>Plumbers and electricians for small jobs, usually within two days</li>
-            <li>They buy the material here, so if something is wrong we hear about it</li>
-            <li>You pay them directly. We take nothing from either side</li>
+          <h3 data-nx="delivery.h32">Need a painter or a plumber?</h3>
+          <p data-nx="delivery.p2">We do not paint houses ourselves, but we know who does it well because we see their work and hear from their customers. Ask at the counter and we will give you two names.</p>
+          <ul data-nx-list="delivery.list2">
+            <li data-nx-f="li" data-nx-item>Painters charge about &#8377;14 to &#8377;22 per sq ft for two coats, labour only</li>
+            <li data-nx-f="li" data-nx-item>Plumbers and electricians for small jobs, usually within two days</li>
+            <li data-nx-f="li" data-nx-item>They buy the material here, so if something is wrong we hear about it</li>
+            <li data-nx-f="li" data-nx-item>You pay them directly. We take nothing from either side</li>
           </ul>
           <a class="btn btn--ghost" href="tel:+919804243159">Call for a contact</a>
         </div>
@@ -553,28 +556,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--white" id="faq">
+<section data-nx-section="faq" class="section section--white" id="faq">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Things people ask before they come.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Things people ask before they come.</h2>
     </div>
-    <div class="faq reveal">
-      <details open><summary>Can you match a shade from a photo or an old wall?</summary><div class="faq__a">Yes. A chip of the old paint is best, a swatch card from any company is fine, and a photo works for most shades. The machine takes about twenty minutes. We write the shade code on your tin so the same colour can be mixed again later.</div></details>
-      <details><summary>Do you deliver, and what does it cost?</summary><div class="faq__a">Our van delivers twice a day inside Behala. It is free on bills above &#8377;3,000 and &#8377;150 below that. Nearby areas such as Thakurpukur, Joka and New Alipore are &#8377;250 flat. Cement, sand and bricks are always delivered.</div></details>
-      <details><summary>How long does cement or sand take?</summary><div class="faq__a">We do not keep cement in the shop. Order today and it comes from the depot within 48 hours, usually next day. Sand and stone chips take two to three days because the truck is shared with other orders. Minimum 10 bags of cement for delivery.</div></details>
-      <details><summary>Can I return paint I did not use?</summary><div class="faq__a">Sealed tins of white or ready shades, yes, within 15 days with the bill. Tinted shades mixed for you cannot be returned because nobody else will buy that colour. Opened tins cannot be returned either.</div></details>
-      <details><summary>Do you give a GST bill?</summary><div class="faq__a">Every sale gets a printed bill with our GST number. If you want the bill in a firm's name with its GST number, tell us before billing and it goes on the bill.</div></details>
-      <details><summary>Do you give credit to contractors?</summary><div class="faq__a">Not on the first job. After three sites bought and paid on time, a contractor's account runs on fifteen days credit with a monthly statement. Walk-in customers pay at the counter, by cash, UPI or card.</div></details>
+    <div data-nx-list="faq.faq" class="faq reveal">
+      <details data-nx-item open><summary data-nx-f="summary">Can you match a shade from a photo or an old wall?</summary><div data-nx-f="div" class="faq__a">Yes. A chip of the old paint is best, a swatch card from any company is fine, and a photo works for most shades. The machine takes about twenty minutes. We write the shade code on your tin so the same colour can be mixed again later.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you deliver, and what does it cost?</summary><div data-nx-f="div" class="faq__a">Our van delivers twice a day inside Behala. It is free on bills above &#8377;3,000 and &#8377;150 below that. Nearby areas such as Thakurpukur, Joka and New Alipore are &#8377;250 flat. Cement, sand and bricks are always delivered.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">How long does cement or sand take?</summary><div data-nx-f="div" class="faq__a">We do not keep cement in the shop. Order today and it comes from the depot within 48 hours, usually next day. Sand and stone chips take two to three days because the truck is shared with other orders. Minimum 10 bags of cement for delivery.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Can I return paint I did not use?</summary><div data-nx-f="div" class="faq__a">Sealed tins of white or ready shades, yes, within 15 days with the bill. Tinted shades mixed for you cannot be returned because nobody else will buy that colour. Opened tins cannot be returned either.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you give a GST bill?</summary><div data-nx-f="div" class="faq__a">Every sale gets a printed bill with our GST number. If you want the bill in a firm's name with its GST number, tell us before billing and it goes on the bill.</div></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you give credit to contractors?</summary><div data-nx-f="div" class="faq__a">Not on the first job. After three sites bought and paid on time, a contractor's account runs on fifteen days credit with a monthly statement. Walk-in customers pay at the counter, by cash, UPI or card.</div></details>
     </div>
   </div>
 </section>
 
-<section class="section section--light" id="gallery">
+<section data-nx-section="gallery" class="section section--light" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Inside the shop</span>
-      <h2 class="h2">A look at the shelves.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Inside the shop</span>
+      <h2 data-nx="gallery.h2" class="h2">A look at the shelves.</h2>
     </div>
     <p class="strip__hint reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Scroll sideways to see more</p>
     <ul class="strip reveal">
@@ -590,44 +593,44 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-10" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">From the people who buy here.</h2>
+      <span data-nx="section-10.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-10.h2" class="h2">From the people who buy here.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>I took a photo of my mother's old bedroom wall and they matched it. Nobody can tell where the new patch starts. The tin had the code written on it for next time.</p><footer>Rupa <span>&middot; Sakher Bazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>I paint flats in Behala and Joka. Sixty litres a month from here, one bill, delivered to the floor. They tell me when a shade is going to look different in daylight, which has saved me twice.</p><footer>Mintu <span>&middot; painting contractor, Thakurpukur</span></footer></blockquote>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I took a photo of my mother's old bedroom wall and they matched it. Nobody can tell where the new patch starts. The tin had the code written on it for next time.</p><footer>Rupa <span data-nx-f="span">&middot; Sakher Bazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I paint flats in Behala and Joka. Sixty litres a month from here, one bill, delivered to the floor. They tell me when a shade is going to look different in daylight, which has saved me twice.</p><footer>Mintu <span data-nx-f="span">&middot; painting contractor, Thakurpukur</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--white" id="visit">
+<section data-nx-section="visit" class="section section--white" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Diamond Harbour Road, opposite Behala Chowrasta bus stop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Diamond Harbour Road, opposite Behala Chowrasta bus stop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>214 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=214%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">214 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=214%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>9:00 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>9:00 am &ndash; 1:00 pm</td></tr>
-              <tr><td>Van runs</td><td>11 am and 4 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">9:00 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">9:00 am &ndash; 1:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Van runs</td><td data-nx-f="td2">11 am and 4 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp lists answered within the hour during shop time.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp lists answered within the hour during shop time.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--steel" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -641,11 +644,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="order">
+<section data-nx-section="order" class="section final" id="order">
   <div class="wrap">
     <div class="reveal">
-      <h2>Send the list. <em>We pack it</em> before you arrive.</h2>
-      <p>Photograph the engineer's list or type what you need. We reply with the price and keep it ready at the counter, or put it on the next van.</p>
+      <h2 data-nx="order.h2">Send the list. <em>We pack it</em> before you arrive.</h2>
+      <p data-nx="order.p">Photograph the engineer's list or type what you need. We reply with the price and keep it ready at the counter, or put it on the next van.</p>
     </div>
     <div class="final__cta reveal">
       <a class="btn btn--yellow" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhowmick%20Hardware%20%26%20Paints%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
@@ -661,32 +664,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" fill="#F5C518"/><path d="M6 30h32v8H6z" fill="#2B3139"/><path d="M12 8h20v14H12z" fill="#2B3139"/><path d="M19 22h6v8h-6z" fill="#4A525C"/><path d="M15 12h14M15 16h14" stroke="#F5C518" stroke-width="2"/></svg>
-          <span><b>Bhowmick Hardware &amp; Paints</b><small>Behala Chowrasta &middot; since 1994</small></span>
+          <span><b data-nx="footer.b">Bhowmick Hardware &amp; Paints</b><small data-nx="footer.small">Behala Chowrasta &middot; since 1994</small></span>
         </a>
-        <p>Paint with shade matching, plumbing and electrical fittings, tools, and cement and sand delivered by our own van.</p>
+        <p data-nx="footer.p">Paint with shade matching, plumbing and electrical fittings, tools, and cement and sand delivered by our own van.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#stock">What we stock</a></li>
-          <li><a href="#paints">Paints</a></li>
-          <li><a href="#prices">Price list</a></li>
-          <li><a href="#contractors">Contractor rates</a></li>
-          <li><a href="#faq">Questions</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#stock">What we stock</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#paints">Paints</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#contractors">Contractor rates</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>214 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
+          <li data-nx="footer.li">214 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 9 am &ndash; 9 pm &middot; Sun 9 am &ndash; 1 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 9 am &ndash; 9 pm &middot; Sun 9 am &ndash; 1 pm</li>
         </ul>
       </div>
     </div>
@@ -728,5 +731,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

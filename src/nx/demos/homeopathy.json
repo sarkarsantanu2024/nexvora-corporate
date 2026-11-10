@@ -1,0 +1,1541 @@
+{
+  "site": "homeopathy",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Arogya Niketan",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "hero-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-stats",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doctors",
+      "label": {
+        "en": "Two doctors, two systems, one file for you",
+        "bn": "Two doctors, two systems, one file for you"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "deg",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "deg2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Dr. Subhankar Dutta",
+            "bn": "Dr. Subhankar Dutta"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Dr. Arnab Mitra",
+            "bn": "Dr. Arnab Mitra"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conditions",
+      "label": {
+        "en": "The complaints that bring most people through the door",
+        "bn": "The complaints that bring most people through the door"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "cond-list",
+          "label": {
+            "en": "The complaints that bring most people through the door",
+            "bn": "The complaints that bring most people through the door"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "who",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Consultation fees",
+            "bn": "Consultation fees"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": {
+        "en": "Thirty minutes. Most of it is you talking",
+        "bn": "Thirty minutes. Most of it is you talking"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "Thirty minutes. Most of it is you talking",
+            "bn": "Thirty minutes. Most of it is you talking"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "how-fig",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "online",
+      "label": {
+        "en": "For follow-ups, and for people who have moved away",
+        "bn": "For follow-ups, and for people who have moved away"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1963"
+        },
+        {
+          "key": "tag",
+          "type": "textarea",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          },
+          "html": true
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "online-steps",
+          "label": {
+            "en": "For follow-ups, and for people who have moved away",
+            "bn": "For follow-ups, and for people who have moved away"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medicines",
+      "label": {
+        "en": "Dispensed from the clinic, so you walk out with everything",
+        "bn": "Dispensed from the clinic, so you walk out with everything"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "meds",
+          "label": {
+            "en": "Dispensed from the clinic, so you walk out with everything",
+            "bn": "Dispensed from the clinic, so you walk out with everything"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meds-text",
+          "label": {
+            "en": "Dispensed from the clinic, so you walk out with everything",
+            "bn": "Dispensed from the clinic, so you walk out with everything"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A ground-floor room, a dispensary, and a courtyard with a tulsi plant",
+        "bn": "A ground-floor room, a dispensary, and a courtyard with a tulsi plant"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "A ground-floor room, a dispensary, and a courtyard with a tulsi plant",
+            "bn": "A ground-floor room, a dispensary, and a courtyard with a tulsi plant"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Asked at the desk most weeks",
+        "bn": "Asked at the desk most weeks"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "kicker2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Asked at the desk most weeks",
+            "bn": "Asked at the desk most weeks"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "a",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "N.S.C. Bose Road, five minutes from Tollygunge metro",
+        "bn": "N.S.C. Bose Road, five minutes from Tollygunge metro"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Half an hour, no hurry, and a plain answer",
+        "bn": "Half an hour, no hurry, and a plain answer"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "On this page",
+            "bn": "On this page"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Arogya Niketan",
+      "small": "Homeopathy & Ayurveda · Tollygunge"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/homeopathy/images/hero.jpg",
+        "alt": "Dr. Subhankar Dutta in a white coat with a stethoscope, arms folded, standing against a plain wall"
+      },
+      "hero-eyebrow": "Tollygunge, Kolkata",
+      "h1": "A quiet clinic for problems that <em>have not gone away.</em>",
+      "p": "Skin, allergy, digestion, hair, children's complaints and long-standing conditions, seen by a homeopathic doctor and an ayurvedic doctor under one roof. Half an hour for a first visit, medicines given from the clinic, and honest words about what to expect.",
+      "button": "What we commonly see",
+      "hero-note": "Homeopathy and ayurveda work slowly and do not suit every problem. If we think you need a hospital, a test or an allopathic doctor, we will tell you on the first day.",
+      "hero-stats": {
+        "items": [
+          {
+            "b": "₹500",
+            "span": "First consultation"
+          },
+          {
+            "b": "30 min",
+            "span": "Time kept for you"
+          },
+          {
+            "b": "2008",
+            "span": "Clinic opened"
+          }
+        ]
+      }
+    },
+    "doctors": {
+      "kicker": "The doctors",
+      "h2": "Two doctors, two systems, one file for you.",
+      "p": "You choose which doctor to see, or ask at the desk and we suggest. Both read the same patient file, so nothing is repeated and nothing clashes.",
+      "photo": {
+        "src": "/demo/homeopathy/images/doctor-arms.jpg",
+        "alt": "Dr. Subhankar Dutta, hands folded, in a white coat with a stethoscope"
+      },
+      "h3": "Dr. Subhankar Dutta",
+      "deg": "BHMS (Calcutta Homoeopathic Medical College, 2004) · Homeopathy",
+      "p2": "Eighteen years in practice, the last sixteen at this address. Takes a long first history, asks about sleep, food, moods and weather, and gives one medicine at a time so he can see what it does. Sees most of the children and skin cases.",
+      "photo2": {
+        "src": "/demo/homeopathy/images/doctor-ayurveda.jpg",
+        "alt": "Dr. Arnab Mitra, bearded, in glasses and a white coat with a stethoscope"
+      },
+      "h32": "Dr. Arnab Mitra",
+      "deg2": "BAMS (J.B. Roy State Ayurvedic Medical College, 2011) · Ayurveda",
+      "p3": "Joined the clinic in 2016. Works mostly on digestion, joint stiffness, sleep and weight, with diet and daily routine as much as medicine. Writes the diet plan on one page in Bengali so the whole family can follow it.",
+      "p4": "Both doctors are registered with the respective West Bengal councils. Certificates are on the wall of the consulting room.",
+      "list": {
+        "items": [
+          {
+            "li": "Skin and allergy"
+          },
+          {
+            "li": "Children"
+          },
+          {
+            "li": "Hair fall"
+          },
+          {
+            "li": "Long-standing complaints"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Digestion and acidity"
+          },
+          {
+            "li": "Joint pain"
+          },
+          {
+            "li": "Sleep and stress"
+          },
+          {
+            "li": "Diet and routine"
+          }
+        ]
+      }
+    },
+    "conditions": {
+      "kicker": "What we commonly see",
+      "h2": "The complaints that bring most people through the door.",
+      "p": "This is what we see most, not a list of promises. Every person responds differently and some problems need more time than others. We say what we honestly expect at the first visit.",
+      "h3": "Consultation fees",
+      "p2": "Fees do not change with the complaint. Senior citizens above 70 pay the follow-up rate for every visit. Cash or UPI.",
+      "cond-list": {
+        "items": [
+          {
+            "h3": "<span>01</span>Skin",
+            "p": "Eczema, psoriasis, urticaria (hives), acne, fungal patches that keep coming back, warts, dandruff. Bring old prescriptions and creams so we know what has been tried.",
+            "who": "Dr. Dutta"
+          },
+          {
+            "h3": "<span>02</span>Allergy and breathing",
+            "p": "Sneezing and running nose in season change, dust allergy, sinus, recurring cold and cough, mild asthma alongside your inhaler. We never ask anyone to stop an inhaler.",
+            "who": "Dr. Dutta"
+          },
+          {
+            "h3": "<span>03</span>Digestion",
+            "p": "Acidity, gas, bloating, constipation, loose motion that comes and goes, IBS-type complaints, poor appetite. Diet is half the treatment here.",
+            "who": "Dr. Mitra"
+          },
+          {
+            "h3": "<span>04</span>Hair",
+            "p": "Hair fall after illness or childbirth, dandruff, early greying, patchy loss. We check thyroid and haemoglobin reports first; bring them if you have them.",
+            "who": "Either doctor"
+          },
+          {
+            "h3": "<span>05</span>Children",
+            "p": "Recurring cold and tonsils, bed-wetting, poor appetite, worms, tantrums and sleep trouble, teething complaints. Medicines are sweet pills; children usually do not mind them.",
+            "who": "Dr. Dutta"
+          },
+          {
+            "h3": "<span>06</span>Long-standing and lifestyle",
+            "p": "Joint stiffness, migraine, sleep, stress, weight, menstrual irregularity, thyroid and sugar alongside your physician's medicine. We work with your existing doctor, not against.",
+            "who": "Either doctor"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "td": "First consultation<small>30 minutes, full history</small>",
+            "td2": "₹500"
+          },
+          {
+            "td": "Follow-up<small>Within 45 days, 15 minutes</small>",
+            "td2": "₹300"
+          },
+          {
+            "td": "Children under 12<small>First visit</small>",
+            "td2": "₹400"
+          },
+          {
+            "td": "Online consultation<small>Video or phone, 20 minutes</small>",
+            "td2": "₹400"
+          },
+          {
+            "td": "Medicines<small>Per month, given from the clinic</small>",
+            "td2": "₹150 to ₹600"
+          }
+        ]
+      }
+    },
+    "how": {
+      "kicker": "A first consultation",
+      "h2": "Thirty minutes. Most of it is you talking.",
+      "tl": {
+        "items": [
+          {
+            "h3": "Before you come",
+            "p": "Note when the problem started, what makes it better or worse, and what you have already tried. Bring reports and current medicines. Do not stop any medicine on your own."
+          },
+          {
+            "h3": "The history",
+            "p": "The doctor asks about the complaint and then about you: sleep, appetite, thirst, sweat, weather you dislike, worries. In homeopathy these details choose the medicine. Give honest answers; nothing is odd here."
+          },
+          {
+            "h3": "Examination and plan",
+            "p": "A look at the skin, tongue, pulse and whatever the complaint needs. Then the doctor tells you what he thinks is going on, what he expects to change, and in how many weeks you should see something."
+          },
+          {
+            "h3": "Medicines and diet",
+            "p": "Medicines are given from the clinic dispensary in labelled bottles, with the dose written in Bengali and English. A one-page diet and routine sheet comes with ayurvedic treatment."
+          },
+          {
+            "h3": "Follow-up",
+            "p": "Usually after three to four weeks. If nothing has changed by the second follow-up, we say so plainly and talk about other options, including a referral."
+          }
+        ]
+      },
+      "how-fig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/consultation.jpg",
+              "alt": "A doctor listens to a patient's chest with a stethoscope in the consulting room"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/herbs-mortar.jpg",
+              "alt": "Hands crushing dried herbs and flowers in a stone mortar"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/dropper-bottle.jpg",
+              "alt": "A brown dropper bottle beside dried herbs and pills"
+            }
+          }
+        ]
+      }
+    },
+    "online": {
+      "photo": {
+        "src": "/demo/homeopathy/images/neem.jpg",
+        "alt": "A hand holds a fresh sprig of neem leaves"
+      },
+      "tag": "<b>Medicines by courier</b>Within Kolkata next day, rest of India in 3 to 5 days. Courier charge at cost.",
+      "kicker": "Online consultation",
+      "h2": "For follow-ups, and for people who have moved away.",
+      "p": "Many of our patients now live in other cities or abroad. The first visit is best done in person; after that, most follow-ups work well on a video call.",
+      "online-steps": {
+        "items": [
+          {
+            "n": "1",
+            "h3": "Send a message",
+            "p": "WhatsApp your name, the doctor you see, and two time slots that suit you. Pay ₹400 by UPI to confirm."
+          },
+          {
+            "n": "2",
+            "h3": "Share photos and reports",
+            "p": "For skin, clear photos in daylight. For anything else, the latest reports as PDF or photo. Send them the day before."
+          },
+          {
+            "n": "3",
+            "h3": "The call",
+            "p": "Twenty minutes on WhatsApp video or a normal phone call. The doctor writes the prescription and sends it as a photo the same evening."
+          },
+          {
+            "n": "4",
+            "h3": "Medicines reach you",
+            "p": "Collect from the clinic, or we courier them. Payment for medicines and courier by UPI after dispatch."
+          }
+        ]
+      }
+    },
+    "medicines": {
+      "kicker": "Medicines",
+      "h2": "Dispensed from the clinic, so you walk out with everything.",
+      "meds": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/dropper-bottles.jpg",
+              "alt": "Brown glass dropper bottles standing on a white shelf"
+            },
+            "h3": "Homeopathic dilutions",
+            "p": "Liquid and globules, from licensed makers, labelled with potency and dose"
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/bottle-leaves.jpg",
+              "alt": "A brown glass bottle with fresh green leaves on a wooden table"
+            },
+            "h3": "Ayurvedic preparations",
+            "p": "Churnas, tablets, kadhas and oils from GMP-certified companies"
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/turmeric.jpg",
+              "alt": "Fresh turmeric roots and turmeric powder on a dark plate"
+            },
+            "h3": "Kitchen prescriptions",
+            "p": "Turmeric, ginger, jeera, methi: what to take, how much, and when"
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/tulsi.jpg",
+              "alt": "A tulsi plant with small flower spikes in a garden"
+            },
+            "h3": "Plants you can grow",
+            "p": "Tulsi, aloe and neem; the doctor tells you if and how they fit your case"
+          }
+        ]
+      },
+      "meds-text": {
+        "items": [
+          {
+            "p": "We do not sell medicines over the counter without a consultation, and we do not stock anything we have not prescribed ourselves. Every bottle has the patient's name, the medicine, the potency or strength, and the dose written on it. Medicines are kept away from sunlight and strong smells, and we ask you to do the same at home."
+          },
+          {
+            "p": "A month of homeopathic medicine usually costs ₹150 to ₹300. Ayurvedic medicines cost more, ₹300 to ₹600 a month, because of the quantities. The price is told to you before the bottles are packed. If you prefer to buy from a shop outside, the prescription is yours to take."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "The clinic",
+      "h2": "A ground-floor room, a dispensary, and a courtyard with a tulsi plant.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/mortar-bottle.jpg",
+              "alt": "Flowers and leaves beside a mortar, pestle and glass bottle"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/garlic-ginger.jpg",
+              "alt": "Garlic, ginger and herbal capsules laid out on a table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/amla.jpg",
+              "alt": "Fresh amla fruit on the branch"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/consultation.jpg",
+              "alt": "The doctor examines a patient at the consulting table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/homeopathy/images/herbs-mortar.jpg",
+              "alt": "Dried herbs being mixed by hand in a stone mortar"
+            }
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Asked at the desk most weeks.",
+      "kicker2": "Patients say",
+      "h22": "Two notes, in their own words.",
+      "p": "My daughter's eczema has been much calmer for the last eight months. What I valued most was that the doctor told us on day one it would take time, and it did.",
+      "span": "· Tollygunge",
+      "p2": "I came for acidity and left with a diet sheet I could actually follow. Three months on, I take half the antacids I used to. The doctor also sent me for an endoscopy first, which I appreciated.",
+      "span2": "· Ranikuthi",
+      "faq": {
+        "items": [
+          {
+            "summary": "How long before I see a change?",
+            "a": "It depends on how long you have had the problem. A recent cold or a stomach upset may settle in days. Skin and allergy that have been there for years usually take months, and we tell you a realistic timeline on the first day. We cannot promise a result, and we will not pretend to."
+          },
+          {
+            "summary": "Can I take these medicines with my allopathic ones?",
+            "a": "In most cases yes, and we ask you to continue them. Bring the full list. If anything should be spaced out, the doctor writes the timing. Never stop a sugar, pressure, thyroid or heart medicine without your physician."
+          },
+          {
+            "summary": "Do I have to give up tea, onion or garlic?",
+            "a": "No. Keep a gap of fifteen minutes between the homeopathic medicine and strong tastes like coffee, mint or camphor. The ayurvedic diet sheet may ask you to cut down on some foods for a while; it says which and for how long."
+          },
+          {
+            "summary": "Is homeopathy safe for babies and in pregnancy?",
+            "a": "The medicines are given in very small doses and are widely used for both. Tell the doctor if you are pregnant or breastfeeding, and keep your obstetrician informed of anything you take."
+          },
+          {
+            "summary": "Do you treat serious illness like cancer or kidney failure?",
+            "a": "No. For those we support comfort alongside hospital treatment only if the treating doctor agrees. We do not take anyone off hospital treatment, and we say this clearly to any family who asks."
+          },
+          {
+            "summary": "Do I need an appointment?",
+            "a": "Yes, because a first visit takes half an hour. Message or call; same-week slots are usually available. Follow-ups can walk in during chamber hours and wait their turn."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the clinic",
+      "h2": "N.S.C. Bose Road, five minutes from Tollygunge metro.",
+      "b": "Address",
+      "p": "23 Netaji Subhas Chandra Bose Road, Tollygunge<br>Kolkata 700040",
+      "button": "Get directions →",
+      "b2": "Chamber hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Ground floor, no steps. Messages answered 9 am to 8:30 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday, morning",
+            "td2": "9:00 am – 1:00 pm"
+          },
+          {
+            "td": "Monday to Saturday, evening",
+            "td2": "5:00 pm – 8:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "9:00 am – 12:00 noon"
+          },
+          {
+            "td": "Dr. Mitra (Ayurveda)",
+            "td2": "Mon, Wed, Fri, Sat"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Half an hour, <em>no hurry,</em> and a plain answer.",
+      "p": "Send your name, the complaint in one line, and a time that suits you. We confirm the slot the same day."
+    },
+    "footer": {
+      "b": "Arogya Niketan",
+      "small": "Homeopathy & Ayurveda · Tollygunge",
+      "p": "Homeopathy and ayurveda clinic since 2008. Thirty-minute consultations, medicines from the clinic, and no promises we cannot keep.",
+      "h4": "On this page",
+      "h42": "Find us",
+      "li": "23 N.S.C. Bose Road, Tollygunge, Kolkata 700040",
+      "li2": "Mon–Sat 9 am – 1 pm, 5 pm – 8:30 pm · Sun 9 am – 12 noon",
+      "list": {
+        "items": [
+          {
+            "button": "The doctors"
+          },
+          {
+            "button": "What we commonly see"
+          },
+          {
+            "button": "A first consultation"
+          },
+          {
+            "button": "Online consultation"
+          },
+          {
+            "button": "Common questions"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Arogya Niketan sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=23%20Netaji%20Subhas%20Chandra%20Bose%20Road%2C%20Tollygunge%2C%20Kolkata%20700040",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Arogya Niketan | Homeopathy and Ayurveda Clinic in Tollygunge, Kolkata",
+      "description": "Homeopathy and ayurveda clinic in Tollygunge, Kolkata. Skin, allergy, digestion, hair fall, children's complaints and long-standing conditions. Consultation fee, online consultation and medicines given from the clinic."
+    }
+  }
+}

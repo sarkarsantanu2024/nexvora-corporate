@@ -279,6 +279,12 @@ table{border-collapse:collapse;width:100%}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:760px){
+  .hours td:last-child{white-space:nowrap}
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -311,24 +317,22 @@ table{border-collapse:collapse;width:100%}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="pathology-lab">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Nabadiganta Diagnostics, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#0F3B5C"/><path d="M17 9h10v3h-2v8.5l7 11.5a3 3 0 0 1-2.6 4.5H14.6A3 3 0 0 1 12 32l7-11.5V12h-2V9Z" fill="#fff"/><path d="M15.8 31h12.4l-4.2-7h-4l-4.2 7Z" fill="#F2694B"/><circle cx="31" cy="12" r="3" fill="#0E8A86"/></svg>
-      <span><b>Nabadiganta Diagnostics</b><small>Dum Dum &middot; since 2014</small></span>
+      <span><b data-nx="header.b">Nabadiganta Diagnostics</b><small data-nx="header.small">Dum Dum &middot; since 2014</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -351,114 +355,114 @@ table{border-collapse:collapse;width:100%}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="hero__tag"><span></span>Reports checked by a qualified pathologist</p>
-      <h1>Blood tests done right, <em>reports on WhatsApp</em> by evening.</h1>
-      <p>Walk in from 6:30 am or let us come to your home. Fasting sugar, thyroid, lipid, liver, kidney, vitamins, full body packages, ECG, X-ray and ultrasound, all under one roof on Dum Dum Road.</p>
+      <p data-nx="top.hero-tag" class="hero__tag"><span></span>Reports checked by a qualified pathologist</p>
+      <h1 data-nx="top.h1">Blood tests done right, <em>reports on WhatsApp</em> by evening.</h1>
+      <p data-nx="top.p">Walk in from 6:30 am or let us come to your home. Fasting sugar, thyroid, lipid, liver, kidney, vitamins, full body packages, ECG, X-ray and ultrasound, all under one roof on Dum Dum Road.</p>
       <div class="hero__cta">
         <a class="btn btn--coral" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a home collection
         </a>
-        <a class="btn btn--ghost" href="#tests">See test prices</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#tests">See test prices</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>6:30 am</b><span>Doors open, fasting samples first</span></li>
-        <li><b>Same day</b><span>Routine reports by 7 pm</span></li>
-        <li><b>&#8377;50</b><span>Home visit charge, free above &#8377;999</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">6:30 am</b><span data-nx-f="span">Doors open, fasting samples first</span></li>
+        <li data-nx-item><b data-nx-f="b">Same day</b><span data-nx-f="span">Routine reports by 7 pm</span></li>
+        <li data-nx-item><b data-nx-f="b">&#8377;50</b><span data-nx-f="span">Home visit charge, free above &#8377;999</span></li>
       </ul>
     </div>
     <div class="hero__photo">
-      <img src="/demo/pathology-lab/images/hero.jpg" width="1200" height="800" alt="A lab technician in cap, mask and gloves holds a rack of blood sample tubes in the laboratory" fetchpriority="high">
+      <img data-nx="top.photo" src="/demo/pathology-lab/images/hero.jpg" width="1200" height="800" alt="A lab technician in cap, mask and gloves holds a rack of blood sample tubes in the laboratory" fetchpriority="high">
       <div class="hero__card">
         <b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9Z"/></svg>Home collection, 6 am to 11 am</b>
-        <p>Book by 9 pm the night before. Dum Dum, Nagerbazar, Lake Town, Baguiati and Airport area.</p>
+        <p data-nx="top.p2">Book by 9 pm the night before. Dum Dum, Nagerbazar, Lake Town, Baguiati and Airport area.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="tests">
+<section data-nx-section="tests" class="section" id="tests">
   <div class="wrap">
     <div class="head head--row reveal">
       <div>
-        <span class="kicker">Common tests</span>
-        <h2 class="h2">The tests people ask for most, with the price.</h2>
+        <span data-nx="tests.kicker" class="kicker">Common tests</span>
+        <h2 data-nx="tests.h2" class="h2">The tests people ask for most, with the price.</h2>
       </div>
-      <p class="lead">Over 400 tests are on the full list at the counter. These are the ones a family doctor writes most often. Prices include the report on WhatsApp and a printed copy.</p>
+      <p data-nx="tests.p" class="lead">Over 400 tests are on the full list at the counter. These are the ones a family doctor writes most often. Prices include the report on WhatsApp and a printed copy.</p>
     </div>
     <ul class="tests reveal">
-      <li class="test"><div class="test__row"><h3>CBC (complete blood count)</h3><span class="amt">&#8377;250</span></div><p>Haemoglobin, white cells, platelets. For fever, weakness, dengue follow-up.</p><ul class="meta"><li>Same day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Fasting and PP sugar</h3><span class="amt">&#8377;120</span></div><p>Both readings. Come fasting, then return two hours after breakfast.</p><ul class="meta"><li>Same day</li><li class="fast">Fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>HbA1c</h3><span class="amt">&#8377;450</span></div><p>Three-month sugar average. No fasting needed.</p><ul class="meta"><li>Same day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Thyroid profile (T3, T4, TSH)</h3><span class="amt">&#8377;500</span></div><p>Tiredness, weight change, hair fall, irregular periods.</p><ul class="meta"><li>Same day</li><li>Morning sample</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Lipid profile</h3><span class="amt">&#8377;550</span></div><p>Cholesterol, triglycerides, HDL, LDL. 10 to 12 hours fasting.</p><ul class="meta"><li>Same day</li><li class="fast">Fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Liver function test (LFT)</h3><span class="amt">&#8377;600</span></div><p>Bilirubin, SGOT, SGPT, proteins. For jaundice, fatty liver follow-up.</p><ul class="meta"><li>Same day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Kidney function test (KFT)</h3><span class="amt">&#8377;600</span></div><p>Urea, creatinine, uric acid, electrolytes. For pressure and sugar patients.</p><ul class="meta"><li>Same day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Vitamin D and B12</h3><span class="amt">&#8377;1,400</span></div><p>Both together. Bone pain, tingling, tiredness.</p><ul class="meta"><li>Next day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Urine routine</h3><span class="amt">&#8377;100</span></div><p>Infection, protein, sugar. Bring the first morning sample if you can.</p><ul class="meta"><li>Same day</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Dengue NS1 and IgM</h3><span class="amt">&#8377;900</span></div><p>Season test for fever with body ache. Platelet count included.</p><ul class="meta"><li>Same day</li><li>No fasting</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Typhoid (Widal)</h3><span class="amt">&#8377;200</span></div><p>For fever lasting more than five days.</p><ul class="meta"><li>Same day</li></ul></li>
-      <li class="test"><div class="test__row"><h3>Pregnancy and antenatal panel</h3><span class="amt">&#8377;1,800</span></div><p>Blood group, CBC, sugar, thyroid, HIV, HBsAg, VDRL, urine, as the obstetrician asks.</p><ul class="meta"><li>Same day</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h3">CBC (complete blood count)</h3><span data-nx="tests.amt" class="amt">&#8377;250</span></div><p data-nx="tests.p2">Haemoglobin, white cells, platelets. For fever, weakness, dengue follow-up.</p><ul data-nx-list="tests.meta" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h32">Fasting and PP sugar</h3><span data-nx="tests.amt2" class="amt">&#8377;120</span></div><p data-nx="tests.p3">Both readings. Come fasting, then return two hours after breakfast.</p><ul class="meta"><li data-nx="tests.li">Same day</li><li data-nx="tests.fast" class="fast">Fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h33">HbA1c</h3><span data-nx="tests.amt3" class="amt">&#8377;450</span></div><p data-nx="tests.p4">Three-month sugar average. No fasting needed.</p><ul data-nx-list="tests.meta2" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h34">Thyroid profile (T3, T4, TSH)</h3><span data-nx="tests.amt4" class="amt">&#8377;500</span></div><p data-nx="tests.p5">Tiredness, weight change, hair fall, irregular periods.</p><ul data-nx-list="tests.meta3" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>Morning sample</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h35">Lipid profile</h3><span data-nx="tests.amt5" class="amt">&#8377;550</span></div><p data-nx="tests.p6">Cholesterol, triglycerides, HDL, LDL. 10 to 12 hours fasting.</p><ul class="meta"><li data-nx="tests.li2">Same day</li><li data-nx="tests.fast2" class="fast">Fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h36">Liver function test (LFT)</h3><span data-nx="tests.amt6" class="amt">&#8377;600</span></div><p data-nx="tests.p7">Bilirubin, SGOT, SGPT, proteins. For jaundice, fatty liver follow-up.</p><ul data-nx-list="tests.meta4" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h37">Kidney function test (KFT)</h3><span data-nx="tests.amt7" class="amt">&#8377;600</span></div><p data-nx="tests.p8">Urea, creatinine, uric acid, electrolytes. For pressure and sugar patients.</p><ul data-nx-list="tests.meta5" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h38">Vitamin D and B12</h3><span data-nx="tests.amt8" class="amt">&#8377;1,400</span></div><p data-nx="tests.p9">Both together. Bone pain, tingling, tiredness.</p><ul data-nx-list="tests.meta6" class="meta"><li data-nx-f="li" data-nx-item>Next day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h39">Urine routine</h3><span data-nx="tests.amt9" class="amt">&#8377;100</span></div><p data-nx="tests.p10">Infection, protein, sugar. Bring the first morning sample if you can.</p><ul class="meta"><li data-nx="tests.li3">Same day</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h310">Dengue NS1 and IgM</h3><span data-nx="tests.amt10" class="amt">&#8377;900</span></div><p data-nx="tests.p11">Season test for fever with body ache. Platelet count included.</p><ul data-nx-list="tests.meta7" class="meta"><li data-nx-f="li" data-nx-item>Same day</li><li data-nx-f="li" data-nx-item>No fasting</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h311">Typhoid (Widal)</h3><span data-nx="tests.amt11" class="amt">&#8377;200</span></div><p data-nx="tests.p12">For fever lasting more than five days.</p><ul class="meta"><li data-nx="tests.li4">Same day</li></ul></li>
+      <li class="test"><div class="test__row"><h3 data-nx="tests.h312">Pregnancy and antenatal panel</h3><span data-nx="tests.amt12" class="amt">&#8377;1,800</span></div><p data-nx="tests.p13">Blood group, CBC, sugar, thyroid, HIV, HBsAg, VDRL, urine, as the obstetrician asks.</p><ul class="meta"><li data-nx="tests.li5">Same day</li></ul></li>
     </ul>
-    <p class="tests__note">Prices are per test. Bring the doctor's prescription if you have one; tests can also be done without a prescription. The pathologist signs every report before it goes out.</p>
+    <p data-nx="tests.tests-note" class="tests__note">Prices are per test. Bring the doctor's prescription if you have one; tests can also be done without a prescription. The pathologist signs every report before it goes out.</p>
   </div>
 </section>
 
-<section class="section section--navy" id="packages">
+<section data-nx-section="packages" class="section section--navy" id="packages">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Full body packages</span>
-      <h2 class="h2">One morning, one needle, the whole picture.</h2>
-      <p class="lead" style="margin-inline:auto">Packages cost less than the tests added up. Come fasting between 6:30 and 9 am. A home visit for a package is free.</p>
+      <span data-nx="packages.kicker" class="kicker">Full body packages</span>
+      <h2 data-nx="packages.h2" class="h2">One morning, one needle, the whole picture.</h2>
+      <p data-nx="packages.p" class="lead" style="margin-inline:auto">Packages cost less than the tests added up. Come fasting between 6:30 and 9 am. A home visit for a package is free.</p>
     </div>
     <div class="packs">
       <div class="pack reveal">
-        <h3>Basic check</h3>
-        <p class="for">Under 40, no known illness, yearly check</p>
-        <p class="amt">&#8377;999 <small>&#8377;1,620</small></p>
-        <p class="count">32 parameters</p>
-        <ul>
-          <li>CBC with ESR</li>
-          <li>Fasting sugar</li>
-          <li>Lipid profile</li>
-          <li>Liver function test</li>
-          <li>Kidney function test</li>
-          <li>Urine routine</li>
+        <h3 data-nx="packages.h3">Basic check</h3>
+        <p data-nx="packages.for" class="for">Under 40, no known illness, yearly check</p>
+        <p data-nx="packages.amt" class="amt">&#8377;999 <small>&#8377;1,620</small></p>
+        <p data-nx="packages.count" class="count">32 parameters</p>
+        <ul data-nx-list="packages.list">
+          <li data-nx-f="li" data-nx-item>CBC with ESR</li>
+          <li data-nx-f="li" data-nx-item>Fasting sugar</li>
+          <li data-nx-f="li" data-nx-item>Lipid profile</li>
+          <li data-nx-f="li" data-nx-item>Liver function test</li>
+          <li data-nx-f="li" data-nx-item>Kidney function test</li>
+          <li data-nx-f="li" data-nx-item>Urine routine</li>
         </ul>
         <a class="btn btn--ghost-light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book Basic</a>
       </div>
       <div class="pack pack--hot reveal">
-        <span class="pack__flag">Most booked</span>
-        <h3>Family check</h3>
-        <p class="for">40 and above, or sugar and pressure in the family</p>
-        <p class="amt">&#8377;1,999 <small>&#8377;3,450</small></p>
-        <p class="count">58 parameters + ECG</p>
-        <ul>
-          <li>Everything in Basic</li>
-          <li>HbA1c and PP sugar</li>
-          <li>Thyroid profile</li>
-          <li>Vitamin D and B12</li>
-          <li>Uric acid and calcium</li>
-          <li>Resting ECG</li>
-          <li>Report review call from the pathologist</li>
+        <span data-nx="packages.pack-flag" class="pack__flag">Most booked</span>
+        <h3 data-nx="packages.h32">Family check</h3>
+        <p data-nx="packages.for2" class="for">40 and above, or sugar and pressure in the family</p>
+        <p data-nx="packages.amt2" class="amt">&#8377;1,999 <small>&#8377;3,450</small></p>
+        <p data-nx="packages.count2" class="count">58 parameters + ECG</p>
+        <ul data-nx-list="packages.list2">
+          <li data-nx-f="li" data-nx-item>Everything in Basic</li>
+          <li data-nx-f="li" data-nx-item>HbA1c and PP sugar</li>
+          <li data-nx-f="li" data-nx-item>Thyroid profile</li>
+          <li data-nx-f="li" data-nx-item>Vitamin D and B12</li>
+          <li data-nx-f="li" data-nx-item>Uric acid and calcium</li>
+          <li data-nx-f="li" data-nx-item>Resting ECG</li>
+          <li data-nx-f="li" data-nx-item>Report review call from the pathologist</li>
         </ul>
         <a class="btn btn--coral" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book Family</a>
       </div>
       <div class="pack reveal">
-        <h3>Senior check</h3>
-        <p class="for">60 and above, or long-term medicines</p>
-        <p class="amt">&#8377;3,499 <small>&#8377;5,900</small></p>
-        <p class="count">72 parameters + ECG + USG</p>
-        <ul>
-          <li>Everything in Family</li>
-          <li>PSA (men) or CA-125 (women)</li>
-          <li>Iron studies</li>
-          <li>Electrolytes</li>
-          <li>Whole abdomen ultrasound</li>
-          <li>Free home collection, two visits if needed</li>
+        <h3 data-nx="packages.h33">Senior check</h3>
+        <p data-nx="packages.for3" class="for">60 and above, or long-term medicines</p>
+        <p data-nx="packages.amt3" class="amt">&#8377;3,499 <small>&#8377;5,900</small></p>
+        <p data-nx="packages.count3" class="count">72 parameters + ECG + USG</p>
+        <ul data-nx-list="packages.list3">
+          <li data-nx-f="li" data-nx-item>Everything in Family</li>
+          <li data-nx-f="li" data-nx-item>PSA (men) or CA-125 (women)</li>
+          <li data-nx-f="li" data-nx-item>Iron studies</li>
+          <li data-nx-f="li" data-nx-item>Electrolytes</li>
+          <li data-nx-f="li" data-nx-item>Whole abdomen ultrasound</li>
+          <li data-nx-f="li" data-nx-item>Free home collection, two visits if needed</li>
         </ul>
         <a class="btn btn--ghost-light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book Senior</a>
       </div>
@@ -466,151 +470,151 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<section class="section" id="home">
+<section data-nx-section="home" class="section" id="home">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Home sample collection</span>
-      <h2 class="h2">We come to you. Here is how it works.</h2>
+      <span data-nx="home.kicker" class="kicker">Home sample collection</span>
+      <h2 data-nx="home.h2" class="h2">We come to you. Here is how it works.</h2>
     </div>
-    <ol class="steps reveal">
-      <li class="step"><h3>Send the prescription</h3><p>WhatsApp a photo of the doctor's slip, or just the test names, with your address and a phone number. Book by 9 pm for the next morning.</p></li>
-      <li class="step"><h3>We confirm a slot</h3><p>You get a one-hour window between 6 and 11 am, the collector's name and the exact amount to pay. No surprises at the door.</p></li>
-      <li class="step"><h3>Sample at your door</h3><p>The collector carries a sealed kit, gloves and a cold box. The whole thing takes ten minutes. Pay by cash or UPI then or after the report.</p></li>
-      <li class="step"><h3>Report on your phone</h3><p>Routine reports reach you on WhatsApp by 7 pm the same day as a PDF. A printed copy waits at the counter if you want it.</p></li>
+    <ol data-nx-list="home.steps" class="steps reveal">
+      <li data-nx-item class="step"><h3 data-nx-f="h3">Send the prescription</h3><p data-nx-f="p">WhatsApp a photo of the doctor's slip, or just the test names, with your address and a phone number. Book by 9 pm for the next morning.</p></li>
+      <li data-nx-item class="step"><h3 data-nx-f="h3">We confirm a slot</h3><p data-nx-f="p">You get a one-hour window between 6 and 11 am, the collector's name and the exact amount to pay. No surprises at the door.</p></li>
+      <li data-nx-item class="step"><h3 data-nx-f="h3">Sample at your door</h3><p data-nx-f="p">The collector carries a sealed kit, gloves and a cold box. The whole thing takes ten minutes. Pay by cash or UPI then or after the report.</p></li>
+      <li data-nx-item class="step"><h3 data-nx-f="h3">Report on your phone</h3><p data-nx-f="p">Routine reports reach you on WhatsApp by 7 pm the same day as a PDF. A printed copy waits at the counter if you want it.</p></li>
     </ol>
     <div class="hc reveal">
       <div>
-        <h3>Where we go, and what it costs</h3>
-        <p class="lead">One collector covers one zone each morning, so slots are limited to about 25 homes a day. Book early in festival season and when dengue is going around.</p>
-        <ul>
-          <li><b>Free</b><span>Dum Dum, Nagerbazar, Motijheel, Lake Town, when the bill is &#8377;999 or more</span></li>
-          <li><b>&#8377;50</b><span>Same areas, for bills under &#8377;999</span></li>
-          <li><b>&#8377;100</b><span>Baguiati, Kestopur, Airport, Belgharia, Dum Dum Cantonment</span></li>
-          <li><b>Free</b><span>Any full body package, any listed area</span></li>
+        <h3 data-nx="home.h3">Where we go, and what it costs</h3>
+        <p data-nx="home.p" class="lead">One collector covers one zone each morning, so slots are limited to about 25 homes a day. Book early in festival season and when dengue is going around.</p>
+        <ul data-nx-list="home.list">
+          <li data-nx-item><b data-nx-f="b">Free</b><span data-nx-f="span">Dum Dum, Nagerbazar, Motijheel, Lake Town, when the bill is &#8377;999 or more</span></li>
+          <li data-nx-item><b data-nx-f="b">&#8377;50</b><span data-nx-f="span">Same areas, for bills under &#8377;999</span></li>
+          <li data-nx-item><b data-nx-f="b">&#8377;100</b><span data-nx-f="span">Baguiati, Kestopur, Airport, Belgharia, Dum Dum Cantonment</span></li>
+          <li data-nx-item><b data-nx-f="b">Free</b><span data-nx-f="span">Any full body package, any listed area</span></li>
         </ul>
       </div>
-      <img src="/demo/pathology-lab/images/blood-draw.jpg" width="1200" height="800" alt="A gloved collector draws a blood sample from a patient's arm" loading="lazy">
+      <img data-nx="home.photo" src="/demo/pathology-lab/images/blood-draw.jpg" width="1200" height="800" alt="A gloved collector draws a blood sample from a patient's arm" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="prepare">
+<section data-nx-section="prepare" class="section section--paper" id="prepare">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Before the test</span>
-      <h2 class="h2">Fasting rules and other things worth knowing.</h2>
-      <p class="lead">Half the repeat visits we see are because of a cup of tea. Read this the night before.</p>
+      <span data-nx="prepare.kicker" class="kicker">Before the test</span>
+      <h2 data-nx="prepare.h2" class="h2">Fasting rules and other things worth knowing.</h2>
+      <p data-nx="prepare.p" class="lead">Half the repeat visits we see are because of a cup of tea. Read this the night before.</p>
     </div>
     <div class="prep">
-      <div class="prep__list reveal">
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>Fasting means 10 to 12 hours</h3><p>Finish dinner by 9 pm and come between 6:30 and 9 am. Plain water is fine, as much as you like. No tea, coffee, biscuits, chewing gum or paan. Fasting is needed for fasting sugar, lipid profile and some packages, not for CBC, thyroid or vitamins.</p></div></div>
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3h8l-1 6h-6L8 3Z"/><path d="M9 9v12h6V9"/></svg><div><h3>Medicines</h3><p>Take your pressure and thyroid tablets as usual with water. For sugar tablets or insulin, ask your doctor; most say take them after the fasting sample. Carry the medicine strip so we can note the name.</p></div></div>
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3Z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><h3>PP (post-meal) sugar</h3><p>Eat your normal breakfast right after the fasting sample, note the time, and come back exactly two hours later. Do not skip or shrink the meal; the test is meant to see a normal day.</p></div></div>
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 3h6v4a3 3 0 0 1-3 3 3 3 0 0 1-3-3V3Z"/><path d="M12 10v11M8 21h8"/></svg><div><h3>Urine and stool samples</h3><p>Collect the first urine of the morning in the sterile cup we give you (or buy one from any chemist for &#8377;10). Mid-stream, not the first few drops. Bring it within two hours. Women should avoid the test during periods unless the doctor says otherwise.</p></div></div>
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0v6H4v-6Z"/><path d="M8 18v2M16 18v2"/></svg><div><h3>Ultrasound of the abdomen</h3><p>Six hours empty stomach, and drink four to five glasses of water one hour before so the bladder is full. Do not pass urine until the scan is done. For a pelvic scan the full bladder matters most.</p></div></div>
-        <div class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><div><h3>ECG</h3><p>Nothing special. Avoid heavy exercise, tea and smoking for one hour before. Wear a shirt or kurta that opens at the front. The test takes five minutes and the report is ready in fifteen.</p></div></div>
+      <div data-nx-list="prepare.prep-list" class="prep__list reveal">
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3 data-nx-f="h3">Fasting means 10 to 12 hours</h3><p data-nx-f="p">Finish dinner by 9 pm and come between 6:30 and 9 am. Plain water is fine, as much as you like. No tea, coffee, biscuits, chewing gum or paan. Fasting is needed for fasting sugar, lipid profile and some packages, not for CBC, thyroid or vitamins.</p></div></div>
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3h8l-1 6h-6L8 3Z"/><path d="M9 9v12h6V9"/></svg><div><h3 data-nx-f="h3">Medicines</h3><p data-nx-f="p">Take your pressure and thyroid tablets as usual with water. For sugar tablets or insulin, ask your doctor; most say take them after the fasting sample. Carry the medicine strip so we can note the name.</p></div></div>
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7V3Z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><h3 data-nx-f="h3">PP (post-meal) sugar</h3><p data-nx-f="p">Eat your normal breakfast right after the fasting sample, note the time, and come back exactly two hours later. Do not skip or shrink the meal; the test is meant to see a normal day.</p></div></div>
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 3h6v4a3 3 0 0 1-3 3 3 3 0 0 1-3-3V3Z"/><path d="M12 10v11M8 21h8"/></svg><div><h3 data-nx-f="h3">Urine and stool samples</h3><p data-nx-f="p">Collect the first urine of the morning in the sterile cup we give you (or buy one from any chemist for &#8377;10). Mid-stream, not the first few drops. Bring it within two hours. Women should avoid the test during periods unless the doctor says otherwise.</p></div></div>
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 16 0v6H4v-6Z"/><path d="M8 18v2M16 18v2"/></svg><div><h3 data-nx-f="h3">Ultrasound of the abdomen</h3><p data-nx-f="p">Six hours empty stomach, and drink four to five glasses of water one hour before so the bladder is full. Do not pass urine until the scan is done. For a pelvic scan the full bladder matters most.</p></div></div>
+        <div data-nx-item class="prep__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg><div><h3 data-nx-f="h3">ECG</h3><p data-nx-f="p">Nothing special. Avoid heavy exercise, tea and smoking for one hour before. Wear a shirt or kurta that opens at the front. The test takes five minutes and the report is ready in fifteen.</p></div></div>
       </div>
       <aside class="side reveal">
-        <h3>When the report comes</h3>
-        <table>
-          <tr><td>CBC, sugar, urine</td><td>Same day, by 2 pm</td></tr>
-          <tr><td>Thyroid, lipid, LFT, KFT</td><td>Same day, by 7 pm</td></tr>
-          <tr><td>Vitamin D, B12, hormones</td><td>Next day, by 2 pm</td></tr>
-          <tr><td>Culture and sensitivity</td><td>48 to 72 hours</td></tr>
-          <tr><td>ECG</td><td>15 minutes</td></tr>
-          <tr><td>X-ray, USG</td><td>Same visit, 30 minutes</td></tr>
+        <h3 data-nx="prepare.h3">When the report comes</h3>
+        <table data-nx-list="prepare.list">
+          <tr data-nx-item><td data-nx-f="td">CBC, sugar, urine</td><td data-nx-f="td2">Same day, by 2 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Thyroid, lipid, LFT, KFT</td><td data-nx-f="td2">Same day, by 7 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Vitamin D, B12, hormones</td><td data-nx-f="td2">Next day, by 2 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Culture and sensitivity</td><td data-nx-f="td2">48 to 72 hours</td></tr>
+          <tr data-nx-item><td data-nx-f="td">ECG</td><td data-nx-f="td2">15 minutes</td></tr>
+          <tr data-nx-item><td data-nx-f="td">X-ray, USG</td><td data-nx-f="td2">Same visit, 30 minutes</td></tr>
         </table>
-        <p>Reports go as a PDF to the WhatsApp number you give at the counter. If a value is far outside the normal range, the pathologist calls you the same day and suggests you see your doctor. We do not give treatment advice on the phone.</p>
+        <p data-nx="prepare.p2">Reports go as a PDF to the WhatsApp number you give at the counter. If a value is far outside the normal range, the pathologist calls you the same day and suggests you see your doctor. We do not give treatment advice on the phone.</p>
         <a class="btn btn--coral" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about a test</a>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="section" id="imaging">
+<section data-nx-section="imaging" class="section" id="imaging">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">ECG, X-ray and ultrasound</span>
-      <h2 class="h2">Three rooms on the first floor, no appointment for ECG and X-ray.</h2>
+      <span data-nx="imaging.kicker" class="kicker">ECG, X-ray and ultrasound</span>
+      <h2 data-nx="imaging.h2" class="h2">Three rooms on the first floor, no appointment for ECG and X-ray.</h2>
     </div>
-    <ul class="img3 reveal">
-      <li><img src="/demo/pathology-lab/images/ecg-print.jpg" width="1200" height="900" alt="An ECG trace printed on graph paper" loading="lazy"><div><h3>Resting ECG</h3><p>12-lead, read by a physician. Walk in any time during lab hours.</p><p class="amt">&#8377;250</p></div></li>
-      <li><img src="/demo/pathology-lab/images/analyzer.jpg" width="1200" height="800" alt="A technician in a white coat works at the lab's automated analyser" loading="lazy"><div><h3>Digital X-ray</h3><p>Chest, spine, knee, hand, sinus. Film on a CD or sent as an image; radiologist report by evening.</p><p class="amt">&#8377;350 to &#8377;600</p></div></li>
-      <li><img src="/demo/pathology-lab/images/doctor-patient.jpg" width="1200" height="675" alt="A doctor listens to an elderly patient's chest with a stethoscope" loading="lazy"><div><h3>Ultrasound (USG)</h3><p>Whole abdomen, pelvis, pregnancy, thyroid, KUB. Done by a visiting radiologist, Mon, Wed, Fri and Sat mornings. Book a slot.</p><p class="amt">&#8377;900 to &#8377;1,500</p></div></li>
+    <ul data-nx-list="imaging.img3" class="img3 reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/ecg-print.jpg" width="1200" height="900" alt="An ECG trace printed on graph paper" loading="lazy"><div><h3 data-nx-f="h3">Resting ECG</h3><p data-nx-f="p">12-lead, read by a physician. Walk in any time during lab hours.</p><p data-nx-f="amt" class="amt">&#8377;250</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/analyzer.jpg" width="1200" height="800" alt="A technician in a white coat works at the lab's automated analyser" loading="lazy"><div><h3 data-nx-f="h3">Digital X-ray</h3><p data-nx-f="p">Chest, spine, knee, hand, sinus. Film on a CD or sent as an image; radiologist report by evening.</p><p data-nx-f="amt" class="amt">&#8377;350 to &#8377;600</p></div></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/doctor-patient.jpg" width="1200" height="675" alt="A doctor listens to an elderly patient's chest with a stethoscope" loading="lazy"><div><h3 data-nx-f="h3">Ultrasound (USG)</h3><p data-nx-f="p">Whole abdomen, pelvis, pregnancy, thyroid, KUB. Done by a visiting radiologist, Mon, Wed, Fri and Sat mornings. Book a slot.</p><p data-nx-f="amt" class="amt">&#8377;900 to &#8377;1,500</p></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--paper" id="pathologist">
+<section data-nx-section="pathologist" class="section section--paper" id="pathologist">
   <div class="wrap path">
-    <img class="reveal" src="/demo/pathology-lab/images/technician-rack.jpg" width="1200" height="1800" alt="A technician in protective cap and mask holds a rack of labelled blood samples" loading="lazy">
+    <img data-nx="pathologist.photo" class="reveal" src="/demo/pathology-lab/images/technician-rack.jpg" width="1200" height="1800" alt="A technician in protective cap and mask holds a rack of labelled blood samples" loading="lazy">
     <div class="reveal">
-      <span class="kicker">Who checks your report</span>
-      <h2 class="h2">A pathologist reads every report before it leaves the lab.</h2>
-      <p class="lead" style="margin-top:1rem">Dr. Sumana Ghosh, MD (Pathology), has run the lab since it opened in 2014. She checks every report personally and signs it. Abnormal smears are looked at under the microscope, not just by the machine.</p>
-      <p class="lead">The lab runs a fully automated haematology and biochemistry analyser, calibrated every morning before the first sample. Controls are run twice a day and the records are kept in a register you can ask to see. Samples go into the machine within two hours of collection.</p>
-      <p class="sig">Dr. Sumana Ghosh<span>MD (Pathology), West Bengal Medical Council registered</span></p>
+      <span data-nx="pathologist.kicker" class="kicker">Who checks your report</span>
+      <h2 data-nx="pathologist.h2" class="h2">A pathologist reads every report before it leaves the lab.</h2>
+      <p data-nx="pathologist.p" class="lead" style="margin-top:1rem">Dr. Sumana Ghosh, MD (Pathology), has run the lab since it opened in 2014. She checks every report personally and signs it. Abnormal smears are looked at under the microscope, not just by the machine.</p>
+      <p data-nx="pathologist.p2" class="lead">The lab runs a fully automated haematology and biochemistry analyser, calibrated every morning before the first sample. Controls are run twice a day and the records are kept in a register you can ask to see. Samples go into the machine within two hours of collection.</p>
+      <p data-nx="pathologist.sig" class="sig">Dr. Sumana Ghosh<span>MD (Pathology), West Bengal Medical Council registered</span></p>
     </div>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Inside the lab</span>
-      <h2 class="h2">Clean benches, labelled tubes, a quiet waiting room.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Inside the lab</span>
+      <h2 data-nx="gallery.h2" class="h2">Clean benches, labelled tubes, a quiet waiting room.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/pathology-lab/images/vials-rack.jpg" width="1200" height="800" alt="Rows of blood sample vials in a laboratory rack" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/centrifuge.jpg" width="1200" height="1798" alt="Sample tubes spinning in the centrifuge" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/microscope.jpg" width="1200" height="801" alt="The microscope on the pathologist's bench" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/tubes-caps.jpg" width="1200" height="1817" alt="Blue and yellow capped sample tubes" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/bp-check.jpg" width="1200" height="800" alt="A doctor checks a patient's blood pressure at the desk before a report review" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/tubes-tray.jpg" width="1200" height="2090" alt="Capped tubes standing in a tray on the bench" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/report-tube.jpg" width="1200" height="800" alt="A sample tube resting on a printed report" loading="lazy"></li>
-      <li><img src="/demo/pathology-lab/images/ecg-paper.jpg" width="1200" height="800" alt="An ECG strip printed on graph paper" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/vials-rack.jpg" width="1200" height="800" alt="Rows of blood sample vials in a laboratory rack" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/centrifuge.jpg" width="1200" height="1798" alt="Sample tubes spinning in the centrifuge" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/microscope.jpg" width="1200" height="801" alt="The microscope on the pathologist's bench" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/tubes-caps.jpg" width="1200" height="1817" alt="Blue and yellow capped sample tubes" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/bp-check.jpg" width="1200" height="800" alt="A doctor checks a patient's blood pressure at the desk before a report review" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/tubes-tray.jpg" width="1200" height="2090" alt="Capped tubes standing in a tray on the bench" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/report-tube.jpg" width="1200" height="800" alt="A sample tube resting on a printed report" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/pathology-lab/images/ecg-paper.jpg" width="1200" height="800" alt="An ECG strip printed on graph paper" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--paper" id="words">
+<section data-nx-section="words" class="section section--paper" id="words">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Patients say</span>
-      <h2 class="h2">Two messages we were sent after the report.</h2>
+      <span data-nx="words.kicker" class="kicker">Patients say</span>
+      <h2 data-nx="words.h2" class="h2">Two messages we were sent after the report.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>"My mother is 78 and cannot climb stairs. The boy came at 7, was gentle, and the report was on my phone before I left office. We do all her tests this way now."</p><footer>Arindam <span>&middot; Nagerbazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>"My thyroid value was very high and the doctor from the lab herself called to say I should see my physician soon. Nobody has done that for me before."</p><footer>Shampa <span>&middot; Lake Town</span></footer></blockquote>
+    <div data-nx-list="words.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">"My mother is 78 and cannot climb stairs. The boy came at 7, was gentle, and the report was on my phone before I left office. We do all her tests this way now."</p><footer>Arindam <span data-nx-f="span">&middot; Nagerbazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">"My thyroid value was very high and the doctor from the lab herself called to say I should see my physician soon. Nobody has done that for me before."</p><footer>Shampa <span data-nx-f="span">&middot; Lake Town</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the lab</span>
-      <h2 class="h2">Dum Dum Road, opposite the post office, ground and first floor.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the lab</span>
+      <h2 data-nx="visit.h2" class="h2">Dum Dum Road, opposite the post office, ground and first floor.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>7/2 Dum Dum Road, Dum Dum<br>Kolkata 700074</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=7%2F2%20Dum%20Dum%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700074" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">7/2 Dum Dum Road, Dum Dum<br>Kolkata 700074</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=7%2F2%20Dum%20Dum%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700074" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Lab hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>6:30 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>6:30 am &ndash; 1:00 pm</td></tr>
-              <tr><td>Home collection, every day</td><td>6:00 am &ndash; 11:00 am</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Lab hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">6:30 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">6:30 am &ndash; 1:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Home collection, every day</td><td data-nx-f="td2">6:00 am &ndash; 11:00 am</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Five minutes' walk from Dum Dum metro, gate 1. Two-wheeler parking in front.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Five minutes' walk from Dum Dum metro, gate 1. Two-wheeler parking in front.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -624,10 +628,10 @@ table{border-collapse:collapse;width:100%}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Send the prescription tonight. We collect tomorrow morning.</h2>
-    <p>A photo of the doctor's slip, your address and a time that suits you. We reply with the slot and the exact amount.</p>
+    <h2 data-nx="book.h2">Send the prescription tonight. We collect tomorrow morning.</h2>
+    <p data-nx="book.p">A photo of the doctor's slip, your address and a time that suits you. We reply with the slot and the exact amount.</p>
     <div class="final__cta">
       <a class="btn btn--navy" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nabadiganta%20Diagnostics%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -642,32 +646,32 @@ table{border-collapse:collapse;width:100%}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#0E8A86"/><path d="M17 9h10v3h-2v8.5l7 11.5a3 3 0 0 1-2.6 4.5H14.6A3 3 0 0 1 12 32l7-11.5V12h-2V9Z" fill="#fff"/><path d="M15.8 31h12.4l-4.2-7h-4l-4.2 7Z" fill="#F2694B"/><circle cx="31" cy="12" r="3" fill="#0F3B5C"/></svg>
-          <span><b>Nabadiganta Diagnostics</b><small>Dum Dum &middot; since 2014</small></span>
+          <span><b data-nx="footer.b">Nabadiganta Diagnostics</b><small data-nx="footer.small">Dum Dum &middot; since 2014</small></span>
         </a>
-        <p>Pathology lab with home collection, ECG, X-ray and ultrasound. Every report checked and signed by a qualified pathologist.</p>
+        <p data-nx="footer.p">Pathology lab with home collection, ECG, X-ray and ultrasound. Every report checked and signed by a qualified pathologist.</p>
       </div>
       <div>
-        <h4>On this page</h4>
-        <ul>
-          <li><a href="#tests">Common tests</a></li>
-          <li><a href="#packages">Full body packages</a></li>
-          <li><a href="#home">Home collection</a></li>
-          <li><a href="#prepare">Before the test</a></li>
-          <li><a href="#imaging">ECG, X-ray, USG</a></li>
+        <h4 data-nx="footer.h4">On this page</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#tests">Common tests</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#packages">Full body packages</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#home">Home collection</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prepare">Before the test</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#imaging">ECG, X-ray, USG</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>7/2 Dum Dum Road, Dum Dum, Kolkata 700074</li>
+          <li data-nx="footer.li">7/2 Dum Dum Road, Dum Dum, Kolkata 700074</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 6:30 am &ndash; 9 pm &middot; Sun 6:30 am &ndash; 1 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 6:30 am &ndash; 9 pm &middot; Sun 6:30 am &ndash; 1 pm</li>
         </ul>
       </div>
     </div>
@@ -709,5 +713,7 @@ table{border-collapse:collapse;width:100%}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

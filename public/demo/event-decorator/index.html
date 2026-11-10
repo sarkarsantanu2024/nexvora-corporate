@@ -263,6 +263,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(217,184,107,.3);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone: comfortable tap targets, readable small print, hire table columns */
+@media (max-width:760px){
+  .hero__facts{row-gap:.8rem}
+  .rates td:nth-child(2){white-space:nowrap}
+  .rates .amt{font-size:1.1rem}
+  .visit__row a,.footer li a,.footer address a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer__note a{padding-block:.7rem}
+  .footer .brand small{font-size:.76rem}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -295,24 +305,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="event-decorator">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sanyal Decorators and Tent House, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" fill="#7A1F3D"/><rect x="5" y="5" width="34" height="34" fill="none" stroke="#B8893A" stroke-width="1"/><path d="M22 10 8 34h28L22 10Z" fill="none" stroke="#D9B86B" stroke-width="1.5"/><path d="M14 34c2-4 4-6 8-6s6 2 8 6" fill="none" stroke="#D9B86B" stroke-width="1.5"/><circle cx="22" cy="19" r="2.2" fill="#D9B86B"/></svg>
-      <span><b>Sanyal Decorators &amp; Tent House</b><small>Tollygunge &middot; since 1998</small></span>
+      <span><b data-nx="header.b">Sanyal Decorators &amp; Tent House</b><small data-nx="header.small">Tollygunge &middot; since 1998</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -335,79 +343,79 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__photo">
-      <img src="/demo/event-decorator/images/hero.jpg" width="1200" height="1799" alt="A haldi stage in yellow and orange drapes with marigold strings and a brass lamp" fetchpriority="high">
+      <img data-nx="top.photo" src="/demo/event-decorator/images/hero.jpg" width="1200" height="1799" alt="A haldi stage in yellow and orange drapes with marigold strings and a brass lamp" fetchpriority="high">
     </div>
     <div>
-      <p class="hero__eyebrow">Decoration, pandal, lights and sound</p>
-      <h1>The stage, the flowers, the tent. <span>One phone call.</span></h1>
-      <p>We decorate weddings, haldi and mehendi, receptions, birthdays and annaprashans across South Kolkata. Our own pandal, chairs, lights and sound, so you deal with one team, not five.</p>
+      <p data-nx="top.hero-eyebrow" class="hero__eyebrow">Decoration, pandal, lights and sound</p>
+      <h1 data-nx="top.h1">The stage, the flowers, the tent. <span>One phone call.</span></h1>
+      <p data-nx="top.p">We decorate weddings, haldi and mehendi, receptions, birthdays and annaprashans across South Kolkata. Our own pandal, chairs, lights and sound, so you deal with one team, not five.</p>
       <div class="hero__cta">
         <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send your date
         </a>
-        <a class="btn btn--ghost" href="#packages">See packages and prices</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#packages">See packages and prices</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>27</b><span>Years in Tollygunge</span></li>
-        <li><b>400+</b><span>Weddings decorated</span></li>
-        <li><b>2,000</b><span>Chairs in our godown</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">27</b><span data-nx-f="span">Years in Tollygunge</span></li>
+        <li data-nx-item><b data-nx-f="b">400+</b><span data-nx-f="span">Weddings decorated</span></li>
+        <li data-nx-item><b data-nx-f="b">2,000</b><span data-nx-f="span">Chairs in our godown</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="work">
+<section data-nx-section="work" class="section" id="work">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Our work</span>
-      <h2 class="h2">Photos from the last two seasons.</h2>
+      <span data-nx="work.kicker" class="kicker">Our work</span>
+      <h2 data-nx="work.h2" class="h2">Photos from the last two seasons.</h2>
       <div class="rule" aria-hidden="true"></div>
-      <p class="lead" style="margin-inline:auto">Every setup here was built by our own team. Fresh flowers from Mullick Ghat, cloth and lights from our godown.</p>
+      <p data-nx="work.p" class="lead" style="margin-inline:auto">Every setup here was built by our own team. Fresh flowers from Mullick Ghat, cloth and lights from our godown.</p>
     </div>
-    <ul class="masonry reveal">
-      <li><img src="/demo/event-decorator/images/stage-flowers.jpg" width="1200" height="1799" alt="Wedding stage with tall flower arrangements and draped cloth" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/mandap-chandelier.jpg" width="1200" height="800" alt="Flower-covered mandap with chandeliers hanging above" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/balloon-kids.jpg" width="1200" height="1800" alt="Birthday table with a number balloon, bunting and pastel balloons" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/mandap.jpg" width="1200" height="1800" alt="Wedding mandap decorated with red and white flowers" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/marigold-garlands.jpg" width="1200" height="800" alt="Strings of marigold garlands hanging outdoors" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/haldi-decor.jpg" width="1200" height="1637" alt="Haldi and mehendi welcome board with brass lotus stands and marigolds" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/outdoor-tent.jpg" width="1200" height="800" alt="Outdoor ceremony under a white tent with rows of draped chairs" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/entrance.jpg" width="1200" height="1800" alt="Colourful flower entrance gate for a wedding" loading="lazy"></li>
-      <li><img src="/demo/event-decorator/images/stage-columns.jpg" width="1200" height="800" alt="Stage with golden pillars and multicolour flower garlands" loading="lazy"></li>
+    <ul data-nx-list="work.masonry" class="masonry reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/stage-flowers.jpg" width="1200" height="1799" alt="Wedding stage with tall flower arrangements and draped cloth" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/mandap-chandelier.jpg" width="1200" height="800" alt="Flower-covered mandap with chandeliers hanging above" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/balloon-kids.jpg" width="1200" height="1800" alt="Birthday table with a number balloon, bunting and pastel balloons" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/mandap.jpg" width="1200" height="1800" alt="Wedding mandap decorated with red and white flowers" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/marigold-garlands.jpg" width="1200" height="800" alt="Strings of marigold garlands hanging outdoors" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/haldi-decor.jpg" width="1200" height="1637" alt="Haldi and mehendi welcome board with brass lotus stands and marigolds" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/outdoor-tent.jpg" width="1200" height="800" alt="Outdoor ceremony under a white tent with rows of draped chairs" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/entrance.jpg" width="1200" height="1800" alt="Colourful flower entrance gate for a wedding" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/event-decorator/images/stage-columns.jpg" width="1200" height="800" alt="Stage with golden pillars and multicolour flower garlands" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep" id="services">
+<section data-nx-section="services" class="section section--deep" id="services">
   <div class="wrap">
     <div class="svc">
       <div>
         <div class="head reveal">
-          <span class="kicker">What we do</span>
-          <h2 class="h2">Six things, done properly.</h2>
+          <span data-nx="services.kicker" class="kicker">What we do</span>
+          <h2 data-nx="services.h2" class="h2">Six things, done properly.</h2>
           <div class="rule" aria-hidden="true"></div>
-          <p class="lead">Starting prices are for a normal Kolkata hall or rooftop. The final price depends on the size of the venue and the flowers you choose. We put it in writing before you pay anything.</p>
+          <p data-nx="services.p" class="lead">Starting prices are for a normal Kolkata hall or rooftop. The final price depends on the size of the venue and the flowers you choose. We put it in writing before you pay anything.</p>
         </div>
-        <ul class="svc__list reveal">
-          <li><span class="n">01</span><div><h3>Wedding stage and mandap</h3><p>Fresh flower stage with backdrop, sofa and side pillars. Chhadnatola or mandap built to your purohit&rsquo;s measurements.</p></div><span class="from">from<b>&#8377;45,000</b></span></li>
-          <li><span class="n">02</span><div><h3>Flower decoration</h3><p>Gate, staircase, car, bed and table flowers. Marigold, rajanigandha, rose and orchid, bought the same morning.</p></div><span class="from">from<b>&#8377;8,000</b></span></li>
-          <li><span class="n">03</span><div><h3>Haldi and mehendi setup</h3><p>Yellow and orange drapes, marigold strings, a low seat for the bride, brass lamps and a photo corner.</p></div><span class="from">from<b>&#8377;12,000</b></span></li>
-          <li><span class="n">04</span><div><h3>Birthday and annaprashan balloons</h3><p>Balloon arch, number balloons, name board and a cake table. Set up in two hours, taken down the same night.</p></div><span class="from">from<b>&#8377;3,500</b></span></li>
-          <li><span class="n">05</span><div><h3>Lights</h3><p>Fairy lights, chandeliers, pillar lights and the lighting of your whole building front for the wedding week.</p></div><span class="from">from<b>&#8377;6,000</b></span></li>
-          <li><span class="n">06</span><div><h3>Pandal, chairs and sound on hire</h3><p>Waterproof pandal, carpet, chairs with covers, tables, generator and a sound system with a man on it all evening.</p></div><span class="from">see<b>rates below</b></span></li>
+        <ul data-nx-list="services.svc-list" class="svc__list reveal">
+          <li data-nx-item><span data-nx-f="n" class="n">01</span><div><h3 data-nx-f="h3">Wedding stage and mandap</h3><p data-nx-f="p">Fresh flower stage with backdrop, sofa and side pillars. Chhadnatola or mandap built to your purohit&rsquo;s measurements.</p></div><span data-nx-f="from" class="from">from<b>&#8377;45,000</b></span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">02</span><div><h3 data-nx-f="h3">Flower decoration</h3><p data-nx-f="p">Gate, staircase, car, bed and table flowers. Marigold, rajanigandha, rose and orchid, bought the same morning.</p></div><span data-nx-f="from" class="from">from<b>&#8377;8,000</b></span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">03</span><div><h3 data-nx-f="h3">Haldi and mehendi setup</h3><p data-nx-f="p">Yellow and orange drapes, marigold strings, a low seat for the bride, brass lamps and a photo corner.</p></div><span data-nx-f="from" class="from">from<b>&#8377;12,000</b></span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">04</span><div><h3 data-nx-f="h3">Birthday and annaprashan balloons</h3><p data-nx-f="p">Balloon arch, number balloons, name board and a cake table. Set up in two hours, taken down the same night.</p></div><span data-nx-f="from" class="from">from<b>&#8377;3,500</b></span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">05</span><div><h3 data-nx-f="h3">Lights</h3><p data-nx-f="p">Fairy lights, chandeliers, pillar lights and the lighting of your whole building front for the wedding week.</p></div><span data-nx-f="from" class="from">from<b>&#8377;6,000</b></span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">06</span><div><h3 data-nx-f="h3">Pandal, chairs and sound on hire</h3><p data-nx-f="p">Waterproof pandal, carpet, chairs with covers, tables, generator and a sound system with a man on it all evening.</p></div><span data-nx-f="from" class="from">see<b>rates below</b></span></li>
         </ul>
       </div>
       <aside class="svc__card reveal" aria-label="Enquiry">
-        <h3>Tell us the date.</h3>
-        <p>Three things and we can give you a price the same day.</p>
-        <ol>
-          <li>The date and the venue (hall, rooftop, lawn or home)</li>
-          <li>The event: wedding, reception, haldi, birthday, annaprashan</li>
-          <li>Roughly how many guests and your budget</li>
+        <h3 data-nx="services.h3">Tell us the date.</h3>
+        <p data-nx="services.p2">Three things and we can give you a price the same day.</p>
+        <ol data-nx-list="services.list">
+          <li data-nx-f="li" data-nx-item>The date and the venue (hall, rooftop, lawn or home)</li>
+          <li data-nx-f="li" data-nx-item>The event: wedding, reception, haldi, birthday, annaprashan</li>
+          <li data-nx-f="li" data-nx-item>Roughly how many guests and your budget</li>
         </ol>
         <div class="cta">
           <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Send on WhatsApp</a>
@@ -418,64 +426,64 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="packages">
+<section data-nx-section="packages" class="section" id="packages">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Packages by event</span>
-      <h2 class="h2">Fixed packages, fixed prices.</h2>
+      <span data-nx="packages.kicker" class="kicker">Packages by event</span>
+      <h2 data-nx="packages.h2" class="h2">Fixed packages, fixed prices.</h2>
       <div class="rule" aria-hidden="true"></div>
-      <p class="lead">Pick one and change what you like. Prices include setting up, taking down and carrying away. Flowers are fresh, not artificial, unless you ask.</p>
+      <p data-nx="packages.p" class="lead">Pick one and change what you like. Prices include setting up, taking down and carrying away. Flowers are fresh, not artificial, unless you ask.</p>
     </div>
     <ul class="packs">
       <li class="reveal">
-        <span class="tag">Birthday</span>
-        <h3>Balloon party</h3>
-        <p class="amt">&#8377;6,500 <small>for a flat or small hall</small></p>
-        <ul>
-          <li>Balloon arch in two colours</li>
-          <li>Number or age foil balloon</li>
-          <li>Name board on the wall</li>
-          <li>Cake table with cloth and fairy lights</li>
-          <li>Set up two hours before, cleared the same night</li>
+        <span data-nx="packages.tag" class="tag">Birthday</span>
+        <h3 data-nx="packages.h3">Balloon party</h3>
+        <p data-nx="packages.amt" class="amt">&#8377;6,500 <small>for a flat or small hall</small></p>
+        <ul data-nx-list="packages.list">
+          <li data-nx-f="li" data-nx-item>Balloon arch in two colours</li>
+          <li data-nx-f="li" data-nx-item>Number or age foil balloon</li>
+          <li data-nx-f="li" data-nx-item>Name board on the wall</li>
+          <li data-nx-f="li" data-nx-item>Cake table with cloth and fairy lights</li>
+          <li data-nx-f="li" data-nx-item>Set up two hours before, cleared the same night</li>
         </ul>
         <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book this</a>
       </li>
       <li class="reveal">
-        <span class="tag">Haldi and mehendi</span>
-        <h3>Marigold morning</h3>
-        <p class="amt">&#8377;18,000 <small>rooftop or lawn</small></p>
-        <ul>
-          <li>Yellow and orange drape canopy</li>
-          <li>Marigold strings and a floral swing or low seat</li>
-          <li>Brass lamps and a photo corner</li>
-          <li>Floor seating with cushions for 30</li>
-          <li>Small sound box with a mic</li>
+        <span data-nx="packages.tag2" class="tag">Haldi and mehendi</span>
+        <h3 data-nx="packages.h32">Marigold morning</h3>
+        <p data-nx="packages.amt2" class="amt">&#8377;18,000 <small>rooftop or lawn</small></p>
+        <ul data-nx-list="packages.list2">
+          <li data-nx-f="li" data-nx-item>Yellow and orange drape canopy</li>
+          <li data-nx-f="li" data-nx-item>Marigold strings and a floral swing or low seat</li>
+          <li data-nx-f="li" data-nx-item>Brass lamps and a photo corner</li>
+          <li data-nx-f="li" data-nx-item>Floor seating with cushions for 30</li>
+          <li data-nx-f="li" data-nx-item>Small sound box with a mic</li>
         </ul>
         <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book this</a>
       </li>
       <li class="reveal is-rec">
-        <span class="tag">Most booked</span>
-        <h3>Reception stage</h3>
-        <p class="amt">&#8377;65,000 <small>for a hall up to 300 guests</small></p>
-        <ul>
-          <li>Fresh flower stage, 20 ft wide, with backdrop</li>
-          <li>Two-seater sofa and side pillars</li>
-          <li>Flower entrance gate and staircase</li>
-          <li>Hall lighting with chandeliers</li>
-          <li>Name board and a photo corner</li>
+        <span data-nx="packages.tag3" class="tag">Most booked</span>
+        <h3 data-nx="packages.h33">Reception stage</h3>
+        <p data-nx="packages.amt3" class="amt">&#8377;65,000 <small>for a hall up to 300 guests</small></p>
+        <ul data-nx-list="packages.list3">
+          <li data-nx-f="li" data-nx-item>Fresh flower stage, 20 ft wide, with backdrop</li>
+          <li data-nx-f="li" data-nx-item>Two-seater sofa and side pillars</li>
+          <li data-nx-f="li" data-nx-item>Flower entrance gate and staircase</li>
+          <li data-nx-f="li" data-nx-item>Hall lighting with chandeliers</li>
+          <li data-nx-f="li" data-nx-item>Name board and a photo corner</li>
         </ul>
         <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book this</a>
       </li>
       <li class="reveal">
-        <span class="tag">Full wedding</span>
-        <h3>Three days, one team</h3>
-        <p class="amt">&#8377;1,20,000 <small>haldi, biye and bou bhat</small></p>
-        <ul>
-          <li>Haldi setup on day one</li>
-          <li>Chhadnatola or mandap and stage on the wedding day</li>
-          <li>Reception stage and gate for bou bhat</li>
-          <li>House-front lighting for all three days</li>
-          <li>Pandal, 200 chairs and sound included</li>
+        <span data-nx="packages.tag4" class="tag">Full wedding</span>
+        <h3 data-nx="packages.h34">Three days, one team</h3>
+        <p data-nx="packages.amt4" class="amt">&#8377;1,20,000 <small>haldi, biye and bou bhat</small></p>
+        <ul data-nx-list="packages.list4">
+          <li data-nx-f="li" data-nx-item>Haldi setup on day one</li>
+          <li data-nx-f="li" data-nx-item>Chhadnatola or mandap and stage on the wedding day</li>
+          <li data-nx-f="li" data-nx-item>Reception stage and gate for bou bhat</li>
+          <li data-nx-f="li" data-nx-item>House-front lighting for all three days</li>
+          <li data-nx-f="li" data-nx-item>Pandal, 200 chairs and sound included</li>
         </ul>
         <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book this</a>
       </li>
@@ -483,63 +491,63 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--deep" id="hire">
+<section data-nx-section="hire" class="section section--deep" id="hire">
   <div class="wrap">
     <div class="hire">
       <div>
         <div class="head reveal">
-          <span class="kicker">On hire</span>
-          <h2 class="h2">Tent house rates.</h2>
+          <span data-nx="hire.kicker" class="kicker">On hire</span>
+          <h2 data-nx="hire.h2" class="h2">Tent house rates.</h2>
           <div class="rule" aria-hidden="true"></div>
-          <p class="lead">Rates are per day. Delivery within 8 km of Tollygunge is included. Our men set it up and take it down.</p>
+          <p data-nx="hire.p" class="lead">Rates are per day. Delivery within 8 km of Tollygunge is included. Our men set it up and take it down.</p>
         </div>
         <table class="rates reveal">
-          <thead><tr><th scope="col">Item</th><th scope="col">Unit</th><th scope="col">Rate</th></tr></thead>
-          <tbody>
-            <tr><td>Pandal, waterproof<small>Frame, cloth ceiling, side curtains</small></td><td>per sq ft</td><td><span class="amt">&#8377;22</span></td></tr>
-            <tr><td>Pandal, open frame with decorative ceiling</td><td>per sq ft</td><td><span class="amt">&#8377;35</span></td></tr>
-            <tr><td>Plastic chair with white cover</td><td>per chair</td><td><span class="amt">&#8377;18</span></td></tr>
-            <tr><td>Banquet chair with cover and bow</td><td>per chair</td><td><span class="amt">&#8377;45</span></td></tr>
-            <tr><td>Round table with cloth, seats 8</td><td>per table</td><td><span class="amt">&#8377;250</span></td></tr>
-            <tr><td>Carpet, red or green</td><td>per sq ft</td><td><span class="amt">&#8377;6</span></td></tr>
-            <tr><td>Fairy lights<small>LED string, 10 metres</small></td><td>per string</td><td><span class="amt">&#8377;120</span></td></tr>
-            <tr><td>Sound system<small>Two tops, two bass, two mics, one operator</small></td><td>per day</td><td><span class="amt">&#8377;4,500</span></td></tr>
-            <tr><td>Generator, 25 kVA with diesel</td><td>per day</td><td><span class="amt">&#8377;6,000</span></td></tr>
-            <tr><td>Pedestal fan or cooler</td><td>per piece</td><td><span class="amt">&#8377;150 / &#8377;600</span></td></tr>
+          <thead><tr><th data-nx="hire.th" scope="col">Item</th><th data-nx="hire.th2" scope="col">Unit</th><th data-nx="hire.th3" scope="col">Rate</th></tr></thead>
+          <tbody data-nx-list="hire.list">
+            <tr data-nx-item><td data-nx-f="td">Pandal, waterproof<small>Frame, cloth ceiling, side curtains</small></td><td data-nx-f="td2">per sq ft</td><td><span data-nx-f="amt" class="amt">&#8377;22</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Pandal, open frame with decorative ceiling</td><td data-nx-f="td2">per sq ft</td><td><span data-nx-f="amt" class="amt">&#8377;35</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Plastic chair with white cover</td><td data-nx-f="td2">per chair</td><td><span data-nx-f="amt" class="amt">&#8377;18</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Banquet chair with cover and bow</td><td data-nx-f="td2">per chair</td><td><span data-nx-f="amt" class="amt">&#8377;45</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Round table with cloth, seats 8</td><td data-nx-f="td2">per table</td><td><span data-nx-f="amt" class="amt">&#8377;250</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Carpet, red or green</td><td data-nx-f="td2">per sq ft</td><td><span data-nx-f="amt" class="amt">&#8377;6</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Fairy lights<small>LED string, 10 metres</small></td><td data-nx-f="td2">per string</td><td><span data-nx-f="amt" class="amt">&#8377;120</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Sound system<small>Two tops, two bass, two mics, one operator</small></td><td data-nx-f="td2">per day</td><td><span data-nx-f="amt" class="amt">&#8377;4,500</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Generator, 25 kVA with diesel</td><td data-nx-f="td2">per day</td><td><span data-nx-f="amt" class="amt">&#8377;6,000</span></td></tr>
+            <tr data-nx-item><td data-nx-f="td">Pedestal fan or cooler</td><td data-nx-f="td2">per piece</td><td><span data-nx-f="amt" class="amt">&#8377;150 / &#8377;600</span></td></tr>
           </tbody>
         </table>
-        <p class="hire__note">A 1,000 sq ft pandal with 150 covered chairs and sound comes to about &#8377;29,000 for one day. Tell us the area and we will send the exact figure.</p>
+        <p data-nx="hire.hire-note" class="hire__note">A 1,000 sq ft pandal with 150 covered chairs and sound comes to about &#8377;29,000 for one day. Tell us the area and we will send the exact figure.</p>
       </div>
-      <div class="hire__photos reveal">
-        <img src="/demo/event-decorator/images/outdoor-tent.jpg" width="1200" height="800" alt="Rows of chairs with white covers under a tent before a ceremony" loading="lazy">
-        <img src="/demo/event-decorator/images/wedding-lights.jpg" width="1200" height="1800" alt="Printed fabric lampshades hanging under a pink pandal ceiling" loading="lazy">
-        <img src="/demo/event-decorator/images/marigold-wall.jpg" width="1200" height="1800" alt="A yellow flower wall for a haldi photo corner" loading="lazy">
+      <div data-nx-list="hire.hire-photos" class="hire__photos reveal">
+        <img data-nx-f="photo" data-nx-item src="/demo/event-decorator/images/outdoor-tent.jpg" width="1200" height="800" alt="Rows of chairs with white covers under a tent before a ceremony" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/event-decorator/images/wedding-lights.jpg" width="1200" height="1800" alt="Printed fabric lampshades hanging under a pink pandal ceiling" loading="lazy">
+        <img data-nx-f="photo" data-nx-item src="/demo/event-decorator/images/marigold-wall.jpg" width="1200" height="1800" alt="A yellow flower wall for a haldi photo corner" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--rose" id="how">
+<section data-nx-section="how" class="section section--rose" id="how">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">How it works</span>
-      <h2 class="h2">From your first message to the last chair going back on the van.</h2>
+      <span data-nx="how.kicker" class="kicker">How it works</span>
+      <h2 data-nx="how.h2" class="h2">From your first message to the last chair going back on the van.</h2>
       <div class="rule" aria-hidden="true"></div>
     </div>
-    <ol class="tl reveal">
-      <li><span class="when">30 days before</span><h3>Visit and quotation</h3><p>We see the venue, measure the stage and gate, and send a written list with prices. You pay nothing at this stage.</p></li>
-      <li><span class="when">7 days before</span><h3>Booking and advance</h3><p>Pick the flowers and colours from our photo book. 50% advance confirms the date. We buy flowers to order, so this is the last day to change the design.</p></li>
-      <li><span class="when">The day before</span><h3>Pandal and lights go up</h3><p>Our team builds the pandal, lays carpet, hangs lights and tests the sound. You check everything the night before.</p></li>
-      <li><span class="when">The day</span><h3>Flowers at dawn, cleared by night</h3><p>Fresh flowers arrive from Mullick Ghat before 6 am and the stage is ready by 11. After the event we take everything away. The balance is paid that evening.</p></li>
+    <ol data-nx-list="how.tl" class="tl reveal">
+      <li data-nx-item><span data-nx-f="when" class="when">30 days before</span><h3 data-nx-f="h3">Visit and quotation</h3><p data-nx-f="p">We see the venue, measure the stage and gate, and send a written list with prices. You pay nothing at this stage.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">7 days before</span><h3 data-nx-f="h3">Booking and advance</h3><p data-nx-f="p">Pick the flowers and colours from our photo book. 50% advance confirms the date. We buy flowers to order, so this is the last day to change the design.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">The day before</span><h3 data-nx-f="h3">Pandal and lights go up</h3><p data-nx-f="p">Our team builds the pandal, lays carpet, hangs lights and tests the sound. You check everything the night before.</p></li>
+      <li data-nx-item><span data-nx-f="when" class="when">The day</span><h3 data-nx-f="h3">Flowers at dawn, cleared by night</h3><p data-nx-f="p">Fresh flowers arrive from Mullick Ghat before 6 am and the stage is ready by 11. After the event we take everything away. The balance is paid that evening.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section" id="more">
+<section data-nx-section="more" class="section" id="more">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">More from our book</span>
-      <h2 class="h2">Haldi, biye and bou bhat.</h2>
+      <span data-nx="more.kicker" class="kicker">More from our book</span>
+      <h2 data-nx="more.h2" class="h2">Haldi, biye and bou bhat.</h2>
       <div class="rule" aria-hidden="true"></div>
     </div>
     <ul class="strip reveal">
@@ -549,51 +557,51 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <li><figure style="margin:0"><img src="/demo/event-decorator/images/balloon-setup.jpg" width="1200" height="1800" alt="Gold balloon letter and a small cake table for a birthday" loading="lazy"><figcaption>First birthday, Jadavpur flat</figcaption></figure></li>
       <li><figure style="margin:0"><img src="/demo/event-decorator/images/stage-flowers.jpg" width="1200" height="1799" alt="Reception stage with tall flower stands" loading="lazy"><figcaption>Bou bhat stage, New Alipore</figcaption></figure></li>
     </ul>
-    <p class="strip__hint">Swipe or scroll sideways for more</p>
+    <p data-nx="more.strip-hint" class="strip__hint">Swipe or scroll sideways for more</p>
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What families say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What families say</span>
+      <h2 data-nx="section-9.h2" class="h2">In their own words.</h2>
       <div class="rule" aria-hidden="true"></div>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>They came the night before and finished the whole pandal while we slept. In the morning the flowers were up before the purohit arrived. Nothing to chase.</p><footer>Rituparna <span>&middot; daughter&rsquo;s wedding, Garia</span></footer></blockquote>
-      <blockquote class="reveal"><p>We only had a 600 sq ft rooftop for the haldi. They made it look like a garden with marigolds and cloth. Everyone asked who did it.</p><footer>Debashis <span>&middot; haldi, Behala</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">They came the night before and finished the whole pandal while we slept. In the morning the flowers were up before the purohit arrived. Nothing to chase.</p><footer>Rituparna <span data-nx-f="span">&middot; daughter&rsquo;s wedding, Garia</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">We only had a 600 sq ft rooftop for the haldi. They made it look like a garden with marigolds and cloth. Everyone asked who did it.</p><footer>Debashis <span data-nx-f="span">&middot; haldi, Behala</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the office</span>
-      <h2 class="h2">On Deshapran Sasmal Road, near Tollygunge metro.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the office</span>
+      <h2 data-nx="visit.h2" class="h2">On Deshapran Sasmal Road, near Tollygunge metro.</h2>
       <div class="rule" aria-hidden="true"></div>
-      <p class="lead">Come and see the photo book, cloth samples and chair covers. The godown is behind the office, so you can see the actual pandal frames and sound boxes.</p>
+      <p data-nx="visit.p" class="lead">Come and see the photo book, cloth samples and chair covers. The godown is behind the office, so you can see the actual pandal frames and sound boxes.</p>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>14B Deshapran Sasmal Road, Tollygunge<br>Kolkata 700033</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=14B%20Deshapran%20Sasmal%20Road%2C%20Tollygunge%2C%20Kolkata%20700033" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p2">14B Deshapran Sasmal Road, Tollygunge<br>Kolkata 700033</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=14B%20Deshapran%20Sasmal%20Road%2C%20Tollygunge%2C%20Kolkata%20700033" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>9:00 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 6:00 pm</td></tr>
-              <tr><td>Event days</td><td>Team on site from 5 am</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">9:00 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 6:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Event days</td><td data-nx-f="td2">Team on site from 5 am</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp photos of your venue and we reply with a price the same day.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p3" style="font-size:.88rem;color:var(--muted)">WhatsApp photos of your venue and we reply with a price the same day.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--rose" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -607,10 +615,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Dates in the wedding season go first.</h2>
-    <p>Send us the date today. If it is free, we hold it for three days without any advance while you decide.</p>
+    <h2 data-nx="book.h2">Dates in the wedding season go first.</h2>
+    <p data-nx="book.p">Send us the date today. If it is free, we hold it for three days without any advance while you decide.</p>
     <div class="final__cta">
       <a class="btn btn--brass" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sanyal%20Decorators%20%26%20Tent%20House%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -625,32 +633,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" fill="#B8893A"/><rect x="5" y="5" width="34" height="34" fill="none" stroke="#FBF6EE" stroke-width="1"/><path d="M22 10 8 34h28L22 10Z" fill="none" stroke="#FBF6EE" stroke-width="1.5"/><path d="M14 34c2-4 4-6 8-6s6 2 8 6" fill="none" stroke="#FBF6EE" stroke-width="1.5"/><circle cx="22" cy="19" r="2.2" fill="#FBF6EE"/></svg>
-          <span><b>Sanyal Decorators &amp; Tent House</b><small>Tollygunge &middot; since 1998</small></span>
+          <span><b data-nx="footer.b">Sanyal Decorators &amp; Tent House</b><small data-nx="footer.small">Tollygunge &middot; since 1998</small></span>
         </a>
-        <p>Wedding and event decoration, pandal, chairs, lights and sound on hire across South Kolkata.</p>
+        <p data-nx="footer.p">Wedding and event decoration, pandal, chairs, lights and sound on hire across South Kolkata.</p>
       </div>
       <div>
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="#work">Our work</a></li>
-          <li><a href="#services">What we do</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#hire">Tent house rates</a></li>
-          <li><a href="#how">How it works</a></li>
+        <h4 data-nx="footer.h4">Pages</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#work">Our work</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#services">What we do</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#packages">Packages</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#hire">Tent house rates</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#how">How it works</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>14B Deshapran Sasmal Road, Tollygunge, Kolkata 700033</li>
+          <li data-nx="footer.li">14B Deshapran Sasmal Road, Tollygunge, Kolkata 700033</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 9 am &ndash; 9 pm &middot; Sun 10 am &ndash; 6 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 9 am &ndash; 9 pm &middot; Sun 10 am &ndash; 6 pm</li>
         </ul>
       </div>
     </div>
@@ -692,5 +700,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

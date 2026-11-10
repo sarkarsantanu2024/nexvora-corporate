@@ -282,6 +282,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);font-size:.86rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:960px){.lenses{grid-template-columns:minmax(0,1fr)}.lenses>*{min-width:0}}
+@media (max-width:760px){
+  .hero__free{font-size:.76rem}
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -314,24 +321,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="optical">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nayan%20Opticals%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Nayan Opticals, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#0B3FC2"/><path d="M6 22c4-7 10-10 16-10s12 3 16 10c-4 7-10 10-16 10S10 29 6 22Z" fill="none" stroke="#FFFFFF" stroke-width="2.4"/><circle cx="22" cy="22" r="6" fill="#C8F135"/><circle cx="22" cy="22" r="2.4" fill="#0B3FC2"/></svg>
-      <span><b>Nayan Opticals</b><small>Gariahat &middot; since 2004</small></span>
+      <span><b data-nx="header.b">Nayan Opticals</b><small data-nx="header.small">Gariahat &middot; since 2004</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -354,95 +359,95 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__text">
-      <p class="hero__free"><span></span>Eye test is free. No purchase needed.</p>
-      <h1>See clearly again. <em>Glasses in 2 days.</em></h1>
-      <p>Computerised eye test by a qualified optometrist, 400 frames to try on, and lenses fitted in our own lab behind the shop. Walk in any day, or send a message and we will keep a slot for you.</p>
+      <p data-nx="top.hero-free" class="hero__free"><span></span>Eye test is free. No purchase needed.</p>
+      <h1 data-nx="top.h1">See clearly again. <em>Glasses in 2 days.</em></h1>
+      <p data-nx="top.p">Computerised eye test by a qualified optometrist, 400 frames to try on, and lenses fitted in our own lab behind the shop. Walk in any day, or send a message and we will keep a slot for you.</p>
       <div class="hero__cta">
         <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nayan%20Opticals%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a free eye test
         </a>
-        <a class="btn btn--ghost" href="#lenses">See lens prices</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#lenses">See lens prices</a>
       </div>
     </div>
     <div class="hero__band">
-      <img src="/demo/optical/images/hero.jpg" width="1200" height="900" alt="Optometrist adjusting a trial frame on a young woman during an eye test" fetchpriority="high">
-      <ul class="hero__chips">
-        <li><b>Free</b><span>computerised eye test</span></li>
-        <li><b>2 days</b><span>from test to collection</span></li>
-        <li><b>&#8377;650</b><span>frames start here</span></li>
+      <img data-nx="top.photo" src="/demo/optical/images/hero.jpg" width="1200" height="900" alt="Optometrist adjusting a trial frame on a young woman during an eye test" fetchpriority="high">
+      <ul data-nx-list="top.hero-chips" class="hero__chips">
+        <li data-nx-item><b data-nx-f="b">Free</b><span data-nx-f="span">computerised eye test</span></li>
+        <li data-nx-item><b data-nx-f="b">2 days</b><span data-nx-f="span">from test to collection</span></li>
+        <li data-nx-item><b data-nx-f="b">&#8377;650</b><span data-nx-f="span">frames start here</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="test">
+<section data-nx-section="test" class="section section--paper" id="test">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Free eye test</span>
-      <h2 class="h2">What happens in the test, and how long it takes.</h2>
-      <p class="lead" style="margin-top:1rem">About 15 to 20 minutes. No charge, whether you buy glasses or not. Bring your old glasses if you have them.</p>
+      <span data-nx="test.kicker" class="kicker">Free eye test</span>
+      <h2 data-nx="test.h2" class="h2">What happens in the test, and how long it takes.</h2>
+      <p data-nx="test.p" class="lead" style="margin-top:1rem">About 15 to 20 minutes. No charge, whether you buy glasses or not. Bring your old glasses if you have them.</p>
     </div>
-    <ol class="process reveal">
-      <li><h3>Auto-refractor reading</h3><p>You look into a machine for a few seconds. It gives a first estimate of your power for each eye.</p></li>
-      <li><h3>Chart reading with trial lenses</h3><p>The optometrist puts a trial frame on you and swaps lenses until the smallest line on the chart is sharp. This is the part that takes the time, and the part that matters.</p></li>
-      <li><h3>Near vision and reading check</h3><p>For anyone over 40 we check reading distance too, and explain whether bifocal or progressive makes more sense for you.</p></li>
-      <li><h3>Written prescription</h3><p>You get the power on paper, with the date. It is yours to keep. You can buy here or anywhere else.</p></li>
+    <ol data-nx-list="test.process" class="process reveal">
+      <li data-nx-item><h3 data-nx-f="h3">Auto-refractor reading</h3><p data-nx-f="p">You look into a machine for a few seconds. It gives a first estimate of your power for each eye.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Chart reading with trial lenses</h3><p data-nx-f="p">The optometrist puts a trial frame on you and swaps lenses until the smallest line on the chart is sharp. This is the part that takes the time, and the part that matters.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Near vision and reading check</h3><p data-nx-f="p">For anyone over 40 we check reading distance too, and explain whether bifocal or progressive makes more sense for you.</p></li>
+      <li data-nx-item><h3 data-nx-f="h3">Written prescription</h3><p data-nx-f="p">You get the power on paper, with the date. It is yours to keep. You can buy here or anywhere else.</p></li>
     </ol>
     <aside class="process__aside reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-      <div><b>Tested by Priyanka Saha, B.Optom</b><span>Optometrist at the shop since 2013. Available every day except Thursday. For eye diseases or surgery we refer you to an eye doctor; we do not treat.</span></div>
+      <div><b data-nx="test.b">Tested by Priyanka Saha, B.Optom</b><span data-nx="test.span">Optometrist at the shop since 2013. Available every day except Thursday. For eye diseases or surgery we refer you to an eye doctor; we do not treat.</span></div>
     </aside>
   </div>
 </section>
 
-<section class="section" id="lenses">
+<section data-nx-section="lenses" class="section" id="lenses">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Lenses explained</span>
-      <h2 class="h2">Three kinds of lens. Here is which one you need.</h2>
-      <p class="lead" style="margin-top:1rem">Most confusion in an optical shop is about lenses. This is the plain version. Prices are per pair, fitted, with a one-year scratch warranty.</p>
+      <span data-nx="lenses.kicker" class="kicker">Lenses explained</span>
+      <h2 data-nx="lenses.h2" class="h2">Three kinds of lens. Here is which one you need.</h2>
+      <p data-nx="lenses.p" class="lead" style="margin-top:1rem">Most confusion in an optical shop is about lenses. This is the plain version. Prices are per pair, fitted, with a one-year scratch warranty.</p>
     </div>
     <div class="lenses">
       <div class="reveal">
         <div class="cmp">
           <table>
-            <thead><tr><th scope="col">Lens type</th><th scope="col">Basic</th><th scope="col">Anti-glare</th><th scope="col">Blue-cut</th></tr></thead>
-            <tbody>
-              <tr><td>Single vision<small>Up to power 4</small></td><td>&#8377;600</td><td>&#8377;950</td><td>&#8377;1,200</td></tr>
-              <tr><td>Single vision, thin<small>Power 4 to 8, high index 1.67</small></td><td>&#8377;1,800</td><td>&#8377;2,200</td><td>&#8377;2,600</td></tr>
-              <tr><td>Bifocal<small>Kryptok, visible line</small></td><td>&#8377;1,400</td><td>&#8377;1,900</td><td>&#8377;2,300</td></tr>
-              <tr><td>Progressive, standard<small>No line, 30-day change guarantee</small></td><td>&#8377;3,200</td><td>&#8377;3,800</td><td>&#8377;4,400</td></tr>
-              <tr><td>Progressive, wide field<small>Bigger reading area, easier to adjust</small></td><td>&#8377;5,500</td><td>&#8377;6,200</td><td>&#8377;6,900</td></tr>
-              <tr><td>Kids&rsquo; polycarbonate<small>Unbreakable, up to age 14</small></td><td>&#8377;900</td><td>&#8377;1,300</td><td>&#8377;1,500</td></tr>
-              <tr><td>Photochromic add-on<small>Turns dark in sunlight, on any lens above</small></td><td>+ &#8377;1,200</td><td>+ &#8377;1,200</td><td>+ &#8377;1,200</td></tr>
+            <thead><tr><th data-nx="lenses.th" scope="col">Lens type</th><th data-nx="lenses.th2" scope="col">Basic</th><th data-nx="lenses.th3" scope="col">Anti-glare</th><th data-nx="lenses.th4" scope="col">Blue-cut</th></tr></thead>
+            <tbody data-nx-list="lenses.list">
+              <tr data-nx-item><td data-nx-f="td">Single vision<small>Up to power 4</small></td><td data-nx-f="td2">&#8377;600</td><td data-nx-f="td3">&#8377;950</td><td data-nx-f="td4">&#8377;1,200</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Single vision, thin<small>Power 4 to 8, high index 1.67</small></td><td data-nx-f="td2">&#8377;1,800</td><td data-nx-f="td3">&#8377;2,200</td><td data-nx-f="td4">&#8377;2,600</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Bifocal<small>Kryptok, visible line</small></td><td data-nx-f="td2">&#8377;1,400</td><td data-nx-f="td3">&#8377;1,900</td><td data-nx-f="td4">&#8377;2,300</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Progressive, standard<small>No line, 30-day change guarantee</small></td><td data-nx-f="td2">&#8377;3,200</td><td data-nx-f="td3">&#8377;3,800</td><td data-nx-f="td4">&#8377;4,400</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Progressive, wide field<small>Bigger reading area, easier to adjust</small></td><td data-nx-f="td2">&#8377;5,500</td><td data-nx-f="td3">&#8377;6,200</td><td data-nx-f="td4">&#8377;6,900</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Kids&rsquo; polycarbonate<small>Unbreakable, up to age 14</small></td><td data-nx-f="td2">&#8377;900</td><td data-nx-f="td3">&#8377;1,300</td><td data-nx-f="td4">&#8377;1,500</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Photochromic add-on<small>Turns dark in sunlight, on any lens above</small></td><td data-nx-f="td2">+ &#8377;1,200</td><td data-nx-f="td3">+ &#8377;1,200</td><td data-nx-f="td4">+ &#8377;1,200</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="cmp__note">Cylinder power up to 2 included. Higher cylinder or prism is quoted on the spot. Prices as of January 2026. Swipe the table sideways on a phone.</p>
+        <p data-nx="lenses.cmp-note" class="cmp__note">Cylinder power up to 2 included. Higher cylinder or prism is quoted on the spot. Prices as of January 2026. Swipe the table sideways on a phone.</p>
       </div>
       <div class="helper reveal">
-        <h3>Which lens is for me?</h3>
-        <ul>
-          <li><b>Single vision</b><p>One power across the whole lens. For distance only (driving, TV, the board in class) or for reading only. Most people under 40 need this.</p></li>
-          <li><b>Bifocal</b><p>Distance on top, a visible half-moon for reading at the bottom. Cheaper than progressive and easy to get used to. The line shows.</p></li>
-          <li><b>Progressive</b><p>Distance, computer and reading in one lens with no line. Takes a week to get used to. We give a 30-day change guarantee if you cannot adjust.</p></li>
+        <h3 data-nx="lenses.h3">Which lens is for me?</h3>
+        <ul data-nx-list="lenses.list2">
+          <li data-nx-item><b data-nx-f="b">Single vision</b><p data-nx-f="p">One power across the whole lens. For distance only (driving, TV, the board in class) or for reading only. Most people under 40 need this.</p></li>
+          <li data-nx-item><b data-nx-f="b">Bifocal</b><p data-nx-f="p">Distance on top, a visible half-moon for reading at the bottom. Cheaper than progressive and easy to get used to. The line shows.</p></li>
+          <li data-nx-item><b data-nx-f="b">Progressive</b><p data-nx-f="p">Distance, computer and reading in one lens with no line. Takes a week to get used to. We give a 30-day change guarantee if you cannot adjust.</p></li>
         </ul>
-        <p class="helper__extra"><strong>Coatings:</strong> anti-glare cuts reflections at night and on screens. Blue-cut is for computer use. Thin (high index) is for powers above 4 so the lens does not look thick.</p>
+        <p data-nx="lenses.helper-extra" class="helper__extra"><strong>Coatings:</strong> anti-glare cuts reflections at night and on screens. Blue-cut is for computer use. Thin (high index) is for powers above 4 so the lens does not look thick.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="frames">
+<section data-nx-section="frames" class="section section--paper" id="frames">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Frames</span>
-      <h2 class="h2">400 frames on the wall. Try as many as you like.</h2>
-      <p class="lead" style="margin-top:1rem">Frame prices only; lens prices are in the table above. Every frame carries a one-year warranty on hinges and coating.</p>
+      <span data-nx="frames.kicker" class="kicker">Frames</span>
+      <h2 data-nx="frames.h2" class="h2">400 frames on the wall. Try as many as you like.</h2>
+      <p data-nx="frames.p" class="lead" style="margin-top:1rem">Frame prices only; lens prices are in the table above. Every frame carries a one-year warranty on hinges and coating.</p>
       <p class="strip__hint" style="margin-top:1rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Scroll sideways to see all six kinds.</p>
     </div>
     <ul class="strip reveal">
@@ -456,32 +461,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="contacts">
+<section data-nx-section="contacts" class="section" id="contacts">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Contact lenses</span>
-      <h2 class="h2">Contact lenses, with a free first fitting.</h2>
-      <p class="lead" style="margin-top:1rem">First time wearing lenses? We sit with you for half an hour and teach you to put them in and take them out. Come back any time if it is not working.</p>
+      <span data-nx="contacts.kicker" class="kicker">Contact lenses</span>
+      <h2 data-nx="contacts.h2" class="h2">Contact lenses, with a free first fitting.</h2>
+      <p data-nx="contacts.p" class="lead" style="margin-top:1rem">First time wearing lenses? We sit with you for half an hour and teach you to put them in and take them out. Come back any time if it is not working.</p>
     </div>
     <div class="contacts">
       <div class="reveal">
-        <ul class="contacts__list">
-          <li><div><b>Daily disposable</b><span>Wear once, throw away. No solution needed. Best for occasional use and for sport.</span></div><span class="amt">&#8377;900 / box of 30</span></li>
-          <li><div><b>Monthly</b><span>One pair a month, cleaned every night. The cheapest way to wear lenses daily.</span></div><span class="amt">&#8377;650 / box of 3</span></li>
-          <li><div><b>Toric (for cylinder power)</b><span>Monthly lenses for people with astigmatism.</span></div><span class="amt">&#8377;1,350 / box of 3</span></li>
-          <li><div><b>Coloured lenses</b><span>With or without power. Monthly. Grey, hazel, green, blue.</span></div><span class="amt">&#8377;850 / pair</span></li>
-          <li><div><b>Lens solution and case</b><span>360 ml bottle. Enough for about two months.</span></div><span class="amt">&#8377;320</span></li>
+        <ul data-nx-list="contacts.contacts-list" class="contacts__list">
+          <li data-nx-item><div><b data-nx-f="b">Daily disposable</b><span data-nx-f="span">Wear once, throw away. No solution needed. Best for occasional use and for sport.</span></div><span data-nx-f="amt" class="amt">&#8377;900 / box of 30</span></li>
+          <li data-nx-item><div><b data-nx-f="b">Monthly</b><span data-nx-f="span">One pair a month, cleaned every night. The cheapest way to wear lenses daily.</span></div><span data-nx-f="amt" class="amt">&#8377;650 / box of 3</span></li>
+          <li data-nx-item><div><b data-nx-f="b">Toric (for cylinder power)</b><span data-nx-f="span">Monthly lenses for people with astigmatism.</span></div><span data-nx-f="amt" class="amt">&#8377;1,350 / box of 3</span></li>
+          <li data-nx-item><div><b data-nx-f="b">Coloured lenses</b><span data-nx-f="span">With or without power. Monthly. Grey, hazel, green, blue.</span></div><span data-nx-f="amt" class="amt">&#8377;850 / pair</span></li>
+          <li data-nx-item><div><b data-nx-f="b">Lens solution and case</b><span data-nx-f="span">360 ml bottle. Enough for about two months.</span></div><span data-nx-f="amt" class="amt">&#8377;320</span></li>
         </ul>
         <figure class="contacts__photo">
-          <img src="/demo/optical/images/contact-lens-case.jpg" width="1200" height="1800" alt="Contact lens blister packs, a lens case, tweezers and a pair of glasses on a blue table" loading="lazy">
+          <img data-nx="contacts.photo" src="/demo/optical/images/contact-lens-case.jpg" width="1200" height="1800" alt="Contact lens blister packs, a lens case, tweezers and a pair of glasses on a blue table" loading="lazy">
         </figure>
       </div>
       <aside class="side reveal">
-        <h3>What to bring to the test</h3>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M3 14l2-6h3M21 14l-2-6h-3"/></svg><div><b>Your old glasses</b><span>We read the power off them so we can see how much has changed.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><b>Any prescription you have</b><span>From an eye hospital or another shop. Even an old one helps.</span></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Twenty minutes</b><span>That is the whole test. No appointment needed, but a message ahead saves you the wait.</span></div></li>
+        <h3 data-nx="contacts.h3">What to bring to the test</h3>
+        <ul data-nx-list="contacts.list">
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M3 14l2-6h3M21 14l-2-6h-3"/></svg><div><b data-nx-f="b">Your old glasses</b><span data-nx-f="span">We read the power off them so we can see how much has changed.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><div><b data-nx-f="b">Any prescription you have</b><span data-nx-f="span">From an eye hospital or another shop. Even an old one helps.</span></div></li>
+          <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b data-nx-f="b">Twenty minutes</b><span data-nx-f="span">That is the whole test. No appointment needed, but a message ahead saves you the wait.</span></div></li>
         </ul>
         <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nayan%20Opticals%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
       </aside>
@@ -489,116 +494,116 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--blue" id="delivery">
+<section data-nx-section="delivery" class="section section--blue" id="delivery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Glasses in 2 days</span>
-      <h2 class="h2">Test today, collect the day after tomorrow.</h2>
-      <p class="lead" style="margin-top:1rem">Our fitting lab is in the shop, so we do not wait for a courier. Single vision pairs are often ready the next day. We message you when it is done.</p>
+      <span data-nx="delivery.kicker" class="kicker">Glasses in 2 days</span>
+      <h2 data-nx="delivery.h2" class="h2">Test today, collect the day after tomorrow.</h2>
+      <p data-nx="delivery.p" class="lead" style="margin-top:1rem">Our fitting lab is in the shop, so we do not wait for a courier. Single vision pairs are often ready the next day. We message you when it is done.</p>
     </div>
-    <ul class="trio">
-      <li class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3><small>Day 1</small>Test</h3><p>Walk in or book a slot on WhatsApp. The free test takes 15 to 20 minutes. You leave with the power written down.</p></li>
-      <li class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M3 14l2-6h3M21 14l-2-6h-3"/></svg></div><h3><small>Day 1</small>Choose</h3><p>Pick a frame from the wall and a lens from the table above. We tell you the full price before you pay. Half is paid now, half on collection.</p></li>
-      <li class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7 9 18l-5-5"/><path d="M4 12V5a1 1 0 0 1 1-1h7"/></svg></div><h3><small>Day 3</small>Collect</h3><p>Come back in two days. We fit the frame to your face, check the power on the lensometer in front of you, and hand over the bill and warranty card.</p></li>
+    <ul data-nx-list="delivery.trio" class="trio">
+      <li data-nx-item class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3 data-nx-f="h3"><small>Day 1</small>Test</h3><p data-nx-f="p">Walk in or book a slot on WhatsApp. The free test takes 15 to 20 minutes. You leave with the power written down.</p></li>
+      <li data-nx-item class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="14" r="4"/><circle cx="17" cy="14" r="4"/><path d="M11 14h2M3 14l2-6h3M21 14l-2-6h-3"/></svg></div><h3 data-nx-f="h3"><small>Day 1</small>Choose</h3><p data-nx-f="p">Pick a frame from the wall and a lens from the table above. We tell you the full price before you pay. Half is paid now, half on collection.</p></li>
+      <li data-nx-item class="reveal"><div class="trio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7 9 18l-5-5"/><path d="M4 12V5a1 1 0 0 1 1-1h7"/></svg></div><h3 data-nx-f="h3"><small>Day 3</small>Collect</h3><p data-nx-f="p">Come back in two days. We fit the frame to your face, check the power on the lensometer in front of you, and hand over the bill and warranty card.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="story">
+<section data-nx-section="story" class="section" id="story">
   <div class="wrap">
     <div class="story">
       <div class="reveal">
-        <span class="kicker">About the shop</span>
-        <h2 class="h2">One shop, one family, twenty years on Rashbehari Avenue.</h2>
-        <p class="lead" style="margin-top:1rem">Nayan Opticals opened in 2004 with two display cases and one trial lens box. Today the shop has a computerised testing room, a lens fitting lab at the back, and three people who have been here more than ten years each.</p>
-        <p>We sell what fits your face and your power, not what costs the most. If a cheaper frame suits you better, we will say so. Every pair leaves with a printed bill, the lens warranty card, and a cloth and case.</p>
-        <ul class="story__facts">
-          <li><b>2004</b><span>Year we opened</span></li>
-          <li><b>Own lab</b><span>Lenses fitted here, not sent out</span></li>
-          <li><b>Free</b><span>Adjustment and nose pads, always</span></li>
+        <span data-nx="story.kicker" class="kicker">About the shop</span>
+        <h2 data-nx="story.h2" class="h2">One shop, one family, twenty years on Rashbehari Avenue.</h2>
+        <p data-nx="story.p" class="lead" style="margin-top:1rem">Nayan Opticals opened in 2004 with two display cases and one trial lens box. Today the shop has a computerised testing room, a lens fitting lab at the back, and three people who have been here more than ten years each.</p>
+        <p data-nx="story.p2">We sell what fits your face and your power, not what costs the most. If a cheaper frame suits you better, we will say so. Every pair leaves with a printed bill, the lens warranty card, and a cloth and case.</p>
+        <ul data-nx-list="story.story-facts" class="story__facts">
+          <li data-nx-item><b data-nx-f="b">2004</b><span data-nx-f="span">Year we opened</span></li>
+          <li data-nx-item><b data-nx-f="b">Own lab</b><span data-nx-f="span">Lenses fitted here, not sent out</span></li>
+          <li data-nx-item><b data-nx-f="b">Free</b><span data-nx-f="span">Adjustment and nose pads, always</span></li>
         </ul>
       </div>
       <figure class="story__photo reveal">
-        <img src="/demo/optical/images/woman-glasses-saree.jpg" width="1200" height="1800" alt="A young woman in a blue saree wearing round tortoise-shell glasses" loading="lazy">
+        <img data-nx="story.photo" src="/demo/optical/images/woman-glasses-saree.jpg" width="1200" height="1800" alt="A young woman in a blue saree wearing round tortoise-shell glasses" loading="lazy">
       </figure>
     </div>
   </div>
 </section>
 
-<section class="section section--paper" id="faq">
+<section data-nx-section="faq" class="section section--paper" id="faq">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Things people ask at the counter.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Things people ask at the counter.</h2>
     </div>
-    <ol class="faq">
-      <li class="reveal"><div><h3>Is the eye test really free?</h3><p>Yes. There is no charge and no condition to buy. If you only want the prescription on paper, that is fine.</p></div></li>
-      <li class="reveal"><div><h3>Can I bring my own frame and get new lenses?</h3><p>Yes, if the frame is in good condition. Lens prices are the same as the table. We check the frame first and tell you if it is too weak to hold new lenses.</p></div></li>
-      <li class="reveal"><div><h3>What if the new power does not feel right?</h3><p>Come back within 30 days. We re-test for free and change the lenses at no cost if the power was wrong. For progressives we give a 30-day change guarantee.</p></div></li>
-      <li class="reveal"><div><h3>Do you accept a prescription from an eye hospital?</h3><p>Yes. Bring the paper. If it is more than six months old we will suggest a fresh free test, but it is your choice.</p></div></li>
-      <li class="reveal"><div><h3>Do you repair glasses?</h3><p>Nose pads, screws, and small adjustments are free, even for glasses not bought here. Temple replacement and soldering of metal frames cost &#8377;150 to &#8377;400.</p></div></li>
-      <li class="reveal"><div><h3>Can I pay by UPI or card?</h3><p>Yes. UPI, cards and cash. For orders above &#8377;5,000 we can split the payment over three months on most credit cards.</p></div></li>
+    <ol data-nx-list="faq.faq" class="faq">
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">Is the eye test really free?</h3><p data-nx-f="p">Yes. There is no charge and no condition to buy. If you only want the prescription on paper, that is fine.</p></div></li>
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">Can I bring my own frame and get new lenses?</h3><p data-nx-f="p">Yes, if the frame is in good condition. Lens prices are the same as the table. We check the frame first and tell you if it is too weak to hold new lenses.</p></div></li>
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">What if the new power does not feel right?</h3><p data-nx-f="p">Come back within 30 days. We re-test for free and change the lenses at no cost if the power was wrong. For progressives we give a 30-day change guarantee.</p></div></li>
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">Do you accept a prescription from an eye hospital?</h3><p data-nx-f="p">Yes. Bring the paper. If it is more than six months old we will suggest a fresh free test, but it is your choice.</p></div></li>
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">Do you repair glasses?</h3><p data-nx-f="p">Nose pads, screws, and small adjustments are free, even for glasses not bought here. Temple replacement and soldering of metal frames cost &#8377;150 to &#8377;400.</p></div></li>
+      <li data-nx-item class="reveal"><div><h3 data-nx-f="h3">Can I pay by UPI or card?</h3><p data-nx-f="p">Yes. UPI, cards and cash. For orders above &#8377;5,000 we can split the payment over three months on most credit cards.</p></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">In the shop</span>
-      <h2 class="h2">A look around.</h2>
+      <span data-nx="gallery.kicker" class="kicker">In the shop</span>
+      <h2 data-nx="gallery.h2" class="h2">A look around.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/optical/images/phoropter.jpg" width="1200" height="1800" alt="The phoropter in the testing room" loading="lazy"></li>
-      <li><img src="/demo/optical/images/fitting-tools.jpg" width="1200" height="800" alt="Hand picking a lens from the trial lens case" loading="lazy"></li>
-      <li><img src="/demo/optical/images/woman-glasses-portrait.jpg" width="1200" height="1800" alt="A woman in a red saree wearing black rectangular glasses" loading="lazy"></li>
-      <li><img src="/demo/optical/images/man-eye-chart.jpg" width="1200" height="904" alt="A man reading the letters on an eye chart with one eye covered" loading="lazy"></li>
-      <li><img src="/demo/optical/images/trial-lens-box.jpg" width="1200" height="801" alt="Trial lens box open on the table" loading="lazy"></li>
-      <li><img src="/demo/optical/images/hero.jpg" width="1200" height="900" alt="Trial frame being adjusted during an eye test" loading="lazy"></li>
-      <li><img src="/demo/optical/images/frames-showcase.jpg" width="1200" height="1800" alt="The lit frame display wall" loading="lazy"></li>
-      <li><img src="/demo/optical/images/sunglasses-display.jpg" width="1200" height="1800" alt="The sunglasses wall" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/phoropter.jpg" width="1200" height="1800" alt="The phoropter in the testing room" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/fitting-tools.jpg" width="1200" height="800" alt="Hand picking a lens from the trial lens case" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/woman-glasses-portrait.jpg" width="1200" height="1800" alt="A woman in a red saree wearing black rectangular glasses" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/man-eye-chart.jpg" width="1200" height="904" alt="A man reading the letters on an eye chart with one eye covered" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/trial-lens-box.jpg" width="1200" height="801" alt="Trial lens box open on the table" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/hero.jpg" width="1200" height="900" alt="Trial frame being adjusted during an eye test" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/frames-showcase.jpg" width="1200" height="1800" alt="The lit frame display wall" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/optical/images/sunglasses-display.jpg" width="1200" height="1800" alt="The sunglasses wall" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--paper">
+<section data-nx-section="section-11" class="section section--paper">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-11.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-11.h2" class="h2">In their own words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>I had been wearing the wrong power for two years. Priyanka found it in ten minutes and the progressive pair was ready on Saturday as promised. No headaches since.</p><footer>Mousumi <span>&middot; Ballygunge</span></footer></blockquote>
-      <blockquote class="reveal"><p>Took my son for his first glasses. They let him try twenty frames without any fuss and fitted them again for free when they went loose after a month.</p><footer>Arindam <span>&middot; Kasba</span></footer></blockquote>
+    <div data-nx-list="section-11.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">I had been wearing the wrong power for two years. Priyanka found it in ten minutes and the progressive pair was ready on Saturday as promised. No headaches since.</p><footer>Mousumi <span data-nx-f="span">&middot; Ballygunge</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Took my son for his first glasses. They let him try twenty frames without any fuss and fitted them again for free when they went loose after a month.</p><footer>Arindam <span data-nx-f="span">&middot; Kasba</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Rashbehari Avenue, opposite Gariahat market, next to the tram stop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Rashbehari Avenue, opposite Gariahat market, next to the tram stop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>12A Rashbehari Avenue, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=12A%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">12A Rashbehari Avenue, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=12A%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:30 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>11:00 am &ndash; 3:00 pm</td></tr>
-              <tr><td>Eye test</td><td>All days except Thursday</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:30 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">11:00 am &ndash; 3:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Eye test</td><td data-nx-f="td2">All days except Thursday</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.9rem;color:var(--muted)">WhatsApp messages answered 10 am to 9 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.9rem;color:var(--muted)">WhatsApp messages answered 10 am to 9 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--blue" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nayan%20Opticals%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -612,10 +617,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="book">
+<section data-nx-section="book" class="section final" id="book">
   <div class="wrap reveal">
-    <h2>Headaches, squinting, holding the phone far away?</h2>
-    <p>Get your eyes tested. It is free, it takes twenty minutes, and you will know. Send a message with a time that suits you.</p>
+    <h2 data-nx="book.h2">Headaches, squinting, holding the phone far away?</h2>
+    <p data-nx="book.p">Get your eyes tested. It is free, it takes twenty minutes, and you will know. Send a message with a time that suits you.</p>
     <div class="final__cta">
       <a class="btn btn--lime" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Nayan%20Opticals%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -630,32 +635,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="12" fill="#C8F135"/><path d="M6 22c4-7 10-10 16-10s12 3 16 10c-4 7-10 10-16 10S10 29 6 22Z" fill="none" stroke="#072A85" stroke-width="2.4"/><circle cx="22" cy="22" r="6" fill="#0B3FC2"/><circle cx="22" cy="22" r="2.4" fill="#C8F135"/></svg>
-          <span><b>Nayan Opticals</b><small>Gariahat &middot; since 2004</small></span>
+          <span><b data-nx="footer.b">Nayan Opticals</b><small data-nx="footer.small">Gariahat &middot; since 2004</small></span>
         </a>
-        <p>Free eye test, 400 frames, lenses fitted in our own lab. Glasses ready in two days.</p>
+        <p data-nx="footer.p">Free eye test, 400 frames, lenses fitted in our own lab. Glasses ready in two days.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#test">Free eye test</a></li>
-          <li><a href="#lenses">Lens price list</a></li>
-          <li><a href="#frames">Frames</a></li>
-          <li><a href="#contacts">Contact lenses</a></li>
-          <li><a href="#faq">Common questions</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#test">Free eye test</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#lenses">Lens price list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#frames">Frames</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#contacts">Contact lenses</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Common questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>12A Rashbehari Avenue, Gariahat, Kolkata 700019</li>
+          <li data-nx="footer.li">12A Rashbehari Avenue, Gariahat, Kolkata 700019</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10:30 am &ndash; 9 pm &middot; Sun 11 am &ndash; 3 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10:30 am &ndash; 9 pm &middot; Sun 11 am &ndash; 3 pm</li>
         </ul>
       </div>
     </div>
@@ -697,5 +702,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

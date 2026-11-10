@@ -292,25 +292,36 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone fixes */
+@media (max-width:900px){
+  .hero__box{grid-template-columns:minmax(0,1fr)}
+  .hero__photo{min-height:0}
+}
+@media (max-width:760px){
+  .tile .sd{font-size:.75rem}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="printing-press">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mudrika%20Printing%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mudrika Printing Works, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="8" fill="#0B2545"/><rect x="9" y="9" width="12" height="12" fill="#00AEEF"/><rect x="23" y="9" width="12" height="12" fill="#E5007D"/><rect x="9" y="23" width="12" height="12" fill="#FFE600"/><rect x="23" y="23" width="12" height="12" fill="#FBFBF7"/></svg>
-      <span><b>Mudrika Printing Works</b><small>Offset &middot; Digital &middot; Flex</small></span>
+      <span><b data-nx="header.b">Mudrika Printing Works</b><small data-nx="header.small">Offset &middot; Digital &middot; Flex</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -333,179 +344,179 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__box">
       <div class="hero__photo">
-        <img src="/demo/printing-press/images/hero.jpg" width="1200" height="900" alt="Printed sheets coming off an offset press with a stack of finished sheets below" fetchpriority="high">
-        <div class="hero__ticket">Same-day printing<small>Send the file by 11 am, collect by 7 pm</small></div>
+        <img data-nx="top.photo" src="/demo/printing-press/images/hero.jpg" width="1200" height="900" alt="Printed sheets coming off an offset press with a stack of finished sheets below" fetchpriority="high">
+        <div data-nx="top.hero-ticket" class="hero__ticket">Same-day printing<small>Send the file by 11 am, collect by 7 pm</small></div>
       </div>
       <div class="hero__text">
-        <span class="kicker">Sealdah &middot; Printing press and flex shop</span>
-        <h1>Visiting cards by evening. <span>Flex by tomorrow.</span></h1>
-        <p class="lede">An offset press, two digital machines and a flex printer under one roof on A.P.C. Road. Visiting cards, bill books, flex banners, wedding cards, stickers, letterheads and pamphlets for shops, schools, clubs and clinics across Kolkata since 1987.</p>
+        <span data-nx="top.kicker" class="kicker">Sealdah &middot; Printing press and flex shop</span>
+        <h1 data-nx="top.h1">Visiting cards by evening. <span>Flex by tomorrow.</span></h1>
+        <p data-nx="top.lede" class="lede">An offset press, two digital machines and a flex printer under one roof on A.P.C. Road. Visiting cards, bill books, flex banners, wedding cards, stickers, letterheads and pamphlets for shops, schools, clubs and clinics across Kolkata since 1987.</p>
         <div class="hero__cta">
           <a class="btn btn--magenta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mudrika%20Printing%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
             Send your file for a quote
           </a>
-          <a class="btn btn--ghost" href="#rates">See bulk rates</a>
+          <a data-nx="top.button" class="btn btn--ghost" href="#rates">See bulk rates</a>
         </div>
-        <ul class="hero__facts">
-          <li><b>1987</b><span>Printing on this street since</span></li>
-          <li><b>Same day</b><span>Cards, stickers, pamphlets, letterheads</span></li>
-          <li><b>&#8377;12</b><span>Per sq ft for star flex, frame extra</span></li>
+        <ul data-nx-list="top.hero-facts" class="hero__facts">
+          <li data-nx-item><b data-nx-f="b">1987</b><span data-nx-f="span">Printing on this street since</span></li>
+          <li data-nx-item><b data-nx-f="b">Same day</b><span data-nx-f="span">Cards, stickers, pamphlets, letterheads</span></li>
+          <li data-nx-item><b data-nx-f="b">&#8377;12</b><span data-nx-f="span">Per sq ft for star flex, frame extra</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="products">
+<section data-nx-section="products" class="section" id="products">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What we print</span>
-      <h2 class="h2">Eight jobs we do every day of the week.</h2>
-      <p class="lead" style="margin-top:1rem">Bring a file, a sample, or a rough sketch on paper. Our designer sets it up for &#8377;100 to &#8377;300 depending on the job, and you approve a proof on WhatsApp before anything is printed.</p>
+      <span data-nx="products.kicker" class="kicker">What we print</span>
+      <h2 data-nx="products.h2" class="h2">Eight jobs we do every day of the week.</h2>
+      <p data-nx="products.p" class="lead" style="margin-top:1rem">Bring a file, a sample, or a rough sketch on paper. Our designer sets it up for &#8377;100 to &#8377;300 depending on the job, and you approve a proof on WhatsApp before anything is printed.</p>
     </div>
     <ul class="tiles">
-      <li class="tile reveal"><span class="sd">Same day</span><img src="/demo/printing-press/images/visiting-cards.jpg" width="1200" height="800" alt="A stack of blank white visiting cards on a two-tone background" loading="lazy"><div class="t"><h3>Visiting cards</h3><p>300 gsm matte or glossy, single or both sides. Spot UV, rounded corners and textured card on request.</p><b>100 cards from &#8377;250</b></div></li>
-      <li class="tile reveal"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="36" height="48" rx="3"/><path d="M12 20h36M20 30h16M20 38h24M20 46h12"/><circle cx="18" cy="14" r="1.5" fill="currentColor"/><circle cx="26" cy="14" r="1.5" fill="currentColor"/></svg></div><div class="t"><h3>Bill books and challans</h3><p>Duplicate or triplicate with carbonless paper, numbered, perforated and bound. Your GST number and logo on every leaf.</p><b>10 books from &#8377;1,200</b></div></li>
-      <li class="tile reveal"><img src="/demo/printing-press/images/posters-printing.jpg" width="1200" height="800" alt="Colourful posters being printed on a wide-format machine" loading="lazy"><div class="t"><h3>Flex banners and hoardings</h3><p>Star flex, backlit flex and vinyl, any size up to 10 feet wide. With or without wooden frame, with eyelets for tying.</p><b>From &#8377;12 per sq ft</b></div></li>
-      <li class="tile reveal"><img src="/demo/printing-press/images/wedding-card.jpg" width="1200" height="800" alt="A Bengali wedding card with gold border laid on a red Benarasi saree with bangles" loading="lazy"><div class="t"><h3>Wedding and invitation cards</h3><p>Bengali, English or both. Over 200 designs in the shop, or we print yours. Annaprashan, upanayan and birthday cards too.</p><b>From &#8377;18 per card</b></div></li>
-      <li class="tile reveal"><span class="sd">Same day</span><img src="/demo/printing-press/images/stickers.jpg" width="1200" height="1500" alt="Sheets of colourful printed stickers on a white table" loading="lazy"><div class="t"><h3>Stickers and labels</h3><p>Vinyl, paper and transparent. Die-cut to any shape. Product labels, jar labels, shop-front lettering, QR code stickers.</p><b>A3 vinyl sheet &#8377;60</b></div></li>
-      <li class="tile reveal"><span class="sd">Same day</span><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="6" width="44" height="52" rx="2"/><path d="M18 14h18M18 20h10M18 48h28M18 32h28M18 38h20"/><circle cx="46" cy="16" r="4"/></svg></div><div class="t"><h3>Letterheads and envelopes</h3><p>100 gsm bond or executive bond paper, offset printed so the colour never smudges. Matching envelopes in three sizes.</p><b>500 letterheads &#8377;1,200</b></div></li>
-      <li class="tile reveal"><span class="sd">Same day</span><img src="/demo/printing-press/images/paper-sheets.jpg" width="1200" height="1799" alt="Curved sheets of blue, magenta and yellow paper" loading="lazy"><div class="t"><h3>Pamphlets and leaflets</h3><p>A5 and A4 on 130 gsm art paper, single or both sides. For shop openings, tuition centres, pujo committees and elections.</p><b>1,000 A5 from &#8377;1,600</b></div></li>
-      <li class="tile reveal"><img src="/demo/printing-press/images/pantone.jpg" width="1200" height="1800" alt="A stack of colour swatch guides on a desk" loading="lazy"><div class="t"><h3>Brochures, menus and catalogues</h3><p>Folded brochures, laminated restaurant menus, school prospectuses and product catalogues. Colour matched to your logo.</p><b>Quoted per job</b></div></li>
+      <li class="tile reveal"><span data-nx="products.sd" class="sd">Same day</span><img data-nx="products.photo" src="/demo/printing-press/images/visiting-cards.jpg" width="1200" height="800" alt="A stack of blank white visiting cards on a two-tone background" loading="lazy"><div class="t"><h3 data-nx="products.h3">Visiting cards</h3><p data-nx="products.p2">300 gsm matte or glossy, single or both sides. Spot UV, rounded corners and textured card on request.</p><b data-nx="products.b">100 cards from &#8377;250</b></div></li>
+      <li class="tile reveal"><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="8" width="36" height="48" rx="3"/><path d="M12 20h36M20 30h16M20 38h24M20 46h12"/><circle cx="18" cy="14" r="1.5" fill="currentColor"/><circle cx="26" cy="14" r="1.5" fill="currentColor"/></svg></div><div class="t"><h3 data-nx="products.h32">Bill books and challans</h3><p data-nx="products.p3">Duplicate or triplicate with carbonless paper, numbered, perforated and bound. Your GST number and logo on every leaf.</p><b data-nx="products.b2">10 books from &#8377;1,200</b></div></li>
+      <li class="tile reveal"><img data-nx="products.photo2" src="/demo/printing-press/images/posters-printing.jpg" width="1200" height="800" alt="Colourful posters being printed on a wide-format machine" loading="lazy"><div class="t"><h3 data-nx="products.h33">Flex banners and hoardings</h3><p data-nx="products.p4">Star flex, backlit flex and vinyl, any size up to 10 feet wide. With or without wooden frame, with eyelets for tying.</p><b data-nx="products.b3">From &#8377;12 per sq ft</b></div></li>
+      <li class="tile reveal"><img data-nx="products.photo3" src="/demo/printing-press/images/wedding-card.jpg" width="1200" height="800" alt="A Bengali wedding card with gold border laid on a red Benarasi saree with bangles" loading="lazy"><div class="t"><h3 data-nx="products.h34">Wedding and invitation cards</h3><p data-nx="products.p5">Bengali, English or both. Over 200 designs in the shop, or we print yours. Annaprashan, upanayan and birthday cards too.</p><b data-nx="products.b4">From &#8377;18 per card</b></div></li>
+      <li class="tile reveal"><span data-nx="products.sd2" class="sd">Same day</span><img data-nx="products.photo4" src="/demo/printing-press/images/stickers.jpg" width="1200" height="1500" alt="Sheets of colourful printed stickers on a white table" loading="lazy"><div class="t"><h3 data-nx="products.h35">Stickers and labels</h3><p data-nx="products.p6">Vinyl, paper and transparent. Die-cut to any shape. Product labels, jar labels, shop-front lettering, QR code stickers.</p><b data-nx="products.b5">A3 vinyl sheet &#8377;60</b></div></li>
+      <li class="tile reveal"><span data-nx="products.sd3" class="sd">Same day</span><div class="ic"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="6" width="44" height="52" rx="2"/><path d="M18 14h18M18 20h10M18 48h28M18 32h28M18 38h20"/><circle cx="46" cy="16" r="4"/></svg></div><div class="t"><h3 data-nx="products.h36">Letterheads and envelopes</h3><p data-nx="products.p7">100 gsm bond or executive bond paper, offset printed so the colour never smudges. Matching envelopes in three sizes.</p><b data-nx="products.b6">500 letterheads &#8377;1,200</b></div></li>
+      <li class="tile reveal"><span data-nx="products.sd4" class="sd">Same day</span><img data-nx="products.photo5" src="/demo/printing-press/images/paper-sheets.jpg" width="1200" height="1799" alt="Curved sheets of blue, magenta and yellow paper" loading="lazy"><div class="t"><h3 data-nx="products.h37">Pamphlets and leaflets</h3><p data-nx="products.p8">A5 and A4 on 130 gsm art paper, single or both sides. For shop openings, tuition centres, pujo committees and elections.</p><b data-nx="products.b7">1,000 A5 from &#8377;1,600</b></div></li>
+      <li class="tile reveal"><img data-nx="products.photo6" src="/demo/printing-press/images/pantone.jpg" width="1200" height="1800" alt="A stack of colour swatch guides on a desk" loading="lazy"><div class="t"><h3 data-nx="products.h38">Brochures, menus and catalogues</h3><p data-nx="products.p9">Folded brochures, laminated restaurant menus, school prospectuses and product catalogues. Colour matched to your logo.</p><b data-nx="products.b8">Quoted per job</b></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep" id="rates">
+<section data-nx-section="rates" class="section section--deep" id="rates">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Bulk rates</span>
-      <h2 class="h2">The more you print, the less each one costs.</h2>
-      <p class="lead" style="margin-top:1rem">Open a product to see the rate card. Prices include GST and are for print-ready files. Design, if we do it, is &#8377;100 to &#8377;300 extra. Rates updated January 2026.</p>
+      <span data-nx="rates.kicker" class="kicker">Bulk rates</span>
+      <h2 data-nx="rates.h2" class="h2">The more you print, the less each one costs.</h2>
+      <p data-nx="rates.p" class="lead" style="margin-top:1rem">Open a product to see the rate card. Prices include GST and are for print-ready files. Design, if we do it, is &#8377;100 to &#8377;300 extra. Rates updated January 2026.</p>
     </div>
     <div class="rates reveal">
       <details open>
-        <summary><span>Visiting cards, 300 gsm, both sides</span><span class="from">from &#8377;1.10 a card</span><span class="pm" aria-hidden="true"></span></summary>
+        <summary><span data-nx="rates.span">Visiting cards, 300 gsm, both sides</span><span data-nx="rates.from" class="from">from &#8377;1.10 a card</span><span class="pm" aria-hidden="true"></span></summary>
         <table>
-          <thead><tr><th scope="col">Quantity</th><th scope="col">Finish</th><th scope="col">Price</th></tr></thead>
-          <tbody>
-            <tr><td>100</td><td>Matte or glossy lamination</td><td>&#8377;250</td></tr>
-            <tr><td>500</td><td>Matte or glossy lamination</td><td>&#8377;700</td></tr>
-            <tr><td>1,000</td><td>Matte or glossy lamination</td><td>&#8377;1,100</td></tr>
-            <tr><td>1,000</td><td>Spot UV on one side</td><td>&#8377;1,900</td></tr>
-            <tr><td>1,000</td><td>Textured or linen card</td><td>&#8377;2,400</td></tr>
+          <thead><tr><th data-nx="rates.th" scope="col">Quantity</th><th data-nx="rates.th2" scope="col">Finish</th><th data-nx="rates.th3" scope="col">Price</th></tr></thead>
+          <tbody data-nx-list="rates.list">
+            <tr data-nx-item><td data-nx-f="td">100</td><td data-nx-f="td2">Matte or glossy lamination</td><td data-nx-f="td3">&#8377;250</td></tr>
+            <tr data-nx-item><td data-nx-f="td">500</td><td data-nx-f="td2">Matte or glossy lamination</td><td data-nx-f="td3">&#8377;700</td></tr>
+            <tr data-nx-item><td data-nx-f="td">1,000</td><td data-nx-f="td2">Matte or glossy lamination</td><td data-nx-f="td3">&#8377;1,100</td></tr>
+            <tr data-nx-item><td data-nx-f="td">1,000</td><td data-nx-f="td2">Spot UV on one side</td><td data-nx-f="td3">&#8377;1,900</td></tr>
+            <tr data-nx-item><td data-nx-f="td">1,000</td><td data-nx-f="td2">Textured or linen card</td><td data-nx-f="td3">&#8377;2,400</td></tr>
           </tbody>
         </table>
-        <p class="rn">Same-day for up to 1,000 cards if the file reaches us by 11 am. Spot UV and textured card take two working days.</p>
+        <p data-nx="rates.rn" class="rn">Same-day for up to 1,000 cards if the file reaches us by 11 am. Spot UV and textured card take two working days.</p>
       </details>
       <details>
-        <summary><span>Bill books, duplicate, 50 sets per book</span><span class="from">from &#8377;100 a book</span><span class="pm" aria-hidden="true"></span></summary>
+        <summary><span data-nx="rates.span2">Bill books, duplicate, 50 sets per book</span><span data-nx="rates.from2" class="from">from &#8377;100 a book</span><span class="pm" aria-hidden="true"></span></summary>
         <table>
-          <thead><tr><th scope="col">Quantity</th><th scope="col">Size</th><th scope="col">Price per book</th></tr></thead>
-          <tbody>
-            <tr><td>10 books</td><td>A5, duplicate, carbonless</td><td>&#8377;120</td></tr>
-            <tr><td>25 books</td><td>A5, duplicate, carbonless</td><td>&#8377;110</td></tr>
-            <tr><td>50 books</td><td>A5, duplicate, carbonless</td><td>&#8377;100</td></tr>
-            <tr><td>10 books</td><td>A4, duplicate, carbonless</td><td>&#8377;190</td></tr>
-            <tr><td>Any</td><td>Triplicate, add per book</td><td>+ &#8377;40</td></tr>
+          <thead><tr><th data-nx="rates.th4" scope="col">Quantity</th><th data-nx="rates.th5" scope="col">Size</th><th data-nx="rates.th6" scope="col">Price per book</th></tr></thead>
+          <tbody data-nx-list="rates.list2">
+            <tr data-nx-item><td data-nx-f="td">10 books</td><td data-nx-f="td2">A5, duplicate, carbonless</td><td data-nx-f="td3">&#8377;120</td></tr>
+            <tr data-nx-item><td data-nx-f="td">25 books</td><td data-nx-f="td2">A5, duplicate, carbonless</td><td data-nx-f="td3">&#8377;110</td></tr>
+            <tr data-nx-item><td data-nx-f="td">50 books</td><td data-nx-f="td2">A5, duplicate, carbonless</td><td data-nx-f="td3">&#8377;100</td></tr>
+            <tr data-nx-item><td data-nx-f="td">10 books</td><td data-nx-f="td2">A4, duplicate, carbonless</td><td data-nx-f="td3">&#8377;190</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Any</td><td data-nx-f="td2">Triplicate, add per book</td><td data-nx-f="td3">+ &#8377;40</td></tr>
           </tbody>
         </table>
-        <p class="rn">Serial numbering, perforation and a hard cover are included. Ready in two working days. Repeat orders are kept on file; just send the starting number.</p>
+        <p data-nx="rates.rn2" class="rn">Serial numbering, perforation and a hard cover are included. Ready in two working days. Repeat orders are kept on file; just send the starting number.</p>
       </details>
       <details>
-        <summary><span>Flex banners, per square foot</span><span class="from">from &#8377;12 per sq ft</span><span class="pm" aria-hidden="true"></span></summary>
+        <summary><span data-nx="rates.span3">Flex banners, per square foot</span><span data-nx="rates.from3" class="from">from &#8377;12 per sq ft</span><span class="pm" aria-hidden="true"></span></summary>
         <table>
-          <thead><tr><th scope="col">Material</th><th scope="col">Good for</th><th scope="col">Per sq ft</th></tr></thead>
-          <tbody>
-            <tr><td>Star flex</td><td>Shop boards, pujo pandals, event backdrops</td><td>&#8377;12</td></tr>
-            <tr><td>Backlit flex</td><td>Lit shop signboards</td><td>&#8377;35</td></tr>
-            <tr><td>Vinyl on sunboard</td><td>Clinic and office name plates, standees</td><td>&#8377;45</td></tr>
-            <tr><td>Eco-solvent vinyl</td><td>Glass doors, vehicle sides</td><td>&#8377;55</td></tr>
-            <tr><td>Wooden frame, fitted</td><td>Any flex</td><td>+ &#8377;8</td></tr>
+          <thead><tr><th data-nx="rates.th7" scope="col">Material</th><th data-nx="rates.th8" scope="col">Good for</th><th data-nx="rates.th9" scope="col">Per sq ft</th></tr></thead>
+          <tbody data-nx-list="rates.list3">
+            <tr data-nx-item><td data-nx-f="td">Star flex</td><td data-nx-f="td2">Shop boards, pujo pandals, event backdrops</td><td data-nx-f="td3">&#8377;12</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Backlit flex</td><td data-nx-f="td2">Lit shop signboards</td><td data-nx-f="td3">&#8377;35</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Vinyl on sunboard</td><td data-nx-f="td2">Clinic and office name plates, standees</td><td data-nx-f="td3">&#8377;45</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Eco-solvent vinyl</td><td data-nx-f="td2">Glass doors, vehicle sides</td><td data-nx-f="td3">&#8377;55</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Wooden frame, fitted</td><td data-nx-f="td2">Any flex</td><td data-nx-f="td3">+ &#8377;8</td></tr>
           </tbody>
         </table>
-        <p class="rn">Flex up to 6 ft by 10 ft is printed in a day. Eyelets every two feet are free. Fitting at your shop in central and north Kolkata &#8377;300 to &#8377;600.</p>
+        <p data-nx="rates.rn3" class="rn">Flex up to 6 ft by 10 ft is printed in a day. Eyelets every two feet are free. Fitting at your shop in central and north Kolkata &#8377;300 to &#8377;600.</p>
       </details>
       <details>
-        <summary><span>Wedding and invitation cards</span><span class="from">from &#8377;18 a card</span><span class="pm" aria-hidden="true"></span></summary>
+        <summary><span data-nx="rates.span4">Wedding and invitation cards</span><span data-nx="rates.from4" class="from">from &#8377;18 a card</span><span class="pm" aria-hidden="true"></span></summary>
         <table>
-          <thead><tr><th scope="col">Quantity</th><th scope="col">Type</th><th scope="col">Price per card</th></tr></thead>
-          <tbody>
-            <tr><td>100</td><td>Single card with envelope, shop design</td><td>&#8377;22</td></tr>
-            <tr><td>300</td><td>Single card with envelope, shop design</td><td>&#8377;18</td></tr>
-            <tr><td>100</td><td>Folder card with two inserts, shop design</td><td>&#8377;45</td></tr>
-            <tr><td>300</td><td>Folder card with two inserts, shop design</td><td>&#8377;38</td></tr>
-            <tr><td>Any</td><td>Your own design, foil or embossing</td><td>Quoted</td></tr>
+          <thead><tr><th data-nx="rates.th10" scope="col">Quantity</th><th data-nx="rates.th11" scope="col">Type</th><th data-nx="rates.th12" scope="col">Price per card</th></tr></thead>
+          <tbody data-nx-list="rates.list4">
+            <tr data-nx-item><td data-nx-f="td">100</td><td data-nx-f="td2">Single card with envelope, shop design</td><td data-nx-f="td3">&#8377;22</td></tr>
+            <tr data-nx-item><td data-nx-f="td">300</td><td data-nx-f="td2">Single card with envelope, shop design</td><td data-nx-f="td3">&#8377;18</td></tr>
+            <tr data-nx-item><td data-nx-f="td">100</td><td data-nx-f="td2">Folder card with two inserts, shop design</td><td data-nx-f="td3">&#8377;45</td></tr>
+            <tr data-nx-item><td data-nx-f="td">300</td><td data-nx-f="td2">Folder card with two inserts, shop design</td><td data-nx-f="td3">&#8377;38</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Any</td><td data-nx-f="td2">Your own design, foil or embossing</td><td data-nx-f="td3">Quoted</td></tr>
           </tbody>
         </table>
-        <p class="rn">Bengali typesetting is done in the shop. Proof on WhatsApp within a day; printing takes five to seven working days after you approve.</p>
+        <p data-nx="rates.rn4" class="rn">Bengali typesetting is done in the shop. Proof on WhatsApp within a day; printing takes five to seven working days after you approve.</p>
       </details>
       <details>
-        <summary><span>Pamphlets, letterheads and stickers</span><span class="from">from &#8377;1.60 a pamphlet</span><span class="pm" aria-hidden="true"></span></summary>
+        <summary><span data-nx="rates.span5">Pamphlets, letterheads and stickers</span><span data-nx="rates.from5" class="from">from &#8377;1.60 a pamphlet</span><span class="pm" aria-hidden="true"></span></summary>
         <table>
-          <thead><tr><th scope="col">Item</th><th scope="col">Spec</th><th scope="col">Price</th></tr></thead>
-          <tbody>
-            <tr><td>1,000 pamphlets</td><td>A5, 130 gsm art paper, one side</td><td>&#8377;1,600</td></tr>
-            <tr><td>5,000 pamphlets</td><td>A5, 130 gsm art paper, one side</td><td>&#8377;5,500</td></tr>
-            <tr><td>1,000 pamphlets</td><td>A4, 130 gsm art paper, both sides</td><td>&#8377;3,800</td></tr>
-            <tr><td>500 letterheads</td><td>A4, 100 gsm bond, one colour</td><td>&#8377;1,200</td></tr>
-            <tr><td>1,000 letterheads</td><td>A4, 100 gsm bond, full colour</td><td>&#8377;2,400</td></tr>
-            <tr><td>Stickers</td><td>A3 vinyl sheet, die-cut</td><td>&#8377;60 a sheet</td></tr>
+          <thead><tr><th data-nx="rates.th13" scope="col">Item</th><th data-nx="rates.th14" scope="col">Spec</th><th data-nx="rates.th15" scope="col">Price</th></tr></thead>
+          <tbody data-nx-list="rates.list5">
+            <tr data-nx-item><td data-nx-f="td">1,000 pamphlets</td><td data-nx-f="td2">A5, 130 gsm art paper, one side</td><td data-nx-f="td3">&#8377;1,600</td></tr>
+            <tr data-nx-item><td data-nx-f="td">5,000 pamphlets</td><td data-nx-f="td2">A5, 130 gsm art paper, one side</td><td data-nx-f="td3">&#8377;5,500</td></tr>
+            <tr data-nx-item><td data-nx-f="td">1,000 pamphlets</td><td data-nx-f="td2">A4, 130 gsm art paper, both sides</td><td data-nx-f="td3">&#8377;3,800</td></tr>
+            <tr data-nx-item><td data-nx-f="td">500 letterheads</td><td data-nx-f="td2">A4, 100 gsm bond, one colour</td><td data-nx-f="td3">&#8377;1,200</td></tr>
+            <tr data-nx-item><td data-nx-f="td">1,000 letterheads</td><td data-nx-f="td2">A4, 100 gsm bond, full colour</td><td data-nx-f="td3">&#8377;2,400</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Stickers</td><td data-nx-f="td2">A3 vinyl sheet, die-cut</td><td data-nx-f="td3">&#8377;60 a sheet</td></tr>
           </tbody>
         </table>
-        <p class="rn">Pamphlets, letterheads and stickers are same-day jobs up to 2,000 pieces when the file arrives by 11 am.</p>
+        <p data-nx="rates.rn5" class="rn">Pamphlets, letterheads and stickers are same-day jobs up to 2,000 pieces when the file arrives by 11 am.</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="section section--ink" id="sameday">
+<section data-nx-section="sameday" class="section section--ink" id="sameday">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker" style="color:var(--yellow)">Same-day printing</span>
-      <h2 class="h2">Send by 11, collect by 7. Here is how the day goes.</h2>
-      <p class="lead" style="margin-top:1rem">For visiting cards, pamphlets, letterheads, stickers and flex up to 6 by 10 feet. Bill books, wedding cards and anything with spot UV or foil need two days or more, and we say so when you send the file.</p>
+      <span data-nx="sameday.kicker" class="kicker" style="color:var(--yellow)">Same-day printing</span>
+      <h2 data-nx="sameday.h2" class="h2">Send by 11, collect by 7. Here is how the day goes.</h2>
+      <p data-nx="sameday.p" class="lead" style="margin-top:1rem">For visiting cards, pamphlets, letterheads, stickers and flex up to 6 by 10 feet. Bill books, wedding cards and anything with spot UV or foil need two days or more, and we say so when you send the file.</p>
     </div>
-    <ol class="tl reveal">
-      <li><span class="t">By 11 am</span><h3>File reaches us</h3><p>On WhatsApp, email or a pen drive at the counter. We check size, bleed and resolution within the hour.</p></li>
-      <li><span class="t">By 12 noon</span><h3>Proof sent to you</h3><p>A photo or PDF proof on WhatsApp. You reply "ok" or ask for a change. Nothing prints before your ok.</p></li>
-      <li><span class="t">12 to 4 pm</span><h3>Printing</h3><p>Digital jobs go straight to the machine. Flex prints on the wide-format printer. Offset runs are planned for the next morning.</p></li>
-      <li><span class="t">4 to 6 pm</span><h3>Cutting and finishing</h3><p>Lamination, cutting, eyelets, framing. Every job is counted and checked before it is packed.</p></li>
-      <li><span class="t">By 7 pm</span><h3>Ready to collect</h3><p>We message you when it is packed. Collect at the counter or ask for delivery the same evening within 5 km.</p></li>
+    <ol data-nx-list="sameday.tl" class="tl reveal">
+      <li data-nx-item><span data-nx-f="t" class="t">By 11 am</span><h3 data-nx-f="h3">File reaches us</h3><p data-nx-f="p">On WhatsApp, email or a pen drive at the counter. We check size, bleed and resolution within the hour.</p></li>
+      <li data-nx-item><span data-nx-f="t" class="t">By 12 noon</span><h3 data-nx-f="h3">Proof sent to you</h3><p data-nx-f="p">A photo or PDF proof on WhatsApp. You reply "ok" or ask for a change. Nothing prints before your ok.</p></li>
+      <li data-nx-item><span data-nx-f="t" class="t">12 to 4 pm</span><h3 data-nx-f="h3">Printing</h3><p data-nx-f="p">Digital jobs go straight to the machine. Flex prints on the wide-format printer. Offset runs are planned for the next morning.</p></li>
+      <li data-nx-item><span data-nx-f="t" class="t">4 to 6 pm</span><h3 data-nx-f="h3">Cutting and finishing</h3><p data-nx-f="p">Lamination, cutting, eyelets, framing. Every job is counted and checked before it is packed.</p></li>
+      <li data-nx-item><span data-nx-f="t" class="t">By 7 pm</span><h3 data-nx-f="h3">Ready to collect</h3><p data-nx-f="p">We message you when it is packed. Collect at the counter or ask for delivery the same evening within 5 km.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section" id="files">
+<section data-nx-section="files" class="section" id="files">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Sending files</span>
-      <h2 class="h2">What a print-ready file looks like.</h2>
-      <p class="lead" style="margin-top:1rem">You do not need to know any of this if you want us to design the job. If you have your own designer, give them this list and the job will print right the first time.</p>
+      <span data-nx="files.kicker" class="kicker">Sending files</span>
+      <h2 data-nx="files.h2" class="h2">What a print-ready file looks like.</h2>
+      <p data-nx="files.p" class="lead" style="margin-top:1rem">You do not need to know any of this if you want us to design the job. If you have your own designer, give them this list and the job will print right the first time.</p>
     </div>
     <div class="files">
-      <ul class="files__list reveal">
-        <li><span class="ok">PDF</span><div><b>PDF first, then CDR, AI or high-resolution JPG</b><span>A PDF with fonts embedded is the safest. CorelDRAW files up to version 2024 and Illustrator files are fine. Word and PowerPoint files are not; we will redo them and charge for design.</span></div></li>
-        <li><span class="ok">300</span><div><b>300 dpi at the actual print size</b><span>A visiting card file should be 3.5 by 2 inches at 300 dpi. A WhatsApp-forwarded image is usually 72 dpi and will print blurry. For flex, 72 to 100 dpi at full size is enough.</span></div></li>
-        <li><span class="ok">3mm</span><div><b>3 mm bleed on every side</b><span>If your design has colour to the edge, extend it 3 mm beyond the cut line. Keep text and logos at least 3 mm inside the cut line.</span></div></li>
-        <li><span class="ok">CMYK</span><div><b>CMYK colour, not RGB</b><span>Screens show RGB, presses print CMYK. Bright blues and greens shift the most. If an exact colour matters, come and see a printed swatch.</span></div></li>
-        <li><span class="ok">Aa</span><div><b>Fonts converted to curves, or embedded</b><span>Especially for Bengali text. If the font is missing on our machine the letters change. Convert to outlines or send the font file.</span></div></li>
-        <li><span class="ok">#</span><div><b>Tell us quantity, paper and finish in the message</b><span>One line is enough: "500 visiting cards, both sides, matte". We quote within the hour on working days.</span></div></li>
+      <ul data-nx-list="files.files-list" class="files__list reveal">
+        <li data-nx-item><span data-nx-f="ok" class="ok">PDF</span><div><b data-nx-f="b">PDF first, then CDR, AI or high-resolution JPG</b><span data-nx-f="span">A PDF with fonts embedded is the safest. CorelDRAW files up to version 2024 and Illustrator files are fine. Word and PowerPoint files are not; we will redo them and charge for design.</span></div></li>
+        <li data-nx-item><span data-nx-f="ok" class="ok">300</span><div><b data-nx-f="b">300 dpi at the actual print size</b><span data-nx-f="span">A visiting card file should be 3.5 by 2 inches at 300 dpi. A WhatsApp-forwarded image is usually 72 dpi and will print blurry. For flex, 72 to 100 dpi at full size is enough.</span></div></li>
+        <li data-nx-item><span data-nx-f="ok" class="ok">3mm</span><div><b data-nx-f="b">3 mm bleed on every side</b><span data-nx-f="span">If your design has colour to the edge, extend it 3 mm beyond the cut line. Keep text and logos at least 3 mm inside the cut line.</span></div></li>
+        <li data-nx-item><span data-nx-f="ok" class="ok">CMYK</span><div><b data-nx-f="b">CMYK colour, not RGB</b><span data-nx-f="span">Screens show RGB, presses print CMYK. Bright blues and greens shift the most. If an exact colour matters, come and see a printed swatch.</span></div></li>
+        <li data-nx-item><span data-nx-f="ok" class="ok">Aa</span><div><b data-nx-f="b">Fonts converted to curves, or embedded</b><span data-nx-f="span">Especially for Bengali text. If the font is missing on our machine the letters change. Convert to outlines or send the font file.</span></div></li>
+        <li data-nx-item><span data-nx-f="ok" class="ok">#</span><div><b data-nx-f="b">Tell us quantity, paper and finish in the message</b><span data-nx-f="span">One line is enough: "500 visiting cards, both sides, matte". We quote within the hour on working days.</span></div></li>
       </ul>
       <aside class="files__side reveal">
         <div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-        <h3>Not sure about any of this? Send what you have.</h3>
-        <p>Most customers send a photo of an old card or a sketch on paper. Our designer sets it up properly, sends a proof, and you approve on WhatsApp.</p>
-        <ul>
-          <li>Visiting card or sticker design &#8377;100</li>
-          <li>Pamphlet, letterhead or bill book design &#8377;200</li>
-          <li>Flex or wedding card design &#8377;300</li>
-          <li>Two rounds of changes included</li>
+        <h3 data-nx="files.h3">Not sure about any of this? Send what you have.</h3>
+        <p data-nx="files.p2">Most customers send a photo of an old card or a sketch on paper. Our designer sets it up properly, sends a proof, and you approve on WhatsApp.</p>
+        <ul data-nx-list="files.list">
+          <li data-nx-f="li" data-nx-item>Visiting card or sticker design &#8377;100</li>
+          <li data-nx-f="li" data-nx-item>Pamphlet, letterhead or bill book design &#8377;200</li>
+          <li data-nx-f="li" data-nx-item>Flex or wedding card design &#8377;300</li>
+          <li data-nx-f="li" data-nx-item>Two rounds of changes included</li>
         </ul>
         <a class="btn btn--magenta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mudrika%20Printing%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Send a file on WhatsApp</a>
       </aside>
@@ -513,75 +524,75 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--deep" id="delivery">
+<section data-nx-section="delivery" class="section section--deep" id="delivery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Collection and delivery</span>
-      <h2 class="h2">Collect at the counter, or we bring it to the shop.</h2>
+      <span data-nx="delivery.kicker" class="kicker">Collection and delivery</span>
+      <h2 data-nx="delivery.h2" class="h2">Collect at the counter, or we bring it to the shop.</h2>
     </div>
-    <ul class="dlv">
-      <li class="reveal"><h3>Collect from Sealdah</h3><p>Opposite Sealdah station's south gate, two minutes from the bus stand. Jobs are packed and labelled with your name. Pay on collection, cash or UPI.</p><b>Free</b></li>
-      <li class="reveal"><h3>Delivery within Kolkata</h3><p>Our own delivery boy covers central and north Kolkata the same evening and the rest of the city the next morning. Flex with frames goes by tempo.</p><b>&#8377;60 within 5 km &middot; &#8377;150 anywhere in Kolkata</b></li>
-      <li class="reveal"><h3>Courier outside Kolkata</h3><p>Cards, pamphlets and stickers go by courier to anywhere in West Bengal and beyond. Packed flat in board boxes. Tracking number sent on WhatsApp.</p><b>At courier cost, usually &#8377;120 to &#8377;400</b></li>
+    <ul data-nx-list="delivery.dlv" class="dlv">
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Collect from Sealdah</h3><p data-nx-f="p">Opposite Sealdah station's south gate, two minutes from the bus stand. Jobs are packed and labelled with your name. Pay on collection, cash or UPI.</p><b data-nx-f="b">Free</b></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Delivery within Kolkata</h3><p data-nx-f="p">Our own delivery boy covers central and north Kolkata the same evening and the rest of the city the next morning. Flex with frames goes by tempo.</p><b data-nx-f="b">&#8377;60 within 5 km &middot; &#8377;150 anywhere in Kolkata</b></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Courier outside Kolkata</h3><p data-nx-f="p">Cards, pamphlets and stickers go by courier to anywhere in West Bengal and beyond. Packed flat in board boxes. Tracking number sent on WhatsApp.</p><b data-nx-f="b">At courier cost, usually &#8377;120 to &#8377;400</b></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Inside the press</span>
-      <h2 class="h2">Machines, paper and ink.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Inside the press</span>
+      <h2 data-nx="gallery.h2" class="h2">Machines, paper and ink.</h2>
     </div>
-    <ul class="gal reveal">
-      <li><img src="/demo/printing-press/images/rollers.jpg" width="1200" height="900" alt="The inking rollers of an offset press, close view" loading="lazy"></li>
-      <li><img src="/demo/printing-press/images/cmyk-cartridges.jpg" width="1200" height="800" alt="Cyan, magenta, yellow and black ink cartridges inside an open printer" loading="lazy"></li>
-      <li><img src="/demo/printing-press/images/cutting-mat.jpg" width="1200" height="1800" alt="Paper cutters, a loupe and a steel rule on a green cutting mat" loading="lazy"></li>
-      <li><img src="/demo/printing-press/images/digital-press.jpg" width="1200" height="1804" alt="A vinyl cutting plotter with a laptop behind it" loading="lazy"></li>
-      <li><img src="/demo/printing-press/images/press-mechanics.jpg" width="1200" height="800" alt="Gears and rollers of an industrial printing press" loading="lazy"></li>
-      <li><img src="/demo/printing-press/images/rolled-posters.jpg" width="1200" height="1800" alt="Rolled posters with coloured edges on a wooden table" loading="lazy"></li>
+    <ul data-nx-list="gallery.gal" class="gal reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/rollers.jpg" width="1200" height="900" alt="The inking rollers of an offset press, close view" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/cmyk-cartridges.jpg" width="1200" height="800" alt="Cyan, magenta, yellow and black ink cartridges inside an open printer" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/cutting-mat.jpg" width="1200" height="1800" alt="Paper cutters, a loupe and a steel rule on a green cutting mat" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/digital-press.jpg" width="1200" height="1804" alt="A vinyl cutting plotter with a laptop behind it" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/press-mechanics.jpg" width="1200" height="800" alt="Gears and rollers of an industrial printing press" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/printing-press/images/rolled-posters.jpg" width="1200" height="1800" alt="Rolled posters with coloured edges on a wooden table" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Customers</span>
-      <h2 class="h2">Two regulars.</h2>
+      <span data-nx="section-9.kicker" class="kicker">Customers</span>
+      <h2 data-nx="section-9.h2" class="h2">Two regulars.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p>I run a medicine shop in Maniktala. Bill books every three months, same design since 2011. I send one WhatsApp with the starting number and they are at my counter in two days.</p><footer>Sanjib <span>&middot; Maniktala, pharmacy owner</span></footer></blockquote>
-      <blockquote class="reveal"><div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p>Our pujo committee needed a 20 by 10 flex at six in the evening for the next morning. They printed it that night and fitted the frame at the pandal by 9 am. Nobody else would take the job.</p><footer>Tapas <span>&middot; Beleghata, pujo committee secretary</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p data-nx-f="p">I run a medicine shop in Maniktala. Bill books every three months, same design since 2011. I send one WhatsApp with the starting number and they are at my counter in two days.</p><footer>Sanjib <span data-nx-f="span">&middot; Maniktala, pharmacy owner</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div><p data-nx-f="p">Our pujo committee needed a 20 by 10 flex at six in the evening for the next morning. They printed it that night and fitted the frame at the pandal by 9 am. Nobody else would take the job.</p><footer>Tapas <span data-nx-f="span">&middot; Beleghata, pujo committee secretary</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the press</span>
-      <h2 class="h2">On A.P.C. Road, opposite Sealdah station's south gate.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the press</span>
+      <h2 data-nx="visit.h2" class="h2">On A.P.C. Road, opposite Sealdah station's south gate.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>8 Acharya Prafulla Chandra Road, Sealdah<br>Kolkata 700009</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=8%20Acharya%20Prafulla%20Chandra%20Road%2C%20Sealdah%2C%20Kolkata%20700009" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">8 Acharya Prafulla Chandra Road, Sealdah<br>Kolkata 700009</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=8%20Acharya%20Prafulla%20Chandra%20Road%2C%20Sealdah%2C%20Kolkata%20700009" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Shop hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>9:30 am &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 2:00 pm</td></tr>
-              <tr><td>Same-day cut-off</td><td>Files by 11:00 am</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Shop hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">9:30 am &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 2:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Same-day cut-off</td><td data-nx-f="td2">Files by 11:00 am</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp files to the same number. Quotes within the hour on working days.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp files to the same number. Quotes within the hour on working days.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mudrika%20Printing%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -595,11 +606,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="cmyk" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="wrap reveal">
-    <h2>Send the file now. Collect it this evening.</h2>
-    <p>One message with the file, the quantity and the finish. We reply with the price and the time it will be ready.</p>
+    <h2 data-nx="contact.h2">Send the file now. Collect it this evening.</h2>
+    <p data-nx="contact.p">One message with the file, the quantity and the finish. We reply with the price and the time it will be ready.</p>
     <div class="final__cta">
       <a class="btn btn--magenta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mudrika%20Printing%20Works%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -614,31 +625,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="8" fill="#FBFBF7"/><rect x="9" y="9" width="12" height="12" fill="#00AEEF"/><rect x="23" y="9" width="12" height="12" fill="#E5007D"/><rect x="9" y="23" width="12" height="12" fill="#FFE600"/><rect x="23" y="23" width="12" height="12" fill="#111111"/></svg>
-          <span><b>Mudrika Printing Works</b><small>Offset &middot; Digital &middot; Flex</small></span>
+          <span><b data-nx="footer.b">Mudrika Printing Works</b><small data-nx="footer.small">Offset &middot; Digital &middot; Flex</small></span>
         </a>
-        <p>Visiting cards, bill books, flex, wedding cards, stickers, letterheads and pamphlets. Same-day printing on most jobs. Sealdah since 1987.</p>
+        <p data-nx="footer.p">Visiting cards, bill books, flex, wedding cards, stickers, letterheads and pamphlets. Same-day printing on most jobs. Sealdah since 1987.</p>
       </div>
       <div>
-        <h4>Printing</h4>
-        <ul>
-          <li><a href="#products">What we print</a></li>
-          <li><a href="#rates">Bulk rates</a></li>
-          <li><a href="#sameday">Same-day printing</a></li>
-          <li><a href="#files">Sending files</a></li>
+        <h4 data-nx="footer.h4">Printing</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#products">What we print</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#rates">Bulk rates</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#sameday">Same-day printing</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#files">Sending files</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>8 A.P.C. Road, Sealdah, Kolkata 700009</li>
+          <li data-nx="footer.li">8 A.P.C. Road, Sealdah, Kolkata 700009</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 9:30 am &ndash; 9 pm &middot; Sun 10 am &ndash; 2 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 9:30 am &ndash; 9 pm &middot; Sun 10 am &ndash; 2 pm</li>
         </ul>
       </div>
     </div>
@@ -680,5 +691,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

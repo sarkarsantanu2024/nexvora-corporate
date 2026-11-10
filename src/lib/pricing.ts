@@ -6,7 +6,7 @@
 //
 // Everything in PRICE_GROUPS is a fixed-price job between ₹499 and ₹12,999 —
 // work small enough that quoting it individually wastes more time than doing
-// it. Websites are not on that list: they are sold as one of the three plans
+// it. Websites are not on that list: they are sold as one of the four plans
 // in PACKAGES, and no other website price may appear anywhere on the site.
 // Anything larger is discussed and priced on its own. NOT_INCLUDED holds the
 // running costs that are never part of any figure on this page.
@@ -108,9 +108,12 @@ export const PRICE_GROUPS: PriceGroup[] = [
 ];
 
 /**
- * The three website plans. Every website on this site is sold as one of
+ * The four website plans. Every website on this site is sold as one of
  * these, at these prices, and nowhere else on the site may name another
- * website price. Set on 2026-11-10.
+ * website price. Three set on 2026-11-10; the fourth, Run my whole business,
+ * added the same day when the edit panel and the business dashboard became
+ * one product. Its numbers (₹24,999 once, ₹999 a month after three free
+ * months) are a first proposal and still need Santanu's review.
  *
  * The old "worth" arithmetic (adding up the small jobs inside a bundle) is
  * gone: the website itself is no longer on the small-jobs list, so there is
@@ -121,11 +124,20 @@ export type Package = {
   id: string;
   name: string;
   tagline: string;
-  /** The small label on the card: Launch offer, Full plan, Most control. */
+  /** The small label on the card: Launch offer, Full plan, Most control, Platinum. */
   label: string;
   price: number;
   includes: string[];
   featured?: boolean;
+  /**
+   * The monthly fee that keeps a plan with a login running: the panel or the
+   * dashboard, its database, storage, backups and support. Said on the card
+   * at the same size as the one-time price, because a monthly number that
+   * turns up later is exactly the kind of surprise this site promises not to
+   * spring. The first months are free so the client sees it working before
+   * paying anything monthly. Added 2026-11-10, awaiting Santanu's review.
+   */
+  running?: { monthly: number; yearly: number; freeMonths: number; what: string };
 };
 
 export const PACKAGES: Package[] = [
@@ -184,10 +196,41 @@ export const PACKAGES: Package[] = [
       "A short training call to show you how to use it",
       "First month of care free",
     ],
+    running: {
+      monthly: 299,
+      yearly: 2999,
+      freeMonths: 3,
+      what: "the edit panel, its storage and backups",
+    },
+  },
+  {
+    id: "business",
+    name: "Run my whole business",
+    tagline: "Website, edit panel and a dashboard to run the business from your phone",
+    label: "Platinum",
+    price: 24999,
+    includes: [
+      "Everything in Run it yourself",
+      "A business dashboard built for your kind of business: students or customers, fees or bills, stock and items, staff, expenses",
+      "Collections, pending payments and expenses for today, this month and this year, in plain numbers",
+      "WhatsApp reminders for pending fees or orders, sent from your own number with one tap",
+      "Logins for your staff, with each person seeing only what they need",
+      "Your customers log in from your own website, so there is one place for everything",
+      "Monthly and yearly reports you can save as PDF",
+      "Set up with your current list of customers or students, so you do not start from zero",
+      "A training call for you and your staff",
+      "First month of care free",
+    ],
+    running: {
+      monthly: 999,
+      yearly: 9999,
+      freeMonths: 3,
+      what: "the dashboard, the edit panel, the database, backups and support",
+    },
   },
 ];
 
-/** The block under the three plans. */
+/** The block under the plans. */
 export const FIRST_MONTH_FREE = {
   title: "Your first month is free",
   intro: "It starts on the day the website goes live. For that month:",
@@ -201,18 +244,21 @@ export const FIRST_MONTH_FREE = {
 };
 
 /** The comparison table under the plans. Columns follow PACKAGES order. */
-export const PLAN_COMPARISON: { row: string; values: [string, string, string] }[] = [
-  { row: "Website pages", values: ["1", "5", "5"] },
-  { row: "Facebook, Instagram, YouTube and Google set up", values: ["Yes", "Yes", "Yes"] },
-  { row: "WhatsApp Business catalogue", values: ["No", "Yes", "Yes"] },
-  { row: "Logo and visiting card", values: ["No", "Yes", "Yes"] },
-  { row: "Edit it yourself panel", values: ["No", "No", "Yes"] },
-  { row: "First month free", values: ["Yes", "Yes", "Yes"] },
+export const PLAN_COMPARISON: { row: string; values: string[] }[] = [
+  { row: "Website pages", values: ["1", "5", "5", "5"] },
+  { row: "Facebook, Instagram, YouTube and Google set up", values: ["Yes", "Yes", "Yes", "Yes"] },
+  { row: "WhatsApp Business catalogue", values: ["No", "Yes", "Yes", "Yes"] },
+  { row: "Logo and visiting card", values: ["No", "Yes", "Yes", "Yes"] },
+  { row: "Edit it yourself panel", values: ["No", "No", "Yes", "Yes"] },
+  { row: "Business dashboard: customers, fees, stock, expenses, reports", values: ["No", "No", "No", "Yes"] },
+  { row: "Staff and customer logins", values: ["No", "No", "No", "Yes"] },
+  { row: "Monthly running fee after the free months", values: ["None", "None", "₹299", "₹999"] },
+  { row: "First month of care free", values: ["Yes", "Yes", "Yes", "Yes"] },
 ];
 
 /** The one line under the care plans. */
 export const CARE_OPTIONAL_NOTE =
-  "On the Run it yourself plan you can make your own changes any time, so a Care plan is optional.";
+  "On the Run it yourself and Run my whole business plans you can make your own changes any time, so a Care plan is optional. The small monthly running fee on those two plans is separate from Care: it keeps the panel or dashboard online, and a Care plan is about me doing the work for you.";
 
 /**
  * Nexvora Care — the monthly plans. The AMC, in plain words.
@@ -309,7 +355,7 @@ export const CARE_NOT_INCLUDED = [
   "Shooting or editing the videos: you send the video, I upload it",
   "A new feature, module or payment gateway",
   "An enquiry or contact form",
-  "A booking system, customer logins, or anything with a database behind it (the edit panel in the Run it yourself plan is already included)",
+  "A booking system or anything new with a database behind it (the edit panel and the business dashboard are already part of their plans and are kept running by the plan's monthly fee)",
   "A full redesign of the site",
   "A mobile app or custom software built from scratch",
 ];
@@ -334,7 +380,7 @@ export const NOT_INCLUDED: {
     label: "Hosting and business email",
     note: "A yearly or monthly bill paid to the hosting company, sized to what you actually use.",
     extra:
-      "On the Run it yourself plan, the edit panel and its storage are run by Nexvora and included in the price for the first year. After that, it stays included while you are on any Care plan. If you ever leave, you get all your text and photos to take with you.",
+      "The edit panel (Run it yourself) and the business dashboard (Run my whole business) are run by Nexvora on its own servers and database. They are free for the first three months, then ₹299 or ₹999 a month, stated on the plan card. If you ever leave, you get all your text, photos and business records to take with you.",
   },
   {
     icon: "local_shipping",

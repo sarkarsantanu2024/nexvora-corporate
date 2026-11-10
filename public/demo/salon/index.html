@@ -497,25 +497,31 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   *,*::before,*::after{animation-duration:.001ms !important; transition-duration:.001ms !important}
   .reveal{opacity:1; transform:none}
 }
+/* phone fixes */
+@media (max-width:760px){
+  .hero__badge span{font-size:.75rem;letter-spacing:.12em}
+  .footer .brand__sub{font-size:.75rem;letter-spacing:.16em}
+  .label{font-size:.75rem}
+  .footer h4{font-size:.75rem}
+  .footer__links li + li{margin-top:0}
+  .footer__links a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__contact a{display:inline-flex;align-items:center;min-height:44px;margin-top:.3rem}
+  .footer__sample a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="salon">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- ========================== DEMO BAR =========================== -->
-<div class="demobar">
-  <div class="wrap demobar__inner">
-    <a href="https://www.nexvoratechnologies.co.in/"><b>Sample website</b><span class="demobar__sep">&middot;</span>by Nexvora Technologies</a>
-    <span class="demobar__links">
-      <a class="demobar__note" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-      <a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-    </span>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
 <!-- ============================ HEADER ============================ -->
-<header class="header" id="top">
+<header data-nx-section="top" class="header" id="top">
   <div class="wrap header__inner">
     <a class="brand" href="#top" aria-label="Aalta Beauty Parlour, back to top">
       <svg class="brand__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
@@ -524,8 +530,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         <path d="M20 9c3 3 3 9 0 12-3-3-3-9 0-12Z" fill="currentColor"/>
       </svg>
       <span class="brand__text">
-        <span class="brand__name">Aalta Beauty Parlour</span>
-        <span class="brand__sub">Ladies only &bull; Jadavpur</span>
+        <span data-nx="top.brand-name" class="brand__name">Aalta Beauty Parlour</span>
+        <span data-nx="top.brand-sub" class="brand__sub">Ladies only &bull; Jadavpur</span>
       </span>
     </a>
 
@@ -551,6 +557,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       </a>
     </div>
 
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -576,33 +583,33 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 <main id="main">
 
 <!-- ============================ HERO ============================ -->
-<section class="hero">
+<section data-nx-section="section-2" class="hero">
   <div class="wrap">
     <div class="hero__grid">
       <div class="reveal">
-        <p class="eyebrow">Hair &bull; Skin &bull; Bridal &bull; Mehendi</p>
-        <h1>Look your best,<br>for <em>every</em> occasion.</h1>
-        <p class="lede">A ladies-only parlour in Jadavpur, open since 2011. Haircuts, facials, threading, hair spa, mehendi and bridal make-up, at prices written on the wall. Send a WhatsApp message and we will hold a chair for you.</p>
+        <p data-nx="section-2.eyebrow" class="eyebrow">Hair &bull; Skin &bull; Bridal &bull; Mehendi</p>
+        <h1 data-nx="section-2.h1">Look your best,<br>for <em>every</em> occasion.</h1>
+        <p data-nx="section-2.lede" class="lede">A ladies-only parlour in Jadavpur, open since 2011. Haircuts, facials, threading, hair spa, mehendi and bridal make-up, at prices written on the wall. Send a WhatsApp message and we will hold a chair for you.</p>
         <div class="btn-row">
           <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
-          <a class="btn btn--ghost" href="#prices">See the price list</a>
+          <a data-nx="section-2.button" class="btn btn--ghost" href="#prices">See the price list</a>
         </div>
-        <ul class="hero__facts">
-          <li><b>Since 2011</b><span>In Jadavpur</span></li>
-          <li><b>Ladies only</b><span>Staff and customers</span></li>
-          <li><b>7 days</b><span>Open every day</span></li>
-          <li><b>2 brides</b><span>A day, no more</span></li>
+        <ul data-nx-list="section-2.hero-facts" class="hero__facts">
+          <li data-nx-item><b data-nx-f="b">Since 2011</b><span data-nx-f="span">In Jadavpur</span></li>
+          <li data-nx-item><b data-nx-f="b">Ladies only</b><span data-nx-f="span">Staff and customers</span></li>
+          <li data-nx-item><b data-nx-f="b">7 days</b><span data-nx-f="span">Open every day</span></li>
+          <li data-nx-item><b data-nx-f="b">2 brides</b><span data-nx-f="span">A day, no more</span></li>
         </ul>
       </div>
 
       <div class="hero__figure reveal">
-        <div class="hero__badge"><b>₹99</b><span>Eyebrow threading</span></div>
+        <div class="hero__badge"><b data-nx="section-2.b">₹99</b><span data-nx="section-2.span">Eyebrow threading</span></div>
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph frame">
-          <img src="/demo/salon/images/hero.jpg" alt="A young woman with a fresh layered haircut, smiling in the salon chair" width="1200" height="1800" fetchpriority="high" decoding="async">
+          <img data-nx="section-2.photo" src="/demo/salon/images/hero.jpg" alt="A young woman with a fresh layered haircut, smiling in the salon chair" width="1200" height="1800" fetchpriority="high" decoding="async">
         </figure>
         <figure class="ph hero__inset">
-          <img src="/demo/salon/images/bridal-eyeliner.jpg" alt="Our make-up artist shaping a bride's eyebrow with a fine brush" width="800" height="1199" loading="lazy" decoding="async">
+          <img data-nx="section-2.photo2" src="/demo/salon/images/bridal-eyeliner.jpg" alt="Our make-up artist shaping a bride's eyebrow with a fine brush" width="800" height="1199" loading="lazy" decoding="async">
         </figure>
       </div>
     </div>
@@ -610,150 +617,150 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ SERVICES ============================ -->
-<section class="section section--deep" id="services">
+<section data-nx-section="services" class="section section--deep" id="services">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">What we do</p>
-      <h2 class="h-lg">Six things, done properly</h2>
-      <p class="lede">No long menu. These are the services our customers come back for, and we keep practising them.</p>
+      <p data-nx="services.eyebrow" class="eyebrow">What we do</p>
+      <h2 data-nx="services.h2" class="h-lg">Six things, done properly</h2>
+      <p data-nx="services.lede" class="lede">No long menu. These are the services our customers come back for, and we keep practising them.</p>
     </div>
 
-    <div class="services">
-      <article class="svc reveal">
+    <div data-nx-list="services.services" class="services">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="6.5" cy="17.5" r="2.5"/><path d="M8.5 8.3 20 18M8.5 15.7 20 6"/></svg></div>
-        <h3>Haircut and styling</h3>
-        <p>Trims, layers, step cuts, kids' cuts, blow-dry and ironing. We cut dry first so you see the length before it is gone.</p>
-        <span class="svc__from">From ₹250</span>
+        <h3 data-nx-f="h3">Haircut and styling</h3>
+        <p data-nx-f="p">Trims, layers, step cuts, kids' cuts, blow-dry and ironing. We cut dry first so you see the length before it is gone.</p>
+        <span data-nx-f="span" class="svc__from">From ₹250</span>
       </article>
-      <article class="svc reveal">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 3c-3.5 4-6 7-6 10.5a6 6 0 0 0 12 0C18 10 15.5 7 12 3Z"/><path d="M9.5 14.5c.4 1.5 1.3 2.4 2.8 2.8"/></svg></div>
-        <h3>Facial and clean-up</h3>
-        <p>Fruit, gold, de-tan and oxygen facials, 45 to 75 minutes. A clean-up when you only have half an hour.</p>
-        <span class="svc__from">From ₹450</span>
+        <h3 data-nx-f="h3">Facial and clean-up</h3>
+        <p data-nx-f="p">Fruit, gold, de-tan and oxygen facials, 45 to 75 minutes. A clean-up when you only have half an hour.</p>
+        <span data-nx-f="span" class="svc__from">From ₹450</span>
       </article>
-      <article class="svc reveal">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 20 14 10l4-1 1-4-5 1L4 16v4Z"/><path d="m12 8 4 4"/></svg></div>
-        <h3>Bridal make-up</h3>
-        <p>HD and airbrush make-up for the wedding and the reception, with saree draping and hair. One trial is part of the package.</p>
-        <span class="svc__from">From ₹8,500</span>
+        <h3 data-nx-f="h3">Bridal make-up</h3>
+        <p data-nx-f="p">HD and airbrush make-up for the wedding and the reception, with saree draping and hair. One trial is part of the package.</p>
+        <span data-nx-f="span" class="svc__from">From ₹8,500</span>
       </article>
-      <article class="svc reveal">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 21v-5a4 4 0 0 1 8 0v5"/><path d="M12 12V3M9 6l3-3 3 3"/><path d="M6 21h12"/></svg></div>
-        <h3>Mehendi</h3>
-        <p>Natural cone mehendi for Eid, Karwa Chauth, Pujo and weddings. Both hands, feet and full bridal designs.</p>
-        <span class="svc__from">From ₹300</span>
+        <h3 data-nx-f="h3">Mehendi</h3>
+        <p data-nx-f="p">Natural cone mehendi for Eid, Karwa Chauth, Pujo and weddings. Both hands, feet and full bridal designs.</p>
+        <span data-nx-f="span" class="svc__from">From ₹300</span>
       </article>
-      <article class="svc reveal">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M3 12c3-4 6-6 9-6s6 2 9 6c-3 4-6 6-9 6s-6-2-9-6Z"/><circle cx="12" cy="12" r="2.5"/></svg></div>
-        <h3>Threading and waxing</h3>
-        <p>Eyebrows, upper lip, forehead and full face threading. Honey and rica wax for arms, legs and full body.</p>
-        <span class="svc__from">From ₹99</span>
+        <h3 data-nx-f="h3">Threading and waxing</h3>
+        <p data-nx-f="p">Eyebrows, upper lip, forehead and full face threading. Honey and rica wax for arms, legs and full body.</p>
+        <span data-nx-f="span" class="svc__from">From ₹99</span>
       </article>
-      <article class="svc reveal">
+      <article data-nx-item class="svc reveal">
         <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M7 4v6a5 5 0 0 0 10 0V4"/><path d="M12 15v5M9 20h6"/></svg></div>
-        <h3>Hair spa and colour</h3>
-        <p>Deep-conditioning spa, keratin, smoothening, global colour and highlights. We do a patch test the day before any colour.</p>
-        <span class="svc__from">From ₹900</span>
+        <h3 data-nx-f="h3">Hair spa and colour</h3>
+        <p data-nx-f="p">Deep-conditioning spa, keratin, smoothening, global colour and highlights. We do a patch test the day before any colour.</p>
+        <span data-nx-f="span" class="svc__from">From ₹900</span>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ============================ PRICES ============================ -->
-<section class="section" id="prices">
+<section data-nx-section="prices" class="section" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <p class="eyebrow">Price list</p>
-      <h2 class="h-lg">The same prices as on our wall</h2>
-      <p class="lede">What you see here is what you pay at the counter. No hidden product charge, no surprise at billing.</p>
+      <p data-nx="prices.eyebrow" class="eyebrow">Price list</p>
+      <h2 data-nx="prices.h2" class="h-lg">The same prices as on our wall</h2>
+      <p data-nx="prices.lede" class="lede">What you see here is what you pay at the counter. No hidden product charge, no surprise at billing.</p>
     </div>
 
     <div class="prices">
       <div class="pricecol reveal">
-        <h3>Hair</h3>
-        <ul>
-          <li><span>Haircut, any style</span><i></i><b>₹350</b></li>
-          <li><span>Kids' haircut (under 10)</span><i></i><b>₹250</b></li>
-          <li><span>Blow-dry</span><i></i><b>₹300</b></li>
-          <li><span>Hair ironing</span><i></i><b>₹500</b></li>
-          <li><span>Hair spa <small>Shoulder length</small></span><i></i><b>₹900</b></li>
-          <li><span>Global colour <small>Ammonia-free</small></span><i></i><b>₹1,800</b></li>
-          <li><span>Highlights, 10 streaks</span><i></i><b>₹1,500</b></li>
-          <li><span>Keratin <small>Shoulder length</small></span><i></i><b>₹4,500</b></li>
+        <h3 data-nx="prices.h3">Hair</h3>
+        <ul data-nx-list="prices.list">
+          <li data-nx-item><span data-nx-f="span">Haircut, any style</span><i></i><b data-nx-f="b">₹350</b></li>
+          <li data-nx-item><span data-nx-f="span">Kids' haircut (under 10)</span><i></i><b data-nx-f="b">₹250</b></li>
+          <li data-nx-item><span data-nx-f="span">Blow-dry</span><i></i><b data-nx-f="b">₹300</b></li>
+          <li data-nx-item><span data-nx-f="span">Hair ironing</span><i></i><b data-nx-f="b">₹500</b></li>
+          <li data-nx-item><span data-nx-f="span">Hair spa <small>Shoulder length</small></span><i></i><b data-nx-f="b">₹900</b></li>
+          <li data-nx-item><span data-nx-f="span">Global colour <small>Ammonia-free</small></span><i></i><b data-nx-f="b">₹1,800</b></li>
+          <li data-nx-item><span data-nx-f="span">Highlights, 10 streaks</span><i></i><b data-nx-f="b">₹1,500</b></li>
+          <li data-nx-item><span data-nx-f="span">Keratin <small>Shoulder length</small></span><i></i><b data-nx-f="b">₹4,500</b></li>
         </ul>
       </div>
       <div class="pricecol reveal">
-        <h3>Skin</h3>
-        <ul>
-          <li><span>Clean-up</span><i></i><b>₹450</b></li>
-          <li><span>Fruit facial</span><i></i><b>₹750</b></li>
-          <li><span>De-tan facial</span><i></i><b>₹950</b></li>
-          <li><span>Gold facial</span><i></i><b>₹1,400</b></li>
-          <li><span>Oxygen facial</span><i></i><b>₹1,800</b></li>
-          <li><span>Bleach, face and neck</span><i></i><b>₹350</b></li>
-          <li><span>Face pack, add-on</span><i></i><b>₹150</b></li>
+        <h3 data-nx="prices.h32">Skin</h3>
+        <ul data-nx-list="prices.list2">
+          <li data-nx-item><span data-nx-f="span">Clean-up</span><i></i><b data-nx-f="b">₹450</b></li>
+          <li data-nx-item><span data-nx-f="span">Fruit facial</span><i></i><b data-nx-f="b">₹750</b></li>
+          <li data-nx-item><span data-nx-f="span">De-tan facial</span><i></i><b data-nx-f="b">₹950</b></li>
+          <li data-nx-item><span data-nx-f="span">Gold facial</span><i></i><b data-nx-f="b">₹1,400</b></li>
+          <li data-nx-item><span data-nx-f="span">Oxygen facial</span><i></i><b data-nx-f="b">₹1,800</b></li>
+          <li data-nx-item><span data-nx-f="span">Bleach, face and neck</span><i></i><b data-nx-f="b">₹350</b></li>
+          <li data-nx-item><span data-nx-f="span">Face pack, add-on</span><i></i><b data-nx-f="b">₹150</b></li>
         </ul>
       </div>
       <div class="pricecol reveal">
-        <h3>Threading, waxing, nails</h3>
-        <ul>
-          <li><span>Eyebrows</span><i></i><b>₹99</b></li>
-          <li><span>Upper lip or forehead</span><i></i><b>₹50</b></li>
-          <li><span>Full face threading</span><i></i><b>₹250</b></li>
-          <li><span>Full arms wax <small>Honey</small></span><i></i><b>₹350</b></li>
-          <li><span>Full legs wax <small>Honey</small></span><i></i><b>₹500</b></li>
-          <li><span>Rica wax, full arms</span><i></i><b>₹600</b></li>
-          <li><span>Manicure</span><i></i><b>₹450</b></li>
-          <li><span>Pedicure</span><i></i><b>₹550</b></li>
+        <h3 data-nx="prices.h33">Threading, waxing, nails</h3>
+        <ul data-nx-list="prices.list3">
+          <li data-nx-item><span data-nx-f="span">Eyebrows</span><i></i><b data-nx-f="b">₹99</b></li>
+          <li data-nx-item><span data-nx-f="span">Upper lip or forehead</span><i></i><b data-nx-f="b">₹50</b></li>
+          <li data-nx-item><span data-nx-f="span">Full face threading</span><i></i><b data-nx-f="b">₹250</b></li>
+          <li data-nx-item><span data-nx-f="span">Full arms wax <small>Honey</small></span><i></i><b data-nx-f="b">₹350</b></li>
+          <li data-nx-item><span data-nx-f="span">Full legs wax <small>Honey</small></span><i></i><b data-nx-f="b">₹500</b></li>
+          <li data-nx-item><span data-nx-f="span">Rica wax, full arms</span><i></i><b data-nx-f="b">₹600</b></li>
+          <li data-nx-item><span data-nx-f="span">Manicure</span><i></i><b data-nx-f="b">₹450</b></li>
+          <li data-nx-item><span data-nx-f="span">Pedicure</span><i></i><b data-nx-f="b">₹550</b></li>
         </ul>
       </div>
       <div class="pricecol reveal">
-        <h3>Make-up and mehendi</h3>
-        <ul>
-          <li><span>Party make-up</span><i></i><b>₹2,000</b></li>
-          <li><span>Engagement make-up</span><i></i><b>₹4,500</b></li>
-          <li><span>Saree draping</span><i></i><b>₹300</b></li>
-          <li><span>Hairstyle, bun or braid</span><i></i><b>₹500</b></li>
-          <li><span>Mehendi, both hands</span><i></i><b>₹300</b></li>
-          <li><span>Mehendi, hands and feet</span><i></i><b>₹600</b></li>
-          <li><span>Bridal mehendi</span><i></i><b>₹2,500</b></li>
+        <h3 data-nx="prices.h34">Make-up and mehendi</h3>
+        <ul data-nx-list="prices.list4">
+          <li data-nx-item><span data-nx-f="span">Party make-up</span><i></i><b data-nx-f="b">₹2,000</b></li>
+          <li data-nx-item><span data-nx-f="span">Engagement make-up</span><i></i><b data-nx-f="b">₹4,500</b></li>
+          <li data-nx-item><span data-nx-f="span">Saree draping</span><i></i><b data-nx-f="b">₹300</b></li>
+          <li data-nx-item><span data-nx-f="span">Hairstyle, bun or braid</span><i></i><b data-nx-f="b">₹500</b></li>
+          <li data-nx-item><span data-nx-f="span">Mehendi, both hands</span><i></i><b data-nx-f="b">₹300</b></li>
+          <li data-nx-item><span data-nx-f="span">Mehendi, hands and feet</span><i></i><b data-nx-f="b">₹600</b></li>
+          <li data-nx-item><span data-nx-f="span">Bridal mehendi</span><i></i><b data-nx-f="b">₹2,500</b></li>
         </ul>
       </div>
     </div>
 
-    <p class="prices__note">Prices include GST. Hair prices are for shoulder length; longer hair costs a little more and we tell you the figure before we start. Prices last revised January 2026.</p>
+    <p data-nx="prices.prices-note" class="prices__note">Prices include GST. Hair prices are for shoulder length; longer hair costs a little more and we tell you the figure before we start. Prices last revised January 2026.</p>
   </div>
 </section>
 
 <!-- ============================ BRIDAL ============================ -->
-<section class="section section--blush" id="bridal">
+<section data-nx-section="bridal" class="section section--blush" id="bridal">
   <div class="wrap">
     <div class="bridal__grid">
       <div class="bridal__media reveal">
         <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
         <figure class="ph">
-          <img src="/demo/salon/images/bengali-bride.jpg" alt="A Bengali bride in red Benarasi with mukut, chandan on the forehead and gold jewellery" width="1200" height="1600" loading="lazy" decoding="async">
+          <img data-nx="bridal.photo" src="/demo/salon/images/bengali-bride.jpg" alt="A Bengali bride in red Benarasi with mukut, chandan on the forehead and gold jewellery" width="1200" height="1600" loading="lazy" decoding="async">
         </figure>
       </div>
 
       <div class="reveal">
-        <p class="eyebrow">Bridal package</p>
-        <h2 class="h-lg">Your wedding day, in two hands you trust</h2>
-        <p class="lede">We take two brides a day, no more, so nobody is rushed. The same artist does your trial and your wedding. Bengali, Marwari and Punjabi bridal looks, with chandan work and traditional hair.</p>
+        <p data-nx="bridal.eyebrow" class="eyebrow">Bridal package</p>
+        <h2 data-nx="bridal.h2" class="h-lg">Your wedding day, in two hands you trust</h2>
+        <p data-nx="bridal.lede" class="lede">We take two brides a day, no more, so nobody is rushed. The same artist does your trial and your wedding. Bengali, Marwari and Punjabi bridal looks, with chandan work and traditional hair.</p>
 
         <div class="pkg">
-          <div class="pkg__row pkg__row--head"><h3>Full bridal, wedding day</h3><b>₹18,000</b></div>
-          <ul class="pkg__list">
-            <li>HD or airbrush make-up, your choice</li>
-            <li>Hairstyle with fresh gajra and all pins</li>
-            <li>Saree or lehenga draping, dupatta setting</li>
-            <li>Chandan or alta work on the forehead and feet</li>
-            <li>One full trial, two weeks before</li>
-            <li>Touch-up kit to carry to the venue</li>
+          <div class="pkg__row pkg__row--head"><h3 data-nx="bridal.h3">Full bridal, wedding day</h3><b data-nx="bridal.b">₹18,000</b></div>
+          <ul data-nx-list="bridal.pkg-list" class="pkg__list">
+            <li data-nx-f="li" data-nx-item>HD or airbrush make-up, your choice</li>
+            <li data-nx-f="li" data-nx-item>Hairstyle with fresh gajra and all pins</li>
+            <li data-nx-f="li" data-nx-item>Saree or lehenga draping, dupatta setting</li>
+            <li data-nx-f="li" data-nx-item>Chandan or alta work on the forehead and feet</li>
+            <li data-nx-f="li" data-nx-item>One full trial, two weeks before</li>
+            <li data-nx-f="li" data-nx-item>Touch-up kit to carry to the venue</li>
           </ul>
-          <div class="pkg__row"><span>Reception make-up, same bride</span><b>₹8,500</b></div>
-          <div class="pkg__row"><span>Bridal mehendi, hands and feet</span><b>₹2,500</b></div>
-          <div class="pkg__row"><span>Pre-bridal: 3 facials, 2 hair spas, waxing</span><b>₹6,000</b></div>
+          <div class="pkg__row"><span data-nx="bridal.span">Reception make-up, same bride</span><b data-nx="bridal.b2">₹8,500</b></div>
+          <div class="pkg__row"><span data-nx="bridal.span2">Bridal mehendi, hands and feet</span><b data-nx="bridal.b3">₹2,500</b></div>
+          <div class="pkg__row"><span data-nx="bridal.span3">Pre-bridal: 3 facials, 2 hair spas, waxing</span><b data-nx="bridal.b4">₹6,000</b></div>
         </div>
 
         <div class="btn-row">
@@ -762,32 +769,32 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       </div>
     </div>
 
-    <div class="steps">
-      <article class="step reveal">
-        <figure class="ph"><img src="/demo/salon/images/bridal-makeup-artist.jpg" alt="Our artist brushing blush on a bride in a blue and red silk saree" width="1200" height="1200" loading="lazy" decoding="async"></figure>
-        <div class="step__body"><span class="step__num">01</span><h3>The trial</h3><p>Two weeks before. Bring your blouse and jewellery. We photograph the look so it is repeated exactly.</p></div>
+    <div data-nx-list="bridal.steps" class="steps">
+      <article data-nx-item class="step reveal">
+        <figure class="ph"><img data-nx-f="photo" src="/demo/salon/images/bridal-makeup-artist.jpg" alt="Our artist brushing blush on a bride in a blue and red silk saree" width="1200" height="1200" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span data-nx-f="span" class="step__num">01</span><h3 data-nx-f="h3">The trial</h3><p data-nx-f="p">Two weeks before. Bring your blouse and jewellery. We photograph the look so it is repeated exactly.</p></div>
       </article>
-      <article class="step reveal">
-        <figure class="ph"><img src="/demo/salon/images/haldi-bride.jpg" alt="A bride laughing at her haldi ceremony in yellow and pink" width="1200" height="800" loading="lazy" decoding="async"></figure>
-        <div class="step__body"><span class="step__num">02</span><h3>Pre-bridal</h3><p>Three sittings in the month before: facials, hair spa and waxing, timed so your skin is calm on the day.</p></div>
+      <article data-nx-item class="step reveal">
+        <figure class="ph"><img data-nx-f="photo" src="/demo/salon/images/haldi-bride.jpg" alt="A bride laughing at her haldi ceremony in yellow and pink" width="1200" height="800" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span data-nx-f="span" class="step__num">02</span><h3 data-nx-f="h3">Pre-bridal</h3><p data-nx-f="p">Three sittings in the month before: facials, hair spa and waxing, timed so your skin is calm on the day.</p></div>
       </article>
-      <article class="step reveal">
-        <figure class="ph"><img src="/demo/salon/images/mehendi-bridal-arms.jpg" alt="A bride holding mehendi-covered arms across her face, the design running to the elbow" width="1200" height="1599" loading="lazy" decoding="async"></figure>
-        <div class="step__body"><span class="step__num">03</span><h3>Mehendi</h3><p>Two days before, at your home or ours. Natural cone, no chemical dye, dark colour by the wedding morning.</p></div>
+      <article data-nx-item class="step reveal">
+        <figure class="ph"><img data-nx-f="photo" src="/demo/salon/images/mehendi-bridal-arms.jpg" alt="A bride holding mehendi-covered arms across her face, the design running to the elbow" width="1200" height="1599" loading="lazy" decoding="async"></figure>
+        <div class="step__body"><span data-nx-f="span" class="step__num">03</span><h3 data-nx-f="h3">Mehendi</h3><p data-nx-f="p">Two days before, at your home or ours. Natural cone, no chemical dye, dark colour by the wedding morning.</p></div>
       </article>
     </div>
   </div>
 </section>
 
 <!-- ============================ BAND ============================ -->
-<section class="band">
+<section data-nx-section="section-6" class="band">
   <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
   <figure class="band__bg">
-    <img src="/demo/salon/images/bride-red-band.jpg" alt="A bride in red velvet with kundan jewellery, looking down and smiling" width="1600" height="1067" loading="lazy" decoding="async">
+    <img data-nx="section-6.photo" src="/demo/salon/images/bride-red-band.jpg" alt="A bride in red velvet with kundan jewellery, looking down and smiling" width="1600" height="1067" loading="lazy" decoding="async">
   </figure>
   <div class="wrap band__inner">
-    <h2 class="band__line reveal">Wedding dates fill up <em>early</em>.</h2>
-    <p class="reveal">November to February and the Baisakh weddings go first. Message us with your date and we will tell you the same day if it is free. A ₹2,000 advance holds it.</p>
+    <h2 data-nx="section-6.band-line" class="band__line reveal">Wedding dates fill up <em>early</em>.</h2>
+    <p data-nx="section-6.p" class="reveal">November to February and the Baisakh weddings go first. Message us with your date and we will tell you the same day if it is free. A ₹2,000 advance holds it.</p>
     <div class="btn-row reveal">
       <a class="btn btn--light" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask about a date</a>
       <a class="btn btn--outline-light" href="tel:+919804243159">Call us</a>
@@ -796,75 +803,75 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ HYGIENE ============================ -->
-<section class="section" id="hygiene">
+<section data-nx-section="hygiene" class="section" id="hygiene">
   <div class="wrap hyg__grid">
     <div class="reveal">
-      <p class="eyebrow">Hygiene</p>
-      <h2 class="h-lg">Five things we do for every customer</h2>
-      <p class="lede">You should not have to ask. These are the rules in our parlour, and you are welcome to watch us follow them.</p>
-      <ol class="facts">
-        <li><span class="n">1</span><div><h3>A fresh towel and cape, every time</h3><p>Washed at 60°C after one use. Nothing is reused between customers.</p></div></li>
-        <li><span class="n">2</span><div><h3>Steel tools go in the steriliser</h3><p>Scissors, tweezers, combs and nail tools sit in the UV cabinet between customers.</p></div></li>
-        <li><span class="n">3</span><div><h3>Wax is never double-dipped</h3><p>One spatula, one dip, in the bin. Strips come out of a sealed pack in front of you.</p></div></li>
-        <li><span class="n">4</span><div><h3>Sealed products, opened in front of you</h3><p>Facial kits and colour tubes are opened at your chair. The empty pack goes home with you if you want it.</p></div></li>
-        <li><span class="n">5</span><div><h3>Ladies-only staff and floor</h3><p>No men on the floor at any time, including delivery. The door is curtained from the street.</p></div></li>
+      <p data-nx="hygiene.eyebrow" class="eyebrow">Hygiene</p>
+      <h2 data-nx="hygiene.h2" class="h-lg">Five things we do for every customer</h2>
+      <p data-nx="hygiene.lede" class="lede">You should not have to ask. These are the rules in our parlour, and you are welcome to watch us follow them.</p>
+      <ol data-nx-list="hygiene.facts" class="facts">
+        <li data-nx-item><span data-nx-f="n" class="n">1</span><div><h3 data-nx-f="h3">A fresh towel and cape, every time</h3><p data-nx-f="p">Washed at 60°C after one use. Nothing is reused between customers.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">2</span><div><h3 data-nx-f="h3">Steel tools go in the steriliser</h3><p data-nx-f="p">Scissors, tweezers, combs and nail tools sit in the UV cabinet between customers.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">3</span><div><h3 data-nx-f="h3">Wax is never double-dipped</h3><p data-nx-f="p">One spatula, one dip, in the bin. Strips come out of a sealed pack in front of you.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">4</span><div><h3 data-nx-f="h3">Sealed products, opened in front of you</h3><p data-nx-f="p">Facial kits and colour tubes are opened at your chair. The empty pack goes home with you if you want it.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">5</span><div><h3 data-nx-f="h3">Ladies-only staff and floor</h3><p data-nx-f="p">No men on the floor at any time, including delivery. The door is curtained from the street.</p></div></li>
       </ol>
     </div>
     <div class="hyg__media reveal">
       <!-- REPLACE WITH APPROVED CLIENT IMAGES -->
       <figure class="ph">
-        <img src="/demo/salon/images/makeup-station.jpg" alt="Our make-up artist working at a client's eye with a clean brush, the station laid out behind" width="1200" height="1799" loading="lazy" decoding="async">
+        <img data-nx="hygiene.photo" src="/demo/salon/images/makeup-station.jpg" alt="Our make-up artist working at a client's eye with a clean brush, the station laid out behind" width="1200" height="1799" loading="lazy" decoding="async">
       </figure>
     </div>
   </div>
 </section>
 
 <!-- ============================ GALLERY ============================ -->
-<section class="section section--deep" id="gallery">
+<section data-nx-section="gallery" class="section section--deep" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">From our chairs</p>
-      <h2 class="h-lg">Recent work</h2>
-      <p class="lede">Photographed in the parlour with permission. No filters.</p>
+      <p data-nx="gallery.eyebrow" class="eyebrow">From our chairs</p>
+      <h2 data-nx="gallery.h2" class="h-lg">Recent work</h2>
+      <p data-nx="gallery.lede" class="lede">Photographed in the parlour with permission. No filters.</p>
     </div>
-    <div class="gallery">
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/hair-curls.jpg" alt="Soft brown curls after a blow-dry" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Blow-dry, soft curls</figcaption></figure>
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/hair-highlights.jpg" alt="Caramel highlights on long dark hair" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Caramel highlights</figcaption></figure>
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/kids-haircut.jpg" alt="A little girl grinning after her first short haircut" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Kids' cut</figcaption></figure>
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/bridal-bun-gajra.jpg" alt="A bridal bun with jasmine gajra, roses and a pearl juda pin" width="800" height="533" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Bridal bun with gajra</figcaption></figure>
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/mehendi-bangles.jpg" alt="Mehendi on a hand wearing gold and blue bangles" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Mehendi, both hands</figcaption></figure>
-      <figure class="gallery__item reveal"><div class="ph"><img src="/demo/salon/images/bridal-tikka-makeup.jpg" alt="Eyeliner being drawn on a bride wearing a gold maang tikka" width="1200" height="800" loading="lazy" decoding="async"></div><figcaption class="gallery__cap">Bridal eye make-up</figcaption></figure>
+    <div data-nx-list="gallery.gallery" class="gallery">
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/hair-curls.jpg" alt="Soft brown curls after a blow-dry" width="1200" height="1800" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Blow-dry, soft curls</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/hair-highlights.jpg" alt="Caramel highlights on long dark hair" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Caramel highlights</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/kids-haircut.jpg" alt="A little girl grinning after her first short haircut" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Kids' cut</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/bridal-bun-gajra.jpg" alt="A bridal bun with jasmine gajra, roses and a pearl juda pin" width="800" height="533" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Bridal bun with gajra</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/mehendi-bangles.jpg" alt="Mehendi on a hand wearing gold and blue bangles" width="800" height="1200" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Mehendi, both hands</figcaption></figure>
+      <figure data-nx-item class="gallery__item reveal"><div class="ph"><img data-nx-f="photo" src="/demo/salon/images/bridal-tikka-makeup.jpg" alt="Eyeliner being drawn on a bride wearing a gold maang tikka" width="1200" height="800" loading="lazy" decoding="async"></div><figcaption data-nx-f="figcaption" class="gallery__cap">Bridal eye make-up</figcaption></figure>
     </div>
   </div>
 </section>
 
 <!-- ============================ QUOTES ============================ -->
-<section class="section">
+<section data-nx-section="section-9" class="section">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">In their words</p>
-      <h2 class="h-lg">Two customers</h2>
+      <p data-nx="section-9.eyebrow" class="eyebrow">In their words</p>
+      <h2 data-nx="section-9.h2" class="h-lg">Two customers</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="quote reveal">
-        <p>"My daughter's wedding make-up was exactly what we saw at the trial. Not one thing different. That is why I keep going back."</p>
-        <footer><b>Sumitra</b>, Jadavpur, customer since 2013</footer>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">"My daughter's wedding make-up was exactly what we saw at the trial. Not one thing different. That is why I keep going back."</p>
+        <footer><b data-nx-f="b">Sumitra</b>, Jadavpur, customer since 2013</footer>
       </blockquote>
-      <blockquote class="quote reveal">
-        <p>"I asked for the price before the facial and paid the same price after. In Kolkata that is rarer than it should be."</p>
-        <footer><b>Nazia</b>, Garia</footer>
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">"I asked for the price before the facial and paid the same price after. In Kolkata that is rarer than it should be."</p>
+        <footer><b data-nx-f="b">Nazia</b>, Garia</footer>
       </blockquote>
     </div>
   </div>
 </section>
 
 <!-- ============================ VISIT ============================ -->
-<section class="section section--deep" id="visit">
+<section data-nx-section="visit" class="section section--deep" id="visit">
   <div class="wrap visit__grid">
     <div class="reveal">
-      <p class="eyebrow">Visit</p>
-      <h2 class="h-lg">Two minutes from Jadavpur 8B bus stand</h2>
-      <address class="address">
+      <p data-nx="visit.eyebrow" class="eyebrow">Visit</p>
+      <h2 data-nx="visit.h2" class="h-lg">Two minutes from Jadavpur 8B bus stand</h2>
+      <address data-nx="visit.address" class="address">
         <span class="label">Address</span>
         41A Raja Subodh Mullick Road<br>
         Jadavpur, Kolkata 700032<br>
@@ -872,17 +879,17 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         First floor, above the pharmacy. Lift available.
       </address>
       <table class="hours">
-        <caption class="label" style="text-align:left">Opening hours</caption>
-        <tbody>
-          <tr><td>Monday to Saturday</td><td>10:00 am – 8:00 pm</td></tr>
-          <tr><td>Sunday</td><td>10:00 am – 5:00 pm</td></tr>
-          <tr><td>Bridal appointments</td><td>From 5:00 am by booking</td></tr>
+        <caption data-nx="visit.label" class="label" style="text-align:left">Opening hours</caption>
+        <tbody data-nx-list="visit.list">
+          <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:00 am – 8:00 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am – 5:00 pm</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Bridal appointments</td><td data-nx-f="td2">From 5:00 am by booking</td></tr>
         </tbody>
       </table>
-      <p class="contact-note">Walk-ins are welcome for threading and haircuts. For facials, spa, colour and make-up, please book a slot on WhatsApp so there is no waiting.</p>
+      <p data-nx="visit.p" class="contact-note">Walk-ins are welcome for threading and haircuts. For facials, spa, colour and make-up, please book a slot on WhatsApp so there is no waiting.</p>
       <div class="btn-row">
         <a class="btn btn--ink" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a slot</a>
-        <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
+        <a data-nx="visit.button" class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
       </div>
     </div>
     <div class="map reveal">
@@ -892,17 +899,17 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- ============================ FINAL CTA ============================ -->
-<section class="section section--ink final">
+<section data-nx-section="section-11" class="section section--ink final">
   <div class="wrap">
     <div class="head head--center reveal">
-      <p class="eyebrow">Appointment</p>
-      <h2 class="h-lg">Message us. We reply within the hour.</h2>
-      <p class="lede">Tell us the service and a time that suits you. We confirm on WhatsApp and keep the chair ready.</p>
+      <p data-nx="section-11.eyebrow" class="eyebrow">Appointment</p>
+      <h2 data-nx="section-11.h2" class="h-lg">Message us. We reply within the hour.</h2>
+      <p data-nx="section-11.lede" class="lede">Tell us the service and a time that suits you. We confirm on WhatsApp and keep the chair ready.</p>
       <div class="btn-row">
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Aalta%20Beauty%20Parlour%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
         <a class="btn btn--outline-light" href="tel:+919804243159">Call +91 98042 43159</a>
       </div>
-      <p class="final__place">Jadavpur &bull; Kolkata 700032</p>
+      <p data-nx="section-11.final-place" class="final__place">Jadavpur &bull; Kolkata 700032</p>
     </div>
   </div>
 </section>
@@ -910,7 +917,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </main>
 
 <!-- ============================ FOOTER ============================ -->
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
@@ -921,11 +928,11 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
             <path d="M20 9c3 3 3 9 0 12-3-3-3-9 0-12Z" fill="currentColor"/>
           </svg>
           <span class="brand__text">
-            <span class="brand__name">Aalta Beauty Parlour</span>
-            <span class="brand__sub">Ladies only &bull; Jadavpur</span>
+            <span data-nx="footer.brand-name" class="brand__name">Aalta Beauty Parlour</span>
+            <span data-nx="footer.brand-sub" class="brand__sub">Ladies only &bull; Jadavpur</span>
           </span>
         </a>
-        <p class="footer__tag">Hair, skin, mehendi and bridal make-up since 2011.</p>
+        <p data-nx="footer.footer-tag" class="footer__tag">Hair, skin, mehendi and bridal make-up since 2011.</p>
       </div>
 
       <nav aria-label="Footer">
@@ -940,17 +947,17 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       </nav>
 
       <div class="footer__contact">
-        <h4>Visit</h4>
-        <address>
+        <h4 data-nx="footer.h4">Visit</h4>
+        <address data-nx="footer.address">
           41A Raja Subodh Mullick Road<br>
           Jadavpur, Kolkata 700032<br>
           Mon–Sat 10 am – 8 pm &bull; Sun 10 am – 5 pm
         </address>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
+        <a data-nx="footer.button" href="https://www.google.com/maps/search/?api=1&amp;query=41A%20Raja%20Subodh%20Mullick%20Road%2C%20Jadavpur%2C%20Kolkata%20700032" target="_blank" rel="noopener">Get directions</a>
       </div>
 
       <div>
-        <h4>Follow</h4>
+        <h4 data-nx="footer.h42">Follow</h4>
         <div class="socials">
           <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
@@ -965,7 +972,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       </div>
     </div>
 
-    <p class="footer__bottom">&copy; 2026 Aalta Beauty Parlour. All rights reserved.</p>
+    <p data-nx="footer.footer-bottom" class="footer__bottom">&copy; 2026 Aalta Beauty Parlour. All rights reserved.</p>
     <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. <a href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>.</p>
   </div>
 </footer>
@@ -1093,5 +1100,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   }
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,1884 @@
+{
+  "site": "furniture",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bosu Kaath Ghar",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:900"
+        },
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Every piece we sell",
+            "bn": "Every piece we sell"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "make",
+      "label": {
+        "en": "Six things we make every week",
+        "bn": "Six things we make every week"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1144"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:534"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:533"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:450"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1035"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "from6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p7",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "sizes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizes2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizes3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizes4",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizes5",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizes6",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "label": {
+        "en": "Draw it on paper. We will make it in wood",
+        "bn": "Draw it on paper. We will make it in wood"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "proc",
+          "label": {
+            "en": "Draw it on paper. We will make it in wood",
+            "bn": "Draw it on paper. We will make it in wood"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "when",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workshop",
+      "label": {
+        "en": "Behind the showroom, eleven carpenters and a wood yard",
+        "bn": "Behind the showroom, eleven carpenters and a wood yard"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "shop-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        },
+        {
+          "key": "shop-facts",
+          "label": {
+            "en": "Behind the showroom, eleven carpenters and a wood yard",
+            "bn": "Behind the showroom, eleven carpenters and a wood yard"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "What common pieces cost",
+        "bn": "What common pieces cost"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td15",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td16",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td19",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td20",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td21",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td22",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td23",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td24",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td25",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td26",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td27",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td28",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "td29",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "td30",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td31",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "guide-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From the workshop to people’s homes",
+        "bn": "From the workshop to people’s homes"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "From the workshop to people’s homes",
+            "bn": "From the workshop to people’s homes"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1151"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "label": {
+        "en": "We stay responsible for what we make",
+        "bn": "We stay responsible for what we make"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "care",
+          "label": {
+            "en": "We stay responsible for what we make",
+            "bn": "We stay responsible for what we make"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "Section 9",
+        "bn": "অংশ 9"
+      },
+      "fields": [],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Showroom and workshop at Behala Chowrasta",
+        "bn": "Showroom and workshop at Behala Chowrasta"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "label": {
+        "en": "Send us a photo of the piece you want",
+        "bn": "Send us a photo of the piece you want"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Workshop",
+            "bn": "Workshop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bosu Kaath Ghar",
+      "small": "Furniture & workshop · Behala"
+    },
+    "top": {
+      "hero-img": {
+        "src": "/demo/furniture/images/hero.jpg",
+        "alt": "A wooden sofa set with cushions in a living room with a brick wall, in a Kerala home"
+      },
+      "hero-eyebrow": "Behala · Own workshop · Since 1979",
+      "h1": "Furniture made to last <em>forty years,</em> not four.",
+      "p": "Beds, almirahs, dining sets and anything you can draw on paper. Seasoned Sheesham and teak, joined by hand in our workshop behind the showroom, polished and fitted in your home.",
+      "button": "See what we make",
+      "h2": "Every piece we sell",
+      "list": {
+        "items": [
+          {
+            "span": "Wood",
+            "b": "Seasoned Sheesham or teak"
+          },
+          {
+            "span": "Joints",
+            "b": "Mortise and tenon, no nails"
+          },
+          {
+            "span": "Polish warranty",
+            "b": "10 years"
+          },
+          {
+            "span": "Delivery",
+            "b": "Free within Kolkata"
+          }
+        ]
+      }
+    },
+    "make": {
+      "tag": "What we make",
+      "h2": "Six things we make every week.",
+      "p": "Starting prices are for Sheesham in a standard size with our regular melamine polish. Teak costs about 60% more. Any size can be changed.",
+      "photo": {
+        "src": "/demo/furniture/images/bed-frame.jpg",
+        "alt": "A wooden double bed with colourful bedding in an Indian bedroom"
+      },
+      "h3": "Beds",
+      "from": "From<b>&#8377;24,000</b>",
+      "p2": "Box beds with hydraulic or side storage, plain slatted beds, and carved headboards for the main bedroom.",
+      "photo2": {
+        "src": "/demo/furniture/images/almirah-sunlit.jpg",
+        "alt": "A wooden wardrobe and open shelves beside a bed in a bright bedroom"
+      },
+      "h32": "Almirahs",
+      "from2": "From<b>&#8377;32,000</b>",
+      "p3": "Two, three and four door. Locker inside, mirror on the door if you want it, hanging rod and shelves set to your height.",
+      "photo3": {
+        "src": "/demo/furniture/images/dining-set.jpg",
+        "alt": "An Indian family talking over dinner at a wooden dining table"
+      },
+      "h33": "Dining sets",
+      "from3": "From<b>&#8377;28,000</b>",
+      "p4": "Four, six and eight seater. Cushioned or plain seats. Round tables and bench sets made on request.",
+      "photo4": {
+        "src": "/demo/furniture/images/sofa-wooden.jpg",
+        "alt": "A living room with Sheesham wood panelling and a sofa"
+      },
+      "h34": "Sofa sets",
+      "from4": "From<b>&#8377;36,000</b>",
+      "p5": "Wooden frame sofas with loose cushions, 3+1+1 or 3+2. You pick the cushion fabric from our book or bring your own.",
+      "photo5": {
+        "src": "/demo/furniture/images/cabinet-drawers.jpg",
+        "alt": "Carved wooden cabinets and tables in a traditional Indian room"
+      },
+      "h35": "Cabinets & sideboards",
+      "from5": "From<b>&#8377;14,000</b>",
+      "p6": "Crockery units, TV units, shoe racks, chests of drawers and puja cabinets. Glass doors on request.",
+      "photo6": {
+        "src": "/demo/furniture/images/study-table.jpg",
+        "alt": "A couple working at a wooden table with a glass-front cabinet behind them"
+      },
+      "h36": "Study & work tables",
+      "from6": "From<b>&#8377;9,500</b>",
+      "p7": "Children’s study tables, office desks with drawers and cable holes, and dressing tables with a mirror.",
+      "sizes": {
+        "items": [
+          {
+            "span": "Single"
+          },
+          {
+            "span": "Queen 5×6.5"
+          },
+          {
+            "span": "King 6×6.5"
+          }
+        ]
+      },
+      "sizes2": {
+        "items": [
+          {
+            "span": "2 door"
+          },
+          {
+            "span": "3 door"
+          },
+          {
+            "span": "4 door"
+          }
+        ]
+      },
+      "sizes3": {
+        "items": [
+          {
+            "span": "4 seater"
+          },
+          {
+            "span": "6 seater"
+          },
+          {
+            "span": "8 seater"
+          }
+        ]
+      },
+      "sizes4": {
+        "items": [
+          {
+            "span": "3+1+1"
+          },
+          {
+            "span": "3+2"
+          },
+          {
+            "span": "L-shape"
+          }
+        ]
+      },
+      "sizes5": {
+        "items": [
+          {
+            "span": "3 ft"
+          },
+          {
+            "span": "4 ft"
+          },
+          {
+            "span": "6 ft"
+          }
+        ]
+      },
+      "sizes6": {
+        "items": [
+          {
+            "span": "3 ft"
+          },
+          {
+            "span": "4 ft"
+          },
+          {
+            "span": "5 ft"
+          }
+        ]
+      }
+    },
+    "custom": {
+      "tag": "Custom orders",
+      "h2": "Draw it on paper. We will make it in wood.",
+      "p": "About half our work is made to order: a bed that fits an odd corner, an almirah that goes up to the ceiling, a dining table for a family of ten. This is how it goes, start to finish.",
+      "proc": {
+        "items": [
+          {
+            "when": "Day 1",
+            "h3": "Measure",
+            "p": "We come to your home with a tape and a notebook, or you send measurements and photos on WhatsApp."
+          },
+          {
+            "when": "Day 2 to 3",
+            "h3": "Drawing and quote",
+            "p": "A sketch with sizes, the wood, the polish shade and a fixed price. Nothing changes after you say yes."
+          },
+          {
+            "when": "Day 4",
+            "h3": "Pick the wood",
+            "p": "Come to the workshop and choose the planks yourself if you like. 50% advance to begin."
+          },
+          {
+            "when": "Week 1 to 4",
+            "h3": "Making",
+            "p": "Cut, joined and assembled by hand. We send photos every week so you see it take shape."
+          },
+          {
+            "when": "Week 5",
+            "h3": "Polish",
+            "p": "Three coats of melamine or PU, sanded between each. You approve the shade on a sample first."
+          },
+          {
+            "when": "Week 6",
+            "h3": "Delivery and fitting",
+            "p": "Our own men deliver, assemble and fit in your room. Balance paid when you are happy."
+          }
+        ]
+      }
+    },
+    "workshop": {
+      "tag": "The workshop",
+      "h2": "Behind the showroom, eleven carpenters and a wood yard.",
+      "p": "Nirmal Bosu started with two carpenters in a tin shed in 1979. The shed is now a 4,000 sq ft workshop, but the way of working has not changed. Wood is bought in planks, stacked and air-dried in our own yard for at least eight months before anyone cuts it. That is why our doors do not warp in the monsoon.",
+      "p2": "Joints are mortise and tenon, glued and pegged. No nails in the frame, no particle board hidden behind a veneer. Open any drawer and you will see wood all the way through.",
+      "shop-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/furniture/images/workshop-carpenter.jpg",
+              "alt": "A carpenter planing a plank at his bench in the workshop"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/chisel-carving.jpg",
+              "alt": "Close-up of a carpenter's hands checking the corner joint of a wooden frame"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/workshop-sanding.jpg",
+              "alt": "A senior carpenter sanding wooden frames in a traditional workshop"
+            }
+          }
+        ]
+      },
+      "shop-facts": {
+        "items": [
+          {
+            "b": "11",
+            "span": "Carpenters and polishers"
+          },
+          {
+            "b": "8 mo",
+            "span": "Minimum wood seasoning"
+          },
+          {
+            "b": "45",
+            "span": "Years in Behala"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "tag": "Price guide",
+      "h2": "What common pieces cost.",
+      "p": "Honest ballpark figures so you can plan. The final price depends on size, wood and polish, and is fixed in writing before we start.",
+      "th": "Item",
+      "th2": "Size",
+      "th3": "Sheesham",
+      "th4": "Teak",
+      "td": "Queen box bed<small>Hydraulic storage, plain headboard</small>",
+      "td2": "5 × 6.5 ft",
+      "td3": "₹34,000",
+      "td4": "₹56,000",
+      "td5": "King bed, slatted<small>No storage, carved headboard</small>",
+      "td6": "6 × 6.5 ft",
+      "td7": "₹38,000",
+      "td8": "₹62,000",
+      "td9": "Three-door almirah<small>Locker, mirror, 5 shelves, hanging rod</small>",
+      "td10": "5 × 7 ft",
+      "td11": "₹48,000",
+      "td12": "₹78,000",
+      "td13": "Six-seater dining set<small>Table plus six cushioned chairs</small>",
+      "td14": "6 × 3 ft",
+      "td15": "₹42,000",
+      "td16": "₹68,000",
+      "td17": "Sofa set 3+1+1<small>Frame and cushions, fabric from our book</small>",
+      "td18": "Standard",
+      "td19": "₹46,000",
+      "td20": "₹72,000",
+      "td21": "Crockery unit<small>Two glass doors, three drawers</small>",
+      "td22": "4 × 6 ft",
+      "td23": "₹26,000",
+      "td24": "₹41,000",
+      "td25": "Children&rsquo;s study table<small>Two drawers, one shelf</small>",
+      "td26": "3 × 2 ft",
+      "td27": "₹9,500",
+      "td28": "₹15,000",
+      "td29": "Re-polish an old bed or almirah<small>Strip, sand, three coats</small>",
+      "td30": "Any",
+      "td31": "₹6,000 to ₹12,000",
+      "guide-note": "Prices include delivery and fitting within Kolkata. GST extra. Old furniture taken in part exchange at a fair price."
+    },
+    "gallery": {
+      "tag": "Recent work",
+      "h2": "From the workshop to people’s homes.",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/furniture/images/carving-india.jpg",
+              "alt": "A craftsman carving an intricate wooden design"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/bed-canopy.jpg",
+              "alt": "A carved wooden headboard above a neatly made bed"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/carved-floral.jpg",
+              "alt": "Carved wood with a floral design"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/almirah-vintage.jpg",
+              "alt": "A traditional carved wooden storage chest with brass fittings"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/chisels-wall.jpg",
+              "alt": "An artisan carving an intricate wooden panel"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/showroom-antique.jpg",
+              "alt": "A woman in a green sari dusting a carved antique cabinet"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/dining-window.jpg",
+              "alt": "A family gathered around the dining table at home"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/furniture/images/workshop-measuring.jpg",
+              "alt": "A senior carpenter sitting with finished wooden frames in the workshop"
+            }
+          }
+        ]
+      }
+    },
+    "care": {
+      "tag": "After it is in your home",
+      "h2": "We stay responsible for what we make.",
+      "care": {
+        "items": [
+          {
+            "h3": "Ten-year polish warranty",
+            "p": "If the polish peels, cracks or clouds in ten years, we re-polish it free. Scratches from use are repaired at cost."
+          },
+          {
+            "h3": "Repair and re-polish",
+            "p": "Grandmother’s almirah, a wobbly dining chair, a bed with a cracked plank. Bring it in or we collect it. Most repairs done in a week."
+          },
+          {
+            "h3": "Shifting house?",
+            "p": "We dismantle, move and refit our furniture when you change flats, within Kolkata, for a flat ₹1,500 per piece."
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "quotes": {
+        "items": [
+          {
+            "p": "Our dining table is twenty-two years old and still does not have a single loose joint. We went back last year for the children’s beds.",
+            "span": "· Sakher Bazar"
+          },
+          {
+            "p": "Needed an almirah to fit a 4 ft 2 in gap exactly. They measured, drew it, and it slid in with a finger’s width to spare.",
+            "span": "· New Alipore"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "tag": "Visit",
+      "h2": "Showroom and workshop at Behala Chowrasta.",
+      "p": "On Diamond Harbour Road, next to the petrol pump. The showroom is in front; walk through to see the workshop at the back. Parking inside the gate.",
+      "b": "Address",
+      "p2": "118 Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Hours",
+      "b3": "Phone and WhatsApp",
+      "p3": "Send photos of what you want and we reply with a price the same day.",
+      "hours": {
+        "items": [
+          {
+            "td": "Wednesday to Monday",
+            "td2": "10:30 am – 8:30 pm"
+          },
+          {
+            "td": "Tuesday",
+            "td2": "Closed"
+          },
+          {
+            "td": "Home measurement visits",
+            "td2": "Any day, by appointment"
+          }
+        ]
+      }
+    },
+    "quote": {
+      "h2": "Send us a photo of the piece you want.",
+      "p": "A picture from a magazine, a screenshot, a rough sketch. Add the room size and we will send back a price and a date, usually within a few hours."
+    },
+    "footer": {
+      "b": "Bosu Kaath Ghar",
+      "small": "Furniture & workshop · Behala",
+      "p": "Solid wood furniture made in our own workshop since 1979. Beds, almirahs, dining sets and custom pieces, delivered and fitted across Kolkata.",
+      "h4": "Workshop",
+      "h42": "Visit",
+      "li": "118 Diamond Harbour Road, Behala Chowrasta, Kolkata 700034",
+      "li2": "Wed–Mon 10:30 am – 8:30 pm · Tuesday closed",
+      "list": {
+        "items": [
+          {
+            "button": "What we make"
+          },
+          {
+            "button": "Custom orders"
+          },
+          {
+            "button": "Price guide"
+          },
+          {
+            "button": "Repair and re-polish"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bosu Kaath Ghar sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Bosu Kaath Ghar | Sheesham and Teak Furniture Made in Behala",
+      "description": "Beds, almirahs, dining sets and custom wooden furniture made in our own workshop in Behala, Kolkata. Seasoned Sheesham and teak, ten-year polish warranty."
+    }
+  }
+}

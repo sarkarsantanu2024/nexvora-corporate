@@ -1,0 +1,2064 @@
+{
+  "site": "printing-press",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Mudrika Printing Works",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:900"
+        },
+        {
+          "key": "hero-ticket",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Visiting cards by evening. Flex by tomorrow",
+            "bn": "Visiting cards by evening. Flex by tomorrow"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "label": {
+        "en": "Eight jobs we do every day of the week",
+        "bn": "Eight jobs we do every day of the week"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sd",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "sd2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1500"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "sd3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "sd4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p8",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p9",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "rates",
+      "label": {
+        "en": "The more you print, the less each one costs",
+        "bn": "The more you print, the less each one costs"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "from",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rn",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "from2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rn2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "from3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rn3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "from4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rn4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "from5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rn5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list5",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sameday",
+      "label": {
+        "en": "Send by 11, collect by 7. Here is how the day goes",
+        "bn": "Send by 11, collect by 7. Here is how the day goes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "Send by 11, collect by 7. Here is how the day goes",
+            "bn": "Send by 11, collect by 7. Here is how the day goes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "t",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "label": {
+        "en": "What a print-ready file looks like",
+        "bn": "What a print-ready file looks like"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "files-list",
+          "label": {
+            "en": "What a print-ready file looks like",
+            "bn": "What a print-ready file looks like"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "ok",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Not sure about any of this? Send what you have",
+            "bn": "Not sure about any of this? Send what you have"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": {
+        "en": "Collect at the counter, or we bring it to the shop",
+        "bn": "Collect at the counter, or we bring it to the shop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "dlv",
+          "label": {
+            "en": "Collect at the counter, or we bring it to the shop",
+            "bn": "Collect at the counter, or we bring it to the shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Machines, paper and ink",
+        "bn": "Machines, paper and ink"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "Machines, paper and ink",
+            "bn": "Machines, paper and ink"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:900"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "Two regulars",
+        "bn": "Two regulars"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two regulars",
+            "bn": "Two regulars"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On A.P.C. Road, opposite Sealdah station's south gate",
+        "bn": "On A.P.C. Road, opposite Sealdah station's south gate"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send the file now. Collect it this evening",
+        "bn": "Send the file now. Collect it this evening"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Printing",
+            "bn": "Printing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Mudrika Printing Works",
+      "small": "Offset · Digital · Flex"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/printing-press/images/hero.jpg",
+        "alt": "Printed sheets coming off an offset press with a stack of finished sheets below"
+      },
+      "hero-ticket": "Same-day printing<small>Send the file by 11 am, collect by 7 pm</small>",
+      "kicker": "Sealdah · Printing press and flex shop",
+      "h1": "Visiting cards by evening. <span>Flex by tomorrow.</span>",
+      "lede": "An offset press, two digital machines and a flex printer under one roof on A.P.C. Road. Visiting cards, bill books, flex banners, wedding cards, stickers, letterheads and pamphlets for shops, schools, clubs and clinics across Kolkata since 1987.",
+      "button": "See bulk rates",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "1987",
+            "span": "Printing on this street since"
+          },
+          {
+            "b": "Same day",
+            "span": "Cards, stickers, pamphlets, letterheads"
+          },
+          {
+            "b": "₹12",
+            "span": "Per sq ft for star flex, frame extra"
+          }
+        ]
+      }
+    },
+    "products": {
+      "kicker": "What we print",
+      "h2": "Eight jobs we do every day of the week.",
+      "p": "Bring a file, a sample, or a rough sketch on paper. Our designer sets it up for ₹100 to ₹300 depending on the job, and you approve a proof on WhatsApp before anything is printed.",
+      "sd": "Same day",
+      "photo": {
+        "src": "/demo/printing-press/images/visiting-cards.jpg",
+        "alt": "A stack of blank white visiting cards on a two-tone background"
+      },
+      "h3": "Visiting cards",
+      "p2": "300 gsm matte or glossy, single or both sides. Spot UV, rounded corners and textured card on request.",
+      "b": "100 cards from ₹250",
+      "h32": "Bill books and challans",
+      "p3": "Duplicate or triplicate with carbonless paper, numbered, perforated and bound. Your GST number and logo on every leaf.",
+      "b2": "10 books from ₹1,200",
+      "photo2": {
+        "src": "/demo/printing-press/images/posters-printing.jpg",
+        "alt": "Colourful posters being printed on a wide-format machine"
+      },
+      "h33": "Flex banners and hoardings",
+      "p4": "Star flex, backlit flex and vinyl, any size up to 10 feet wide. With or without wooden frame, with eyelets for tying.",
+      "b3": "From ₹12 per sq ft",
+      "photo3": {
+        "src": "/demo/printing-press/images/wedding-card.jpg",
+        "alt": "A Bengali wedding card with gold border laid on a red Benarasi saree with bangles"
+      },
+      "h34": "Wedding and invitation cards",
+      "p5": "Bengali, English or both. Over 200 designs in the shop, or we print yours. Annaprashan, upanayan and birthday cards too.",
+      "b4": "From ₹18 per card",
+      "sd2": "Same day",
+      "photo4": {
+        "src": "/demo/printing-press/images/stickers.jpg",
+        "alt": "Sheets of colourful printed stickers on a white table"
+      },
+      "h35": "Stickers and labels",
+      "p6": "Vinyl, paper and transparent. Die-cut to any shape. Product labels, jar labels, shop-front lettering, QR code stickers.",
+      "b5": "A3 vinyl sheet ₹60",
+      "sd3": "Same day",
+      "h36": "Letterheads and envelopes",
+      "p7": "100 gsm bond or executive bond paper, offset printed so the colour never smudges. Matching envelopes in three sizes.",
+      "b6": "500 letterheads ₹1,200",
+      "sd4": "Same day",
+      "photo5": {
+        "src": "/demo/printing-press/images/paper-sheets.jpg",
+        "alt": "Curved sheets of blue, magenta and yellow paper"
+      },
+      "h37": "Pamphlets and leaflets",
+      "p8": "A5 and A4 on 130 gsm art paper, single or both sides. For shop openings, tuition centres, pujo committees and elections.",
+      "b7": "1,000 A5 from ₹1,600",
+      "photo6": {
+        "src": "/demo/printing-press/images/pantone.jpg",
+        "alt": "A stack of colour swatch guides on a desk"
+      },
+      "h38": "Brochures, menus and catalogues",
+      "p9": "Folded brochures, laminated restaurant menus, school prospectuses and product catalogues. Colour matched to your logo.",
+      "b8": "Quoted per job"
+    },
+    "rates": {
+      "kicker": "Bulk rates",
+      "h2": "The more you print, the less each one costs.",
+      "p": "Open a product to see the rate card. Prices include GST and are for print-ready files. Design, if we do it, is ₹100 to ₹300 extra. Rates updated January 2026.",
+      "span": "Visiting cards, 300 gsm, both sides",
+      "from": "from ₹1.10 a card",
+      "th": "Quantity",
+      "th2": "Finish",
+      "th3": "Price",
+      "rn": "Same-day for up to 1,000 cards if the file reaches us by 11 am. Spot UV and textured card take two working days.",
+      "span2": "Bill books, duplicate, 50 sets per book",
+      "from2": "from ₹100 a book",
+      "th4": "Quantity",
+      "th5": "Size",
+      "th6": "Price per book",
+      "rn2": "Serial numbering, perforation and a hard cover are included. Ready in two working days. Repeat orders are kept on file; just send the starting number.",
+      "span3": "Flex banners, per square foot",
+      "from3": "from ₹12 per sq ft",
+      "th7": "Material",
+      "th8": "Good for",
+      "th9": "Per sq ft",
+      "rn3": "Flex up to 6 ft by 10 ft is printed in a day. Eyelets every two feet are free. Fitting at your shop in central and north Kolkata ₹300 to ₹600.",
+      "span4": "Wedding and invitation cards",
+      "from4": "from ₹18 a card",
+      "th10": "Quantity",
+      "th11": "Type",
+      "th12": "Price per card",
+      "rn4": "Bengali typesetting is done in the shop. Proof on WhatsApp within a day; printing takes five to seven working days after you approve.",
+      "span5": "Pamphlets, letterheads and stickers",
+      "from5": "from ₹1.60 a pamphlet",
+      "th13": "Item",
+      "th14": "Spec",
+      "th15": "Price",
+      "rn5": "Pamphlets, letterheads and stickers are same-day jobs up to 2,000 pieces when the file arrives by 11 am.",
+      "list": {
+        "items": [
+          {
+            "td": "100",
+            "td2": "Matte or glossy lamination",
+            "td3": "₹250"
+          },
+          {
+            "td": "500",
+            "td2": "Matte or glossy lamination",
+            "td3": "₹700"
+          },
+          {
+            "td": "1,000",
+            "td2": "Matte or glossy lamination",
+            "td3": "₹1,100"
+          },
+          {
+            "td": "1,000",
+            "td2": "Spot UV on one side",
+            "td3": "₹1,900"
+          },
+          {
+            "td": "1,000",
+            "td2": "Textured or linen card",
+            "td3": "₹2,400"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "td": "10 books",
+            "td2": "A5, duplicate, carbonless",
+            "td3": "₹120"
+          },
+          {
+            "td": "25 books",
+            "td2": "A5, duplicate, carbonless",
+            "td3": "₹110"
+          },
+          {
+            "td": "50 books",
+            "td2": "A5, duplicate, carbonless",
+            "td3": "₹100"
+          },
+          {
+            "td": "10 books",
+            "td2": "A4, duplicate, carbonless",
+            "td3": "₹190"
+          },
+          {
+            "td": "Any",
+            "td2": "Triplicate, add per book",
+            "td3": "+ ₹40"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "td": "Star flex",
+            "td2": "Shop boards, pujo pandals, event backdrops",
+            "td3": "₹12"
+          },
+          {
+            "td": "Backlit flex",
+            "td2": "Lit shop signboards",
+            "td3": "₹35"
+          },
+          {
+            "td": "Vinyl on sunboard",
+            "td2": "Clinic and office name plates, standees",
+            "td3": "₹45"
+          },
+          {
+            "td": "Eco-solvent vinyl",
+            "td2": "Glass doors, vehicle sides",
+            "td3": "₹55"
+          },
+          {
+            "td": "Wooden frame, fitted",
+            "td2": "Any flex",
+            "td3": "+ ₹8"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "td": "100",
+            "td2": "Single card with envelope, shop design",
+            "td3": "₹22"
+          },
+          {
+            "td": "300",
+            "td2": "Single card with envelope, shop design",
+            "td3": "₹18"
+          },
+          {
+            "td": "100",
+            "td2": "Folder card with two inserts, shop design",
+            "td3": "₹45"
+          },
+          {
+            "td": "300",
+            "td2": "Folder card with two inserts, shop design",
+            "td3": "₹38"
+          },
+          {
+            "td": "Any",
+            "td2": "Your own design, foil or embossing",
+            "td3": "Quoted"
+          }
+        ]
+      },
+      "list5": {
+        "items": [
+          {
+            "td": "1,000 pamphlets",
+            "td2": "A5, 130 gsm art paper, one side",
+            "td3": "₹1,600"
+          },
+          {
+            "td": "5,000 pamphlets",
+            "td2": "A5, 130 gsm art paper, one side",
+            "td3": "₹5,500"
+          },
+          {
+            "td": "1,000 pamphlets",
+            "td2": "A4, 130 gsm art paper, both sides",
+            "td3": "₹3,800"
+          },
+          {
+            "td": "500 letterheads",
+            "td2": "A4, 100 gsm bond, one colour",
+            "td3": "₹1,200"
+          },
+          {
+            "td": "1,000 letterheads",
+            "td2": "A4, 100 gsm bond, full colour",
+            "td3": "₹2,400"
+          },
+          {
+            "td": "Stickers",
+            "td2": "A3 vinyl sheet, die-cut",
+            "td3": "₹60 a sheet"
+          }
+        ]
+      }
+    },
+    "sameday": {
+      "kicker": "Same-day printing",
+      "h2": "Send by 11, collect by 7. Here is how the day goes.",
+      "p": "For visiting cards, pamphlets, letterheads, stickers and flex up to 6 by 10 feet. Bill books, wedding cards and anything with spot UV or foil need two days or more, and we say so when you send the file.",
+      "tl": {
+        "items": [
+          {
+            "t": "By 11 am",
+            "h3": "File reaches us",
+            "p": "On WhatsApp, email or a pen drive at the counter. We check size, bleed and resolution within the hour."
+          },
+          {
+            "t": "By 12 noon",
+            "h3": "Proof sent to you",
+            "p": "A photo or PDF proof on WhatsApp. You reply \"ok\" or ask for a change. Nothing prints before your ok."
+          },
+          {
+            "t": "12 to 4 pm",
+            "h3": "Printing",
+            "p": "Digital jobs go straight to the machine. Flex prints on the wide-format printer. Offset runs are planned for the next morning."
+          },
+          {
+            "t": "4 to 6 pm",
+            "h3": "Cutting and finishing",
+            "p": "Lamination, cutting, eyelets, framing. Every job is counted and checked before it is packed."
+          },
+          {
+            "t": "By 7 pm",
+            "h3": "Ready to collect",
+            "p": "We message you when it is packed. Collect at the counter or ask for delivery the same evening within 5 km."
+          }
+        ]
+      }
+    },
+    "files": {
+      "kicker": "Sending files",
+      "h2": "What a print-ready file looks like.",
+      "p": "You do not need to know any of this if you want us to design the job. If you have your own designer, give them this list and the job will print right the first time.",
+      "h3": "Not sure about any of this? Send what you have.",
+      "p2": "Most customers send a photo of an old card or a sketch on paper. Our designer sets it up properly, sends a proof, and you approve on WhatsApp.",
+      "files-list": {
+        "items": [
+          {
+            "ok": "PDF",
+            "b": "PDF first, then CDR, AI or high-resolution JPG",
+            "span": "A PDF with fonts embedded is the safest. CorelDRAW files up to version 2024 and Illustrator files are fine. Word and PowerPoint files are not; we will redo them and charge for design."
+          },
+          {
+            "ok": "300",
+            "b": "300 dpi at the actual print size",
+            "span": "A visiting card file should be 3.5 by 2 inches at 300 dpi. A WhatsApp-forwarded image is usually 72 dpi and will print blurry. For flex, 72 to 100 dpi at full size is enough."
+          },
+          {
+            "ok": "3mm",
+            "b": "3 mm bleed on every side",
+            "span": "If your design has colour to the edge, extend it 3 mm beyond the cut line. Keep text and logos at least 3 mm inside the cut line."
+          },
+          {
+            "ok": "CMYK",
+            "b": "CMYK colour, not RGB",
+            "span": "Screens show RGB, presses print CMYK. Bright blues and greens shift the most. If an exact colour matters, come and see a printed swatch."
+          },
+          {
+            "ok": "Aa",
+            "b": "Fonts converted to curves, or embedded",
+            "span": "Especially for Bengali text. If the font is missing on our machine the letters change. Convert to outlines or send the font file."
+          },
+          {
+            "ok": "#",
+            "b": "Tell us quantity, paper and finish in the message",
+            "span": "One line is enough: \"500 visiting cards, both sides, matte\". We quote within the hour on working days."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Visiting card or sticker design ₹100"
+          },
+          {
+            "li": "Pamphlet, letterhead or bill book design ₹200"
+          },
+          {
+            "li": "Flex or wedding card design ₹300"
+          },
+          {
+            "li": "Two rounds of changes included"
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "kicker": "Collection and delivery",
+      "h2": "Collect at the counter, or we bring it to the shop.",
+      "dlv": {
+        "items": [
+          {
+            "h3": "Collect from Sealdah",
+            "p": "Opposite Sealdah station's south gate, two minutes from the bus stand. Jobs are packed and labelled with your name. Pay on collection, cash or UPI.",
+            "b": "Free"
+          },
+          {
+            "h3": "Delivery within Kolkata",
+            "p": "Our own delivery boy covers central and north Kolkata the same evening and the rest of the city the next morning. Flex with frames goes by tempo.",
+            "b": "₹60 within 5 km · ₹150 anywhere in Kolkata"
+          },
+          {
+            "h3": "Courier outside Kolkata",
+            "p": "Cards, pamphlets and stickers go by courier to anywhere in West Bengal and beyond. Packed flat in board boxes. Tracking number sent on WhatsApp.",
+            "b": "At courier cost, usually ₹120 to ₹400"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Inside the press",
+      "h2": "Machines, paper and ink.",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/rollers.jpg",
+              "alt": "The inking rollers of an offset press, close view"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/cmyk-cartridges.jpg",
+              "alt": "Cyan, magenta, yellow and black ink cartridges inside an open printer"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/cutting-mat.jpg",
+              "alt": "Paper cutters, a loupe and a steel rule on a green cutting mat"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/digital-press.jpg",
+              "alt": "A vinyl cutting plotter with a laptop behind it"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/press-mechanics.jpg",
+              "alt": "Gears and rollers of an industrial printing press"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/printing-press/images/rolled-posters.jpg",
+              "alt": "Rolled posters with coloured edges on a wooden table"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "Customers",
+      "h2": "Two regulars.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I run a medicine shop in Maniktala. Bill books every three months, same design since 2011. I send one WhatsApp with the starting number and they are at my counter in two days.",
+            "span": "· Maniktala, pharmacy owner"
+          },
+          {
+            "p": "Our pujo committee needed a 20 by 10 flex at six in the evening for the next morning. They printed it that night and fitted the frame at the pandal by 9 am. Nobody else would take the job.",
+            "span": "· Beleghata, pujo committee secretary"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the press",
+      "h2": "On A.P.C. Road, opposite Sealdah station's south gate.",
+      "b": "Address",
+      "p": "8 Acharya Prafulla Chandra Road, Sealdah<br>Kolkata 700009",
+      "button": "Get directions →",
+      "b2": "Shop hours",
+      "b3": "Phone",
+      "p2": "WhatsApp files to the same number. Quotes within the hour on working days.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "9:30 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 2:00 pm"
+          },
+          {
+            "td": "Same-day cut-off",
+            "td2": "Files by 11:00 am"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Mudrika Printing Works sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=8%20Acharya%20Prafulla%20Chandra%20Road%2C%20Sealdah%2C%20Kolkata%20700009",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Mudrika Printing Works",
+      "small": "Offset · Digital · Flex",
+      "p": "Visiting cards, bill books, flex, wedding cards, stickers, letterheads and pamphlets. Same-day printing on most jobs. Sealdah since 1987.",
+      "h4": "Printing",
+      "h42": "Find us",
+      "li": "8 A.P.C. Road, Sealdah, Kolkata 700009",
+      "li2": "Mon–Sat 9:30 am – 9 pm · Sun 10 am – 2 pm",
+      "list": {
+        "items": [
+          {
+            "button": "What we print"
+          },
+          {
+            "button": "Bulk rates"
+          },
+          {
+            "button": "Same-day printing"
+          },
+          {
+            "button": "Sending files"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Mudrika Printing Works | Printing Press and Flex Shop in Sealdah, Kolkata",
+      "description": "Visiting cards, bill books, flex banners, wedding cards, stickers, letterheads and pamphlets printed in Sealdah, Kolkata. Same-day printing on most jobs, bulk rates, delivery across the city."
+    }
+  }
+}

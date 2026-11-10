@@ -1,0 +1,1352 @@
+{
+  "site": "pharmacy",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bhattacharya Medical Hall",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-chips",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "More than handing over a strip",
+        "bn": "More than handing over a strip"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "svc",
+          "label": {
+            "en": "More than handing over a strip",
+            "bn": "More than handing over a strip"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "tagp",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": {
+        "en": "Three steps, no app to install",
+        "bn": "Three steps, no app to install"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "flow",
+          "label": {
+            "en": "Three steps, no app to install",
+            "bn": "Three steps, no app to install"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "flow-photo",
+          "label": {
+            "en": "Three steps, no app to install",
+            "bn": "Three steps, no app to install"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "checks",
+      "label": {
+        "en": "Quick checks, so you do not need a clinic visit for a reading",
+        "bn": "Quick checks, so you do not need a clinic visit for a reading"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "checks-list",
+          "label": {
+            "en": "Quick checks, so you do not need a clinic visit for a reading",
+            "bn": "Quick checks, so you do not need a clinic visit for a reading"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "small",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "checks-fig",
+          "label": {
+            "en": "Quick checks, so you do not need a clinic visit for a reading",
+            "bn": "Quick checks, so you do not need a clinic visit for a reading"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "monthly",
+      "label": {
+        "en": "For parents who live alone and children who live far away",
+        "bn": "For parents who live alone and children who live far away"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "fine",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "sub-pts",
+          "label": {
+            "en": "For parents who live alone and children who live far away",
+            "bn": "For parents who live alone and children who live far away"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Monthly box",
+            "bn": "Monthly box"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "label": {
+        "en": "What you will find besides medicines",
+        "bn": "What you will find besides medicines"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "shelf",
+          "label": {
+            "en": "What you will find besides medicines",
+            "bn": "What you will find besides medicines"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:801"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "One counter, three people, every shelf labelled",
+        "bn": "One counter, three people, every shelf labelled"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "One counter, three people, every shelf labelled",
+            "bn": "One counter, three people, every shelf labelled"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "label": {
+        "en": "Two messages from the WhatsApp inbox",
+        "bn": "Two messages from the WhatsApp inbox"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two messages from the WhatsApp inbox",
+            "bn": "Two messages from the WhatsApp inbox"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Diamond Harbour Road, at the Behala Chowrasta bus stop",
+        "bn": "Diamond Harbour Road, at the Behala Chowrasta bus stop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Out of a medicine? Send the photo now",
+        "bn": "Out of a medicine? Send the photo now"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "On this page",
+            "bn": "On this page"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bhattacharya Medical Hall",
+      "small": "Behala · since 1989"
+    },
+    "top": {
+      "hero-open": "<span></span>Open every day, 7:30 am to midnight",
+      "h1": "Your prescription, <em>at your door</em> in under two hours.",
+      "p": "A medicine shop on Diamond Harbour Road since 1989. Send a photo of the prescription on WhatsApp and we deliver across Behala. Generic options, baby products, BP and sugar check at the counter, and a monthly box for parents who live alone.",
+      "photo": {
+        "src": "/demo/pharmacy/images/hero.jpg",
+        "alt": "The pharmacist stands behind the counter with arms folded, shelves of medicine boxes behind him"
+      },
+      "hero-chips": {
+        "items": [
+          {
+            "b": "2 hrs",
+            "span": "Delivery inside Behala"
+          },
+          {
+            "b": "₹0",
+            "span": "Delivery charge above ₹500"
+          },
+          {
+            "b": "36 yrs",
+            "span": "Same family, same corner"
+          },
+          {
+            "b": "Till 12",
+            "span": "Open late, every night"
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we do",
+      "h2": "More than handing over a strip.",
+      "p": "A registered pharmacist is at the counter during all hours. Ask about doses, timings, what goes with food and what does not.",
+      "svc": {
+        "items": [
+          {
+            "h3": "Prescription medicines",
+            "p": "Allopathic medicines of all the usual companies. If something is not in stock we get it by the evening or the next morning and send a message when it arrives.",
+            "tagp": "Bill with batch and expiry"
+          },
+          {
+            "h3": "Home delivery on WhatsApp",
+            "p": "Send a photo of the prescription and your address. We confirm the bill before sending. Delivery inside Behala in two hours, free above ₹500.",
+            "tagp": "7:30 am to 11 pm"
+          },
+          {
+            "h3": "Generic medicines",
+            "p": "Same salt, lower price, from makers we trust. Ask and we show you both options side by side with the price. The choice is yours and your doctor's.",
+            "tagp": "Often 40 to 70% cheaper"
+          },
+          {
+            "h3": "BP and sugar check",
+            "p": "Digital blood pressure and finger-prick sugar at the counter, any time we are open. You get the reading written on a card to show the doctor.",
+            "tagp": "BP free, sugar ₹30"
+          },
+          {
+            "h3": "Baby and mother care",
+            "p": "Formula, diapers, wipes, feeding bottles, oral rehydration, gripe water, nipple shields and the vitamin drops paediatricians prescribe. Pregnancy test kits too.",
+            "tagp": "Diapers by the piece"
+          },
+          {
+            "h3": "Monthly medicine box",
+            "p": "For parents and elderly relatives who take the same medicines every month. We pack, label by time of day and deliver before the old strip runs out.",
+            "tagp": "From ₹99 a month"
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "kicker": "Home delivery",
+      "h2": "Three steps, no app to install.",
+      "p": "<b>Delivery areas:</b> Behala, Sakher Bazar, Parnasree, Barisha, Thakurpukur, James Long Sarani and Taratala. Beyond that, &#8377;40 per delivery, same day.",
+      "flow": {
+        "items": [
+          {
+            "h3": "Send the prescription",
+            "p": "A clear photo on WhatsApp, with your address and the number of days you need. Old prescriptions for regular medicines are fine."
+          },
+          {
+            "h3": "We confirm the bill",
+            "p": "The pharmacist checks the stock and sends the total with each item listed. If a brand is missing we suggest a substitute and wait for your yes."
+          },
+          {
+            "h3": "Delivery in two hours",
+            "p": "Our own delivery boy, in a sealed bag with the printed bill. Pay by cash or UPI at the door. Returns of unopened strips within three days."
+          }
+        ]
+      },
+      "flow-photo": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/shelves-stock.jpg",
+              "alt": "The pharmacist reaches for a medicine box on a high shelf"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/counter-computer.jpg",
+              "alt": "A pharmacist checks stock on the computer at the counter"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/blister-packs.jpg",
+              "alt": "Colourful tablet strips in a row"
+            }
+          }
+        ]
+      }
+    },
+    "checks": {
+      "kicker": "At the counter",
+      "h2": "Quick checks, so you do not need a clinic visit for a reading.",
+      "p": "We write the reading on a card with the date. Bring the card on your next doctor visit. We do not advise changing any dose; that is the doctor's call.",
+      "checks-list": {
+        "items": [
+          {
+            "b": "Blood pressure",
+            "small": "Digital upper-arm machine, seated, after two minutes of rest",
+            "amt": "Free"
+          },
+          {
+            "b": "Blood sugar (random or fasting)",
+            "small": "Finger prick, result in ten seconds",
+            "amt": "₹30"
+          },
+          {
+            "b": "Weight and height",
+            "small": "BMI written on the card",
+            "amt": "Free"
+          },
+          {
+            "b": "Oxygen level and pulse",
+            "small": "Finger pulse oximeter",
+            "amt": "Free"
+          },
+          {
+            "b": "Temperature",
+            "small": "Infrared forehead thermometer",
+            "amt": "Free"
+          },
+          {
+            "b": "Injection by a nurse",
+            "small": "Prescribed injections only, Mon to Sat, 10 am to 1 pm and 6 pm to 8 pm",
+            "amt": "₹50"
+          },
+          {
+            "b": "Nebulisation",
+            "small": "Bring your own medicine or buy here; mask included",
+            "amt": "₹60"
+          }
+        ]
+      },
+      "checks-fig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/bp-reading.jpg",
+              "alt": "A finger presses the button on a digital blood pressure monitor on the counter"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/sugar-check.jpg",
+              "alt": "A gloved hand pricks a fingertip with a lancet pen for a sugar test"
+            }
+          }
+        ]
+      }
+    },
+    "monthly": {
+      "kicker": "Monthly medicine box",
+      "h2": "For parents who live alone and children who live far away.",
+      "p": "Many of our customers are sons and daughters in Bangalore, Pune or abroad, paying for a mother in Behala. The box takes the monthly worry out of it.",
+      "h3": "Monthly box",
+      "amt": "&#8377;99 <small>a month, plus the medicines at shop price</small>",
+      "fine": "About 140 families use the box today. Free for anyone above 80.",
+      "sub-pts": {
+        "items": [
+          {
+            "n": "1",
+            "h3": "Send the prescription once",
+            "p": "We keep it on file and note the doctor's review date. When the prescription is due to be renewed we remind you two weeks before."
+          },
+          {
+            "n": "2",
+            "h3": "Packed by time of day",
+            "p": "Strips are cut and sorted into a weekly pill organiser: morning, afternoon, night. Each medicine's name and purpose is written in Bengali and English on the lid."
+          },
+          {
+            "n": "3",
+            "h3": "Delivered before the last dose",
+            "p": "We deliver on a fixed date each month, three days before the previous box runs out. The delivery boy checks the BP if asked and sends you the reading."
+          },
+          {
+            "n": "4",
+            "h3": "One bill, paid from anywhere",
+            "p": "A UPI link or bank transfer each month, with a photo of the bill and the organiser. No advance, cancel any month."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Pill organiser and labelling"
+          },
+          {
+            "li": "Free delivery on the fixed date"
+          },
+          {
+            "li": "Prescription renewal reminder"
+          },
+          {
+            "li": "BP check at the door on request"
+          },
+          {
+            "li": "WhatsApp photo of every delivery"
+          },
+          {
+            "li": "Generic substitution only if you ask"
+          }
+        ]
+      }
+    },
+    "products": {
+      "kicker": "On the shelves",
+      "h2": "What you will find besides medicines.",
+      "shelf": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/formula-scoop.jpg",
+              "alt": "A scoop of baby formula powder beside a feeding bottle"
+            },
+            "h3": "Baby care",
+            "p": "Formula, diapers, wipes, bottles, rash cream, vitamin drops"
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/bp-monitor.jpg",
+              "alt": "A digital blood pressure monitor on a white table"
+            },
+            "h3": "Home devices",
+            "p": "BP monitors, glucometers and strips, thermometers, oximeters, nebulisers"
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/band-aids.jpg",
+              "alt": "Adhesive bandages on a blue surface"
+            },
+            "h3": "First aid",
+            "p": "Bandages, antiseptic, cotton, crepe bandage, knee caps, lumbar belts"
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/syrup-spoon.jpg",
+              "alt": "Cough syrup being poured into a spoon"
+            },
+            "h3": "Everyday care",
+            "p": "ORS, antacids, cough syrup, pain balm, sanitary pads, adult diapers, sugar-free"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "The shop",
+      "h2": "One counter, three people, every shelf labelled.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/pharmacist-shelf.jpg",
+              "alt": "The pharmacist reads the label on a medicine bottle in front of the shelves"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/capsules.jpg",
+              "alt": "Capsules in a blister strip, close up"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/counter-smile.jpg",
+              "alt": "A smiling pharmacist at the billing counter"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/thermometer-pills.jpg",
+              "alt": "A digital thermometer beside a few capsules on a plate"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pharmacy/images/baby-shoes.jpg",
+              "alt": "A pair of small blue baby shoes"
+            }
+          }
+        ]
+      }
+    },
+    "words": {
+      "kicker": "Customers say",
+      "h2": "Two messages from the WhatsApp inbox.",
+      "quotes": {
+        "items": [
+          {
+            "p": "\"I live in Hyderabad. Ma's box reaches her on the 3rd every month and I get a photo of it on her table. That photo is worth more than the medicines.\"",
+            "span": "· for her mother in Parnasree"
+          },
+          {
+            "p": "\"Fever at 11 at night, the baby's paracetamol was finished. Sent a message, the boy was at the door in 25 minutes. I did not expect that.\"",
+            "span": "· Sakher Bazar"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "Diamond Harbour Road, at the Behala Chowrasta bus stop.",
+      "b": "Address",
+      "p": "118 Diamond Harbour Road, Behala<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Shop hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Drug licence number is displayed at the counter. Pharmacist in charge: Pranab Bhattacharya, B.Pharm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Every day",
+            "td2": "7:30 am – 12:00 midnight"
+          },
+          {
+            "td": "Home delivery",
+            "td2": "7:30 am – 11:00 pm"
+          },
+          {
+            "td": "Nurse for injections",
+            "td2": "Mon–Sat, 10 am – 1 pm, 6 pm – 8 pm"
+          }
+        ]
+      }
+    },
+    "order": {
+      "h2": "Out of a medicine? Send the photo now.",
+      "p": "We reply with the bill in a few minutes and the packet reaches you in under two hours, anywhere in Behala."
+    },
+    "footer": {
+      "b": "Bhattacharya Medical Hall",
+      "small": "Behala · since 1989",
+      "p": "Medicine shop open till midnight. Home delivery on WhatsApp, generic options, counter checks, and a monthly box for the elderly.",
+      "h4": "On this page",
+      "h42": "Find us",
+      "li": "118 Diamond Harbour Road, Behala, Kolkata 700034",
+      "li2": "Every day 7:30 am – 12 midnight",
+      "list": {
+        "items": [
+          {
+            "button": "What we do"
+          },
+          {
+            "button": "Home delivery"
+          },
+          {
+            "button": "Counter checks"
+          },
+          {
+            "button": "Monthly medicine box"
+          },
+          {
+            "button": "On the shelves"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bhattacharya Medical Hall sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=118%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Bhattacharya Medical Hall | Medicine Shop in Behala, Kolkata",
+      "description": "Medicine shop on Diamond Harbour Road, Behala, open till midnight. Upload a prescription on WhatsApp for home delivery, generic medicines, baby products, BP and sugar check at the counter, monthly medicine box for the elderly."
+    }
+  }
+}

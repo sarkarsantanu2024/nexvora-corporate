@@ -1,0 +1,1556 @@
+{
+  "site": "garage",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Biswas Motor Works",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "hero-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Service done right, back by evening",
+            "bn": "Service done right, back by evening"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Every job a two-wheeler or car needs, under one shed",
+        "bn": "Every job a two-wheeler or car needs, under one shed"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1594"
+        },
+        {
+          "key": "zig-n",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-n2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1796"
+        },
+        {
+          "key": "zig-n3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-n4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Scooter and bike servicing",
+            "bn": "Scooter and bike servicing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Car servicing and AC",
+            "bn": "Car servicing and AC"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Tyres, battery and brakes",
+            "bn": "Tyres, battery and brakes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Denting, painting and wash",
+            "bn": "Denting, painting and wash"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prices",
+      "label": {
+        "en": "Labour charges by vehicle type",
+        "bn": "Labour charges by vehicle type"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Labour charges by vehicle type",
+            "bn": "Labour charges by vehicle type"
+          },
+          "min": 1,
+          "max": 22,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td5",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td6",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "ptable-notes",
+          "label": {
+            "en": "Labour charges by vehicle type",
+            "bn": "Labour charges by vehicle type"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "check",
+      "label": {
+        "en": "The 10-point check",
+        "bn": "The 10-point check"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1712"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "check-free",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "The 10-point check",
+            "bn": "The 10-point check"
+          },
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "label": {
+        "en": "Pick-up, spares and insurance",
+        "bn": "Pick-up, spares and insurance"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "figcaption",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "extras-list",
+          "label": {
+            "en": "Pick-up, spares and insurance",
+            "bn": "Pick-up, spares and insurance"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Photos from the floor",
+        "bn": "Photos from the floor"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Photos from the floor",
+            "bn": "Photos from the floor"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-8",
+      "label": {
+        "en": "What they say",
+        "bn": "What they say"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "What they say",
+            "bn": "What they say"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Diamond Harbour Road, opposite Behala Chowrasta bus stop",
+        "bn": "Diamond Harbour Road, opposite Behala Chowrasta bus stop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Book a slot. Drop by 10:30, collect by evening",
+        "bn": "Book a slot. Drop by 10:30, collect by evening"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Garage",
+            "bn": "Garage"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Biswas Motor Works",
+      "small": "Behala · since 2004"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/garage/images/hero.jpg",
+        "alt": "A mechanic bent over an open car bonnet, working on the engine under a lamp"
+      },
+      "hero-tag": "Scooters · Bikes · Cars",
+      "h1": "Service done right, <span>back by evening.</span>",
+      "p": "Twenty-two years on Diamond Harbour Road. Servicing, oil change, brakes, clutch, battery, tyres, denting-painting and car AC. Price by vehicle type, time told before we touch a spanner, and old parts handed back to you.",
+      "button": "See prices by vehicle",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "2 hrs",
+            "span": "Scooter or bike service, while you wait"
+          },
+          {
+            "b": "₹450",
+            "span": "Scooter general service, labour"
+          },
+          {
+            "b": "9 am",
+            "span": "Open Monday to Saturday, till 8 pm"
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we do",
+      "h2": "Every job a two-wheeler or car needs, under one shed.",
+      "photo": {
+        "src": "/demo/garage/images/bike-engine.jpg",
+        "alt": "A mechanic working on a motorcycle engine with the side cover off"
+      },
+      "zig-n": "01",
+      "h3": "Scooter and bike servicing",
+      "p": "General service with engine oil change, air filter clean, chain and brake adjustment, carburettor or injector clean, and a full wash. We work on Honda, TVS, Bajaj, Hero, Suzuki, Yamaha and Royal Enfield.",
+      "photo2": {
+        "src": "/demo/garage/images/oil-check.jpg",
+        "alt": "A mechanic checking the oil level of a car with the bonnet open"
+      },
+      "zig-n2": "02",
+      "h32": "Car servicing and AC",
+      "p2": "Periodic service for hatchbacks, sedans and SUVs: Maruti, Hyundai, Tata, Mahindra, Honda, Toyota, Kia. Oil and filters, brake clean, coolant and brake fluid top-up, scanner check for warning lights, wash and vacuum.",
+      "photo3": {
+        "src": "/demo/garage/images/tyres.jpg",
+        "alt": "A stack of car tyres with an alloy wheel on top in the garage"
+      },
+      "zig-n3": "03",
+      "h33": "Tyres, battery and brakes",
+      "p3": "We stock MRF, CEAT, Apollo and JK tyres for two-wheelers and cars, and Exide and Amaron batteries. Fitting, balancing and alignment on the spot. Brake work uses company pads and shoes, never loose ones.",
+      "photo4": {
+        "src": "/demo/garage/images/car-wash.jpg",
+        "alt": "A customer talking to a mechanic washing her small car outside the garage"
+      },
+      "zig-n4": "04",
+      "h34": "Denting, painting and wash",
+      "p4": "Scratches, dents, bumper cracks and full repaint in a dust-free booth with the original shade code. Scooter panels too. Every job ends with a wash, and cars get an interior vacuum.",
+      "list": {
+        "items": [
+          {
+            "li": "Engine oil and filter"
+          },
+          {
+            "li": "Brake shoes and pads"
+          },
+          {
+            "li": "Clutch plates and cable"
+          },
+          {
+            "li": "Battery test and replacement"
+          },
+          {
+            "li": "Tyre and tube change"
+          },
+          {
+            "li": "Chain sprocket kit"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Engine oil, oil and air filter"
+          },
+          {
+            "li": "AC gas top-up and cooling coil clean"
+          },
+          {
+            "li": "Brake pads and discs"
+          },
+          {
+            "li": "Clutch set and bearing"
+          },
+          {
+            "li": "Battery, alternator, starter"
+          },
+          {
+            "li": "Wheel alignment and balancing"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Tubeless puncture repair"
+          },
+          {
+            "li": "Tyre fitting and balancing"
+          },
+          {
+            "li": "Wheel alignment (cars)"
+          },
+          {
+            "li": "Battery with warranty card"
+          },
+          {
+            "li": "Brake pads, shoes, discs"
+          },
+          {
+            "li": "Brake oil bleed"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "li": "Per-panel dent and paint"
+          },
+          {
+            "li": "Bumper repair"
+          },
+          {
+            "li": "Full body repaint"
+          },
+          {
+            "li": "Scooter panel paint"
+          },
+          {
+            "li": "Headlamp polishing"
+          },
+          {
+            "li": "Foam wash and vacuum"
+          }
+        ]
+      }
+    },
+    "prices": {
+      "kicker": "Price list",
+      "h2": "Labour charges by vehicle type.",
+      "p": "These are our labour charges. Parts and oil are billed at the printed price on the packet, and you get the empty packets and old parts back. Scroll sideways on a phone.",
+      "th": "Job",
+      "th2": "Scooter",
+      "th3": "Bike",
+      "th4": "Hatchback",
+      "th5": "Sedan",
+      "th6": "SUV",
+      "list": {
+        "items": [
+          {
+            "td": "General service <small>Labour only, oil extra</small>",
+            "td2": "₹450",
+            "td3": "₹550",
+            "td4": "₹2,200",
+            "td5": "₹2,800",
+            "td6": "₹3,500"
+          },
+          {
+            "td": "Engine oil change <small>Oil and filter at packet price</small>",
+            "td2": "₹150",
+            "td3": "₹200",
+            "td4": "₹600",
+            "td5": "₹700",
+            "td6": "₹900"
+          },
+          {
+            "td": "Brake pads or shoes <small>Per axle for cars</small>",
+            "td2": "₹200",
+            "td3": "₹250",
+            "td4": "₹900",
+            "td5": "₹1,100",
+            "td6": "₹1,400"
+          },
+          {
+            "td": "Clutch work <small>Plates for two-wheelers, set for cars</small>",
+            "td2": "₹400",
+            "td3": "₹500",
+            "td4": "₹2,500",
+            "td5": "₹3,000",
+            "td6": "₹3,800"
+          },
+          {
+            "td": "Battery fitting <small>Battery at company price, warranty card given</small>",
+            "td2": "₹100",
+            "td3": "₹100",
+            "td4": "₹300",
+            "td5": "₹300",
+            "td6": "₹400"
+          },
+          {
+            "td": "Tyre fitting and balancing <small>Per tyre</small>",
+            "td2": "₹80",
+            "td3": "₹100",
+            "td4": "₹200",
+            "td5": "₹250",
+            "td6": "₹300"
+          },
+          {
+            "td": "Wheel alignment",
+            "td2": "n/a",
+            "td3": "n/a",
+            "td4": "₹450",
+            "td5": "₹500",
+            "td6": "₹600"
+          },
+          {
+            "td": "AC service <small>Gas top-up, coil clean, filter</small>",
+            "td2": "n/a",
+            "td3": "n/a",
+            "td4": "₹1,800",
+            "td5": "₹2,000",
+            "td6": "₹2,500"
+          },
+          {
+            "td": "Denting and painting <small>Per panel, paint included</small>",
+            "td2": "₹600",
+            "td3": "₹800",
+            "td4": "₹2,500",
+            "td5": "₹3,000",
+            "td6": "₹3,500"
+          },
+          {
+            "td": "Foam wash <small>Cars include interior vacuum</small>",
+            "td2": "₹80",
+            "td3": "₹100",
+            "td4": "₹350",
+            "td5": "₹400",
+            "td6": "₹500"
+          },
+          {
+            "td": "Pick-up and drop <small>Within 6 km of Behala</small>",
+            "td2": "₹100",
+            "td3": "₹100",
+            "td4": "₹300",
+            "td5": "₹300",
+            "td6": "₹400"
+          }
+        ]
+      },
+      "ptable-notes": {
+        "items": [
+          {
+            "li": "<b>Estimate before work</b>You get the full estimate on WhatsApp, parts and labour separate. Nothing is replaced without your yes."
+          },
+          {
+            "li": "<b>Old parts returned</b>Every replaced part and every empty oil can goes in a bag with your bill, so you see exactly what was changed."
+          },
+          {
+            "li": "<b>Warranty on labour</b>If a job we did goes wrong within 30 days, we redo it free. Parts carry the maker's warranty."
+          }
+        ]
+      }
+    },
+    "check": {
+      "photo": {
+        "src": "/demo/garage/images/car-check.jpg",
+        "alt": "Two mechanics looking into the engine bay of a car with the bonnet open"
+      },
+      "kicker": "Free with every service",
+      "h2": "The 10-point check.",
+      "p": "Done on every vehicle that comes in, whether for a full service or a puncture. You get a photo of the sheet on WhatsApp with anything that needs attention marked in red. No charge, no pressure to fix it here.",
+      "check-free": "<b>Free</b> &nbsp; Even if you only come for a puncture or a wash.",
+      "list": {
+        "items": [
+          {
+            "li": "Engine oil level and colour<span>Low or black oil is the first sign of trouble</span>"
+          },
+          {
+            "li": "Brake pad and shoe thickness<span>Measured, not guessed</span>"
+          },
+          {
+            "li": "Tyre tread depth and pressure<span>All tyres, including the spare</span>"
+          },
+          {
+            "li": "Battery voltage and terminals<span>Load test, terminals cleaned</span>"
+          },
+          {
+            "li": "All lights and horn<span>Headlamp, indicators, brake light, number plate light</span>"
+          },
+          {
+            "li": "Chain or belt condition<span>Slack, wear, lubrication</span>"
+          },
+          {
+            "li": "Coolant and brake fluid<span>Level and condition (cars)</span>"
+          },
+          {
+            "li": "Suspension and steering play<span>Shockers, bushes, tie rods</span>"
+          },
+          {
+            "li": "Clutch and accelerator cables<span>Free play and fraying</span>"
+          },
+          {
+            "li": "Leaks underneath<span>Oil, coolant, fuel</span>"
+          }
+        ]
+      }
+    },
+    "extras": {
+      "kicker": "Three things customers ask about",
+      "h2": "Pick-up, spares and insurance.",
+      "photo": {
+        "src": "/demo/garage/images/ambassador-tyres.jpg",
+        "alt": "A yellow Ambassador taxi parked beside stacks of tyres outside a Kolkata garage"
+      },
+      "figcaption": "Kolkata's taxis have been coming to this road for tyres for forty years. We learnt the trade here.",
+      "extras-list": {
+        "items": [
+          {
+            "h3": "Pick-up and drop",
+            "p": "Our rider collects your scooter or bike, or a driver collects your car, from your home or office between 9 am and 11 am and brings it back by evening. Within 6 km of the garage: Behala, Thakurpukur, Joka, Taratala, New Alipore, Sakherbazar. Charges are in the price table."
+          },
+          {
+            "h3": "Genuine spares",
+            "p": "Company parts from authorised distributors, with the box and the bill. If a genuine part is out of stock we tell you, and you choose between waiting and a named aftermarket brand. We do not fit unmarked parts."
+          },
+          {
+            "h3": "Insurance claim help",
+            "p": "Had an accident? Bring the car or bike in. We photograph the damage, prepare the estimate in the format the insurer wants, and deal with the surveyor who comes to inspect. Cashless with most major insurers; for others we give you every paper for reimbursement."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "The garage",
+      "h2": "Photos from the floor.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/garage/images/bengali-sign.jpg",
+              "alt": "A mechanic working on a wheel on the ground in front of a wall with a Bengali sign"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/engine-hands.jpg",
+              "alt": "Two mechanics' hands working together inside an engine bay"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/tools.jpg",
+              "alt": "Spanners and hand tools laid out on the workshop bench"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/tyre-shop.jpg",
+              "alt": "A tyre repairer working in front of his shop with a Hindi signboard"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/workshop.jpg",
+              "alt": "A car raised on a lift inside the service bay"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/carburetor.jpg",
+              "alt": "Close-up of a mechanic's hands cleaning a carburettor"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/garage/images/elderly-engine.jpg",
+              "alt": "A senior mechanic working on a two-wheeler engine on the floor"
+            }
+          }
+        ]
+      }
+    },
+    "section-8": {
+      "kicker": "From customers",
+      "h2": "What they say.",
+      "quotes": {
+        "items": [
+          {
+            "p": "My Activa was giving 35 to the litre. After their service and a carburettor clean it does 48. They showed me the old air filter, black as coal, and charged exactly what the board said.",
+            "span": "· Thakurpukur"
+          },
+          {
+            "p": "Someone scraped my Swift in the parking lot. They handled the whole insurance claim, the surveyor came to the garage, and I paid only the ₹1,000 excess. The door colour matches perfectly.",
+            "span": "· New Alipore"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Find the garage",
+      "h2": "Diamond Harbour Road, opposite Behala Chowrasta bus stop.",
+      "b": "Address",
+      "p": "112 Diamond Harbour Road, Behala<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Garage hours",
+      "b3": "Phone",
+      "p2": "WhatsApp a photo of the problem and your vehicle number. We reply within the hour during garage time.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "9:00 am – 8:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "9:00 am – 1:00 pm"
+          },
+          {
+            "td": "Drop for same-day service",
+            "td2": "Before 10:30 am"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Book a slot. Drop by 10:30, collect by evening.",
+      "p": "Send your vehicle type, what needs doing and a day. We confirm the slot, the estimate and whether you want pick-up."
+    },
+    "footer": {
+      "b": "Biswas Motor Works",
+      "small": "Behala · since 2004",
+      "p": "Two-wheeler and car service garage on Diamond Harbour Road. Servicing, brakes, clutch, battery, tyres, denting-painting, AC, pick-up and drop, insurance claim help.",
+      "h4": "Garage",
+      "h42": "Find us",
+      "li": "112 Diamond Harbour Road, Behala, Kolkata 700034",
+      "li2": "Mon–Sat 9 am – 8 pm · Sun 9 am – 1 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Services"
+          },
+          {
+            "button": "Prices by vehicle"
+          },
+          {
+            "button": "10-point free check"
+          },
+          {
+            "button": "Pick-up and insurance"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Biswas Motor Works sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=112%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Biswas Motor Works | Bike, Scooter and Car Service Garage in Behala, Kolkata",
+      "description": "Two-wheeler and car servicing in Behala: oil change, brakes, clutch, battery, tyres, denting-painting, car AC service, pick-up and drop, genuine spares and insurance claim help. Price by vehicle type, time taken told up front."
+    }
+  }
+}

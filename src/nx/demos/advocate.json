@@ -1,0 +1,1394 @@
+{
+  "site": "advocate",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Bhattacharya Law Chamber",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:801"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "areas",
+      "label": {
+        "en": "The matters this chamber handles",
+        "bn": "The matters this chamber handles"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "fee",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "areas-list",
+          "label": {
+            "en": "The matters this chamber handles",
+            "bn": "The matters this chamber handles"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "What to bring",
+            "bn": "What to bring"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Chamber hours",
+            "bn": "Chamber hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "Sudipta Bhattacharya, Advocate",
+        "bn": "Sudipta Bhattacharya, Advocate"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "courts",
+          "label": {
+            "en": "Sudipta Bhattacharya, Advocate",
+            "bn": "Sudipta Bhattacharya, Advocate"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "label": {
+        "en": "From the first meeting to the court date",
+        "bn": "From the first meeting to the court date"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "timeline",
+          "label": {
+            "en": "From the first meeting to the court date",
+            "bn": "From the first meeting to the court date"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "when",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "tl-photos",
+          "label": {
+            "en": "From the first meeting to the court date",
+            "bn": "From the first meeting to the court date"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "Starting fees for common work",
+        "bn": "Starting fees for common work"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Documents and small work",
+            "bn": "Documents and small work"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Court matters",
+            "bn": "Court matters"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "name",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Things people ask before they come",
+        "bn": "Things people ask before they come"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Things people ask before they come",
+            "bn": "Things people ask before they come"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few photographs",
+        "bn": "A few photographs"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their words",
+        "bn": "In their words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their words",
+            "bn": "In their words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Hindustan Park, three minutes from Gariahat crossing",
+        "bn": "Hindustan Park, three minutes from Gariahat crossing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Bring your papers. Leave with a plan",
+        "bn": "Bring your papers. Leave with a plan"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Chamber",
+            "bn": "Chamber"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Bhattacharya Law Chamber",
+      "small": "Advocate · Gariahat"
+    },
+    "top": {
+      "hero-eyebrow": "Alipore Court · Calcutta High Court",
+      "h1": "Legal help explained in <em>plain words</em>, at a fee you know in advance.",
+      "p": "One advocate, one chamber in Gariahat, eighteen years at the bar. Property, family, cheque bounce, consumer, civil and bail matters, plus agreements, wills, affidavits and notary. Sit down, tell us the problem, and leave knowing your options and the cost.",
+      "button": "See the fee list",
+      "photo": {
+        "src": "/demo/advocate/images/hero.jpg",
+        "alt": "The advocate at his chamber desk, writing notes beside a framed enrolment certificate"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "18 years",
+            "span": "Enrolled with the Bar Council of West Bengal since 2008"
+          },
+          {
+            "b": "₹500",
+            "span": "First consultation, 30 minutes, no hidden extras"
+          },
+          {
+            "b": "5 pm – 9 pm",
+            "span": "Chamber hours after court, Monday to Saturday"
+          }
+        ]
+      }
+    },
+    "areas": {
+      "kicker": "Practice areas",
+      "h2": "The matters this chamber handles.",
+      "h3": "First consultation",
+      "fee": "&#8377;500 <small>for 30 minutes</small>",
+      "p": "Paid at the chamber. If you engage us for the matter, this amount is adjusted against the fee.",
+      "h4": "What to bring",
+      "h42": "Chamber hours",
+      "note": "Send a one-line message with your matter and a preferred day. We confirm within a few hours.",
+      "areas-list": {
+        "items": [
+          {
+            "n": "01",
+            "h3": "Property and registration",
+            "p": "Title search, sale deed, gift deed, partition, mutation help, and sitting with you at the registry office on the day of registration."
+          },
+          {
+            "n": "02",
+            "h3": "Family and divorce",
+            "p": "Mutual consent divorce, contested divorce, maintenance, child custody and domestic violence matters. Handled quietly and with patience."
+          },
+          {
+            "n": "03",
+            "h3": "Consumer complaints",
+            "p": "Faulty goods, builder delays, insurance claims refused, bank charges. Filed before the District Consumer Commission."
+          },
+          {
+            "n": "04",
+            "h3": "Cheque bounce (Section 138)",
+            "p": "Legal notice within the time limit, then the complaint. We also defend people who have received such a notice."
+          },
+          {
+            "n": "05",
+            "h3": "Civil suits",
+            "p": "Money recovery, injunction, eviction of tenants, declaration of title, and execution of decrees already passed."
+          },
+          {
+            "n": "06",
+            "h3": "Criminal bail",
+            "p": "Regular bail and anticipatory bail applications at Alipore Court and the High Court. Family is kept informed at every step."
+          },
+          {
+            "n": "07",
+            "h3": "Agreements and wills",
+            "p": "Rent agreements, partnership deeds, sale agreements, power of attorney, and wills written so that your family does not fight later."
+          },
+          {
+            "n": "08",
+            "h3": "Affidavit and notary",
+            "p": "Name change, date of birth, address proof, lost document affidavits, and notarised copies. Usually done the same day."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Every paper you have on the matter, even the ones you think do not matter"
+          },
+          {
+            "li": "Any notice, summons or court order you have received"
+          },
+          {
+            "li": "Your Aadhaar or voter card"
+          },
+          {
+            "li": "A list of dates: when it started, who said what, when"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Monday to Saturday, 5 pm to 9 pm"
+          },
+          {
+            "li": "Sunday, 10 am to 1 pm, by appointment"
+          }
+        ]
+      }
+    },
+    "about": {
+      "photo": {
+        "src": "/demo/advocate/images/advocate-papers.jpg",
+        "alt": "The advocate standing in the chamber corridor, holding case papers and smiling"
+      },
+      "kicker": "The advocate",
+      "h2": "Sudipta Bhattacharya, Advocate.",
+      "p": "LL.B. from the University of Calcutta, enrolled in 2008. He started under a senior at the Alipore civil courts, then began appearing at the Calcutta High Court in 2013. He runs this chamber alone, with one clerk, so the person you meet on the first day is the person who argues your matter.",
+      "p2": "He does not promise outcomes. No advocate honestly can. What he promises is this: you will understand what is happening in your case, you will know the cost before any work begins, and you will get a call back the same day.",
+      "courts": {
+        "items": [
+          {
+            "b": "Alipore Judges' Court",
+            "span": "Civil, criminal and family matters for South 24 Parganas and Kolkata"
+          },
+          {
+            "b": "Calcutta High Court",
+            "span": "Writ petitions, appeals, anticipatory bail, original side matters"
+          },
+          {
+            "b": "District Consumer Commission",
+            "span": "Consumer complaints up to the limit set by the Act"
+          },
+          {
+            "b": "Registry offices",
+            "span": "Alipore, Sealdah and Gariahat sub-registrar offices on registration days"
+          }
+        ]
+      }
+    },
+    "process": {
+      "kicker": "How a matter proceeds",
+      "h2": "From the first meeting to the court date.",
+      "timeline": {
+        "items": [
+          {
+            "when": "Day 1",
+            "h3": "You tell us the problem",
+            "p": "Thirty minutes at the chamber. We read your papers, ask questions, and tell you plainly whether a case is worth filing, what the usual steps are, and roughly how long it takes."
+          },
+          {
+            "when": "Within 3 days",
+            "h3": "Fee quoted in writing",
+            "p": "You get a WhatsApp message with the fee for the whole matter, what it covers, and what is paid at each stage. Court fees and stamp duty are shown separately. Nothing starts until you say yes."
+          },
+          {
+            "when": "Week 1 to 2",
+            "h3": "Drafting and your signature",
+            "p": "The notice, plaint, petition or deed is drafted and read out to you in Bengali or English, whichever you prefer. You sign only after you understand every line."
+          },
+          {
+            "when": "Filing",
+            "h3": "Filed, and you get the case number",
+            "p": "We file at the right court and send you the case number and the first date. From then on you receive a message after every hearing with what happened and what comes next."
+          },
+          {
+            "when": "Each hearing",
+            "h3": "Updates after every date",
+            "p": "You do not have to come to court for most dates. When your presence is needed, we tell you a week before, and what to carry."
+          }
+        ]
+      },
+      "tl-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/advocate/images/signing-agreement.jpg",
+              "alt": "A client signing an agreement at the chamber table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/advocate/images/court-buildings.jpg",
+              "alt": "Red brick colonial court buildings in central Kolkata on a misty morning"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/advocate/images/desk-work.jpg",
+              "alt": "The advocate going through a case diary at his desk"
+            }
+          }
+        ]
+      }
+    },
+    "fees": {
+      "kicker": "Fees",
+      "h2": "Starting fees for common work.",
+      "p": "These are the usual starting points. Court fees, stamp duty and registration charges are paid to the government and are extra; we tell you the exact amount before filing.",
+      "h3": "Documents and small work",
+      "h32": "Court matters",
+      "span": "Fees depend on the matter and are told before any work starts. You receive the quote in writing, and it does not change midway unless the matter itself changes, in which case we tell you first.",
+      "list": {
+        "items": [
+          {
+            "name": "Consultation <small>30 minutes at the chamber</small>",
+            "amt": "₹500"
+          },
+          {
+            "name": "Affidavit <small>Drafting and attestation, stamp paper extra</small>",
+            "amt": "₹300"
+          },
+          {
+            "name": "Notary attestation <small>Per document</small>",
+            "amt": "₹150"
+          },
+          {
+            "name": "Rent agreement <small>11 months, two copies</small>",
+            "amt": "₹1,500"
+          },
+          {
+            "name": "Legal notice <small>Cheque bounce, recovery, tenant</small>",
+            "amt": "₹1,500"
+          },
+          {
+            "name": "Agreement or deed drafting <small>Sale agreement, partnership, power of attorney</small>",
+            "amt": "from ₹2,500"
+          },
+          {
+            "name": "Will <small>Drafting, witnesses, optional registration</small>",
+            "amt": "from ₹3,000"
+          },
+          {
+            "name": "Property title search <small>Last 30 years of records</small>",
+            "amt": "from ₹4,000"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "name": "Registration day assistance <small>Deed check, presence at the registry</small>",
+            "amt": "from ₹5,000"
+          },
+          {
+            "name": "Bail application <small>Alipore Court</small>",
+            "amt": "from ₹5,000"
+          },
+          {
+            "name": "Anticipatory bail <small>High Court</small>",
+            "amt": "from ₹15,000"
+          },
+          {
+            "name": "Consumer complaint <small>Filing to final order</small>",
+            "amt": "from ₹6,000"
+          },
+          {
+            "name": "Cheque bounce case <small>Notice plus complaint</small>",
+            "amt": "from ₹8,000"
+          },
+          {
+            "name": "Mutual consent divorce <small>Both motions, drafting included</small>",
+            "amt": "from ₹25,000"
+          },
+          {
+            "name": "Civil suit <small>Recovery, eviction, injunction</small>",
+            "amt": "from ₹20,000"
+          },
+          {
+            "name": "Contested matters <small>Quoted after reading the papers</small>",
+            "amt": "on request"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Things people ask before they come.",
+      "faq": {
+        "items": [
+          {
+            "summary": "Do I need an appointment?",
+            "p": "It helps. Send a WhatsApp message with your name and the kind of matter, and we give you a time slot so you are not waiting. Walk-ins between 5 pm and 9 pm are seen if the advocate is free."
+          },
+          {
+            "summary": "Can you tell me on the phone whether I have a case?",
+            "p": "Not properly. Most matters depend on the papers. Bring them to the chamber and you will get a straight answer in thirty minutes. If there is no case worth filing, we say so and you pay only the consultation fee."
+          },
+          {
+            "summary": "How long does a mutual consent divorce take?",
+            "p": "Usually six to eight months from the first motion to the decree, with the six-month waiting period in between. The court can shorten the wait in some situations. We explain this at the first meeting."
+          },
+          {
+            "summary": "Will I have to come to court on every date?",
+            "p": "No. For most dates the advocate appears alone. You need to be present for evidence, for certain statements, and on the day of a final order. We tell you a week in advance."
+          },
+          {
+            "summary": "Do you take cases outside Kolkata?",
+            "p": "Matters at Alipore, Sealdah, Barasat and Howrah courts, yes. Other districts only when there is a strong reason, because travel adds to your cost."
+          },
+          {
+            "summary": "Can I pay in parts?",
+            "p": "Yes. Court matters are usually paid in two or three parts: at filing, at evidence, and at argument. The split is written into the fee quote. UPI, bank transfer and cash are all accepted, with a receipt."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "The chamber",
+      "h2": "A few photographs."
+    },
+    "section-9": {
+      "kicker": "From clients",
+      "h2": "In their words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "Our flat registration had been stuck for a year because of one missing paper. He found what was missing in the first meeting, told us the fee that evening, and we registered in five weeks.",
+            "span": "· Garia"
+          },
+          {
+            "p": "A cheque of ₹2.4 lakh had bounced and I had no idea what to do. The notice went out in two days and I got a message after every single hearing. I never had to chase him.",
+            "span": "· Ballygunge"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "The chamber",
+      "h2": "Hindustan Park, three minutes from Gariahat crossing.",
+      "b": "Address",
+      "p": "38/2 Hindustan Park, Gariahat<br>Kolkata 700029 (first floor, above the pharmacy)",
+      "button": "Get directions →",
+      "b2": "Chamber hours",
+      "b3": "Phone",
+      "p2": "Calls answered after 4:30 pm on court days. WhatsApp any time; replied to the same day.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "5:00 pm – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 1:00 pm, by appointment"
+          },
+          {
+            "td": "Court days",
+            "td2": "Advocate at court 10:30 am – 4:30 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Bhattacharya Law Chamber sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=38%2F2%20Hindustan%20Park%2C%20Gariahat%2C%20Kolkata%20700029",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Bhattacharya Law Chamber",
+      "small": "Advocate · Gariahat",
+      "p": "Sudipta Bhattacharya, Advocate. Alipore Court and Calcutta High Court. Property, family, consumer, cheque bounce, civil, bail, drafting, affidavit and notary.",
+      "h4": "Chamber",
+      "h42": "Find us",
+      "li": "38/2 Hindustan Park, Gariahat, Kolkata 700029",
+      "li2": "Mon–Sat 5 pm – 9 pm · Sun by appointment",
+      "list": {
+        "items": [
+          {
+            "button": "Practice areas"
+          },
+          {
+            "button": "How a matter proceeds"
+          },
+          {
+            "button": "Fees"
+          },
+          {
+            "button": "Common questions"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Bhattacharya Law Chamber | Advocate in Gariahat, Kolkata",
+      "description": "Advocate practising at Alipore Court and the Calcutta High Court. Property and registration, family matters, cheque bounce, consumer cases, bail, agreements, wills, affidavits and notary. Chamber in Gariahat, Kolkata."
+    }
+  }
+}

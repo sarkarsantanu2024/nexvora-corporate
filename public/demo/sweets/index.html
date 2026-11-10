@@ -295,25 +295,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: finger-sized links */
+@media (max-width:760px){
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+}
 </style>
+<meta name="nx-site" content="sweets">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Mohini Mishtanna Bhandar, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#5C1A1B"/><path d="M8 26h28a14 14 0 0 1-28 0Z" fill="#E8872B"/><circle cx="22" cy="17" r="6" fill="#FFF6E8"/><circle cx="22" cy="17" r="2" fill="#E8872B"/></svg>
-      <span><b>Mohini Mishtanna Bhandar</b><small>Shyambazar &middot; since 1962</small></span>
+      <span><b data-nx="header.b">Mohini Mishtanna Bhandar</b><small data-nx="header.small">Shyambazar &middot; since 1962</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -336,29 +341,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="hero__since"><span></span>Made fresh every morning since 1962</p>
-      <h1>Mishti the way <em>Shyambazar</em> has always liked it.</h1>
-      <p>Rasgulla, sandesh, mishti doi and seventy other sweets from one kitchen, three generations old. Walk in from 7 am, or send us a message and your box will be ready when you arrive.</p>
+      <p data-nx="top.hero-since" class="hero__since"><span></span>Made fresh every morning since 1962</p>
+      <h1 data-nx="top.h1">Mishti the way <em>Shyambazar</em> has always liked it.</h1>
+      <p data-nx="top.p">Rasgulla, sandesh, mishti doi and seventy other sweets from one kitchen, three generations old. Walk in from 7 am, or send us a message and your box will be ready when you arrive.</p>
       <div class="hero__cta">
         <a class="btn btn--saffron" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Order a box
         </a>
-        <a class="btn btn--ghost" href="#prices">See today&rsquo;s prices</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#prices">See today&rsquo;s prices</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>1962</b><span>Same family, same shop</span></li>
-        <li><b>70+</b><span>Sweets on the counter</span></li>
-        <li><b>7 am</b><span>First batch every day</span></li>
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">1962</b><span data-nx-f="span">Same family, same shop</span></li>
+        <li data-nx-item><b data-nx-f="b">70+</b><span data-nx-f="span">Sweets on the counter</span></li>
+        <li data-nx-item><b data-nx-f="b">7 am</b><span data-nx-f="span">First batch every day</span></li>
       </ul>
     </div>
     <div class="hero__photo">
       <div class="hero__dot" aria-hidden="true"></div>
-      <img src="/demo/sweets/images/hero.jpg" width="1100" height="1400" alt="Trays of gulab jamun, rasgulla and sandesh on the shop counter" fetchpriority="high">
-      <div class="hero__tag"><b>Pujo special boxes</b><span>Book by Panchami, collect any day up to Dashami.</span></div>
+      <img data-nx="top.photo" src="/demo/sweets/images/hero.jpg" width="1100" height="1400" alt="Trays of gulab jamun, rasgulla and sandesh on the shop counter" fetchpriority="high">
+      <div class="hero__tag"><b data-nx="top.b">Pujo special boxes</b><span data-nx="top.span">Book by Panchami, collect any day up to Dashami.</span></div>
     </div>
   </div>
 </section>
@@ -370,98 +375,98 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </div>
 
-<section class="section story" id="story">
+<section data-nx-section="story" class="section story" id="story">
   <div class="wrap">
     <div class="story__photos reveal">
-      <img src="/demo/sweets/images/counter-display.jpg" width="700" height="930" alt="Assorted sweets and snacks laid out on the shop display" loading="lazy">
-      <img src="/demo/sweets/images/serving-sweets.jpg" width="1200" height="1800" alt="A woman's hands serving sweets from a brass bowl" loading="lazy">
-      <div class="story__stamp" aria-hidden="true"><span>Est.<b>1962</b></span></div>
+      <img data-nx="story.photo" src="/demo/sweets/images/counter-display.jpg" width="700" height="930" alt="Assorted sweets and snacks laid out on the shop display" loading="lazy">
+      <img data-nx="story.photo2" src="/demo/sweets/images/serving-sweets.jpg" width="1200" height="1800" alt="A woman's hands serving sweets from a brass bowl" loading="lazy">
+      <div class="story__stamp" aria-hidden="true"><span data-nx="story.span">Est.<b>1962</b></span></div>
     </div>
     <div class="reveal">
-      <span class="kicker">Our story</span>
-      <h2 class="h2">Three generations behind one counter.</h2>
-      <p class="lead" style="margin-top:1rem">Mohini Mohan Das opened this shop in 1962 with a single karai and a recipe for rasgulla he learnt in Nadia. His son added sandesh and mishti doi in the eighties. Today his grandson runs the kitchen, and the rasgulla is still made the same way, in the same brass karai, with the same morning milk from Barasat.</p>
-      <p>We do not use preservatives or colour. Whatever is on the counter was made today. What does not sell by night is given away, never kept.</p>
-      <ul class="story__facts">
-        <li><b>60+</b><span>Years in Shyambazar</span></li>
-        <li><b>180 L</b><span>Fresh milk every morning</span></li>
-        <li><b>0</b><span>Preservatives, ever</span></li>
+      <span data-nx="story.kicker" class="kicker">Our story</span>
+      <h2 data-nx="story.h2" class="h2">Three generations behind one counter.</h2>
+      <p data-nx="story.p" class="lead" style="margin-top:1rem">Mohini Mohan Das opened this shop in 1962 with a single karai and a recipe for rasgulla he learnt in Nadia. His son added sandesh and mishti doi in the eighties. Today his grandson runs the kitchen, and the rasgulla is still made the same way, in the same brass karai, with the same morning milk from Barasat.</p>
+      <p data-nx="story.p2">We do not use preservatives or colour. Whatever is on the counter was made today. What does not sell by night is given away, never kept.</p>
+      <ul data-nx-list="story.story-facts" class="story__facts">
+        <li data-nx-item><b data-nx-f="b">60+</b><span data-nx-f="span">Years in Shyambazar</span></li>
+        <li data-nx-item><b data-nx-f="b">180 L</b><span data-nx-f="span">Fresh milk every morning</span></li>
+        <li data-nx-item><b data-nx-f="b">0</b><span data-nx-f="span">Preservatives, ever</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section section--cream-deep" id="sweets">
+<section data-nx-section="sweets" class="section section--cream-deep" id="sweets">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">What we are known for</span>
-      <h2 class="h2">Eight sweets people cross the city for.</h2>
-      <p class="lead" style="margin:1rem auto 0">Prices are per piece unless marked. Everything is made in our own kitchen behind the shop.</p>
+      <span data-nx="sweets.kicker" class="kicker">What we are known for</span>
+      <h2 data-nx="sweets.h2" class="h2">Eight sweets people cross the city for.</h2>
+      <p data-nx="sweets.p" class="lead" style="margin:1rem auto 0">Prices are per piece unless marked. Everything is made in our own kitchen behind the shop.</p>
     </div>
-    <ul class="sig">
-      <li class="reveal"><img src="/demo/sweets/images/rasgulla.jpg" width="800" height="533" alt="Soft white rasgulla in syrup on a clay plate" loading="lazy"><div><h3>Rasgulla</h3><p>Spongy, light, in thin syrup. Our oldest recipe. Also sold in tins for travel.</p><span class="price">&#8377;12 each &middot; tin of 20 &#8377;260</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/sandesh.jpg" width="800" height="533" alt="Sandesh topped with pistachio" loading="lazy"><div><h3>Sandesh</h3><p>Kora pak and norom pak. Nolen gur sandesh from November to February only.</p><span class="price">&#8377;15 to &#8377;25 each</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/mishti-doi-clay-pot.jpg" width="800" height="533" alt="Mishti doi set in a traditional clay pot" loading="lazy"><div><h3>Mishti Doi</h3><p>Set overnight in clay bhaar. Caramel coloured, not too sweet. Ask for the gur version in winter.</p><span class="price">&#8377;40 small &middot; &#8377;120 for 500 g</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/chamcham.jpg" width="800" height="1200" alt="Chamcham sweets on display" loading="lazy"><div><h3>Chamcham</h3><p>Long, chewy, rolled in khoya. A Shyambazar favourite for Bhai Phonta.</p><span class="price">&#8377;18 each</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/kalakand.jpg" width="800" height="800" alt="Kalakand squares with silver foil" loading="lazy"><div><h3>Kalakand</h3><p>Grainy milk cake with a touch of cardamom. Sold by weight.</p><span class="price">&#8377;520 per kg</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/ladoo.jpg" width="800" height="1200" alt="Motichoor ladoo with saffron garnish" loading="lazy"><div><h3>Motichoor Ladoo</h3><p>Fine boondi, saffron, pure ghee. The pujo ladoo most families order by the hundred.</p><span class="price">&#8377;14 each &middot; &#8377;480 per kg</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/gulab-jamun.jpg" width="800" height="1067" alt="Gulab jamun in syrup" loading="lazy"><div><h3>Gulab Jamun &amp; Pantua</h3><p>Dark, soft, soaked through. Pantua is the Bengali cousin, fried a shade darker.</p><span class="price">&#8377;14 each</span></div></li>
-      <li class="reveal"><img src="/demo/sweets/images/jalebi.jpg" width="800" height="533" alt="Fresh hot jalebi" loading="lazy"><div><h3>Jalebi</h3><p>Fried hot from 7 am to 10 am and again from 5 pm. Best eaten standing at the counter.</p><span class="price">&#8377;320 per kg</span></div></li>
+    <ul data-nx-list="sweets.sig" class="sig">
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/rasgulla.jpg" width="800" height="533" alt="Soft white rasgulla in syrup on a clay plate" loading="lazy"><div><h3 data-nx-f="h3">Rasgulla</h3><p data-nx-f="p">Spongy, light, in thin syrup. Our oldest recipe. Also sold in tins for travel.</p><span data-nx-f="price" class="price">&#8377;12 each &middot; tin of 20 &#8377;260</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/sandesh.jpg" width="800" height="533" alt="Sandesh topped with pistachio" loading="lazy"><div><h3 data-nx-f="h3">Sandesh</h3><p data-nx-f="p">Kora pak and norom pak. Nolen gur sandesh from November to February only.</p><span data-nx-f="price" class="price">&#8377;15 to &#8377;25 each</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/mishti-doi-clay-pot.jpg" width="800" height="533" alt="Mishti doi set in a traditional clay pot" loading="lazy"><div><h3 data-nx-f="h3">Mishti Doi</h3><p data-nx-f="p">Set overnight in clay bhaar. Caramel coloured, not too sweet. Ask for the gur version in winter.</p><span data-nx-f="price" class="price">&#8377;40 small &middot; &#8377;120 for 500 g</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/chamcham.jpg" width="800" height="1200" alt="Chamcham sweets on display" loading="lazy"><div><h3 data-nx-f="h3">Chamcham</h3><p data-nx-f="p">Long, chewy, rolled in khoya. A Shyambazar favourite for Bhai Phonta.</p><span data-nx-f="price" class="price">&#8377;18 each</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/kalakand.jpg" width="800" height="800" alt="Kalakand squares with silver foil" loading="lazy"><div><h3 data-nx-f="h3">Kalakand</h3><p data-nx-f="p">Grainy milk cake with a touch of cardamom. Sold by weight.</p><span data-nx-f="price" class="price">&#8377;520 per kg</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/ladoo.jpg" width="800" height="1200" alt="Motichoor ladoo with saffron garnish" loading="lazy"><div><h3 data-nx-f="h3">Motichoor Ladoo</h3><p data-nx-f="p">Fine boondi, saffron, pure ghee. The pujo ladoo most families order by the hundred.</p><span data-nx-f="price" class="price">&#8377;14 each &middot; &#8377;480 per kg</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/gulab-jamun.jpg" width="800" height="1067" alt="Gulab jamun in syrup" loading="lazy"><div><h3 data-nx-f="h3">Gulab Jamun &amp; Pantua</h3><p data-nx-f="p">Dark, soft, soaked through. Pantua is the Bengali cousin, fried a shade darker.</p><span data-nx-f="price" class="price">&#8377;14 each</span></div></li>
+      <li data-nx-item class="reveal"><img data-nx-f="photo" src="/demo/sweets/images/jalebi.jpg" width="800" height="533" alt="Fresh hot jalebi" loading="lazy"><div><h3 data-nx-f="h3">Jalebi</h3><p data-nx-f="p">Fried hot from 7 am to 10 am and again from 5 pm. Best eaten standing at the counter.</p><span data-nx-f="price" class="price">&#8377;320 per kg</span></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="prices">
+<section data-nx-section="prices" class="section" id="prices">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Price list</span>
-      <h2 class="h2">Today&rsquo;s counter.</h2>
-      <p class="lead" style="margin-top:1rem">Prices change a little with the milk price. We update this list on the first of every month.</p>
+      <span data-nx="prices.kicker" class="kicker">Price list</span>
+      <h2 data-nx="prices.h2" class="h2">Today&rsquo;s counter.</h2>
+      <p data-nx="prices.p" class="lead" style="margin-top:1rem">Prices change a little with the milk price. We update this list on the first of every month.</p>
     </div>
     <div class="menu">
       <div class="menu__col reveal">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 14a8 8 0 0 0 16 0H4Z"/><path d="M12 6V3M8 7l-1-2M16 7l1-2"/></svg>Chhanar mishti (chhena sweets)</h3>
-        <ul>
-          <li><span class="name">Rasgulla</span><span class="dots"></span><span class="amt">&#8377;12</span></li>
-          <li><span class="name">Rajbhog <small>Big rasgulla stuffed with kesar khoya</small></span><span class="dots"></span><span class="amt">&#8377;30</span></li>
-          <li><span class="name">Kacha Golla</span><span class="dots"></span><span class="amt">&#8377;15</span></li>
-          <li><span class="name">Kora Pak Sandesh</span><span class="dots"></span><span class="amt">&#8377;15</span></li>
-          <li><span class="name">Nolen Gurer Sandesh <small>Winter only</small></span><span class="dots"></span><span class="amt">&#8377;25</span></li>
-          <li><span class="name">Chamcham</span><span class="dots"></span><span class="amt">&#8377;18</span></li>
-          <li><span class="name">Rasmalai <small>Per bowl of 2</small></span><span class="dots"></span><span class="amt">&#8377;60</span></li>
-          <li><span class="name">Chhanar Jilipi</span><span class="dots"></span><span class="amt">&#8377;16</span></li>
+        <ul data-nx-list="prices.list">
+          <li data-nx-item><span data-nx-f="name" class="name">Rasgulla</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;12</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Rajbhog <small>Big rasgulla stuffed with kesar khoya</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;30</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Kacha Golla</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;15</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Kora Pak Sandesh</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;15</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Nolen Gurer Sandesh <small>Winter only</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;25</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Chamcham</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;18</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Rasmalai <small>Per bowl of 2</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;60</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Chhanar Jilipi</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;16</span></li>
         </ul>
       </div>
       <div class="menu__col reveal">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M3 12h18M12 8V4M8 4h8"/></svg>By weight and by the pot</h3>
-        <ul>
-          <li><span class="name">Mishti Doi <small>Clay pot, 500 g</small></span><span class="dots"></span><span class="amt">&#8377;120</span></li>
-          <li><span class="name">Kalakand</span><span class="dots"></span><span class="amt">&#8377;520 / kg</span></li>
-          <li><span class="name">Motichoor Ladoo</span><span class="dots"></span><span class="amt">&#8377;480 / kg</span></li>
-          <li><span class="name">Soan Papdi</span><span class="dots"></span><span class="amt">&#8377;360 / kg</span></li>
-          <li><span class="name">Jalebi <small>Hot, morning and evening</small></span><span class="dots"></span><span class="amt">&#8377;320 / kg</span></li>
-          <li><span class="name">Sitabhog &amp; Mihidana <small>Bardhaman style</small></span><span class="dots"></span><span class="amt">&#8377;400 / kg</span></li>
-          <li><span class="name">Darbesh</span><span class="dots"></span><span class="amt">&#8377;440 / kg</span></li>
-          <li><span class="name">Singara &amp; Kochuri <small>Savouries, from 4 pm</small></span><span class="dots"></span><span class="amt">&#8377;10</span></li>
+        <ul data-nx-list="prices.list2">
+          <li data-nx-item><span data-nx-f="name" class="name">Mishti Doi <small>Clay pot, 500 g</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;120</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Kalakand</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;520 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Motichoor Ladoo</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;480 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Soan Papdi</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;360 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Jalebi <small>Hot, morning and evening</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;320 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Sitabhog &amp; Mihidana <small>Bardhaman style</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;400 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Darbesh</span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;440 / kg</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Singara &amp; Kochuri <small>Savouries, from 4 pm</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;10</span></li>
         </ul>
       </div>
     </div>
-    <p class="menu__note">Want something not on the list? Call the shop. Most sweets can be made to order with one day&rsquo;s notice.</p>
+    <p data-nx="prices.menu-note" class="menu__note">Want something not on the list? Call the shop. Most sweets can be made to order with one day&rsquo;s notice.</p>
   </div>
 </section>
 
-<section class="section section--maroon" id="boxes">
+<section data-nx-section="boxes" class="section section--maroon" id="boxes">
   <div class="wrap">
     <div class="boxes">
       <div class="reveal">
-        <span class="kicker">Festival boxes</span>
-        <h2 class="h2">Boxes for Pujo, Bhai Phonta, Diwali and weddings.</h2>
-        <p class="lead" style="margin-top:1rem">Fixed boxes, packed on the day you collect. We can print your family name or company name on the lid for orders of 25 boxes or more.</p>
-        <ul class="boxes__list" style="margin-top:1.5rem">
-          <li><span class="n">6</span><div><h3>Chhoto box</h3><p>Six pieces. Two sandesh, two rasgulla, one chamcham, one ladoo.</p></div><span class="amt">&#8377;110</span></li>
-          <li><span class="n">12</span><div><h3>Pujo box</h3><p>Twelve pieces, mixed. The box most families send to neighbours during Durga Pujo.</p></div><span class="amt">&#8377;220</span></li>
-          <li><span class="n">24</span><div><h3>Bhai Phonta box</h3><p>Twenty-four pieces plus a small pot of mishti doi. Comes in a printed tin.</p></div><span class="amt">&#8377;480</span></li>
-          <li><span class="n">1kg</span><div><h3>Dry box</h3><p>Kalakand, soan papdi and ladoo. Keeps for a week. Good for sending out of town.</p></div><span class="amt">&#8377;560</span></li>
+        <span data-nx="boxes.kicker" class="kicker">Festival boxes</span>
+        <h2 data-nx="boxes.h2" class="h2">Boxes for Pujo, Bhai Phonta, Diwali and weddings.</h2>
+        <p data-nx="boxes.p" class="lead" style="margin-top:1rem">Fixed boxes, packed on the day you collect. We can print your family name or company name on the lid for orders of 25 boxes or more.</p>
+        <ul data-nx-list="boxes.boxes-list" class="boxes__list" style="margin-top:1.5rem">
+          <li data-nx-item><span data-nx-f="n" class="n">6</span><div><h3 data-nx-f="h3">Chhoto box</h3><p data-nx-f="p">Six pieces. Two sandesh, two rasgulla, one chamcham, one ladoo.</p></div><span data-nx-f="amt" class="amt">&#8377;110</span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">12</span><div><h3 data-nx-f="h3">Pujo box</h3><p data-nx-f="p">Twelve pieces, mixed. The box most families send to neighbours during Durga Pujo.</p></div><span data-nx-f="amt" class="amt">&#8377;220</span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">24</span><div><h3 data-nx-f="h3">Bhai Phonta box</h3><p data-nx-f="p">Twenty-four pieces plus a small pot of mishti doi. Comes in a printed tin.</p></div><span data-nx-f="amt" class="amt">&#8377;480</span></li>
+          <li data-nx-item><span data-nx-f="n" class="n">1kg</span><div><h3 data-nx-f="h3">Dry box</h3><p data-nx-f="p">Kalakand, soan papdi and ladoo. Keeps for a week. Good for sending out of town.</p></div><span data-nx-f="amt" class="amt">&#8377;560</span></li>
         </ul>
         <div class="hero__cta">
           <a class="btn btn--saffron" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book boxes on WhatsApp</a>
@@ -469,89 +474,89 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
       </div>
       <figure class="boxes__photo reveal" style="margin:0">
-        <img src="/demo/sweets/images/gift-box.jpg" width="1200" height="899" alt="Assorted sweets arranged in a decorative gift box" loading="lazy">
-        <figcaption>Boxes are packed fresh on the morning you collect, never the night before.</figcaption>
+        <img data-nx="boxes.photo" src="/demo/sweets/images/gift-box.jpg" width="1200" height="899" alt="Assorted sweets arranged in a decorative gift box" loading="lazy">
+        <figcaption data-nx="boxes.figcaption">Boxes are packed fresh on the morning you collect, never the night before.</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<section class="section" id="catering">
+<section data-nx-section="catering" class="section" id="catering">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Weddings and events</span>
-      <h2 class="h2">Sweets for 50 guests or 1,500.</h2>
-      <p class="lead" style="margin-top:1rem">We have supplied sweets for weddings, annaprashans and office pujas across North Kolkata for forty years. Three steps and it is done.</p>
+      <span data-nx="catering.kicker" class="kicker">Weddings and events</span>
+      <h2 data-nx="catering.h2" class="h2">Sweets for 50 guests or 1,500.</h2>
+      <p data-nx="catering.p" class="lead" style="margin-top:1rem">We have supplied sweets for weddings, annaprashans and office pujas across North Kolkata for forty years. Three steps and it is done.</p>
     </div>
-    <ol class="steps">
-      <li class="reveal"><h3>Tell us the date and the count</h3><p>Message or call with the date, number of guests and roughly what you have in mind. We reply the same day with a list and a price.</p></li>
-      <li class="reveal"><h3>Taste and fix the menu</h3><p>Come to the shop and taste. Pick 4 to 8 items. We take a 50% advance and the rest on delivery.</p></li>
-      <li class="reveal"><h3>Delivered on the morning</h3><p>Our own van delivers within Kolkata from 6 am. Sweets are packed in food-grade boxes, with mishti doi in clay pots.</p></li>
+    <ol data-nx-list="catering.steps" class="steps">
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Tell us the date and the count</h3><p data-nx-f="p">Message or call with the date, number of guests and roughly what you have in mind. We reply the same day with a list and a price.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Taste and fix the menu</h3><p data-nx-f="p">Come to the shop and taste. Pick 4 to 8 items. We take a 50% advance and the rest on delivery.</p></li>
+      <li data-nx-item class="reveal"><h3 data-nx-f="h3">Delivered on the morning</h3><p data-nx-f="p">Our own van delivers within Kolkata from 6 am. Sweets are packed in food-grade boxes, with mishti doi in clay pots.</p></li>
     </ol>
-    <div class="cater__photo reveal">
-      <img src="/demo/sweets/images/festival-table.jpg" width="1200" height="800" alt="Women in traditional dress laying out sweets and decorations for a celebration" loading="lazy">
-      <img src="/demo/sweets/images/soan-papdi.jpg" width="800" height="1200" alt="Soan papdi with saffron and nuts" loading="lazy">
+    <div data-nx-list="catering.cater-photo" class="cater__photo reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/sweets/images/festival-table.jpg" width="1200" height="800" alt="Women in traditional dress laying out sweets and decorations for a celebration" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/sweets/images/soan-papdi.jpg" width="800" height="1200" alt="Soan papdi with saffron and nuts" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section section--cream-deep" id="gallery">
+<section data-nx-section="gallery" class="section section--cream-deep" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">From the counter</span>
-      <h2 class="h2">A few photos from the shop.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From the counter</span>
+      <h2 data-nx="gallery.h2" class="h2">A few photos from the shop.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/sweets/images/serving-sweets.jpg" width="1200" height="1800" alt="Sweets being served from a brass bowl" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/rasgulla.jpg" width="800" height="533" alt="Rasgulla on a clay plate" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/kalakand.jpg" width="800" height="800" alt="Kalakand with silver leaf" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/counter-display.jpg" width="700" height="930" alt="The full counter display" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/jalebi.jpg" width="800" height="533" alt="Hot jalebi" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/ladoo.jpg" width="800" height="1200" alt="Motichoor ladoo" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/gulab-jamun.jpg" width="800" height="1067" alt="Gulab jamun in syrup" loading="lazy"></li>
-      <li><img src="/demo/sweets/images/sandesh.jpg" width="800" height="533" alt="Pistachio sandesh" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/serving-sweets.jpg" width="1200" height="1800" alt="Sweets being served from a brass bowl" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/rasgulla.jpg" width="800" height="533" alt="Rasgulla on a clay plate" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/kalakand.jpg" width="800" height="800" alt="Kalakand with silver leaf" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/counter-display.jpg" width="700" height="930" alt="The full counter display" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/jalebi.jpg" width="800" height="533" alt="Hot jalebi" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/ladoo.jpg" width="800" height="1200" alt="Motichoor ladoo" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/gulab-jamun.jpg" width="800" height="1067" alt="Gulab jamun in syrup" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/sweets/images/sandesh.jpg" width="800" height="533" alt="Pistachio sandesh" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-9" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-9.h2" class="h2">In their own words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>We have bought our Bijoya sweets here since my father&rsquo;s time. The rasgulla tastes exactly as I remember it from school.</p><footer>Anindita <span>&middot; Hatibagan</span></footer></blockquote>
-      <blockquote class="reveal"><p>Ordered 300 boxes for our office Saraswati Pujo. Delivered at 7 in the morning, every box packed properly. No fuss at all.</p><footer>Sourav <span>&middot; Salt Lake Sector V</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">We have bought our Bijoya sweets here since my father&rsquo;s time. The rasgulla tastes exactly as I remember it from school.</p><footer>Anindita <span data-nx-f="span">&middot; Hatibagan</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Ordered 300 boxes for our office Saraswati Pujo. Delivered at 7 in the morning, every box packed properly. No fuss at all.</p><footer>Sourav <span data-nx-f="span">&middot; Salt Lake Sector V</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--cream-deep" id="visit">
+<section data-nx-section="visit" class="section section--cream-deep" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Bidhan Sarani, two minutes from Shyambazar metro.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Bidhan Sarani, two minutes from Shyambazar metro.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>71/1 Bidhan Sarani, Shyambazar<br>Kolkata 700004</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=71%2F1%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700004" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">71/1 Bidhan Sarani, Shyambazar<br>Kolkata 700004</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=71%2F1%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700004" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>7:00 am &ndash; 10:00 pm</td></tr>
-              <tr><td>Sunday</td><td>7:00 am &ndash; 2:00 pm</td></tr>
-              <tr><td>Pujo week</td><td>Open till midnight</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">7:00 am &ndash; 10:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">7:00 am &ndash; 2:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Pujo week</td><td data-nx-f="td2">Open till midnight</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp orders answered 8 am to 9 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp orders answered 8 am to 9 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--maroon" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -565,10 +570,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="order">
+<section data-nx-section="order" class="section final" id="order">
   <div class="wrap reveal">
-    <h2>Your box can be ready before you reach the shop.</h2>
-    <p>Send the number of pieces and the time you will come. We will pack it and keep it at the counter under your name.</p>
+    <h2 data-nx="order.h2">Your box can be ready before you reach the shop.</h2>
+    <p data-nx="order.p">Send the number of pieces and the time you will come. We will pack it and keep it at the counter under your name.</p>
     <div class="final__cta">
       <a class="btn btn--saffron" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Mohini%20Mishtanna%20Bhandar%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -583,31 +588,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#E8872B"/><path d="M8 26h28a14 14 0 0 1-28 0Z" fill="#5C1A1B"/><circle cx="22" cy="17" r="6" fill="#FFF6E8"/><circle cx="22" cy="17" r="2" fill="#5C1A1B"/></svg>
-          <span><b>Mohini Mishtanna Bhandar</b><small>Shyambazar &middot; since 1962</small></span>
+          <span><b data-nx="footer.b">Mohini Mishtanna Bhandar</b><small data-nx="footer.small">Shyambazar &middot; since 1962</small></span>
         </a>
-        <p>Bengali sweets made fresh each morning. Festival boxes, wedding orders and a counter that opens at 7.</p>
+        <p data-nx="footer.p">Bengali sweets made fresh each morning. Festival boxes, wedding orders and a counter that opens at 7.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#sweets">Our sweets</a></li>
-          <li><a href="#prices">Price list</a></li>
-          <li><a href="#boxes">Festival boxes</a></li>
-          <li><a href="#catering">Weddings and events</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#sweets">Our sweets</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#prices">Price list</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#boxes">Festival boxes</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#catering">Weddings and events</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>71/1 Bidhan Sarani, Shyambazar, Kolkata 700004</li>
+          <li data-nx="footer.li">71/1 Bidhan Sarani, Shyambazar, Kolkata 700004</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 7 am &ndash; 10 pm &middot; Sun 7 am &ndash; 2 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 7 am &ndash; 10 pm &middot; Sun 7 am &ndash; 2 pm</li>
         </ul>
       </div>
     </div>
@@ -649,5 +654,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

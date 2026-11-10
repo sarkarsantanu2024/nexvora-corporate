@@ -312,20 +312,22 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   .drawer,.backdrop,.dock{transition:none}
   *{transition-duration:.01ms !important}
 }
+/* phone fixes */
+@media (max-width:760px){
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__sample a{display:inline-block;padding-block:.8rem;margin-block:-.8rem}
+}
 </style>
+<meta name="nx-site" content="play-school">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demostrip">
-  <div class="wrap demostrip__in">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="demostrip__mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="demostrip__cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chotto%20Pakhi%20Play%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header" id="top">
+<header data-nx-section="top" class="header" id="top">
   <div class="wrap header__in">
     <a class="brand" href="#top">
       <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
@@ -336,7 +338,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         <path d="M35 19l5 1-5 2z" fill="#FF8A7A"/>
         <path d="M9 24l-5-3 2 6z" fill="#7FD8BE"/>
       </svg>
-      <span><span class="brand__name">Chotto Pakhi Play School</span><span class="brand__sub">Ages 2 to 5 &middot; Jodhpur Park</span></span>
+      <span><span data-nx="top.brand-name" class="brand__name">Chotto Pakhi Play School</span><span data-nx="top.brand-sub" class="brand__sub">Ages 2 to 5 &middot; Jodhpur Park</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <ul>
@@ -353,6 +355,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       <a class="btn btn--white" href="tel:+919804243159">Call</a>
       <a class="btn btn--sun" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chotto%20Pakhi%20Play%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Book a visit</a>
     </div>
+    <span class="nx-lang"></span>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -390,202 +393,202 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 <main id="main">
 
 <!-- Hero -->
-<section class="hero">
-  <img class="hero__img" src="/demo/play-school/images/hero.jpg" width="1600" height="900" alt="Three small girls in checked school uniforms sitting in a row in class" fetchpriority="high">
+<section data-nx-section="section-2" class="hero">
+  <img data-nx="section-2.hero-img" class="hero__img" src="/demo/play-school/images/hero.jpg" width="1600" height="900" alt="Three small girls in checked school uniforms sitting in a row in class" fetchpriority="high">
   <span class="blob blob--sun" aria-hidden="true"></span>
   <span class="blob blob--mint" aria-hidden="true"></span>
   <div class="wrap">
     <div class="hero__card">
-      <span class="pill">Admissions open for 2026&ndash;27</span>
-      <h1 class="h-xl">A small school where <span>little ones</span> learn by playing.</h1>
-      <p class="lede">Playgroup, Nursery and KG for children aged 2 to 5 in Jodhpur Park, Kolkata. Eight children to one teacher, a garden to run in, and a day that ends with a story.</p>
+      <span data-nx="section-2.pill" class="pill">Admissions open for 2026&ndash;27</span>
+      <h1 data-nx="section-2.h1" class="h-xl">A small school where <span>little ones</span> learn by playing.</h1>
+      <p data-nx="section-2.lede" class="lede">Playgroup, Nursery and KG for children aged 2 to 5 in Jodhpur Park, Kolkata. Eight children to one teacher, a garden to run in, and a day that ends with a story.</p>
       <div class="btn-row">
         <a class="btn btn--sky" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chotto%20Pakhi%20Play%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a school visit
         </a>
-        <a class="btn btn--white" href="#classes">Classes &amp; fees</a>
+        <a data-nx="section-2.button" class="btn btn--white" href="#classes">Classes &amp; fees</a>
       </div>
-      <ul class="hero__badges">
-        <li class="badge"><i style="background:var(--sky)"></i>Since 2014</li>
-        <li class="badge"><i style="background:var(--sun)"></i>1 teacher : 8 children</li>
-        <li class="badge"><i style="background:var(--mint)"></i>9 am to 12:30 pm</li>
+      <ul data-nx-list="section-2.hero-badges" class="hero__badges">
+        <li data-nx-f="badge" data-nx-item class="badge"><i style="background:var(--sky)"></i>Since 2014</li>
+        <li data-nx-f="badge" data-nx-item class="badge"><i style="background:var(--sun)"></i>1 teacher : 8 children</li>
+        <li data-nx-f="badge" data-nx-item class="badge"><i style="background:var(--mint)"></i>9 am to 12:30 pm</li>
       </ul>
     </div>
   </div>
 </section>
 
 <!-- About -->
-<section class="section" id="about">
+<section data-nx-section="about" class="section" id="about">
   <div class="wrap about">
     <div class="about__text reveal">
-      <span class="pill pill--sky">About us</span>
-      <h2 class="h-lg">A ground-floor house with a garden, run by two sisters</h2>
-      <p style="margin-top:1.2rem">Chotto Pakhi means "little bird". We opened in 2014 in our family house on Jodhpur Park with eleven children. Today there are sixty, in three small classes, taught by six teachers and two helpers who have all been with us for more than four years.</p>
-      <p>We follow a play-based plan: every week has a theme (rain, vegetables, the post office) and every lesson is a game, a song or something to make with your hands. Reading and writing start gently in KG, so children walk into Class 1 at any Kolkata school without fear.</p>
-      <p>We speak English and Bengali in class, and a little Hindi where a child needs it.</p>
-      <ul class="facts">
-        <li><b>2014</b><span>Open since</span></li>
-        <li><b>60</b><span>Children, three classes</span></li>
-        <li><b>1 : 8</b><span>Teacher to child</span></li>
-        <li><b>6</b><span>Teachers, all trained in Montessori or NTT</span></li>
+      <span data-nx="about.pill" class="pill pill--sky">About us</span>
+      <h2 data-nx="about.h2" class="h-lg">A ground-floor house with a garden, run by two sisters</h2>
+      <p data-nx="about.p" style="margin-top:1.2rem">Chotto Pakhi means "little bird". We opened in 2014 in our family house on Jodhpur Park with eleven children. Today there are sixty, in three small classes, taught by six teachers and two helpers who have all been with us for more than four years.</p>
+      <p data-nx="about.p2">We follow a play-based plan: every week has a theme (rain, vegetables, the post office) and every lesson is a game, a song or something to make with your hands. Reading and writing start gently in KG, so children walk into Class 1 at any Kolkata school without fear.</p>
+      <p data-nx="about.p3">We speak English and Bengali in class, and a little Hindi where a child needs it.</p>
+      <ul data-nx-list="about.facts" class="facts">
+        <li data-nx-item><b data-nx-f="b">2014</b><span data-nx-f="span">Open since</span></li>
+        <li data-nx-item><b data-nx-f="b">60</b><span data-nx-f="span">Children, three classes</span></li>
+        <li data-nx-item><b data-nx-f="b">1 : 8</b><span data-nx-f="span">Teacher to child</span></li>
+        <li data-nx-item><b data-nx-f="b">6</b><span data-nx-f="span">Teachers, all trained in Montessori or NTT</span></li>
       </ul>
     </div>
-    <div class="about__photos reveal">
-      <figure class="ph"><img src="/demo/play-school/images/wooden-blocks.jpg" width="1200" height="800" alt="Smiling boy building a tall tower of pink blocks on a mat" loading="lazy"></figure>
-      <figure class="ph"><img src="/demo/play-school/images/story-time.jpg" width="1200" height="800" alt="Young boy reading a notebook sitting cross-legged on temple steps" loading="lazy"></figure>
+    <div data-nx-list="about.about-photos" class="about__photos reveal">
+      <figure data-nx-item class="ph"><img data-nx-f="photo" src="/demo/play-school/images/wooden-blocks.jpg" width="1200" height="800" alt="Smiling boy building a tall tower of pink blocks on a mat" loading="lazy"></figure>
+      <figure data-nx-item class="ph"><img data-nx-f="photo" src="/demo/play-school/images/story-time.jpg" width="1200" height="800" alt="Young boy reading a notebook sitting cross-legged on temple steps" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
 <!-- Classes -->
-<section class="section section--white" id="classes">
+<section data-nx-section="classes" class="section section--white" id="classes">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill pill--mint">Classes &amp; fees</span>
-      <h2 class="h-lg">Three classes, one small building</h2>
-      <p class="lede">Children move up by age each April. Fees are per month, paid quarterly. No donation, no hidden charges. Books and craft material are included in the annual charge.</p>
+      <span data-nx="classes.pill" class="pill pill--mint">Classes &amp; fees</span>
+      <h2 data-nx="classes.h2" class="h-lg">Three classes, one small building</h2>
+      <p data-nx="classes.lede" class="lede">Children move up by age each April. Fees are per month, paid quarterly. No donation, no hidden charges. Books and craft material are included in the annual charge.</p>
     </div>
     <div class="progs">
       <article class="prog prog--sky reveal">
         <div class="prog__top"></div>
-        <figure class="ph"><img src="/demo/play-school/images/clay-dough.jpg" width="1200" height="800" alt="Two small children working with a wooden board together on a red mat" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="classes.photo" src="/demo/play-school/images/clay-dough.jpg" width="1200" height="800" alt="Two small children working with a wooden board together on a red mat" loading="lazy"></figure>
         <div class="prog__body">
-          <span class="prog__age">Ages 2 to 3</span>
-          <h3>Playgroup</h3>
-          <p>First time away from home. Two hours a day to start, then three. Parents may sit in the garden for the first two weeks.</p>
+          <span data-nx="classes.prog-age" class="prog__age">Ages 2 to 3</span>
+          <h3 data-nx="classes.h3">Playgroup</h3>
+          <p data-nx="classes.p">First time away from home. Two hours a day to start, then three. Parents may sit in the garden for the first two weeks.</p>
           <ul class="prog__list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Sand, water and clay play</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Rhymes in English and Bengali</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Toilet training support</li>
           </ul>
-          <div class="prog__fee"><b>&#8377;2,200</b><span>per month &middot; 9:30 to 12:00</span></div>
+          <div class="prog__fee"><b data-nx="classes.b">&#8377;2,200</b><span data-nx="classes.span">per month &middot; 9:30 to 12:00</span></div>
         </div>
       </article>
       <article class="prog prog--sun reveal">
         <div class="prog__top"></div>
-        <figure class="ph"><img src="/demo/play-school/images/art-table.jpg" width="1200" height="800" alt="Girl pouring water from a jug into glasses on a wooden tray" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="classes.photo2" src="/demo/play-school/images/art-table.jpg" width="1200" height="800" alt="Girl pouring water from a jug into glasses on a wooden tray" loading="lazy"></figure>
         <div class="prog__body">
-          <span class="prog__age">Ages 3 to 4</span>
-          <h3>Nursery</h3>
-          <p>Letters and numbers through songs, stories and the weekly theme. Lots of cutting, sticking and painting. Fine motor skills before pencils.</p>
+          <span data-nx="classes.prog-age2" class="prog__age">Ages 3 to 4</span>
+          <h3 data-nx="classes.h32">Nursery</h3>
+          <p data-nx="classes.p2">Letters and numbers through songs, stories and the weekly theme. Lots of cutting, sticking and painting. Fine motor skills before pencils.</p>
           <ul class="prog__list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Letter sounds, counting to 20</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Music and movement daily</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Show-and-tell every Friday</li>
           </ul>
-          <div class="prog__fee"><b>&#8377;2,500</b><span>per month &middot; 9:00 to 12:30</span></div>
+          <div class="prog__fee"><b data-nx="classes.b2">&#8377;2,500</b><span data-nx="classes.span2">per month &middot; 9:00 to 12:30</span></div>
         </div>
       </article>
       <article class="prog prog--mint reveal">
         <div class="prog__top"></div>
-        <figure class="ph"><img src="/demo/play-school/images/blackboard-drawing.jpg" width="1200" height="800" alt="Girl pointing at a map of India on an easel" loading="lazy"></figure>
+        <figure class="ph"><img data-nx="classes.photo3" src="/demo/play-school/images/blackboard-drawing.jpg" width="1200" height="800" alt="Girl pointing at a map of India on an easel" loading="lazy"></figure>
         <div class="prog__body">
-          <span class="prog__age">Ages 4 to 5</span>
-          <h3>KG</h3>
-          <p>Reading three-letter words, writing their name, simple sums. We prepare children for Class 1 interviews at South Point, DPS and other nearby schools.</p>
+          <span data-nx="classes.prog-age3" class="prog__age">Ages 4 to 5</span>
+          <h3 data-nx="classes.h33">KG</h3>
+          <p data-nx="classes.p3">Reading three-letter words, writing their name, simple sums. We prepare children for Class 1 interviews at South Point, DPS and other nearby schools.</p>
           <ul class="prog__list">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>English, Bengali and maths readiness</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Two school outings a year</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Interview practice in February</li>
           </ul>
-          <div class="prog__fee"><b>&#8377;2,800</b><span>per month &middot; 9:00 to 12:30</span></div>
+          <div class="prog__fee"><b data-nx="classes.b3">&#8377;2,800</b><span data-nx="classes.span3">per month &middot; 9:00 to 12:30</span></div>
         </div>
       </article>
     </div>
-    <p class="lede center" style="font-size:.92rem; margin-top:1.8rem">Admission &#8377;5,000 once. Annual charge &#8377;4,500 for books, craft material and two uniforms. Day-care till 4 pm available for &#8377;1,800 a month, with lunch from home.</p>
+    <p data-nx="classes.lede2" class="lede center" style="font-size:.92rem; margin-top:1.8rem">Admission &#8377;5,000 once. Annual charge &#8377;4,500 for books, craft material and two uniforms. Day-care till 4 pm available for &#8377;1,800 a month, with lunch from home.</p>
   </div>
 </section>
 
 <!-- A day at school -->
-<section class="section section--sky" id="day">
+<section data-nx-section="day" class="section section--sky" id="day">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill">A day at school</span>
-      <h2 class="h-lg">What a Tuesday looks like</h2>
-      <p class="lede">The same shape every day, so children know what comes next. Nursery and KG timings shown; Playgroup starts half an hour later.</p>
+      <span data-nx="day.pill" class="pill">A day at school</span>
+      <h2 data-nx="day.h2" class="h-lg">What a Tuesday looks like</h2>
+      <p data-nx="day.lede" class="lede">The same shape every day, so children know what comes next. Nursery and KG timings shown; Playgroup starts half an hour later.</p>
     </div>
-    <ol class="day">
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">9:00 am</span><h3>Arrival and free play</h3><p>Shoes off, bags on hooks. Blocks, puzzles and the book corner while everyone arrives.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">9:30 am</span><h3>Circle time</h3><p>Good-morning song, weather, the day's theme. Everyone gets to say one thing.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">10:00 am</span><h3>Learning through play</h3><p>Letters, numbers or the theme, taught with games and things to touch. Twenty-five minutes, then a change.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">10:30 am</span><h3>Tiffin</h3><p>Children eat from home. We wash hands together and sit at the long table. No chips or chocolate, please.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">11:00 am</span><h3>Garden or music</h3><p>Slides and swings in the garden on dry days, music and movement indoors in the rains.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">11:40 am</span><h3>Art and craft</h3><p>Paint, clay, paper tearing, pasting. Aprons on. Something goes home in the bag most days.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">12:15 pm</span><h3>Story and goodbye</h3><p>One story on the mat, then the goodbye song. Children are handed only to the adult on the pick-up card.</p></div></li>
-      <li class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span class="slot__time">12:30 pm</span><h3>Day-care continues</h3><p>For children staying on: lunch, a nap on their own mat, quiet play. Pick-up any time till 4 pm.</p></div></li>
+    <ol data-nx-list="day.day" class="day">
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">9:00 am</span><h3 data-nx-f="h3">Arrival and free play</h3><p data-nx-f="p">Shoes off, bags on hooks. Blocks, puzzles and the book corner while everyone arrives.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">9:30 am</span><h3 data-nx-f="h3">Circle time</h3><p data-nx-f="p">Good-morning song, weather, the day's theme. Everyone gets to say one thing.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">10:00 am</span><h3 data-nx-f="h3">Learning through play</h3><p data-nx-f="p">Letters, numbers or the theme, taught with games and things to touch. Twenty-five minutes, then a change.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">10:30 am</span><h3 data-nx-f="h3">Tiffin</h3><p data-nx-f="p">Children eat from home. We wash hands together and sit at the long table. No chips or chocolate, please.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">11:00 am</span><h3 data-nx-f="h3">Garden or music</h3><p data-nx-f="p">Slides and swings in the garden on dry days, music and movement indoors in the rains.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">11:40 am</span><h3 data-nx-f="h3">Art and craft</h3><p data-nx-f="p">Paint, clay, paper tearing, pasting. Aprons on. Something goes home in the bag most days.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">12:15 pm</span><h3 data-nx-f="h3">Story and goodbye</h3><p data-nx-f="p">One story on the mat, then the goodbye song. Children are handed only to the adult on the pick-up card.</p></div></li>
+      <li data-nx-item class="slot reveal"><span class="slot__dot" aria-hidden="true"></span><div class="slot__card"><span data-nx-f="span" class="slot__time">12:30 pm</span><h3 data-nx-f="h3">Day-care continues</h3><p data-nx-f="p">For children staying on: lunch, a nap on their own mat, quiet play. Pick-up any time till 4 pm.</p></div></li>
     </ol>
   </div>
 </section>
 
 <!-- Safety -->
-<section class="section section--white" id="safety">
+<section data-nx-section="safety" class="section section--white" id="safety">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill pill--mint">Safety</span>
-      <h2 class="h-lg">What we do to keep children safe</h2>
-      <p class="lede">Plain facts, not promises. Ask to see any of this when you visit.</p>
+      <span data-nx="safety.pill" class="pill pill--mint">Safety</span>
+      <h2 data-nx="safety.h2" class="h-lg">What we do to keep children safe</h2>
+      <p data-nx="safety.lede" class="lede">Plain facts, not promises. Ask to see any of this when you visit.</p>
     </div>
-    <div class="safety">
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="13" height="10" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></div><div><h3>CCTV in every room</h3><p>Six cameras including the garden and the gate. Recordings are kept for 30 days. Parents can ask to see footage.</p></div></div>
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="10" r="2.5"/><path d="M7 18c1-2.5 3-3.5 5-3.5s4 1 5 3.5"/></svg></div><div><h3>Pick-up card</h3><p>Each child has two photo cards. We hand a child only to the person holding one. Phone us before sending anyone else.</p></div></div>
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M12 8v6M9 11h6"/></svg></div><div><h3>First aid and a doctor nearby</h3><p>Two teachers are first-aid trained. Dr Sengupta's clinic is 200 metres away and on call during school hours.</p></div></div>
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z"/></svg></div><div><h3>Filtered water, clean toilets</h3><p>RO water, child-height toilets and basins, cleaned twice a day. Soap, not sanitiser, for small hands.</p></div></div>
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></div><div><h3>Ground floor only</h3><p>No stairs for children. Rounded furniture edges, socket covers, gates on both doors, a soft floor under the slide.</p></div></div>
-      <div class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3>Same faces every day</h3><p>All staff have been with us four years or more, with police verification on file. No substitute teachers from outside.</p></div></div>
+    <div data-nx-list="safety.safety" class="safety">
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="13" height="10" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg></div><div><h3 data-nx-f="h3">CCTV in every room</h3><p data-nx-f="p">Six cameras including the garden and the gate. Recordings are kept for 30 days. Parents can ask to see footage.</p></div></div>
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="10" r="2.5"/><path d="M7 18c1-2.5 3-3.5 5-3.5s4 1 5 3.5"/></svg></div><div><h3 data-nx-f="h3">Pick-up card</h3><p data-nx-f="p">Each child has two photo cards. We hand a child only to the person holding one. Phone us before sending anyone else.</p></div></div>
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M12 8v6M9 11h6"/></svg></div><div><h3 data-nx-f="h3">First aid and a doctor nearby</h3><p data-nx-f="p">Two teachers are first-aid trained. Dr Sengupta's clinic is 200 metres away and on call during school hours.</p></div></div>
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z"/></svg></div><div><h3 data-nx-f="h3">Filtered water, clean toilets</h3><p data-nx-f="p">RO water, child-height toilets and basins, cleaned twice a day. Soap, not sanitiser, for small hands.</p></div></div>
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></div><div><h3 data-nx-f="h3">Ground floor only</h3><p data-nx-f="p">No stairs for children. Rounded furniture edges, socket covers, gates on both doors, a soft floor under the slide.</p></div></div>
+      <div data-nx-item class="safe reveal"><div class="safe__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3 data-nx-f="h3">Same faces every day</h3><p data-nx-f="p">All staff have been with us four years or more, with police verification on file. No substitute teachers from outside.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- Full-bleed band -->
-<section class="band" aria-labelledby="band-heading">
-  <img src="/demo/play-school/images/letters-wall.jpg" width="1600" height="1067" alt="Smiling children sitting by a wall painted with big colourful letters" loading="lazy">
+<section data-nx-section="section-7" class="band" aria-labelledby="band-heading">
+  <img data-nx="section-7.photo" src="/demo/play-school/images/letters-wall.jpg" width="1600" height="1067" alt="Smiling children sitting by a wall painted with big colourful letters" loading="lazy">
   <div class="wrap">
     <div class="band__card reveal">
-      <span class="pill">Small on purpose</span>
-      <h2 class="h-lg" id="band-heading">Sixty children. Every one of them known by name.</h2>
-      <p>We have never taken more than twenty children in a class, and we do not plan to. A teacher who knows that Rudra skips breakfast and Aarohi is scared of the slide is worth more than a bigger building.</p>
+      <span data-nx="section-7.pill" class="pill">Small on purpose</span>
+      <h2 data-nx="section-7.h2" class="h-lg" id="band-heading">Sixty children. Every one of them known by name.</h2>
+      <p data-nx="section-7.p">We have never taken more than twenty children in a class, and we do not plan to. A teacher who knows that Rudra skips breakfast and Aarohi is scared of the slide is worth more than a bigger building.</p>
     </div>
   </div>
 </section>
 
 <!-- Gallery -->
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill pill--sky">Gallery</span>
-      <h2 class="h-lg">A peek inside</h2>
+      <span data-nx="gallery.pill" class="pill pill--sky">Gallery</span>
+      <h2 data-nx="gallery.h2" class="h-lg">A peek inside</h2>
     </div>
     <div class="gallery">
-      <figure class="ph ph--tall reveal"><img src="/demo/play-school/images/playground-slides.jpg" width="1200" height="1600" alt="Small boy sitting at the top of a blue slide" loading="lazy"></figure>
-      <figure class="ph reveal"><img src="/demo/play-school/images/abacus-girl.jpg" width="800" height="1200" alt="Girl in a teal dress sitting on a bench at a school event" loading="lazy"></figure>
-      <figure class="ph reveal"><img src="/demo/play-school/images/toy-shelves.jpg" width="800" height="1200" alt="Smiling girl in a yellow top reading a book outdoors" loading="lazy"></figure>
-      <figure class="ph ph--wide reveal"><img src="/demo/play-school/images/exercise-time.jpg" width="1200" height="800" alt="Children holding hands in a big circle in a school courtyard" loading="lazy"></figure>
-      <figure class="ph reveal"><img src="/demo/play-school/images/hand-painting.jpg" width="800" height="1000" alt="Two small children peeking round a doorway and laughing" loading="lazy"></figure>
-      <figure class="ph reveal"><img src="/demo/play-school/images/colour-matching.jpg" width="1200" height="800" alt="Girl matching wooden letter tiles on a tray" loading="lazy"></figure>
-      <figure class="ph ph--wide reveal"><img src="/demo/play-school/images/group-photo.jpg" width="1200" height="1800" alt="Children sitting on the floor writing letters on slates" loading="lazy"></figure>
-      <figure class="ph reveal"><img src="/demo/play-school/images/classroom.jpg" width="1200" height="675" alt="Classroom with boys in blue uniforms sitting at desks" loading="lazy"></figure>
+      <figure class="ph ph--tall reveal"><img data-nx="gallery.photo" src="/demo/play-school/images/playground-slides.jpg" width="1200" height="1600" alt="Small boy sitting at the top of a blue slide" loading="lazy"></figure>
+      <figure class="ph reveal"><img data-nx="gallery.photo2" src="/demo/play-school/images/abacus-girl.jpg" width="800" height="1200" alt="Girl in a teal dress sitting on a bench at a school event" loading="lazy"></figure>
+      <figure class="ph reveal"><img data-nx="gallery.photo3" src="/demo/play-school/images/toy-shelves.jpg" width="800" height="1200" alt="Smiling girl in a yellow top reading a book outdoors" loading="lazy"></figure>
+      <figure class="ph ph--wide reveal"><img data-nx="gallery.photo4" src="/demo/play-school/images/exercise-time.jpg" width="1200" height="800" alt="Children holding hands in a big circle in a school courtyard" loading="lazy"></figure>
+      <figure class="ph reveal"><img data-nx="gallery.photo5" src="/demo/play-school/images/hand-painting.jpg" width="800" height="1000" alt="Two small children peeking round a doorway and laughing" loading="lazy"></figure>
+      <figure class="ph reveal"><img data-nx="gallery.photo6" src="/demo/play-school/images/colour-matching.jpg" width="1200" height="800" alt="Girl matching wooden letter tiles on a tray" loading="lazy"></figure>
+      <figure class="ph ph--wide reveal"><img data-nx="gallery.photo7" src="/demo/play-school/images/group-photo.jpg" width="1200" height="1800" alt="Children sitting on the floor writing letters on slates" loading="lazy"></figure>
+      <figure class="ph reveal"><img data-nx="gallery.photo8" src="/demo/play-school/images/classroom.jpg" width="1200" height="675" alt="Classroom with boys in blue uniforms sitting at desks" loading="lazy"></figure>
     </div>
   </div>
 </section>
 
 <!-- Admissions -->
-<section class="section section--sun" id="admissions">
+<section data-nx-section="admissions" class="section section--sun" id="admissions">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill" style="background:#fff">Admissions 2026&ndash;27</span>
-      <h2 class="h-lg">How to join</h2>
-      <p class="lede">The session starts in April. We take children all year if a seat is free. There is no test for the child and no interview for parents, only a visit.</p>
+      <span data-nx="admissions.pill" class="pill" style="background:#fff">Admissions 2026&ndash;27</span>
+      <h2 data-nx="admissions.h2" class="h-lg">How to join</h2>
+      <p data-nx="admissions.lede" class="lede">The session starts in April. We take children all year if a seat is free. There is no test for the child and no interview for parents, only a visit.</p>
     </div>
     <div class="adm">
-      <ol class="adm__steps reveal">
-        <li><h3>Message or call us</h3><p>Tell us your child's date of birth and which class you are thinking of. We will suggest a day to visit.</p></li>
-        <li><h3>Visit during school hours</h3><p>Come between 10 and 11:30 am with your child. See a class, meet the teacher, sit in the garden. Takes about forty minutes.</p></li>
-        <li><h3>Fill the form</h3><p>A two-page form and the documents listed here. We confirm the seat the same day if one is free.</p></li>
-        <li><h3>Settling-in week</h3><p>Short days for the first week, a parent nearby. Most children are happy to stay alone by day four or five.</p></li>
+      <ol data-nx-list="admissions.adm-steps" class="adm__steps reveal">
+        <li data-nx-item><h3 data-nx-f="h3">Message or call us</h3><p data-nx-f="p">Tell us your child's date of birth and which class you are thinking of. We will suggest a day to visit.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Visit during school hours</h3><p data-nx-f="p">Come between 10 and 11:30 am with your child. See a class, meet the teacher, sit in the garden. Takes about forty minutes.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Fill the form</h3><p data-nx-f="p">A two-page form and the documents listed here. We confirm the seat the same day if one is free.</p></li>
+        <li data-nx-item><h3 data-nx-f="h3">Settling-in week</h3><p data-nx-f="p">Short days for the first week, a parent nearby. Most children are happy to stay alone by day four or five.</p></li>
       </ol>
       <div class="docs reveal">
-        <h3>What to bring for admission</h3>
+        <h3 data-nx="admissions.h3">What to bring for admission</h3>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Birth certificate (copy)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Four passport photos of the child</li>
@@ -593,26 +596,26 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Vaccination card (copy)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>Address proof of a parent</li>
         </ul>
-        <small>Admission &#8377;5,000 and the first quarter's fee are paid on the day of admission. UPI or cash.</small>
+        <small data-nx="admissions.small">Admission &#8377;5,000 and the first quarter's fee are paid on the day of admission. UPI or cash.</small>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Quotes -->
-<section class="section section--white">
+<section data-nx-section="section-10" class="section section--white">
   <div class="wrap">
     <div class="center reveal">
-      <span class="pill pill--sky">Parents say</span>
-      <h2 class="h-lg">In their words</h2>
+      <span data-nx="section-10.pill" class="pill pill--sky">Parents say</span>
+      <h2 data-nx="section-10.h2" class="h-lg">In their words</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="quote reveal">
-        <p>Our daughter cried for three days and then would not leave at pick-up time. She came home singing Bengali rhymes we had forgotten. She got into Class 1 at her first interview.</p>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">Our daughter cried for three days and then would not leave at pick-up time. She came home singing Bengali rhymes we had forgotten. She got into Class 1 at her first interview.</p>
         <footer>Priyanka, mother of Aarohi, Lake Gardens</footer>
       </blockquote>
-      <blockquote class="quote reveal">
-        <p>What I liked is that the same teachers are there every year. They know my son's tiffin habits and his moods. It feels like a home, not a franchise.</p>
+      <blockquote data-nx-item class="quote reveal">
+        <p data-nx-f="p">What I liked is that the same teachers are there every year. They know my son's tiffin habits and his moods. It feels like a home, not a franchise.</p>
         <footer>Souvik, father of Rudra, Jodhpur Park</footer>
       </blockquote>
     </div>
@@ -620,11 +623,11 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- Visit -->
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="reveal">
-      <span class="pill pill--mint">Visit us</span>
-      <h2 class="h-lg">Behind Jodhpur Park market</h2>
+      <span data-nx="visit.pill" class="pill pill--mint">Visit us</span>
+      <h2 data-nx="visit.h2" class="h-lg">Behind Jodhpur Park market</h2>
     </div>
     <div class="visit">
       <div class="visit__map reveal">
@@ -632,20 +635,20 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
       </div>
       <div class="visit__info reveal">
         <div class="visit__block">
-          <h3>Address</h3>
-          <address>Chotto Pakhi Play School<br>8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068<br>Yellow gate, two houses from the Jodhpur Park post office</address>
+          <h3 data-nx="visit.h3">Address</h3>
+          <address data-nx="visit.address">Chotto Pakhi Play School<br>8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068<br>Yellow gate, two houses from the Jodhpur Park post office</address>
         </div>
         <div class="visit__block">
-          <h3>School hours</h3>
+          <h3 data-nx="visit.h32">School hours</h3>
           <ul class="hours">
-            <li><span>Monday &ndash; Friday</span><span>9:00 am &ndash; 12:30 pm</span></li>
-            <li><span>Day-care</span><span>till 4:00 pm</span></li>
-            <li><span>Office for visits</span><span>10:00 &ndash; 11:30 am, Mon &ndash; Sat</span></li>
-            <li><span>Closed</span><span>Sundays, Pujo holidays, summer break in May</span></li>
+            <li data-nx-list="visit.list"><span data-nx-f="span" data-nx-item>Monday &ndash; Friday</span><span data-nx-f="span" data-nx-item>9:00 am &ndash; 12:30 pm</span></li>
+            <li data-nx-list="visit.list2"><span data-nx-f="span" data-nx-item>Day-care</span><span data-nx-f="span" data-nx-item>till 4:00 pm</span></li>
+            <li data-nx-list="visit.list3"><span data-nx-f="span" data-nx-item>Office for visits</span><span data-nx-f="span" data-nx-item>10:00 &ndash; 11:30 am, Mon &ndash; Sat</span></li>
+            <li data-nx-list="visit.list4"><span data-nx-f="span" data-nx-item>Closed</span><span data-nx-f="span" data-nx-item>Sundays, Pujo holidays, summer break in May</span></li>
           </ul>
         </div>
         <div class="visit__links">
-          <a class="btn btn--sky" href="https://www.google.com/maps/search/?api=1&amp;query=8B%20Jodhpur%20Park%2C%20Lake%20Gardens%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get directions</a>
+          <a data-nx="visit.button" class="btn btn--sky" href="https://www.google.com/maps/search/?api=1&amp;query=8B%20Jodhpur%20Park%2C%20Lake%20Gardens%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get directions</a>
           <a class="btn btn--white" href="tel:+919804243159">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
             Call the office
@@ -657,13 +660,13 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 </section>
 
 <!-- Final CTA -->
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <span class="blob blob--sun" aria-hidden="true"></span>
   <span class="blob blob--mint" aria-hidden="true" style="top:auto; bottom:-10vw"></span>
   <div class="wrap center reveal" style="position:relative">
-    <span class="pill">Seats are limited to 20 per class</span>
-    <h2 class="h-lg">Come and see a morning here</h2>
-    <p class="lede">Send us your child's age on WhatsApp and we will fix a visit this week. Bring the little one; the garden is the best part.</p>
+    <span data-nx="contact.pill" class="pill">Seats are limited to 20 per class</span>
+    <h2 data-nx="contact.h2" class="h-lg">Come and see a morning here</h2>
+    <p data-nx="contact.lede" class="lede">Send us your child's age on WhatsApp and we will fix a visit this week. Bring the little one; the garden is the best part.</p>
     <div class="btn-row" style="justify-content:center">
       <a class="btn btn--sun" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Chotto%20Pakhi%20Play%20School%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -679,7 +682,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
@@ -692,9 +695,9 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
             <path d="M35 19l5 1-5 2z" fill="#FF8A7A"/>
             <path d="M9 24l-5-3 2 6z" fill="#7FD8BE"/>
           </svg>
-          <span><span class="brand__name">Chotto Pakhi Play School</span><span class="brand__sub">Ages 2 to 5 &middot; Jodhpur Park</span></span>
+          <span><span data-nx="footer.brand-name" class="brand__name">Chotto Pakhi Play School</span><span data-nx="footer.brand-sub" class="brand__sub">Ages 2 to 5 &middot; Jodhpur Park</span></span>
         </a>
-        <p class="footer__tag">Playgroup, Nursery and KG in a small garden house in south Kolkata, since 2014.</p>
+        <p data-nx="footer.footer-tag" class="footer__tag">Playgroup, Nursery and KG in a small garden house in south Kolkata, since 2014.</p>
       </div>
       <nav aria-label="Footer">
         <h4>Pages</h4>
@@ -707,16 +710,16 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
         </ul>
       </nav>
       <div>
-        <h4>Visit</h4>
-        <address>8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068</address>
+        <h4 data-nx="footer.h4">Visit</h4>
+        <address data-nx="footer.address">8B Jodhpur Park, ground floor<br>Lake Gardens, Kolkata 700068</address>
         <ul style="margin-top:.8rem">
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=8B%20Jodhpur%20Park%2C%20Lake%20Gardens%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get directions</a></li>
+          <li><a data-nx="footer.button" href="https://www.google.com/maps/search/?api=1&amp;query=8B%20Jodhpur%20Park%2C%20Lake%20Gardens%2C%20Kolkata%20700068" target="_blank" rel="noopener">Get directions</a></li>
         </ul>
       </div>
     </div>
     <p class="footer__sample">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples.</p>
-    <p class="footer__copy">&copy; 2026 Chotto Pakhi Play School</p>
+    <p data-nx="footer.footer-copy" class="footer__copy">&copy; 2026 Chotto Pakhi Play School</p>
   </div>
 </footer>
 
@@ -792,5 +795,7 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
   } else {items.forEach(function(el){el.classList.add("is-in");});}
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

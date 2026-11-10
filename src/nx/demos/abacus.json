@@ -1,0 +1,1263 @@
+{
+  "site": "abacus",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sankhya Abacus Academy, Lake Town",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "note",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gains",
+      "label": {
+        "en": "Four things parents notice within a year",
+        "bn": "Four things parents notice within a year"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gains",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "label": {
+        "en": "What your child can do at the end of each level",
+        "bn": "What your child can do at the end of each level"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "stepnote",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "One plain fee card",
+        "bn": "One plain fee card"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "per",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "per2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "save",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "per3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "save2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "one",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "class",
+      "label": {
+        "en": "Forty-five minutes, the same shape every time",
+        "bn": "Forty-five minutes, the same shape every time"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:450"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "Forty-five minutes, the same shape every time",
+            "bn": "Forty-five minutes, the same shape every time"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Our children, in and out of class",
+        "bn": "Our children, in and out of class"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1200"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parents",
+      "label": {
+        "en": "Two honest notes from parents",
+        "bn": "Two honest notes from parents"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "pics",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1019"
+            }
+          ]
+        },
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Questions we are asked at every demo",
+        "bn": "Questions we are asked at every demo"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Second floor, Jessore Road, Lake Town",
+        "bn": "Second floor, Jessore Road, Lake Town"
+      },
+      "fields": [
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Bring your child this Saturday at 10",
+        "bn": "Bring your child this Saturday at 10"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Learn",
+            "bn": "Learn"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "span": "Sankhya<small>Abacus Academy</small>"
+    },
+    "top": {
+      "eyebrow": "Lake Town, Kolkata · Since 2014",
+      "h1": "Your child does <span>3-digit sums in their head</span> by Level 4.",
+      "lede": "Abacus and mental arithmetic for children aged 5 to 14. Two classes a week, eight children to a batch, one teacher who knows every child's name. Come for a free demo class on a Saturday and watch it happen.",
+      "photo": {
+        "src": "/demo/abacus/images/hero.jpg",
+        "alt": "Two young girls working at a classroom desk with crayons and worksheets"
+      },
+      "note": "<b>460+ children</b>have completed at least one level with us since 2014."
+    },
+    "gains": {
+      "eyebrow": "What your child gains",
+      "h2": "Four things parents notice within a year",
+      "lede": "The abacus itself is only the first year. After that the child pictures it in the head and moves the beads with the mind. That is the real skill.",
+      "gains": {
+        "items": [
+          {
+            "h3": "Concentration",
+            "p": "A child doing ten-row sums in the head cannot think about anything else. Teachers tell us the same child sits still in school too."
+          },
+          {
+            "h3": "Speed with accuracy",
+            "p": "By Level 4 most children add fifteen two-digit numbers in under thirty seconds without paper, and get it right. School maths stops being a fear."
+          },
+          {
+            "h3": "Memory and listening",
+            "p": "Dictation sums train the child to hold numbers in the head while listening. Spelling and tables improve as a side effect."
+          },
+          {
+            "h3": "Confidence",
+            "p": "Every level ends with a certificate. Every year there is a competition hall. Finishing a paper on a stage at seven is something a child keeps."
+          }
+        ]
+      }
+    },
+    "levels": {
+      "eyebrow": "The eight levels",
+      "h2": "What your child can do at the end of each level",
+      "lede": "Each level takes three to four months. There is a written and a speed test at the end, with a certificate from our affiliating body. The full course takes about two and a half years.",
+      "stepnote": "A child can start at any age from 5 to 14. Older children move through Levels 1 to 3 faster and sit in a separate batch so nobody feels out of place.",
+      "steps": {
+        "items": [
+          {
+            "n": "1",
+            "h3": "<small>Level 1</small>Knows the beads",
+            "p": "Adds and subtracts single digits on the abacus. Holds it correctly, moves beads with the right fingers."
+          },
+          {
+            "n": "2",
+            "h3": "<small>Level 2</small>Two-digit sums",
+            "p": "Uses the five and ten formulas to add and subtract two-digit numbers on the abacus."
+          },
+          {
+            "n": "3",
+            "h3": "<small>Level 3</small>Eyes closed",
+            "p": "Pictures the abacus and does two-digit sums without touching it. First mental arithmetic."
+          },
+          {
+            "n": "4",
+            "h3": "<small>Level 4</small>3-digit, in the head",
+            "p": "Adds and subtracts three-digit numbers mentally. Multiplies two digits by one. Sits a first competition."
+          },
+          {
+            "n": "5",
+            "h3": "<small>Level 5</small>Division",
+            "p": "Divides on the abacus and mentally. Understands decimals. Ten-row mental sums."
+          },
+          {
+            "n": "6",
+            "h3": "<small>Level 6</small>Mixed sums",
+            "p": "All four operations mixed in one paper. Negative numbers. Two-digit by two-digit mentally."
+          },
+          {
+            "n": "7",
+            "h3": "<small>Level 7</small>Decimals and percent",
+            "p": "Decimal multiplication and division, percentages, fifteen-row dictation sums."
+          },
+          {
+            "n": "8",
+            "h3": "<small>Level 8</small>Grand level",
+            "p": "Full speed and accuracy, square roots. Eligible for the national grand competition."
+          }
+        ]
+      }
+    },
+    "fees": {
+      "eyebrow": "Fees",
+      "h2": "One plain fee card",
+      "lede": "Same classes, same teacher, whichever way you pay. No admission fee. Leave with two weeks' notice.",
+      "h3": "Monthly",
+      "amt": "&#8377;900<small> / month</small>",
+      "per": "8 classes a month, 1 hour each",
+      "tag": "Most parents choose",
+      "h32": "Quarterly",
+      "amt2": "&#8377;2,550<small> / 3 months</small>",
+      "per2": "24 classes, paid once a quarter",
+      "save": "Save ₹150",
+      "h33": "Yearly",
+      "amt3": "&#8377;9,600<small> / year</small>",
+      "per3": "96 classes, two level exams included",
+      "save2": "Save ₹1,200",
+      "h34": "Included in every plan",
+      "one": "Paid once: starter kit ₹1,200 (17-rod abacus, Level 1 book, bag). Level exam and certificate ₹300 per level (free on the yearly plan). Sibling: ₹150 off the second child each month."
+    },
+    "class": {
+      "photo": {
+        "src": "/demo/abacus/images/desk-boy.jpg",
+        "alt": "A young boy sitting at a green desk in a classroom with blue doors"
+      },
+      "eyebrow": "How a class runs",
+      "h2": "Forty-five minutes, the same shape every time",
+      "lede": "Children settle faster when they know what comes next. Every class follows this order.",
+      "tl": {
+        "items": [
+          {
+            "b": "<small>0-5 min</small>Flash cards",
+            "p": "Quick number pictures to wake the mind up. Children call out the answers together."
+          },
+          {
+            "b": "<small>5-20 min</small>New lesson on the abacus",
+            "p": "The teacher shows one new idea on the big abacus. Children copy it on their own, one sum at a time."
+          },
+          {
+            "b": "<small>20-35 min</small>Practice sheet",
+            "p": "Twenty sums at the child's own pace. The teacher walks the room and corrects fingers, not just answers."
+          },
+          {
+            "b": "<small>35-42 min</small>Mental round",
+            "p": "Abacus goes into the bag. Dictation sums, eyes closed, answers written down."
+          },
+          {
+            "b": "<small>42-45 min</small>Homework and star",
+            "p": "One page for home. A star in the book for effort, not for marks."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "h2": "Our children, in and out of class",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/abacus/images/writing-numbers.jpg",
+              "alt": "A girl writing sums in a lined notebook with a pencil"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/classroom.jpg",
+              "alt": "Schoolgirls in white uniforms listening in a classroom"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/siblings.jpg",
+              "alt": "A brother and sister in glasses standing together"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/friends.jpg",
+              "alt": "Four children laughing under an alphabet wall"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/notebook-boy.jpg",
+              "alt": "A smiling boy sitting cross-legged with a notebook"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/test-girl.jpg",
+              "alt": "A girl concentrating on a written test at a blue desk"
+            }
+          }
+        ]
+      }
+    },
+    "parents": {
+      "eyebrow": "Parents say",
+      "h2": "Two honest notes from parents",
+      "pics": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/abacus/images/laughing.jpg",
+              "alt": "Two young children laughing on a window ledge"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/abacus/images/competition.jpg",
+              "alt": "A crowd of schoolchildren in uniform sitting at an event"
+            }
+          }
+        ]
+      },
+      "quotes": {
+        "items": [
+          {
+            "p": "My daughter counted on her fingers in Class 2. A year later her class teacher asked me what had changed. Now she does the shop bill before the shopkeeper does.",
+            "span": "Mother of Ahana, 8, Bangur"
+          },
+          {
+            "p": "At the demo they told us our son was too young and to come back in six months. We did. That honesty is why we have stayed four years.",
+            "span": "Mother of Aryan, 11, Sreebhumi"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "eyebrow": "Parent FAQs",
+      "h2": "Questions we are asked at every demo",
+      "faq": {
+        "items": [
+          {
+            "summary": "What is the right age to start?",
+            "p": "Five to seven is ideal. The child should know numbers 1 to 100 and be able to sit for 45 minutes. We take children up to 14; older children join a separate batch and move faster."
+          },
+          {
+            "summary": "Will it clash with school maths?",
+            "p": "No. Abacus gives the answer; school teaches the method. Children write school sums the school's way and use the mental picture to check. Teachers usually notice only that the child is faster."
+          },
+          {
+            "summary": "How much practice at home?",
+            "p": "Ten minutes a day from the practice book. Not more. Parents do not need to know abacus to help; the book has answers at the back."
+          },
+          {
+            "summary": "What if my child misses a class?",
+            "p": "Tell us and the child sits in another batch the same week. If a whole month is missed for illness or travel, we pause the fee for that month."
+          },
+          {
+            "summary": "Is the certificate recognised?",
+            "p": "Level certificates come from our affiliating abacus association and are accepted at state and national competitions. They are not a school-board qualification and we do not claim they are."
+          },
+          {
+            "summary": "Can we try before paying?",
+            "p": "Yes. The Saturday demo class is free and parents sit in. If the child enjoys it, you join from the next week. If we think the child is too young, we say so and ask you to come back later."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "eyebrow": "Visit us",
+      "h2": "Second floor, Jessore Road, Lake Town",
+      "p": "Sankhya Abacus Academy<br>8/3 Jessore Road, Lake Town<br>Kolkata 700089<br>Opposite the Lake Town Block A bus stop. Lift available.",
+      "button": "Get directions",
+      "b": "Mon to Thu",
+      "span": "4.00 pm - 7.30 pm",
+      "b2": "Friday",
+      "span2": "Closed",
+      "b3": "Sat and Sun",
+      "span3": "9.00 am - 1.00 pm",
+      "b4": "Free demo",
+      "span4": "Saturday 10.00 am"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sankhya Abacus Academy sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=8%2F3%20Jessore%20Road%2C%20Lake%20Town%2C%20Kolkata%20700089",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "span": "Sankhya<small>Abacus Academy</small>",
+      "p": "Abacus and mental arithmetic for children aged 5 to 14. Lake Town, Kolkata, since 2014.",
+      "h4": "Learn",
+      "h42": "Contact",
+      "li": "8/3 Jessore Road, Lake Town, Kolkata 700089",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "button": "What your child gains"
+          },
+          {
+            "button": "The eight levels"
+          },
+          {
+            "button": "Fees"
+          },
+          {
+            "button": "How a class runs"
+          },
+          {
+            "button": "Parent FAQs"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Sankhya Abacus Academy, Lake Town | Abacus and Mental Arithmetic for Ages 5 to 14",
+      "description": "Abacus and mental arithmetic classes for children aged 5 to 14 in Lake Town, Kolkata. Eight levels, batches of eight, free demo class every Saturday."
+    }
+  }
+}

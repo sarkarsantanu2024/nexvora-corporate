@@ -288,25 +288,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets and readable small text */
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="caterer">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Sreemoyee Caterers, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#4A1320"/><path d="M8 27h28" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/><path d="M11 27a11 11 0 0 1 22 0Z" fill="#C9A227"/><circle cx="22" cy="13" r="2.2" fill="#FBF8F1"/><path d="M14 33h16" stroke="#FBF8F1" stroke-width="2" stroke-linecap="round"/></svg>
-      <span><b>Sreemoyee Caterers</b><small>Behala &middot; since 2004</small></span>
+      <span><b data-nx="header.b">Sreemoyee Caterers</b><small data-nx="header.small">Behala &middot; since 2004</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -329,200 +335,200 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__photo reveal">
-      <img src="/demo/caterer/images/hero.jpg" width="1200" height="2133" alt="Buffet counter with steel chafing dishes of curry in a decorated hall" fetchpriority="high">
-      <div class="hero__stats">
-        <div><b>50</b><span>Plates minimum</span></div>
-        <div><b>&#8377;450</b><span>Veg, per plate</span></div>
-        <div><b>21</b><span>Years of weddings</span></div>
+      <img data-nx="top.photo" src="/demo/caterer/images/hero.jpg" width="1200" height="2133" alt="Buffet counter with steel chafing dishes of curry in a decorated hall" fetchpriority="high">
+      <div data-nx-list="top.hero-stats" class="hero__stats">
+        <div data-nx-item><b data-nx-f="b">50</b><span data-nx-f="span">Plates minimum</span></div>
+        <div data-nx-item><b data-nx-f="b">&#8377;450</b><span data-nx-f="span">Veg, per plate</span></div>
+        <div data-nx-item><b data-nx-f="b">21</b><span data-nx-f="span">Years of weddings</span></div>
       </div>
     </div>
     <div class="reveal">
-      <span class="hero__since">Weddings &middot; Annaprashan &middot; Birthdays &middot; Office lunches</span>
-      <h1>Food for the whole hall, <em>served hot, by our own people.</em></h1>
-      <p>Per-plate packages with the price written down before you book. Cooks, servers, crockery and live counters all come with us, so on the day you only have to sit with your guests.</p>
+      <span data-nx="top.hero-since" class="hero__since">Weddings &middot; Annaprashan &middot; Birthdays &middot; Office lunches</span>
+      <h1 data-nx="top.h1">Food for the whole hall, <em>served hot, by our own people.</em></h1>
+      <p data-nx="top.p">Per-plate packages with the price written down before you book. Cooks, servers, crockery and live counters all come with us, so on the day you only have to sit with your guests.</p>
       <div class="hero__cta">
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Send the date and guest count
         </a>
-        <a class="btn btn--ghost" href="#packages">See per-plate prices</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#packages">See per-plate prices</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="packages">
+<section data-nx-section="packages" class="section" id="packages">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Per-plate packages</span>
-      <h2 class="h2">Three packages. Pick one, then change dishes as you like.</h2>
-      <p class="lead" style="margin:1rem auto 0">Prices are per plate for 100 guests or more. Between 50 and 99 plates add &#8377;40 a plate. Water, ice, service and cleaning are included.</p>
+      <span data-nx="packages.kicker" class="kicker">Per-plate packages</span>
+      <h2 data-nx="packages.h2" class="h2">Three packages. Pick one, then change dishes as you like.</h2>
+      <p data-nx="packages.p" class="lead" style="margin:1rem auto 0">Prices are per plate for 100 guests or more. Between 50 and 99 plates add &#8377;40 a plate. Water, ice, service and cleaning are included.</p>
     </div>
     <div class="packs">
       <div class="pack reveal">
-        <h3>Veg</h3>
-        <div class="pack__price"><b>&#8377;450</b><span>per plate</span></div>
-        <ul class="pack__list">
-          <li>2 starters (vegetable chop, paneer tikka)</li>
-          <li>Basanti pulao or fried rice, plus luchi</li>
-          <li>Chholar dal, 2 sabzi, paneer dish</li>
-          <li>Dhokar dalna or chhanar kalia</li>
-          <li>Chutney, papad, salad</li>
-          <li>Rosogolla, mishti doi</li>
+        <h3 data-nx="packages.h3">Veg</h3>
+        <div class="pack__price"><b data-nx="packages.b">&#8377;450</b><span data-nx="packages.span">per plate</span></div>
+        <ul data-nx-list="packages.pack-list" class="pack__list">
+          <li data-nx-f="li" data-nx-item>2 starters (vegetable chop, paneer tikka)</li>
+          <li data-nx-f="li" data-nx-item>Basanti pulao or fried rice, plus luchi</li>
+          <li data-nx-f="li" data-nx-item>Chholar dal, 2 sabzi, paneer dish</li>
+          <li data-nx-f="li" data-nx-item>Dhokar dalna or chhanar kalia</li>
+          <li data-nx-f="li" data-nx-item>Chutney, papad, salad</li>
+          <li data-nx-f="li" data-nx-item>Rosogolla, mishti doi</li>
         </ul>
         <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask for a veg quote</a>
       </div>
       <div class="pack pack--mid reveal">
-        <span class="pack__tag">Most weddings pick this</span>
-        <h3>Non-veg</h3>
-        <div class="pack__price"><b>&#8377;650</b><span>per plate</span></div>
-        <ul class="pack__list">
-          <li>3 starters (fish fry, chicken tikka, veg chop)</li>
-          <li>Basanti pulao, fried rice, luchi</li>
-          <li>Dal, 2 sabzi, paneer dish</li>
-          <li>Fish kalia (rui or katla)</li>
-          <li>Chicken kosha</li>
-          <li>Chutney, papad, salad</li>
-          <li>2 sweets, mishti doi, ice cream</li>
+        <span data-nx="packages.pack-tag" class="pack__tag">Most weddings pick this</span>
+        <h3 data-nx="packages.h32">Non-veg</h3>
+        <div class="pack__price"><b data-nx="packages.b2">&#8377;650</b><span data-nx="packages.span2">per plate</span></div>
+        <ul data-nx-list="packages.pack-list2" class="pack__list">
+          <li data-nx-f="li" data-nx-item>3 starters (fish fry, chicken tikka, veg chop)</li>
+          <li data-nx-f="li" data-nx-item>Basanti pulao, fried rice, luchi</li>
+          <li data-nx-f="li" data-nx-item>Dal, 2 sabzi, paneer dish</li>
+          <li data-nx-f="li" data-nx-item>Fish kalia (rui or katla)</li>
+          <li data-nx-f="li" data-nx-item>Chicken kosha</li>
+          <li data-nx-f="li" data-nx-item>Chutney, papad, salad</li>
+          <li data-nx-f="li" data-nx-item>2 sweets, mishti doi, ice cream</li>
         </ul>
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask for a non-veg quote</a>
       </div>
       <div class="pack reveal">
-        <h3>Premium</h3>
-        <div class="pack__price"><b>&#8377;950</b><span>per plate</span></div>
-        <ul class="pack__list">
-          <li>4 starters including bhetki fry and mutton chop</li>
-          <li>2 live counters of your choice</li>
-          <li>Pulao, biryani, luchi, naan</li>
-          <li>Bhetki paturi or chingri malai curry</li>
-          <li>Mutton kosha and chicken chaap</li>
-          <li>Paan counter at the exit</li>
-          <li>3 sweets, mishti doi, 2 ice creams</li>
+        <h3 data-nx="packages.h33">Premium</h3>
+        <div class="pack__price"><b data-nx="packages.b3">&#8377;950</b><span data-nx="packages.span3">per plate</span></div>
+        <ul data-nx-list="packages.pack-list3" class="pack__list">
+          <li data-nx-f="li" data-nx-item>4 starters including bhetki fry and mutton chop</li>
+          <li data-nx-f="li" data-nx-item>2 live counters of your choice</li>
+          <li data-nx-f="li" data-nx-item>Pulao, biryani, luchi, naan</li>
+          <li data-nx-f="li" data-nx-item>Bhetki paturi or chingri malai curry</li>
+          <li data-nx-f="li" data-nx-item>Mutton kosha and chicken chaap</li>
+          <li data-nx-f="li" data-nx-item>Paan counter at the exit</li>
+          <li data-nx-f="li" data-nx-item>3 sweets, mishti doi, 2 ice creams</li>
         </ul>
         <a class="btn btn--ghost" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask for a premium quote</a>
       </div>
     </div>
-    <p class="packs__note">Swap any dish for another at the same level. Ilish, chingri and mutton biryani cost extra and we will tell you how much before you decide. GST is added to the final bill.</p>
+    <p data-nx="packages.packs-note" class="packs__note">Swap any dish for another at the same level. Ilish, chingri and mutton biryani cost extra and we will tell you how much before you decide. GST is added to the final bill.</p>
   </div>
 </section>
 
-<section class="section section--deep" id="menus">
+<section data-nx-section="menus" class="section section--deep" id="menus">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Event menus</span>
-      <h2 class="h2">Menus we suggest for each kind of day.</h2>
-      <p class="lead" style="margin-top:1rem">Open one to see what is on it. These are starting points. At the tasting we change them together.</p>
+      <span data-nx="menus.kicker" class="kicker">Event menus</span>
+      <h2 data-nx="menus.h2" class="h2">Menus we suggest for each kind of day.</h2>
+      <p data-nx="menus.p" class="lead" style="margin-top:1rem">Open one to see what is on it. These are starting points. At the tasting we change them together.</p>
     </div>
     <div class="acc reveal">
       <details open>
-        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9L9.5 8z"/></svg></span><span>Wedding and reception<small>Biye and bou bhaat, 150 to 800 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
+        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9L9.5 8z"/></svg></span><span data-nx="menus.span">Wedding and reception<small>Biye and bou bhaat, 150 to 800 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
         <div class="acc__body">
-          <div><h4>Starters</h4><ul><li>Fish fry with kasundi</li><li>Chicken reshmi kebab</li><li>Mochar chop</li><li>Tomato soup, served</li></ul></div>
-          <div><h4>Main</h4><ul><li>Basanti pulao and luchi</li><li>Chholar dal, aloo dum</li><li>Bhetki paturi</li><li>Mutton kosha</li><li>Chicken chaap with naan</li></ul></div>
-          <div><h4>To finish</h4><ul><li>Tomato khejur chutney, papad</li><li>Nolen gur rosogolla (winter)</li><li>Mishti doi</li><li>Ice cream and paan</li></ul></div>
-          <p class="pp">Suggested package: <b>Non-veg or Premium</b>. Most families add a chaat or kathi roll counter for the evening crowd.</p>
+          <div><h4 data-nx="menus.h4">Starters</h4><ul data-nx-list="menus.list"><li data-nx-f="li" data-nx-item>Fish fry with kasundi</li><li data-nx-f="li" data-nx-item>Chicken reshmi kebab</li><li data-nx-f="li" data-nx-item>Mochar chop</li><li data-nx-f="li" data-nx-item>Tomato soup, served</li></ul></div>
+          <div><h4 data-nx="menus.h42">Main</h4><ul data-nx-list="menus.list2"><li data-nx-f="li" data-nx-item>Basanti pulao and luchi</li><li data-nx-f="li" data-nx-item>Chholar dal, aloo dum</li><li data-nx-f="li" data-nx-item>Bhetki paturi</li><li data-nx-f="li" data-nx-item>Mutton kosha</li><li data-nx-f="li" data-nx-item>Chicken chaap with naan</li></ul></div>
+          <div><h4 data-nx="menus.h43">To finish</h4><ul data-nx-list="menus.list3"><li data-nx-f="li" data-nx-item>Tomato khejur chutney, papad</li><li data-nx-f="li" data-nx-item>Nolen gur rosogolla (winter)</li><li data-nx-f="li" data-nx-item>Mishti doi</li><li data-nx-f="li" data-nx-item>Ice cream and paan</li></ul></div>
+          <p data-nx="menus.pp" class="pp">Suggested package: <b>Non-veg or Premium</b>. Most families add a chaat or kathi roll counter for the evening crowd.</p>
         </div>
       </details>
       <details>
-        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a8 8 0 0 0 16 0H4Z"/><path d="M12 6V3M8 7l-1-2M16 7l1-2"/></svg></span><span>Annaprashan<small>Rice ceremony, 50 to 200 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
+        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a8 8 0 0 0 16 0H4Z"/><path d="M12 6V3M8 7l-1-2M16 7l1-2"/></svg></span><span data-nx="menus.span2">Annaprashan<small>Rice ceremony, 50 to 200 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
         <div class="acc__body">
-          <div><h4>Starters</h4><ul><li>Beguni and vegetable chop</li><li>Fish fry</li><li>Lebu cha on arrival</li></ul></div>
-          <div><h4>Main</h4><ul><li>Payesh for the baby, in a silver bowl</li><li>Ghee bhaat, shukto, dal</li><li>Five bhaja on each plate</li><li>Rui kalia, chicken or mutton</li><li>Chutney, papad</li></ul></div>
-          <div><h4>To finish</h4><ul><li>Rosogolla and sandesh</li><li>Mishti doi</li></ul></div>
-          <p class="pp">Suggested package: <b>Non-veg</b>. The payesh and the first plate for the child are on us.</p>
+          <div><h4 data-nx="menus.h44">Starters</h4><ul data-nx-list="menus.list4"><li data-nx-f="li" data-nx-item>Beguni and vegetable chop</li><li data-nx-f="li" data-nx-item>Fish fry</li><li data-nx-f="li" data-nx-item>Lebu cha on arrival</li></ul></div>
+          <div><h4 data-nx="menus.h45">Main</h4><ul data-nx-list="menus.list5"><li data-nx-f="li" data-nx-item>Payesh for the baby, in a silver bowl</li><li data-nx-f="li" data-nx-item>Ghee bhaat, shukto, dal</li><li data-nx-f="li" data-nx-item>Five bhaja on each plate</li><li data-nx-f="li" data-nx-item>Rui kalia, chicken or mutton</li><li data-nx-f="li" data-nx-item>Chutney, papad</li></ul></div>
+          <div><h4 data-nx="menus.h46">To finish</h4><ul data-nx-list="menus.list6"><li data-nx-f="li" data-nx-item>Rosogolla and sandesh</li><li data-nx-f="li" data-nx-item>Mishti doi</li></ul></div>
+          <p data-nx="menus.pp2" class="pp">Suggested package: <b>Non-veg</b>. The payesh and the first plate for the child are on us.</p>
         </div>
       </details>
       <details>
-        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v8H4zM4 12a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4M12 8V4"/></svg></span><span>Birthday and anniversary<small>At home or in a small hall, 50 to 120 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
+        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16v8H4zM4 12a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4M12 8V4"/></svg></span><span data-nx="menus.span3">Birthday and anniversary<small>At home or in a small hall, 50 to 120 guests</small></span><span class="plus" aria-hidden="true"></span></summary>
         <div class="acc__body">
-          <div><h4>Starters</h4><ul><li>Chicken pakora</li><li>Paneer tikka</li><li>Cold drinks and mocktail</li></ul></div>
-          <div><h4>Main</h4><ul><li>Chicken biryani or veg pulao</li><li>Chicken chaap</li><li>Mixed veg, dal makhani</li><li>Naan and salad</li></ul></div>
-          <div><h4>To finish</h4><ul><li>Gulab jamun</li><li>Ice cream</li><li>Your cake, which we cut and serve</li></ul></div>
-          <p class="pp">Suggested package: <b>Veg or Non-veg</b>. For a house party we bring folding tables, a buffet counter and take everything away after.</p>
+          <div><h4 data-nx="menus.h47">Starters</h4><ul data-nx-list="menus.list7"><li data-nx-f="li" data-nx-item>Chicken pakora</li><li data-nx-f="li" data-nx-item>Paneer tikka</li><li data-nx-f="li" data-nx-item>Cold drinks and mocktail</li></ul></div>
+          <div><h4 data-nx="menus.h48">Main</h4><ul data-nx-list="menus.list8"><li data-nx-f="li" data-nx-item>Chicken biryani or veg pulao</li><li data-nx-f="li" data-nx-item>Chicken chaap</li><li data-nx-f="li" data-nx-item>Mixed veg, dal makhani</li><li data-nx-f="li" data-nx-item>Naan and salad</li></ul></div>
+          <div><h4 data-nx="menus.h49">To finish</h4><ul data-nx-list="menus.list9"><li data-nx-f="li" data-nx-item>Gulab jamun</li><li data-nx-f="li" data-nx-item>Ice cream</li><li data-nx-f="li" data-nx-item>Your cake, which we cut and serve</li></ul></div>
+          <p data-nx="menus.pp3" class="pp">Suggested package: <b>Veg or Non-veg</b>. For a house party we bring folding tables, a buffet counter and take everything away after.</p>
         </div>
       </details>
       <details>
-        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><span>Office lunch and puja<small>Packed or buffet, 50 to 500 plates</small></span><span class="plus" aria-hidden="true"></span></summary>
+        <summary><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><span data-nx="menus.span4">Office lunch and puja<small>Packed or buffet, 50 to 500 plates</small></span><span class="plus" aria-hidden="true"></span></summary>
         <div class="acc__body">
-          <div><h4>Packed box (&#8377;180 to &#8377;260)</h4><ul><li>Rice or pulao, dal</li><li>Sabzi, chicken or paneer</li><li>Chutney, papad, one sweet</li><li>Spoon, tissue, water</li></ul></div>
-          <div><h4>Buffet</h4><ul><li>Veg package from &#8377;450</li><li>Non-veg package from &#8377;650</li><li>Served with our counters and staff</li></ul></div>
-          <div><h4>Saraswati and Vishwakarma puja</h4><ul><li>Khichuri, labra, beguni</li><li>Chutney, papad, payesh</li><li>Bhog cooked without onion and garlic</li><li>&#8377;140 per plate, leaf plates included</li></ul></div>
-          <p class="pp">Packed lunches reach your office by 12:30. GST invoice for the company is provided.</p>
+          <div><h4 data-nx="menus.h410">Packed box (&#8377;180 to &#8377;260)</h4><ul data-nx-list="menus.list10"><li data-nx-f="li" data-nx-item>Rice or pulao, dal</li><li data-nx-f="li" data-nx-item>Sabzi, chicken or paneer</li><li data-nx-f="li" data-nx-item>Chutney, papad, one sweet</li><li data-nx-f="li" data-nx-item>Spoon, tissue, water</li></ul></div>
+          <div><h4 data-nx="menus.h411">Buffet</h4><ul data-nx-list="menus.list11"><li data-nx-f="li" data-nx-item>Veg package from &#8377;450</li><li data-nx-f="li" data-nx-item>Non-veg package from &#8377;650</li><li data-nx-f="li" data-nx-item>Served with our counters and staff</li></ul></div>
+          <div><h4 data-nx="menus.h412">Saraswati and Vishwakarma puja</h4><ul data-nx-list="menus.list12"><li data-nx-f="li" data-nx-item>Khichuri, labra, beguni</li><li data-nx-f="li" data-nx-item>Chutney, papad, payesh</li><li data-nx-f="li" data-nx-item>Bhog cooked without onion and garlic</li><li data-nx-f="li" data-nx-item>&#8377;140 per plate, leaf plates included</li></ul></div>
+          <p data-nx="menus.pp4" class="pp">Packed lunches reach your office by 12:30. GST invoice for the company is provided.</p>
         </div>
       </details>
     </div>
   </div>
 </section>
 
-<section class="section section--wine" id="counters">
+<section data-nx-section="counters" class="section section--wine" id="counters">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Live counters</span>
-      <h2 class="h2">Counters where the food is made in front of the guest.</h2>
-      <p class="lead" style="margin-top:1rem">Each counter comes with its own cook, gas, and a decorated stall. Two are included in the Premium package. Add any to another package at the price shown.</p>
+      <span data-nx="counters.kicker" class="kicker">Live counters</span>
+      <h2 data-nx="counters.h2" class="h2">Counters where the food is made in front of the guest.</h2>
+      <p data-nx="counters.p" class="lead" style="margin-top:1rem">Each counter comes with its own cook, gas, and a decorated stall. Two are included in the Premium package. Add any to another package at the price shown.</p>
     </div>
-    <div class="zig">
-      <div class="zig__row reveal">
-        <img src="/demo/caterer/images/samosa.jpg" width="1200" height="675" alt="Tray of fried snacks with samosas and dumplings" loading="lazy">
-        <div class="zig__text"><h3>Chaat and phuchka</h3><p>Phuchka, papri chaat, dahi vada and churmur. The most crowded corner at every reception. One cook serves about 120 guests an hour, so for big halls we put two.</p><span class="price">&#8377;60 per plate</span></div>
+    <div data-nx-list="counters.zig" class="zig">
+      <div data-nx-item class="zig__row reveal">
+        <img data-nx-f="photo" src="/demo/caterer/images/samosa.jpg" width="1200" height="675" alt="Tray of fried snacks with samosas and dumplings" loading="lazy">
+        <div class="zig__text"><h3 data-nx-f="h3">Chaat and phuchka</h3><p data-nx-f="p">Phuchka, papri chaat, dahi vada and churmur. The most crowded corner at every reception. One cook serves about 120 guests an hour, so for big halls we put two.</p><span data-nx-f="price" class="price">&#8377;60 per plate</span></div>
       </div>
-      <div class="zig__row reveal">
-        <img src="/demo/caterer/images/warmers.jpg" width="1200" height="676" alt="Copper buffet warmers lined up at an event" loading="lazy">
-        <div class="zig__text"><h3>Kathi roll and tandoor</h3><p>Egg roll, chicken roll, paneer roll made on the tawa, and tandoori chicken straight from the clay oven. Works well for the evening crowd who eat before the ceremony.</p><span class="price">&#8377;90 per plate</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <img data-nx-f="photo" src="/demo/caterer/images/warmers.jpg" width="1200" height="676" alt="Copper buffet warmers lined up at an event" loading="lazy">
+        <div class="zig__text"><h3 data-nx-f="h3">Kathi roll and tandoor</h3><p data-nx-f="p">Egg roll, chicken roll, paneer roll made on the tawa, and tandoori chicken straight from the clay oven. Works well for the evening crowd who eat before the ceremony.</p><span data-nx-f="price" class="price">&#8377;90 per plate</span></div>
       </div>
-      <div class="zig__row reveal">
-        <img src="/demo/caterer/images/halwa.jpg" width="1200" height="1912" alt="Gajar ka halwa in a serving dish at a buffet" loading="lazy">
-        <div class="zig__text"><h3>Hot sweets and paan</h3><p>Jalebi fried on the spot, gajar halwa, malpua in winter. A paan counter at the exit with mitha and sada paan, and a man who knows how to fold them.</p><span class="price">&#8377;50 per plate &middot; paan &#8377;25</span></div>
+      <div data-nx-item class="zig__row reveal">
+        <img data-nx-f="photo" src="/demo/caterer/images/halwa.jpg" width="1200" height="1912" alt="Gajar ka halwa in a serving dish at a buffet" loading="lazy">
+        <div class="zig__text"><h3 data-nx-f="h3">Hot sweets and paan</h3><p data-nx-f="p">Jalebi fried on the spot, gajar halwa, malpua in winter. A paan counter at the exit with mitha and sada paan, and a man who knows how to fold them.</p><span data-nx-f="price" class="price">&#8377;50 per plate &middot; paan &#8377;25</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="booking">
+<section data-nx-section="booking" class="section" id="booking">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">How booking works</span>
-      <h2 class="h2">From the first message to the last plate.</h2>
+      <span data-nx="booking.kicker" class="kicker">How booking works</span>
+      <h2 data-nx="booking.h2" class="h2">From the first message to the last plate.</h2>
     </div>
-    <ol class="tl reveal">
-      <li><span class="dot">1</span><span class="when">Day 1</span><h3>Send us the date, the venue and the guest count</h3><p>On WhatsApp or by phone. We check the date is free and send a written quote the same evening, package by package.</p></li>
-      <li><span class="dot">2</span><span class="when">Within a week</span><h3>Come for a tasting</h3><p>Pick a Saturday afternoon. You taste 8 to 10 dishes from your package at our Behala kitchen and change what you like. The tasting is free once you have booked, &#8377;1,500 before.</p></li>
-      <li><span class="dot">3</span><span class="when">To confirm</span><h3>Pay 50% advance</h3><p>Half the estimated bill, by UPI or bank transfer. You get a signed menu, the plate count, the counter list and the final per-plate price on one page.</p></li>
-      <li><span class="dot">4</span><span class="when">7 days before</span><h3>Confirm the final guest count</h3><p>You can move the count up or down by 10% till a week before. We cook for 5% more than the number you give, at no charge.</p></li>
-      <li><span class="dot">5</span><span class="when">The day</span><h3>We arrive four hours before the first guest</h3><p>Set up, cook, serve, clear and wash. The balance is paid after the last guest has eaten, in cash or UPI, against the GST bill.</p></li>
+    <ol data-nx-list="booking.tl" class="tl reveal">
+      <li data-nx-item><span data-nx-f="dot" class="dot">1</span><span data-nx-f="when" class="when">Day 1</span><h3 data-nx-f="h3">Send us the date, the venue and the guest count</h3><p data-nx-f="p">On WhatsApp or by phone. We check the date is free and send a written quote the same evening, package by package.</p></li>
+      <li data-nx-item><span data-nx-f="dot" class="dot">2</span><span data-nx-f="when" class="when">Within a week</span><h3 data-nx-f="h3">Come for a tasting</h3><p data-nx-f="p">Pick a Saturday afternoon. You taste 8 to 10 dishes from your package at our Behala kitchen and change what you like. The tasting is free once you have booked, &#8377;1,500 before.</p></li>
+      <li data-nx-item><span data-nx-f="dot" class="dot">3</span><span data-nx-f="when" class="when">To confirm</span><h3 data-nx-f="h3">Pay 50% advance</h3><p data-nx-f="p">Half the estimated bill, by UPI or bank transfer. You get a signed menu, the plate count, the counter list and the final per-plate price on one page.</p></li>
+      <li data-nx-item><span data-nx-f="dot" class="dot">4</span><span data-nx-f="when" class="when">7 days before</span><h3 data-nx-f="h3">Confirm the final guest count</h3><p data-nx-f="p">You can move the count up or down by 10% till a week before. We cook for 5% more than the number you give, at no charge.</p></li>
+      <li data-nx-item><span data-nx-f="dot" class="dot">5</span><span data-nx-f="when" class="when">The day</span><h3 data-nx-f="h3">We arrive four hours before the first guest</h3><p data-nx-f="p">Set up, cook, serve, clear and wash. The balance is paid after the last guest has eaten, in cash or UPI, against the GST bill.</p></li>
     </ol>
   </div>
 </section>
 
-<section class="section section--deep" id="included">
+<section data-nx-section="included" class="section section--deep" id="included">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What is included</span>
-      <h2 class="h2">Everything on this list comes with the per-plate price.</h2>
+      <span data-nx="included.kicker" class="kicker">What is included</span>
+      <h2 data-nx="included.h2" class="h2">Everything on this list comes with the per-plate price.</h2>
     </div>
     <div class="incl">
-      <ul class="incl__grid reveal">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><div><b>Serving staff</b><p>One server for every 25 guests, in uniform. A captain who stays with your family for the evening.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><div><b>Crockery and cutlery</b><p>Ceramic plates, steel cutlery, glass tumblers. Leaf plates and clay bhaar if you prefer the old way.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="10" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg><div><b>Buffet counters and warmers</b><p>Skirted tables, chafing dishes with fuel, and a decorated buffet line in your colour.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg><div><b>Dining tables and chairs</b><p>For 50% of the guests at one time, with covers. More on request at &#8377;40 a chair.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3M12 18a6 6 0 0 0 6-6H6a6 6 0 0 0 6 6Z"/></svg><div><b>Cooking on site</b><p>Our gas, our cooks, our utensils. We can cook in a courtyard, a garage or the venue kitchen.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg><div><b>Clearing and washing</b><p>Plates cleared from the table, the kitchen area washed down, and rubbish taken away in our van.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a8 8 0 0 0 8-8c0-5-8-12-8-12S4 9 4 14a8 8 0 0 0 8 8Z"/></svg><div><b>Drinking water and ice</b><p>Packaged water for every guest, ice boxes for the drinks you bring, and glasses washed and refilled.</p></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 12h16M9 7v10"/></svg><div><b>Written bill</b><p>A GST invoice with every item listed. Nothing added on the day that was not agreed before.</p></div></li>
+      <ul data-nx-list="included.incl-grid" class="incl__grid reveal">
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><div><b data-nx-f="b">Serving staff</b><p data-nx-f="p">One server for every 25 guests, in uniform. A captain who stays with your family for the evening.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg><div><b data-nx-f="b">Crockery and cutlery</b><p data-nx-f="p">Ceramic plates, steel cutlery, glass tumblers. Leaf plates and clay bhaar if you prefer the old way.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="10" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg><div><b data-nx-f="b">Buffet counters and warmers</b><p data-nx-f="p">Skirted tables, chafing dishes with fuel, and a decorated buffet line in your colour.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg><div><b data-nx-f="b">Dining tables and chairs</b><p data-nx-f="p">For 50% of the guests at one time, with covers. More on request at &#8377;40 a chair.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M18.4 5.6l-2.1 2.1M21 12h-3M12 18a6 6 0 0 0 6-6H6a6 6 0 0 0 6 6Z"/></svg><div><b data-nx-f="b">Cooking on site</b><p data-nx-f="p">Our gas, our cooks, our utensils. We can cook in a courtyard, a garage or the venue kitchen.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg><div><b data-nx-f="b">Clearing and washing</b><p data-nx-f="p">Plates cleared from the table, the kitchen area washed down, and rubbish taken away in our van.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a8 8 0 0 0 8-8c0-5-8-12-8-12S4 9 4 14a8 8 0 0 0 8 8Z"/></svg><div><b data-nx-f="b">Drinking water and ice</b><p data-nx-f="p">Packaged water for every guest, ice boxes for the drinks you bring, and glasses washed and refilled.</p></div></li>
+        <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4zM4 12h16M9 7v10"/></svg><div><b data-nx-f="b">Written bill</b><p data-nx-f="p">A GST invoice with every item listed. Nothing added on the day that was not agreed before.</p></div></li>
       </ul>
       <aside class="incl__side reveal">
-        <h3>Not included, so you know</h3>
-        <p>We would rather say it here than surprise you later.</p>
-        <ul>
-          <li>Hall or venue rent</li>
-          <li>Decoration beyond the buffet line</li>
-          <li>Soft drinks and bottled juices (we serve what you buy)</li>
-          <li>Transport outside Kolkata: &#8377;18 per km each way</li>
-          <li>Guests above the confirmed count, billed per plate</li>
+        <h3 data-nx="included.h3">Not included, so you know</h3>
+        <p data-nx="included.p">We would rather say it here than surprise you later.</p>
+        <ul data-nx-list="included.list">
+          <li data-nx-f="li" data-nx-item>Hall or venue rent</li>
+          <li data-nx-f="li" data-nx-item>Decoration beyond the buffet line</li>
+          <li data-nx-f="li" data-nx-item>Soft drinks and bottled juices (we serve what you buy)</li>
+          <li data-nx-f="li" data-nx-item>Transport outside Kolkata: &#8377;18 per km each way</li>
+          <li data-nx-f="li" data-nx-item>Guests above the confirmed count, billed per plate</li>
         </ul>
         <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get a written quote</a>
         <a class="btn btn--ghost-light" href="tel:+919804243159">Call +91 98042 43159</a>
@@ -531,67 +537,67 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Recent events</span>
-      <h2 class="h2">From halls and homes across the city.</h2>
+      <span data-nx="gallery.kicker" class="kicker">Recent events</span>
+      <h2 data-nx="gallery.h2" class="h2">From halls and homes across the city.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/caterer/images/reception.jpg" width="1200" height="801" alt="A couple on a flower-decorated reception stage" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/ladoo.jpg" width="1200" height="1828" alt="Hands with red bangles holding a brass bowl of ladoo" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/thali.jpg" width="1200" height="1500" alt="A full thali with several bowls" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/paan.jpg" width="1200" height="800" alt="Hands exchanging sweets on betel leaves at a wedding" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/serving.jpg" width="1200" height="800" alt="A server in a kurta placing a thali on a decorated table" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/buffet-counter.jpg" width="1200" height="1600" alt="Buffet counter with copper pots and stacked plates" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/puja-thali.jpg" width="1200" height="798" alt="A puja thali with flowers, coconut and turmeric for a ceremony" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/sweets-platter.jpg" width="1200" height="1600" alt="Platter of Indian sweets and snacks" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/decor.jpg" width="1200" height="800" alt="Decorated setup for an engagement ceremony" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/chicken-curry.jpg" width="1200" height="675" alt="Chicken curry in a buffet dish" loading="lazy"></li>
-      <li><img src="/demo/caterer/images/buffet-display.jpg" width="1200" height="1800" alt="Catering buffet line with food on display" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/reception.jpg" width="1200" height="801" alt="A couple on a flower-decorated reception stage" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/ladoo.jpg" width="1200" height="1828" alt="Hands with red bangles holding a brass bowl of ladoo" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/thali.jpg" width="1200" height="1500" alt="A full thali with several bowls" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/paan.jpg" width="1200" height="800" alt="Hands exchanging sweets on betel leaves at a wedding" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/serving.jpg" width="1200" height="800" alt="A server in a kurta placing a thali on a decorated table" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/buffet-counter.jpg" width="1200" height="1600" alt="Buffet counter with copper pots and stacked plates" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/puja-thali.jpg" width="1200" height="798" alt="A puja thali with flowers, coconut and turmeric for a ceremony" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/sweets-platter.jpg" width="1200" height="1600" alt="Platter of Indian sweets and snacks" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/decor.jpg" width="1200" height="800" alt="Decorated setup for an engagement ceremony" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/chicken-curry.jpg" width="1200" height="675" alt="Chicken curry in a buffet dish" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/caterer/images/buffet-display.jpg" width="1200" height="1800" alt="Catering buffet line with food on display" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">What families say</span>
-      <h2 class="h2">After the event.</h2>
+      <span data-nx="section-9.kicker" class="kicker">What families say</span>
+      <h2 data-nx="section-9.h2" class="h2">After the event.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>My daughter&rsquo;s wedding, 420 guests at a hall in Thakurpukur. Food was hot till the last batch at 11:30 at night and the bill was exactly what was on the paper.</p><footer>Mrinal <span>&middot; Behala Chowrasta</span></footer></blockquote>
-      <blockquote class="reveal"><p>Annaprashan at home for 60 people. They cooked in our garage, served everyone on the terrace, and left the place cleaner than they found it.</p><footer>Shampa <span>&middot; Tollygunge</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">My daughter&rsquo;s wedding, 420 guests at a hall in Thakurpukur. Food was hot till the last batch at 11:30 at night and the bill was exactly what was on the paper.</p><footer>Mrinal <span data-nx-f="span">&middot; Behala Chowrasta</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Annaprashan at home for 60 people. They cooked in our garage, served everyone on the terrace, and left the place cleaner than they found it.</p><footer>Shampa <span data-nx-f="span">&middot; Tollygunge</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Our kitchen and office</span>
-      <h2 class="h2">On Diamond Harbour Road, near Behala Tram Depot.</h2>
-      <p class="lead" style="margin-top:1rem">Come for a tasting, or to sit down with the menu. Call first so the cook is ready.</p>
+      <span data-nx="visit.kicker" class="kicker">Our kitchen and office</span>
+      <h2 data-nx="visit.h2" class="h2">On Diamond Harbour Road, near Behala Tram Depot.</h2>
+      <p data-nx="visit.p" class="lead" style="margin-top:1rem">Come for a tasting, or to sit down with the menu. Call first so the cook is ready.</p>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>212 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p2">212 Diamond Harbour Road, Behala<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:00 am &ndash; 7:00 pm</td></tr>
-              <tr><td>Sunday</td><td>By appointment</td></tr>
-              <tr><td>Tastings</td><td>Saturday 3 pm &ndash; 6 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:00 am &ndash; 7:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">By appointment</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Tastings</td><td data-nx-f="td2">Saturday 3 pm &ndash; 6 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">We cater anywhere in Kolkata, Howrah and the 24 Parganas.</p></div>
+          <div><b data-nx="visit.b3">Phone and WhatsApp</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p3" style="font-size:.88rem;color:var(--muted)">We cater anywhere in Kolkata, Howrah and the 24 Parganas.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--wine" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -605,10 +611,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="quote">
+<section data-nx-section="quote" class="section final" id="quote">
   <div class="wrap reveal">
-    <h2>Tell us the date. We will send the price tonight.</h2>
-    <p>Date, venue, rough guest count and veg or non-veg. That is all we need to write the first quote.</p>
+    <h2 data-nx="quote.h2">Tell us the date. We will send the price tonight.</h2>
+    <p data-nx="quote.p">Date, venue, rough guest count and veg or non-veg. That is all we need to write the first quote.</p>
     <div class="final__cta">
       <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Sreemoyee%20Caterers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -623,31 +629,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#C9A227"/><path d="M8 27h28" stroke="#4A1320" stroke-width="2.5" stroke-linecap="round"/><path d="M11 27a11 11 0 0 1 22 0Z" fill="#4A1320"/><circle cx="22" cy="13" r="2.2" fill="#FBF8F1"/><path d="M14 33h16" stroke="#4A1320" stroke-width="2" stroke-linecap="round"/></svg>
-          <span><b>Sreemoyee Caterers</b><small>Behala &middot; since 2004</small></span>
+          <span><b data-nx="footer.b">Sreemoyee Caterers</b><small data-nx="footer.small">Behala &middot; since 2004</small></span>
         </a>
-        <p>Wedding and event catering across Kolkata. Per-plate packages, our own staff and crockery, prices in writing before you book.</p>
+        <p data-nx="footer.p">Wedding and event catering across Kolkata. Per-plate packages, our own staff and crockery, prices in writing before you book.</p>
       </div>
       <div>
-        <h4>Catering</h4>
-        <ul>
-          <li><a href="#packages">Per-plate packages</a></li>
-          <li><a href="#menus">Event menus</a></li>
-          <li><a href="#counters">Live counters</a></li>
-          <li><a href="#booking">How booking works</a></li>
+        <h4 data-nx="footer.h4">Catering</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#packages">Per-plate packages</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#menus">Event menus</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#counters">Live counters</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#booking">How booking works</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>212 Diamond Harbour Road, Behala, Kolkata 700034</li>
+          <li data-nx="footer.li">212 Diamond Harbour Road, Behala, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10 am &ndash; 7 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10 am &ndash; 7 pm</li>
         </ul>
       </div>
     </div>
@@ -689,5 +695,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

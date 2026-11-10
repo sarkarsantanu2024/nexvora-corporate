@@ -1,0 +1,2401 @@
+{
+  "site": "mobile-shop",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Ghosh Mobile World",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "phones",
+      "label": {
+        "en": "Tell us your budget. We show you three phones, not thirty",
+        "bn": "Tell us your budget. We show you three phones, not thirty"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "panel-intro",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "panel-intro2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "panel-intro3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h39",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt9",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "panel-intro4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h310",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h311",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "amt11",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "emi11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs-labels",
+          "label": {
+            "en": "Tell us your budget. We show you three phones, not thirty",
+            "bn": "Tell us your budget. We show you three phones, not thirty"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "label",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "spec",
+          "label": {
+            "en": "Basic 4G phone6.5 inch screen, two days of battery",
+            "bn": "Basic 4G phone6.5 inch screen, two days of battery"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec2",
+          "label": {
+            "en": "Entry 5G phoneThe one in the orange tag above",
+            "bn": "Entry 5G phoneThe one in the orange tag above"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec3",
+          "label": {
+            "en": "Keypad phoneFor the shop counter or a second number",
+            "bn": "Keypad phoneFor the shop counter or a second number"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec4",
+          "label": {
+            "en": "5G all-rounderSharp screen, 33 W charger in the box",
+            "bn": "5G all-rounderSharp screen, 33 W charger in the box"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec5",
+          "label": {
+            "en": "Camera-first 5GAMOLED screen, better selfies",
+            "bn": "Camera-first 5GAMOLED screen, better selfies"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec6",
+          "label": {
+            "en": "Big-storage 5GSpace for games and 4K video",
+            "bn": "Big-storage 5GSpace for games and 4K video"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec7",
+          "label": {
+            "en": "Mid-range performerGaming chip, cooled back",
+            "bn": "Mid-range performerGaming chip, cooled back"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec8",
+          "label": {
+            "en": "Camera flagship-liteTelephoto lens, optical stabilisation",
+            "bn": "Camera flagship-liteTelephoto lens, optical stabilisation"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec9",
+          "label": {
+            "en": "Last year’s flagshipTop chip from last year at a lower price",
+            "bn": "Last year’s flagshipTop chip from last year at a lower price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec10",
+          "label": {
+            "en": "Current flagship, base modelFive years of software updates",
+            "bn": "Current flagship, base modelFive years of software updates"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "spec11",
+          "label": {
+            "en": "Current flagship, ProBigger screen, periscope zoom",
+            "bn": "Current flagship, ProBigger screen, periscope zoom"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repairs",
+      "label": {
+        "en": "Screen or battery changed in 2 hours",
+        "bn": "Screen or battery changed in 2 hours"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "rep-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "time",
+              "type": "text",
+              "label": {
+                "en": "Timings",
+                "bn": "সময়"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emi",
+      "label": {
+        "en": "Pay monthly, or trade in the phone you have",
+        "bn": "Pay monthly, or trade in the phone you have"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "zig-n",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "zig-n2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:675"
+        },
+        {
+          "key": "zig-n3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "zig-ex",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Credit card EMI",
+            "bn": "Credit card EMI"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Finance without a credit card",
+            "bn": "Finance without a credit card"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Old phone exchange",
+            "bn": "Old phone exchange"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accessories",
+      "label": {
+        "en": "Covers, chargers and earphones, fitted at the counter",
+        "bn": "Covers, chargers and earphones, fitted at the counter"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "hot",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "li13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "acc-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "appliances",
+      "label": {
+        "en": "The upstairs shelf: things the house needs this week",
+        "bn": "The upstairs shelf: things the house needs this week"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "appl",
+          "label": {
+            "en": "The upstairs shelf: things the house needs this week",
+            "bn": "The upstairs shelf: things the house needs this week"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warranty",
+      "label": {
+        "en": "What you get with every sale",
+        "bn": "What you get with every sale"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "trust",
+          "label": {
+            "en": "What you get with every sale",
+            "bn": "What you get with every sale"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "One counter at Behala Chowrasta since 2012",
+        "bn": "One counter at Behala Chowrasta since 2012"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Things people ask at the counter",
+        "bn": "Things people ask at the counter"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Things people ask at the counter",
+            "bn": "Things people ask at the counter"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A few photos",
+        "bn": "A few photos"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-12",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Diamond Harbour Road, next to Behala Chowrasta bus stop",
+        "bn": "On Diamond Harbour Road, next to Behala Chowrasta bus stop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send your budget or a photo of the fault",
+        "bn": "Send your budget or a photo of the fault"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Ghosh Mobile World",
+      "small": "Behala Chowrasta · since 2012"
+    },
+    "top": {
+      "hero-open": "<span></span>Open today 10 am to 9:30 pm, all seven days",
+      "h1": "New phone, old phone exchange, <em>repair in 2 hours.</em>",
+      "p": "Every brand sold in India, with GST bill and brand warranty. Card EMI and finance at the counter. Screen and battery changed while you wait. Chargers, covers, earphones and a shelf of small home appliances.",
+      "button": "Repair prices",
+      "photo": {
+        "src": "/demo/mobile-shop/images/hero.jpg",
+        "alt": "Shop owner smiling at the counter in front of a wall of phone displays"
+      },
+      "small": "This week",
+      "b": "₹9,999",
+      "span": "5G phone, 6 GB + 128 GB, with bill and warranty"
+    },
+    "phones": {
+      "kicker": "Phones by budget",
+      "h2": "Tell us your budget. We show you three phones, not thirty.",
+      "p": "Pick a budget. Example prices for the kind of phone it buys in 2026; exact models and prices change every month, so message us for today’s list.",
+      "panel-intro": "Big battery, big screen, good for calls, WhatsApp and videos. We set it up in Bengali if you want, with large font and your contacts moved across.",
+      "h3": "Basic 4G phone<small>6.5 inch screen, two days of battery</small>",
+      "amt": "₹7,499",
+      "emi": "EMI ₹1,250 x 6",
+      "h32": "Entry 5G phone<small>The one in the orange tag above</small>",
+      "amt2": "₹9,999",
+      "emi2": "EMI ₹1,667 x 6",
+      "h33": "Keypad phone<small>For the shop counter or a second number</small>",
+      "amt3": "₹1,299",
+      "emi3": "Cash only",
+      "panel-intro2": "The shelf that sells most. Fast charging, a good camera in daylight, and enough storage for two years of photos.",
+      "h34": "5G all-rounder<small>Sharp screen, 33 W charger in the box</small>",
+      "amt4": "₹11,999",
+      "emi4": "EMI ₹2,000 x 6",
+      "h35": "Camera-first 5G<small>AMOLED screen, better selfies</small>",
+      "amt5": "₹15,999",
+      "emi5": "EMI ₹2,667 x 6",
+      "h36": "Big-storage 5G<small>Space for games and 4K video</small>",
+      "amt6": "₹19,499",
+      "emi6": "EMI ₹3,250 x 6",
+      "panel-intro3": "Bright 120 Hz AMOLED screens, better low-light cameras, smooth games. Most come with 67 W or faster charging.",
+      "h37": "Mid-range performer<small>Gaming chip, cooled back</small>",
+      "amt7": "₹21,999",
+      "emi7": "EMI ₹3,667 x 6",
+      "h38": "Camera flagship-lite<small>Telephoto lens, optical stabilisation</small>",
+      "amt8": "₹29,999",
+      "emi8": "EMI ₹2,500 x 12",
+      "h39": "Last year&rsquo;s flagship<small>Top chip from last year at a lower price</small>",
+      "amt9": "₹37,999",
+      "emi9": "EMI ₹3,167 x 12",
+      "panel-intro4": "The top phones from Apple, Samsung and others. Sealed box, same price as the brand store, and we transfer your data before you leave.",
+      "h310": "Current flagship, base model<small>Five years of software updates</small>",
+      "amt10": "₹44,999",
+      "emi10": "EMI ₹3,750 x 12",
+      "h311": "Current flagship, Pro<small>Bigger screen, periscope zoom</small>",
+      "amt11": "₹79,999",
+      "emi11": "EMI ₹6,667 x 12",
+      "button": "below",
+      "tabs-labels": {
+        "items": [
+          {
+            "label": "Under &#8377;10,000<small>First phone, parents</small>"
+          },
+          {
+            "label": "&#8377;10,000 to 20,000<small>Students, daily use</small>"
+          },
+          {
+            "label": "&#8377;20,000 to 40,000<small>Camera and gaming</small>"
+          },
+          {
+            "label": "Flagship<small>Above &#8377;40,000</small>"
+          }
+        ]
+      },
+      "spec": {
+        "items": [
+          {
+            "span": "4 GB RAM"
+          },
+          {
+            "span": "64 GB"
+          },
+          {
+            "span": "5000 mAh"
+          }
+        ]
+      },
+      "spec2": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "6 GB RAM"
+          },
+          {
+            "span": "128 GB"
+          },
+          {
+            "span": "5000 mAh"
+          }
+        ]
+      },
+      "spec3": {
+        "items": [
+          {
+            "span": "Dual SIM"
+          },
+          {
+            "span": "Torch"
+          },
+          {
+            "span": "Week-long battery"
+          }
+        ]
+      },
+      "spec4": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "6 GB RAM"
+          },
+          {
+            "span": "128 GB"
+          },
+          {
+            "span": "50 MP"
+          }
+        ]
+      },
+      "spec5": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "8 GB RAM"
+          },
+          {
+            "span": "128 GB"
+          },
+          {
+            "span": "AMOLED"
+          }
+        ]
+      },
+      "spec6": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "8 GB RAM"
+          },
+          {
+            "span": "256 GB"
+          },
+          {
+            "span": "67 W charging"
+          }
+        ]
+      },
+      "spec7": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "8 GB RAM"
+          },
+          {
+            "span": "256 GB"
+          },
+          {
+            "span": "120 Hz"
+          }
+        ]
+      },
+      "spec8": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "12 GB RAM"
+          },
+          {
+            "span": "256 GB"
+          },
+          {
+            "span": "Telephoto"
+          }
+        ]
+      },
+      "spec9": {
+        "items": [
+          {
+            "span": "5G"
+          },
+          {
+            "span": "12 GB RAM"
+          },
+          {
+            "span": "256 GB"
+          },
+          {
+            "span": "Wireless charging"
+          }
+        ]
+      },
+      "spec10": {
+        "items": [
+          {
+            "span": "Latest chip"
+          },
+          {
+            "span": "Pro camera"
+          },
+          {
+            "span": "256 GB"
+          }
+        ]
+      },
+      "spec11": {
+        "items": [
+          {
+            "span": "Latest chip"
+          },
+          {
+            "span": "Periscope zoom"
+          },
+          {
+            "span": "512 GB"
+          }
+        ]
+      }
+    },
+    "repairs": {
+      "kicker": "Repairs",
+      "h2": "Screen or battery changed in 2 hours.",
+      "p": "We check the phone in front of you and tell you the price before we open it. If we cannot fix it, you pay nothing. Price depends on the model; these are the usual ranges.",
+      "th": "Repair",
+      "th2": "Price",
+      "th3": "Time",
+      "rep-note": "Your data stays on the phone. We never ask for your passwords; you open the phone yourself when we test it.",
+      "photo": {
+        "src": "/demo/mobile-shop/images/repair-bench.jpg",
+        "alt": "Technician under a lamp opening a phone at the repair bench"
+      },
+      "h3": "Book a repair",
+      "p2": "Send a photo of the damage and the phone model. We reply with the price and the time it will take, so you come once.",
+      "span": "3 months’ warranty on every repair, on the part and the work.",
+      "list": {
+        "items": [
+          {
+            "td": "Screen replacement <small>Original or best compatible, your choice</small>",
+            "amt": "₹1,500 to 12,000",
+            "time": "1 to 2 hours"
+          },
+          {
+            "td": "Battery replacement <small>New battery, health shown on screen before you leave</small>",
+            "amt": "₹900 to 4,500",
+            "time": "1 hour"
+          },
+          {
+            "td": "Charging port <small>Loose or not charging</small>",
+            "amt": "₹600 to 2,500",
+            "time": "1 to 2 hours"
+          },
+          {
+            "td": "Speaker or mic <small>Low sound, no sound</small>",
+            "amt": "₹500 to 2,000",
+            "time": "1 to 2 hours"
+          },
+          {
+            "td": "Water damage <small>Cleaning and check first, then we quote</small>",
+            "amt": "₹500 check",
+            "time": "1 to 3 days"
+          },
+          {
+            "td": "Software, data transfer, reset <small>Hanging phone, forgotten pattern, moving to a new phone</small>",
+            "amt": "₹200 to 800",
+            "time": "30 minutes"
+          }
+        ]
+      }
+    },
+    "emi": {
+      "kicker": "EMI and exchange",
+      "h2": "Pay monthly, or trade in the phone you have.",
+      "photo": {
+        "src": "/demo/mobile-shop/images/customer-phone.jpg",
+        "alt": "A customer's hands scrolling through apps on a new phone"
+      },
+      "zig-n": "1",
+      "h3": "Credit card EMI",
+      "p": "3, 6, 9 or 12 months on most bank cards. No-cost EMI on phones above ₹10,000 when the brand runs an offer, which is most months. Takes about five minutes at the counter.",
+      "photo2": {
+        "src": "/demo/mobile-shop/images/festival-photo.jpg",
+        "alt": "Phone camera pointed at festival lights on a Kolkata street at night"
+      },
+      "zig-n2": "2",
+      "h32": "Finance without a credit card",
+      "p2": "Bajaj, HDB and others. Approval on the spot in most cases, and you walk out with the phone the same day.",
+      "photo3": {
+        "src": "/demo/mobile-shop/images/phone-display.jpg",
+        "alt": "Phones standing on display tables with a wall of covers behind"
+      },
+      "zig-n3": "3",
+      "h33": "Old phone exchange",
+      "p3": "Bring your old phone. We check it in ten minutes and give you a fixed price off the new one.",
+      "zig-ex": "<b>Example:</b> a two-year-old &#8377;15,000 phone in good condition usually fetches &#8377;3,500 to &#8377;6,000 off the new phone. Flagships fetch more.",
+      "list": {
+        "items": [
+          {
+            "span": "We swipe the card once; the bank splits it into EMIs within a week."
+          },
+          {
+            "span": "Processing fee, if any, is shown to you before you sign."
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "<b>Bring:</b> Aadhaar, PAN, a cancelled cheque or bank passbook, and the mobile number linked to your Aadhaar for the OTP."
+          },
+          {
+            "span": "<b>Down payment:</b> usually 10 to 20 percent of the price. The rest in 6 to 12 EMIs."
+          },
+          {
+            "span": "Salaried or self-employed both work. No hidden charges; the total you will pay is shown before you sign."
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "<b>What we check:</b> screen (cracks, dead spots), battery health, camera, charging, speaker, and whether it switches on and opens with your pattern."
+          },
+          {
+            "span": "<b>What raises the value:</b> original box and charger, no scratches on the screen, battery above 80 percent, a phone less than three years old."
+          },
+          {
+            "span": "<b>What lowers it:</b> cracked screen, swollen battery, water damage, a locked account that is not signed out."
+          },
+          {
+            "span": "<b>Your data:</b> we help you back up and sign out, then wipe the phone in front of you."
+          }
+        ]
+      }
+    },
+    "accessories": {
+      "kicker": "Accessories",
+      "h2": "Covers, chargers and earphones, fitted at the counter.",
+      "p": "We put the tempered glass on for you, free, without bubbles. Chargers are branded and tested in front of you before billing. Try earphones before you pay.",
+      "photo": {
+        "src": "/demo/mobile-shop/images/accessories-stall.jpg",
+        "alt": "A busy street stall selling phone covers and accessories"
+      },
+      "li": "Back cover, silicone or clear <b>&#8377;99 to 399</b>",
+      "li2": "Printed or leather-look cover <b>&#8377;299 to 699</b>",
+      "hot": "Tempered glass, fitted free <b>&#8377;99 to 499</b>",
+      "li3": "Wired earphones <b>&#8377;199 to 799</b>",
+      "li4": "Neckband <b>&#8377;799 to 2,499</b>",
+      "li5": "True wireless earbuds <b>&#8377;1,299 to 4,999</b>",
+      "li6": "Branded charger, 20 W to 67 W <b>&#8377;399 to 1,499</b>",
+      "li7": "Type-C or Lightning cable <b>&#8377;149 to 799</b>",
+      "li8": "Power bank 10,000 mAh <b>&#8377;999 to 1,799</b>",
+      "li9": "Power bank 20,000 mAh <b>&#8377;1,499 to 2,999</b>",
+      "li10": "Car charger and holder <b>&#8377;299 to 899</b>",
+      "li11": "Memory card 64 to 256 GB <b>&#8377;449 to 1,999</b>",
+      "li12": "Smartwatch <b>&#8377;1,299 to 9,999</b>",
+      "li13": "SIM card and recharge <b>All networks</b>",
+      "acc-note": "Covers for older models come in two days on order. If a tempered glass cracks within a month we replace it for half price."
+    },
+    "appliances": {
+      "kicker": "Small home appliances",
+      "h2": "The upstairs shelf: things the house needs this week.",
+      "p": "Not a showroom, just the small things people kept asking us for. Branded, with warranty card, and the same EMI as phones for anything above ₹3,000.",
+      "appl": {
+        "items": [
+          {
+            "b": "Mixer grinder",
+            "span": "₹2,299 to 4,999"
+          },
+          {
+            "b": "Electric kettle",
+            "span": "₹699 to 1,499"
+          },
+          {
+            "b": "Iron",
+            "span": "₹799 to 1,999"
+          },
+          {
+            "b": "Trimmer, dryer",
+            "span": "₹799 to 2,499"
+          },
+          {
+            "b": "Fan",
+            "span": "₹1,499 to 3,499"
+          },
+          {
+            "b": "Bluetooth speaker",
+            "span": "₹999 to 7,999"
+          },
+          {
+            "b": "Induction cooktop",
+            "span": "₹1,799 to 3,499"
+          },
+          {
+            "b": "Extension board, bulbs",
+            "span": "₹149 to 699"
+          }
+        ]
+      }
+    },
+    "warranty": {
+      "kicker": "Bill and warranty",
+      "h2": "What you get with every sale.",
+      "trust": {
+        "items": [
+          {
+            "h3": "GST bill in your name",
+            "p": "Printed and sent on WhatsApp. You need it for the brand warranty and for insurance claims."
+          },
+          {
+            "h3": "Brand warranty, one year",
+            "p": "Sealed box, IMEI matched to the bill. For a claim we send the phone to the brand service centre for you."
+          },
+          {
+            "h3": "Repair warranty, 3 months",
+            "p": "On the part and the work. Same fault again, we fix it free. Physical damage and water are not covered."
+          },
+          {
+            "h3": "7-day bring-back",
+            "p": "Dead on arrival, wrong colour, or a fault in the first week: come back with the box and we sort it out with the brand."
+          }
+        ]
+      }
+    },
+    "story": {
+      "kicker": "About the shop",
+      "h2": "One counter at Behala Chowrasta since 2012.",
+      "p": "Pradip Ghosh opened this shop with four phones and a recharge counter. Today it is two floors: phones and accessories on the ground floor, a repair bench and small appliances upstairs. Four of us work here, and the owner is at the counter every day.",
+      "p2": "We sell what we can stand behind. Every phone comes with a GST bill in your name, the sealed box, and the brand warranty. If something is wrong in the first seven days, bring it back and we deal with the brand for you. On any day there are forty or more phones in stock to pick up and try.",
+      "photo": {
+        "src": "/demo/mobile-shop/images/speaker.jpg",
+        "alt": "A young man at the upstairs counter trying a Bluetooth speaker"
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Things people ask at the counter.",
+      "faq": {
+        "items": [
+          {
+            "h3": "Is the price the same as online?",
+            "p": "Usually within a few hundred rupees, and often the same during bank offers. You get the phone today, a bill in your name, and a shop to walk into if something goes wrong."
+          },
+          {
+            "h3": "Do you use original parts for repair?",
+            "p": "We offer both: original parts where the brand supplies them, and good compatible parts that cost less. We tell you which is which and the price of each before we start."
+          },
+          {
+            "h3": "Can I wait while the phone is repaired?",
+            "p": "Yes. Screen and battery take one to two hours. Sit downstairs, or leave it and we message you when it is ready."
+          },
+          {
+            "h3": "What do I bring for finance?",
+            "p": "Aadhaar, PAN, a bank passbook or cancelled cheque, and the mobile number linked to Aadhaar for the OTP. Salaried or self-employed both work."
+          },
+          {
+            "h3": "Do you buy old phones without an exchange?",
+            "p": "Yes, for cash, but the price is lower than exchange value. Bring the box and bill if you have them."
+          },
+          {
+            "h3": "Do you do recharges and SIM cards?",
+            "p": "Yes. All networks, prepaid and postpaid, and new SIMs with Aadhaar verification at the counter."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "From the shop",
+      "h2": "A few photos."
+    },
+    "section-12": {
+      "kicker": "What customers say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "My phone screen broke on a Sunday evening. They changed it in an hour and a half and showed me the old one. Still working fine after six months.",
+            "span": "· Sakherbazar"
+          },
+          {
+            "p": "Bought my mother a phone on EMI with just Aadhaar and PAN. They set it up in Bengali, put her contacts in and added the big font. She calls me herself now.",
+            "span": "· Parnasree"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Diamond Harbour Road, next to Behala Chowrasta bus stop.",
+      "b": "Address",
+      "p": "24B Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "WhatsApp for prices and repair photos, 10 am to 9 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:00 am – 9:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 8:00 pm"
+          },
+          {
+            "td": "Repair bench",
+            "td2": "11:00 am – 8:00 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Ghosh Mobile World sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=24B%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Ghosh Mobile World",
+      "small": "Behala Chowrasta · since 2012",
+      "p": "Phones with bill and warranty, EMI and exchange at the counter, repairs in two hours, and a shelf of small appliances.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "24B Diamond Harbour Road, Behala Chowrasta, Kolkata 700034",
+      "li2": "Mon–Sat 10 am – 9:30 pm · Sun 10 am – 8 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Phones by budget"
+          },
+          {
+            "button": "Repair prices"
+          },
+          {
+            "button": "EMI and exchange"
+          },
+          {
+            "button": "Accessories"
+          },
+          {
+            "button": "Home appliances"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Ghosh Mobile World | Phones, Accessories and Repairs in Behala",
+      "description": "New phones on EMI, old phone exchange, screen and battery repair in 2 hours, accessories and small home appliances. Behala Chowrasta, Kolkata. Open 10 am to 9:30 pm."
+    }
+  }
+}

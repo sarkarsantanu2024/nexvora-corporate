@@ -1,0 +1,1668 @@
+{
+  "site": "coaching",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Dishari Coaching Centre, Shyambazar",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1109"
+        },
+        {
+          "key": "since",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "boards",
+          "label": {
+            "en": "Small batches. Weekly tests. No child left at the back",
+            "bn": "Small batches. Weekly tests. No child left at the back"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classes",
+      "label": {
+        "en": "Class 5 to Class 12, three stages",
+        "bn": "Class 5 to Class 12, three stages"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "num2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "num3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Foundation",
+            "bn": "Foundation"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Madhyamik and board years",
+            "bn": "Madhyamik and board years"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Higher Secondary, Science",
+            "bn": "Higher Secondary, Science"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subjects",
+      "label": {
+        "en": "Three subjects, taught by subject teachers",
+        "bn": "Three subjects, taught by subject teachers"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "sgrid",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:600"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "who",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "method",
+      "label": {
+        "en": "How results actually happen",
+        "bn": "How results actually happen"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1155"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "method",
+          "label": {
+            "en": "How results actually happen",
+            "bn": "How results actually happen"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-6",
+      "label": {
+        "en": "The test is the lesson",
+        "bn": "The test is the lesson"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "What it costs, in one table",
+        "bn": "What it costs, in one table"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sr",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td5",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "fnote",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teachers",
+      "label": {
+        "en": "Who takes the classes",
+        "bn": "Who takes the classes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tgrid",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "av",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "q",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "label": {
+        "en": "Numbers we keep, year after year",
+        "bn": "Numbers we keep, year after year"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "facts",
+          "label": {
+            "en": "Numbers we keep, year after year",
+            "bn": "Numbers we keep, year after year"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Two rooms, one doubt desk, a lot of chalk",
+        "bn": "Two rooms, one doubt desk, a lot of chalk"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gal",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1600:1067"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you call",
+        "bn": "Before you call"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "summary",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "First floor, above the stationery shop",
+        "bn": "First floor, above the stationery shop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Two free classes. Then decide",
+        "bn": "Two free classes. Then decide"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Classes",
+            "bn": "Classes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "span": "Dishari<small>Coaching Centre</small>"
+    },
+    "top": {
+      "kicker": "Shyambazar · Since 2009",
+      "h1": "Small batches. Weekly tests. <em>No child left at the back.</em>",
+      "lede": "Maths, Science and English coaching for Class 5 to 12. Fifteen students to a batch, a test every Saturday, and a report to parents every month. That is the whole method, and it has worked for sixteen years.",
+      "button": "See batches and fees",
+      "photo": {
+        "src": "/demo/coaching/images/hero.jpg",
+        "alt": "A teacher bending over a desk to check two students' work in a classroom"
+      },
+      "since": "1,900+ students taught since 2009",
+      "boards": {
+        "items": [
+          {
+            "li": "WBBSE"
+          },
+          {
+            "li": "WBCHSE"
+          },
+          {
+            "li": "CBSE"
+          },
+          {
+            "li": "ICSE / ISC"
+          }
+        ]
+      }
+    },
+    "classes": {
+      "kicker": "Who we teach",
+      "h2": "Class 5 to Class 12, three stages",
+      "lede": "Each stage has its own teachers and its own pace. A Class 6 child and a Class 10 child are never in the same room.",
+      "num": "5-8",
+      "h3": "Foundation",
+      "p": "Basics done properly: tables, fractions, grammar, writing in full sentences. Mistakes caught early are cheap to fix.",
+      "num2": "9-10",
+      "h32": "Madhyamik and board years",
+      "p2": "WBBSE, CBSE and ICSE syllabus taught chapter by chapter from the board textbook, with board-pattern tests from September.",
+      "num3": "11-12",
+      "h33": "Higher Secondary, Science",
+      "p3": "Physics, Chemistry and Mathematics for WBCHSE, CBSE and ISC, with the board exam as the target. Entrance-exam add-on batch for those who want it.",
+      "list": {
+        "items": [
+          {
+            "li": "Maths, Science and English"
+          },
+          {
+            "li": "Homework checked every class"
+          },
+          {
+            "li": "Bengali-medium and English-medium batches"
+          },
+          {
+            "li": "3 days a week, 1.5 hours"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Maths, Physical Science, Life Science, English"
+          },
+          {
+            "li": "Saturday test on the week's chapters"
+          },
+          {
+            "li": "Past 10 years' question papers solved"
+          },
+          {
+            "li": "Test series from December"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Physics, Chemistry, Maths"
+          },
+          {
+            "li": "Batches of 12"
+          },
+          {
+            "li": "Practical file guidance"
+          },
+          {
+            "li": "Optional JEE Main / WBJEE problem class"
+          }
+        ]
+      }
+    },
+    "subjects": {
+      "kicker": "Subjects",
+      "h2": "Three subjects, taught by subject teachers",
+      "lede": "No one here teaches everything. Each subject has a teacher whose degree is in that subject.",
+      "sgrid": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/coaching/images/maths-board.jpg",
+              "alt": "Young children writing letters and numbers on slates in a classroom"
+            },
+            "h3": "Mathematics",
+            "who": "Class 5 to 12",
+            "p": "Arithmetic to calculus. Every chapter ends with a 20-sum sheet, and the child does not move on until the sheet is clean. Board students get a formula booklet we print ourselves."
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/science-lab.jpg",
+              "alt": "A teacher in a saree showing anatomical models to a class of students"
+            },
+            "h3": "Science",
+            "who": "Physical Science, Life Science, PCM",
+            "p": "Diagrams drawn on the board and in the copy, not photocopied. Numericals practised till they are routine. For Class 11-12, Physics and Chemistry run as separate batches."
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/notes.jpg",
+              "alt": "A young child in a yellow cap writing in an exercise book"
+            },
+            "h3": "English",
+            "who": "Class 5 to 12",
+            "p": "Grammar, unseen passages, letter and report writing, and the textbook. Bengali-medium students get extra speaking and writing practice because that is where marks are lost."
+          }
+        ]
+      }
+    },
+    "method": {
+      "photo": {
+        "src": "/demo/coaching/images/girl-writing.jpg",
+        "alt": "A student writing carefully in a spiral notebook at a desk"
+      },
+      "kicker": "Our method",
+      "h2": "How results actually happen",
+      "lede": "There is no secret. Results come from a child being seen every week, not once before the exam.",
+      "method": {
+        "items": [
+          {
+            "n": "01",
+            "h3": "Fifteen students to a batch",
+            "p": "Small enough that the teacher knows who is stuck by the second day, not the second month."
+          },
+          {
+            "n": "02",
+            "h3": "Test every Saturday",
+            "p": "Thirty minutes on the week's chapters. Copies returned Monday with corrections, not just a number."
+          },
+          {
+            "n": "03",
+            "h3": "Doubt hour, every day",
+            "p": "From 8 to 9 pm a teacher sits in Room 2. Any student from any batch can walk in with a copy."
+          },
+          {
+            "n": "04",
+            "h3": "Monthly report to parents",
+            "p": "Attendance, test marks and two lines from the teacher, sent on WhatsApp on the 1st. Parents are asked to come in twice a year."
+          },
+          {
+            "n": "05",
+            "h3": "Board-pattern test series",
+            "p": "From December, Class 10 and 12 students sit six full-length papers under exam time, in the exam hall seating."
+          }
+        ]
+      }
+    },
+    "section-6": {
+      "photo": {
+        "src": "/demo/coaching/images/teacher-board.jpg",
+        "alt": ""
+      },
+      "kicker": "Saturday, 5 pm",
+      "h2": "The test is the lesson",
+      "p": "Every Saturday the week's chapters go on a thirty-minute paper. The copies come back on Monday with the working corrected in red, not just a mark at the top. A child who sees the same mistake twice stops making it."
+    },
+    "fees": {
+      "kicker": "Batches and fees",
+      "h2": "What it costs, in one table",
+      "lede": "Fees are per month, per subject group. Nothing is charged for notes, test papers or the doubt hour.",
+      "sr": "Batches, timings, batch size and monthly fees by class",
+      "th": "Class",
+      "th2": "Subjects",
+      "th3": "Days and time",
+      "th4": "Batch size",
+      "th5": "Fee per month",
+      "list": {
+        "items": [
+          {
+            "td": "Class 5-6",
+            "td2": "Maths + Science + English",
+            "td3": "Mon, Wed, Fri · 4.00-5.30 pm",
+            "td4": "15",
+            "td5": "&#8377;900<small>all three subjects</small>"
+          },
+          {
+            "td": "Class 7-8",
+            "td2": "Maths + Science + English",
+            "td3": "Tue, Thu, Sat · 4.00-5.30 pm",
+            "td4": "15",
+            "td5": "&#8377;1,100<small>all three subjects</small>"
+          },
+          {
+            "td": "Class 9",
+            "td2": "Maths, Physical Science, Life Science, English",
+            "td3": "Mon to Sat · 5.30-7.00 pm",
+            "td4": "15",
+            "td5": "&#8377;1,500<small>&#8377;500 per single subject</small>"
+          },
+          {
+            "td": "Class 10 (Madhyamik / CBSE / ICSE)",
+            "td2": "Maths, Physical Science, Life Science, English",
+            "td3": "Mon to Sat · 7.00-8.30 pm",
+            "td4": "15",
+            "td5": "&#8377;1,800<small>&#8377;600 per single subject</small>"
+          },
+          {
+            "td": "Class 11",
+            "td2": "Physics, Chemistry, Maths",
+            "td3": "Mon to Sat · 6.00-8.00 pm",
+            "td4": "12",
+            "td5": "&#8377;2,400<small>&#8377;900 per single subject</small>"
+          },
+          {
+            "td": "Class 12",
+            "td2": "Physics, Chemistry, Maths",
+            "td3": "Mon to Sat · 6.00-8.00 pm",
+            "td4": "12",
+            "td5": "&#8377;2,700<small>&#8377;1,000 per single subject</small>"
+          },
+          {
+            "td": "Board test series (Class 10, 12)",
+            "td2": "Six full papers, December to February",
+            "td3": "Sundays · 10 am-1 pm",
+            "td4": "-",
+            "td5": "&#8377;800<small>one time, free for our regular students</small>"
+          }
+        ]
+      },
+      "fnote": {
+        "items": [
+          {
+            "li": "Admission fee ₹500, once. Fees paid by the 7th of the month, cash or UPI, receipt given."
+          },
+          {
+            "li": "Two siblings together: ₹200 off the second child's monthly fee."
+          },
+          {
+            "li": "Two trial classes are free. If you leave in the first month, we return that month's fee."
+          }
+        ]
+      }
+    },
+    "teachers": {
+      "kicker": "Teachers",
+      "h2": "Who takes the classes",
+      "lede": "Five teachers, all full time here. No rotating guest faculty.",
+      "tgrid": {
+        "items": [
+          {
+            "av": "AG",
+            "h3": "Arindam Ghosh",
+            "q": "M.Sc. Mathematics, Calcutta University · Founder",
+            "p": "Taught at a Shyambazar school for eight years before starting Dishari in 2009. Takes Maths for Class 9 to 12 himself."
+          },
+          {
+            "av": "SB",
+            "h3": "Sanchita Basu",
+            "q": "M.Sc. Physics, B.Ed. · 11 years at Dishari",
+            "p": "Physical Science for Class 9-10 and Physics for 11-12. Known for making students draw every diagram twice."
+          },
+          {
+            "av": "RM",
+            "h3": "Rituparna Mitra",
+            "q": "M.A. English, Jadavpur University",
+            "p": "English for all classes. Runs the Bengali-medium speaking batch on Sunday mornings for no extra fee."
+          },
+          {
+            "av": "TD",
+            "h3": "Tanmoy Dutta",
+            "q": "M.Sc. Chemistry",
+            "p": "Chemistry for Class 11-12 and Life Science for Class 9-10. Keeps the practical files in order before the school viva."
+          },
+          {
+            "av": "PS",
+            "h3": "Priyanka Saha",
+            "q": "B.Sc. Mathematics, B.Ed.",
+            "p": "Foundation batches, Class 5 to 8. Patient with the child who is scared of sums. Most parents meet her first."
+          },
+          {
+            "av": "+",
+            "h3": "Doubt hour, 8 to 9 pm",
+            "q": "Every day, Room 2",
+            "p": "One of the five sits here each evening. Students from any batch can come without an appointment."
+          }
+        ]
+      }
+    },
+    "results": {
+      "kicker": "Results",
+      "h2": "Numbers we keep, year after year",
+      "lede": "We publish our students' board marks on the notice board every June, with their permission. These are from the 2025 exams.",
+      "span": "Kakoli, mother of a 2025 Madhyamik student, Hatibagan",
+      "photo": {
+        "src": "/demo/coaching/images/students-uniform.jpg",
+        "alt": "Four students in blue school uniforms smiling and holding up fingers"
+      },
+      "facts": {
+        "items": [
+          {
+            "b": "63",
+            "span": "students sat Madhyamik or Class 10 boards in 2025"
+          },
+          {
+            "b": "41",
+            "span": "of them scored 80 or more in Mathematics"
+          },
+          {
+            "b": "28",
+            "span": "Class 12 students, all passed, 19 with 75+ in PCM"
+          },
+          {
+            "b": "16",
+            "span": "years of continuous batches since April 2009"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Inside Dishari",
+      "h2": "Two rooms, one doubt desk, a lot of chalk",
+      "gal": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/coaching/images/teacher-board.jpg",
+              "alt": "A teacher standing with folded arms in front of a chalkboard"
+            },
+            "figcaption": "Arindam Sir, Room 1"
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/classroom-india.jpg",
+              "alt": "Boys in checked school shirts sitting at desks in a classroom"
+            },
+            "figcaption": "Foundation batch, Class 5-6"
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/exam-hall.jpg",
+              "alt": "Two boys in blue school uniforms sitting at a desk and listening"
+            },
+            "figcaption": "Sunday test series"
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/library.jpg",
+              "alt": "Students in school uniform reading in a small library"
+            },
+            "figcaption": "Reading corner and past papers"
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/boys-desk.jpg",
+              "alt": "Two boys reading from a notebook at a shared desk"
+            },
+            "figcaption": "Homework check before class"
+          },
+          {
+            "photo": {
+              "src": "/demo/coaching/images/books.jpg",
+              "alt": "Two young boys at a desk with a school bag, waiting for class"
+            },
+            "figcaption": "Foundation batch, before class"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Parents ask",
+      "h2": "Before you call",
+      "faq": {
+        "items": [
+          {
+            "summary": "My child is in a Bengali-medium school. Is that a problem?",
+            "p": "No. Around half our students are from Bengali-medium schools. Foundation and Class 9-10 batches are split by medium so the teacher can explain in Bengali where needed. Notes are given in both."
+          },
+          {
+            "summary": "Can we join only for one subject?",
+            "p": "Yes, from Class 9 onward. Single-subject fees are in the table above. Class 5 to 8 is taught as one combined batch because the three subjects share the timing."
+          },
+          {
+            "summary": "What happens if my child misses a Saturday test?",
+            "p": "The same paper is given on Monday in the doubt hour. Marks still go into the monthly report, so parents see the full picture."
+          },
+          {
+            "summary": "Do you teach the school's own textbook or your own notes?",
+            "p": "The board textbook first, always. Our printed notes are a summary and extra sums, not a replacement. For ICSE and CBSE we follow the prescribed books of those boards."
+          },
+          {
+            "summary": "Is there a batch for students who want JEE or WBJEE?",
+            "p": "There is an optional problem-solving class on Sunday afternoons for Class 11-12 at ₹600 a month. It is a supplement, not a full entrance course. We say that plainly so nobody is misled."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit us",
+      "h2": "First floor, above the stationery shop",
+      "p": "Dishari Coaching Centre<br>61B Bidhan Sarani, Shyambazar<br>Kolkata 700006<br>Five minutes' walk from Shyambazar Metro, Gate 1.",
+      "button": "Get directions",
+      "b": "Mon to Sat",
+      "span": "4.00 pm - 9.00 pm",
+      "b2": "Sunday",
+      "span2": "10.00 am - 1.00 pm (tests and speaking batch)",
+      "b3": "Enquiries",
+      "span3": "Any day on WhatsApp"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Dishari Coaching Centre sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "span": "Dishari<small>Coaching Centre</small>",
+      "p": "Maths, Science and English coaching for Class 5 to 12. WBBSE, WBCHSE, CBSE and ICSE. Shyambazar, Kolkata, since 2009.",
+      "h4": "Classes",
+      "h42": "Contact",
+      "li": "61B Bidhan Sarani, Shyambazar, Kolkata 700006",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "button": "Class 5-8 Foundation"
+          },
+          {
+            "button": "Class 9-10 Boards"
+          },
+          {
+            "button": "Class 11-12 Science"
+          },
+          {
+            "button": "Fees"
+          },
+          {
+            "button": "Teachers"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Dishari Coaching Centre, Shyambazar | Maths, Science and English for Class 5 to 12",
+      "description": "Coaching for Class 5 to 12, WBBSE, CBSE and ICSE. Maths, Physical Science, Life Science and English in batches of 15. Weekly tests, doubt hour, monthly report to parents. Shyambazar, Kolkata."
+    }
+  }
+}

@@ -97,6 +97,11 @@ export function PriceCalculator() {
         "",
         `Plan: ${chosenPackage.name}: ${rupees(chosenPackage.price)}`,
       );
+      if (chosenPackage.running) {
+        lines.push(
+          `Running fee: ${rupees(chosenPackage.running.monthly)}/month from month ${chosenPackage.running.freeMonths + 1} (or ${rupees(chosenPackage.running.yearly)} a year)`,
+        );
+      }
     }
     if (picked.length) {
       lines.push("", "Items:");
@@ -286,7 +291,7 @@ export function PriceCalculator() {
               {tab === "packages" && (
                 <>
               <p className="text-sm leading-relaxed text-slate-600">
-                Every website is one of these three plans. The first month
+                Every website is one of these four plans. The first month
                 of care is free on all of them.
               </p>
               <div className="mt-4 space-y-3">
@@ -326,6 +331,11 @@ export function PriceCalculator() {
                           <p className="text-lg font-bold tracking-tight">
                             {rupees(p.price)}
                           </p>
+                          {p.running ? (
+                            <p className="text-xs font-medium text-brand-700">
+                              then {rupees(p.running.monthly)}/month from month {p.running.freeMonths + 1}
+                            </p>
+                          ) : null}
                         </div>
                       </div>
                       <ul className="mt-3 space-y-1.5 border-t border-slate-200 pt-3 text-sm text-slate-700">

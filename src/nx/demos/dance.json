@@ -1,0 +1,1636 @@
+{
+  "site": "dance",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Nupur Nritya Academy",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2400"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Learn to dance the way it was taught to us",
+            "bn": "Learn to dance the way it was taught to us"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "Started in a Lake Market drawing room in 1998",
+        "bn": "Started in a Lake Market drawing room in 1998"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "about-quote",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "about-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:534"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "styles",
+      "label": {
+        "en": "Five styles, one roof",
+        "bn": "Five styles, one roof"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "style-meta",
+          "label": {
+            "en": "Bharatanatyam",
+            "bn": "Bharatanatyam"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "style-meta2",
+          "label": {
+            "en": "Kathak",
+            "bn": "Kathak"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "style-meta3",
+          "label": {
+            "en": "Rabindra Nritya",
+            "bn": "Rabindra Nritya"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "style-meta4",
+          "label": {
+            "en": "Bollywood & fitness",
+            "bn": "Bollywood & fitness"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "style-meta5",
+          "label": {
+            "en": "Kids' foundation (5–7)",
+            "bn": "Kids' foundation (5–7)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "style-meta6",
+          "label": {
+            "en": "Group & wedding choreography",
+            "bn": "Group & wedding choreography"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guru",
+      "label": {
+        "en": "Sharmila Sen",
+        "bn": "Sharmila Sen"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:2134"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "batches",
+      "label": {
+        "en": "Weekly timetable",
+        "bn": "Weekly timetable"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "fee",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "show",
+      "label": {
+        "en": "Nupur Utsav, every December",
+        "bn": "Nupur Utsav, every December"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1068"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "band-facts",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From class to stage",
+        "bn": "From class to stage"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:2134"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:534"
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "photo7",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1068"
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their words",
+        "bn": "In their words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Two minutes from Lake Market",
+        "bn": "Two minutes from Lake Market"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Office hours",
+            "bn": "Office hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Office hours",
+            "bn": "Office hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Office hours",
+            "bn": "Office hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Office hours",
+            "bn": "Office hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Come and watch a class this week",
+        "bn": "Come and watch a class this week"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "footer-copy",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "Nupur Nritya Academy",
+      "brand-sub": "Lake Market · since 1998"
+    },
+    "section-2": {
+      "kicker": "Bharatanatyam · Kathak · Rabindra Nritya",
+      "h1": "Learn to dance <em>the way it was taught</em> to us.",
+      "lede": "A small academy near Lake Market, Kolkata. Classical and folk dance for children from age 5 and adults of any age. Twenty-seven years, one guru, and a stage every December.",
+      "button": "See batches & fees",
+      "photo": {
+        "src": "/demo/dance/images/hero.jpg",
+        "alt": "Bharatanatyam dancer in a plum and gold costume holding a hand gesture on a dark stage"
+      },
+      "hero-facts": {
+        "items": [
+          {
+            "b": "1998",
+            "span": "Teaching since"
+          },
+          {
+            "b": "180+",
+            "span": "Students now"
+          },
+          {
+            "b": "5",
+            "span": "Dance styles"
+          }
+        ]
+      }
+    },
+    "about": {
+      "kicker": "About the academy",
+      "h2": "Started in a Lake Market drawing room in 1998",
+      "p": "Nupur Nritya Academy began with six students and a harmonium in Sharmila Sen's family home. Today we have two practice halls with sprung wooden floors, five dance styles and students from Kalighat to Jadavpur.",
+      "p2": "We keep batches small, usually ten to fourteen students, so every child is seen. Beginners spend the first three months on posture, rhythm and the basic adavus or tatkaar before any item is taught.",
+      "p3": "Students who stay with us sit for Prayag Sangeet Samiti and Bangiya Sangeet Parishad examinations each year. Many have gone on to perform at Rabindra Sadan and Nazrul Mancha.",
+      "about-quote": "\"A dancer is made by repetition, not by talent. Come regularly and the rest follows.\"",
+      "about-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/dance/images/ghungroo-footwork.jpg",
+              "alt": "Close view of a dancer's feet with ghungroo bells during footwork practice"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/dance/images/empty-studio.jpg",
+              "alt": "Circle of hands holding colourful dandiya sticks during a dance practice"
+            }
+          }
+        ]
+      }
+    },
+    "styles": {
+      "kicker": "What we teach",
+      "h2": "Five styles, one roof",
+      "lede": "Each style has its own batch and its own teacher. Pick one to start with. Many students add a second style after a year.",
+      "photo": {
+        "src": "/demo/dance/images/bharatanatyam-dancer.jpg",
+        "alt": "Bharatanatyam dancer in a bright costume holding a classical pose"
+      },
+      "h3": "Bharatanatyam",
+      "p": "Adavus, jatis and the margam from Alarippu to Thillana. Taught in the Kalakshetra style by Sharmila Sen.",
+      "photo2": {
+        "src": "/demo/dance/images/kathak-dancer.jpg",
+        "alt": "Kathak dancer in a flowing sari mid-spin"
+      },
+      "h32": "Kathak",
+      "p2": "Lucknow gharana. Tatkaar, chakkars, tukras and abhinaya. Tabla accompaniment at every Saturday class.",
+      "photo3": {
+        "src": "/demo/dance/images/dancers-in-park.jpg",
+        "alt": "Dancers in traditional Indian dress posing together in a park"
+      },
+      "h33": "Rabindra Nritya",
+      "p3": "Tagore's dance-dramas and songs. Chitrangada, Shyama and Chandalika pieces for the Pochishe Boishakh and Pujo stage.",
+      "photo4": {
+        "src": "/demo/dance/images/bollywood-class.jpg",
+        "alt": "Three young dancers in kurta and lehenga doing a Bollywood routine together"
+      },
+      "h34": "Bollywood & fitness",
+      "p4": "Film songs, one new routine every two weeks. Good for weddings, college fests and simply for sweating it out.",
+      "photo5": {
+        "src": "/demo/dance/images/kids-batch.jpg",
+        "alt": "Young girl in a classical dance costume performing"
+      },
+      "h35": "Kids' foundation (5–7)",
+      "p5": "Rhythm games, basic postures and simple folk items. One hour, lots of fun, and a stage slot in the annual show.",
+      "photo6": {
+        "src": "/demo/dance/images/dancers-bright-sarees.jpg",
+        "alt": "Group of dancers in bright sarees performing together"
+      },
+      "h36": "Group & wedding choreography",
+      "p6": "Sangeet performances, school annual functions and Pujo pandal programmes. Four to eight sessions, your song list.",
+      "style-meta": {
+        "items": [
+          {
+            "span": "Age 6+"
+          },
+          {
+            "span": "Exams: Prayag"
+          },
+          {
+            "span": "Mon · Wed · Sat"
+          }
+        ]
+      },
+      "style-meta2": {
+        "items": [
+          {
+            "span": "Age 7+"
+          },
+          {
+            "span": "Exams: Bangiya"
+          },
+          {
+            "span": "Tue · Thu · Sat"
+          }
+        ]
+      },
+      "style-meta3": {
+        "items": [
+          {
+            "span": "Age 8+"
+          },
+          {
+            "span": "All levels"
+          },
+          {
+            "span": "Sun morning"
+          }
+        ]
+      },
+      "style-meta4": {
+        "items": [
+          {
+            "span": "Age 12+"
+          },
+          {
+            "span": "Adults welcome"
+          },
+          {
+            "span": "Mon · Fri evening"
+          }
+        ]
+      },
+      "style-meta5": {
+        "items": [
+          {
+            "span": "Age 5–7"
+          },
+          {
+            "span": "Parents may sit in"
+          },
+          {
+            "span": "Sat · Sun"
+          }
+        ]
+      },
+      "style-meta6": {
+        "items": [
+          {
+            "span": "On request"
+          },
+          {
+            "span": "Groups of 4+"
+          },
+          {
+            "span": "Flexible timing"
+          }
+        ]
+      }
+    },
+    "guru": {
+      "photo": {
+        "src": "/demo/dance/images/teacher-pose.jpg",
+        "alt": "Classical dancer in full costume striking a pose, photographed from the side"
+      },
+      "kicker": "Our guru",
+      "h2": "Sharmila Sen",
+      "p": "Sharmila learnt Bharatanatyam for fourteen years under Guru Thankamani Kutty in Kolkata, and Kathak at Padatik from 1989 to 1994. She has performed at Dover Lane, Uday Shankar Nrityotsav and in Dhaka and Singapore.",
+      "p2": "She has run Nupur since 1998 and still teaches every beginner batch herself. Two senior students, Ritika and Anwesha, assist with the children's and Bollywood batches."
+    },
+    "batches": {
+      "kicker": "Batches & fees",
+      "h2": "Weekly timetable",
+      "lede": "Admission is open all year. The first class is free. Fees are monthly, paid by the 7th, cash or UPI.",
+      "th": "Batch",
+      "th2": "Days",
+      "th3": "Time",
+      "th4": "For",
+      "th5": "Monthly fee",
+      "note": "One-time admission ₹500 includes the practice saree or kurta. Ghungroo (₹650 a pair) are bought separately after the third month. Siblings get 10% off the second child.",
+      "list": {
+        "items": [
+          {
+            "b": "Kids' foundation",
+            "td": "Sat, Sun",
+            "td2": "9:00 – 10:00 am",
+            "td3": "Age 5–7",
+            "fee": "₹800"
+          },
+          {
+            "b": "Bharatanatyam – beginners",
+            "td": "Mon, Wed",
+            "td2": "5:00 – 6:15 pm",
+            "td3": "Age 6+",
+            "fee": "₹1,200"
+          },
+          {
+            "b": "Bharatanatyam – senior",
+            "td": "Mon, Wed, Sat",
+            "td2": "6:30 – 8:00 pm",
+            "td3": "3+ years training",
+            "fee": "₹1,600"
+          },
+          {
+            "b": "Kathak – beginners",
+            "td": "Tue, Thu",
+            "td2": "5:00 – 6:15 pm",
+            "td3": "Age 7+",
+            "fee": "₹1,200"
+          },
+          {
+            "b": "Kathak – senior",
+            "td": "Tue, Thu, Sat",
+            "td2": "6:30 – 8:00 pm",
+            "td3": "3+ years training",
+            "fee": "₹1,600"
+          },
+          {
+            "b": "Rabindra Nritya",
+            "td": "Sun",
+            "td2": "10:30 am – 12:00 noon",
+            "td3": "Age 8+, adults",
+            "fee": "₹900"
+          },
+          {
+            "b": "Bollywood & fitness",
+            "td": "Mon, Fri",
+            "td2": "7:00 – 8:00 pm",
+            "td3": "Age 12+, adults",
+            "fee": "₹1,000"
+          }
+        ]
+      }
+    },
+    "show": {
+      "photo": {
+        "src": "/demo/dance/images/annual-show-stage.jpg",
+        "alt": "Dancers performing on a lit stage in front of an audience"
+      },
+      "kicker": "Annual show",
+      "h2": "Nupur Utsav, every December",
+      "lede": "Every student who has attended for six months dances on stage. Costumes, make-up and the hall are arranged by us. Families get four passes each.",
+      "button": "See last year's photos",
+      "band-facts": {
+        "items": [
+          {
+            "b": "27th year",
+            "span": "Nupur Utsav 2026"
+          },
+          {
+            "b": "Sun 20 Dec",
+            "span": "Madhusudan Mancha, 5:30 pm"
+          },
+          {
+            "b": "140 dancers",
+            "span": "On stage last December"
+          },
+          {
+            "b": "₹1,800",
+            "span": "Costume and make-up per student"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Gallery",
+      "h2": "From class to stage",
+      "photo": {
+        "src": "/demo/dance/images/group-dance-class.jpg",
+        "alt": "Line of dancers in bright sarees holding the same pose on a beach, seen from above"
+      },
+      "photo2": {
+        "src": "/demo/dance/images/stage-costume.jpg",
+        "alt": "Dancer in a colourful traditional costume performing on stage"
+      },
+      "photo3": {
+        "src": "/demo/dance/images/ghungroo-footwork.jpg",
+        "alt": "Ghungroo bells tied around a dancer's ankles"
+      },
+      "photo4": {
+        "src": "/demo/dance/images/red-drapes-performance.jpg",
+        "alt": "Dance-drama performer between red stage curtains under warm light"
+      },
+      "photo5": {
+        "src": "/demo/dance/images/kathak-dancer.jpg",
+        "alt": "Kathak dancer spinning in a sari"
+      },
+      "photo6": {
+        "src": "/demo/dance/images/dancers-bright-sarees.jpg",
+        "alt": "Group of dancers in bright sarees on stage"
+      },
+      "photo7": {
+        "src": "/demo/dance/images/annual-show-stage.jpg",
+        "alt": "Students performing at the annual show"
+      }
+    },
+    "section-9": {
+      "kicker": "Parents and students",
+      "h2": "In their words",
+      "quotes": {
+        "items": [
+          {
+            "p": "My daughter started at six and is now in the senior Bharatanatyam batch. She passed her Prayag fourth year with distinction. Sharmila di is strict about attendance and we are glad for it."
+          },
+          {
+            "p": "I joined the Kathak beginners' batch at 34 thinking I was too old. Two years on I danced at Nupur Utsav. The Saturday tabla class is the best hour of my week."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit us",
+      "h2": "Two minutes from Lake Market",
+      "h3": "Address",
+      "address": "Nupur Nritya Academy<br>12A Lake View Road, 1st floor<br>Lake Market, Kolkata 700029<br>Landmark: opposite Lake Market bus stand, above the pharmacy",
+      "h32": "Office hours",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "span": "Monday – Friday"
+          },
+          {
+            "span": "4:00 – 8:30 pm"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Saturday"
+          },
+          {
+            "span": "9:00 am – 8:30 pm"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Sunday"
+          },
+          {
+            "span": "8:30 am – 1:00 pm"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Closed"
+          },
+          {
+            "span": "Durga Pujo week, Kali Pujo"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Nupur Nritya Academy sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=12A%20Lake%20View%20Road%2C%20Lake%20Market%2C%20Kolkata%20700029",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "Nupur Nritya Academy",
+      "brand-sub": "Lake Market · since 1998",
+      "footer-tag": "Bharatanatyam, Kathak, Rabindra Nritya and Bollywood for children and adults in south Kolkata.",
+      "h4": "Visit",
+      "address": "12A Lake View Road, 1st floor<br>Lake Market, Kolkata 700029",
+      "button": "Get directions",
+      "footer-copy": "© 2026 Nupur Nritya Academy"
+    },
+    "seo": {
+      "title": "Nupur Nritya Academy | Bharatanatyam, Kathak and Rabindra Nritya classes in Kolkata",
+      "description": "Dance academy at Lake Market, Kolkata. Bharatanatyam, Kathak, Rabindra Nritya and Bollywood batches for children and adults since 1998. Annual show every December."
+    }
+  }
+}

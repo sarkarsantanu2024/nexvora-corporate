@@ -1,0 +1,2018 @@
+{
+  "site": "caterer",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sreemoyee Caterers",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:2133"
+        },
+        {
+          "key": "hero-since",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-stats",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "packages",
+      "label": {
+        "en": "Three packages. Pick one, then change dishes as you like",
+        "bn": "Three packages. Pick one, then change dishes as you like"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "pack-tag",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "packs-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "pack-list",
+          "label": {
+            "en": "Veg",
+            "bn": "Veg"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "pack-list2",
+          "label": {
+            "en": "Non-veg",
+            "bn": "Non-veg"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "pack-list3",
+          "label": {
+            "en": "Premium",
+            "bn": "Premium"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "menus",
+      "label": {
+        "en": "Menus we suggest for each kind of day",
+        "bn": "Menus we suggest for each kind of day"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h43",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "pp",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h44",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h45",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h46",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "pp2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h47",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h48",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h49",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "pp3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "h410",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h411",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h412",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "pp4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Starters",
+            "bn": "Starters"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Main",
+            "bn": "Main"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "To finish",
+            "bn": "To finish"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Starters",
+            "bn": "Starters"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list5",
+          "label": {
+            "en": "Main",
+            "bn": "Main"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list6",
+          "label": {
+            "en": "To finish",
+            "bn": "To finish"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list7",
+          "label": {
+            "en": "Starters",
+            "bn": "Starters"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list8",
+          "label": {
+            "en": "Main",
+            "bn": "Main"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list9",
+          "label": {
+            "en": "To finish",
+            "bn": "To finish"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list10",
+          "label": {
+            "en": "Packed box (₹180 to ₹260)",
+            "bn": "Packed box (₹180 to ₹260)"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list11",
+          "label": {
+            "en": "Buffet",
+            "bn": "Buffet"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list12",
+          "label": {
+            "en": "Saraswati and Vishwakarma puja",
+            "bn": "Saraswati and Vishwakarma puja"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "counters",
+      "label": {
+        "en": "Counters where the food is made in front of the guest",
+        "bn": "Counters where the food is made in front of the guest"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "zig",
+          "label": {
+            "en": "Counters where the food is made in front of the guest",
+            "bn": "Counters where the food is made in front of the guest"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:675"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "price",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "booking",
+      "label": {
+        "en": "From the first message to the last plate",
+        "bn": "From the first message to the last plate"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "From the first message to the last plate",
+            "bn": "From the first message to the last plate"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "dot",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "when",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "included",
+      "label": {
+        "en": "Everything on this list comes with the per-plate price",
+        "bn": "Everything on this list comes with the per-plate price"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "incl-grid",
+          "label": {
+            "en": "Everything on this list comes with the per-plate price",
+            "bn": "Everything on this list comes with the per-plate price"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Not included, so you know",
+            "bn": "Not included, so you know"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "From halls and homes across the city",
+        "bn": "From halls and homes across the city"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "From halls and homes across the city",
+            "bn": "From halls and homes across the city"
+          },
+          "min": 1,
+          "max": 22,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "After the event",
+        "bn": "After the event"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "After the event",
+            "bn": "After the event"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Diamond Harbour Road, near Behala Tram Depot",
+        "bn": "On Diamond Harbour Road, near Behala Tram Depot"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quote",
+      "label": {
+        "en": "Tell us the date. We will send the price tonight",
+        "bn": "Tell us the date. We will send the price tonight"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Catering",
+            "bn": "Catering"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Sreemoyee Caterers",
+      "small": "Behala · since 2004"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/caterer/images/hero.jpg",
+        "alt": "Buffet counter with steel chafing dishes of curry in a decorated hall"
+      },
+      "hero-since": "Weddings · Annaprashan · Birthdays · Office lunches",
+      "h1": "Food for the whole hall, <em>served hot, by our own people.</em>",
+      "p": "Per-plate packages with the price written down before you book. Cooks, servers, crockery and live counters all come with us, so on the day you only have to sit with your guests.",
+      "button": "See per-plate prices",
+      "hero-stats": {
+        "items": [
+          {
+            "b": "50",
+            "span": "Plates minimum"
+          },
+          {
+            "b": "₹450",
+            "span": "Veg, per plate"
+          },
+          {
+            "b": "21",
+            "span": "Years of weddings"
+          }
+        ]
+      }
+    },
+    "packages": {
+      "kicker": "Per-plate packages",
+      "h2": "Three packages. Pick one, then change dishes as you like.",
+      "p": "Prices are per plate for 100 guests or more. Between 50 and 99 plates add ₹40 a plate. Water, ice, service and cleaning are included.",
+      "h3": "Veg",
+      "b": "₹450",
+      "span": "per plate",
+      "pack-tag": "Most weddings pick this",
+      "h32": "Non-veg",
+      "b2": "₹650",
+      "span2": "per plate",
+      "h33": "Premium",
+      "b3": "₹950",
+      "span3": "per plate",
+      "packs-note": "Swap any dish for another at the same level. Ilish, chingri and mutton biryani cost extra and we will tell you how much before you decide. GST is added to the final bill.",
+      "pack-list": {
+        "items": [
+          {
+            "li": "2 starters (vegetable chop, paneer tikka)"
+          },
+          {
+            "li": "Basanti pulao or fried rice, plus luchi"
+          },
+          {
+            "li": "Chholar dal, 2 sabzi, paneer dish"
+          },
+          {
+            "li": "Dhokar dalna or chhanar kalia"
+          },
+          {
+            "li": "Chutney, papad, salad"
+          },
+          {
+            "li": "Rosogolla, mishti doi"
+          }
+        ]
+      },
+      "pack-list2": {
+        "items": [
+          {
+            "li": "3 starters (fish fry, chicken tikka, veg chop)"
+          },
+          {
+            "li": "Basanti pulao, fried rice, luchi"
+          },
+          {
+            "li": "Dal, 2 sabzi, paneer dish"
+          },
+          {
+            "li": "Fish kalia (rui or katla)"
+          },
+          {
+            "li": "Chicken kosha"
+          },
+          {
+            "li": "Chutney, papad, salad"
+          },
+          {
+            "li": "2 sweets, mishti doi, ice cream"
+          }
+        ]
+      },
+      "pack-list3": {
+        "items": [
+          {
+            "li": "4 starters including bhetki fry and mutton chop"
+          },
+          {
+            "li": "2 live counters of your choice"
+          },
+          {
+            "li": "Pulao, biryani, luchi, naan"
+          },
+          {
+            "li": "Bhetki paturi or chingri malai curry"
+          },
+          {
+            "li": "Mutton kosha and chicken chaap"
+          },
+          {
+            "li": "Paan counter at the exit"
+          },
+          {
+            "li": "3 sweets, mishti doi, 2 ice creams"
+          }
+        ]
+      }
+    },
+    "menus": {
+      "kicker": "Event menus",
+      "h2": "Menus we suggest for each kind of day.",
+      "p": "Open one to see what is on it. These are starting points. At the tasting we change them together.",
+      "span": "Wedding and reception<small>Biye and bou bhaat, 150 to 800 guests</small>",
+      "h4": "Starters",
+      "h42": "Main",
+      "h43": "To finish",
+      "pp": "Suggested package: <b>Non-veg or Premium</b>. Most families add a chaat or kathi roll counter for the evening crowd.",
+      "span2": "Annaprashan<small>Rice ceremony, 50 to 200 guests</small>",
+      "h44": "Starters",
+      "h45": "Main",
+      "h46": "To finish",
+      "pp2": "Suggested package: <b>Non-veg</b>. The payesh and the first plate for the child are on us.",
+      "span3": "Birthday and anniversary<small>At home or in a small hall, 50 to 120 guests</small>",
+      "h47": "Starters",
+      "h48": "Main",
+      "h49": "To finish",
+      "pp3": "Suggested package: <b>Veg or Non-veg</b>. For a house party we bring folding tables, a buffet counter and take everything away after.",
+      "span4": "Office lunch and puja<small>Packed or buffet, 50 to 500 plates</small>",
+      "h410": "Packed box (₹180 to ₹260)",
+      "h411": "Buffet",
+      "h412": "Saraswati and Vishwakarma puja",
+      "pp4": "Packed lunches reach your office by 12:30. GST invoice for the company is provided.",
+      "list": {
+        "items": [
+          {
+            "li": "Fish fry with kasundi"
+          },
+          {
+            "li": "Chicken reshmi kebab"
+          },
+          {
+            "li": "Mochar chop"
+          },
+          {
+            "li": "Tomato soup, served"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Basanti pulao and luchi"
+          },
+          {
+            "li": "Chholar dal, aloo dum"
+          },
+          {
+            "li": "Bhetki paturi"
+          },
+          {
+            "li": "Mutton kosha"
+          },
+          {
+            "li": "Chicken chaap with naan"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Tomato khejur chutney, papad"
+          },
+          {
+            "li": "Nolen gur rosogolla (winter)"
+          },
+          {
+            "li": "Mishti doi"
+          },
+          {
+            "li": "Ice cream and paan"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "li": "Beguni and vegetable chop"
+          },
+          {
+            "li": "Fish fry"
+          },
+          {
+            "li": "Lebu cha on arrival"
+          }
+        ]
+      },
+      "list5": {
+        "items": [
+          {
+            "li": "Payesh for the baby, in a silver bowl"
+          },
+          {
+            "li": "Ghee bhaat, shukto, dal"
+          },
+          {
+            "li": "Five bhaja on each plate"
+          },
+          {
+            "li": "Rui kalia, chicken or mutton"
+          },
+          {
+            "li": "Chutney, papad"
+          }
+        ]
+      },
+      "list6": {
+        "items": [
+          {
+            "li": "Rosogolla and sandesh"
+          },
+          {
+            "li": "Mishti doi"
+          }
+        ]
+      },
+      "list7": {
+        "items": [
+          {
+            "li": "Chicken pakora"
+          },
+          {
+            "li": "Paneer tikka"
+          },
+          {
+            "li": "Cold drinks and mocktail"
+          }
+        ]
+      },
+      "list8": {
+        "items": [
+          {
+            "li": "Chicken biryani or veg pulao"
+          },
+          {
+            "li": "Chicken chaap"
+          },
+          {
+            "li": "Mixed veg, dal makhani"
+          },
+          {
+            "li": "Naan and salad"
+          }
+        ]
+      },
+      "list9": {
+        "items": [
+          {
+            "li": "Gulab jamun"
+          },
+          {
+            "li": "Ice cream"
+          },
+          {
+            "li": "Your cake, which we cut and serve"
+          }
+        ]
+      },
+      "list10": {
+        "items": [
+          {
+            "li": "Rice or pulao, dal"
+          },
+          {
+            "li": "Sabzi, chicken or paneer"
+          },
+          {
+            "li": "Chutney, papad, one sweet"
+          },
+          {
+            "li": "Spoon, tissue, water"
+          }
+        ]
+      },
+      "list11": {
+        "items": [
+          {
+            "li": "Veg package from ₹450"
+          },
+          {
+            "li": "Non-veg package from ₹650"
+          },
+          {
+            "li": "Served with our counters and staff"
+          }
+        ]
+      },
+      "list12": {
+        "items": [
+          {
+            "li": "Khichuri, labra, beguni"
+          },
+          {
+            "li": "Chutney, papad, payesh"
+          },
+          {
+            "li": "Bhog cooked without onion and garlic"
+          },
+          {
+            "li": "₹140 per plate, leaf plates included"
+          }
+        ]
+      }
+    },
+    "counters": {
+      "kicker": "Live counters",
+      "h2": "Counters where the food is made in front of the guest.",
+      "p": "Each counter comes with its own cook, gas, and a decorated stall. Two are included in the Premium package. Add any to another package at the price shown.",
+      "zig": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/caterer/images/samosa.jpg",
+              "alt": "Tray of fried snacks with samosas and dumplings"
+            },
+            "h3": "Chaat and phuchka",
+            "p": "Phuchka, papri chaat, dahi vada and churmur. The most crowded corner at every reception. One cook serves about 120 guests an hour, so for big halls we put two.",
+            "price": "₹60 per plate"
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/warmers.jpg",
+              "alt": "Copper buffet warmers lined up at an event"
+            },
+            "h3": "Kathi roll and tandoor",
+            "p": "Egg roll, chicken roll, paneer roll made on the tawa, and tandoori chicken straight from the clay oven. Works well for the evening crowd who eat before the ceremony.",
+            "price": "₹90 per plate"
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/halwa.jpg",
+              "alt": "Gajar ka halwa in a serving dish at a buffet"
+            },
+            "h3": "Hot sweets and paan",
+            "p": "Jalebi fried on the spot, gajar halwa, malpua in winter. A paan counter at the exit with mitha and sada paan, and a man who knows how to fold them.",
+            "price": "₹50 per plate · paan ₹25"
+          }
+        ]
+      }
+    },
+    "booking": {
+      "kicker": "How booking works",
+      "h2": "From the first message to the last plate.",
+      "tl": {
+        "items": [
+          {
+            "dot": "1",
+            "when": "Day 1",
+            "h3": "Send us the date, the venue and the guest count",
+            "p": "On WhatsApp or by phone. We check the date is free and send a written quote the same evening, package by package."
+          },
+          {
+            "dot": "2",
+            "when": "Within a week",
+            "h3": "Come for a tasting",
+            "p": "Pick a Saturday afternoon. You taste 8 to 10 dishes from your package at our Behala kitchen and change what you like. The tasting is free once you have booked, ₹1,500 before."
+          },
+          {
+            "dot": "3",
+            "when": "To confirm",
+            "h3": "Pay 50% advance",
+            "p": "Half the estimated bill, by UPI or bank transfer. You get a signed menu, the plate count, the counter list and the final per-plate price on one page."
+          },
+          {
+            "dot": "4",
+            "when": "7 days before",
+            "h3": "Confirm the final guest count",
+            "p": "You can move the count up or down by 10% till a week before. We cook for 5% more than the number you give, at no charge."
+          },
+          {
+            "dot": "5",
+            "when": "The day",
+            "h3": "We arrive four hours before the first guest",
+            "p": "Set up, cook, serve, clear and wash. The balance is paid after the last guest has eaten, in cash or UPI, against the GST bill."
+          }
+        ]
+      }
+    },
+    "included": {
+      "kicker": "What is included",
+      "h2": "Everything on this list comes with the per-plate price.",
+      "h3": "Not included, so you know",
+      "p": "We would rather say it here than surprise you later.",
+      "incl-grid": {
+        "items": [
+          {
+            "b": "Serving staff",
+            "p": "One server for every 25 guests, in uniform. A captain who stays with your family for the evening."
+          },
+          {
+            "b": "Crockery and cutlery",
+            "p": "Ceramic plates, steel cutlery, glass tumblers. Leaf plates and clay bhaar if you prefer the old way."
+          },
+          {
+            "b": "Buffet counters and warmers",
+            "p": "Skirted tables, chafing dishes with fuel, and a decorated buffet line in your colour."
+          },
+          {
+            "b": "Dining tables and chairs",
+            "p": "For 50% of the guests at one time, with covers. More on request at ₹40 a chair."
+          },
+          {
+            "b": "Cooking on site",
+            "p": "Our gas, our cooks, our utensils. We can cook in a courtyard, a garage or the venue kitchen."
+          },
+          {
+            "b": "Clearing and washing",
+            "p": "Plates cleared from the table, the kitchen area washed down, and rubbish taken away in our van."
+          },
+          {
+            "b": "Drinking water and ice",
+            "p": "Packaged water for every guest, ice boxes for the drinks you bring, and glasses washed and refilled."
+          },
+          {
+            "b": "Written bill",
+            "p": "A GST invoice with every item listed. Nothing added on the day that was not agreed before."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Hall or venue rent"
+          },
+          {
+            "li": "Decoration beyond the buffet line"
+          },
+          {
+            "li": "Soft drinks and bottled juices (we serve what you buy)"
+          },
+          {
+            "li": "Transport outside Kolkata: ₹18 per km each way"
+          },
+          {
+            "li": "Guests above the confirmed count, billed per plate"
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "Recent events",
+      "h2": "From halls and homes across the city.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/caterer/images/reception.jpg",
+              "alt": "A couple on a flower-decorated reception stage"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/ladoo.jpg",
+              "alt": "Hands with red bangles holding a brass bowl of ladoo"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/thali.jpg",
+              "alt": "A full thali with several bowls"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/paan.jpg",
+              "alt": "Hands exchanging sweets on betel leaves at a wedding"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/serving.jpg",
+              "alt": "A server in a kurta placing a thali on a decorated table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/buffet-counter.jpg",
+              "alt": "Buffet counter with copper pots and stacked plates"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/puja-thali.jpg",
+              "alt": "A puja thali with flowers, coconut and turmeric for a ceremony"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/sweets-platter.jpg",
+              "alt": "Platter of Indian sweets and snacks"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/decor.jpg",
+              "alt": "Decorated setup for an engagement ceremony"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/chicken-curry.jpg",
+              "alt": "Chicken curry in a buffet dish"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/caterer/images/buffet-display.jpg",
+              "alt": "Catering buffet line with food on display"
+            }
+          }
+        ]
+      }
+    },
+    "section-9": {
+      "kicker": "What families say",
+      "h2": "After the event.",
+      "quotes": {
+        "items": [
+          {
+            "p": "My daughter’s wedding, 420 guests at a hall in Thakurpukur. Food was hot till the last batch at 11:30 at night and the bill was exactly what was on the paper.",
+            "span": "· Behala Chowrasta"
+          },
+          {
+            "p": "Annaprashan at home for 60 people. They cooked in our garage, served everyone on the terrace, and left the place cleaner than they found it.",
+            "span": "· Tollygunge"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Our kitchen and office",
+      "h2": "On Diamond Harbour Road, near Behala Tram Depot.",
+      "p": "Come for a tasting, or to sit down with the menu. Call first so the cook is ready.",
+      "b": "Address",
+      "p2": "212 Diamond Harbour Road, Behala<br>Kolkata 700034",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone and WhatsApp",
+      "p3": "We cater anywhere in Kolkata, Howrah and the 24 Parganas.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:00 am – 7:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "By appointment"
+          },
+          {
+            "td": "Tastings",
+            "td2": "Saturday 3 pm – 6 pm"
+          }
+        ]
+      }
+    },
+    "quote": {
+      "h2": "Tell us the date. We will send the price tonight.",
+      "p": "Date, venue, rough guest count and veg or non-veg. That is all we need to write the first quote."
+    },
+    "footer": {
+      "b": "Sreemoyee Caterers",
+      "small": "Behala · since 2004",
+      "p": "Wedding and event catering across Kolkata. Per-plate packages, our own staff and crockery, prices in writing before you book.",
+      "h4": "Catering",
+      "h42": "Find us",
+      "li": "212 Diamond Harbour Road, Behala, Kolkata 700034",
+      "li2": "Mon–Sat 10 am – 7 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Per-plate packages"
+          },
+          {
+            "button": "Event menus"
+          },
+          {
+            "button": "Live counters"
+          },
+          {
+            "button": "How booking works"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sreemoyee Caterers sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=212%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Sreemoyee Caterers | Wedding and Event Catering in Behala, Kolkata",
+      "description": "Per-plate catering for weddings, annaprashan, birthdays and office lunches in Kolkata. Veg from ₹450, non-veg from ₹650, premium from ₹950. Minimum 50 plates. Staff, crockery and live counters included."
+    }
+  }
+}

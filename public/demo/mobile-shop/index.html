@@ -297,6 +297,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer__note{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid rgba(246,245,242,.15);font-size:.84rem;opacity:.85}
 .footer__note a{text-decoration:underline}
 @media (max-width:760px){.footer .grid{grid-template-columns:1fr}}
+/* phone fixes */
+@media (max-width:760px){
+  .hero__tag{transform:none;right:0;bottom:1rem;max-width:200px;padding:.85rem 1rem}
+  .hours td:last-child{white-space:nowrap}
+  .visit__row a,.footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .tabs__note a,.footer__note a{padding:.8rem 0}
+}
 
 /* floating social dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -329,24 +336,22 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<meta name="nx-site" content="mobile-shop">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Ghosh%20Mobile%20World%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Ghosh Mobile World, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#1F2225"/><rect x="14" y="8" width="16" height="28" rx="4" fill="#F6F5F2"/><rect x="16" y="11" width="12" height="19" rx="1.5" fill="#1F2225"/><circle cx="22" cy="33" r="1.6" fill="#FF6A1A"/><path d="M33 14l3 3-3 3M11 14l-3 3 3 3" stroke="#FF6A1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-      <span><b>Ghosh Mobile World</b><small>Behala Chowrasta &middot; since 2012</small></span>
+      <span><b data-nx="header.b">Ghosh Mobile World</b><small data-nx="header.small">Behala Chowrasta &middot; since 2012</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -370,23 +375,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="hero__open"><span></span>Open today 10 am to 9:30 pm, all seven days</p>
-      <h1>New phone, old phone exchange, <em>repair in 2 hours.</em></h1>
-      <p>Every brand sold in India, with GST bill and brand warranty. Card EMI and finance at the counter. Screen and battery changed while you wait. Chargers, covers, earphones and a shelf of small home appliances.</p>
+      <p data-nx="top.hero-open" class="hero__open"><span></span>Open today 10 am to 9:30 pm, all seven days</p>
+      <h1 data-nx="top.h1">New phone, old phone exchange, <em>repair in 2 hours.</em></h1>
+      <p data-nx="top.p">Every brand sold in India, with GST bill and brand warranty. Card EMI and finance at the counter. Screen and battery changed while you wait. Chargers, covers, earphones and a shelf of small home appliances.</p>
       <div class="cta-row">
         <a class="btn btn--orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Ghosh%20Mobile%20World%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Ask a price on WhatsApp
         </a>
-        <a class="btn btn--ghost-light" href="#repairs">Repair prices</a>
+        <a data-nx="top.button" class="btn btn--ghost-light" href="#repairs">Repair prices</a>
       </div>
     </div>
     <div class="hero__photo">
-      <img src="/demo/mobile-shop/images/hero.jpg" width="1200" height="1800" alt="Shop owner smiling at the counter in front of a wall of phone displays" fetchpriority="high">
-      <div class="hero__tag"><small>This week</small><b>&#8377;9,999</b><span>5G phone, 6 GB + 128 GB, with bill and warranty</span></div>
+      <img data-nx="top.photo" src="/demo/mobile-shop/images/hero.jpg" width="1200" height="1800" alt="Shop owner smiling at the counter in front of a wall of phone displays" fetchpriority="high">
+      <div class="hero__tag"><small data-nx="top.small">This week</small><b data-nx="top.b">&#8377;9,999</b><span data-nx="top.span">5G phone, 6 GB + 128 GB, with bill and warranty</span></div>
     </div>
   </div>
 </section>
@@ -400,81 +405,81 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </div>
 
-<section class="section" id="phones">
+<section data-nx-section="phones" class="section" id="phones">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Phones by budget</span>
-      <h2 class="h2">Tell us your budget. We show you three phones, not thirty.</h2>
-      <p class="lead" style="margin-top:1rem">Pick a budget. Example prices for the kind of phone it buys in 2026; exact models and prices change every month, so message us for today&rsquo;s list.</p>
+      <span data-nx="phones.kicker" class="kicker">Phones by budget</span>
+      <h2 data-nx="phones.h2" class="h2">Tell us your budget. We show you three phones, not thirty.</h2>
+      <p data-nx="phones.p" class="lead" style="margin-top:1rem">Pick a budget. Example prices for the kind of phone it buys in 2026; exact models and prices change every month, so message us for today&rsquo;s list.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="budget" id="b1" checked>
       <input type="radio" name="budget" id="b2">
       <input type="radio" name="budget" id="b3">
       <input type="radio" name="budget" id="b4">
-      <div class="tabs__labels">
-        <label for="b1">Under &#8377;10,000<small>First phone, parents</small></label>
-        <label for="b2">&#8377;10,000 to 20,000<small>Students, daily use</small></label>
-        <label for="b3">&#8377;20,000 to 40,000<small>Camera and gaming</small></label>
-        <label for="b4">Flagship<small>Above &#8377;40,000</small></label>
+      <div data-nx-list="phones.tabs-labels" class="tabs__labels">
+        <label data-nx-f="label" data-nx-item for="b1">Under &#8377;10,000<small>First phone, parents</small></label>
+        <label data-nx-f="label" data-nx-item for="b2">&#8377;10,000 to 20,000<small>Students, daily use</small></label>
+        <label data-nx-f="label" data-nx-item for="b3">&#8377;20,000 to 40,000<small>Camera and gaming</small></label>
+        <label data-nx-f="label" data-nx-item for="b4">Flagship<small>Above &#8377;40,000</small></label>
       </div>
       <div class="tabs__panels">
         <div class="panel panel--1">
-          <p class="panel__intro">Big battery, big screen, good for calls, WhatsApp and videos. We set it up in Bengali if you want, with large font and your contacts moved across.</p>
-          <div class="phone"><h3>Basic 4G phone<small>6.5 inch screen, two days of battery</small></h3><div class="spec"><span>4 GB RAM</span><span>64 GB</span><span>5000 mAh</span></div><span class="amt">&#8377;7,499</span><span class="emi">EMI &#8377;1,250 x 6</span></div>
-          <div class="phone"><h3>Entry 5G phone<small>The one in the orange tag above</small></h3><div class="spec"><span>5G</span><span>6 GB RAM</span><span>128 GB</span><span>5000 mAh</span></div><span class="amt">&#8377;9,999</span><span class="emi">EMI &#8377;1,667 x 6</span></div>
-          <div class="phone"><h3>Keypad phone<small>For the shop counter or a second number</small></h3><div class="spec"><span>Dual SIM</span><span>Torch</span><span>Week-long battery</span></div><span class="amt">&#8377;1,299</span><span class="emi">Cash only</span></div>
+          <p data-nx="phones.panel-intro" class="panel__intro">Big battery, big screen, good for calls, WhatsApp and videos. We set it up in Bengali if you want, with large font and your contacts moved across.</p>
+          <div class="phone"><h3 data-nx="phones.h3">Basic 4G phone<small>6.5 inch screen, two days of battery</small></h3><div data-nx-list="phones.spec" class="spec"><span data-nx-f="span" data-nx-item>4 GB RAM</span><span data-nx-f="span" data-nx-item>64 GB</span><span data-nx-f="span" data-nx-item>5000 mAh</span></div><span data-nx="phones.amt" class="amt">&#8377;7,499</span><span data-nx="phones.emi" class="emi">EMI &#8377;1,250 x 6</span></div>
+          <div class="phone"><h3 data-nx="phones.h32">Entry 5G phone<small>The one in the orange tag above</small></h3><div data-nx-list="phones.spec2" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>6 GB RAM</span><span data-nx-f="span" data-nx-item>128 GB</span><span data-nx-f="span" data-nx-item>5000 mAh</span></div><span data-nx="phones.amt2" class="amt">&#8377;9,999</span><span data-nx="phones.emi2" class="emi">EMI &#8377;1,667 x 6</span></div>
+          <div class="phone"><h3 data-nx="phones.h33">Keypad phone<small>For the shop counter or a second number</small></h3><div data-nx-list="phones.spec3" class="spec"><span data-nx-f="span" data-nx-item>Dual SIM</span><span data-nx-f="span" data-nx-item>Torch</span><span data-nx-f="span" data-nx-item>Week-long battery</span></div><span data-nx="phones.amt3" class="amt">&#8377;1,299</span><span data-nx="phones.emi3" class="emi">Cash only</span></div>
         </div>
         <div class="panel panel--2">
-          <p class="panel__intro">The shelf that sells most. Fast charging, a good camera in daylight, and enough storage for two years of photos.</p>
-          <div class="phone"><h3>5G all-rounder<small>Sharp screen, 33 W charger in the box</small></h3><div class="spec"><span>5G</span><span>6 GB RAM</span><span>128 GB</span><span>50 MP</span></div><span class="amt">&#8377;11,999</span><span class="emi">EMI &#8377;2,000 x 6</span></div>
-          <div class="phone"><h3>Camera-first 5G<small>AMOLED screen, better selfies</small></h3><div class="spec"><span>5G</span><span>8 GB RAM</span><span>128 GB</span><span>AMOLED</span></div><span class="amt">&#8377;15,999</span><span class="emi">EMI &#8377;2,667 x 6</span></div>
-          <div class="phone"><h3>Big-storage 5G<small>Space for games and 4K video</small></h3><div class="spec"><span>5G</span><span>8 GB RAM</span><span>256 GB</span><span>67 W charging</span></div><span class="amt">&#8377;19,499</span><span class="emi">EMI &#8377;3,250 x 6</span></div>
+          <p data-nx="phones.panel-intro2" class="panel__intro">The shelf that sells most. Fast charging, a good camera in daylight, and enough storage for two years of photos.</p>
+          <div class="phone"><h3 data-nx="phones.h34">5G all-rounder<small>Sharp screen, 33 W charger in the box</small></h3><div data-nx-list="phones.spec4" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>6 GB RAM</span><span data-nx-f="span" data-nx-item>128 GB</span><span data-nx-f="span" data-nx-item>50 MP</span></div><span data-nx="phones.amt4" class="amt">&#8377;11,999</span><span data-nx="phones.emi4" class="emi">EMI &#8377;2,000 x 6</span></div>
+          <div class="phone"><h3 data-nx="phones.h35">Camera-first 5G<small>AMOLED screen, better selfies</small></h3><div data-nx-list="phones.spec5" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>8 GB RAM</span><span data-nx-f="span" data-nx-item>128 GB</span><span data-nx-f="span" data-nx-item>AMOLED</span></div><span data-nx="phones.amt5" class="amt">&#8377;15,999</span><span data-nx="phones.emi5" class="emi">EMI &#8377;2,667 x 6</span></div>
+          <div class="phone"><h3 data-nx="phones.h36">Big-storage 5G<small>Space for games and 4K video</small></h3><div data-nx-list="phones.spec6" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>8 GB RAM</span><span data-nx-f="span" data-nx-item>256 GB</span><span data-nx-f="span" data-nx-item>67 W charging</span></div><span data-nx="phones.amt6" class="amt">&#8377;19,499</span><span data-nx="phones.emi6" class="emi">EMI &#8377;3,250 x 6</span></div>
         </div>
         <div class="panel panel--3">
-          <p class="panel__intro">Bright 120 Hz AMOLED screens, better low-light cameras, smooth games. Most come with 67 W or faster charging.</p>
-          <div class="phone"><h3>Mid-range performer<small>Gaming chip, cooled back</small></h3><div class="spec"><span>5G</span><span>8 GB RAM</span><span>256 GB</span><span>120 Hz</span></div><span class="amt">&#8377;21,999</span><span class="emi">EMI &#8377;3,667 x 6</span></div>
-          <div class="phone"><h3>Camera flagship-lite<small>Telephoto lens, optical stabilisation</small></h3><div class="spec"><span>5G</span><span>12 GB RAM</span><span>256 GB</span><span>Telephoto</span></div><span class="amt">&#8377;29,999</span><span class="emi">EMI &#8377;2,500 x 12</span></div>
-          <div class="phone"><h3>Last year&rsquo;s flagship<small>Top chip from last year at a lower price</small></h3><div class="spec"><span>5G</span><span>12 GB RAM</span><span>256 GB</span><span>Wireless charging</span></div><span class="amt">&#8377;37,999</span><span class="emi">EMI &#8377;3,167 x 12</span></div>
+          <p data-nx="phones.panel-intro3" class="panel__intro">Bright 120 Hz AMOLED screens, better low-light cameras, smooth games. Most come with 67 W or faster charging.</p>
+          <div class="phone"><h3 data-nx="phones.h37">Mid-range performer<small>Gaming chip, cooled back</small></h3><div data-nx-list="phones.spec7" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>8 GB RAM</span><span data-nx-f="span" data-nx-item>256 GB</span><span data-nx-f="span" data-nx-item>120 Hz</span></div><span data-nx="phones.amt7" class="amt">&#8377;21,999</span><span data-nx="phones.emi7" class="emi">EMI &#8377;3,667 x 6</span></div>
+          <div class="phone"><h3 data-nx="phones.h38">Camera flagship-lite<small>Telephoto lens, optical stabilisation</small></h3><div data-nx-list="phones.spec8" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>12 GB RAM</span><span data-nx-f="span" data-nx-item>256 GB</span><span data-nx-f="span" data-nx-item>Telephoto</span></div><span data-nx="phones.amt8" class="amt">&#8377;29,999</span><span data-nx="phones.emi8" class="emi">EMI &#8377;2,500 x 12</span></div>
+          <div class="phone"><h3 data-nx="phones.h39">Last year&rsquo;s flagship<small>Top chip from last year at a lower price</small></h3><div data-nx-list="phones.spec9" class="spec"><span data-nx-f="span" data-nx-item>5G</span><span data-nx-f="span" data-nx-item>12 GB RAM</span><span data-nx-f="span" data-nx-item>256 GB</span><span data-nx-f="span" data-nx-item>Wireless charging</span></div><span data-nx="phones.amt9" class="amt">&#8377;37,999</span><span data-nx="phones.emi9" class="emi">EMI &#8377;3,167 x 12</span></div>
         </div>
         <div class="panel panel--4">
-          <p class="panel__intro">The top phones from Apple, Samsung and others. Sealed box, same price as the brand store, and we transfer your data before you leave.</p>
-          <div class="phone"><h3>Current flagship, base model<small>Five years of software updates</small></h3><div class="spec"><span>Latest chip</span><span>Pro camera</span><span>256 GB</span></div><span class="amt">&#8377;44,999</span><span class="emi">EMI &#8377;3,750 x 12</span></div>
-          <div class="phone"><h3>Current flagship, Pro<small>Bigger screen, periscope zoom</small></h3><div class="spec"><span>Latest chip</span><span>Periscope zoom</span><span>512 GB</span></div><span class="amt">&#8377;79,999</span><span class="emi">EMI &#8377;6,667 x 12</span></div>
+          <p data-nx="phones.panel-intro4" class="panel__intro">The top phones from Apple, Samsung and others. Sealed box, same price as the brand store, and we transfer your data before you leave.</p>
+          <div class="phone"><h3 data-nx="phones.h310">Current flagship, base model<small>Five years of software updates</small></h3><div data-nx-list="phones.spec10" class="spec"><span data-nx-f="span" data-nx-item>Latest chip</span><span data-nx-f="span" data-nx-item>Pro camera</span><span data-nx-f="span" data-nx-item>256 GB</span></div><span data-nx="phones.amt10" class="amt">&#8377;44,999</span><span data-nx="phones.emi10" class="emi">EMI &#8377;3,750 x 12</span></div>
+          <div class="phone"><h3 data-nx="phones.h311">Current flagship, Pro<small>Bigger screen, periscope zoom</small></h3><div data-nx-list="phones.spec11" class="spec"><span data-nx-f="span" data-nx-item>Latest chip</span><span data-nx-f="span" data-nx-item>Periscope zoom</span><span data-nx-f="span" data-nx-item>512 GB</span></div><span data-nx="phones.amt11" class="amt">&#8377;79,999</span><span data-nx="phones.emi11" class="emi">EMI &#8377;6,667 x 12</span></div>
         </div>
       </div>
     </div>
-    <p class="tabs__note">EMI amounts are examples at zero cost over 6 or 12 months on a credit card. Finance without a card is explained <a href="#emi">below</a>.</p>
+    <p class="tabs__note">EMI amounts are examples at zero cost over 6 or 12 months on a credit card. Finance without a card is explained <a data-nx="phones.button" href="#emi">below</a>.</p>
   </div>
 </section>
 
-<section class="section section--dark" id="repairs">
+<section data-nx-section="repairs" class="section section--dark" id="repairs">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Repairs</span>
-      <h2 class="h2">Screen or battery changed in 2 hours.</h2>
-      <p class="lead" style="margin-top:1rem">We check the phone in front of you and tell you the price before we open it. If we cannot fix it, you pay nothing. Price depends on the model; these are the usual ranges.</p>
+      <span data-nx="repairs.kicker" class="kicker">Repairs</span>
+      <h2 data-nx="repairs.h2" class="h2">Screen or battery changed in 2 hours.</h2>
+      <p data-nx="repairs.p" class="lead" style="margin-top:1rem">We check the phone in front of you and tell you the price before we open it. If we cannot fix it, you pay nothing. Price depends on the model; these are the usual ranges.</p>
     </div>
     <div class="rep">
       <div class="reveal">
         <table class="rtable">
-          <thead><tr><th>Repair</th><th>Price</th><th>Time</th></tr></thead>
-          <tbody>
-          <tr><td>Screen replacement <small>Original or best compatible, your choice</small></td><td class="amt">&#8377;1,500 to 12,000</td><td class="time">1 to 2 hours</td></tr>
-          <tr><td>Battery replacement <small>New battery, health shown on screen before you leave</small></td><td class="amt">&#8377;900 to 4,500</td><td class="time">1 hour</td></tr>
-          <tr><td>Charging port <small>Loose or not charging</small></td><td class="amt">&#8377;600 to 2,500</td><td class="time">1 to 2 hours</td></tr>
-          <tr><td>Speaker or mic <small>Low sound, no sound</small></td><td class="amt">&#8377;500 to 2,000</td><td class="time">1 to 2 hours</td></tr>
-          <tr><td>Water damage <small>Cleaning and check first, then we quote</small></td><td class="amt">&#8377;500 check</td><td class="time">1 to 3 days</td></tr>
-          <tr><td>Software, data transfer, reset <small>Hanging phone, forgotten pattern, moving to a new phone</small></td><td class="amt">&#8377;200 to 800</td><td class="time">30 minutes</td></tr>
+          <thead><tr><th data-nx="repairs.th">Repair</th><th data-nx="repairs.th2">Price</th><th data-nx="repairs.th3">Time</th></tr></thead>
+          <tbody data-nx-list="repairs.list">
+          <tr data-nx-item><td data-nx-f="td">Screen replacement <small>Original or best compatible, your choice</small></td><td data-nx-f="amt" class="amt">&#8377;1,500 to 12,000</td><td data-nx-f="time" class="time">1 to 2 hours</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Battery replacement <small>New battery, health shown on screen before you leave</small></td><td data-nx-f="amt" class="amt">&#8377;900 to 4,500</td><td data-nx-f="time" class="time">1 hour</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Charging port <small>Loose or not charging</small></td><td data-nx-f="amt" class="amt">&#8377;600 to 2,500</td><td data-nx-f="time" class="time">1 to 2 hours</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Speaker or mic <small>Low sound, no sound</small></td><td data-nx-f="amt" class="amt">&#8377;500 to 2,000</td><td data-nx-f="time" class="time">1 to 2 hours</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Water damage <small>Cleaning and check first, then we quote</small></td><td data-nx-f="amt" class="amt">&#8377;500 check</td><td data-nx-f="time" class="time">1 to 3 days</td></tr>
+          <tr data-nx-item><td data-nx-f="td">Software, data transfer, reset <small>Hanging phone, forgotten pattern, moving to a new phone</small></td><td data-nx-f="amt" class="amt">&#8377;200 to 800</td><td data-nx-f="time" class="time">30 minutes</td></tr>
           </tbody>
         </table>
-        <p class="rep__note">Your data stays on the phone. We never ask for your passwords; you open the phone yourself when we test it.</p>
+        <p data-nx="repairs.rep-note" class="rep__note">Your data stays on the phone. We never ask for your passwords; you open the phone yourself when we test it.</p>
       </div>
       <aside class="rep__card reveal" aria-label="Book a repair">
-        <img src="/demo/mobile-shop/images/repair-bench.jpg" width="1200" height="1600" alt="Technician under a lamp opening a phone at the repair bench" loading="lazy">
+        <img data-nx="repairs.photo" src="/demo/mobile-shop/images/repair-bench.jpg" width="1200" height="1600" alt="Technician under a lamp opening a phone at the repair bench" loading="lazy">
         <div class="rep__body">
-          <h3>Book a repair</h3>
-          <p>Send a photo of the damage and the phone model. We reply with the price and the time it will take, so you come once.</p>
+          <h3 data-nx="repairs.h3">Book a repair</h3>
+          <p data-nx="repairs.p2">Send a photo of the damage and the phone model. We reply with the price and the time it will take, so you come once.</p>
           <div class="cta-row">
             <a class="btn btn--orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Ghosh%20Mobile%20World%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -482,167 +487,167 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
             </a>
             <a class="btn btn--ghost" href="tel:+919804243159">Call +91 98042 43159</a>
           </div>
-          <p class="rep__war"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><span>3 months&rsquo; warranty on every repair, on the part and the work.</span></p>
+          <p class="rep__war"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><span data-nx="repairs.span">3 months&rsquo; warranty on every repair, on the part and the work.</span></p>
         </div>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="emi">
+<section data-nx-section="emi" class="section section--deep" id="emi">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">EMI and exchange</span>
-      <h2 class="h2">Pay monthly, or trade in the phone you have.</h2>
+      <span data-nx="emi.kicker" class="kicker">EMI and exchange</span>
+      <h2 data-nx="emi.h2" class="h2">Pay monthly, or trade in the phone you have.</h2>
     </div>
     <div class="zig">
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/mobile-shop/images/customer-phone.jpg" width="1200" height="1800" alt="A customer's hands scrolling through apps on a new phone" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="emi.photo" src="/demo/mobile-shop/images/customer-phone.jpg" width="1200" height="1800" alt="A customer's hands scrolling through apps on a new phone" loading="lazy"></div>
         <div class="reveal">
-          <span class="zig__n">1</span>
-          <h3>Credit card EMI</h3>
-          <p>3, 6, 9 or 12 months on most bank cards. No-cost EMI on phones above &#8377;10,000 when the brand runs an offer, which is most months. Takes about five minutes at the counter.</p>
-          <ul>
-            <li><span>We swipe the card once; the bank splits it into EMIs within a week.</span></li>
-            <li><span>Processing fee, if any, is shown to you before you sign.</span></li>
+          <span data-nx="emi.zig-n" class="zig__n">1</span>
+          <h3 data-nx="emi.h3">Credit card EMI</h3>
+          <p data-nx="emi.p">3, 6, 9 or 12 months on most bank cards. No-cost EMI on phones above &#8377;10,000 when the brand runs an offer, which is most months. Takes about five minutes at the counter.</p>
+          <ul data-nx-list="emi.list">
+            <li data-nx-item><span data-nx-f="span">We swipe the card once; the bank splits it into EMIs within a week.</span></li>
+            <li data-nx-item><span data-nx-f="span">Processing fee, if any, is shown to you before you sign.</span></li>
           </ul>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/mobile-shop/images/festival-photo.jpg" width="1200" height="800" alt="Phone camera pointed at festival lights on a Kolkata street at night" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="emi.photo2" src="/demo/mobile-shop/images/festival-photo.jpg" width="1200" height="800" alt="Phone camera pointed at festival lights on a Kolkata street at night" loading="lazy"></div>
         <div class="reveal">
-          <span class="zig__n">2</span>
-          <h3>Finance without a credit card</h3>
-          <p>Bajaj, HDB and others. Approval on the spot in most cases, and you walk out with the phone the same day.</p>
-          <ul>
-            <li><span><b>Bring:</b> Aadhaar, PAN, a cancelled cheque or bank passbook, and the mobile number linked to your Aadhaar for the OTP.</span></li>
-            <li><span><b>Down payment:</b> usually 10 to 20 percent of the price. The rest in 6 to 12 EMIs.</span></li>
-            <li><span>Salaried or self-employed both work. No hidden charges; the total you will pay is shown before you sign.</span></li>
+          <span data-nx="emi.zig-n2" class="zig__n">2</span>
+          <h3 data-nx="emi.h32">Finance without a credit card</h3>
+          <p data-nx="emi.p2">Bajaj, HDB and others. Approval on the spot in most cases, and you walk out with the phone the same day.</p>
+          <ul data-nx-list="emi.list2">
+            <li data-nx-item><span data-nx-f="span"><b>Bring:</b> Aadhaar, PAN, a cancelled cheque or bank passbook, and the mobile number linked to your Aadhaar for the OTP.</span></li>
+            <li data-nx-item><span data-nx-f="span"><b>Down payment:</b> usually 10 to 20 percent of the price. The rest in 6 to 12 EMIs.</span></li>
+            <li data-nx-item><span data-nx-f="span">Salaried or self-employed both work. No hidden charges; the total you will pay is shown before you sign.</span></li>
           </ul>
         </div>
       </div>
       <div class="zig__row">
-        <div class="zig__photo reveal"><img src="/demo/mobile-shop/images/phone-display.jpg" width="1200" height="675" alt="Phones standing on display tables with a wall of covers behind" loading="lazy"></div>
+        <div class="zig__photo reveal"><img data-nx="emi.photo3" src="/demo/mobile-shop/images/phone-display.jpg" width="1200" height="675" alt="Phones standing on display tables with a wall of covers behind" loading="lazy"></div>
         <div class="reveal">
-          <span class="zig__n">3</span>
-          <h3>Old phone exchange</h3>
-          <p>Bring your old phone. We check it in ten minutes and give you a fixed price off the new one.</p>
-          <ul>
-            <li><span><b>What we check:</b> screen (cracks, dead spots), battery health, camera, charging, speaker, and whether it switches on and opens with your pattern.</span></li>
-            <li><span><b>What raises the value:</b> original box and charger, no scratches on the screen, battery above 80 percent, a phone less than three years old.</span></li>
-            <li><span><b>What lowers it:</b> cracked screen, swollen battery, water damage, a locked account that is not signed out.</span></li>
-            <li><span><b>Your data:</b> we help you back up and sign out, then wipe the phone in front of you.</span></li>
+          <span data-nx="emi.zig-n3" class="zig__n">3</span>
+          <h3 data-nx="emi.h33">Old phone exchange</h3>
+          <p data-nx="emi.p3">Bring your old phone. We check it in ten minutes and give you a fixed price off the new one.</p>
+          <ul data-nx-list="emi.list3">
+            <li data-nx-item><span data-nx-f="span"><b>What we check:</b> screen (cracks, dead spots), battery health, camera, charging, speaker, and whether it switches on and opens with your pattern.</span></li>
+            <li data-nx-item><span data-nx-f="span"><b>What raises the value:</b> original box and charger, no scratches on the screen, battery above 80 percent, a phone less than three years old.</span></li>
+            <li data-nx-item><span data-nx-f="span"><b>What lowers it:</b> cracked screen, swollen battery, water damage, a locked account that is not signed out.</span></li>
+            <li data-nx-item><span data-nx-f="span"><b>Your data:</b> we help you back up and sign out, then wipe the phone in front of you.</span></li>
           </ul>
-          <div class="zig__ex"><b>Example:</b> a two-year-old &#8377;15,000 phone in good condition usually fetches &#8377;3,500 to &#8377;6,000 off the new phone. Flagships fetch more.</div>
+          <div data-nx="emi.zig-ex" class="zig__ex"><b>Example:</b> a two-year-old &#8377;15,000 phone in good condition usually fetches &#8377;3,500 to &#8377;6,000 off the new phone. Flagships fetch more.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="accessories">
+<section data-nx-section="accessories" class="section" id="accessories">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Accessories</span>
-      <h2 class="h2">Covers, chargers and earphones, fitted at the counter.</h2>
-      <p class="lead" style="margin-top:1rem">We put the tempered glass on for you, free, without bubbles. Chargers are branded and tested in front of you before billing. Try earphones before you pay.</p>
+      <span data-nx="accessories.kicker" class="kicker">Accessories</span>
+      <h2 data-nx="accessories.h2" class="h2">Covers, chargers and earphones, fitted at the counter.</h2>
+      <p data-nx="accessories.p" class="lead" style="margin-top:1rem">We put the tempered glass on for you, free, without bubbles. Chargers are branded and tested in front of you before billing. Try earphones before you pay.</p>
     </div>
     <div class="acc__photo reveal">
-      <img src="/demo/mobile-shop/images/accessories-stall.jpg" width="1200" height="800" alt="A busy street stall selling phone covers and accessories" loading="lazy">
+      <img data-nx="accessories.photo" src="/demo/mobile-shop/images/accessories-stall.jpg" width="1200" height="800" alt="A busy street stall selling phone covers and accessories" loading="lazy">
     </div>
     <ul class="chips reveal">
-      <li>Back cover, silicone or clear <b>&#8377;99 to 399</b></li>
-      <li>Printed or leather-look cover <b>&#8377;299 to 699</b></li>
-      <li class="hot">Tempered glass, fitted free <b>&#8377;99 to 499</b></li>
-      <li>Wired earphones <b>&#8377;199 to 799</b></li>
-      <li>Neckband <b>&#8377;799 to 2,499</b></li>
-      <li>True wireless earbuds <b>&#8377;1,299 to 4,999</b></li>
-      <li>Branded charger, 20 W to 67 W <b>&#8377;399 to 1,499</b></li>
-      <li>Type-C or Lightning cable <b>&#8377;149 to 799</b></li>
-      <li>Power bank 10,000 mAh <b>&#8377;999 to 1,799</b></li>
-      <li>Power bank 20,000 mAh <b>&#8377;1,499 to 2,999</b></li>
-      <li>Car charger and holder <b>&#8377;299 to 899</b></li>
-      <li>Memory card 64 to 256 GB <b>&#8377;449 to 1,999</b></li>
-      <li>Smartwatch <b>&#8377;1,299 to 9,999</b></li>
-      <li>SIM card and recharge <b>All networks</b></li>
+      <li data-nx="accessories.li">Back cover, silicone or clear <b>&#8377;99 to 399</b></li>
+      <li data-nx="accessories.li2">Printed or leather-look cover <b>&#8377;299 to 699</b></li>
+      <li data-nx="accessories.hot" class="hot">Tempered glass, fitted free <b>&#8377;99 to 499</b></li>
+      <li data-nx="accessories.li3">Wired earphones <b>&#8377;199 to 799</b></li>
+      <li data-nx="accessories.li4">Neckband <b>&#8377;799 to 2,499</b></li>
+      <li data-nx="accessories.li5">True wireless earbuds <b>&#8377;1,299 to 4,999</b></li>
+      <li data-nx="accessories.li6">Branded charger, 20 W to 67 W <b>&#8377;399 to 1,499</b></li>
+      <li data-nx="accessories.li7">Type-C or Lightning cable <b>&#8377;149 to 799</b></li>
+      <li data-nx="accessories.li8">Power bank 10,000 mAh <b>&#8377;999 to 1,799</b></li>
+      <li data-nx="accessories.li9">Power bank 20,000 mAh <b>&#8377;1,499 to 2,999</b></li>
+      <li data-nx="accessories.li10">Car charger and holder <b>&#8377;299 to 899</b></li>
+      <li data-nx="accessories.li11">Memory card 64 to 256 GB <b>&#8377;449 to 1,999</b></li>
+      <li data-nx="accessories.li12">Smartwatch <b>&#8377;1,299 to 9,999</b></li>
+      <li data-nx="accessories.li13">SIM card and recharge <b>All networks</b></li>
     </ul>
-    <p class="acc__note">Covers for older models come in two days on order. If a tempered glass cracks within a month we replace it for half price.</p>
+    <p data-nx="accessories.acc-note" class="acc__note">Covers for older models come in two days on order. If a tempered glass cracks within a month we replace it for half price.</p>
   </div>
 </section>
 
-<section class="section section--deep" id="appliances">
+<section data-nx-section="appliances" class="section section--deep" id="appliances">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Small home appliances</span>
-      <h2 class="h2">The upstairs shelf: things the house needs this week.</h2>
-      <p class="lead" style="margin-top:1rem">Not a showroom, just the small things people kept asking us for. Branded, with warranty card, and the same EMI as phones for anything above &#8377;3,000.</p>
+      <span data-nx="appliances.kicker" class="kicker">Small home appliances</span>
+      <h2 data-nx="appliances.h2" class="h2">The upstairs shelf: things the house needs this week.</h2>
+      <p data-nx="appliances.p" class="lead" style="margin-top:1rem">Not a showroom, just the small things people kept asking us for. Branded, with warranty card, and the same EMI as phones for anything above &#8377;3,000.</p>
     </div>
-    <ul class="appl reveal">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l-1 10H9z"/><path d="M6 13h12v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM10 21h4"/></svg><b>Mixer grinder</b><span>&#8377;2,299 to 4,999</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10l2 11H6z"/><path d="M16 10h3a2 2 0 0 1 0 4h-2M8 8V5h6v3"/></svg><b>Electric kettle</b><span>&#8377;699 to 1,499</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16h18l-2-7H9a6 6 0 0 0-6 6z"/><path d="M11 9V6h6"/></svg><b>Iron</b><span>&#8377;799 to 1,999</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="8" width="6" height="13" rx="2"/><path d="M7 5h10M8 5v3M12 5v3M16 5v3"/></svg><b>Trimmer, dryer</b><span>&#8377;799 to 2,499</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 2-6 4-6s2 4-4 6M12 14c0 4-2 6-4 6s-2-4 4-6M10 12c-4 0-6-2-6-4s4-2 6 4M14 12c4 0 6 2 6 4s-4 2-6-4"/></svg><b>Fan</b><span>&#8377;1,499 to 3,499</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="15" r="3"/><circle cx="12" cy="7.5" r="1.5"/></svg><b>Bluetooth speaker</b><span>&#8377;999 to 7,999</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="10" cy="12" r="3.5"/><path d="M17 10h1M17 14h1"/></svg><b>Induction cooktop</b><span>&#8377;1,799 to 3,499</span></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M7 12h1M11 12h1M15 12h1M21 12h1"/></svg><b>Extension board, bulbs</b><span>&#8377;149 to 699</span></li>
+    <ul data-nx-list="appliances.appl" class="appl reveal">
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l-1 10H9z"/><path d="M6 13h12v3a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM10 21h4"/></svg><b data-nx-f="b">Mixer grinder</b><span data-nx-f="span">&#8377;2,299 to 4,999</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h10l2 11H6z"/><path d="M16 10h3a2 2 0 0 1 0 4h-2M8 8V5h6v3"/></svg><b data-nx-f="b">Electric kettle</b><span data-nx-f="span">&#8377;699 to 1,499</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16h18l-2-7H9a6 6 0 0 0-6 6z"/><path d="M11 9V6h6"/></svg><b data-nx-f="b">Iron</b><span data-nx-f="span">&#8377;799 to 1,999</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="8" width="6" height="13" rx="2"/><path d="M7 5h10M8 5v3M12 5v3M16 5v3"/></svg><b data-nx-f="b">Trimmer, dryer</b><span data-nx-f="span">&#8377;799 to 2,499</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 2-6 4-6s2 4-4 6M12 14c0 4-2 6-4 6s-2-4 4-6M10 12c-4 0-6-2-6-4s4-2 6 4M14 12c4 0 6 2 6 4s-4 2-6-4"/></svg><b data-nx-f="b">Fan</b><span data-nx-f="span">&#8377;1,499 to 3,499</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="15" r="3"/><circle cx="12" cy="7.5" r="1.5"/></svg><b data-nx-f="b">Bluetooth speaker</b><span data-nx-f="span">&#8377;999 to 7,999</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="10" cy="12" r="3.5"/><path d="M17 10h1M17 14h1"/></svg><b data-nx-f="b">Induction cooktop</b><span data-nx-f="span">&#8377;1,799 to 3,499</span></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="1.5"/><path d="M7 12h1M11 12h1M15 12h1M21 12h1"/></svg><b data-nx-f="b">Extension board, bulbs</b><span data-nx-f="span">&#8377;149 to 699</span></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="warranty">
+<section data-nx-section="warranty" class="section" id="warranty">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Bill and warranty</span>
-      <h2 class="h2">What you get with every sale.</h2>
+      <span data-nx="warranty.kicker" class="kicker">Bill and warranty</span>
+      <h2 data-nx="warranty.h2" class="h2">What you get with every sale.</h2>
     </div>
-    <ul class="trust reveal">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 13h6M9 17h6"/></svg><div><h3>GST bill in your name</h3><p>Printed and sent on WhatsApp. You need it for the brand warranty and for insurance claims.</p></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><div><h3>Brand warranty, one year</h3><p>Sealed box, IMEI matched to the bill. For a claim we send the phone to the brand service centre for you.</p></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5a4 4 0 0 0 5 5L9 20a2.1 2.1 0 0 1-3-3z"/><path d="M4 20l1-1"/></svg><div><h3>Repair warranty, 3 months</h3><p>On the part and the work. Same fault again, we fix it free. Physical damage and water are not covered.</p></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>7-day bring-back</h3><p>Dead on arrival, wrong colour, or a fault in the first week: come back with the box and we sort it out with the brand.</p></div></li>
+    <ul data-nx-list="warranty.trust" class="trust reveal">
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 13h6M9 17h6"/></svg><div><h3 data-nx-f="h3">GST bill in your name</h3><p data-nx-f="p">Printed and sent on WhatsApp. You need it for the brand warranty and for insurance claims.</p></div></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><div><h3 data-nx-f="h3">Brand warranty, one year</h3><p data-nx-f="p">Sealed box, IMEI matched to the bill. For a claim we send the phone to the brand service centre for you.</p></div></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5a4 4 0 0 0 5 5L9 20a2.1 2.1 0 0 1-3-3z"/><path d="M4 20l1-1"/></svg><div><h3 data-nx-f="h3">Repair warranty, 3 months</h3><p data-nx-f="p">On the part and the work. Same fault again, we fix it free. Physical damage and water are not covered.</p></div></li>
+      <li data-nx-item><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3 data-nx-f="h3">7-day bring-back</h3><p data-nx-f="p">Dead on arrival, wrong colour, or a fault in the first week: come back with the box and we sort it out with the brand.</p></div></li>
     </ul>
   </div>
 </section>
 
-<section class="section section--deep" id="story">
+<section data-nx-section="story" class="section section--deep" id="story">
   <div class="wrap">
     <div class="story">
       <div class="reveal">
-        <span class="kicker">About the shop</span>
-        <h2 class="h2">One counter at Behala Chowrasta since 2012.</h2>
-        <p class="lead" style="margin-top:1rem">Pradip Ghosh opened this shop with four phones and a recharge counter. Today it is two floors: phones and accessories on the ground floor, a repair bench and small appliances upstairs. Four of us work here, and the owner is at the counter every day.</p>
-        <p>We sell what we can stand behind. Every phone comes with a GST bill in your name, the sealed box, and the brand warranty. If something is wrong in the first seven days, bring it back and we deal with the brand for you. On any day there are forty or more phones in stock to pick up and try.</p>
+        <span data-nx="story.kicker" class="kicker">About the shop</span>
+        <h2 data-nx="story.h2" class="h2">One counter at Behala Chowrasta since 2012.</h2>
+        <p data-nx="story.p" class="lead" style="margin-top:1rem">Pradip Ghosh opened this shop with four phones and a recharge counter. Today it is two floors: phones and accessories on the ground floor, a repair bench and small appliances upstairs. Four of us work here, and the owner is at the counter every day.</p>
+        <p data-nx="story.p2">We sell what we can stand behind. Every phone comes with a GST bill in your name, the sealed box, and the brand warranty. If something is wrong in the first seven days, bring it back and we deal with the brand for you. On any day there are forty or more phones in stock to pick up and try.</p>
       </div>
       <div class="story__photo reveal">
-        <img src="/demo/mobile-shop/images/speaker.jpg" width="1200" height="1800" alt="A young man at the upstairs counter trying a Bluetooth speaker" loading="lazy">
+        <img data-nx="story.photo" src="/demo/mobile-shop/images/speaker.jpg" width="1200" height="1800" alt="A young man at the upstairs counter trying a Bluetooth speaker" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq">
+<section data-nx-section="faq" class="section" id="faq">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Things people ask at the counter.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Things people ask at the counter.</h2>
     </div>
-    <div class="faq reveal">
-      <div><h3>Is the price the same as online?</h3><p>Usually within a few hundred rupees, and often the same during bank offers. You get the phone today, a bill in your name, and a shop to walk into if something goes wrong.</p></div>
-      <div><h3>Do you use original parts for repair?</h3><p>We offer both: original parts where the brand supplies them, and good compatible parts that cost less. We tell you which is which and the price of each before we start.</p></div>
-      <div><h3>Can I wait while the phone is repaired?</h3><p>Yes. Screen and battery take one to two hours. Sit downstairs, or leave it and we message you when it is ready.</p></div>
-      <div><h3>What do I bring for finance?</h3><p>Aadhaar, PAN, a bank passbook or cancelled cheque, and the mobile number linked to Aadhaar for the OTP. Salaried or self-employed both work.</p></div>
-      <div><h3>Do you buy old phones without an exchange?</h3><p>Yes, for cash, but the price is lower than exchange value. Bring the box and bill if you have them.</p></div>
-      <div><h3>Do you do recharges and SIM cards?</h3><p>Yes. All networks, prepaid and postpaid, and new SIMs with Aadhaar verification at the counter.</p></div>
+    <div data-nx-list="faq.faq" class="faq reveal">
+      <div data-nx-item><h3 data-nx-f="h3">Is the price the same as online?</h3><p data-nx-f="p">Usually within a few hundred rupees, and often the same during bank offers. You get the phone today, a bill in your name, and a shop to walk into if something goes wrong.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Do you use original parts for repair?</h3><p data-nx-f="p">We offer both: original parts where the brand supplies them, and good compatible parts that cost less. We tell you which is which and the price of each before we start.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Can I wait while the phone is repaired?</h3><p data-nx-f="p">Yes. Screen and battery take one to two hours. Sit downstairs, or leave it and we message you when it is ready.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">What do I bring for finance?</h3><p data-nx-f="p">Aadhaar, PAN, a bank passbook or cancelled cheque, and the mobile number linked to Aadhaar for the OTP. Salaried or self-employed both work.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Do you buy old phones without an exchange?</h3><p data-nx-f="p">Yes, for cash, but the price is lower than exchange value. Bring the box and bill if you have them.</p></div>
+      <div data-nx-item><h3 data-nx-f="h3">Do you do recharges and SIM cards?</h3><p data-nx-f="p">Yes. All networks, prepaid and postpaid, and new SIMs with Aadhaar verification at the counter.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="gallery">
+<section data-nx-section="gallery" class="section section--deep" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">From the shop</span>
-      <h2 class="h2">A few photos.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From the shop</span>
+      <h2 data-nx="gallery.h2" class="h2">A few photos.</h2>
     </div>
     <ul class="strip reveal">
       <li><img src="/demo/mobile-shop/images/kolkata-camera.jpg" width="1200" height="800" alt="Hands taking a photo of a stone sculpture with a phone in Kolkata" loading="lazy"></li>
@@ -657,44 +662,44 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-12" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What customers say</span>
-      <h2 class="h2">In their own words.</h2>
+      <span data-nx="section-12.kicker" class="kicker">What customers say</span>
+      <h2 data-nx="section-12.h2" class="h2">In their own words.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>My phone screen broke on a Sunday evening. They changed it in an hour and a half and showed me the old one. Still working fine after six months.</p><footer>Tanmoy <span>&middot; Sakherbazar</span></footer></blockquote>
-      <blockquote class="reveal"><p>Bought my mother a phone on EMI with just Aadhaar and PAN. They set it up in Bengali, put her contacts in and added the big font. She calls me herself now.</p><footer>Rupsa <span>&middot; Parnasree</span></footer></blockquote>
+    <div data-nx-list="section-12.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">My phone screen broke on a Sunday evening. They changed it in an hour and a half and showed me the old one. Still working fine after six months.</p><footer>Tanmoy <span data-nx-f="span">&middot; Sakherbazar</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Bought my mother a phone on EMI with just Aadhaar and PAN. They set it up in Bengali, put her contacts in and added the big font. She calls me herself now.</p><footer>Rupsa <span data-nx-f="span">&middot; Parnasree</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--deep" id="visit">
+<section data-nx-section="visit" class="section section--deep" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Visit the shop</span>
-      <h2 class="h2">On Diamond Harbour Road, next to Behala Chowrasta bus stop.</h2>
+      <span data-nx="visit.kicker" class="kicker">Visit the shop</span>
+      <h2 data-nx="visit.h2" class="h2">On Diamond Harbour Road, next to Behala Chowrasta bus stop.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>24B Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=24B%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">24B Diamond Harbour Road, Behala Chowrasta<br>Kolkata 700034</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=24B%20Diamond%20Harbour%20Road%2C%20Behala%20Chowrasta%2C%20Kolkata%20700034" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Opening hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:00 am &ndash; 9:30 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 8:00 pm</td></tr>
-              <tr><td>Repair bench</td><td>11:00 am &ndash; 8:00 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Opening hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:00 am &ndash; 9:30 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 8:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Repair bench</td><td data-nx-f="td2">11:00 am &ndash; 8:00 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">WhatsApp for prices and repair photos, 10 am to 9 pm.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">WhatsApp for prices and repair photos, 10 am to 9 pm.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--dark" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Ghosh%20Mobile%20World%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -708,10 +713,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Send your budget or a photo of the fault.</h2>
-    <p>We reply on WhatsApp with a price and the time it will take. No need to come twice.</p>
+    <h2 data-nx="contact.h2">Send your budget or a photo of the fault.</h2>
+    <p data-nx="contact.p">We reply on WhatsApp with a price and the time it will take. No need to come twice.</p>
     <div class="final__cta">
       <a class="btn btn--orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Ghosh%20Mobile%20World%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -726,32 +731,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="10" fill="#FF6A1A"/><rect x="14" y="8" width="16" height="28" rx="4" fill="#141618"/><rect x="16" y="11" width="12" height="19" rx="1.5" fill="#F6F5F2"/><circle cx="22" cy="33" r="1.6" fill="#FF6A1A"/><path d="M33 14l3 3-3 3M11 14l-3 3 3 3" stroke="#141618" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-          <span><b>Ghosh Mobile World</b><small>Behala Chowrasta &middot; since 2012</small></span>
+          <span><b data-nx="footer.b">Ghosh Mobile World</b><small data-nx="footer.small">Behala Chowrasta &middot; since 2012</small></span>
         </a>
-        <p>Phones with bill and warranty, EMI and exchange at the counter, repairs in two hours, and a shelf of small appliances.</p>
+        <p data-nx="footer.p">Phones with bill and warranty, EMI and exchange at the counter, repairs in two hours, and a shelf of small appliances.</p>
       </div>
       <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#phones">Phones by budget</a></li>
-          <li><a href="#repairs">Repair prices</a></li>
-          <li><a href="#emi">EMI and exchange</a></li>
-          <li><a href="#accessories">Accessories</a></li>
-          <li><a href="#appliances">Home appliances</a></li>
+        <h4 data-nx="footer.h4">Shop</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#phones">Phones by budget</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#repairs">Repair prices</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#emi">EMI and exchange</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#accessories">Accessories</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#appliances">Home appliances</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>24B Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
+          <li data-nx="footer.li">24B Diamond Harbour Road, Behala Chowrasta, Kolkata 700034</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10 am &ndash; 9:30 pm &middot; Sun 10 am &ndash; 8 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10 am &ndash; 9:30 pm &middot; Sun 10 am &ndash; 8 pm</li>
         </ul>
       </div>
     </div>
@@ -793,5 +798,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

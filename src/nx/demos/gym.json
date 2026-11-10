@@ -1,0 +1,2106 @@
+{
+  "site": "gym",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Iron Para Gym",
+  "sections": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          },
+          "html": true
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-2",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "textarea",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-meta",
+          "label": {
+            "en": "Lift. Sweat. Go home. Come back tomorrow",
+            "bn": "Lift. Sweat. Go home. Come back tomorrow"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "A para gym, not a mall gym",
+        "bn": "A para gym, not a mall gym"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1425"
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "lede",
+          "label": {
+            "en": "A para gym, not a mall gym",
+            "bn": "A para gym, not a mall gym"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "checks",
+          "label": {
+            "en": "A para gym, not a mall gym",
+            "bn": "A para gym, not a mall gym"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "facilities",
+      "label": {
+        "en": "Everything you need. Nothing you'll pay for and never use",
+        "bn": "Everything you need. Nothing you'll pay for and never use"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1797"
+        },
+        {
+          "key": "fcard-num",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "fcard-num2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "fcard-num3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "fcard-num4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "fcard-num5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "fcard-num6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "facilities-note",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "classes",
+      "label": {
+        "en": "The weekly timetable",
+        "bn": "The weekly timetable"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "table-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "pill",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plans",
+      "label": {
+        "en": "Three plans. The price is the price",
+        "bn": "Three plans. The price is the price"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "plan-name",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "plan-price",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "plan-per",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "plan-flag",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "plan-name2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "plan-price2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "plan-per2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "plan-name3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "plan-price3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "plan-per3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "plans-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Three plans. The price is the price",
+            "bn": "Three plans. The price is the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Three plans. The price is the price",
+            "bn": "Three plans. The price is the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Three plans. The price is the price",
+            "bn": "Three plans. The price is the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plans-extra",
+          "label": {
+            "en": "Three plans. The price is the price",
+            "bn": "Three plans. The price is the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "b",
+              "type": "textarea",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timings",
+      "label": {
+        "en": "When the doors are open",
+        "bn": "When the doors are open"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "td14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "table-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "trainers",
+      "label": {
+        "en": "Three people who know the floor",
+        "bn": "Three people who know the floor"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "trainers",
+          "label": {
+            "en": "Three people who know the floor",
+            "bn": "Three people who know the floor"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1066"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p2",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "dt",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "dd",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "dt2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "dd2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "dt3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "dd3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-day",
+      "label": {
+        "en": "How it goes",
+        "bn": "How it goes"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "How it goes",
+            "bn": "How it goes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Bring and know",
+            "bn": "Bring and know"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "On the floor",
+        "bn": "On the floor"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "On the floor",
+            "bn": "On the floor"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "800:1200"
+            },
+            {
+              "key": "figcaption",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Find us",
+        "bn": "Find us"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "textarea",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "label",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "visit-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Find us",
+            "bn": "Find us"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Come in tomorrow morning",
+        "bn": "Come in tomorrow morning"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "final-place",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          },
+          "html": true
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "footer-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "footer-loc",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "address",
+          "type": "text",
+          "label": {
+            "en": "Address",
+            "bn": "ঠিকানা"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "footer-bottom",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "top": {
+      "brand-name": "IRON <em>PARA</em> GYM",
+      "brand-sub": "Jodhpur Park • Since 2016"
+    },
+    "section-2": {
+      "tag": "Jodhpur Park • Kolkata",
+      "h1": "Lift. Sweat.<br><span class=\"amber\">Go home.</span><br><span class=\"outline\">Come back</span> tomorrow.",
+      "lede": "A proper neighbourhood gym. Free weights, machines, cardio, Zumba and yoga in the evening, trainers who learn your name. Open from 5:30 in the morning, six days a week.",
+      "button": "See the plans",
+      "photo": {
+        "src": "/demo/gym/images/hero.jpg",
+        "alt": "A young man doing a dumbbell curl in front of the dumbbell rack"
+      },
+      "b": "5:30 am",
+      "span": "Doors open",
+      "hero-meta": {
+        "items": [
+          {
+            "span": "Monthly from ₹1,200"
+          },
+          {
+            "span": "First visit free"
+          },
+          {
+            "span": "Women's hour daily"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "b": "Since 2016",
+            "span": "In Jodhpur Park"
+          },
+          {
+            "b": "2,400 sq ft",
+            "span": "One floor, no stairs"
+          },
+          {
+            "b": "3 trainers",
+            "span": "On the floor, every shift"
+          },
+          {
+            "b": "6 days",
+            "span": "5:30 am to 10 pm"
+          }
+        ]
+      }
+    },
+    "about": {
+      "photo": {
+        "src": "/demo/gym/images/tyre-flip.jpg",
+        "alt": "A man flipping a large tractor tyre on the gym floor"
+      },
+      "photo2": {
+        "src": "/demo/gym/images/squat.jpg",
+        "alt": "A man holding a barbell front squat at the bottom"
+      },
+      "tag": "About the gym",
+      "h2": "A para gym,<br>not a mall gym.",
+      "lede": {
+        "items": [
+          {
+            "p": "Iron Para Gym opened in 2016 on the ground floor of a house in Jodhpur Park. The owner, Subrata Ghosh, still runs the morning shift himself."
+          },
+          {
+            "p": "It is one big room. Free weights on one side, machines and cardio on the other, a mat area at the back for classes and stretching. There is a fan over every rack and an AC that works in summer."
+          }
+        ]
+      },
+      "checks": {
+        "items": [
+          {
+            "li": "<b>Plates up to 20 kg, dumbbells to 40 kg.</b> Two squat racks, a flat and incline bench, a Smith machine."
+          },
+          {
+            "li": "<b>Trainers on the floor, not at the desk.</b> Ask anyone in a black T-shirt for help with form."
+          },
+          {
+            "li": "<b>No sales pressure.</b> Plans are on this page. Pay for the month you want, nothing more."
+          },
+          {
+            "li": "<b>Women's hour 11 am to 1 pm.</b> Women only on the floor, Monday to Saturday."
+          }
+        ]
+      }
+    },
+    "facilities": {
+      "tag": "What's inside",
+      "h2": "Everything you need. Nothing you'll pay for and never use.",
+      "lede": "All of this is included in every membership. Group classes too.",
+      "photo": {
+        "src": "/demo/gym/images/preacher-curl.jpg",
+        "alt": "A man doing preacher curls on a red bench"
+      },
+      "fcard-num": "01",
+      "h3": "Free weights",
+      "p": "Two squat racks, flat and incline benches, a deadlift platform, dumbbells from 2.5 to 40 kg.",
+      "photo2": {
+        "src": "/demo/gym/images/triceps-cable.jpg",
+        "alt": "A man doing triceps pushdowns on a cable machine"
+      },
+      "fcard-num2": "02",
+      "h32": "Machines",
+      "p2": "Cable crossover, lat pulldown, leg press, leg curl and extension, chest press, Smith machine.",
+      "photo3": {
+        "src": "/demo/gym/images/battle-ropes.jpg",
+        "alt": "A man swinging battle ropes"
+      },
+      "fcard-num3": "03",
+      "h33": "Cardio & functional",
+      "p3": "Four treadmills, two cross-trainers, two bikes, a rower, battle ropes, kettlebells and a tyre.",
+      "photo4": {
+        "src": "/demo/gym/images/group-class.jpg",
+        "alt": "A group sitting cross-legged on yoga mats on a lawn"
+      },
+      "fcard-num4": "04",
+      "h34": "Group classes",
+      "p4": "Zumba, yoga, HIIT and a Sunday stretch class on the mat area. Timetable below. Included.",
+      "photo5": {
+        "src": "/demo/gym/images/personal-training.jpg",
+        "alt": "A trainer correcting a woman's posture in a standing stretch"
+      },
+      "fcard-num5": "05",
+      "h35": "Personal training",
+      "p5": "One trainer, one plan written for you, twelve sessions a month. Booked in advance so you get the slot you want.",
+      "fcard-num6": "06",
+      "h36": "Changing room & lockers",
+      "p6": "Separate changing rooms for men and women, 40 day-lockers (bring your own lock), a shower, filtered drinking water, first-aid box at the desk.",
+      "facilities-note": "We do not have a steam room, a pool or a juice bar. We keep the fees low instead."
+    },
+    "classes": {
+      "tag": "Group classes",
+      "h2": "The weekly timetable",
+      "lede": "Classes run on the mat area at the back. Come five minutes early. All of them are included in every plan; no extra booking, just turn up.",
+      "th": "Class",
+      "th2": "Days",
+      "th3": "Time",
+      "th4": "Level",
+      "th5": "Takes it",
+      "photo": {
+        "src": "/demo/gym/images/yoga-class.jpg",
+        "alt": "Two women seated in a yoga pose with arms raised"
+      },
+      "p": "\"I joined for the 6 am HIIT class and stayed for the people. Nobody stares, nobody sells you anything.\"",
+      "table-note": "Zumba is taken by a visiting instructor. If she is on leave the slot becomes an open mat hour. We post changes on the noticeboard and on WhatsApp.",
+      "list": {
+        "items": [
+          {
+            "td": "HIIT circuit",
+            "td2": "Mon • Wed • Fri",
+            "td3": "6:00 – 6:45 am",
+            "pill": "All levels",
+            "td4": "Rohit"
+          },
+          {
+            "td": "Yoga",
+            "td2": "Tue • Thu • Sat",
+            "td3": "6:30 – 7:30 am",
+            "pill": "Beginner",
+            "td4": "Priya"
+          },
+          {
+            "td": "Women's strength",
+            "td2": "Tue • Thu",
+            "td3": "11:30 am – 12:30 pm",
+            "pill": "All levels",
+            "td4": "Priya"
+          },
+          {
+            "td": "Zumba",
+            "td2": "Mon • Wed • Fri",
+            "td3": "7:00 – 8:00 pm",
+            "pill": "All levels",
+            "td4": "Guest instructor"
+          },
+          {
+            "td": "Stretch & mobility",
+            "td2": "Sun",
+            "td3": "8:00 – 9:00 am",
+            "pill": "Beginner",
+            "td4": "Arjun"
+          }
+        ]
+      }
+    },
+    "plans": {
+      "tag": "Membership",
+      "h2": "Three plans. The price is the price.",
+      "lede": "Every plan covers the whole gym and every class. Pay cash, UPI or card at the desk. There is a one-time admission fee of ₹500 on your first plan.",
+      "plan-name": "MONTHLY",
+      "plan-price": "&#8377;1,200<small>/ month</small>",
+      "plan-per": "Good for trying us out.",
+      "plan-flag": "Most members pick this",
+      "plan-name2": "QUARTERLY",
+      "plan-price2": "&#8377;3,000<small>/ 3 months</small>",
+      "plan-per2": "Works out to ₹1,000 a month.",
+      "plan-name3": "YEARLY",
+      "plan-price3": "&#8377;9,600<small>/ year</small>",
+      "plan-per3": "Works out to ₹800 a month.",
+      "plans-note": "Students with a valid college ID get ₹100 off the monthly plan. No refunds once a plan has started, but you can freeze it as shown above. Prices are examples for this sample site.",
+      "list": {
+        "items": [
+          {
+            "li": "Full gym, 5:30 am to 10 pm"
+          },
+          {
+            "li": "All group classes"
+          },
+          {
+            "li": "Day-locker use"
+          },
+          {
+            "li": "Starter plan written on day one"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Everything in Monthly"
+          },
+          {
+            "li": "One free freeze of up to 10 days"
+          },
+          {
+            "li": "Body measurements taken each month"
+          },
+          {
+            "li": "Plan reviewed by a trainer every 4 weeks"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Everything in Quarterly"
+          },
+          {
+            "li": "Freeze up to 30 days in the year"
+          },
+          {
+            "li": "Admission fee waived"
+          },
+          {
+            "li": "Two guest passes for a friend"
+          }
+        ]
+      },
+      "plans-extra": {
+        "items": [
+          {
+            "h3": "Personal training",
+            "p": "12 one-hour sessions a month with one trainer. Added on top of any plan.",
+            "b": "&#8377;3,500<small style=\"font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57\"> / month</small>"
+          },
+          {
+            "h3": "Day pass",
+            "p": "One visit, full gym, any class running that day. Your first visit is free.",
+            "b": "&#8377;150<small style=\"font-family:var(--body);font-size:.8rem;font-weight:600;color:#4B4F57\"> / day</small>"
+          }
+        ]
+      }
+    },
+    "timings": {
+      "tag": "Timings",
+      "h2": "When the doors are open",
+      "th": "Day",
+      "th2": "Open",
+      "th3": "Women's hour",
+      "th4": "Quietest",
+      "td": "Monday – Friday",
+      "td2": "5:30 am – 10:00 pm",
+      "td3": "11:00 am – 1:00 pm",
+      "td4": "2 pm – 5 pm",
+      "td5": "Saturday",
+      "td6": "5:30 am – 10:00 pm",
+      "td7": "11:00 am – 1:00 pm",
+      "td8": "After 7 pm",
+      "td9": "Sunday",
+      "td10": "6:00 am – 1:00 pm",
+      "td11": "Closed",
+      "td12": "After 10 am",
+      "td13": "Closed",
+      "td14": "Durga Pujo (Ashtami to Dashami), Kali Pujo, Holi, 15 August, 26 January",
+      "table-note": "Last entry is 45 minutes before closing. The busiest hours are 6 to 8 in the morning and 6 to 9 in the evening."
+    },
+    "trainers": {
+      "tag": "Trainers",
+      "h2": "Three people who know the floor",
+      "lede": "All three are certified fitness trainers and first-aid trained. One of them is on the floor at every hour we are open.",
+      "trainers": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/gym/images/trainer-arjun.jpg",
+              "alt": "Arjun, a young man in an olive T-shirt standing in the gym"
+            },
+            "h3": "Arjun Das",
+            "p": "Strength • Head trainer",
+            "p2": "Runs the morning shift. Teaches the squat, bench and deadlift from scratch and writes most of the beginner plans.",
+            "dt": "At the gym",
+            "dd": "Since 2016",
+            "dt2": "Shift",
+            "dd2": "5:30 am – 1:30 pm",
+            "dt3": "Also takes",
+            "dd3": "Sunday stretch class"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/trainer-rohit.jpg",
+              "alt": "Rohit, a young man in a red vest smiling next to a punching bag"
+            },
+            "h3": "Rohit Mondal",
+            "p": "Functional • HIIT",
+            "p2": "Takes the 6 am circuit class and the evening floor. Kettlebells, ropes, boxing basics on the bag, and conditioning for school and college athletes.",
+            "dt": "At the gym",
+            "dd": "Since 2019",
+            "dt2": "Shift",
+            "dd2": "5:30 – 9 am, 4 – 10 pm",
+            "dt3": "Also takes",
+            "dd3": "HIIT circuit"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/trainer-priya.jpg",
+              "alt": "Priya, a woman holding a dumbbell in the gym"
+            },
+            "h3": "Priya Sen",
+            "p": "Women's strength • Yoga",
+            "p2": "Runs the women's hour and the morning yoga class. Works with beginners, new mothers and anyone coming back after a long gap.",
+            "dt": "At the gym",
+            "dd": "Since 2020",
+            "dt2": "Shift",
+            "dd2": "6 am – 1 pm",
+            "dt3": "Also takes",
+            "dd3": "Yoga, women's strength"
+          }
+        ]
+      }
+    },
+    "first-day": {
+      "tag": "Your first day",
+      "h2": "How it goes",
+      "h3": "Bring and know",
+      "steps": {
+        "items": [
+          {
+            "n": "1",
+            "h3": "Walk in, any open hour",
+            "p": "No appointment. Your first visit is free. Say you are new at the desk."
+          },
+          {
+            "n": "2",
+            "h3": "Ten minutes with a trainer",
+            "p": "We ask what you want, check for old injuries, measure height, weight and waist."
+          },
+          {
+            "n": "3",
+            "h3": "A tour and a first workout",
+            "p": "The trainer shows you every machine and walks you through a light first session."
+          },
+          {
+            "n": "4",
+            "h3": "Pick a plan, or don't",
+            "p": "Pay at the desk if you want to continue. Nobody will call you if you don't."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Indoor shoes. Outdoor shoes stay in the rack at the door."
+          },
+          {
+            "li": "A towel and a water bottle. We have filtered water, not disposable cups."
+          },
+          {
+            "li": "A lock for the day-locker. Lockers are emptied at closing."
+          },
+          {
+            "li": "Re-rack your plates and wipe the bench after use."
+          },
+          {
+            "li": "Phone calls off the floor, please. Photos are fine if nobody else is in them."
+          },
+          {
+            "li": "Tell a trainer about any injury, heart condition or pregnancy before starting."
+          },
+          {
+            "li": "Children under 14 are not allowed on the floor."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "tag": "Gallery",
+      "h2": "On the floor",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/gym/images/women-dumbbells.jpg",
+              "alt": "A woman holding two dumbbells at her sides"
+            },
+            "figcaption": "Women's hour"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/cable-row.jpg",
+              "alt": "A man doing a seated cable row"
+            },
+            "figcaption": "Cable row"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/push-ups.jpg",
+              "alt": "A man doing push-ups on a wooden ledge outdoors"
+            },
+            "figcaption": "Sunday outdoors"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/triceps-rope.jpg",
+              "alt": "A triceps rope hanging from a cable machine with a ceiling fan behind"
+            },
+            "figcaption": "Cable station"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/hero.jpg",
+              "alt": "A young man doing a dumbbell curl in front of the dumbbell rack"
+            },
+            "figcaption": "Dumbbell rack"
+          },
+          {
+            "photo": {
+              "src": "/demo/gym/images/squat.jpg",
+              "alt": "A man holding a barbell front squat at the bottom"
+            },
+            "figcaption": "Squat rack"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "tag": "Visit",
+      "h2": "Find us",
+      "address": "<span class=\"label\">Address</span>\r\n        41 Jodhpur Park, ground floor<br>\r\n        Near the Jodhpur Park post office<br>\r\n        Kolkata 700068, West Bengal",
+      "label": "Hours",
+      "button": "Get Directions",
+      "visit-note": "Two-wheeler parking in the lane. Dhakuria station is a 10-minute walk; buses stop at Jodhpur Park on Prince Anwar Shah Road.",
+      "list": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "5:30 am – 10:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "6:00 am – 1:00 pm"
+          },
+          {
+            "td": "Women's hour (Mon–Sat)",
+            "td2": "11:00 am – 1:00 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Iron Para Gym sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps/search/?api=1&query=41%20Jodhpur%20Park%2C%20Kolkata%20700068",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "brand-name": "IRON <em>PARA</em> GYM",
+      "brand-sub": "Jodhpur Park • Since 2016",
+      "footer-tag": "Weights, cardio, classes, trainers. No frills, fair fees.",
+      "footer-loc": "Jodhpur Park, Kolkata",
+      "h4": "Visit",
+      "address": "41 Jodhpur Park, ground floor<br>\r\n          Kolkata 700068<br>\r\n          West Bengal",
+      "button": "Get Directions",
+      "h42": "Follow",
+      "footer-bottom": "© 2026 Iron Para Gym. All rights reserved."
+    },
+    "seo": {
+      "title": "Iron Para Gym | Neighbourhood Gym in Jodhpur Park, Kolkata",
+      "description": "Weights floor, cardio, Zumba and yoga classes, personal training. Monthly, quarterly and yearly plans. Open 5:30 am to 10 pm in Jodhpur Park, Kolkata. Message us on WhatsApp."
+    }
+  }
+}

@@ -1,0 +1,1557 @@
+{
+  "site": "event-decorator",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Sanyal Decorators & Tent House",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1799"
+        },
+        {
+          "key": "hero-eyebrow",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "The stage, the flowers, the tent. One phone call",
+            "bn": "The stage, the flowers, the tent. One phone call"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "label": {
+        "en": "Photos from the last two seasons",
+        "bn": "Photos from the last two seasons"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "masonry",
+          "label": {
+            "en": "Photos from the last two seasons",
+            "bn": "Photos from the last two seasons"
+          },
+          "min": 1,
+          "max": 18,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1799"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "label": {
+        "en": "Six things, done properly",
+        "bn": "Six things, done properly"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "svc-list",
+          "label": {
+            "en": "Six things, done properly",
+            "bn": "Six things, done properly"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "n",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "from",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Tell us the date",
+            "bn": "Tell us the date"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "packages",
+      "label": {
+        "en": "Fixed packages, fixed prices",
+        "bn": "Fixed packages, fixed prices"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag3",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag4",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Balloon party",
+            "bn": "Balloon party"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Marigold morning",
+            "bn": "Marigold morning"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Reception stage",
+            "bn": "Reception stage"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Three days, one team",
+            "bn": "Three days, one team"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hire",
+      "label": {
+        "en": "Tent house rates",
+        "bn": "Tent house rates"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "hire-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Tent house rates",
+            "bn": "Tent house rates"
+          },
+          "min": 1,
+          "max": 20,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "hire-photos",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how",
+      "label": {
+        "en": "From your first message to the last chair going back on the van",
+        "bn": "From your first message to the last chair going back on the van"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tl",
+          "label": {
+            "en": "From your first message to the last chair going back on the van",
+            "bn": "From your first message to the last chair going back on the van"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "when",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "label": {
+        "en": "Haldi, biye and bou bhat",
+        "bn": "Haldi, biye and bou bhat"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "strip-hint",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "section-9",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Deshapran Sasmal Road, near Tollygunge metro",
+        "bn": "On Deshapran Sasmal Road, near Tollygunge metro"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Dates in the wedding season go first",
+        "bn": "Dates in the wedding season go first"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Pages",
+            "bn": "Pages"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Sanyal Decorators & Tent House",
+      "small": "Tollygunge · since 1998"
+    },
+    "top": {
+      "photo": {
+        "src": "/demo/event-decorator/images/hero.jpg",
+        "alt": "A haldi stage in yellow and orange drapes with marigold strings and a brass lamp"
+      },
+      "hero-eyebrow": "Decoration, pandal, lights and sound",
+      "h1": "The stage, the flowers, the tent. <span>One phone call.</span>",
+      "p": "We decorate weddings, haldi and mehendi, receptions, birthdays and annaprashans across South Kolkata. Our own pandal, chairs, lights and sound, so you deal with one team, not five.",
+      "button": "See packages and prices",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "27",
+            "span": "Years in Tollygunge"
+          },
+          {
+            "b": "400+",
+            "span": "Weddings decorated"
+          },
+          {
+            "b": "2,000",
+            "span": "Chairs in our godown"
+          }
+        ]
+      }
+    },
+    "work": {
+      "kicker": "Our work",
+      "h2": "Photos from the last two seasons.",
+      "p": "Every setup here was built by our own team. Fresh flowers from Mullick Ghat, cloth and lights from our godown.",
+      "masonry": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/stage-flowers.jpg",
+              "alt": "Wedding stage with tall flower arrangements and draped cloth"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/mandap-chandelier.jpg",
+              "alt": "Flower-covered mandap with chandeliers hanging above"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/balloon-kids.jpg",
+              "alt": "Birthday table with a number balloon, bunting and pastel balloons"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/mandap.jpg",
+              "alt": "Wedding mandap decorated with red and white flowers"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/marigold-garlands.jpg",
+              "alt": "Strings of marigold garlands hanging outdoors"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/haldi-decor.jpg",
+              "alt": "Haldi and mehendi welcome board with brass lotus stands and marigolds"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/outdoor-tent.jpg",
+              "alt": "Outdoor ceremony under a white tent with rows of draped chairs"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/entrance.jpg",
+              "alt": "Colourful flower entrance gate for a wedding"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/stage-columns.jpg",
+              "alt": "Stage with golden pillars and multicolour flower garlands"
+            }
+          }
+        ]
+      }
+    },
+    "services": {
+      "kicker": "What we do",
+      "h2": "Six things, done properly.",
+      "p": "Starting prices are for a normal Kolkata hall or rooftop. The final price depends on the size of the venue and the flowers you choose. We put it in writing before you pay anything.",
+      "h3": "Tell us the date.",
+      "p2": "Three things and we can give you a price the same day.",
+      "svc-list": {
+        "items": [
+          {
+            "n": "01",
+            "h3": "Wedding stage and mandap",
+            "p": "Fresh flower stage with backdrop, sofa and side pillars. Chhadnatola or mandap built to your purohit’s measurements.",
+            "from": "from<b>&#8377;45,000</b>"
+          },
+          {
+            "n": "02",
+            "h3": "Flower decoration",
+            "p": "Gate, staircase, car, bed and table flowers. Marigold, rajanigandha, rose and orchid, bought the same morning.",
+            "from": "from<b>&#8377;8,000</b>"
+          },
+          {
+            "n": "03",
+            "h3": "Haldi and mehendi setup",
+            "p": "Yellow and orange drapes, marigold strings, a low seat for the bride, brass lamps and a photo corner.",
+            "from": "from<b>&#8377;12,000</b>"
+          },
+          {
+            "n": "04",
+            "h3": "Birthday and annaprashan balloons",
+            "p": "Balloon arch, number balloons, name board and a cake table. Set up in two hours, taken down the same night.",
+            "from": "from<b>&#8377;3,500</b>"
+          },
+          {
+            "n": "05",
+            "h3": "Lights",
+            "p": "Fairy lights, chandeliers, pillar lights and the lighting of your whole building front for the wedding week.",
+            "from": "from<b>&#8377;6,000</b>"
+          },
+          {
+            "n": "06",
+            "h3": "Pandal, chairs and sound on hire",
+            "p": "Waterproof pandal, carpet, chairs with covers, tables, generator and a sound system with a man on it all evening.",
+            "from": "see<b>rates below</b>"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "The date and the venue (hall, rooftop, lawn or home)"
+          },
+          {
+            "li": "The event: wedding, reception, haldi, birthday, annaprashan"
+          },
+          {
+            "li": "Roughly how many guests and your budget"
+          }
+        ]
+      }
+    },
+    "packages": {
+      "kicker": "Packages by event",
+      "h2": "Fixed packages, fixed prices.",
+      "p": "Pick one and change what you like. Prices include setting up, taking down and carrying away. Flowers are fresh, not artificial, unless you ask.",
+      "tag": "Birthday",
+      "h3": "Balloon party",
+      "amt": "&#8377;6,500 <small>for a flat or small hall</small>",
+      "tag2": "Haldi and mehendi",
+      "h32": "Marigold morning",
+      "amt2": "&#8377;18,000 <small>rooftop or lawn</small>",
+      "tag3": "Most booked",
+      "h33": "Reception stage",
+      "amt3": "&#8377;65,000 <small>for a hall up to 300 guests</small>",
+      "tag4": "Full wedding",
+      "h34": "Three days, one team",
+      "amt4": "&#8377;1,20,000 <small>haldi, biye and bou bhat</small>",
+      "list": {
+        "items": [
+          {
+            "li": "Balloon arch in two colours"
+          },
+          {
+            "li": "Number or age foil balloon"
+          },
+          {
+            "li": "Name board on the wall"
+          },
+          {
+            "li": "Cake table with cloth and fairy lights"
+          },
+          {
+            "li": "Set up two hours before, cleared the same night"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Yellow and orange drape canopy"
+          },
+          {
+            "li": "Marigold strings and a floral swing or low seat"
+          },
+          {
+            "li": "Brass lamps and a photo corner"
+          },
+          {
+            "li": "Floor seating with cushions for 30"
+          },
+          {
+            "li": "Small sound box with a mic"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Fresh flower stage, 20 ft wide, with backdrop"
+          },
+          {
+            "li": "Two-seater sofa and side pillars"
+          },
+          {
+            "li": "Flower entrance gate and staircase"
+          },
+          {
+            "li": "Hall lighting with chandeliers"
+          },
+          {
+            "li": "Name board and a photo corner"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "li": "Haldi setup on day one"
+          },
+          {
+            "li": "Chhadnatola or mandap and stage on the wedding day"
+          },
+          {
+            "li": "Reception stage and gate for bou bhat"
+          },
+          {
+            "li": "House-front lighting for all three days"
+          },
+          {
+            "li": "Pandal, 200 chairs and sound included"
+          }
+        ]
+      }
+    },
+    "hire": {
+      "kicker": "On hire",
+      "h2": "Tent house rates.",
+      "p": "Rates are per day. Delivery within 8 km of Tollygunge is included. Our men set it up and take it down.",
+      "th": "Item",
+      "th2": "Unit",
+      "th3": "Rate",
+      "hire-note": "A 1,000 sq ft pandal with 150 covered chairs and sound comes to about ₹29,000 for one day. Tell us the area and we will send the exact figure.",
+      "list": {
+        "items": [
+          {
+            "td": "Pandal, waterproof<small>Frame, cloth ceiling, side curtains</small>",
+            "td2": "per sq ft",
+            "amt": "₹22"
+          },
+          {
+            "td": "Pandal, open frame with decorative ceiling",
+            "td2": "per sq ft",
+            "amt": "₹35"
+          },
+          {
+            "td": "Plastic chair with white cover",
+            "td2": "per chair",
+            "amt": "₹18"
+          },
+          {
+            "td": "Banquet chair with cover and bow",
+            "td2": "per chair",
+            "amt": "₹45"
+          },
+          {
+            "td": "Round table with cloth, seats 8",
+            "td2": "per table",
+            "amt": "₹250"
+          },
+          {
+            "td": "Carpet, red or green",
+            "td2": "per sq ft",
+            "amt": "₹6"
+          },
+          {
+            "td": "Fairy lights<small>LED string, 10 metres</small>",
+            "td2": "per string",
+            "amt": "₹120"
+          },
+          {
+            "td": "Sound system<small>Two tops, two bass, two mics, one operator</small>",
+            "td2": "per day",
+            "amt": "₹4,500"
+          },
+          {
+            "td": "Generator, 25 kVA with diesel",
+            "td2": "per day",
+            "amt": "₹6,000"
+          },
+          {
+            "td": "Pedestal fan or cooler",
+            "td2": "per piece",
+            "amt": "₹150 / ₹600"
+          }
+        ]
+      },
+      "hire-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/outdoor-tent.jpg",
+              "alt": "Rows of chairs with white covers under a tent before a ceremony"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/wedding-lights.jpg",
+              "alt": "Printed fabric lampshades hanging under a pink pandal ceiling"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/event-decorator/images/marigold-wall.jpg",
+              "alt": "A yellow flower wall for a haldi photo corner"
+            }
+          }
+        ]
+      }
+    },
+    "how": {
+      "kicker": "How it works",
+      "h2": "From your first message to the last chair going back on the van.",
+      "tl": {
+        "items": [
+          {
+            "when": "30 days before",
+            "h3": "Visit and quotation",
+            "p": "We see the venue, measure the stage and gate, and send a written list with prices. You pay nothing at this stage."
+          },
+          {
+            "when": "7 days before",
+            "h3": "Booking and advance",
+            "p": "Pick the flowers and colours from our photo book. 50% advance confirms the date. We buy flowers to order, so this is the last day to change the design."
+          },
+          {
+            "when": "The day before",
+            "h3": "Pandal and lights go up",
+            "p": "Our team builds the pandal, lays carpet, hangs lights and tests the sound. You check everything the night before."
+          },
+          {
+            "when": "The day",
+            "h3": "Flowers at dawn, cleared by night",
+            "p": "Fresh flowers arrive from Mullick Ghat before 6 am and the stage is ready by 11. After the event we take everything away. The balance is paid that evening."
+          }
+        ]
+      }
+    },
+    "more": {
+      "kicker": "More from our book",
+      "h2": "Haldi, biye and bou bhat.",
+      "strip-hint": "Swipe or scroll sideways for more"
+    },
+    "section-9": {
+      "kicker": "What families say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "They came the night before and finished the whole pandal while we slept. In the morning the flowers were up before the purohit arrived. Nothing to chase.",
+            "span": "· daughter’s wedding, Garia"
+          },
+          {
+            "p": "We only had a 600 sq ft rooftop for the haldi. They made it look like a garden with marigolds and cloth. Everyone asked who did it.",
+            "span": "· haldi, Behala"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the office",
+      "h2": "On Deshapran Sasmal Road, near Tollygunge metro.",
+      "p": "Come and see the photo book, cloth samples and chair covers. The godown is behind the office, so you can see the actual pandal frames and sound boxes.",
+      "b": "Address",
+      "p2": "14B Deshapran Sasmal Road, Tollygunge<br>Kolkata 700033",
+      "button": "Get directions →",
+      "b2": "Office hours",
+      "b3": "Phone",
+      "p3": "WhatsApp photos of your venue and we reply with a price the same day.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "9:00 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:00 am – 6:00 pm"
+          },
+          {
+            "td": "Event days",
+            "td2": "Team on site from 5 am"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Dates in the wedding season go first.",
+      "p": "Send us the date today. If it is free, we hold it for three days without any advance while you decide."
+    },
+    "footer": {
+      "b": "Sanyal Decorators & Tent House",
+      "small": "Tollygunge · since 1998",
+      "p": "Wedding and event decoration, pandal, chairs, lights and sound on hire across South Kolkata.",
+      "h4": "Pages",
+      "h42": "Find us",
+      "li": "14B Deshapran Sasmal Road, Tollygunge, Kolkata 700033",
+      "li2": "Mon–Sat 9 am – 9 pm · Sun 10 am – 6 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Our work"
+          },
+          {
+            "button": "What we do"
+          },
+          {
+            "button": "Packages"
+          },
+          {
+            "button": "Tent house rates"
+          },
+          {
+            "button": "How it works"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Sanyal Decorators & Tent House sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=14B%20Deshapran%20Sasmal%20Road%2C%20Tollygunge%2C%20Kolkata%20700033",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Sanyal Decorators & Tent House | Wedding, Haldi and Birthday Decoration in Tollygunge",
+      "description": "Wedding stage, flower decoration, haldi and mehendi setups, balloon decor, pandal, chairs, lights and sound on hire in Tollygunge, Kolkata. Fixed packages with prices. Book on WhatsApp."
+    }
+  }
+}

@@ -280,29 +280,34 @@ table.tt{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;fo
 .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.btn,.act{transition:none}}
+/* phone: bigger tap targets */
+@media (max-width:760px){
+  .footer li{margin-top:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer .note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="activity-center">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="strip" role="note">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-    <a class="get" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Anondo Kids Activity Hub, home">
       <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="20" r="13" fill="#FF6F59"/><circle cx="31" cy="26" r="12" fill="#119DA4" opacity=".92"/><path d="M8 40c6-6 26-6 32 0" stroke="#FFC857" stroke-width="5" stroke-linecap="round" fill="none"/></svg>
-      <span>Anondo<small>Kids Activity Hub</small></span>
+      <span data-nx="header.span">Anondo<small>Kids Activity Hub</small></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#classes">Classes</a><a href="#timetable">Timetable</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#fees">Fees</a><a href="#visit">Visit</a>
     </nav>
     <a class="btn btn-teal hdr-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book a free class</a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   </header>
@@ -321,253 +326,253 @@ table.tt{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;fo
 
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div>
-      <span class="tag">Behala, Kolkata &middot; Ages 4 to 14</span>
-      <h1>Six classes.<br><span class="c1">One happy</span> <span class="c2">roof.</span></h1>
-      <p class="lede">Dance, drawing, karate, music, abacus and spoken English, all at one address on Diamond Harbour Road. One fee card, one pickup point, and no running across Behala between tuitions.</p>
+      <span data-nx="top.tag" class="tag">Behala, Kolkata &middot; Ages 4 to 14</span>
+      <h1 data-nx="top.h1">Six classes.<br><span class="c1">One happy</span> <span class="c2">roof.</span></h1>
+      <p data-nx="top.lede" class="lede">Dance, drawing, karate, music, abacus and spoken English, all at one address on Diamond Harbour Road. One fee card, one pickup point, and no running across Behala between tuitions.</p>
       <ul class="chips" aria-label="Activities">
-        <li class="chip dance">Dance</li><li class="chip draw">Drawing</li><li class="chip karate">Karate</li><li class="chip music">Music</li><li class="chip abacus">Abacus</li><li class="chip eng">Spoken English</li>
+        <li data-nx="top.chip" class="chip dance">Dance</li><li data-nx="top.chip2" class="chip draw">Drawing</li><li data-nx="top.chip3" class="chip karate">Karate</li><li data-nx="top.chip4" class="chip music">Music</li><li data-nx="top.chip5" class="chip abacus">Abacus</li><li data-nx="top.chip6" class="chip eng">Spoken English</li>
       </ul>
       <div class="hero-act">
         <a class="btn btn-coral" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book a free trial class</a>
-        <a class="btn btn-line" href="#timetable">See the timetable</a>
+        <a data-nx="top.button" class="btn btn-line" href="#timetable">See the timetable</a>
       </div>
-      <p class="hero-note">First class is free. Admissions open all year. Batches of 12 or fewer.</p>
+      <p data-nx="top.p" class="hero-note">First class is free. Admissions open all year. Batches of 12 or fewer.</p>
     </div>
     <div class="collage">
-      <div class="big"><img src="/demo/activity-center/images/hero.jpg" alt="A young girl in a red and gold Bharatanatyam costume holding a dance pose" width="1600" height="2399" fetchpriority="high"></div>
-      <div class="sm"><img src="/demo/activity-center/images/karate-boy.jpg" alt="A karateka in a white gi performing a kata at a Kolkata demonstration" width="800" height="532" loading="lazy"></div>
-      <div class="sm"><img src="/demo/activity-center/images/drawing-closeup.jpg" alt="A girl writing in an exercise book while other children play behind her" width="800" height="465" loading="lazy"></div>
-      <div class="badge">Since 2016<span>240+ kids</span></div>
+      <div class="big"><img data-nx="top.photo" src="/demo/activity-center/images/hero.jpg" alt="A young girl in a red and gold Bharatanatyam costume holding a dance pose" width="1600" height="2399" fetchpriority="high"></div>
+      <div class="sm"><img data-nx="top.photo2" src="/demo/activity-center/images/karate-boy.jpg" alt="A karateka in a white gi performing a kata at a Kolkata demonstration" width="800" height="532" loading="lazy"></div>
+      <div class="sm"><img data-nx="top.photo3" src="/demo/activity-center/images/drawing-closeup.jpg" alt="A girl writing in an exercise book while other children play behind her" width="800" height="465" loading="lazy"></div>
+      <div data-nx="top.badge" class="badge">Since 2016<span>240+ kids</span></div>
     </div>
   </div>
 </section>
 
-<section class="sec acts" id="classes">
+<section data-nx-section="classes" class="sec acts" id="classes">
   <div class="wrap">
     <div class="center rv">
-      <span class="tag">What we teach</span>
-      <h2 class="h2">Pick one class or mix two</h2>
-      <p class="lede">Every class has its own trained teacher, its own room and its own colour on the timetable. Children who take two classes get a discount on the second.</p>
+      <span data-nx="classes.tag" class="tag">What we teach</span>
+      <h2 data-nx="classes.h2" class="h2">Pick one class or mix two</h2>
+      <p data-nx="classes.lede" class="lede">Every class has its own trained teacher, its own room and its own colour on the timetable. Children who take two classes get a discount on the second.</p>
     </div>
     <ul class="act-grid">
       <li class="act dance rv">
-        <img src="/demo/activity-center/images/dance-class.jpg" alt="A young boy dancing in traditional dress beside an Odissi dancer at a festival" width="1600" height="2400" loading="lazy">
+        <img data-nx="classes.photo" src="/demo/activity-center/images/dance-class.jpg" alt="A young boy dancing in traditional dress beside an Odissi dancer at a festival" width="1600" height="2400" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M9 21l3-7 3 3 3 4M6 11l5-2 3 3 4-1"/></svg>Dance</h3>
-          <p>Rabindra Nritya, folk and Bollywood. Children perform twice a year at our annual show and at the para Pujo stage.</p>
-          <dl><dt>Ages</dt><dd>4 to 14</dd><dt>Days</dt><dd>Mon, Wed, Fri</dd><dt>Teacher</dt><dd>Mitali di, 18 years teaching</dd></dl>
-          <p class="fee">&#8377;700 <small>/ month, 12 classes</small></p>
+          <p data-nx="classes.p">Rabindra Nritya, folk and Bollywood. Children perform twice a year at our annual show and at the para Pujo stage.</p>
+          <dl><dt data-nx="classes.dt">Ages</dt><dd data-nx="classes.dd">4 to 14</dd><dt data-nx="classes.dt2">Days</dt><dd data-nx="classes.dd2">Mon, Wed, Fri</dd><dt data-nx="classes.dt3">Teacher</dt><dd data-nx="classes.dd3">Mitali di, 18 years teaching</dd></dl>
+          <p data-nx="classes.fee" class="fee">&#8377;700 <small>/ month, 12 classes</small></p>
         </div>
       </li>
       <li class="act draw rv">
-        <img src="/demo/activity-center/images/drawing-class.jpg" alt="A girl colouring a drawing with crayons at a table" width="1200" height="1887" loading="lazy">
+        <img data-nx="classes.photo2" src="/demo/activity-center/images/drawing-class.jpg" alt="A girl colouring a drawing with crayons at a table" width="1200" height="1887" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4Z"/><path d="M13 7l3 3"/></svg>Drawing</h3>
-          <p>Pencil, crayon, poster colour and watercolour. We prepare children for school art exams and district drawing competitions.</p>
-          <dl><dt>Ages</dt><dd>4 to 14</dd><dt>Days</dt><dd>Tue, Thu, Sat</dd><dt>Teacher</dt><dd>Sourav da, Govt. Art College</dd></dl>
-          <p class="fee">&#8377;600 <small>/ month, 12 classes</small></p>
+          <p data-nx="classes.p2">Pencil, crayon, poster colour and watercolour. We prepare children for school art exams and district drawing competitions.</p>
+          <dl><dt data-nx="classes.dt4">Ages</dt><dd data-nx="classes.dd4">4 to 14</dd><dt data-nx="classes.dt5">Days</dt><dd data-nx="classes.dd5">Tue, Thu, Sat</dd><dt data-nx="classes.dt6">Teacher</dt><dd data-nx="classes.dd6">Sourav da, Govt. Art College</dd></dl>
+          <p data-nx="classes.fee2" class="fee">&#8377;600 <small>/ month, 12 classes</small></p>
         </div>
       </li>
       <li class="act karate rv">
-        <img src="/demo/activity-center/images/karate-class.jpg" alt="Two young students sparring in protective gear at a taekwondo match" width="1200" height="800" loading="lazy">
+        <img data-nx="classes.photo3" src="/demo/activity-center/images/karate-class.jpg" alt="Two young students sparring in protective gear at a taekwondo match" width="1200" height="800" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>Karate</h3>
-          <p>Shotokan karate with belt gradings every six months. Good for confidence, focus and fitness. Uniform available at the centre.</p>
-          <dl><dt>Ages</dt><dd>6 to 14</dd><dt>Days</dt><dd>Mon, Wed, Fri</dd><dt>Teacher</dt><dd>Sensei Arup, 3rd Dan</dd></dl>
-          <p class="fee">&#8377;800 <small>/ month, 12 classes</small></p>
+          <p data-nx="classes.p3">Shotokan karate with belt gradings every six months. Good for confidence, focus and fitness. Uniform available at the centre.</p>
+          <dl><dt data-nx="classes.dt7">Ages</dt><dd data-nx="classes.dd7">6 to 14</dd><dt data-nx="classes.dt8">Days</dt><dd data-nx="classes.dd8">Mon, Wed, Fri</dd><dt data-nx="classes.dt9">Teacher</dt><dd data-nx="classes.dd9">Sensei Arup, 3rd Dan</dd></dl>
+          <p data-nx="classes.fee3" class="fee">&#8377;800 <small>/ month, 12 classes</small></p>
         </div>
       </li>
       <li class="act music rv">
-        <img src="/demo/activity-center/images/music-class.jpg" alt="A teacher in a blue saree playing harmonium while four children sing along" width="1200" height="801" loading="lazy">
+        <img data-nx="classes.photo4" src="/demo/activity-center/images/music-class.jpg" alt="A teacher in a blue saree playing harmonium while four children sing along" width="1200" height="801" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>Music</h3>
-          <p>Rabindrasangeet and light vocal, with harmonium and keyboard basics. Small groups so every child gets to sing alone too.</p>
-          <dl><dt>Ages</dt><dd>5 to 14</dd><dt>Days</dt><dd>Tue, Thu, Sat</dd><dt>Teacher</dt><dd>Rupsha di, Sangeet Visharad</dd></dl>
-          <p class="fee">&#8377;750 <small>/ month, 12 classes</small></p>
+          <p data-nx="classes.p4">Rabindrasangeet and light vocal, with harmonium and keyboard basics. Small groups so every child gets to sing alone too.</p>
+          <dl><dt data-nx="classes.dt10">Ages</dt><dd data-nx="classes.dd10">5 to 14</dd><dt data-nx="classes.dt11">Days</dt><dd data-nx="classes.dd11">Tue, Thu, Sat</dd><dt data-nx="classes.dt12">Teacher</dt><dd data-nx="classes.dd12">Rupsha di, Sangeet Visharad</dd></dl>
+          <p data-nx="classes.fee4" class="fee">&#8377;750 <small>/ month, 12 classes</small></p>
         </div>
       </li>
       <li class="act abacus rv">
-        <img src="/demo/activity-center/images/abacus-class.jpg" alt="A girl writing sums in a lined notebook with a pencil" width="1200" height="1800" loading="lazy">
+        <img data-nx="classes.photo5" src="/demo/activity-center/images/abacus-class.jpg" alt="A girl writing sums in a lined notebook with a pencil" width="1200" height="1800" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M3 15h18"/><circle cx="8" cy="9" r="1.6" fill="currentColor"/><circle cx="14" cy="15" r="1.6" fill="currentColor"/><circle cx="17" cy="9" r="1.6" fill="currentColor"/></svg>Abacus</h3>
-          <p>Eight levels of abacus and mental arithmetic. Children do sums faster than a calculator by Level 4 and sit for national competitions.</p>
-          <dl><dt>Ages</dt><dd>5 to 12</dd><dt>Days</dt><dd>Sat and Sun</dd><dt>Teacher</dt><dd>Payel di, certified trainer</dd></dl>
-          <p class="fee">&#8377;650 <small>/ month, 8 classes</small></p>
+          <p data-nx="classes.p5">Eight levels of abacus and mental arithmetic. Children do sums faster than a calculator by Level 4 and sit for national competitions.</p>
+          <dl><dt data-nx="classes.dt13">Ages</dt><dd data-nx="classes.dd13">5 to 12</dd><dt data-nx="classes.dt14">Days</dt><dd data-nx="classes.dd14">Sat and Sun</dd><dt data-nx="classes.dt15">Teacher</dt><dd data-nx="classes.dd15">Payel di, certified trainer</dd></dl>
+          <p data-nx="classes.fee5" class="fee">&#8377;650 <small>/ month, 8 classes</small></p>
         </div>
       </li>
       <li class="act eng rv">
-        <img src="/demo/activity-center/images/english-class.jpg" alt="Schoolgirls in white uniforms listening in a classroom" width="1200" height="800" loading="lazy">
+        <img data-nx="classes.photo6" src="/demo/activity-center/images/english-class.jpg" alt="Schoolgirls in white uniforms listening in a classroom" width="1200" height="800" loading="lazy">
         <div class="in">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h12a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-6l-5 3v-3H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="M8 10h8M8 13h5"/></svg>Spoken English</h3>
-          <p>Speaking practice, not grammar drills. Stories, show-and-tell, short speeches. Children from Bengali-medium schools pick up fast.</p>
-          <dl><dt>Ages</dt><dd>6 to 14</dd><dt>Days</dt><dd>Sat and Sun</dd><dt>Teacher</dt><dd>Ananya di, M.A. English</dd></dl>
-          <p class="fee">&#8377;700 <small>/ month, 8 classes</small></p>
+          <p data-nx="classes.p6">Speaking practice, not grammar drills. Stories, show-and-tell, short speeches. Children from Bengali-medium schools pick up fast.</p>
+          <dl><dt data-nx="classes.dt16">Ages</dt><dd data-nx="classes.dd16">6 to 14</dd><dt data-nx="classes.dt17">Days</dt><dd data-nx="classes.dd17">Sat and Sun</dd><dt data-nx="classes.dt18">Teacher</dt><dd data-nx="classes.dd18">Ananya di, M.A. English</dd></dl>
+          <p data-nx="classes.fee6" class="fee">&#8377;700 <small>/ month, 8 classes</small></p>
         </div>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="sec" id="timetable">
+<section data-nx-section="timetable" class="sec" id="timetable">
   <div class="wrap">
     <div class="rv">
-      <span class="tag">Weekly timetable</span>
-      <h2 class="h2">Find a slot after school</h2>
-      <p class="lede">All weekday classes run after 3.30 pm so children come straight from school. Weekend classes are in the morning. Slide the table sideways on a phone.</p>
+      <span data-nx="timetable.tag" class="tag">Weekly timetable</span>
+      <h2 data-nx="timetable.h2" class="h2">Find a slot after school</h2>
+      <p data-nx="timetable.lede" class="lede">All weekday classes run after 3.30 pm so children come straight from school. Weekend classes are in the morning. Slide the table sideways on a phone.</p>
     </div>
     <div class="tt-wrap rv">
       <table class="tt">
-        <caption class="sr">Weekly class timetable by day and time</caption>
-        <thead><tr><th scope="col">Time</th><th scope="col">Mon</th><th scope="col">Tue</th><th scope="col">Wed</th><th scope="col">Thu</th><th scope="col">Fri</th><th scope="col">Sat</th><th scope="col">Sun</th></tr></thead>
+        <caption data-nx="timetable.sr" class="sr">Weekly class timetable by day and time</caption>
+        <thead><tr><th data-nx="timetable.th" scope="col">Time</th><th data-nx="timetable.th2" scope="col">Mon</th><th data-nx="timetable.th3" scope="col">Tue</th><th data-nx="timetable.th4" scope="col">Wed</th><th data-nx="timetable.th5" scope="col">Thu</th><th data-nx="timetable.th6" scope="col">Fri</th><th data-nx="timetable.th7" scope="col">Sat</th><th data-nx="timetable.th8" scope="col">Sun</th></tr></thead>
         <tbody>
-          <tr><th scope="row">9.00 - 10.00</th><td></td><td></td><td></td><td></td><td></td><td><span class="slot abacus">Abacus<small>Levels 1-3</small></span></td><td><span class="slot abacus">Abacus<small>Levels 4-8</small></span></td></tr>
-          <tr><th scope="row">10.15 - 11.15</th><td></td><td></td><td></td><td></td><td></td><td><span class="slot eng">Spoken English<small>Ages 6-9</small></span></td><td><span class="slot eng">Spoken English<small>Ages 10-14</small></span></td></tr>
-          <tr><th scope="row">11.30 - 12.30</th><td></td><td></td><td></td><td></td><td></td><td><span class="slot draw">Drawing<small>Hobby batch</small></span></td><td><span class="slot music">Music<small>Harmonium</small></span></td></tr>
-          <tr><th scope="row">4.00 - 5.00</th><td><span class="slot dance">Dance<small>Ages 4-7</small></span></td><td><span class="slot draw">Drawing<small>Ages 4-7</small></span></td><td><span class="slot dance">Dance<small>Ages 4-7</small></span></td><td><span class="slot draw">Drawing<small>Ages 4-7</small></span></td><td><span class="slot dance">Dance<small>Ages 4-7</small></span></td><td></td><td></td></tr>
-          <tr><th scope="row">5.00 - 6.00</th><td><span class="slot karate">Karate<small>White to green</small></span></td><td><span class="slot music">Music<small>Ages 5-9</small></span></td><td><span class="slot karate">Karate<small>White to green</small></span></td><td><span class="slot music">Music<small>Ages 5-9</small></span></td><td><span class="slot karate">Karate<small>White to green</small></span></td><td></td><td></td></tr>
-          <tr><th scope="row">6.00 - 7.00</th><td><span class="slot dance">Dance<small>Ages 8-14</small></span></td><td><span class="slot draw">Drawing<small>Ages 8-14</small></span></td><td><span class="slot dance">Dance<small>Ages 8-14</small></span></td><td><span class="slot draw">Drawing<small>Ages 8-14</small></span></td><td><span class="slot dance">Dance<small>Ages 8-14</small></span></td><td></td><td></td></tr>
-          <tr><th scope="row">7.00 - 8.00</th><td><span class="slot karate">Karate<small>Blue belt and up</small></span></td><td><span class="slot music">Music<small>Ages 10-14</small></span></td><td><span class="slot karate">Karate<small>Blue belt and up</small></span></td><td><span class="slot music">Music<small>Ages 10-14</small></span></td><td><span class="slot karate">Karate<small>Blue belt and up</small></span></td><td></td><td></td></tr>
+          <tr><th data-nx="timetable.th9" scope="row">9.00 - 10.00</th><td></td><td></td><td></td><td></td><td></td><td><span data-nx="timetable.slot" class="slot abacus">Abacus<small>Levels 1-3</small></span></td><td><span data-nx="timetable.slot2" class="slot abacus">Abacus<small>Levels 4-8</small></span></td></tr>
+          <tr><th data-nx="timetable.th10" scope="row">10.15 - 11.15</th><td></td><td></td><td></td><td></td><td></td><td><span data-nx="timetable.slot3" class="slot eng">Spoken English<small>Ages 6-9</small></span></td><td><span data-nx="timetable.slot4" class="slot eng">Spoken English<small>Ages 10-14</small></span></td></tr>
+          <tr><th data-nx="timetable.th11" scope="row">11.30 - 12.30</th><td></td><td></td><td></td><td></td><td></td><td><span data-nx="timetable.slot5" class="slot draw">Drawing<small>Hobby batch</small></span></td><td><span data-nx="timetable.slot6" class="slot music">Music<small>Harmonium</small></span></td></tr>
+          <tr><th data-nx="timetable.th12" scope="row">4.00 - 5.00</th><td><span data-nx="timetable.slot7" class="slot dance">Dance<small>Ages 4-7</small></span></td><td><span data-nx="timetable.slot8" class="slot draw">Drawing<small>Ages 4-7</small></span></td><td><span data-nx="timetable.slot9" class="slot dance">Dance<small>Ages 4-7</small></span></td><td><span data-nx="timetable.slot10" class="slot draw">Drawing<small>Ages 4-7</small></span></td><td><span data-nx="timetable.slot11" class="slot dance">Dance<small>Ages 4-7</small></span></td><td></td><td></td></tr>
+          <tr><th data-nx="timetable.th13" scope="row">5.00 - 6.00</th><td><span data-nx="timetable.slot12" class="slot karate">Karate<small>White to green</small></span></td><td><span data-nx="timetable.slot13" class="slot music">Music<small>Ages 5-9</small></span></td><td><span data-nx="timetable.slot14" class="slot karate">Karate<small>White to green</small></span></td><td><span data-nx="timetable.slot15" class="slot music">Music<small>Ages 5-9</small></span></td><td><span data-nx="timetable.slot16" class="slot karate">Karate<small>White to green</small></span></td><td></td><td></td></tr>
+          <tr><th data-nx="timetable.th14" scope="row">6.00 - 7.00</th><td><span data-nx="timetable.slot17" class="slot dance">Dance<small>Ages 8-14</small></span></td><td><span data-nx="timetable.slot18" class="slot draw">Drawing<small>Ages 8-14</small></span></td><td><span data-nx="timetable.slot19" class="slot dance">Dance<small>Ages 8-14</small></span></td><td><span data-nx="timetable.slot20" class="slot draw">Drawing<small>Ages 8-14</small></span></td><td><span data-nx="timetable.slot21" class="slot dance">Dance<small>Ages 8-14</small></span></td><td></td><td></td></tr>
+          <tr><th data-nx="timetable.th15" scope="row">7.00 - 8.00</th><td><span data-nx="timetable.slot22" class="slot karate">Karate<small>Blue belt and up</small></span></td><td><span data-nx="timetable.slot23" class="slot music">Music<small>Ages 10-14</small></span></td><td><span data-nx="timetable.slot24" class="slot karate">Karate<small>Blue belt and up</small></span></td><td><span data-nx="timetable.slot25" class="slot music">Music<small>Ages 10-14</small></span></td><td><span data-nx="timetable.slot26" class="slot karate">Karate<small>Blue belt and up</small></span></td><td></td><td></td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="key" aria-label="Colour key">
-      <li><i style="background:var(--coral)"></i>Dance</li><li><i style="background:var(--sun)"></i>Drawing</li><li><i style="background:var(--teal)"></i>Karate</li><li><i style="background:var(--grape)"></i>Music</li><li><i style="background:var(--leaf)"></i>Abacus</li><li><i style="background:var(--sky)"></i>Spoken English</li>
+    <ul data-nx-list="timetable.key" class="key" aria-label="Colour key">
+      <li data-nx-f="li" data-nx-item><i style="background:var(--coral)"></i>Dance</li><li data-nx-f="li" data-nx-item><i style="background:var(--sun)"></i>Drawing</li><li data-nx-f="li" data-nx-item><i style="background:var(--teal)"></i>Karate</li><li data-nx-f="li" data-nx-item><i style="background:var(--grape)"></i>Music</li><li data-nx-f="li" data-nx-item><i style="background:var(--leaf)"></i>Abacus</li><li data-nx-f="li" data-nx-item><i style="background:var(--sky)"></i>Spoken English</li>
     </ul>
-    <p class="tt-hint">Centre is closed on Wednesday mornings and on the main Pujo days. Timetable changes are sent on the parents' WhatsApp group a week ahead.</p>
+    <p data-nx="timetable.p" class="tt-hint">Centre is closed on Wednesday mornings and on the main Pujo days. Timetable changes are sent on the parents' WhatsApp group a week ahead.</p>
   </div>
 </section>
 
-<section class="sec about" id="about">
+<section data-nx-section="about" class="sec about" id="about">
   <div class="wrap">
     <figure class="rv">
-      <img src="/demo/activity-center/images/teacher-kids.jpg" alt="A teacher at a smart board in front of a class of students in maroon uniforms" width="1200" height="800" loading="lazy">
+      <img data-nx="about.photo" src="/demo/activity-center/images/teacher-kids.jpg" alt="A teacher at a smart board in front of a class of students in maroon uniforms" width="1200" height="800" loading="lazy">
     </figure>
     <div class="rv">
-      <span class="tag">About us</span>
-      <h2 class="h2">Started in a two-room flat in 2016</h2>
-      <p class="lede">Mitali Sen taught dance from her front room in Behala for nine years before taking the ground floor at 14/1 Diamond Harbour Road. Parents kept asking if someone could also teach drawing, then karate, then English. So we added one class at a time, hiring teachers we would send our own children to.</p>
-      <p class="lede">Today there are three air-conditioned rooms, nine teachers and a small waiting area with a water filter where parents sit and chat. We know every child by name.</p>
-      <ul class="facts">
-        <li class="fact"><b>9</b><span>trained teachers</span></li>
-        <li class="fact"><b>240+</b><span>children this year</span></li>
-        <li class="fact"><b>12</b><span>maximum per batch</span></li>
-        <li class="fact"><b>2</b><span>stage shows every year</span></li>
+      <span data-nx="about.tag" class="tag">About us</span>
+      <h2 data-nx="about.h2" class="h2">Started in a two-room flat in 2016</h2>
+      <p data-nx="about.lede" class="lede">Mitali Sen taught dance from her front room in Behala for nine years before taking the ground floor at 14/1 Diamond Harbour Road. Parents kept asking if someone could also teach drawing, then karate, then English. So we added one class at a time, hiring teachers we would send our own children to.</p>
+      <p data-nx="about.lede2" class="lede">Today there are three air-conditioned rooms, nine teachers and a small waiting area with a water filter where parents sit and chat. We know every child by name.</p>
+      <ul data-nx-list="about.facts" class="facts">
+        <li data-nx-item class="fact"><b data-nx-f="b">9</b><span data-nx-f="span">trained teachers</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">240+</b><span data-nx-f="span">children this year</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">12</b><span data-nx-f="span">maximum per batch</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">2</b><span data-nx-f="span">stage shows every year</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="sec" id="join">
+<section data-nx-section="join" class="sec" id="join">
   <div class="wrap">
     <div class="center rv">
-      <span class="tag">How to join</span>
-      <h2 class="h2">Four steps, no forms to print</h2>
+      <span data-nx="join.tag" class="tag">How to join</span>
+      <h2 data-nx="join.h2" class="h2">Four steps, no forms to print</h2>
     </div>
-    <ol class="steps">
-      <li class="step rv"><h3>Message us</h3><p>Send the child's age and the class you have in mind on WhatsApp. We reply within the day with the free slots.</p></li>
-      <li class="step rv"><h3>Come for a free class</h3><p>The child sits in one full class. Parents can watch from the waiting area. No payment that day.</p></li>
-      <li class="step rv"><h3>Pay for the month</h3><p>Fees are monthly, paid by UPI or cash at the desk by the 10th. There is a one-time admission fee of &#8377;300.</p></li>
-      <li class="step rv"><h3>Join the parents' group</h3><p>Timetable changes, holidays, show dates and photos from class come on the WhatsApp group.</p></li>
+    <ol data-nx-list="join.steps" class="steps">
+      <li data-nx-item class="step rv"><h3 data-nx-f="h3">Message us</h3><p data-nx-f="p">Send the child's age and the class you have in mind on WhatsApp. We reply within the day with the free slots.</p></li>
+      <li data-nx-item class="step rv"><h3 data-nx-f="h3">Come for a free class</h3><p data-nx-f="p">The child sits in one full class. Parents can watch from the waiting area. No payment that day.</p></li>
+      <li data-nx-item class="step rv"><h3 data-nx-f="h3">Pay for the month</h3><p data-nx-f="p">Fees are monthly, paid by UPI or cash at the desk by the 10th. There is a one-time admission fee of &#8377;300.</p></li>
+      <li data-nx-item class="step rv"><h3 data-nx-f="h3">Join the parents' group</h3><p data-nx-f="p">Timetable changes, holidays, show dates and photos from class come on the WhatsApp group.</p></li>
     </ol>
     <div class="trial rv">
-      <div><h3>The first class is always free</h3><p>Try dance on Monday and karate on Wednesday if you like. Decide after.</p></div>
+      <div><h3 data-nx="join.h3">The first class is always free</h3><p data-nx="join.p">Try dance on Monday and karate on Wednesday if you like. Decide after.</p></div>
       <a class="btn btn-coral" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Book the free class</a>
     </div>
   </div>
 </section>
 
-<section class="band">
-  <img src="/demo/activity-center/images/dance-class.jpg" alt="" width="1600" height="2400" loading="lazy">
+<section data-nx-section="section-7" class="band">
+  <img data-nx="section-7.photo" src="/demo/activity-center/images/dance-class.jpg" alt="" width="1600" height="2400" loading="lazy">
   <div class="wrap">
-    <span class="tag">Annual show</span>
-    <h2>Every child goes on stage once a year</h2>
-    <p>Our annual show is in December at the Behala Blind School auditorium. Dance, music and karate students perform. Drawing students' work is hung in the lobby. Parents come, grandparents come, nobody sits at the back.</p>
+    <span data-nx="section-7.tag" class="tag">Annual show</span>
+    <h2 data-nx="section-7.h2">Every child goes on stage once a year</h2>
+    <p data-nx="section-7.p">Our annual show is in December at the Behala Blind School auditorium. Dance, music and karate students perform. Drawing students' work is hung in the lobby. Parents come, grandparents come, nobody sits at the back.</p>
   </div>
 </section>
 
-<section class="sec gal" id="gallery">
+<section data-nx-section="gallery" class="sec gal" id="gallery">
   <div class="wrap">
     <div class="center rv">
-      <span class="tag">Gallery</span>
-      <h2 class="h2">A normal week at Anondo</h2>
+      <span data-nx="gallery.tag" class="tag">Gallery</span>
+      <h2 data-nx="gallery.h2" class="h2">A normal week at Anondo</h2>
     </div>
     <div class="masonry">
-      <figure class="tall rv"><img src="/demo/activity-center/images/dance-indian.jpg" alt="A young girl in a pink and orange dance costume holding a classical pose" width="800" height="1200" loading="lazy"><figcaption>Annual show rehearsal</figcaption></figure>
-      <figure class="rv"><img src="/demo/activity-center/images/gallery-painting.jpg" alt="A boy holding out a fistful of colourful crayons" width="800" height="533" loading="lazy"><figcaption>Crayon day, juniors</figcaption></figure>
-      <figure class="rv"><img src="/demo/activity-center/images/gallery-reading.jpg" alt="Two girls working at a desk with crayons and worksheets" width="800" height="533" loading="lazy"><figcaption>Worksheet time, Spoken English</figcaption></figure>
-      <figure class="tall rv"><img src="/demo/activity-center/images/music-guitar.jpg" alt="A young girl in traditional dress smiling with a tanpura" width="800" height="1200" loading="lazy"><figcaption>Music, junior batch</figcaption></figure>
-      <figure class="rv"><img src="/demo/activity-center/images/karate-boy.jpg" alt="A karate demonstration on the mat" width="800" height="532" loading="lazy"><figcaption>Belt grading practice</figcaption></figure>
-      <figure class="rv"><img src="/demo/activity-center/images/gallery-cultural.jpg" alt="Children in traditional dress seated at a school cultural event" width="800" height="1200" loading="lazy"><figcaption>Saraswati Pujo at the centre</figcaption></figure>
+      <figure class="tall rv"><img data-nx="gallery.photo" src="/demo/activity-center/images/dance-indian.jpg" alt="A young girl in a pink and orange dance costume holding a classical pose" width="800" height="1200" loading="lazy"><figcaption data-nx="gallery.figcaption">Annual show rehearsal</figcaption></figure>
+      <figure class="rv"><img data-nx="gallery.photo2" src="/demo/activity-center/images/gallery-painting.jpg" alt="A boy holding out a fistful of colourful crayons" width="800" height="533" loading="lazy"><figcaption data-nx="gallery.figcaption2">Crayon day, juniors</figcaption></figure>
+      <figure class="rv"><img data-nx="gallery.photo3" src="/demo/activity-center/images/gallery-reading.jpg" alt="Two girls working at a desk with crayons and worksheets" width="800" height="533" loading="lazy"><figcaption data-nx="gallery.figcaption3">Worksheet time, Spoken English</figcaption></figure>
+      <figure class="tall rv"><img data-nx="gallery.photo4" src="/demo/activity-center/images/music-guitar.jpg" alt="A young girl in traditional dress smiling with a tanpura" width="800" height="1200" loading="lazy"><figcaption data-nx="gallery.figcaption4">Music, junior batch</figcaption></figure>
+      <figure class="rv"><img data-nx="gallery.photo5" src="/demo/activity-center/images/karate-boy.jpg" alt="A karate demonstration on the mat" width="800" height="532" loading="lazy"><figcaption data-nx="gallery.figcaption5">Belt grading practice</figcaption></figure>
+      <figure class="rv"><img data-nx="gallery.photo6" src="/demo/activity-center/images/gallery-cultural.jpg" alt="Children in traditional dress seated at a school cultural event" width="800" height="1200" loading="lazy"><figcaption data-nx="gallery.figcaption6">Saraswati Pujo at the centre</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="sec" id="parents">
+<section data-nx-section="parents" class="sec" id="parents">
   <div class="wrap">
     <div class="center rv">
-      <span class="tag">Parents say</span>
-      <h2 class="h2">Why families stay for years</h2>
+      <span data-nx="parents.tag" class="tag">Parents say</span>
+      <h2 data-nx="parents.h2" class="h2">Why families stay for years</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="quote rv"><p>My daughter does dance and drawing on alternate days, so I drop her at 4 and pick her up at 6 from the same gate. For a working mother that is the whole point.</p><footer>Sharmistha<span>Mother of Riya, 8, Sahapur</span></footer></blockquote>
-      <blockquote class="quote rv"><p>Our son would not speak a word of English in front of people. After eight months of the Sunday batch he gave a two-minute speech at his school. We were not expecting that.</p><footer>Debashis<span>Father of Aarav, 11, Parnasree</span></footer></blockquote>
+    <div data-nx-list="parents.quotes" class="quotes">
+      <blockquote data-nx-item class="quote rv"><p data-nx-f="p">My daughter does dance and drawing on alternate days, so I drop her at 4 and pick her up at 6 from the same gate. For a working mother that is the whole point.</p><footer>Sharmistha<span data-nx-f="span">Mother of Riya, 8, Sahapur</span></footer></blockquote>
+      <blockquote data-nx-item class="quote rv"><p data-nx-f="p">Our son would not speak a word of English in front of people. After eight months of the Sunday batch he gave a two-minute speech at his school. We were not expecting that.</p><footer>Debashis<span data-nx-f="span">Father of Aarav, 11, Parnasree</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="sec fees" id="fees">
+<section data-nx-section="fees" class="sec fees" id="fees">
   <div class="wrap">
     <div class="rv">
-      <span class="tag">Fees</span>
-      <h2 class="h2">Plain fee card</h2>
-      <p class="lede">Monthly fees, no yearly lock-in. Leave with a week's notice.</p>
+      <span data-nx="fees.tag" class="tag">Fees</span>
+      <h2 data-nx="fees.h2" class="h2">Plain fee card</h2>
+      <p data-nx="fees.lede" class="lede">Monthly fees, no yearly lock-in. Leave with a week's notice.</p>
       <div class="feebox" style="margin-top:1.5rem">
         <table>
-          <caption class="sr">Monthly fees by class</caption>
-          <thead><tr><th scope="col">Class</th><th scope="col">Classes a month</th><th scope="col">Fee</th></tr></thead>
-          <tbody>
-            <tr><td>Dance</td><td>12</td><td>&#8377;700</td></tr>
-            <tr><td>Drawing</td><td>12</td><td>&#8377;600</td></tr>
-            <tr><td>Karate</td><td>12</td><td>&#8377;800</td></tr>
-            <tr><td>Music</td><td>12</td><td>&#8377;750</td></tr>
-            <tr><td>Abacus</td><td>8</td><td>&#8377;650</td></tr>
-            <tr><td>Spoken English</td><td>8</td><td>&#8377;700</td></tr>
-            <tr><td>Second class for the same child</td><td>-</td><td>&#8377;100 off</td></tr>
-            <tr><td>Admission (one time)</td><td>-</td><td>&#8377;300</td></tr>
+          <caption data-nx="fees.sr" class="sr">Monthly fees by class</caption>
+          <thead><tr><th data-nx="fees.th" scope="col">Class</th><th data-nx="fees.th2" scope="col">Classes a month</th><th data-nx="fees.th3" scope="col">Fee</th></tr></thead>
+          <tbody data-nx-list="fees.list">
+            <tr data-nx-item><td data-nx-f="td">Dance</td><td data-nx-f="td2">12</td><td data-nx-f="td3">&#8377;700</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Drawing</td><td data-nx-f="td2">12</td><td data-nx-f="td3">&#8377;600</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Karate</td><td data-nx-f="td2">12</td><td data-nx-f="td3">&#8377;800</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Music</td><td data-nx-f="td2">12</td><td data-nx-f="td3">&#8377;750</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Abacus</td><td data-nx-f="td2">8</td><td data-nx-f="td3">&#8377;650</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Spoken English</td><td data-nx-f="td2">8</td><td data-nx-f="td3">&#8377;700</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Second class for the same child</td><td data-nx-f="td2">-</td><td data-nx-f="td3">&#8377;100 off</td></tr>
+            <tr data-nx-item><td data-nx-f="td">Admission (one time)</td><td data-nx-f="td2">-</td><td data-nx-f="td3">&#8377;300</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="feenote">Karate uniform &#8377;650 and drawing kit &#8377;350 are bought once, at cost. Belt grading and competition entry fees are paid to the organising body, not to us.</p>
+      <p data-nx="fees.feenote" class="feenote">Karate uniform &#8377;650 and drawing kit &#8377;350 are bought once, at cost. Belt grading and competition entry fees are paid to the organising body, not to us.</p>
     </div>
     <div class="faq rv">
-      <span class="tag">Questions parents ask</span>
-      <h2 class="h2" style="font-size:1.6rem">Before you message</h2>
-      <details><summary>Can my child start in the middle of the month?</summary><p>Yes. We charge only for the classes left in that month and start full fees from the next month.</p></details>
-      <details><summary>What if we miss a class?</summary><p>Tell us a day before and the child can attend the same class in another batch that week. We do not refund missed classes.</p></details>
-      <details><summary>Can parents sit in the class?</summary><p>For the free trial, yes. After that parents wait in the waiting area so the children settle. You can watch through the glass panel any time.</p></details>
-      <details><summary>Is the centre safe?</summary><p>A staff member sits at the gate from 3.30 to 8.30 pm. Children are handed over only to the person named on the admission form, and we have CCTV in the corridor and waiting area.</p></details>
-      <details><summary>Do you give certificates?</summary><p>Karate belts come from the state association. Abacus levels come with a certificate from our affiliating body. Dance, music and drawing students get our own annual certificate and perform on stage.</p></details>
+      <span data-nx="fees.tag2" class="tag">Questions parents ask</span>
+      <h2 data-nx="fees.h22" class="h2" style="font-size:1.6rem">Before you message</h2>
+      <details><summary data-nx="fees.summary">Can my child start in the middle of the month?</summary><p data-nx="fees.p">Yes. We charge only for the classes left in that month and start full fees from the next month.</p></details>
+      <details><summary data-nx="fees.summary2">What if we miss a class?</summary><p data-nx="fees.p2">Tell us a day before and the child can attend the same class in another batch that week. We do not refund missed classes.</p></details>
+      <details><summary data-nx="fees.summary3">Can parents sit in the class?</summary><p data-nx="fees.p3">For the free trial, yes. After that parents wait in the waiting area so the children settle. You can watch through the glass panel any time.</p></details>
+      <details><summary data-nx="fees.summary4">Is the centre safe?</summary><p data-nx="fees.p4">A staff member sits at the gate from 3.30 to 8.30 pm. Children are handed over only to the person named on the admission form, and we have CCTV in the corridor and waiting area.</p></details>
+      <details><summary data-nx="fees.summary5">Do you give certificates?</summary><p data-nx="fees.p5">Karate belts come from the state association. Abacus levels come with a certificate from our affiliating body. Dance, music and drawing students get our own annual certificate and perform on stage.</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec visit" id="visit">
+<section data-nx-section="visit" class="sec visit" id="visit">
   <div class="wrap">
     <div class="rv">
-      <span class="tag">Visit us</span>
-      <h2 class="h2">Ground floor, next to the Behala tram depot stop</h2>
+      <span data-nx="visit.tag" class="tag">Visit us</span>
+      <h2 data-nx="visit.h2" class="h2">Ground floor, next to the Behala tram depot stop</h2>
       <div class="info" style="margin-top:1.5rem">
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Address</h3>
-          <p>Anondo Kids Activity Hub<br>14/1 Diamond Harbour Road, Behala<br>Kolkata 700034</p>
-          <p style="margin-top:.7rem"><a class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=14%2F1%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034">Get directions</a></p>
+          <p data-nx="visit.p">Anondo Kids Activity Hub<br>14/1 Diamond Harbour Road, Behala<br>Kolkata 700034</p>
+          <p style="margin-top:.7rem"><a data-nx="visit.button" class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=14%2F1%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034">Get directions</a></p>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Office hours</h3>
-          <div class="hours"><b>Mon to Fri</b><span>3.30 pm - 8.30 pm</span><b>Saturday</b><span>8.30 am - 1.00 pm, 4 - 7 pm</span><b>Sunday</b><span>8.30 am - 1.00 pm</span></div>
+          <div class="hours"><b data-nx="visit.b">Mon to Fri</b><span data-nx="visit.span">3.30 pm - 8.30 pm</span><b data-nx="visit.b2">Saturday</b><span data-nx="visit.span2">8.30 am - 1.00 pm, 4 - 7 pm</span><b data-nx="visit.b3">Sunday</b><span data-nx="visit.span3">8.30 am - 1.00 pm</span></div>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call or message</h3>
@@ -581,10 +586,10 @@ table.tt{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;fo
   </div>
 </section>
 
-<section class="sec final" id="contact">
+<section data-nx-section="contact" class="sec final" id="contact">
   <div class="wrap rv">
-    <h2 class="h2">Bring your child for one free class</h2>
-    <p class="lede center">Tell us the age and what they enjoy. We will suggest a batch and keep a seat for the trial.</p>
+    <h2 data-nx="contact.h2" class="h2">Bring your child for one free class</h2>
+    <p data-nx="contact.lede" class="lede center">Tell us the age and what they enjoy. We will suggest a batch and keep a seat for the trial.</p>
     <div class="hero-act" style="justify-content:center">
       <a class="btn btn-sun" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp us</a>
       <a class="btn btn-line" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
@@ -593,19 +598,19 @@ table.tt{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;fo
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="20" r="13" fill="#FF6F59"/><circle cx="31" cy="26" r="12" fill="#119DA4" opacity=".92"/><path d="M8 40c6-6 26-6 32 0" stroke="#FFC857" stroke-width="5" stroke-linecap="round" fill="none"/></svg><span>Anondo<small>Kids Activity Hub</small></span></a>
-      <p style="margin-top:1rem;max-width:36ch">Dance, drawing, karate, music, abacus and spoken English for children aged 4 to 14. Behala, Kolkata. Since 2016.</p>
+      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="20" r="13" fill="#FF6F59"/><circle cx="31" cy="26" r="12" fill="#119DA4" opacity=".92"/><path d="M8 40c6-6 26-6 32 0" stroke="#FFC857" stroke-width="5" stroke-linecap="round" fill="none"/></svg><span data-nx="footer.span">Anondo<small>Kids Activity Hub</small></span></a>
+      <p data-nx="footer.p" style="margin-top:1rem;max-width:36ch">Dance, drawing, karate, music, abacus and spoken English for children aged 4 to 14. Behala, Kolkata. Since 2016.</p>
     </div>
     <div>
-      <h4>Classes</h4>
-      <ul><li><a href="#classes">Dance</a></li><li><a href="#classes">Drawing</a></li><li><a href="#classes">Karate</a></li><li><a href="#classes">Music</a></li><li><a href="#classes">Abacus</a></li><li><a href="#classes">Spoken English</a></li></ul>
+      <h4 data-nx="footer.h4">Classes</h4>
+      <ul data-nx-list="footer.list"><li data-nx-item><a data-nx-f="button" href="#classes">Dance</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Drawing</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Karate</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Music</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Abacus</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Spoken English</a></li></ul>
     </div>
     <div>
-      <h4>Contact</h4>
-      <ul><li>14/1 Diamond Harbour Road, Behala, Kolkata 700034</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a href="https://www.google.com/maps?q=14%2F1%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034">Get directions</a></li></ul>
+      <h4 data-nx="footer.h42">Contact</h4>
+      <ul><li data-nx="footer.li">14/1 Diamond Harbour Road, Behala, Kolkata 700034</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Anondo%20Kids%20Activity%20Hub%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a data-nx="footer.button" href="https://www.google.com/maps?q=14%2F1%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034">Get directions</a></li></ul>
     </div>
     <p class="note">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. &copy; 2026 Anondo Kids Activity Hub.</p>
   </div>
@@ -645,6 +650,8 @@ table.tt{border-collapse:separate;border-spacing:0;width:100%;min-width:760px;fo
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 
 </html>

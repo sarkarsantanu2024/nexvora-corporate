@@ -281,25 +281,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: bigger tap targets and readable small text */
+@media (max-width:760px){
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer .brand small{font-size:.75rem}
+  #visit a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{padding:.8rem 0}
+}
 </style>
+<meta name="nx-site" content="advocate">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Law%20Chamber%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bhattacharya Law Chamber, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="4" fill="#4A0E14"/><path d="M22 8v26M12 14h20M12 14l-5 10h10l-5-10Zm20 0-5 10h10l-5-10Z" fill="none" stroke="#B08D4A" stroke-width="2" stroke-linejoin="round"/><path d="M15 34h14" stroke="#F4ECDD" stroke-width="2.5" stroke-linecap="round"/></svg>
-      <span><b>Bhattacharya Law Chamber</b><small>Advocate &middot; Gariahat</small></span>
+      <span><b data-nx="header.b">Bhattacharya Law Chamber</b><small data-nx="header.small">Advocate &middot; Gariahat</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -322,196 +328,196 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__text">
-      <p class="hero__eyebrow">Alipore Court &middot; Calcutta High Court</p>
-      <h1>Legal help explained in <em>plain words</em>, at a fee you know in advance.</h1>
-      <p>One advocate, one chamber in Gariahat, eighteen years at the bar. Property, family, cheque bounce, consumer, civil and bail matters, plus agreements, wills, affidavits and notary. Sit down, tell us the problem, and leave knowing your options and the cost.</p>
+      <p data-nx="top.hero-eyebrow" class="hero__eyebrow">Alipore Court &middot; Calcutta High Court</p>
+      <h1 data-nx="top.h1">Legal help explained in <em>plain words</em>, at a fee you know in advance.</h1>
+      <p data-nx="top.p">One advocate, one chamber in Gariahat, eighteen years at the bar. Property, family, cheque bounce, consumer, civil and bail matters, plus agreements, wills, affidavits and notary. Sit down, tell us the problem, and leave knowing your options and the cost.</p>
       <div class="hero__cta">
         <a class="btn btn--ox" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Law%20Chamber%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Book a consultation
         </a>
-        <a class="btn btn--ghost" href="#fees">See the fee list</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#fees">See the fee list</a>
       </div>
     </div>
     <div class="hero__band">
-      <img src="/demo/advocate/images/hero.jpg" width="1200" height="801" alt="The advocate at his chamber desk, writing notes beside a framed enrolment certificate" fetchpriority="high">
-      <ul class="hero__facts">
-        <li><b>18 years</b><span>Enrolled with the Bar Council of West Bengal since 2008</span></li>
-        <li><b>&#8377;500</b><span>First consultation, 30 minutes, no hidden extras</span></li>
-        <li><b>5 pm &ndash; 9 pm</b><span>Chamber hours after court, Monday to Saturday</span></li>
+      <img data-nx="top.photo" src="/demo/advocate/images/hero.jpg" width="1200" height="801" alt="The advocate at his chamber desk, writing notes beside a framed enrolment certificate" fetchpriority="high">
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">18 years</b><span data-nx-f="span">Enrolled with the Bar Council of West Bengal since 2008</span></li>
+        <li data-nx-item><b data-nx-f="b">&#8377;500</b><span data-nx-f="span">First consultation, 30 minutes, no hidden extras</span></li>
+        <li data-nx-item><b data-nx-f="b">5 pm &ndash; 9 pm</b><span data-nx-f="span">Chamber hours after court, Monday to Saturday</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="areas">
+<section data-nx-section="areas" class="section" id="areas">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Practice areas</span>
-      <h2 class="h2">The matters this chamber handles.</h2>
+      <span data-nx="areas.kicker" class="kicker">Practice areas</span>
+      <h2 data-nx="areas.h2" class="h2">The matters this chamber handles.</h2>
       <div class="rule"></div>
     </div>
     <div class="areas">
-      <ol class="areas__list">
-        <li class="reveal"><span class="n">01</span><div><h3>Property and registration</h3><p>Title search, sale deed, gift deed, partition, mutation help, and sitting with you at the registry office on the day of registration.</p></div></li>
-        <li class="reveal"><span class="n">02</span><div><h3>Family and divorce</h3><p>Mutual consent divorce, contested divorce, maintenance, child custody and domestic violence matters. Handled quietly and with patience.</p></div></li>
-        <li class="reveal"><span class="n">03</span><div><h3>Consumer complaints</h3><p>Faulty goods, builder delays, insurance claims refused, bank charges. Filed before the District Consumer Commission.</p></div></li>
-        <li class="reveal"><span class="n">04</span><div><h3>Cheque bounce (Section 138)</h3><p>Legal notice within the time limit, then the complaint. We also defend people who have received such a notice.</p></div></li>
-        <li class="reveal"><span class="n">05</span><div><h3>Civil suits</h3><p>Money recovery, injunction, eviction of tenants, declaration of title, and execution of decrees already passed.</p></div></li>
-        <li class="reveal"><span class="n">06</span><div><h3>Criminal bail</h3><p>Regular bail and anticipatory bail applications at Alipore Court and the High Court. Family is kept informed at every step.</p></div></li>
-        <li class="reveal"><span class="n">07</span><div><h3>Agreements and wills</h3><p>Rent agreements, partnership deeds, sale agreements, power of attorney, and wills written so that your family does not fight later.</p></div></li>
-        <li class="reveal"><span class="n">08</span><div><h3>Affidavit and notary</h3><p>Name change, date of birth, address proof, lost document affidavits, and notarised copies. Usually done the same day.</p></div></li>
+      <ol data-nx-list="areas.areas-list" class="areas__list">
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">01</span><div><h3 data-nx-f="h3">Property and registration</h3><p data-nx-f="p">Title search, sale deed, gift deed, partition, mutation help, and sitting with you at the registry office on the day of registration.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">02</span><div><h3 data-nx-f="h3">Family and divorce</h3><p data-nx-f="p">Mutual consent divorce, contested divorce, maintenance, child custody and domestic violence matters. Handled quietly and with patience.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">03</span><div><h3 data-nx-f="h3">Consumer complaints</h3><p data-nx-f="p">Faulty goods, builder delays, insurance claims refused, bank charges. Filed before the District Consumer Commission.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">04</span><div><h3 data-nx-f="h3">Cheque bounce (Section 138)</h3><p data-nx-f="p">Legal notice within the time limit, then the complaint. We also defend people who have received such a notice.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">05</span><div><h3 data-nx-f="h3">Civil suits</h3><p data-nx-f="p">Money recovery, injunction, eviction of tenants, declaration of title, and execution of decrees already passed.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">06</span><div><h3 data-nx-f="h3">Criminal bail</h3><p data-nx-f="p">Regular bail and anticipatory bail applications at Alipore Court and the High Court. Family is kept informed at every step.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">07</span><div><h3 data-nx-f="h3">Agreements and wills</h3><p data-nx-f="p">Rent agreements, partnership deeds, sale agreements, power of attorney, and wills written so that your family does not fight later.</p></div></li>
+        <li data-nx-item class="reveal"><span data-nx-f="n" class="n">08</span><div><h3 data-nx-f="h3">Affidavit and notary</h3><p data-nx-f="p">Name change, date of birth, address proof, lost document affidavits, and notarised copies. Usually done the same day.</p></div></li>
       </ol>
       <aside class="side reveal" aria-label="Consultation details">
-        <h3>First consultation</h3>
-        <p class="fee">&#8377;500 <small>for 30 minutes</small></p>
-        <p style="font-size:.95rem;color:var(--muted)">Paid at the chamber. If you engage us for the matter, this amount is adjusted against the fee.</p>
-        <h4>What to bring</h4>
-        <ul>
-          <li>Every paper you have on the matter, even the ones you think do not matter</li>
-          <li>Any notice, summons or court order you have received</li>
-          <li>Your Aadhaar or voter card</li>
-          <li>A list of dates: when it started, who said what, when</li>
+        <h3 data-nx="areas.h3">First consultation</h3>
+        <p data-nx="areas.fee" class="fee">&#8377;500 <small>for 30 minutes</small></p>
+        <p data-nx="areas.p" style="font-size:.95rem;color:var(--muted)">Paid at the chamber. If you engage us for the matter, this amount is adjusted against the fee.</p>
+        <h4 data-nx="areas.h4">What to bring</h4>
+        <ul data-nx-list="areas.list">
+          <li data-nx-f="li" data-nx-item>Every paper you have on the matter, even the ones you think do not matter</li>
+          <li data-nx-f="li" data-nx-item>Any notice, summons or court order you have received</li>
+          <li data-nx-f="li" data-nx-item>Your Aadhaar or voter card</li>
+          <li data-nx-f="li" data-nx-item>A list of dates: when it started, who said what, when</li>
         </ul>
-        <h4>Chamber hours</h4>
-        <ul>
-          <li>Monday to Saturday, 5 pm to 9 pm</li>
-          <li>Sunday, 10 am to 1 pm, by appointment</li>
+        <h4 data-nx="areas.h42">Chamber hours</h4>
+        <ul data-nx-list="areas.list2">
+          <li data-nx-f="li" data-nx-item>Monday to Saturday, 5 pm to 9 pm</li>
+          <li data-nx-f="li" data-nx-item>Sunday, 10 am to 1 pm, by appointment</li>
         </ul>
         <a class="btn btn--ox" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Law%20Chamber%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Fix a time on WhatsApp</a>
-        <p class="note">Send a one-line message with your matter and a preferred day. We confirm within a few hours.</p>
+        <p data-nx="areas.note" class="note">Send a one-line message with your matter and a preferred day. We confirm within a few hours.</p>
       </aside>
     </div>
   </div>
 </section>
 
-<section class="section section--deep about" id="about">
+<section data-nx-section="about" class="section section--deep about" id="about">
   <div class="wrap">
     <div class="about__photo reveal">
-      <img src="/demo/advocate/images/advocate-papers.jpg" width="1200" height="1800" alt="The advocate standing in the chamber corridor, holding case papers and smiling" loading="lazy">
+      <img data-nx="about.photo" src="/demo/advocate/images/advocate-papers.jpg" width="1200" height="1800" alt="The advocate standing in the chamber corridor, holding case papers and smiling" loading="lazy">
     </div>
     <div class="reveal">
-      <span class="kicker">The advocate</span>
-      <h2 class="h2">Sudipta Bhattacharya, Advocate.</h2>
+      <span data-nx="about.kicker" class="kicker">The advocate</span>
+      <h2 data-nx="about.h2" class="h2">Sudipta Bhattacharya, Advocate.</h2>
       <div class="rule"></div>
-      <p class="lead" style="margin-top:1.2rem">LL.B. from the University of Calcutta, enrolled in 2008. He started under a senior at the Alipore civil courts, then began appearing at the Calcutta High Court in 2013. He runs this chamber alone, with one clerk, so the person you meet on the first day is the person who argues your matter.</p>
-      <p>He does not promise outcomes. No advocate honestly can. What he promises is this: you will understand what is happening in your case, you will know the cost before any work begins, and you will get a call back the same day.</p>
-      <ul class="courts">
-        <li><b>Alipore Judges' Court</b><span>Civil, criminal and family matters for South 24 Parganas and Kolkata</span></li>
-        <li><b>Calcutta High Court</b><span>Writ petitions, appeals, anticipatory bail, original side matters</span></li>
-        <li><b>District Consumer Commission</b><span>Consumer complaints up to the limit set by the Act</span></li>
-        <li><b>Registry offices</b><span>Alipore, Sealdah and Gariahat sub-registrar offices on registration days</span></li>
+      <p data-nx="about.p" class="lead" style="margin-top:1.2rem">LL.B. from the University of Calcutta, enrolled in 2008. He started under a senior at the Alipore civil courts, then began appearing at the Calcutta High Court in 2013. He runs this chamber alone, with one clerk, so the person you meet on the first day is the person who argues your matter.</p>
+      <p data-nx="about.p2">He does not promise outcomes. No advocate honestly can. What he promises is this: you will understand what is happening in your case, you will know the cost before any work begins, and you will get a call back the same day.</p>
+      <ul data-nx-list="about.courts" class="courts">
+        <li data-nx-item><b data-nx-f="b">Alipore Judges' Court</b><span data-nx-f="span">Civil, criminal and family matters for South 24 Parganas and Kolkata</span></li>
+        <li data-nx-item><b data-nx-f="b">Calcutta High Court</b><span data-nx-f="span">Writ petitions, appeals, anticipatory bail, original side matters</span></li>
+        <li data-nx-item><b data-nx-f="b">District Consumer Commission</b><span data-nx-f="span">Consumer complaints up to the limit set by the Act</span></li>
+        <li data-nx-item><b data-nx-f="b">Registry offices</b><span data-nx-f="span">Alipore, Sealdah and Gariahat sub-registrar offices on registration days</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section section--dark" id="process">
+<section data-nx-section="process" class="section section--dark" id="process">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">How a matter proceeds</span>
-      <h2 class="h2">From the first meeting to the court date.</h2>
+      <span data-nx="process.kicker" class="kicker">How a matter proceeds</span>
+      <h2 data-nx="process.h2" class="h2">From the first meeting to the court date.</h2>
       <div class="rule"></div>
     </div>
-    <ol class="timeline">
-      <li class="reveal"><span class="when">Day 1</span><h3>You tell us the problem</h3><p>Thirty minutes at the chamber. We read your papers, ask questions, and tell you plainly whether a case is worth filing, what the usual steps are, and roughly how long it takes.</p></li>
-      <li class="reveal"><span class="when">Within 3 days</span><h3>Fee quoted in writing</h3><p>You get a WhatsApp message with the fee for the whole matter, what it covers, and what is paid at each stage. Court fees and stamp duty are shown separately. Nothing starts until you say yes.</p></li>
-      <li class="reveal"><span class="when">Week 1 to 2</span><h3>Drafting and your signature</h3><p>The notice, plaint, petition or deed is drafted and read out to you in Bengali or English, whichever you prefer. You sign only after you understand every line.</p></li>
-      <li class="reveal"><span class="when">Filing</span><h3>Filed, and you get the case number</h3><p>We file at the right court and send you the case number and the first date. From then on you receive a message after every hearing with what happened and what comes next.</p></li>
-      <li class="reveal"><span class="when">Each hearing</span><h3>Updates after every date</h3><p>You do not have to come to court for most dates. When your presence is needed, we tell you a week before, and what to carry.</p></li>
+    <ol data-nx-list="process.timeline" class="timeline">
+      <li data-nx-item class="reveal"><span data-nx-f="when" class="when">Day 1</span><h3 data-nx-f="h3">You tell us the problem</h3><p data-nx-f="p">Thirty minutes at the chamber. We read your papers, ask questions, and tell you plainly whether a case is worth filing, what the usual steps are, and roughly how long it takes.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="when" class="when">Within 3 days</span><h3 data-nx-f="h3">Fee quoted in writing</h3><p data-nx-f="p">You get a WhatsApp message with the fee for the whole matter, what it covers, and what is paid at each stage. Court fees and stamp duty are shown separately. Nothing starts until you say yes.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="when" class="when">Week 1 to 2</span><h3 data-nx-f="h3">Drafting and your signature</h3><p data-nx-f="p">The notice, plaint, petition or deed is drafted and read out to you in Bengali or English, whichever you prefer. You sign only after you understand every line.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="when" class="when">Filing</span><h3 data-nx-f="h3">Filed, and you get the case number</h3><p data-nx-f="p">We file at the right court and send you the case number and the first date. From then on you receive a message after every hearing with what happened and what comes next.</p></li>
+      <li data-nx-item class="reveal"><span data-nx-f="when" class="when">Each hearing</span><h3 data-nx-f="h3">Updates after every date</h3><p data-nx-f="p">You do not have to come to court for most dates. When your presence is needed, we tell you a week before, and what to carry.</p></li>
     </ol>
-    <div class="tl__photos reveal">
-      <img src="/demo/advocate/images/signing-agreement.jpg" width="1200" height="801" alt="A client signing an agreement at the chamber table" loading="lazy">
-      <img src="/demo/advocate/images/court-buildings.jpg" width="1200" height="801" alt="Red brick colonial court buildings in central Kolkata on a misty morning" loading="lazy">
-      <img src="/demo/advocate/images/desk-work.jpg" width="1200" height="800" alt="The advocate going through a case diary at his desk" loading="lazy">
+    <div data-nx-list="process.tl-photos" class="tl__photos reveal">
+      <img data-nx-f="photo" data-nx-item src="/demo/advocate/images/signing-agreement.jpg" width="1200" height="801" alt="A client signing an agreement at the chamber table" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/advocate/images/court-buildings.jpg" width="1200" height="801" alt="Red brick colonial court buildings in central Kolkata on a misty morning" loading="lazy">
+      <img data-nx-f="photo" data-nx-item src="/demo/advocate/images/desk-work.jpg" width="1200" height="800" alt="The advocate going through a case diary at his desk" loading="lazy">
     </div>
   </div>
 </section>
 
-<section class="section" id="fees">
+<section data-nx-section="fees" class="section" id="fees">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Fees</span>
-      <h2 class="h2">Starting fees for common work.</h2>
+      <span data-nx="fees.kicker" class="kicker">Fees</span>
+      <h2 data-nx="fees.h2" class="h2">Starting fees for common work.</h2>
       <div class="rule"></div>
-      <p class="lead" style="margin-top:1.2rem">These are the usual starting points. Court fees, stamp duty and registration charges are paid to the government and are extra; we tell you the exact amount before filing.</p>
+      <p data-nx="fees.p" class="lead" style="margin-top:1.2rem">These are the usual starting points. Court fees, stamp duty and registration charges are paid to the government and are extra; we tell you the exact amount before filing.</p>
     </div>
     <div class="fees">
       <div class="fees__col reveal">
-        <h3>Documents and small work</h3>
-        <ul>
-          <li><span class="name">Consultation <small>30 minutes at the chamber</small></span><span class="dots"></span><span class="amt">&#8377;500</span></li>
-          <li><span class="name">Affidavit <small>Drafting and attestation, stamp paper extra</small></span><span class="dots"></span><span class="amt">&#8377;300</span></li>
-          <li><span class="name">Notary attestation <small>Per document</small></span><span class="dots"></span><span class="amt">&#8377;150</span></li>
-          <li><span class="name">Rent agreement <small>11 months, two copies</small></span><span class="dots"></span><span class="amt">&#8377;1,500</span></li>
-          <li><span class="name">Legal notice <small>Cheque bounce, recovery, tenant</small></span><span class="dots"></span><span class="amt">&#8377;1,500</span></li>
-          <li><span class="name">Agreement or deed drafting <small>Sale agreement, partnership, power of attorney</small></span><span class="dots"></span><span class="amt">from &#8377;2,500</span></li>
-          <li><span class="name">Will <small>Drafting, witnesses, optional registration</small></span><span class="dots"></span><span class="amt">from &#8377;3,000</span></li>
-          <li><span class="name">Property title search <small>Last 30 years of records</small></span><span class="dots"></span><span class="amt">from &#8377;4,000</span></li>
+        <h3 data-nx="fees.h3">Documents and small work</h3>
+        <ul data-nx-list="fees.list">
+          <li data-nx-item><span data-nx-f="name" class="name">Consultation <small>30 minutes at the chamber</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;500</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Affidavit <small>Drafting and attestation, stamp paper extra</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;300</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Notary attestation <small>Per document</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;150</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Rent agreement <small>11 months, two copies</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;1,500</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Legal notice <small>Cheque bounce, recovery, tenant</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">&#8377;1,500</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Agreement or deed drafting <small>Sale agreement, partnership, power of attorney</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;2,500</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Will <small>Drafting, witnesses, optional registration</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;3,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Property title search <small>Last 30 years of records</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;4,000</span></li>
         </ul>
       </div>
       <div class="fees__col reveal">
-        <h3>Court matters</h3>
-        <ul>
-          <li><span class="name">Registration day assistance <small>Deed check, presence at the registry</small></span><span class="dots"></span><span class="amt">from &#8377;5,000</span></li>
-          <li><span class="name">Bail application <small>Alipore Court</small></span><span class="dots"></span><span class="amt">from &#8377;5,000</span></li>
-          <li><span class="name">Anticipatory bail <small>High Court</small></span><span class="dots"></span><span class="amt">from &#8377;15,000</span></li>
-          <li><span class="name">Consumer complaint <small>Filing to final order</small></span><span class="dots"></span><span class="amt">from &#8377;6,000</span></li>
-          <li><span class="name">Cheque bounce case <small>Notice plus complaint</small></span><span class="dots"></span><span class="amt">from &#8377;8,000</span></li>
-          <li><span class="name">Mutual consent divorce <small>Both motions, drafting included</small></span><span class="dots"></span><span class="amt">from &#8377;25,000</span></li>
-          <li><span class="name">Civil suit <small>Recovery, eviction, injunction</small></span><span class="dots"></span><span class="amt">from &#8377;20,000</span></li>
-          <li><span class="name">Contested matters <small>Quoted after reading the papers</small></span><span class="dots"></span><span class="amt">on request</span></li>
+        <h3 data-nx="fees.h32">Court matters</h3>
+        <ul data-nx-list="fees.list2">
+          <li data-nx-item><span data-nx-f="name" class="name">Registration day assistance <small>Deed check, presence at the registry</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;5,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Bail application <small>Alipore Court</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;5,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Anticipatory bail <small>High Court</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;15,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Consumer complaint <small>Filing to final order</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;6,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Cheque bounce case <small>Notice plus complaint</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;8,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Mutual consent divorce <small>Both motions, drafting included</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;25,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Civil suit <small>Recovery, eviction, injunction</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">from &#8377;20,000</span></li>
+          <li data-nx-item><span data-nx-f="name" class="name">Contested matters <small>Quoted after reading the papers</small></span><span class="dots"></span><span data-nx-f="amt" class="amt">on request</span></li>
         </ul>
       </div>
     </div>
-    <p class="fees__promise reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Fees depend on the matter and are told before any work starts. You receive the quote in writing, and it does not change midway unless the matter itself changes, in which case we tell you first.</span></p>
+    <p class="fees__promise reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 9 4.6-.6 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span data-nx="fees.span">Fees depend on the matter and are told before any work starts. You receive the quote in writing, and it does not change midway unless the matter itself changes, in which case we tell you first.</span></p>
   </div>
 </section>
 
-<section class="section section--deep" id="faq">
+<section data-nx-section="faq" class="section section--deep" id="faq">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Common questions</span>
-      <h2 class="h2">Things people ask before they come.</h2>
+      <span data-nx="faq.kicker" class="kicker">Common questions</span>
+      <h2 data-nx="faq.h2" class="h2">Things people ask before they come.</h2>
       <div class="rule"></div>
     </div>
-    <div class="faq reveal">
-      <details open>
-        <summary>Do I need an appointment?</summary>
-        <p>It helps. Send a WhatsApp message with your name and the kind of matter, and we give you a time slot so you are not waiting. Walk-ins between 5 pm and 9 pm are seen if the advocate is free.</p>
+    <div data-nx-list="faq.faq" class="faq reveal">
+      <details data-nx-item open>
+        <summary data-nx-f="summary">Do I need an appointment?</summary>
+        <p data-nx-f="p">It helps. Send a WhatsApp message with your name and the kind of matter, and we give you a time slot so you are not waiting. Walk-ins between 5 pm and 9 pm are seen if the advocate is free.</p>
       </details>
-      <details>
-        <summary>Can you tell me on the phone whether I have a case?</summary>
-        <p>Not properly. Most matters depend on the papers. Bring them to the chamber and you will get a straight answer in thirty minutes. If there is no case worth filing, we say so and you pay only the consultation fee.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">Can you tell me on the phone whether I have a case?</summary>
+        <p data-nx-f="p">Not properly. Most matters depend on the papers. Bring them to the chamber and you will get a straight answer in thirty minutes. If there is no case worth filing, we say so and you pay only the consultation fee.</p>
       </details>
-      <details>
-        <summary>How long does a mutual consent divorce take?</summary>
-        <p>Usually six to eight months from the first motion to the decree, with the six-month waiting period in between. The court can shorten the wait in some situations. We explain this at the first meeting.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">How long does a mutual consent divorce take?</summary>
+        <p data-nx-f="p">Usually six to eight months from the first motion to the decree, with the six-month waiting period in between. The court can shorten the wait in some situations. We explain this at the first meeting.</p>
       </details>
-      <details>
-        <summary>Will I have to come to court on every date?</summary>
-        <p>No. For most dates the advocate appears alone. You need to be present for evidence, for certain statements, and on the day of a final order. We tell you a week in advance.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">Will I have to come to court on every date?</summary>
+        <p data-nx-f="p">No. For most dates the advocate appears alone. You need to be present for evidence, for certain statements, and on the day of a final order. We tell you a week in advance.</p>
       </details>
-      <details>
-        <summary>Do you take cases outside Kolkata?</summary>
-        <p>Matters at Alipore, Sealdah, Barasat and Howrah courts, yes. Other districts only when there is a strong reason, because travel adds to your cost.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">Do you take cases outside Kolkata?</summary>
+        <p data-nx-f="p">Matters at Alipore, Sealdah, Barasat and Howrah courts, yes. Other districts only when there is a strong reason, because travel adds to your cost.</p>
       </details>
-      <details>
-        <summary>Can I pay in parts?</summary>
-        <p>Yes. Court matters are usually paid in two or three parts: at filing, at evidence, and at argument. The split is written into the fee quote. UPI, bank transfer and cash are all accepted, with a receipt.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">Can I pay in parts?</summary>
+        <p data-nx-f="p">Yes. Court matters are usually paid in two or three parts: at filing, at evidence, and at argument. The split is written into the fee quote. UPI, bank transfer and cash are all accepted, with a receipt.</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="section" id="gallery">
+<section data-nx-section="gallery" class="section" id="gallery">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The chamber</span>
-      <h2 class="h2">A few photographs.</h2>
+      <span data-nx="gallery.kicker" class="kicker">The chamber</span>
+      <h2 data-nx="gallery.h2" class="h2">A few photographs.</h2>
       <div class="rule"></div>
     </div>
     <ul class="strip reveal">
@@ -527,46 +533,46 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--deep">
+<section data-nx-section="section-9" class="section section--deep">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">From clients</span>
-      <h2 class="h2">In their words.</h2>
+      <span data-nx="section-9.kicker" class="kicker">From clients</span>
+      <h2 data-nx="section-9.h2" class="h2">In their words.</h2>
       <div class="rule"></div>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>Our flat registration had been stuck for a year because of one missing paper. He found what was missing in the first meeting, told us the fee that evening, and we registered in five weeks.</p><footer>Mithun <span>&middot; Garia</span></footer></blockquote>
-      <blockquote class="reveal"><p>A cheque of &#8377;2.4 lakh had bounced and I had no idea what to do. The notice went out in two days and I got a message after every single hearing. I never had to chase him.</p><footer>Rupa <span>&middot; Ballygunge</span></footer></blockquote>
+    <div data-nx-list="section-9.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Our flat registration had been stuck for a year because of one missing paper. He found what was missing in the first meeting, told us the fee that evening, and we registered in five weeks.</p><footer>Mithun <span data-nx-f="span">&middot; Garia</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">A cheque of &#8377;2.4 lakh had bounced and I had no idea what to do. The notice went out in two days and I got a message after every single hearing. I never had to chase him.</p><footer>Rupa <span data-nx-f="span">&middot; Ballygunge</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The chamber</span>
-      <h2 class="h2">Hindustan Park, three minutes from Gariahat crossing.</h2>
+      <span data-nx="visit.kicker" class="kicker">The chamber</span>
+      <h2 data-nx="visit.h2" class="h2">Hindustan Park, three minutes from Gariahat crossing.</h2>
       <div class="rule"></div>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>38/2 Hindustan Park, Gariahat<br>Kolkata 700029 (first floor, above the pharmacy)</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=38%2F2%20Hindustan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">38/2 Hindustan Park, Gariahat<br>Kolkata 700029 (first floor, above the pharmacy)</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=38%2F2%20Hindustan%20Park%2C%20Gariahat%2C%20Kolkata%20700029" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Chamber hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>5:00 pm &ndash; 9:00 pm</td></tr>
-              <tr><td>Sunday</td><td>10:00 am &ndash; 1:00 pm, by appointment</td></tr>
-              <tr><td>Court days</td><td>Advocate at court 10:30 am &ndash; 4:30 pm</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Chamber hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">5:00 pm &ndash; 9:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">10:00 am &ndash; 1:00 pm, by appointment</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Court days</td><td data-nx-f="td2">Advocate at court 10:30 am &ndash; 4:30 pm</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Calls answered after 4:30 pm on court days. WhatsApp any time; replied to the same day.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Calls answered after 4:30 pm on court days. WhatsApp any time; replied to the same day.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--ox" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Law%20Chamber%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp the chamber</a>
@@ -580,10 +586,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="contact">
+<section data-nx-section="contact" class="section final" id="contact">
   <div class="wrap reveal">
-    <h2>Bring your papers. Leave with a plan.</h2>
-    <p>Send a short message with the kind of matter and a day that suits you. You will get a time slot, and at the end of the meeting you will know your options and the fee.</p>
+    <h2 data-nx="contact.h2">Bring your papers. Leave with a plan.</h2>
+    <p data-nx="contact.p">Send a short message with the kind of matter and a day that suits you. You will get a time slot, and at the end of the meeting you will know your options and the fee.</p>
     <div class="final__cta">
       <a class="btn btn--gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhattacharya%20Law%20Chamber%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -598,31 +604,31 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="4" fill="#B08D4A"/><path d="M22 8v26M12 14h20M12 14l-5 10h10l-5-10Zm20 0-5 10h10l-5-10Z" fill="none" stroke="#2E070B" stroke-width="2" stroke-linejoin="round"/><path d="M15 34h14" stroke="#2E070B" stroke-width="2.5" stroke-linecap="round"/></svg>
-          <span><b>Bhattacharya Law Chamber</b><small>Advocate &middot; Gariahat</small></span>
+          <span><b data-nx="footer.b">Bhattacharya Law Chamber</b><small data-nx="footer.small">Advocate &middot; Gariahat</small></span>
         </a>
-        <p>Sudipta Bhattacharya, Advocate. Alipore Court and Calcutta High Court. Property, family, consumer, cheque bounce, civil, bail, drafting, affidavit and notary.</p>
+        <p data-nx="footer.p">Sudipta Bhattacharya, Advocate. Alipore Court and Calcutta High Court. Property, family, consumer, cheque bounce, civil, bail, drafting, affidavit and notary.</p>
       </div>
       <div>
-        <h4>Chamber</h4>
-        <ul>
-          <li><a href="#areas">Practice areas</a></li>
-          <li><a href="#process">How a matter proceeds</a></li>
-          <li><a href="#fees">Fees</a></li>
-          <li><a href="#faq">Common questions</a></li>
+        <h4 data-nx="footer.h4">Chamber</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#areas">Practice areas</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#process">How a matter proceeds</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#fees">Fees</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Common questions</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>38/2 Hindustan Park, Gariahat, Kolkata 700029</li>
+          <li data-nx="footer.li">38/2 Hindustan Park, Gariahat, Kolkata 700029</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 5 pm &ndash; 9 pm &middot; Sun by appointment</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 5 pm &ndash; 9 pm &middot; Sun by appointment</li>
         </ul>
       </div>
     </div>
@@ -664,5 +670,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,2154 @@
+{
+  "site": "pathology-lab",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Nabadiganta Diagnostics",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-tag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Blood tests done right, reports on WhatsApp by evening",
+            "bn": "Blood tests done right, reports on WhatsApp by evening"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tests",
+      "label": {
+        "en": "The tests people ask for most, with the price",
+        "bn": "The tests people ask for most, with the price"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fast",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fast2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h37",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt7",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p8",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h38",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt8",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p9",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h39",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt9",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p10",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "li3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h310",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt10",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p11",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h311",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt11",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p12",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "li4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h312",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "amt12",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "p13",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "li5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "tests-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "meta",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta2",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta3",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta4",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta5",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta6",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "meta7",
+          "label": {
+            "en": "The tests people ask for most, with the price",
+            "bn": "The tests people ask for most, with the price"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "packages",
+      "label": {
+        "en": "One morning, one needle, the whole picture",
+        "bn": "One morning, one needle, the whole picture"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "for",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "amt",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "count",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "pack-flag",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "for2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "amt2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "count2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "for3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "amt3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "count3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Basic check",
+            "bn": "Basic check"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Family check",
+            "bn": "Family check"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Senior check",
+            "bn": "Senior check"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "home",
+      "label": {
+        "en": "We come to you. Here is how it works",
+        "bn": "We come to you. Here is how it works"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "We come to you. Here is how it works",
+            "bn": "We come to you. Here is how it works"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Where we go, and what it costs",
+            "bn": "Where we go, and what it costs"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prepare",
+      "label": {
+        "en": "Fasting rules and other things worth knowing",
+        "bn": "Fasting rules and other things worth knowing"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "prep-list",
+          "label": {
+            "en": "Fasting rules and other things worth knowing",
+            "bn": "Fasting rules and other things worth knowing"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "When the report comes",
+            "bn": "When the report comes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "imaging",
+      "label": {
+        "en": "Three rooms on the first floor, no appointment for ECG and X-ray",
+        "bn": "Three rooms on the first floor, no appointment for ECG and X-ray"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "img3",
+          "label": {
+            "en": "Three rooms on the first floor, no appointment for ECG and X-ray",
+            "bn": "Three rooms on the first floor, no appointment for ECG and X-ray"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:900"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pathologist",
+      "label": {
+        "en": "A pathologist reads every report before it leaves the lab",
+        "bn": "A pathologist reads every report before it leaves the lab"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sig",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "Clean benches, labelled tubes, a quiet waiting room",
+        "bn": "Clean benches, labelled tubes, a quiet waiting room"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "Clean benches, labelled tubes, a quiet waiting room",
+            "bn": "Clean benches, labelled tubes, a quiet waiting room"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "words",
+      "label": {
+        "en": "Two messages we were sent after the report",
+        "bn": "Two messages we were sent after the report"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Two messages we were sent after the report",
+            "bn": "Two messages we were sent after the report"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Dum Dum Road, opposite the post office, ground and first floor",
+        "bn": "Dum Dum Road, opposite the post office, ground and first floor"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Send the prescription tonight. We collect tomorrow morning",
+        "bn": "Send the prescription tonight. We collect tomorrow morning"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "On this page",
+            "bn": "On this page"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Nabadiganta Diagnostics",
+      "small": "Dum Dum · since 2014"
+    },
+    "top": {
+      "hero-tag": "<span></span>Reports checked by a qualified pathologist",
+      "h1": "Blood tests done right, <em>reports on WhatsApp</em> by evening.",
+      "p": "Walk in from 6:30 am or let us come to your home. Fasting sugar, thyroid, lipid, liver, kidney, vitamins, full body packages, ECG, X-ray and ultrasound, all under one roof on Dum Dum Road.",
+      "button": "See test prices",
+      "photo": {
+        "src": "/demo/pathology-lab/images/hero.jpg",
+        "alt": "A lab technician in cap, mask and gloves holds a rack of blood sample tubes in the laboratory"
+      },
+      "p2": "Book by 9 pm the night before. Dum Dum, Nagerbazar, Lake Town, Baguiati and Airport area.",
+      "hero-facts": {
+        "items": [
+          {
+            "b": "6:30 am",
+            "span": "Doors open, fasting samples first"
+          },
+          {
+            "b": "Same day",
+            "span": "Routine reports by 7 pm"
+          },
+          {
+            "b": "₹50",
+            "span": "Home visit charge, free above ₹999"
+          }
+        ]
+      }
+    },
+    "tests": {
+      "kicker": "Common tests",
+      "h2": "The tests people ask for most, with the price.",
+      "p": "Over 400 tests are on the full list at the counter. These are the ones a family doctor writes most often. Prices include the report on WhatsApp and a printed copy.",
+      "h3": "CBC (complete blood count)",
+      "amt": "₹250",
+      "p2": "Haemoglobin, white cells, platelets. For fever, weakness, dengue follow-up.",
+      "h32": "Fasting and PP sugar",
+      "amt2": "₹120",
+      "p3": "Both readings. Come fasting, then return two hours after breakfast.",
+      "li": "Same day",
+      "fast": "Fasting",
+      "h33": "HbA1c",
+      "amt3": "₹450",
+      "p4": "Three-month sugar average. No fasting needed.",
+      "h34": "Thyroid profile (T3, T4, TSH)",
+      "amt4": "₹500",
+      "p5": "Tiredness, weight change, hair fall, irregular periods.",
+      "h35": "Lipid profile",
+      "amt5": "₹550",
+      "p6": "Cholesterol, triglycerides, HDL, LDL. 10 to 12 hours fasting.",
+      "li2": "Same day",
+      "fast2": "Fasting",
+      "h36": "Liver function test (LFT)",
+      "amt6": "₹600",
+      "p7": "Bilirubin, SGOT, SGPT, proteins. For jaundice, fatty liver follow-up.",
+      "h37": "Kidney function test (KFT)",
+      "amt7": "₹600",
+      "p8": "Urea, creatinine, uric acid, electrolytes. For pressure and sugar patients.",
+      "h38": "Vitamin D and B12",
+      "amt8": "₹1,400",
+      "p9": "Both together. Bone pain, tingling, tiredness.",
+      "h39": "Urine routine",
+      "amt9": "₹100",
+      "p10": "Infection, protein, sugar. Bring the first morning sample if you can.",
+      "li3": "Same day",
+      "h310": "Dengue NS1 and IgM",
+      "amt10": "₹900",
+      "p11": "Season test for fever with body ache. Platelet count included.",
+      "h311": "Typhoid (Widal)",
+      "amt11": "₹200",
+      "p12": "For fever lasting more than five days.",
+      "li4": "Same day",
+      "h312": "Pregnancy and antenatal panel",
+      "amt12": "₹1,800",
+      "p13": "Blood group, CBC, sugar, thyroid, HIV, HBsAg, VDRL, urine, as the obstetrician asks.",
+      "li5": "Same day",
+      "tests-note": "Prices are per test. Bring the doctor's prescription if you have one; tests can also be done without a prescription. The pathologist signs every report before it goes out.",
+      "meta": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      },
+      "meta2": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      },
+      "meta3": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "Morning sample"
+          }
+        ]
+      },
+      "meta4": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      },
+      "meta5": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      },
+      "meta6": {
+        "items": [
+          {
+            "li": "Next day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      },
+      "meta7": {
+        "items": [
+          {
+            "li": "Same day"
+          },
+          {
+            "li": "No fasting"
+          }
+        ]
+      }
+    },
+    "packages": {
+      "kicker": "Full body packages",
+      "h2": "One morning, one needle, the whole picture.",
+      "p": "Packages cost less than the tests added up. Come fasting between 6:30 and 9 am. A home visit for a package is free.",
+      "h3": "Basic check",
+      "for": "Under 40, no known illness, yearly check",
+      "amt": "&#8377;999 <small>&#8377;1,620</small>",
+      "count": "32 parameters",
+      "pack-flag": "Most booked",
+      "h32": "Family check",
+      "for2": "40 and above, or sugar and pressure in the family",
+      "amt2": "&#8377;1,999 <small>&#8377;3,450</small>",
+      "count2": "58 parameters + ECG",
+      "h33": "Senior check",
+      "for3": "60 and above, or long-term medicines",
+      "amt3": "&#8377;3,499 <small>&#8377;5,900</small>",
+      "count3": "72 parameters + ECG + USG",
+      "list": {
+        "items": [
+          {
+            "li": "CBC with ESR"
+          },
+          {
+            "li": "Fasting sugar"
+          },
+          {
+            "li": "Lipid profile"
+          },
+          {
+            "li": "Liver function test"
+          },
+          {
+            "li": "Kidney function test"
+          },
+          {
+            "li": "Urine routine"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Everything in Basic"
+          },
+          {
+            "li": "HbA1c and PP sugar"
+          },
+          {
+            "li": "Thyroid profile"
+          },
+          {
+            "li": "Vitamin D and B12"
+          },
+          {
+            "li": "Uric acid and calcium"
+          },
+          {
+            "li": "Resting ECG"
+          },
+          {
+            "li": "Report review call from the pathologist"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Everything in Family"
+          },
+          {
+            "li": "PSA (men) or CA-125 (women)"
+          },
+          {
+            "li": "Iron studies"
+          },
+          {
+            "li": "Electrolytes"
+          },
+          {
+            "li": "Whole abdomen ultrasound"
+          },
+          {
+            "li": "Free home collection, two visits if needed"
+          }
+        ]
+      }
+    },
+    "home": {
+      "kicker": "Home sample collection",
+      "h2": "We come to you. Here is how it works.",
+      "h3": "Where we go, and what it costs",
+      "p": "One collector covers one zone each morning, so slots are limited to about 25 homes a day. Book early in festival season and when dengue is going around.",
+      "photo": {
+        "src": "/demo/pathology-lab/images/blood-draw.jpg",
+        "alt": "A gloved collector draws a blood sample from a patient's arm"
+      },
+      "steps": {
+        "items": [
+          {
+            "h3": "Send the prescription",
+            "p": "WhatsApp a photo of the doctor's slip, or just the test names, with your address and a phone number. Book by 9 pm for the next morning."
+          },
+          {
+            "h3": "We confirm a slot",
+            "p": "You get a one-hour window between 6 and 11 am, the collector's name and the exact amount to pay. No surprises at the door."
+          },
+          {
+            "h3": "Sample at your door",
+            "p": "The collector carries a sealed kit, gloves and a cold box. The whole thing takes ten minutes. Pay by cash or UPI then or after the report."
+          },
+          {
+            "h3": "Report on your phone",
+            "p": "Routine reports reach you on WhatsApp by 7 pm the same day as a PDF. A printed copy waits at the counter if you want it."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "b": "Free",
+            "span": "Dum Dum, Nagerbazar, Motijheel, Lake Town, when the bill is ₹999 or more"
+          },
+          {
+            "b": "₹50",
+            "span": "Same areas, for bills under ₹999"
+          },
+          {
+            "b": "₹100",
+            "span": "Baguiati, Kestopur, Airport, Belgharia, Dum Dum Cantonment"
+          },
+          {
+            "b": "Free",
+            "span": "Any full body package, any listed area"
+          }
+        ]
+      }
+    },
+    "prepare": {
+      "kicker": "Before the test",
+      "h2": "Fasting rules and other things worth knowing.",
+      "p": "Half the repeat visits we see are because of a cup of tea. Read this the night before.",
+      "h3": "When the report comes",
+      "p2": "Reports go as a PDF to the WhatsApp number you give at the counter. If a value is far outside the normal range, the pathologist calls you the same day and suggests you see your doctor. We do not give treatment advice on the phone.",
+      "prep-list": {
+        "items": [
+          {
+            "h3": "Fasting means 10 to 12 hours",
+            "p": "Finish dinner by 9 pm and come between 6:30 and 9 am. Plain water is fine, as much as you like. No tea, coffee, biscuits, chewing gum or paan. Fasting is needed for fasting sugar, lipid profile and some packages, not for CBC, thyroid or vitamins."
+          },
+          {
+            "h3": "Medicines",
+            "p": "Take your pressure and thyroid tablets as usual with water. For sugar tablets or insulin, ask your doctor; most say take them after the fasting sample. Carry the medicine strip so we can note the name."
+          },
+          {
+            "h3": "PP (post-meal) sugar",
+            "p": "Eat your normal breakfast right after the fasting sample, note the time, and come back exactly two hours later. Do not skip or shrink the meal; the test is meant to see a normal day."
+          },
+          {
+            "h3": "Urine and stool samples",
+            "p": "Collect the first urine of the morning in the sterile cup we give you (or buy one from any chemist for ₹10). Mid-stream, not the first few drops. Bring it within two hours. Women should avoid the test during periods unless the doctor says otherwise."
+          },
+          {
+            "h3": "Ultrasound of the abdomen",
+            "p": "Six hours empty stomach, and drink four to five glasses of water one hour before so the bladder is full. Do not pass urine until the scan is done. For a pelvic scan the full bladder matters most."
+          },
+          {
+            "h3": "ECG",
+            "p": "Nothing special. Avoid heavy exercise, tea and smoking for one hour before. Wear a shirt or kurta that opens at the front. The test takes five minutes and the report is ready in fifteen."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "td": "CBC, sugar, urine",
+            "td2": "Same day, by 2 pm"
+          },
+          {
+            "td": "Thyroid, lipid, LFT, KFT",
+            "td2": "Same day, by 7 pm"
+          },
+          {
+            "td": "Vitamin D, B12, hormones",
+            "td2": "Next day, by 2 pm"
+          },
+          {
+            "td": "Culture and sensitivity",
+            "td2": "48 to 72 hours"
+          },
+          {
+            "td": "ECG",
+            "td2": "15 minutes"
+          },
+          {
+            "td": "X-ray, USG",
+            "td2": "Same visit, 30 minutes"
+          }
+        ]
+      }
+    },
+    "imaging": {
+      "kicker": "ECG, X-ray and ultrasound",
+      "h2": "Three rooms on the first floor, no appointment for ECG and X-ray.",
+      "img3": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/ecg-print.jpg",
+              "alt": "An ECG trace printed on graph paper"
+            },
+            "h3": "Resting ECG",
+            "p": "12-lead, read by a physician. Walk in any time during lab hours.",
+            "amt": "₹250"
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/analyzer.jpg",
+              "alt": "A technician in a white coat works at the lab's automated analyser"
+            },
+            "h3": "Digital X-ray",
+            "p": "Chest, spine, knee, hand, sinus. Film on a CD or sent as an image; radiologist report by evening.",
+            "amt": "₹350 to ₹600"
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/doctor-patient.jpg",
+              "alt": "A doctor listens to an elderly patient's chest with a stethoscope"
+            },
+            "h3": "Ultrasound (USG)",
+            "p": "Whole abdomen, pelvis, pregnancy, thyroid, KUB. Done by a visiting radiologist, Mon, Wed, Fri and Sat mornings. Book a slot.",
+            "amt": "₹900 to ₹1,500"
+          }
+        ]
+      }
+    },
+    "pathologist": {
+      "photo": {
+        "src": "/demo/pathology-lab/images/technician-rack.jpg",
+        "alt": "A technician in protective cap and mask holds a rack of labelled blood samples"
+      },
+      "kicker": "Who checks your report",
+      "h2": "A pathologist reads every report before it leaves the lab.",
+      "p": "Dr. Sumana Ghosh, MD (Pathology), has run the lab since it opened in 2014. She checks every report personally and signs it. Abnormal smears are looked at under the microscope, not just by the machine.",
+      "p2": "The lab runs a fully automated haematology and biochemistry analyser, calibrated every morning before the first sample. Controls are run twice a day and the records are kept in a register you can ask to see. Samples go into the machine within two hours of collection.",
+      "sig": "Dr. Sumana Ghosh<span>MD (Pathology), West Bengal Medical Council registered</span>"
+    },
+    "gallery": {
+      "kicker": "Inside the lab",
+      "h2": "Clean benches, labelled tubes, a quiet waiting room.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/vials-rack.jpg",
+              "alt": "Rows of blood sample vials in a laboratory rack"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/centrifuge.jpg",
+              "alt": "Sample tubes spinning in the centrifuge"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/microscope.jpg",
+              "alt": "The microscope on the pathologist's bench"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/tubes-caps.jpg",
+              "alt": "Blue and yellow capped sample tubes"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/bp-check.jpg",
+              "alt": "A doctor checks a patient's blood pressure at the desk before a report review"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/tubes-tray.jpg",
+              "alt": "Capped tubes standing in a tray on the bench"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/report-tube.jpg",
+              "alt": "A sample tube resting on a printed report"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/pathology-lab/images/ecg-paper.jpg",
+              "alt": "An ECG strip printed on graph paper"
+            }
+          }
+        ]
+      }
+    },
+    "words": {
+      "kicker": "Patients say",
+      "h2": "Two messages we were sent after the report.",
+      "quotes": {
+        "items": [
+          {
+            "p": "\"My mother is 78 and cannot climb stairs. The boy came at 7, was gentle, and the report was on my phone before I left office. We do all her tests this way now.\"",
+            "span": "· Nagerbazar"
+          },
+          {
+            "p": "\"My thyroid value was very high and the doctor from the lab herself called to say I should see my physician soon. Nobody has done that for me before.\"",
+            "span": "· Lake Town"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the lab",
+      "h2": "Dum Dum Road, opposite the post office, ground and first floor.",
+      "b": "Address",
+      "p": "7/2 Dum Dum Road, Dum Dum<br>Kolkata 700074",
+      "button": "Get directions →",
+      "b2": "Lab hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Five minutes' walk from Dum Dum metro, gate 1. Two-wheeler parking in front.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "6:30 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "6:30 am – 1:00 pm"
+          },
+          {
+            "td": "Home collection, every day",
+            "td2": "6:00 am – 11:00 am"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Send the prescription tonight. We collect tomorrow morning.",
+      "p": "A photo of the doctor's slip, your address and a time that suits you. We reply with the slot and the exact amount."
+    },
+    "footer": {
+      "b": "Nabadiganta Diagnostics",
+      "small": "Dum Dum · since 2014",
+      "p": "Pathology lab with home collection, ECG, X-ray and ultrasound. Every report checked and signed by a qualified pathologist.",
+      "h4": "On this page",
+      "h42": "Find us",
+      "li": "7/2 Dum Dum Road, Dum Dum, Kolkata 700074",
+      "li2": "Mon–Sat 6:30 am – 9 pm · Sun 6:30 am – 1 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Common tests"
+          },
+          {
+            "button": "Full body packages"
+          },
+          {
+            "button": "Home collection"
+          },
+          {
+            "button": "Before the test"
+          },
+          {
+            "button": "ECG, X-ray, USG"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Nabadiganta Diagnostics sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=7%2F2%20Dum%20Dum%20Road%2C%20Dum%20Dum%2C%20Kolkata%20700074",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Nabadiganta Diagnostics | Pathology Lab in Dum Dum, Kolkata",
+      "description": "Blood tests, full body check-up packages, ECG, X-ray and USG in Dum Dum, Kolkata. Home sample collection from 6 am, reports on WhatsApp the same day, checked by a qualified pathologist."
+    }
+  }
+}

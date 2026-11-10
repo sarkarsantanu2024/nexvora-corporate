@@ -1,0 +1,1544 @@
+{
+  "site": "optical",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Nayan Opticals",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-free",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:900"
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-chips",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "label": {
+        "en": "What happens in the test, and how long it takes",
+        "bn": "What happens in the test, and how long it takes"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "process",
+          "label": {
+            "en": "What happens in the test, and how long it takes",
+            "bn": "What happens in the test, and how long it takes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lenses",
+      "label": {
+        "en": "Three kinds of lens. Here is which one you need",
+        "bn": "Three kinds of lens. Here is which one you need"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "cmp-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "helper-extra",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Which lens is for me?",
+            "bn": "Which lens is for me?"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frames",
+      "label": {
+        "en": "400 frames on the wall. Try as many as you like",
+        "bn": "400 frames on the wall. Try as many as you like"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contacts",
+      "label": {
+        "en": "Contact lenses, with a free first fitting",
+        "bn": "Contact lenses, with a free first fitting"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "contacts-list",
+          "label": {
+            "en": "Contact lenses, with a free first fitting",
+            "bn": "Contact lenses, with a free first fitting"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "What to bring to the test",
+            "bn": "What to bring to the test"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "label": {
+        "en": "Test today, collect the day after tomorrow",
+        "bn": "Test today, collect the day after tomorrow"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "trio",
+          "label": {
+            "en": "Test today, collect the day after tomorrow",
+            "bn": "Test today, collect the day after tomorrow"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              },
+              "html": true
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "One shop, one family, twenty years on Rashbehari Avenue",
+        "bn": "One shop, one family, twenty years on Rashbehari Avenue"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        }
+      ],
+      "lists": [
+        {
+          "key": "story-facts",
+          "label": {
+            "en": "One shop, one family, twenty years on Rashbehari Avenue",
+            "bn": "One shop, one family, twenty years on Rashbehari Avenue"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Things people ask at the counter",
+        "bn": "Things people ask at the counter"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "faq",
+          "label": {
+            "en": "Things people ask at the counter",
+            "bn": "Things people ask at the counter"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A look around",
+        "bn": "A look around"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "gallery",
+          "label": {
+            "en": "A look around",
+            "bn": "A look around"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-11",
+      "label": {
+        "en": "In their own words",
+        "bn": "In their own words"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "In their own words",
+            "bn": "In their own words"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rashbehari Avenue, opposite Gariahat market, next to the tram stop",
+        "bn": "On Rashbehari Avenue, opposite Gariahat market, next to the tram stop"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "label": {
+        "en": "Headaches, squinting, holding the phone far away?",
+        "bn": "Headaches, squinting, holding the phone far away?"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Nayan Opticals",
+      "small": "Gariahat · since 2004"
+    },
+    "top": {
+      "hero-free": "<span></span>Eye test is free. No purchase needed.",
+      "h1": "See clearly again. <em>Glasses in 2 days.</em>",
+      "p": "Computerised eye test by a qualified optometrist, 400 frames to try on, and lenses fitted in our own lab behind the shop. Walk in any day, or send a message and we will keep a slot for you.",
+      "button": "See lens prices",
+      "photo": {
+        "src": "/demo/optical/images/hero.jpg",
+        "alt": "Optometrist adjusting a trial frame on a young woman during an eye test"
+      },
+      "hero-chips": {
+        "items": [
+          {
+            "b": "Free",
+            "span": "computerised eye test"
+          },
+          {
+            "b": "2 days",
+            "span": "from test to collection"
+          },
+          {
+            "b": "₹650",
+            "span": "frames start here"
+          }
+        ]
+      }
+    },
+    "test": {
+      "kicker": "Free eye test",
+      "h2": "What happens in the test, and how long it takes.",
+      "p": "About 15 to 20 minutes. No charge, whether you buy glasses or not. Bring your old glasses if you have them.",
+      "b": "Tested by Priyanka Saha, B.Optom",
+      "span": "Optometrist at the shop since 2013. Available every day except Thursday. For eye diseases or surgery we refer you to an eye doctor; we do not treat.",
+      "process": {
+        "items": [
+          {
+            "h3": "Auto-refractor reading",
+            "p": "You look into a machine for a few seconds. It gives a first estimate of your power for each eye."
+          },
+          {
+            "h3": "Chart reading with trial lenses",
+            "p": "The optometrist puts a trial frame on you and swaps lenses until the smallest line on the chart is sharp. This is the part that takes the time, and the part that matters."
+          },
+          {
+            "h3": "Near vision and reading check",
+            "p": "For anyone over 40 we check reading distance too, and explain whether bifocal or progressive makes more sense for you."
+          },
+          {
+            "h3": "Written prescription",
+            "p": "You get the power on paper, with the date. It is yours to keep. You can buy here or anywhere else."
+          }
+        ]
+      }
+    },
+    "lenses": {
+      "kicker": "Lenses explained",
+      "h2": "Three kinds of lens. Here is which one you need.",
+      "p": "Most confusion in an optical shop is about lenses. This is the plain version. Prices are per pair, fitted, with a one-year scratch warranty.",
+      "th": "Lens type",
+      "th2": "Basic",
+      "th3": "Anti-glare",
+      "th4": "Blue-cut",
+      "cmp-note": "Cylinder power up to 2 included. Higher cylinder or prism is quoted on the spot. Prices as of January 2026. Swipe the table sideways on a phone.",
+      "h3": "Which lens is for me?",
+      "helper-extra": "<strong>Coatings:</strong> anti-glare cuts reflections at night and on screens. Blue-cut is for computer use. Thin (high index) is for powers above 4 so the lens does not look thick.",
+      "list": {
+        "items": [
+          {
+            "td": "Single vision<small>Up to power 4</small>",
+            "td2": "₹600",
+            "td3": "₹950",
+            "td4": "₹1,200"
+          },
+          {
+            "td": "Single vision, thin<small>Power 4 to 8, high index 1.67</small>",
+            "td2": "₹1,800",
+            "td3": "₹2,200",
+            "td4": "₹2,600"
+          },
+          {
+            "td": "Bifocal<small>Kryptok, visible line</small>",
+            "td2": "₹1,400",
+            "td3": "₹1,900",
+            "td4": "₹2,300"
+          },
+          {
+            "td": "Progressive, standard<small>No line, 30-day change guarantee</small>",
+            "td2": "₹3,200",
+            "td3": "₹3,800",
+            "td4": "₹4,400"
+          },
+          {
+            "td": "Progressive, wide field<small>Bigger reading area, easier to adjust</small>",
+            "td2": "₹5,500",
+            "td3": "₹6,200",
+            "td4": "₹6,900"
+          },
+          {
+            "td": "Kids&rsquo; polycarbonate<small>Unbreakable, up to age 14</small>",
+            "td2": "₹900",
+            "td3": "₹1,300",
+            "td4": "₹1,500"
+          },
+          {
+            "td": "Photochromic add-on<small>Turns dark in sunlight, on any lens above</small>",
+            "td2": "+ ₹1,200",
+            "td3": "+ ₹1,200",
+            "td4": "+ ₹1,200"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "b": "Single vision",
+            "p": "One power across the whole lens. For distance only (driving, TV, the board in class) or for reading only. Most people under 40 need this."
+          },
+          {
+            "b": "Bifocal",
+            "p": "Distance on top, a visible half-moon for reading at the bottom. Cheaper than progressive and easy to get used to. The line shows."
+          },
+          {
+            "b": "Progressive",
+            "p": "Distance, computer and reading in one lens with no line. Takes a week to get used to. We give a 30-day change guarantee if you cannot adjust."
+          }
+        ]
+      }
+    },
+    "frames": {
+      "kicker": "Frames",
+      "h2": "400 frames on the wall. Try as many as you like.",
+      "p": "Frame prices only; lens prices are in the table above. Every frame carries a one-year warranty on hinges and coating."
+    },
+    "contacts": {
+      "kicker": "Contact lenses",
+      "h2": "Contact lenses, with a free first fitting.",
+      "p": "First time wearing lenses? We sit with you for half an hour and teach you to put them in and take them out. Come back any time if it is not working.",
+      "photo": {
+        "src": "/demo/optical/images/contact-lens-case.jpg",
+        "alt": "Contact lens blister packs, a lens case, tweezers and a pair of glasses on a blue table"
+      },
+      "h3": "What to bring to the test",
+      "contacts-list": {
+        "items": [
+          {
+            "b": "Daily disposable",
+            "span": "Wear once, throw away. No solution needed. Best for occasional use and for sport.",
+            "amt": "₹900 / box of 30"
+          },
+          {
+            "b": "Monthly",
+            "span": "One pair a month, cleaned every night. The cheapest way to wear lenses daily.",
+            "amt": "₹650 / box of 3"
+          },
+          {
+            "b": "Toric (for cylinder power)",
+            "span": "Monthly lenses for people with astigmatism.",
+            "amt": "₹1,350 / box of 3"
+          },
+          {
+            "b": "Coloured lenses",
+            "span": "With or without power. Monthly. Grey, hazel, green, blue.",
+            "amt": "₹850 / pair"
+          },
+          {
+            "b": "Lens solution and case",
+            "span": "360 ml bottle. Enough for about two months.",
+            "amt": "₹320"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "b": "Your old glasses",
+            "span": "We read the power off them so we can see how much has changed."
+          },
+          {
+            "b": "Any prescription you have",
+            "span": "From an eye hospital or another shop. Even an old one helps."
+          },
+          {
+            "b": "Twenty minutes",
+            "span": "That is the whole test. No appointment needed, but a message ahead saves you the wait."
+          }
+        ]
+      }
+    },
+    "delivery": {
+      "kicker": "Glasses in 2 days",
+      "h2": "Test today, collect the day after tomorrow.",
+      "p": "Our fitting lab is in the shop, so we do not wait for a courier. Single vision pairs are often ready the next day. We message you when it is done.",
+      "trio": {
+        "items": [
+          {
+            "h3": "<small>Day 1</small>Test",
+            "p": "Walk in or book a slot on WhatsApp. The free test takes 15 to 20 minutes. You leave with the power written down."
+          },
+          {
+            "h3": "<small>Day 1</small>Choose",
+            "p": "Pick a frame from the wall and a lens from the table above. We tell you the full price before you pay. Half is paid now, half on collection."
+          },
+          {
+            "h3": "<small>Day 3</small>Collect",
+            "p": "Come back in two days. We fit the frame to your face, check the power on the lensometer in front of you, and hand over the bill and warranty card."
+          }
+        ]
+      }
+    },
+    "story": {
+      "kicker": "About the shop",
+      "h2": "One shop, one family, twenty years on Rashbehari Avenue.",
+      "p": "Nayan Opticals opened in 2004 with two display cases and one trial lens box. Today the shop has a computerised testing room, a lens fitting lab at the back, and three people who have been here more than ten years each.",
+      "p2": "We sell what fits your face and your power, not what costs the most. If a cheaper frame suits you better, we will say so. Every pair leaves with a printed bill, the lens warranty card, and a cloth and case.",
+      "photo": {
+        "src": "/demo/optical/images/woman-glasses-saree.jpg",
+        "alt": "A young woman in a blue saree wearing round tortoise-shell glasses"
+      },
+      "story-facts": {
+        "items": [
+          {
+            "b": "2004",
+            "span": "Year we opened"
+          },
+          {
+            "b": "Own lab",
+            "span": "Lenses fitted here, not sent out"
+          },
+          {
+            "b": "Free",
+            "span": "Adjustment and nose pads, always"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "kicker": "Common questions",
+      "h2": "Things people ask at the counter.",
+      "faq": {
+        "items": [
+          {
+            "h3": "Is the eye test really free?",
+            "p": "Yes. There is no charge and no condition to buy. If you only want the prescription on paper, that is fine."
+          },
+          {
+            "h3": "Can I bring my own frame and get new lenses?",
+            "p": "Yes, if the frame is in good condition. Lens prices are the same as the table. We check the frame first and tell you if it is too weak to hold new lenses."
+          },
+          {
+            "h3": "What if the new power does not feel right?",
+            "p": "Come back within 30 days. We re-test for free and change the lenses at no cost if the power was wrong. For progressives we give a 30-day change guarantee."
+          },
+          {
+            "h3": "Do you accept a prescription from an eye hospital?",
+            "p": "Yes. Bring the paper. If it is more than six months old we will suggest a fresh free test, but it is your choice."
+          },
+          {
+            "h3": "Do you repair glasses?",
+            "p": "Nose pads, screws, and small adjustments are free, even for glasses not bought here. Temple replacement and soldering of metal frames cost ₹150 to ₹400."
+          },
+          {
+            "h3": "Can I pay by UPI or card?",
+            "p": "Yes. UPI, cards and cash. For orders above ₹5,000 we can split the payment over three months on most credit cards."
+          }
+        ]
+      }
+    },
+    "gallery": {
+      "kicker": "In the shop",
+      "h2": "A look around.",
+      "gallery": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/optical/images/phoropter.jpg",
+              "alt": "The phoropter in the testing room"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/fitting-tools.jpg",
+              "alt": "Hand picking a lens from the trial lens case"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/woman-glasses-portrait.jpg",
+              "alt": "A woman in a red saree wearing black rectangular glasses"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/man-eye-chart.jpg",
+              "alt": "A man reading the letters on an eye chart with one eye covered"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/trial-lens-box.jpg",
+              "alt": "Trial lens box open on the table"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/hero.jpg",
+              "alt": "Trial frame being adjusted during an eye test"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/frames-showcase.jpg",
+              "alt": "The lit frame display wall"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/optical/images/sunglasses-display.jpg",
+              "alt": "The sunglasses wall"
+            }
+          }
+        ]
+      }
+    },
+    "section-11": {
+      "kicker": "What customers say",
+      "h2": "In their own words.",
+      "quotes": {
+        "items": [
+          {
+            "p": "I had been wearing the wrong power for two years. Priyanka found it in ten minutes and the progressive pair was ready on Saturday as promised. No headaches since.",
+            "span": "· Ballygunge"
+          },
+          {
+            "p": "Took my son for his first glasses. They let him try twenty frames without any fuss and fitted them again for free when they went loose after a month.",
+            "span": "· Kasba"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "On Rashbehari Avenue, opposite Gariahat market, next to the tram stop.",
+      "b": "Address",
+      "p": "12A Rashbehari Avenue, Gariahat<br>Kolkata 700019",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone",
+      "p2": "WhatsApp messages answered 10 am to 9 pm.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:30 am – 9:00 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "11:00 am – 3:00 pm"
+          },
+          {
+            "td": "Eye test",
+            "td2": "All days except Thursday"
+          }
+        ]
+      }
+    },
+    "book": {
+      "h2": "Headaches, squinting, holding the phone far away?",
+      "p": "Get your eyes tested. It is free, it takes twenty minutes, and you will know. Send a message with a time that suits you."
+    },
+    "footer": {
+      "b": "Nayan Opticals",
+      "small": "Gariahat · since 2004",
+      "p": "Free eye test, 400 frames, lenses fitted in our own lab. Glasses ready in two days.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "12A Rashbehari Avenue, Gariahat, Kolkata 700019",
+      "li2": "Mon–Sat 10:30 am – 9 pm · Sun 11 am – 3 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Free eye test"
+          },
+          {
+            "button": "Lens price list"
+          },
+          {
+            "button": "Frames"
+          },
+          {
+            "button": "Contact lenses"
+          },
+          {
+            "button": "Common questions"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Nayan Opticals sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=12A%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Nayan Opticals | Free Eye Test and Glasses in 2 Days, Gariahat",
+      "description": "Free computerised eye test, frames from ₹650, single vision, bifocal and progressive lenses, contact lenses and kids' frames. Glasses ready in 2 days. Gariahat, Kolkata."
+    }
+  }
+}

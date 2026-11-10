@@ -238,6 +238,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .footer li{margin-top:.35rem}
 .footer .note{border-top:1px solid #27324A;padding-top:1.4rem;font-size:.85rem}
 @media (min-width:800px){.footer .wrap{grid-template-columns:1.4fr 1fr 1fr}.footer .note{grid-column:1/-1}.footer{padding-bottom:3rem}}
+/* phone: comfortable tap targets and readable small print */
+@media (max-width:760px){
+  .footer li{margin-top:0}
+  .footer li a,.card p a,.card>a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+  .footer .note a{padding-block:.7rem}
+  .footer .brand small{font-size:.76rem}
+}
 
 /* floating dock */
 .dock{position:fixed;right:10px;top:50%;z-index:90;display:flex;flex-direction:column;gap:8px;transform:translate(calc(100% + 12px),-50%);transition:transform .5s cubic-bezier(.22,1,.36,1)}
@@ -263,17 +270,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
 </style>
+<meta name="nx-site" content="coaching">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="strip" role="note">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos">See all samples</a>
-    <a class="get" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
 <div class="topline">
   <div class="wrap">
@@ -282,16 +286,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Dishari Coaching Centre, home">
       <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2" fill="#14213D"/><path d="M12 16h24M12 24h24M12 32h14" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/><circle cx="36" cy="32" r="4" fill="#C9A227"/></svg>
-      <span>Dishari<small>Coaching Centre</small></span>
+      <span data-nx="header.span">Dishari<small>Coaching Centre</small></span>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="#classes">Classes</a><a href="#subjects">Subjects</a><a href="#method">Our method</a><a href="#fees">Fees</a><a href="#teachers">Teachers</a><a href="#visit">Visit</a>
     </nav>
     <a class="btn btn-gold hdr-cta" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">Ask about admission</a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   </header>
@@ -310,16 +315,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="hero-text">
     <div class="inner">
-      <p class="kicker" style="color:var(--gold)">Shyambazar &middot; Since 2009</p>
-      <h1>Small batches. Weekly tests. <em>No child left at the back.</em></h1>
-      <p class="lede">Maths, Science and English coaching for Class 5 to 12. Fifteen students to a batch, a test every Saturday, and a report to parents every month. That is the whole method, and it has worked for sixteen years.</p>
-      <ul class="boards" aria-label="Boards covered"><li>WBBSE</li><li>WBCHSE</li><li>CBSE</li><li>ICSE / ISC</li></ul>
+      <p data-nx="top.kicker" class="kicker" style="color:var(--gold)">Shyambazar &middot; Since 2009</p>
+      <h1 data-nx="top.h1">Small batches. Weekly tests. <em>No child left at the back.</em></h1>
+      <p data-nx="top.lede" class="lede">Maths, Science and English coaching for Class 5 to 12. Fifteen students to a batch, a test every Saturday, and a report to parents every month. That is the whole method, and it has worked for sixteen years.</p>
+      <ul data-nx-list="top.boards" class="boards" aria-label="Boards covered"><li data-nx-f="li" data-nx-item>WBBSE</li><li data-nx-f="li" data-nx-item>WBCHSE</li><li data-nx-f="li" data-nx-item>CBSE</li><li data-nx-f="li" data-nx-item>ICSE / ISC</li></ul>
       <div class="hero-act">
         <a class="btn btn-gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Ask about a seat</a>
-        <a class="btn btn-white" href="#fees">See batches and fees</a>
+        <a data-nx="top.button" class="btn btn-white" href="#fees">See batches and fees</a>
       </div>
       <ul class="hero-pts">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Two free classes before you pay anything</li>
@@ -329,8 +334,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
   </div>
   <div class="hero-pic">
-    <img src="/demo/coaching/images/hero.jpg" alt="A teacher bending over a desk to check two students' work in a classroom" width="1600" height="1109" fetchpriority="high">
-    <span class="since">1,900+ students taught since 2009</span>
+    <img data-nx="top.photo" src="/demo/coaching/images/hero.jpg" alt="A teacher bending over a desk to check two students' work in a classroom" width="1600" height="1109" fetchpriority="high">
+    <span data-nx="top.since" class="since">1,900+ students taught since 2009</span>
   </div>
 </section>
 
@@ -342,202 +347,202 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </ul>
 </div>
 
-<section class="sec" id="classes">
+<section data-nx-section="classes" class="sec" id="classes">
   <div class="wrap">
     <div class="center rv">
-      <p class="kicker c">Who we teach</p>
-      <h2 class="h2">Class 5 to Class 12, three stages</h2>
-      <p class="lede">Each stage has its own teachers and its own pace. A Class 6 child and a Class 10 child are never in the same room.</p>
+      <p data-nx="classes.kicker" class="kicker c">Who we teach</p>
+      <h2 data-nx="classes.h2" class="h2">Class 5 to Class 12, three stages</h2>
+      <p data-nx="classes.lede" class="lede">Each stage has its own teachers and its own pace. A Class 6 child and a Class 10 child are never in the same room.</p>
     </div>
     <ul class="lvl">
       <li class="lv rv">
-        <div class="num">5-8</div>
-        <h3>Foundation</h3>
-        <p>Basics done properly: tables, fractions, grammar, writing in full sentences. Mistakes caught early are cheap to fix.</p>
-        <ul><li>Maths, Science and English</li><li>Homework checked every class</li><li>Bengali-medium and English-medium batches</li><li>3 days a week, 1.5 hours</li></ul>
+        <div data-nx="classes.num" class="num">5-8</div>
+        <h3 data-nx="classes.h3">Foundation</h3>
+        <p data-nx="classes.p">Basics done properly: tables, fractions, grammar, writing in full sentences. Mistakes caught early are cheap to fix.</p>
+        <ul data-nx-list="classes.list"><li data-nx-f="li" data-nx-item>Maths, Science and English</li><li data-nx-f="li" data-nx-item>Homework checked every class</li><li data-nx-f="li" data-nx-item>Bengali-medium and English-medium batches</li><li data-nx-f="li" data-nx-item>3 days a week, 1.5 hours</li></ul>
       </li>
       <li class="lv rv">
-        <div class="num">9-10</div>
-        <h3>Madhyamik and board years</h3>
-        <p>WBBSE, CBSE and ICSE syllabus taught chapter by chapter from the board textbook, with board-pattern tests from September.</p>
-        <ul><li>Maths, Physical Science, Life Science, English</li><li>Saturday test on the week's chapters</li><li>Past 10 years' question papers solved</li><li>Test series from December</li></ul>
+        <div data-nx="classes.num2" class="num">9-10</div>
+        <h3 data-nx="classes.h32">Madhyamik and board years</h3>
+        <p data-nx="classes.p2">WBBSE, CBSE and ICSE syllabus taught chapter by chapter from the board textbook, with board-pattern tests from September.</p>
+        <ul data-nx-list="classes.list2"><li data-nx-f="li" data-nx-item>Maths, Physical Science, Life Science, English</li><li data-nx-f="li" data-nx-item>Saturday test on the week's chapters</li><li data-nx-f="li" data-nx-item>Past 10 years' question papers solved</li><li data-nx-f="li" data-nx-item>Test series from December</li></ul>
       </li>
       <li class="lv rv">
-        <div class="num">11-12</div>
-        <h3>Higher Secondary, Science</h3>
-        <p>Physics, Chemistry and Mathematics for WBCHSE, CBSE and ISC, with the board exam as the target. Entrance-exam add-on batch for those who want it.</p>
-        <ul><li>Physics, Chemistry, Maths</li><li>Batches of 12</li><li>Practical file guidance</li><li>Optional JEE Main / WBJEE problem class</li></ul>
+        <div data-nx="classes.num3" class="num">11-12</div>
+        <h3 data-nx="classes.h33">Higher Secondary, Science</h3>
+        <p data-nx="classes.p3">Physics, Chemistry and Mathematics for WBCHSE, CBSE and ISC, with the board exam as the target. Entrance-exam add-on batch for those who want it.</p>
+        <ul data-nx-list="classes.list3"><li data-nx-f="li" data-nx-item>Physics, Chemistry, Maths</li><li data-nx-f="li" data-nx-item>Batches of 12</li><li data-nx-f="li" data-nx-item>Practical file guidance</li><li data-nx-f="li" data-nx-item>Optional JEE Main / WBJEE problem class</li></ul>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="sec subj" id="subjects">
+<section data-nx-section="subjects" class="sec subj" id="subjects">
   <div class="wrap">
     <div class="rv">
-      <p class="kicker">Subjects</p>
-      <h2 class="h2">Three subjects, taught by subject teachers</h2>
-      <p class="lede">No one here teaches everything. Each subject has a teacher whose degree is in that subject.</p>
+      <p data-nx="subjects.kicker" class="kicker">Subjects</p>
+      <h2 data-nx="subjects.h2" class="h2">Three subjects, taught by subject teachers</h2>
+      <p data-nx="subjects.lede" class="lede">No one here teaches everything. Each subject has a teacher whose degree is in that subject.</p>
     </div>
-    <div class="sgrid">
-      <article class="sub rv">
-        <img src="/demo/coaching/images/maths-board.jpg" alt="Young children writing letters and numbers on slates in a classroom" width="800" height="600" loading="lazy">
-        <div class="in"><h3>Mathematics</h3><p class="who">Class 5 to 12</p><p>Arithmetic to calculus. Every chapter ends with a 20-sum sheet, and the child does not move on until the sheet is clean. Board students get a formula booklet we print ourselves.</p></div>
+    <div data-nx-list="subjects.sgrid" class="sgrid">
+      <article data-nx-item class="sub rv">
+        <img data-nx-f="photo" src="/demo/coaching/images/maths-board.jpg" alt="Young children writing letters and numbers on slates in a classroom" width="800" height="600" loading="lazy">
+        <div class="in"><h3 data-nx-f="h3">Mathematics</h3><p data-nx-f="who" class="who">Class 5 to 12</p><p data-nx-f="p">Arithmetic to calculus. Every chapter ends with a 20-sum sheet, and the child does not move on until the sheet is clean. Board students get a formula booklet we print ourselves.</p></div>
       </article>
-      <article class="sub rv">
-        <img src="/demo/coaching/images/science-lab.jpg" alt="A teacher in a saree showing anatomical models to a class of students" width="1200" height="800" loading="lazy">
-        <div class="in"><h3>Science</h3><p class="who">Physical Science, Life Science, PCM</p><p>Diagrams drawn on the board and in the copy, not photocopied. Numericals practised till they are routine. For Class 11-12, Physics and Chemistry run as separate batches.</p></div>
+      <article data-nx-item class="sub rv">
+        <img data-nx-f="photo" src="/demo/coaching/images/science-lab.jpg" alt="A teacher in a saree showing anatomical models to a class of students" width="1200" height="800" loading="lazy">
+        <div class="in"><h3 data-nx-f="h3">Science</h3><p data-nx-f="who" class="who">Physical Science, Life Science, PCM</p><p data-nx-f="p">Diagrams drawn on the board and in the copy, not photocopied. Numericals practised till they are routine. For Class 11-12, Physics and Chemistry run as separate batches.</p></div>
       </article>
-      <article class="sub rv">
-        <img src="/demo/coaching/images/notes.jpg" alt="A young child in a yellow cap writing in an exercise book" width="800" height="558" loading="lazy">
-        <div class="in"><h3>English</h3><p class="who">Class 5 to 12</p><p>Grammar, unseen passages, letter and report writing, and the textbook. Bengali-medium students get extra speaking and writing practice because that is where marks are lost.</p></div>
+      <article data-nx-item class="sub rv">
+        <img data-nx-f="photo" src="/demo/coaching/images/notes.jpg" alt="A young child in a yellow cap writing in an exercise book" width="800" height="558" loading="lazy">
+        <div class="in"><h3 data-nx-f="h3">English</h3><p data-nx-f="who" class="who">Class 5 to 12</p><p data-nx-f="p">Grammar, unseen passages, letter and report writing, and the textbook. Bengali-medium students get extra speaking and writing practice because that is where marks are lost.</p></div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="sec appr" id="method">
+<section data-nx-section="method" class="sec appr" id="method">
   <div class="wrap">
     <figure class="rv">
-      <img src="/demo/coaching/images/girl-writing.jpg" alt="A student writing carefully in a spiral notebook at a desk" width="800" height="1155" loading="lazy">
+      <img data-nx="method.photo" src="/demo/coaching/images/girl-writing.jpg" alt="A student writing carefully in a spiral notebook at a desk" width="800" height="1155" loading="lazy">
     </figure>
     <div class="rv">
-      <p class="kicker">Our method</p>
-      <h2 class="h2">How results actually happen</h2>
-      <p class="lede">There is no secret. Results come from a child being seen every week, not once before the exam.</p>
-      <ol class="method">
-        <li><span class="n">01</span><div><h3>Fifteen students to a batch</h3><p>Small enough that the teacher knows who is stuck by the second day, not the second month.</p></div></li>
-        <li><span class="n">02</span><div><h3>Test every Saturday</h3><p>Thirty minutes on the week's chapters. Copies returned Monday with corrections, not just a number.</p></div></li>
-        <li><span class="n">03</span><div><h3>Doubt hour, every day</h3><p>From 8 to 9 pm a teacher sits in Room 2. Any student from any batch can walk in with a copy.</p></div></li>
-        <li><span class="n">04</span><div><h3>Monthly report to parents</h3><p>Attendance, test marks and two lines from the teacher, sent on WhatsApp on the 1st. Parents are asked to come in twice a year.</p></div></li>
-        <li><span class="n">05</span><div><h3>Board-pattern test series</h3><p>From December, Class 10 and 12 students sit six full-length papers under exam time, in the exam hall seating.</p></div></li>
+      <p data-nx="method.kicker" class="kicker">Our method</p>
+      <h2 data-nx="method.h2" class="h2">How results actually happen</h2>
+      <p data-nx="method.lede" class="lede">There is no secret. Results come from a child being seen every week, not once before the exam.</p>
+      <ol data-nx-list="method.method" class="method">
+        <li data-nx-item><span data-nx-f="n" class="n">01</span><div><h3 data-nx-f="h3">Fifteen students to a batch</h3><p data-nx-f="p">Small enough that the teacher knows who is stuck by the second day, not the second month.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">02</span><div><h3 data-nx-f="h3">Test every Saturday</h3><p data-nx-f="p">Thirty minutes on the week's chapters. Copies returned Monday with corrections, not just a number.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">03</span><div><h3 data-nx-f="h3">Doubt hour, every day</h3><p data-nx-f="p">From 8 to 9 pm a teacher sits in Room 2. Any student from any batch can walk in with a copy.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">04</span><div><h3 data-nx-f="h3">Monthly report to parents</h3><p data-nx-f="p">Attendance, test marks and two lines from the teacher, sent on WhatsApp on the 1st. Parents are asked to come in twice a year.</p></div></li>
+        <li data-nx-item><span data-nx-f="n" class="n">05</span><div><h3 data-nx-f="h3">Board-pattern test series</h3><p data-nx-f="p">From December, Class 10 and 12 students sit six full-length papers under exam time, in the exam hall seating.</p></div></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="band">
-  <img src="/demo/coaching/images/teacher-board.jpg" alt="" width="1600" height="1067" loading="lazy">
+<section data-nx-section="section-6" class="band">
+  <img data-nx="section-6.photo" src="/demo/coaching/images/teacher-board.jpg" alt="" width="1600" height="1067" loading="lazy">
   <div class="wrap">
-    <p class="kicker">Saturday, 5 pm</p>
-    <h2>The test is the lesson</h2>
-    <p>Every Saturday the week's chapters go on a thirty-minute paper. The copies come back on Monday with the working corrected in red, not just a mark at the top. A child who sees the same mistake twice stops making it.</p>
+    <p data-nx="section-6.kicker" class="kicker">Saturday, 5 pm</p>
+    <h2 data-nx="section-6.h2">The test is the lesson</h2>
+    <p data-nx="section-6.p">Every Saturday the week's chapters go on a thirty-minute paper. The copies come back on Monday with the working corrected in red, not just a mark at the top. A child who sees the same mistake twice stops making it.</p>
   </div>
 </section>
 
-<section class="sec fees" id="fees">
+<section data-nx-section="fees" class="sec fees" id="fees">
   <div class="wrap">
     <div class="rv">
-      <p class="kicker">Batches and fees</p>
-      <h2 class="h2">What it costs, in one table</h2>
-      <p class="lede">Fees are per month, per subject group. Nothing is charged for notes, test papers or the doubt hour.</p>
+      <p data-nx="fees.kicker" class="kicker">Batches and fees</p>
+      <h2 data-nx="fees.h2" class="h2">What it costs, in one table</h2>
+      <p data-nx="fees.lede" class="lede">Fees are per month, per subject group. Nothing is charged for notes, test papers or the doubt hour.</p>
     </div>
     <div class="tbl rv">
       <table>
-        <caption class="sr">Batches, timings, batch size and monthly fees by class</caption>
-        <thead><tr><th scope="col">Class</th><th scope="col">Subjects</th><th scope="col">Days and time</th><th scope="col">Batch size</th><th scope="col">Fee per month</th></tr></thead>
-        <tbody>
-          <tr><td>Class 5-6</td><td>Maths + Science + English</td><td>Mon, Wed, Fri &middot; 4.00-5.30 pm</td><td>15</td><td>&#8377;900<small>all three subjects</small></td></tr>
-          <tr><td>Class 7-8</td><td>Maths + Science + English</td><td>Tue, Thu, Sat &middot; 4.00-5.30 pm</td><td>15</td><td>&#8377;1,100<small>all three subjects</small></td></tr>
-          <tr><td>Class 9</td><td>Maths, Physical Science, Life Science, English</td><td>Mon to Sat &middot; 5.30-7.00 pm</td><td>15</td><td>&#8377;1,500<small>&#8377;500 per single subject</small></td></tr>
-          <tr><td>Class 10 (Madhyamik / CBSE / ICSE)</td><td>Maths, Physical Science, Life Science, English</td><td>Mon to Sat &middot; 7.00-8.30 pm</td><td>15</td><td>&#8377;1,800<small>&#8377;600 per single subject</small></td></tr>
-          <tr><td>Class 11</td><td>Physics, Chemistry, Maths</td><td>Mon to Sat &middot; 6.00-8.00 pm</td><td>12</td><td>&#8377;2,400<small>&#8377;900 per single subject</small></td></tr>
-          <tr><td>Class 12</td><td>Physics, Chemistry, Maths</td><td>Mon to Sat &middot; 6.00-8.00 pm</td><td>12</td><td>&#8377;2,700<small>&#8377;1,000 per single subject</small></td></tr>
-          <tr><td>Board test series (Class 10, 12)</td><td>Six full papers, December to February</td><td>Sundays &middot; 10 am-1 pm</td><td>-</td><td>&#8377;800<small>one time, free for our regular students</small></td></tr>
+        <caption data-nx="fees.sr" class="sr">Batches, timings, batch size and monthly fees by class</caption>
+        <thead><tr><th data-nx="fees.th" scope="col">Class</th><th data-nx="fees.th2" scope="col">Subjects</th><th data-nx="fees.th3" scope="col">Days and time</th><th data-nx="fees.th4" scope="col">Batch size</th><th data-nx="fees.th5" scope="col">Fee per month</th></tr></thead>
+        <tbody data-nx-list="fees.list">
+          <tr data-nx-item><td data-nx-f="td">Class 5-6</td><td data-nx-f="td2">Maths + Science + English</td><td data-nx-f="td3">Mon, Wed, Fri &middot; 4.00-5.30 pm</td><td data-nx-f="td4">15</td><td data-nx-f="td5">&#8377;900<small>all three subjects</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Class 7-8</td><td data-nx-f="td2">Maths + Science + English</td><td data-nx-f="td3">Tue, Thu, Sat &middot; 4.00-5.30 pm</td><td data-nx-f="td4">15</td><td data-nx-f="td5">&#8377;1,100<small>all three subjects</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Class 9</td><td data-nx-f="td2">Maths, Physical Science, Life Science, English</td><td data-nx-f="td3">Mon to Sat &middot; 5.30-7.00 pm</td><td data-nx-f="td4">15</td><td data-nx-f="td5">&#8377;1,500<small>&#8377;500 per single subject</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Class 10 (Madhyamik / CBSE / ICSE)</td><td data-nx-f="td2">Maths, Physical Science, Life Science, English</td><td data-nx-f="td3">Mon to Sat &middot; 7.00-8.30 pm</td><td data-nx-f="td4">15</td><td data-nx-f="td5">&#8377;1,800<small>&#8377;600 per single subject</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Class 11</td><td data-nx-f="td2">Physics, Chemistry, Maths</td><td data-nx-f="td3">Mon to Sat &middot; 6.00-8.00 pm</td><td data-nx-f="td4">12</td><td data-nx-f="td5">&#8377;2,400<small>&#8377;900 per single subject</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Class 12</td><td data-nx-f="td2">Physics, Chemistry, Maths</td><td data-nx-f="td3">Mon to Sat &middot; 6.00-8.00 pm</td><td data-nx-f="td4">12</td><td data-nx-f="td5">&#8377;2,700<small>&#8377;1,000 per single subject</small></td></tr>
+          <tr data-nx-item><td data-nx-f="td">Board test series (Class 10, 12)</td><td data-nx-f="td2">Six full papers, December to February</td><td data-nx-f="td3">Sundays &middot; 10 am-1 pm</td><td data-nx-f="td4">-</td><td data-nx-f="td5">&#8377;800<small>one time, free for our regular students</small></td></tr>
         </tbody>
       </table>
     </div>
-    <ul class="fnote">
-      <li>Admission fee &#8377;500, once. Fees paid by the 7th of the month, cash or UPI, receipt given.</li>
-      <li>Two siblings together: &#8377;200 off the second child's monthly fee.</li>
-      <li>Two trial classes are free. If you leave in the first month, we return that month's fee.</li>
+    <ul data-nx-list="fees.fnote" class="fnote">
+      <li data-nx-f="li" data-nx-item>Admission fee &#8377;500, once. Fees paid by the 7th of the month, cash or UPI, receipt given.</li>
+      <li data-nx-f="li" data-nx-item>Two siblings together: &#8377;200 off the second child's monthly fee.</li>
+      <li data-nx-f="li" data-nx-item>Two trial classes are free. If you leave in the first month, we return that month's fee.</li>
     </ul>
   </div>
 </section>
 
-<section class="sec" id="teachers">
+<section data-nx-section="teachers" class="sec" id="teachers">
   <div class="wrap">
     <div class="center rv">
-      <p class="kicker c">Teachers</p>
-      <h2 class="h2">Who takes the classes</h2>
-      <p class="lede">Five teachers, all full time here. No rotating guest faculty.</p>
+      <p data-nx="teachers.kicker" class="kicker c">Teachers</p>
+      <h2 data-nx="teachers.h2" class="h2">Who takes the classes</h2>
+      <p data-nx="teachers.lede" class="lede">Five teachers, all full time here. No rotating guest faculty.</p>
     </div>
-    <ul class="tgrid">
-      <li class="tch rv"><div class="av" aria-hidden="true">AG</div><div><h3>Arindam Ghosh</h3><p class="q">M.Sc. Mathematics, Calcutta University &middot; Founder</p><p>Taught at a Shyambazar school for eight years before starting Dishari in 2009. Takes Maths for Class 9 to 12 himself.</p></div></li>
-      <li class="tch rv"><div class="av" aria-hidden="true">SB</div><div><h3>Sanchita Basu</h3><p class="q">M.Sc. Physics, B.Ed. &middot; 11 years at Dishari</p><p>Physical Science for Class 9-10 and Physics for 11-12. Known for making students draw every diagram twice.</p></div></li>
-      <li class="tch rv"><div class="av" aria-hidden="true">RM</div><div><h3>Rituparna Mitra</h3><p class="q">M.A. English, Jadavpur University</p><p>English for all classes. Runs the Bengali-medium speaking batch on Sunday mornings for no extra fee.</p></div></li>
-      <li class="tch rv"><div class="av" aria-hidden="true">TD</div><div><h3>Tanmoy Dutta</h3><p class="q">M.Sc. Chemistry</p><p>Chemistry for Class 11-12 and Life Science for Class 9-10. Keeps the practical files in order before the school viva.</p></div></li>
-      <li class="tch rv"><div class="av" aria-hidden="true">PS</div><div><h3>Priyanka Saha</h3><p class="q">B.Sc. Mathematics, B.Ed.</p><p>Foundation batches, Class 5 to 8. Patient with the child who is scared of sums. Most parents meet her first.</p></div></li>
-      <li class="tch rv"><div class="av" aria-hidden="true">+</div><div><h3>Doubt hour, 8 to 9 pm</h3><p class="q">Every day, Room 2</p><p>One of the five sits here each evening. Students from any batch can come without an appointment.</p></div></li>
+    <ul data-nx-list="teachers.tgrid" class="tgrid">
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">AG</div><div><h3 data-nx-f="h3">Arindam Ghosh</h3><p data-nx-f="q" class="q">M.Sc. Mathematics, Calcutta University &middot; Founder</p><p data-nx-f="p">Taught at a Shyambazar school for eight years before starting Dishari in 2009. Takes Maths for Class 9 to 12 himself.</p></div></li>
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">SB</div><div><h3 data-nx-f="h3">Sanchita Basu</h3><p data-nx-f="q" class="q">M.Sc. Physics, B.Ed. &middot; 11 years at Dishari</p><p data-nx-f="p">Physical Science for Class 9-10 and Physics for 11-12. Known for making students draw every diagram twice.</p></div></li>
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">RM</div><div><h3 data-nx-f="h3">Rituparna Mitra</h3><p data-nx-f="q" class="q">M.A. English, Jadavpur University</p><p data-nx-f="p">English for all classes. Runs the Bengali-medium speaking batch on Sunday mornings for no extra fee.</p></div></li>
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">TD</div><div><h3 data-nx-f="h3">Tanmoy Dutta</h3><p data-nx-f="q" class="q">M.Sc. Chemistry</p><p data-nx-f="p">Chemistry for Class 11-12 and Life Science for Class 9-10. Keeps the practical files in order before the school viva.</p></div></li>
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">PS</div><div><h3 data-nx-f="h3">Priyanka Saha</h3><p data-nx-f="q" class="q">B.Sc. Mathematics, B.Ed.</p><p data-nx-f="p">Foundation batches, Class 5 to 8. Patient with the child who is scared of sums. Most parents meet her first.</p></div></li>
+      <li data-nx-item class="tch rv"><div data-nx-f="av" class="av" aria-hidden="true">+</div><div><h3 data-nx-f="h3">Doubt hour, 8 to 9 pm</h3><p data-nx-f="q" class="q">Every day, Room 2</p><p data-nx-f="p">One of the five sits here each evening. Students from any batch can come without an appointment.</p></div></li>
     </ul>
   </div>
 </section>
 
-<section class="sec res" id="results">
+<section data-nx-section="results" class="sec res" id="results">
   <div class="wrap">
     <div class="rv">
-      <p class="kicker">Results</p>
-      <h2 class="h2">Numbers we keep, year after year</h2>
-      <p class="lede">We publish our students' board marks on the notice board every June, with their permission. These are from the 2025 exams.</p>
-      <ul class="facts">
-        <li class="fact"><b>63</b><span>students sat Madhyamik or Class 10 boards in 2025</span></li>
-        <li class="fact"><b>41</b><span>of them scored 80 or more in Mathematics</span></li>
-        <li class="fact"><b>28</b><span>Class 12 students, all passed, 19 with 75+ in PCM</span></li>
-        <li class="fact"><b>16</b><span>years of continuous batches since April 2009</span></li>
+      <p data-nx="results.kicker" class="kicker">Results</p>
+      <h2 data-nx="results.h2" class="h2">Numbers we keep, year after year</h2>
+      <p data-nx="results.lede" class="lede">We publish our students' board marks on the notice board every June, with their permission. These are from the 2025 exams.</p>
+      <ul data-nx-list="results.facts" class="facts">
+        <li data-nx-item class="fact"><b data-nx-f="b">63</b><span data-nx-f="span">students sat Madhyamik or Class 10 boards in 2025</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">41</b><span data-nx-f="span">of them scored 80 or more in Mathematics</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">28</b><span data-nx-f="span">Class 12 students, all passed, 19 with 75+ in PCM</span></li>
+        <li data-nx-item class="fact"><b data-nx-f="b">16</b><span data-nx-f="span">years of continuous batches since April 2009</span></li>
       </ul>
-      <blockquote class="quote">My son was getting 40 in Maths in Class 8. Arindam Sir told us plainly it would take a year. He got 87 in Madhyamik. The Saturday tests did it.<span>Kakoli, mother of a 2025 Madhyamik student, Hatibagan</span></blockquote>
+      <blockquote class="quote">My son was getting 40 in Maths in Class 8. Arindam Sir told us plainly it would take a year. He got 87 in Madhyamik. The Saturday tests did it.<span data-nx="results.span">Kakoli, mother of a 2025 Madhyamik student, Hatibagan</span></blockquote>
     </div>
-    <div class="rv"><img src="/demo/coaching/images/students-uniform.jpg" alt="Four students in blue school uniforms smiling and holding up fingers" width="1200" height="800" loading="lazy"></div>
+    <div class="rv"><img data-nx="results.photo" src="/demo/coaching/images/students-uniform.jpg" alt="Four students in blue school uniforms smiling and holding up fingers" width="1200" height="800" loading="lazy"></div>
   </div>
 </section>
 
-<section class="sec" id="gallery">
+<section data-nx-section="gallery" class="sec" id="gallery">
   <div class="wrap">
     <div class="center rv">
-      <p class="kicker c">Inside Dishari</p>
-      <h2 class="h2">Two rooms, one doubt desk, a lot of chalk</h2>
+      <p data-nx="gallery.kicker" class="kicker c">Inside Dishari</p>
+      <h2 data-nx="gallery.h2" class="h2">Two rooms, one doubt desk, a lot of chalk</h2>
     </div>
-    <div class="gal">
-      <figure class="rv"><img src="/demo/coaching/images/teacher-board.jpg" alt="A teacher standing with folded arms in front of a chalkboard" width="1600" height="1067" loading="lazy"><figcaption>Arindam Sir, Room 1</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/classroom-india.jpg" alt="Boys in checked school shirts sitting at desks in a classroom" width="1200" height="675" loading="lazy"><figcaption>Foundation batch, Class 5-6</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/exam-hall.jpg" alt="Two boys in blue school uniforms sitting at a desk and listening" width="1200" height="675" loading="lazy"><figcaption>Sunday test series</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/library.jpg" alt="Students in school uniform reading in a small library" width="1200" height="800" loading="lazy"><figcaption>Reading corner and past papers</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/boys-desk.jpg" alt="Two boys reading from a notebook at a shared desk" width="800" height="450" loading="lazy"><figcaption>Homework check before class</figcaption></figure>
-      <figure class="rv"><img src="/demo/coaching/images/books.jpg" alt="Two young boys at a desk with a school bag, waiting for class" width="800" height="450" loading="lazy"><figcaption>Foundation batch, before class</figcaption></figure>
+    <div data-nx-list="gallery.gal" class="gal">
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/teacher-board.jpg" alt="A teacher standing with folded arms in front of a chalkboard" width="1600" height="1067" loading="lazy"><figcaption data-nx-f="figcaption">Arindam Sir, Room 1</figcaption></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/classroom-india.jpg" alt="Boys in checked school shirts sitting at desks in a classroom" width="1200" height="675" loading="lazy"><figcaption data-nx-f="figcaption">Foundation batch, Class 5-6</figcaption></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/exam-hall.jpg" alt="Two boys in blue school uniforms sitting at a desk and listening" width="1200" height="675" loading="lazy"><figcaption data-nx-f="figcaption">Sunday test series</figcaption></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/library.jpg" alt="Students in school uniform reading in a small library" width="1200" height="800" loading="lazy"><figcaption data-nx-f="figcaption">Reading corner and past papers</figcaption></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/boys-desk.jpg" alt="Two boys reading from a notebook at a shared desk" width="800" height="450" loading="lazy"><figcaption data-nx-f="figcaption">Homework check before class</figcaption></figure>
+      <figure data-nx-item class="rv"><img data-nx-f="photo" src="/demo/coaching/images/books.jpg" alt="Two young boys at a desk with a school bag, waiting for class" width="800" height="450" loading="lazy"><figcaption data-nx-f="figcaption">Foundation batch, before class</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="sec" id="faq" style="padding-top:0">
+<section data-nx-section="faq" class="sec" id="faq" style="padding-top:0">
   <div class="wrap">
     <div class="center rv">
-      <p class="kicker c">Parents ask</p>
-      <h2 class="h2">Before you call</h2>
+      <p data-nx="faq.kicker" class="kicker c">Parents ask</p>
+      <h2 data-nx="faq.h2" class="h2">Before you call</h2>
     </div>
-    <div class="faq rv">
-      <details><summary>My child is in a Bengali-medium school. Is that a problem?</summary><p>No. Around half our students are from Bengali-medium schools. Foundation and Class 9-10 batches are split by medium so the teacher can explain in Bengali where needed. Notes are given in both.</p></details>
-      <details><summary>Can we join only for one subject?</summary><p>Yes, from Class 9 onward. Single-subject fees are in the table above. Class 5 to 8 is taught as one combined batch because the three subjects share the timing.</p></details>
-      <details><summary>What happens if my child misses a Saturday test?</summary><p>The same paper is given on Monday in the doubt hour. Marks still go into the monthly report, so parents see the full picture.</p></details>
-      <details><summary>Do you teach the school's own textbook or your own notes?</summary><p>The board textbook first, always. Our printed notes are a summary and extra sums, not a replacement. For ICSE and CBSE we follow the prescribed books of those boards.</p></details>
-      <details><summary>Is there a batch for students who want JEE or WBJEE?</summary><p>There is an optional problem-solving class on Sunday afternoons for Class 11-12 at &#8377;600 a month. It is a supplement, not a full entrance course. We say that plainly so nobody is misled.</p></details>
+    <div data-nx-list="faq.faq" class="faq rv">
+      <details data-nx-item><summary data-nx-f="summary">My child is in a Bengali-medium school. Is that a problem?</summary><p data-nx-f="p">No. Around half our students are from Bengali-medium schools. Foundation and Class 9-10 batches are split by medium so the teacher can explain in Bengali where needed. Notes are given in both.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">Can we join only for one subject?</summary><p data-nx-f="p">Yes, from Class 9 onward. Single-subject fees are in the table above. Class 5 to 8 is taught as one combined batch because the three subjects share the timing.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">What happens if my child misses a Saturday test?</summary><p data-nx-f="p">The same paper is given on Monday in the doubt hour. Marks still go into the monthly report, so parents see the full picture.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">Do you teach the school's own textbook or your own notes?</summary><p data-nx-f="p">The board textbook first, always. Our printed notes are a summary and extra sums, not a replacement. For ICSE and CBSE we follow the prescribed books of those boards.</p></details>
+      <details data-nx-item><summary data-nx-f="summary">Is there a batch for students who want JEE or WBJEE?</summary><p data-nx-f="p">There is an optional problem-solving class on Sunday afternoons for Class 11-12 at &#8377;600 a month. It is a supplement, not a full entrance course. We say that plainly so nobody is misled.</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec visit" id="visit">
+<section data-nx-section="visit" class="sec visit" id="visit">
   <div class="wrap">
     <div class="rv">
-      <p class="kicker">Visit us</p>
-      <h2 class="h2">First floor, above the stationery shop</h2>
+      <p data-nx="visit.kicker" class="kicker">Visit us</p>
+      <h2 data-nx="visit.h2" class="h2">First floor, above the stationery shop</h2>
       <div class="info">
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Address</h3>
-          <p>Dishari Coaching Centre<br>61B Bidhan Sarani, Shyambazar<br>Kolkata 700006<br>Five minutes' walk from Shyambazar Metro, Gate 1.</p>
-          <p style="margin-top:.8rem"><a class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006">Get directions</a></p>
+          <p data-nx="visit.p">Dishari Coaching Centre<br>61B Bidhan Sarani, Shyambazar<br>Kolkata 700006<br>Five minutes' walk from Shyambazar Metro, Gate 1.</p>
+          <p style="margin-top:.8rem"><a data-nx="visit.button" class="btn btn-line" style="min-height:44px" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006">Get directions</a></p>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Office hours</h3>
-          <div class="hours"><b>Mon to Sat</b><span>4.00 pm - 9.00 pm</span><b>Sunday</b><span>10.00 am - 1.00 pm (tests and speaking batch)</span><b>Enquiries</b><span>Any day on WhatsApp</span></div>
+          <div class="hours"><b data-nx="visit.b">Mon to Sat</b><span data-nx="visit.span">4.00 pm - 9.00 pm</span><b data-nx="visit.b2">Sunday</b><span data-nx="visit.span2">10.00 am - 1.00 pm (tests and speaking batch)</span><b data-nx="visit.b3">Enquiries</b><span data-nx="visit.span3">Any day on WhatsApp</span></div>
         </div>
         <div class="card">
           <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call or message</h3>
@@ -551,11 +556,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="sec final" id="contact">
+<section data-nx-section="contact" class="sec final" id="contact">
   <div class="wrap rv">
-    <p class="kicker c" style="color:var(--gold)">Admission</p>
-    <h2 class="h2">Two free classes. Then decide.</h2>
-    <p class="lede center">Send the child's class, board and school on WhatsApp. We reply the same evening with the batch and the trial dates.</p>
+    <p data-nx="contact.kicker" class="kicker c" style="color:var(--gold)">Admission</p>
+    <h2 data-nx="contact.h2" class="h2">Two free classes. Then decide.</h2>
+    <p data-nx="contact.lede" class="lede center">Send the child's class, board and school on WhatsApp. We reply the same evening with the batch and the trial dates.</p>
     <div class="hero-act" style="justify-content:center">
       <a class="btn btn-gold" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>WhatsApp us</a>
       <a class="btn btn-white" href="tel:+919804243159"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>Call +91 98042 43159</a>
@@ -564,19 +569,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2" fill="#C9A227"/><path d="M12 16h24M12 24h24M12 32h14" stroke="#14213D" stroke-width="3" stroke-linecap="round"/><circle cx="36" cy="32" r="4" fill="#14213D"/></svg><span>Dishari<small>Coaching Centre</small></span></a>
-      <p style="margin-top:1rem;max-width:38ch">Maths, Science and English coaching for Class 5 to 12. WBBSE, WBCHSE, CBSE and ICSE. Shyambazar, Kolkata, since 2009.</p>
+      <a class="brand" href="#top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="32" rx="2" fill="#C9A227"/><path d="M12 16h24M12 24h24M12 32h14" stroke="#14213D" stroke-width="3" stroke-linecap="round"/><circle cx="36" cy="32" r="4" fill="#14213D"/></svg><span data-nx="footer.span">Dishari<small>Coaching Centre</small></span></a>
+      <p data-nx="footer.p" style="margin-top:1rem;max-width:38ch">Maths, Science and English coaching for Class 5 to 12. WBBSE, WBCHSE, CBSE and ICSE. Shyambazar, Kolkata, since 2009.</p>
     </div>
     <div>
-      <h4>Classes</h4>
-      <ul><li><a href="#classes">Class 5-8 Foundation</a></li><li><a href="#classes">Class 9-10 Boards</a></li><li><a href="#classes">Class 11-12 Science</a></li><li><a href="#fees">Fees</a></li><li><a href="#teachers">Teachers</a></li></ul>
+      <h4 data-nx="footer.h4">Classes</h4>
+      <ul data-nx-list="footer.list"><li data-nx-item><a data-nx-f="button" href="#classes">Class 5-8 Foundation</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Class 9-10 Boards</a></li><li data-nx-item><a data-nx-f="button" href="#classes">Class 11-12 Science</a></li><li data-nx-item><a data-nx-f="button" href="#fees">Fees</a></li><li data-nx-item><a data-nx-f="button" href="#teachers">Teachers</a></li></ul>
     </div>
     <div>
-      <h4>Contact</h4>
-      <ul><li>61B Bidhan Sarani, Shyambazar, Kolkata 700006</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006">Get directions</a></li></ul>
+      <h4 data-nx="footer.h42">Contact</h4>
+      <ul><li data-nx="footer.li">61B Bidhan Sarani, Shyambazar, Kolkata 700006</li><li><a href="tel:+919804243159">+91 98042 43159</a></li><li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Dishari%20Coaching%20Centre%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business.">WhatsApp us</a></li><li><a data-nx="footer.button" href="https://www.google.com/maps?q=61B%20Bidhan%20Sarani%2C%20Shyambazar%2C%20Kolkata%20700006">Get directions</a></li></ul>
     </div>
     <p class="note">This is a sample website built by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a> to show what is possible. The business, address and prices on it are examples. &copy; 2026 Dishari Coaching Centre.</p>
   </div>
@@ -616,6 +621,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 
 </html>

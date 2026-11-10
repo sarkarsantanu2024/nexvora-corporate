@@ -324,6 +324,20 @@ h6 {
   }
 }
 
+/* The panel's reports print as a PDF: only the report area, nothing else. */
+@media print {
+  .nx-no-print,
+  header,
+  nav,
+  a[href*="wa.me"] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+}
+
 /* Material Symbols ships one variable font for every icon; these axes pick the
    weight/fill we use. Without the font-variation-settings the glyphs render at
    the wrong optical size. The transition animates the FILL axis on hover. */

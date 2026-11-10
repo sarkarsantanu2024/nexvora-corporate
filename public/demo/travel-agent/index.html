@@ -326,25 +326,30 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .reveal{opacity:1;transform:none;transition:none}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+/* phone: finger-sized links */
+@media (max-width:760px){
+  .visit__row a{display:inline-flex;align-items:center;min-height:44px}
+  .footer li{padding:0}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px}
+  .footer__note a{display:inline-block;padding-block:1rem;margin-block:-1rem}
+}
 </style>
+<meta name="nx-site" content="travel-agent">
+<meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
+<link rel="stylesheet" href="/nx/nx-demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="demo-strip">
-  <div class="wrap">
-    <a href="https://www.nexvoratechnologies.co.in/" target="_blank" rel="noopener">Sample website by Nexvora Technologies</a>
-    <a class="mid" href="https://www.nexvoratechnologies.co.in/demos" target="_blank" rel="noopener">See all samples</a>
-    <a class="pill" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhraman%20Bilash%20Tours%20%26%20Travels%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Get one like this</a>
-  </div>
-</div>
+<div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<header class="header">
+<header data-nx-section="header" class="header">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Bhraman Bilash Tours and Travels, home">
       <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#0E6E74"/><path d="M6 27c4-3 8-3 12 0s8 3 12 0 6-2 8 0" fill="none" stroke="#DDF1F0" stroke-width="2.5" stroke-linecap="round"/><circle cx="29" cy="15" r="5" fill="#F26A2E"/><path d="M8 22l9-9 6 6 4-4 8 8" fill="none" stroke="#FBF8F2" stroke-width="2.5" stroke-linejoin="round"/></svg>
-      <span><b>Bhraman Bilash</b><small>Tours &amp; Travels &middot; Gariahat</small></span>
+      <span><b data-nx="header.b">Bhraman Bilash</b><small data-nx="header.small">Tours &amp; Travels &middot; Gariahat</small></span>
     </a>
+    <span class="nx-lang"></span>
     <button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -368,38 +373,38 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <div class="backdrop"></div>
 
 <main id="main">
-<section class="hero" id="top">
+<section data-nx-section="top" class="hero" id="top">
   <div class="wrap">
     <div class="hero__text">
-      <p class="hero__tag"><span></span>Family tours from Kolkata since 2009</p>
-      <h1>Digha to Darjeeling, <em>Puri to Port Blair.</em> One office, one price, no surprises.</h1>
-      <p>We plan the whole trip: train or flight, hotel, car, sightseeing. You get one written quote per person before you pay anything. Office in Gariahat, open six days a week.</p>
+      <p data-nx="top.hero-tag" class="hero__tag"><span></span>Family tours from Kolkata since 2009</p>
+      <h1 data-nx="top.h1">Digha to Darjeeling, <em>Puri to Port Blair.</em> One office, one price, no surprises.</h1>
+      <p data-nx="top.p">We plan the whole trip: train or flight, hotel, car, sightseeing. You get one written quote per person before you pay anything. Office in Gariahat, open six days a week.</p>
       <div class="hero__cta">
         <a class="btn btn--orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhraman%20Bilash%20Tours%20%26%20Travels%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
           Get a quote on WhatsApp
         </a>
-        <a class="btn btn--ghost" href="#packages">See the packages</a>
+        <a data-nx="top.button" class="btn btn--ghost" href="#packages">See the packages</a>
       </div>
     </div>
     <div class="hero__band">
-      <img src="/demo/travel-agent/images/hero.jpg" width="1200" height="800" alt="Tea gardens on rolling hills near Darjeeling at sunset, with a family walking along the ridge" fetchpriority="high">
-      <ul class="hero__facts">
-        <li><b>16</b><span>years in business</span></li>
-        <li><b>5</b><span>fixed packages, prices shown</span></li>
-        <li><b>50%</b><span>advance, rest before travel</span></li>
+      <img data-nx="top.photo" src="/demo/travel-agent/images/hero.jpg" width="1200" height="800" alt="Tea gardens on rolling hills near Darjeeling at sunset, with a family walking along the ridge" fetchpriority="high">
+      <ul data-nx-list="top.hero-facts" class="hero__facts">
+        <li data-nx-item><b data-nx-f="b">16</b><span data-nx-f="span">years in business</span></li>
+        <li data-nx-item><b data-nx-f="b">5</b><span data-nx-f="span">fixed packages, prices shown</span></li>
+        <li data-nx-item><b data-nx-f="b">50%</b><span data-nx-f="span">advance, rest before travel</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="packages">
+<section data-nx-section="packages" class="section" id="packages">
   <div class="wrap">
     <div class="strip-head reveal">
       <div class="head">
-        <span class="kicker">Packages</span>
-        <h2 class="h2">Five trips we run every month.</h2>
-        <p class="lead" style="margin-top:.8rem">Prices are per person on twin sharing, in a standard hotel. Children under 5 travel free; 5 to 11 pay 60%.</p>
+        <span data-nx="packages.kicker" class="kicker">Packages</span>
+        <h2 data-nx="packages.h2" class="h2">Five trips we run every month.</h2>
+        <p data-nx="packages.p" class="lead" style="margin-top:.8rem">Prices are per person on twin sharing, in a standard hotel. Children under 5 travel free; 5 to 11 pay 60%.</p>
       </div>
       <span class="swipe" aria-hidden="true">Swipe or scroll to see all five <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </div>
@@ -453,12 +458,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section section--soft" id="itinerary">
+<section data-nx-section="itinerary" class="section section--soft" id="itinerary">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Day by day</span>
-      <h2 class="h2">What you do each day, and what each hotel grade costs.</h2>
-      <p class="lead" style="margin-top:.8rem">Pick a destination. Standard means a clean 2-star hotel with AC. Deluxe means a 3-star hotel with breakfast and dinner.</p>
+      <span data-nx="itinerary.kicker" class="kicker">Day by day</span>
+      <h2 data-nx="itinerary.h2" class="h2">What you do each day, and what each hotel grade costs.</h2>
+      <p data-nx="itinerary.p" class="lead" style="margin-top:.8rem">Pick a destination. Standard means a clean 2-star hotel with AC. Deluxe means a 3-star hotel with breakfast and dinner.</p>
     </div>
     <div class="tabs reveal">
       <input type="radio" name="pkg" id="t-digha" checked>
@@ -466,130 +471,130 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <input type="radio" name="pkg" id="t-darj">
       <input type="radio" name="pkg" id="t-gangtok">
       <input type="radio" name="pkg" id="t-andaman">
-      <div class="tabs__bar" role="tablist">
-        <label for="t-digha">Digha</label>
-        <label for="t-puri">Puri</label>
-        <label for="t-darj">Darjeeling</label>
-        <label for="t-gangtok">Gangtok</label>
-        <label for="t-andaman">Andaman</label>
+      <div data-nx-list="itinerary.tabs-bar" class="tabs__bar" role="tablist">
+        <label data-nx-f="label" data-nx-item for="t-digha">Digha</label>
+        <label data-nx-f="label" data-nx-item for="t-puri">Puri</label>
+        <label data-nx-f="label" data-nx-item for="t-darj">Darjeeling</label>
+        <label data-nx-f="label" data-nx-item for="t-gangtok">Gangtok</label>
+        <label data-nx-f="label" data-nx-item for="t-andaman">Andaman</label>
       </div>
       <div class="tabs__panel" id="p-digha">
         <div>
-          <h3>Digha, 2 nights 3 days</h3>
-          <p class="sub">Leaves Kolkata every Friday and on request for groups of 8 or more.</p>
-          <ol class="days">
-            <li><b>Day 1</b><span>AC bus from Esplanade at 7 am. Check in by 1 pm. Evening at Old Digha beach.</span></li>
-            <li><b>Day 2</b><span>Car to Mandarmani and Talsari. Marine aquarium on the way back. Night at the hotel.</span></li>
-            <li><b>Day 3</b><span>Morning at New Digha beach and market. Bus leaves 2 pm, Kolkata by 7 pm.</span></li>
+          <h3 data-nx="itinerary.h3">Digha, 2 nights 3 days</h3>
+          <p data-nx="itinerary.sub" class="sub">Leaves Kolkata every Friday and on request for groups of 8 or more.</p>
+          <ol data-nx-list="itinerary.days" class="days">
+            <li data-nx-item><b data-nx-f="b">Day 1</b><span data-nx-f="span">AC bus from Esplanade at 7 am. Check in by 1 pm. Evening at Old Digha beach.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 2</b><span data-nx-f="span">Car to Mandarmani and Talsari. Marine aquarium on the way back. Night at the hotel.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 3</b><span data-nx-f="span">Morning at New Digha beach and market. Bus leaves 2 pm, Kolkata by 7 pm.</span></li>
           </ol>
         </div>
         <div>
           <table class="rate">
-            <tr><th>Hotel grade</th><th>Per person</th></tr>
-            <tr><td>Standard, AC, breakfast</td><td>&#8377;4,500</td></tr>
-            <tr><td>Deluxe, sea-facing, breakfast and dinner</td><td>&#8377;6,200</td></tr>
-            <tr><td>Private car instead of bus (per car, 4 seats)</td><td>+ &#8377;5,500</td></tr>
+            <tr><th data-nx="itinerary.th">Hotel grade</th><th data-nx="itinerary.th2">Per person</th></tr>
+            <tr><td data-nx="itinerary.td">Standard, AC, breakfast</td><td data-nx="itinerary.td2">&#8377;4,500</td></tr>
+            <tr><td data-nx="itinerary.td3">Deluxe, sea-facing, breakfast and dinner</td><td data-nx="itinerary.td4">&#8377;6,200</td></tr>
+            <tr><td data-nx="itinerary.td5">Private car instead of bus (per car, 4 seats)</td><td data-nx="itinerary.td6">+ &#8377;5,500</td></tr>
           </table>
-          <p class="rate__note">Weekend and holiday dates cost &#8377;600 more per person.</p>
+          <p data-nx="itinerary.rate-note" class="rate__note">Weekend and holiday dates cost &#8377;600 more per person.</p>
         </div>
       </div>
       <div class="tabs__panel" id="p-puri">
         <div>
-          <h3>Puri, 3 nights 4 days</h3>
-          <p class="sub">Train from Howrah overnight. Hotel within walking distance of the sea.</p>
-          <ol class="days">
-            <li><b>Day 1</b><span>Overnight train from Howrah. Reach Puri early morning, check in, rest. Evening beach and Jagannath temple darshan.</span></li>
-            <li><b>Day 2</b><span>Full-day car to Konark Sun Temple, Chandrabhaga beach and Ramchandi.</span></li>
-            <li><b>Day 3</b><span>Chilika lake at Satapada, dolphin boat ride, Raghurajpur craft village.</span></li>
-            <li><b>Day 4</b><span>Morning free for the market. Afternoon train back to Howrah.</span></li>
+          <h3 data-nx="itinerary.h32">Puri, 3 nights 4 days</h3>
+          <p data-nx="itinerary.sub2" class="sub">Train from Howrah overnight. Hotel within walking distance of the sea.</p>
+          <ol data-nx-list="itinerary.days2" class="days">
+            <li data-nx-item><b data-nx-f="b">Day 1</b><span data-nx-f="span">Overnight train from Howrah. Reach Puri early morning, check in, rest. Evening beach and Jagannath temple darshan.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 2</b><span data-nx-f="span">Full-day car to Konark Sun Temple, Chandrabhaga beach and Ramchandi.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 3</b><span data-nx-f="span">Chilika lake at Satapada, dolphin boat ride, Raghurajpur craft village.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 4</b><span data-nx-f="span">Morning free for the market. Afternoon train back to Howrah.</span></li>
           </ol>
         </div>
         <div>
           <table class="rate">
-            <tr><th>Hotel grade</th><th>Per person</th></tr>
-            <tr><td>Standard, sleeper class train</td><td>&#8377;7,500</td></tr>
-            <tr><td>Standard, 3AC train</td><td>&#8377;9,200</td></tr>
-            <tr><td>Deluxe, 3AC train, breakfast and dinner</td><td>&#8377;11,800</td></tr>
+            <tr><th data-nx="itinerary.th3">Hotel grade</th><th data-nx="itinerary.th4">Per person</th></tr>
+            <tr><td data-nx="itinerary.td7">Standard, sleeper class train</td><td data-nx="itinerary.td8">&#8377;7,500</td></tr>
+            <tr><td data-nx="itinerary.td9">Standard, 3AC train</td><td data-nx="itinerary.td10">&#8377;9,200</td></tr>
+            <tr><td data-nx="itinerary.td11">Deluxe, 3AC train, breakfast and dinner</td><td data-nx="itinerary.td12">&#8377;11,800</td></tr>
           </table>
-          <p class="rate__note">Rath Yatra week: hotel prices double, book 3 months ahead.</p>
+          <p data-nx="itinerary.rate-note2" class="rate__note">Rath Yatra week: hotel prices double, book 3 months ahead.</p>
         </div>
       </div>
       <div class="tabs__panel" id="p-darj">
         <div>
-          <h3>Darjeeling, 3 nights 4 days</h3>
-          <p class="sub">Train to New Jalpaiguri, shared car up to Darjeeling. Warm clothes needed October to March.</p>
-          <ol class="days">
-            <li><b>Day 1</b><span>Overnight train from Sealdah. Car from NJP, reach Darjeeling by afternoon. Mall Road walk.</span></li>
-            <li><b>Day 2</b><span>Tiger Hill sunrise at 4 am, Ghoom monastery, Batasia Loop, then zoo, ropeway and tea garden.</span></li>
-            <li><b>Day 3</b><span>Toy train joyride to Ghoom. Afternoon at Peace Pagoda and Happy Valley tea estate.</span></li>
-            <li><b>Day 4</b><span>Car down to NJP, train home. Optional Mirik lake stop on the way.</span></li>
+          <h3 data-nx="itinerary.h33">Darjeeling, 3 nights 4 days</h3>
+          <p data-nx="itinerary.sub3" class="sub">Train to New Jalpaiguri, shared car up to Darjeeling. Warm clothes needed October to March.</p>
+          <ol data-nx-list="itinerary.days3" class="days">
+            <li data-nx-item><b data-nx-f="b">Day 1</b><span data-nx-f="span">Overnight train from Sealdah. Car from NJP, reach Darjeeling by afternoon. Mall Road walk.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 2</b><span data-nx-f="span">Tiger Hill sunrise at 4 am, Ghoom monastery, Batasia Loop, then zoo, ropeway and tea garden.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 3</b><span data-nx-f="span">Toy train joyride to Ghoom. Afternoon at Peace Pagoda and Happy Valley tea estate.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 4</b><span data-nx-f="span">Car down to NJP, train home. Optional Mirik lake stop on the way.</span></li>
           </ol>
         </div>
         <div>
           <table class="rate">
-            <tr><th>Hotel grade</th><th>Per person</th></tr>
-            <tr><td>Standard, shared car, 3AC train</td><td>&#8377;11,500</td></tr>
-            <tr><td>Deluxe, private car, breakfast and dinner</td><td>&#8377;15,800</td></tr>
-            <tr><td>Add Mirik and Kurseong day (per person)</td><td>+ &#8377;1,400</td></tr>
+            <tr><th data-nx="itinerary.th5">Hotel grade</th><th data-nx="itinerary.th6">Per person</th></tr>
+            <tr><td data-nx="itinerary.td13">Standard, shared car, 3AC train</td><td data-nx="itinerary.td14">&#8377;11,500</td></tr>
+            <tr><td data-nx="itinerary.td15">Deluxe, private car, breakfast and dinner</td><td data-nx="itinerary.td16">&#8377;15,800</td></tr>
+            <tr><td data-nx="itinerary.td17">Add Mirik and Kurseong day (per person)</td><td data-nx="itinerary.td18">+ &#8377;1,400</td></tr>
           </table>
-          <p class="rate__note">Pujo week and Christmas week: add &#8377;2,000 per person.</p>
+          <p data-nx="itinerary.rate-note3" class="rate__note">Pujo week and Christmas week: add &#8377;2,000 per person.</p>
         </div>
       </div>
       <div class="tabs__panel" id="p-gangtok">
         <div>
-          <h3>Gangtok, 4 nights 5 days</h3>
-          <p class="sub">Permits for Tsomgo and Nathula are arranged by us. Carry two passport photos and a voter card or Aadhaar.</p>
-          <ol class="days">
-            <li><b>Day 1</b><span>Train to NJP, car to Gangtok (5 hours). Evening on MG Marg.</span></li>
-            <li><b>Day 2</b><span>Tsomgo Lake and Baba Mandir. Nathula pass if the permit is granted (Wednesday to Sunday).</span></li>
-            <li><b>Day 3</b><span>Gangtok local: Rumtek monastery, Banjhakri falls, Tashi viewpoint, Ganesh Tok, flower show.</span></li>
-            <li><b>Day 4</b><span>Day trip to Namchi, Char Dham replica and Samdruptse statue. Or a free day.</span></li>
-            <li><b>Day 5</b><span>Car to NJP, train home.</span></li>
+          <h3 data-nx="itinerary.h34">Gangtok, 4 nights 5 days</h3>
+          <p data-nx="itinerary.sub4" class="sub">Permits for Tsomgo and Nathula are arranged by us. Carry two passport photos and a voter card or Aadhaar.</p>
+          <ol data-nx-list="itinerary.days4" class="days">
+            <li data-nx-item><b data-nx-f="b">Day 1</b><span data-nx-f="span">Train to NJP, car to Gangtok (5 hours). Evening on MG Marg.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 2</b><span data-nx-f="span">Tsomgo Lake and Baba Mandir. Nathula pass if the permit is granted (Wednesday to Sunday).</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 3</b><span data-nx-f="span">Gangtok local: Rumtek monastery, Banjhakri falls, Tashi viewpoint, Ganesh Tok, flower show.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 4</b><span data-nx-f="span">Day trip to Namchi, Char Dham replica and Samdruptse statue. Or a free day.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 5</b><span data-nx-f="span">Car to NJP, train home.</span></li>
           </ol>
         </div>
         <div>
           <table class="rate">
-            <tr><th>Hotel grade</th><th>Per person</th></tr>
-            <tr><td>Standard, shared car, 3AC train</td><td>&#8377;16,500</td></tr>
-            <tr><td>Deluxe, private car, breakfast and dinner</td><td>&#8377;22,500</td></tr>
-            <tr><td>Add 2 nights Lachung and Yumthang valley</td><td>+ &#8377;7,500</td></tr>
+            <tr><th data-nx="itinerary.th7">Hotel grade</th><th data-nx="itinerary.th8">Per person</th></tr>
+            <tr><td data-nx="itinerary.td19">Standard, shared car, 3AC train</td><td data-nx="itinerary.td20">&#8377;16,500</td></tr>
+            <tr><td data-nx="itinerary.td21">Deluxe, private car, breakfast and dinner</td><td data-nx="itinerary.td22">&#8377;22,500</td></tr>
+            <tr><td data-nx="itinerary.td23">Add 2 nights Lachung and Yumthang valley</td><td data-nx="itinerary.td24">+ &#8377;7,500</td></tr>
           </table>
-          <p class="rate__note">Nathula permit costs &#8377;300 extra per person and is not refundable if the pass is shut.</p>
+          <p data-nx="itinerary.rate-note4" class="rate__note">Nathula permit costs &#8377;300 extra per person and is not refundable if the pass is shut.</p>
         </div>
       </div>
       <div class="tabs__panel" id="p-andaman">
         <div>
-          <h3>Andaman, 5 nights 6 days</h3>
-          <p class="sub">Flights from Kolkata to Port Blair are booked separately and cost &#8377;9,000 to &#8377;16,000 return depending on the month.</p>
-          <ol class="days">
-            <li><b>Day 1</b><span>Fly to Port Blair. Corbyn's Cove beach, Cellular Jail light and sound show.</span></li>
-            <li><b>Day 2</b><span>Ferry to Havelock (Swaraj Dweep). Radhanagar beach for sunset.</span></li>
-            <li><b>Day 3</b><span>Elephant beach by boat, snorkelling included. Evening free.</span></li>
-            <li><b>Day 4</b><span>Ferry to Neil Island (Shaheed Dweep). Bharatpur, Laxmanpur and the natural bridge.</span></li>
-            <li><b>Day 5</b><span>Ferry back to Port Blair. Ross Island and North Bay.</span></li>
-            <li><b>Day 6</b><span>Fly home. Hotel check-out at 10 am, airport drop included.</span></li>
+          <h3 data-nx="itinerary.h35">Andaman, 5 nights 6 days</h3>
+          <p data-nx="itinerary.sub5" class="sub">Flights from Kolkata to Port Blair are booked separately and cost &#8377;9,000 to &#8377;16,000 return depending on the month.</p>
+          <ol data-nx-list="itinerary.days5" class="days">
+            <li data-nx-item><b data-nx-f="b">Day 1</b><span data-nx-f="span">Fly to Port Blair. Corbyn's Cove beach, Cellular Jail light and sound show.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 2</b><span data-nx-f="span">Ferry to Havelock (Swaraj Dweep). Radhanagar beach for sunset.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 3</b><span data-nx-f="span">Elephant beach by boat, snorkelling included. Evening free.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 4</b><span data-nx-f="span">Ferry to Neil Island (Shaheed Dweep). Bharatpur, Laxmanpur and the natural bridge.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 5</b><span data-nx-f="span">Ferry back to Port Blair. Ross Island and North Bay.</span></li>
+            <li data-nx-item><b data-nx-f="b">Day 6</b><span data-nx-f="span">Fly home. Hotel check-out at 10 am, airport drop included.</span></li>
           </ol>
         </div>
         <div>
           <table class="rate">
-            <tr><th>Hotel grade</th><th>Per person</th></tr>
-            <tr><td>Standard, government ferry</td><td>&#8377;28,000</td></tr>
-            <tr><td>Deluxe, private cruise ferry, breakfast and dinner</td><td>&#8377;39,500</td></tr>
-            <tr><td>Scuba dive at Havelock (one dive)</td><td>+ &#8377;4,000</td></tr>
+            <tr><th data-nx="itinerary.th9">Hotel grade</th><th data-nx="itinerary.th10">Per person</th></tr>
+            <tr><td data-nx="itinerary.td25">Standard, government ferry</td><td data-nx="itinerary.td26">&#8377;28,000</td></tr>
+            <tr><td data-nx="itinerary.td27">Deluxe, private cruise ferry, breakfast and dinner</td><td data-nx="itinerary.td28">&#8377;39,500</td></tr>
+            <tr><td data-nx="itinerary.td29">Scuba dive at Havelock (one dive)</td><td data-nx="itinerary.td30">+ &#8377;4,000</td></tr>
           </table>
-          <p class="rate__note">Best months: November to April. Ferries are often cancelled in the monsoon.</p>
+          <p data-nx="itinerary.rate-note5" class="rate__note">Best months: November to April. Ferries are often cancelled in the monsoon.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section--teal" id="included">
+<section data-nx-section="included" class="section section--teal" id="included">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">Read this before you book</span>
-      <h2 class="h2">What the price covers, and what it does not.</h2>
-      <p class="lead" style="margin-top:.8rem">The same list applies to every package above. We write it on the quote too.</p>
+      <span data-nx="included.kicker" class="kicker">Read this before you book</span>
+      <h2 data-nx="included.h2" class="h2">What the price covers, and what it does not.</h2>
+      <p data-nx="included.p" class="lead" style="margin-top:.8rem">The same list applies to every package above. We write it on the quote too.</p>
     </div>
     <div class="incl">
       <div class="incl__col incl--yes reveal">
@@ -618,67 +623,67 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section" id="services">
+<section data-nx-section="services" class="section" id="services">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Tickets and more</span>
-      <h2 class="h2">Not going on a package? We still do the small jobs.</h2>
-      <p class="lead" style="margin:.8rem auto 0">Walk in with your ID and dates. Most tickets are done while you wait.</p>
+      <span data-nx="services.kicker" class="kicker">Tickets and more</span>
+      <h2 data-nx="services.h2" class="h2">Not going on a package? We still do the small jobs.</h2>
+      <p data-nx="services.p" class="lead" style="margin:.8rem auto 0">Walk in with your ID and dates. Most tickets are done while you wait.</p>
     </div>
-    <ul class="svc">
-      <li class="reveal">
+    <ul data-nx-list="services.svc" class="svc">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M9 21l1.5-4M15 21l-1.5-4M8 7h.01M16 7h.01"/></svg></span>
-        <h3>Train and flight tickets</h3>
-        <p>IRCTC bookings including Tatkal from 10 am sharp. Flights on every airline, with the fare shown to you before we book.</p>
-        <span class="fee">&#8377;40 per train ticket &middot; &#8377;200 per flight ticket</span>
+        <h3 data-nx-f="h3">Train and flight tickets</h3>
+        <p data-nx-f="p">IRCTC bookings including Tatkal from 10 am sharp. Flights on every airline, with the fare shown to you before we book.</p>
+        <span data-nx-f="fee" class="fee">&#8377;40 per train ticket &middot; &#8377;200 per flight ticket</span>
       </li>
-      <li class="reveal">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg></span>
-        <h3>Hotel booking</h3>
-        <p>Hotels we have stayed in ourselves, at Digha, Puri, Darjeeling, Gangtok, Shillong and Port Blair. Confirmation on WhatsApp within an hour.</p>
-        <span class="fee">No fee. We earn from the hotel.</span>
+        <h3 data-nx-f="h3">Hotel booking</h3>
+        <p data-nx-f="p">Hotels we have stayed in ourselves, at Digha, Puri, Darjeeling, Gangtok, Shillong and Port Blair. Confirmation on WhatsApp within an hour.</p>
+        <span data-nx-f="fee" class="fee">No fee. We earn from the hotel.</span>
       </li>
-      <li class="reveal">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14l2-6a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 6v5H3Z"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/><path d="M3 14h18"/></svg></span>
-        <h3>Car hire</h3>
-        <p>AC sedan or 7-seater with driver, from Kolkata or at the destination. Fuel and driver's food included; tolls and parking extra.</p>
-        <span class="fee">Sedan &#8377;2,800 per day &middot; 7-seater &#8377;3,800 per day (8 hours, 80 km)</span>
+        <h3 data-nx-f="h3">Car hire</h3>
+        <p data-nx-f="p">AC sedan or 7-seater with driver, from Kolkata or at the destination. Fuel and driver's food included; tolls and parking extra.</p>
+        <span data-nx-f="fee" class="fee">Sedan &#8377;2,800 per day &middot; 7-seater &#8377;3,800 per day (8 hours, 80 km)</span>
       </li>
-      <li class="reveal">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0 1 12 0M14 20a4.5 4.5 0 0 1 7 0"/></svg></span>
-        <h3>Group and office tours</h3>
-        <p>Para clubs, school reunions, office outings. 20 to 60 people, one bus, one bill. We send a tour manager with groups of 30 or more.</p>
-        <span class="fee">Group rates from 10% below the per-person price</span>
+        <h3 data-nx-f="h3">Group and office tours</h3>
+        <p data-nx-f="p">Para clubs, school reunions, office outings. 20 to 60 people, one bus, one bill. We send a tour manager with groups of 30 or more.</p>
+        <span data-nx-f="fee" class="fee">Group rates from 10% below the per-person price</span>
       </li>
-      <li class="reveal">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 17h8"/></svg></span>
-        <h3>Passport and visa help</h3>
-        <p>We fill the passport form, book the PSK slot and check your documents. Tourist visas for Thailand, Singapore, Dubai, Nepal and Bhutan permits.</p>
-        <span class="fee">Passport form &#8377;500 &middot; visa service &#8377;1,500 plus the embassy fee</span>
+        <h3 data-nx-f="h3">Passport and visa help</h3>
+        <p data-nx-f="p">We fill the passport form, book the PSK slot and check your documents. Tourist visas for Thailand, Singapore, Dubai, Nepal and Bhutan permits.</p>
+        <span data-nx-f="fee" class="fee">Passport form &#8377;500 &middot; visa service &#8377;1,500 plus the embassy fee</span>
       </li>
-      <li class="reveal">
+      <li data-nx-item class="reveal">
         <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M9 12l2 2 4-4"/></svg></span>
-        <h3>Travel insurance</h3>
-        <p>Covers medical bills, lost baggage and trip cancellation. Needed for Andaman ferries and strongly advised for the hills.</p>
-        <span class="fee">From &#8377;180 per person for a 6-day trip</span>
+        <h3 data-nx-f="h3">Travel insurance</h3>
+        <p data-nx-f="p">Covers medical bills, lost baggage and trip cancellation. Needed for Andaman ferries and strongly advised for the hills.</p>
+        <span data-nx-f="fee" class="fee">From &#8377;180 per person for a 6-day trip</span>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="section section--soft" id="chardham">
+<section data-nx-section="chardham" class="section section--soft" id="chardham">
   <div class="wrap">
     <div class="dham">
       <div class="reveal">
-        <span class="kicker">Pilgrimage</span>
-        <h2 class="h2">Char Dham, 11 nights 12 days, from Haridwar.</h2>
-        <p class="lead" style="margin-top:1rem">Yamunotri, Gangotri, Kedarnath and Badrinath in one trip, May to June and September to October. Our driver has done the route for nine seasons. Pony or palki at Kedarnath and Yamunotri is booked on the spot and paid by you.</p>
-        <p>The yatra registration, hotel at every halt, a Bengali cook who travels with the group, and a pick-up at Haridwar station are all included. Train from Howrah to Haridwar is booked separately so you can choose your class.</p>
-        <ul class="dham__list">
-          <li><b>&#8377;32,000</b>per person, twin sharing, 12 to 15 people</li>
-          <li><b>&#8377;3,500</b>extra for single room throughout</li>
-          <li><b>Helicopter</b>to Kedarnath on request, about &#8377;8,000 return</li>
-          <li><b>Age 65+</b>Fitness certificate from a doctor required</li>
+        <span data-nx="chardham.kicker" class="kicker">Pilgrimage</span>
+        <h2 data-nx="chardham.h2" class="h2">Char Dham, 11 nights 12 days, from Haridwar.</h2>
+        <p data-nx="chardham.p" class="lead" style="margin-top:1rem">Yamunotri, Gangotri, Kedarnath and Badrinath in one trip, May to June and September to October. Our driver has done the route for nine seasons. Pony or palki at Kedarnath and Yamunotri is booked on the spot and paid by you.</p>
+        <p data-nx="chardham.p2">The yatra registration, hotel at every halt, a Bengali cook who travels with the group, and a pick-up at Haridwar station are all included. Train from Howrah to Haridwar is booked separately so you can choose your class.</p>
+        <ul data-nx-list="chardham.dham-list" class="dham__list">
+          <li data-nx-f="li" data-nx-item><b>&#8377;32,000</b>per person, twin sharing, 12 to 15 people</li>
+          <li data-nx-f="li" data-nx-item><b>&#8377;3,500</b>extra for single room throughout</li>
+          <li data-nx-f="li" data-nx-item><b>Helicopter</b>to Kedarnath on request, about &#8377;8,000 return</li>
+          <li data-nx-f="li" data-nx-item><b>Age 65+</b>Fitness certificate from a doctor required</li>
         </ul>
         <div class="hero__cta" style="justify-content:flex-start">
           <a class="btn btn--orange" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhraman%20Bilash%20Tours%20%26%20Travels%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">Ask for the Char Dham dates</a>
@@ -686,116 +691,116 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
       </div>
       <div class="dham__photo reveal">
-        <img src="/demo/travel-agent/images/kedarnath.jpg" width="1200" height="1304" alt="Kedarnath temple with snow-covered Himalayan peaks behind it" loading="lazy">
-        <div class="dham__price"><b>&#8377;32,000</b><span>per person, 2026 season</span></div>
+        <img data-nx="chardham.photo" src="/demo/travel-agent/images/kedarnath.jpg" width="1200" height="1304" alt="Kedarnath temple with snow-covered Himalayan peaks behind it" loading="lazy">
+        <div class="dham__price"><b data-nx="chardham.b">&#8377;32,000</b><span data-nx="chardham.span">per person, 2026 season</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="booking">
+<section data-nx-section="booking" class="section" id="booking">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">How to book</span>
-      <h2 class="h2">Four steps. The first two cost nothing.</h2>
+      <span data-nx="booking.kicker" class="kicker">How to book</span>
+      <h2 data-nx="booking.h2" class="h2">Four steps. The first two cost nothing.</h2>
     </div>
-    <ol class="stepper reveal">
-      <li><div><h3>Tell us dates and people</h3><p>WhatsApp or walk in. Give the destination, travel dates, number of adults and children, and whether you want train or flight.</p></div></li>
-      <li><div><h3>Get a written quote</h3><p>Within one working day you get a quote per person, with the hotel name, the train number and the included and not-included list.</p></div></li>
-      <li><div><h3>Pay 50% to confirm</h3><p>UPI, bank transfer or cash at the office. We book the tickets and the hotel the same day and send you the confirmations.</p></div></li>
-      <li><div><h3>Pay the rest, then travel</h3><p>Balance is due 7 days before departure. You get a printed itinerary, driver's number and our 24-hour number for the trip.</p></div></li>
+    <ol data-nx-list="booking.stepper" class="stepper reveal">
+      <li data-nx-item><div><h3 data-nx-f="h3">Tell us dates and people</h3><p data-nx-f="p">WhatsApp or walk in. Give the destination, travel dates, number of adults and children, and whether you want train or flight.</p></div></li>
+      <li data-nx-item><div><h3 data-nx-f="h3">Get a written quote</h3><p data-nx-f="p">Within one working day you get a quote per person, with the hotel name, the train number and the included and not-included list.</p></div></li>
+      <li data-nx-item><div><h3 data-nx-f="h3">Pay 50% to confirm</h3><p data-nx-f="p">UPI, bank transfer or cash at the office. We book the tickets and the hotel the same day and send you the confirmations.</p></div></li>
+      <li data-nx-item><div><h3 data-nx-f="h3">Pay the rest, then travel</h3><p data-nx-f="p">Balance is due 7 days before departure. You get a printed itinerary, driver's number and our 24-hour number for the trip.</p></div></li>
     </ol>
   </div>
 </section>
 
-<section class="section section--soft" id="faq">
+<section data-nx-section="faq" class="section section--soft" id="faq">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">Questions people ask</span>
-      <h2 class="h2">Before you send the advance.</h2>
+      <span data-nx="faq.kicker" class="kicker">Questions people ask</span>
+      <h2 data-nx="faq.h2" class="h2">Before you send the advance.</h2>
     </div>
-    <div class="faq reveal">
-      <details>
-        <summary>What if I cancel?</summary>
-        <p>More than 30 days before travel: full refund minus what the railway or airline keeps. 15 to 30 days: we keep 25% of the package. Under 15 days: we keep 50%. Under 72 hours: no refund, because the hotel does not refund us either. Every refund is paid within 7 working days.</p>
+    <div data-nx-list="faq.faq" class="faq reveal">
+      <details data-nx-item>
+        <summary data-nx-f="summary">What if I cancel?</summary>
+        <p data-nx-f="p">More than 30 days before travel: full refund minus what the railway or airline keeps. 15 to 30 days: we keep 25% of the package. Under 15 days: we keep 50%. Under 72 hours: no refund, because the hotel does not refund us either. Every refund is paid within 7 working days.</p>
       </details>
-      <details>
-        <summary>What do children pay?</summary>
-        <p>Under 5 years, sharing the parents' bed: free, you only pay the train or flight ticket if a seat is needed. 5 to 11 years with an extra bed: 60% of the adult price. 12 and above: adult price.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">What do children pay?</summary>
+        <p data-nx-f="p">Under 5 years, sharing the parents' bed: free, you only pay the train or flight ticket if a seat is needed. 5 to 11 years with an extra bed: 60% of the adult price. 12 and above: adult price.</p>
       </details>
-      <details>
-        <summary>What if the train ticket is waitlisted?</summary>
-        <p>We book the day the window opens, 60 days ahead, so most tickets confirm. If a ticket is still waitlisted 7 days before, we tell you and offer a bus, a different train, or a full refund of that package. We never make you travel on a waitlisted ticket.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">What if the train ticket is waitlisted?</summary>
+        <p data-nx-f="p">We book the day the window opens, 60 days ahead, so most tickets confirm. If a ticket is still waitlisted 7 days before, we tell you and offer a bus, a different train, or a full refund of that package. We never make you travel on a waitlisted ticket.</p>
       </details>
-      <details>
-        <summary>Can I change the dates or the hotel?</summary>
-        <p>Yes. Every package can run on your own dates for 2 people or more. You can pick a different hotel from our list, or name one you know; we quote the difference. Honeymoon rooms and ground-floor rooms for elderly travellers are arranged on request.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">Can I change the dates or the hotel?</summary>
+        <p data-nx-f="p">Yes. Every package can run on your own dates for 2 people or more. You can pick a different hotel from our list, or name one you know; we quote the difference. Honeymoon rooms and ground-floor rooms for elderly travellers are arranged on request.</p>
       </details>
-      <details>
-        <summary>How do I pay, and do I get a receipt?</summary>
-        <p>UPI, bank transfer, debit card at the office, or cash. Every payment gets a printed receipt with a GST invoice. We do not take payment on any personal UPI number; the name on the UPI is always Bhraman Bilash Tours and Travels.</p>
+      <details data-nx-item>
+        <summary data-nx-f="summary">How do I pay, and do I get a receipt?</summary>
+        <p data-nx-f="p">UPI, bank transfer, debit card at the office, or cash. Every payment gets a printed receipt with a GST invoice. We do not take payment on any personal UPI number; the name on the UPI is always Bhraman Bilash Tours and Travels.</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section data-nx-section="section-10" class="section">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">What travellers say</span>
-      <h2 class="h2">Two trips from last year.</h2>
+      <span data-nx="section-10.kicker" class="kicker">What travellers say</span>
+      <h2 data-nx="section-10.h2" class="h2">Two trips from last year.</h2>
     </div>
-    <div class="quotes">
-      <blockquote class="reveal"><p>Took my parents to Puri in March. The hotel was the one in the quote, the car came on time every day, and when Baba felt unwell the driver took us to a doctor without being asked.</p><footer>Rituparna <span>&middot; Jadavpur</span></footer></blockquote>
-      <blockquote class="reveal"><p>Our office went to Gangtok, 34 people. One bill, one bus, permits all done beforehand. Nathula was shut that day and they refunded the permit money the same week.</p><footer>Debashis <span>&middot; Salt Lake Sector V</span></footer></blockquote>
+    <div data-nx-list="section-10.quotes" class="quotes">
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Took my parents to Puri in March. The hotel was the one in the quote, the car came on time every day, and when Baba felt unwell the driver took us to a doctor without being asked.</p><footer>Rituparna <span data-nx-f="span">&middot; Jadavpur</span></footer></blockquote>
+      <blockquote data-nx-item class="reveal"><p data-nx-f="p">Our office went to Gangtok, 34 people. One bill, one bus, permits all done beforehand. Nathula was shut that day and they refunded the permit money the same week.</p><footer>Debashis <span data-nx-f="span">&middot; Salt Lake Sector V</span></footer></blockquote>
     </div>
   </div>
 </section>
 
-<section class="section section--soft" id="gallery">
+<section data-nx-section="gallery" class="section section--soft" id="gallery">
   <div class="wrap">
     <div class="head head--center reveal">
-      <span class="kicker">From our trips</span>
-      <h2 class="h2">Photos sent back by travellers.</h2>
+      <span data-nx="gallery.kicker" class="kicker">From our trips</span>
+      <h2 data-nx="gallery.h2" class="h2">Photos sent back by travellers.</h2>
     </div>
-    <ul class="gallery reveal">
-      <li><img src="/demo/travel-agent/images/sikkim.jpg" width="1200" height="1600" alt="Kangchenjunga peaks above a Sikkim valley" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/toy-train.jpg" width="1200" height="1680" alt="Darjeeling toy train on the hill track" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/puri-pilgrims.jpg" width="1200" height="1800" alt="Two pilgrims in orange walking along Puri beach" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/digha-boats.jpg" width="1200" height="900" alt="Fishermen pulling a net at Digha beach at sunrise" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/ropeway.jpg" width="1200" height="1800" alt="Darjeeling ropeway cabin above tea gardens" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/andaman-aerial.jpg" width="1200" height="899" alt="Aerial view of Jolly Buoy island beach in the Andamans" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/family-beach.jpg" width="1200" height="1600" alt="A father and two children by a fishing boat on the beach" loading="lazy"></li>
-      <li><img src="/demo/travel-agent/images/yumthang.jpg" width="1200" height="1600" alt="Yumthang valley in North Sikkim" loading="lazy"></li>
+    <ul data-nx-list="gallery.gallery" class="gallery reveal">
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/sikkim.jpg" width="1200" height="1600" alt="Kangchenjunga peaks above a Sikkim valley" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/toy-train.jpg" width="1200" height="1680" alt="Darjeeling toy train on the hill track" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/puri-pilgrims.jpg" width="1200" height="1800" alt="Two pilgrims in orange walking along Puri beach" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/digha-boats.jpg" width="1200" height="900" alt="Fishermen pulling a net at Digha beach at sunrise" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/ropeway.jpg" width="1200" height="1800" alt="Darjeeling ropeway cabin above tea gardens" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/andaman-aerial.jpg" width="1200" height="899" alt="Aerial view of Jolly Buoy island beach in the Andamans" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/family-beach.jpg" width="1200" height="1600" alt="A father and two children by a fishing boat on the beach" loading="lazy"></li>
+      <li data-nx-item><img data-nx-f="photo" src="/demo/travel-agent/images/yumthang.jpg" width="1200" height="1600" alt="Yumthang valley in North Sikkim" loading="lazy"></li>
     </ul>
   </div>
 </section>
 
-<section class="section" id="visit">
+<section data-nx-section="visit" class="section" id="visit">
   <div class="wrap">
     <div class="head reveal">
-      <span class="kicker">The office</span>
-      <h2 class="h2">On Rashbehari Avenue, opposite Gariahat market.</h2>
+      <span data-nx="visit.kicker" class="kicker">The office</span>
+      <h2 data-nx="visit.h2" class="h2">On Rashbehari Avenue, opposite Gariahat market.</h2>
     </div>
     <div class="visit">
       <div class="visit__card reveal">
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div><b>Address</b><p>14B Rashbehari Avenue, 1st floor, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a href="https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
+          <div><b data-nx="visit.b">Address</b><p data-nx="visit.p">14B Rashbehari Avenue, 1st floor, Gariahat<br>Kolkata 700019</p><p style="margin-top:.3rem"><a data-nx="visit.button" href="https://www.google.com/maps?q=14B%20Rashbehari%20Avenue%2C%20Gariahat%2C%20Kolkata%20700019" target="_blank" rel="noopener">Get directions &rarr;</a></p></div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <div style="flex:1"><b>Office hours</b>
-            <table class="hours">
-              <tr><td>Monday to Saturday</td><td>10:00 am &ndash; 8:00 pm</td></tr>
-              <tr><td>Sunday</td><td>11:00 am &ndash; 3:00 pm</td></tr>
-              <tr><td>Tatkal booking</td><td>From 9:45 am, every day</td></tr>
+          <div style="flex:1"><b data-nx="visit.b2">Office hours</b>
+            <table data-nx-list="visit.hours" class="hours">
+              <tr data-nx-item><td data-nx-f="td">Monday to Saturday</td><td data-nx-f="td2">10:00 am &ndash; 8:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Sunday</td><td data-nx-f="td2">11:00 am &ndash; 3:00 pm</td></tr>
+              <tr data-nx-item><td data-nx-f="td">Tatkal booking</td><td data-nx-f="td2">From 9:45 am, every day</td></tr>
             </table>
           </div>
         </div>
         <div class="visit__row">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 3h3l1.5 4.1-2 1.4a12.4 12.4 0 0 0 6.4 6.4l1.4-2 4.1 1.5v3a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
-          <div><b>Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p style="font-size:.88rem;color:var(--muted)">Same number on WhatsApp. Travellers on a trip can call it any hour.</p></div>
+          <div><b data-nx="visit.b3">Phone</b><p><a href="tel:+919804243159">+91 98042 43159</a></p><p data-nx="visit.p2" style="font-size:.88rem;color:var(--muted)">Same number on WhatsApp. Travellers on a trip can call it any hour.</p></div>
         </div>
         <div class="visit__cta">
           <a class="btn btn--teal" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhraman%20Bilash%20Tours%20%26%20Travels%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a>
@@ -809,10 +814,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
-<section class="section final" id="quote">
+<section data-nx-section="quote" class="section final" id="quote">
   <div class="wrap reveal">
-    <h2>Send your dates. Get a price per person by tomorrow.</h2>
-    <p>Destination, dates, how many adults and children. That is all we need to send a written quote.</p>
+    <h2 data-nx="quote.h2">Send your dates. Get a price per person by tomorrow.</h2>
+    <p data-nx="quote.p">Destination, dates, how many adults and children. That is all we need to send a written quote.</p>
     <div class="final__cta">
       <a class="btn btn--teal" href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Bhraman%20Bilash%20Tours%20%26%20Travels%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.2 1.3-1.9 1.4-.5.1-1.1.2-3.2-.7-2.7-1.1-4.4-3.9-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 2 .9 2.1c.1.2.1.3 0 .5s-.2.4-.3.5l-.4.5c-.1.1-.3.3-.1.6s.6 1.1 1.4 1.8c1 .9 1.8 1.1 2.1 1.3.3.1.4.1.6-.1s.7-.8.9-1.1c.2-.3.4-.2.6-.1s1.6.8 1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
@@ -827,32 +832,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </section>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="grid">
       <div>
         <a class="brand" href="#top">
           <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#F26A2E"/><path d="M6 27c4-3 8-3 12 0s8 3 12 0 6-2 8 0" fill="none" stroke="#FBF8F2" stroke-width="2.5" stroke-linecap="round"/><circle cx="29" cy="15" r="5" fill="#0E6E74"/><path d="M8 22l9-9 6 6 4-4 8 8" fill="none" stroke="#FBF8F2" stroke-width="2.5" stroke-linejoin="round"/></svg>
-          <span><b>Bhraman Bilash</b><small>Tours &amp; Travels &middot; Gariahat</small></span>
+          <span><b data-nx="footer.b">Bhraman Bilash</b><small data-nx="footer.small">Tours &amp; Travels &middot; Gariahat</small></span>
         </a>
-        <p>Family tours to the sea and the hills, tickets, hotels and cars, from one office in Gariahat since 2009.</p>
+        <p data-nx="footer.p">Family tours to the sea and the hills, tickets, hotels and cars, from one office in Gariahat since 2009.</p>
       </div>
       <div>
-        <h4>Trips</h4>
-        <ul>
-          <li><a href="#packages">Packages and prices</a></li>
-          <li><a href="#itinerary">Day-by-day plans</a></li>
-          <li><a href="#chardham">Char Dham pilgrimage</a></li>
-          <li><a href="#services">Tickets, hotels, cars</a></li>
-          <li><a href="#faq">Cancellation and payment</a></li>
+        <h4 data-nx="footer.h4">Trips</h4>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="button" href="#packages">Packages and prices</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#itinerary">Day-by-day plans</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#chardham">Char Dham pilgrimage</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#services">Tickets, hotels, cars</a></li>
+          <li data-nx-item><a data-nx-f="button" href="#faq">Cancellation and payment</a></li>
         </ul>
       </div>
       <div>
-        <h4>Find us</h4>
+        <h4 data-nx="footer.h42">Find us</h4>
         <ul>
-          <li>14B Rashbehari Avenue, Gariahat, Kolkata 700019</li>
+          <li data-nx="footer.li">14B Rashbehari Avenue, Gariahat, Kolkata 700019</li>
           <li><a href="tel:+919804243159">+91 98042 43159</a></li>
-          <li>Mon&ndash;Sat 10 am &ndash; 8 pm &middot; Sun 11 am &ndash; 3 pm</li>
+          <li data-nx="footer.li2">Mon&ndash;Sat 10 am &ndash; 8 pm &middot; Sun 11 am &ndash; 3 pm</li>
         </ul>
       </div>
     </div>
@@ -894,5 +899,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   els.forEach(function(e){io.observe(e)});
 })();
 </script>
+<script src="/nx/nx-content.js" defer></script>
+<script src="/nx/nx-lang.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,2368 @@
+{
+  "site": "activity-center",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Anondo Kids Activity Hub, Behala",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "chip",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "chip2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "chip3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "chip4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "chip5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "chip6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2399"
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:532"
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:465"
+        },
+        {
+          "key": "badge",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "classes",
+      "label": {
+        "en": "Pick one class or mix two",
+        "bn": "Pick one class or mix two"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2400"
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1887"
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:801"
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee4",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee5",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "dt16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dt18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "dd18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "fee6",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "timetable",
+      "label": {
+        "en": "Find a slot after school",
+        "bn": "Find a slot after school"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sr",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot7",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot8",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot9",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot10",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot11",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot12",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot13",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot16",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th14",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot17",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot18",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot19",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot20",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot21",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "th15",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "slot22",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot23",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot24",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot25",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "slot26",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "key",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": {
+        "en": "Started in a two-room flat in 2016",
+        "bn": "Started in a two-room flat in 2016"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:800"
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "lede2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "facts",
+          "label": {
+            "en": "Started in a two-room flat in 2016",
+            "bn": "Started in a two-room flat in 2016"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "join",
+      "label": {
+        "en": "Four steps, no forms to print",
+        "bn": "Four steps, no forms to print"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-7",
+      "label": {
+        "en": "Every child goes on stage once a year",
+        "bn": "Every child goes on stage once a year"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:2400"
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "gallery",
+      "label": {
+        "en": "A normal week at Anondo",
+        "bn": "A normal week at Anondo"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:533"
+        },
+        {
+          "key": "figcaption2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:533"
+        },
+        {
+          "key": "figcaption3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "figcaption4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:532"
+        },
+        {
+          "key": "figcaption5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "800:1200"
+        },
+        {
+          "key": "figcaption6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "parents",
+      "label": {
+        "en": "Why families stay for years",
+        "bn": "Why families stay for years"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "label": {
+        "en": "Plain fee card",
+        "bn": "Plain fee card"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sr",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "feenote",
+          "type": "textarea",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "tag2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Plain fee card",
+            "bn": "Plain fee card"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Ground floor, next to the Behala tram depot stop",
+        "bn": "Ground floor, next to the Behala tram depot stop"
+      },
+      "fields": [
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Bring your child for one free class",
+        "bn": "Bring your child for one free class"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Classes",
+            "bn": "Classes"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "span": "Anondo<small>Kids Activity Hub</small>"
+    },
+    "top": {
+      "tag": "Behala, Kolkata · Ages 4 to 14",
+      "h1": "Six classes.<br><span class=\"c1\">One happy</span> <span class=\"c2\">roof.</span>",
+      "lede": "Dance, drawing, karate, music, abacus and spoken English, all at one address on Diamond Harbour Road. One fee card, one pickup point, and no running across Behala between tuitions.",
+      "chip": "Dance",
+      "chip2": "Drawing",
+      "chip3": "Karate",
+      "chip4": "Music",
+      "chip5": "Abacus",
+      "chip6": "Spoken English",
+      "button": "See the timetable",
+      "p": "First class is free. Admissions open all year. Batches of 12 or fewer.",
+      "photo": {
+        "src": "/demo/activity-center/images/hero.jpg",
+        "alt": "A young girl in a red and gold Bharatanatyam costume holding a dance pose"
+      },
+      "photo2": {
+        "src": "/demo/activity-center/images/karate-boy.jpg",
+        "alt": "A karateka in a white gi performing a kata at a Kolkata demonstration"
+      },
+      "photo3": {
+        "src": "/demo/activity-center/images/drawing-closeup.jpg",
+        "alt": "A girl writing in an exercise book while other children play behind her"
+      },
+      "badge": "Since 2016<span>240+ kids</span>"
+    },
+    "classes": {
+      "tag": "What we teach",
+      "h2": "Pick one class or mix two",
+      "lede": "Every class has its own trained teacher, its own room and its own colour on the timetable. Children who take two classes get a discount on the second.",
+      "photo": {
+        "src": "/demo/activity-center/images/dance-class.jpg",
+        "alt": "A young boy dancing in traditional dress beside an Odissi dancer at a festival"
+      },
+      "p": "Rabindra Nritya, folk and Bollywood. Children perform twice a year at our annual show and at the para Pujo stage.",
+      "dt": "Ages",
+      "dd": "4 to 14",
+      "dt2": "Days",
+      "dd2": "Mon, Wed, Fri",
+      "dt3": "Teacher",
+      "dd3": "Mitali di, 18 years teaching",
+      "fee": "&#8377;700 <small>/ month, 12 classes</small>",
+      "photo2": {
+        "src": "/demo/activity-center/images/drawing-class.jpg",
+        "alt": "A girl colouring a drawing with crayons at a table"
+      },
+      "p2": "Pencil, crayon, poster colour and watercolour. We prepare children for school art exams and district drawing competitions.",
+      "dt4": "Ages",
+      "dd4": "4 to 14",
+      "dt5": "Days",
+      "dd5": "Tue, Thu, Sat",
+      "dt6": "Teacher",
+      "dd6": "Sourav da, Govt. Art College",
+      "fee2": "&#8377;600 <small>/ month, 12 classes</small>",
+      "photo3": {
+        "src": "/demo/activity-center/images/karate-class.jpg",
+        "alt": "Two young students sparring in protective gear at a taekwondo match"
+      },
+      "p3": "Shotokan karate with belt gradings every six months. Good for confidence, focus and fitness. Uniform available at the centre.",
+      "dt7": "Ages",
+      "dd7": "6 to 14",
+      "dt8": "Days",
+      "dd8": "Mon, Wed, Fri",
+      "dt9": "Teacher",
+      "dd9": "Sensei Arup, 3rd Dan",
+      "fee3": "&#8377;800 <small>/ month, 12 classes</small>",
+      "photo4": {
+        "src": "/demo/activity-center/images/music-class.jpg",
+        "alt": "A teacher in a blue saree playing harmonium while four children sing along"
+      },
+      "p4": "Rabindrasangeet and light vocal, with harmonium and keyboard basics. Small groups so every child gets to sing alone too.",
+      "dt10": "Ages",
+      "dd10": "5 to 14",
+      "dt11": "Days",
+      "dd11": "Tue, Thu, Sat",
+      "dt12": "Teacher",
+      "dd12": "Rupsha di, Sangeet Visharad",
+      "fee4": "&#8377;750 <small>/ month, 12 classes</small>",
+      "photo5": {
+        "src": "/demo/activity-center/images/abacus-class.jpg",
+        "alt": "A girl writing sums in a lined notebook with a pencil"
+      },
+      "p5": "Eight levels of abacus and mental arithmetic. Children do sums faster than a calculator by Level 4 and sit for national competitions.",
+      "dt13": "Ages",
+      "dd13": "5 to 12",
+      "dt14": "Days",
+      "dd14": "Sat and Sun",
+      "dt15": "Teacher",
+      "dd15": "Payel di, certified trainer",
+      "fee5": "&#8377;650 <small>/ month, 8 classes</small>",
+      "photo6": {
+        "src": "/demo/activity-center/images/english-class.jpg",
+        "alt": "Schoolgirls in white uniforms listening in a classroom"
+      },
+      "p6": "Speaking practice, not grammar drills. Stories, show-and-tell, short speeches. Children from Bengali-medium schools pick up fast.",
+      "dt16": "Ages",
+      "dd16": "6 to 14",
+      "dt17": "Days",
+      "dd17": "Sat and Sun",
+      "dt18": "Teacher",
+      "dd18": "Ananya di, M.A. English",
+      "fee6": "&#8377;700 <small>/ month, 8 classes</small>"
+    },
+    "timetable": {
+      "tag": "Weekly timetable",
+      "h2": "Find a slot after school",
+      "lede": "All weekday classes run after 3.30 pm so children come straight from school. Weekend classes are in the morning. Slide the table sideways on a phone.",
+      "sr": "Weekly class timetable by day and time",
+      "th": "Time",
+      "th2": "Mon",
+      "th3": "Tue",
+      "th4": "Wed",
+      "th5": "Thu",
+      "th6": "Fri",
+      "th7": "Sat",
+      "th8": "Sun",
+      "th9": "9.00 - 10.00",
+      "slot": "Abacus<small>Levels 1-3</small>",
+      "slot2": "Abacus<small>Levels 4-8</small>",
+      "th10": "10.15 - 11.15",
+      "slot3": "Spoken English<small>Ages 6-9</small>",
+      "slot4": "Spoken English<small>Ages 10-14</small>",
+      "th11": "11.30 - 12.30",
+      "slot5": "Drawing<small>Hobby batch</small>",
+      "slot6": "Music<small>Harmonium</small>",
+      "th12": "4.00 - 5.00",
+      "slot7": "Dance<small>Ages 4-7</small>",
+      "slot8": "Drawing<small>Ages 4-7</small>",
+      "slot9": "Dance<small>Ages 4-7</small>",
+      "slot10": "Drawing<small>Ages 4-7</small>",
+      "slot11": "Dance<small>Ages 4-7</small>",
+      "th13": "5.00 - 6.00",
+      "slot12": "Karate<small>White to green</small>",
+      "slot13": "Music<small>Ages 5-9</small>",
+      "slot14": "Karate<small>White to green</small>",
+      "slot15": "Music<small>Ages 5-9</small>",
+      "slot16": "Karate<small>White to green</small>",
+      "th14": "6.00 - 7.00",
+      "slot17": "Dance<small>Ages 8-14</small>",
+      "slot18": "Drawing<small>Ages 8-14</small>",
+      "slot19": "Dance<small>Ages 8-14</small>",
+      "slot20": "Drawing<small>Ages 8-14</small>",
+      "slot21": "Dance<small>Ages 8-14</small>",
+      "th15": "7.00 - 8.00",
+      "slot22": "Karate<small>Blue belt and up</small>",
+      "slot23": "Music<small>Ages 10-14</small>",
+      "slot24": "Karate<small>Blue belt and up</small>",
+      "slot25": "Music<small>Ages 10-14</small>",
+      "slot26": "Karate<small>Blue belt and up</small>",
+      "p": "Centre is closed on Wednesday mornings and on the main Pujo days. Timetable changes are sent on the parents' WhatsApp group a week ahead.",
+      "key": {
+        "items": [
+          {
+            "li": "<i style=\"background:var(--coral)\"></i>Dance"
+          },
+          {
+            "li": "<i style=\"background:var(--sun)\"></i>Drawing"
+          },
+          {
+            "li": "<i style=\"background:var(--teal)\"></i>Karate"
+          },
+          {
+            "li": "<i style=\"background:var(--grape)\"></i>Music"
+          },
+          {
+            "li": "<i style=\"background:var(--leaf)\"></i>Abacus"
+          },
+          {
+            "li": "<i style=\"background:var(--sky)\"></i>Spoken English"
+          }
+        ]
+      }
+    },
+    "about": {
+      "photo": {
+        "src": "/demo/activity-center/images/teacher-kids.jpg",
+        "alt": "A teacher at a smart board in front of a class of students in maroon uniforms"
+      },
+      "tag": "About us",
+      "h2": "Started in a two-room flat in 2016",
+      "lede": "Mitali Sen taught dance from her front room in Behala for nine years before taking the ground floor at 14/1 Diamond Harbour Road. Parents kept asking if someone could also teach drawing, then karate, then English. So we added one class at a time, hiring teachers we would send our own children to.",
+      "lede2": "Today there are three air-conditioned rooms, nine teachers and a small waiting area with a water filter where parents sit and chat. We know every child by name.",
+      "facts": {
+        "items": [
+          {
+            "b": "9",
+            "span": "trained teachers"
+          },
+          {
+            "b": "240+",
+            "span": "children this year"
+          },
+          {
+            "b": "12",
+            "span": "maximum per batch"
+          },
+          {
+            "b": "2",
+            "span": "stage shows every year"
+          }
+        ]
+      }
+    },
+    "join": {
+      "tag": "How to join",
+      "h2": "Four steps, no forms to print",
+      "h3": "The first class is always free",
+      "p": "Try dance on Monday and karate on Wednesday if you like. Decide after.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Message us",
+            "p": "Send the child's age and the class you have in mind on WhatsApp. We reply within the day with the free slots."
+          },
+          {
+            "h3": "Come for a free class",
+            "p": "The child sits in one full class. Parents can watch from the waiting area. No payment that day."
+          },
+          {
+            "h3": "Pay for the month",
+            "p": "Fees are monthly, paid by UPI or cash at the desk by the 10th. There is a one-time admission fee of ₹300."
+          },
+          {
+            "h3": "Join the parents' group",
+            "p": "Timetable changes, holidays, show dates and photos from class come on the WhatsApp group."
+          }
+        ]
+      }
+    },
+    "section-7": {
+      "photo": {
+        "src": "/demo/activity-center/images/dance-class.jpg",
+        "alt": ""
+      },
+      "tag": "Annual show",
+      "h2": "Every child goes on stage once a year",
+      "p": "Our annual show is in December at the Behala Blind School auditorium. Dance, music and karate students perform. Drawing students' work is hung in the lobby. Parents come, grandparents come, nobody sits at the back."
+    },
+    "gallery": {
+      "tag": "Gallery",
+      "h2": "A normal week at Anondo",
+      "photo": {
+        "src": "/demo/activity-center/images/dance-indian.jpg",
+        "alt": "A young girl in a pink and orange dance costume holding a classical pose"
+      },
+      "figcaption": "Annual show rehearsal",
+      "photo2": {
+        "src": "/demo/activity-center/images/gallery-painting.jpg",
+        "alt": "A boy holding out a fistful of colourful crayons"
+      },
+      "figcaption2": "Crayon day, juniors",
+      "photo3": {
+        "src": "/demo/activity-center/images/gallery-reading.jpg",
+        "alt": "Two girls working at a desk with crayons and worksheets"
+      },
+      "figcaption3": "Worksheet time, Spoken English",
+      "photo4": {
+        "src": "/demo/activity-center/images/music-guitar.jpg",
+        "alt": "A young girl in traditional dress smiling with a tanpura"
+      },
+      "figcaption4": "Music, junior batch",
+      "photo5": {
+        "src": "/demo/activity-center/images/karate-boy.jpg",
+        "alt": "A karate demonstration on the mat"
+      },
+      "figcaption5": "Belt grading practice",
+      "photo6": {
+        "src": "/demo/activity-center/images/gallery-cultural.jpg",
+        "alt": "Children in traditional dress seated at a school cultural event"
+      },
+      "figcaption6": "Saraswati Pujo at the centre"
+    },
+    "parents": {
+      "tag": "Parents say",
+      "h2": "Why families stay for years",
+      "quotes": {
+        "items": [
+          {
+            "p": "My daughter does dance and drawing on alternate days, so I drop her at 4 and pick her up at 6 from the same gate. For a working mother that is the whole point.",
+            "span": "Mother of Riya, 8, Sahapur"
+          },
+          {
+            "p": "Our son would not speak a word of English in front of people. After eight months of the Sunday batch he gave a two-minute speech at his school. We were not expecting that.",
+            "span": "Father of Aarav, 11, Parnasree"
+          }
+        ]
+      }
+    },
+    "fees": {
+      "tag": "Fees",
+      "h2": "Plain fee card",
+      "lede": "Monthly fees, no yearly lock-in. Leave with a week's notice.",
+      "sr": "Monthly fees by class",
+      "th": "Class",
+      "th2": "Classes a month",
+      "th3": "Fee",
+      "feenote": "Karate uniform ₹650 and drawing kit ₹350 are bought once, at cost. Belt grading and competition entry fees are paid to the organising body, not to us.",
+      "tag2": "Questions parents ask",
+      "h22": "Before you message",
+      "summary": "Can my child start in the middle of the month?",
+      "p": "Yes. We charge only for the classes left in that month and start full fees from the next month.",
+      "summary2": "What if we miss a class?",
+      "p2": "Tell us a day before and the child can attend the same class in another batch that week. We do not refund missed classes.",
+      "summary3": "Can parents sit in the class?",
+      "p3": "For the free trial, yes. After that parents wait in the waiting area so the children settle. You can watch through the glass panel any time.",
+      "summary4": "Is the centre safe?",
+      "p4": "A staff member sits at the gate from 3.30 to 8.30 pm. Children are handed over only to the person named on the admission form, and we have CCTV in the corridor and waiting area.",
+      "summary5": "Do you give certificates?",
+      "p5": "Karate belts come from the state association. Abacus levels come with a certificate from our affiliating body. Dance, music and drawing students get our own annual certificate and perform on stage.",
+      "list": {
+        "items": [
+          {
+            "td": "Dance",
+            "td2": "12",
+            "td3": "₹700"
+          },
+          {
+            "td": "Drawing",
+            "td2": "12",
+            "td3": "₹600"
+          },
+          {
+            "td": "Karate",
+            "td2": "12",
+            "td3": "₹800"
+          },
+          {
+            "td": "Music",
+            "td2": "12",
+            "td3": "₹750"
+          },
+          {
+            "td": "Abacus",
+            "td2": "8",
+            "td3": "₹650"
+          },
+          {
+            "td": "Spoken English",
+            "td2": "8",
+            "td3": "₹700"
+          },
+          {
+            "td": "Second class for the same child",
+            "td2": "-",
+            "td3": "₹100 off"
+          },
+          {
+            "td": "Admission (one time)",
+            "td2": "-",
+            "td3": "₹300"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "tag": "Visit us",
+      "h2": "Ground floor, next to the Behala tram depot stop",
+      "p": "Anondo Kids Activity Hub<br>14/1 Diamond Harbour Road, Behala<br>Kolkata 700034",
+      "button": "Get directions",
+      "b": "Mon to Fri",
+      "span": "3.30 pm - 8.30 pm",
+      "b2": "Saturday",
+      "span2": "8.30 am - 1.00 pm, 4 - 7 pm",
+      "b3": "Sunday",
+      "span3": "8.30 am - 1.00 pm"
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Anondo Kids Activity Hub sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=14%2F1%20Diamond%20Harbour%20Road%2C%20Behala%2C%20Kolkata%20700034",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "span": "Anondo<small>Kids Activity Hub</small>",
+      "p": "Dance, drawing, karate, music, abacus and spoken English for children aged 4 to 14. Behala, Kolkata. Since 2016.",
+      "h4": "Classes",
+      "h42": "Contact",
+      "li": "14/1 Diamond Harbour Road, Behala, Kolkata 700034",
+      "button": "Get directions",
+      "list": {
+        "items": [
+          {
+            "button": "Dance"
+          },
+          {
+            "button": "Drawing"
+          },
+          {
+            "button": "Karate"
+          },
+          {
+            "button": "Music"
+          },
+          {
+            "button": "Abacus"
+          },
+          {
+            "button": "Spoken English"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Anondo Kids Activity Hub, Behala | Dance, Drawing, Karate, Music, Abacus, Spoken English",
+      "description": "Six after-school classes for children aged 4 to 14 under one roof in Behala, Kolkata. Dance, drawing, karate, music, abacus and spoken English. First class free."
+    }
+  }
+}
