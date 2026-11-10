@@ -11,7 +11,15 @@ public/demo/dance/index.html     ->  https://www.nexvoratechnologies.co.in/demo/
 That is the whole system. To add a category: make the folder, put `index.html`
 in it, push. There is no route to register. To show it on the /demos page of
 the main site, add one entry to `src/lib/demos.ts` — the page reads from that
-list and nothing else.
+list and nothing else. Each entry names a `group` (Shops, Health, Classes and
+schools, Fitness and beauty, Food and events, Services and trades); the page
+shows the cards under those headings, in that order.
+
+**Every demo has its own layout.** The shared parts are the chrome (strip,
+header drawer, dock, back-to-top, footer note, bottom script). The hero
+shape, the section order and the section shapes (tabs, tables, zigzags,
+timelines, accordions, scroll strips) differ from one demo to the next on
+purpose. A new demo must not be a recolour of an existing one.
 
 ## What every demo carries
 

@@ -18,7 +18,7 @@ import {
   PRICE_GROUPS,
   rupees,
 } from "@/lib/pricing";
-import { DEMOS } from "@/lib/demos";
+import { DEMOS, DEMO_GROUPS } from "@/lib/demos";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
 import { HeroChat } from "@/components/hero-chat";
@@ -1520,7 +1520,7 @@ export function Examples() {
           >
             Open the sample websites
           </Link>
-          {": "}a sweet shop, a clinic, a coaching centre and ten more.
+          {": "}a sweet shop, a clinic, a coaching centre and thirty-five more.
         </p>
       </Reveal>
     </div>
@@ -1557,8 +1557,13 @@ export function Demos() {
         </p>
       </Reveal>
 
-      <div className="mt-11 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {DEMOS.map((d, i) => (
+      {DEMO_GROUPS.map((group) => (
+      <div key={group} className="mt-12 first-of-type:mt-11">
+        <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
+          {group}
+        </h3>
+      <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {DEMOS.filter((d) => d.group === group).map((d, i) => (
           <Reveal key={d.slug} delay={(i % 3) * 80} className="h-full">
             <a
               href={`/demo/${d.slug}`}
@@ -1599,6 +1604,8 @@ export function Demos() {
           </Reveal>
         ))}
       </div>
+      </div>
+      ))}
 
       <Reveal delay={140}>
         <div className="mt-10 flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-7">
