@@ -63,6 +63,13 @@ export const T = {
   resetDemo: { en: "Put back the original demo text", bn: "ডেমোর আসল লেখা ফিরিয়ে আনুন" },
   items: { en: "items", bn: "টি আইটেম" },
   previewNote: { en: "Opens in a new tab with a note that customers cannot see it yet.", bn: "নতুন ট্যাবে খুলবে, সঙ্গে লেখা থাকবে যে গ্রাহকরা এখনো এটি দেখছেন না।" },
+  shownTitle: { en: "This section is on your website", bn: "এই অংশটি আপনার ওয়েবসাইটে আছে" },
+  shownHelp: { en: "No content for it yet? Hide it, and bring it back whenever you are ready.", bn: "এখনো এর জন্য কিছু লেখার নেই? লুকিয়ে রাখুন, তৈরি হলে আবার ফিরিয়ে আনুন।" },
+  hiddenTitle: { en: "This section is hidden from your website", bn: "এই অংশটি ওয়েবসাইটে লুকানো আছে" },
+  hiddenHelp: { en: "Customers do not see it. Your text and photos here are kept safe.", bn: "গ্রাহকরা এটি দেখছেন না। এখানকার লেখা ও ছবি যেমন ছিল তেমনই থাকবে।" },
+  hideSection: { en: "Hide this section", bn: "এই অংশ লুকান" },
+  showSection: { en: "Show it again", bn: "আবার দেখান" },
+  hiddenBadge: { en: "Hidden from the website", bn: "ওয়েবসাইটে লুকানো" },
 } as const;
 
 export type TKey = keyof typeof T;

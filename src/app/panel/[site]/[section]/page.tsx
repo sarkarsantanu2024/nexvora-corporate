@@ -6,15 +6,16 @@ import { t } from "@/nx/i18n";
 import { FieldEditor } from "@/nx/panel/fields";
 import { ListEditor } from "@/nx/panel/list-editor";
 import { useSite } from "@/nx/panel/provider";
+import { canHideSection } from "@/nx/schemas";
 import { Button, Card, HelpButton, Icon, Notice, TopBar } from "@/nx/panel/ui";
 import type { FieldValue, ItemValue } from "@/nx/types";
-import { isListValue } from "@/nx/types";
+import { isHidden, isListValue } from "@/nx/types";
 
 /* One section of the website: its fields, then its lists. Every change saves
    as a draft by itself; the Publish button is on the home screen. */
 
 export default function SectionPage({ params }: { params: { section: string } }) {
-  const { schema, lang, setLang, content, setField, setList, saveState, dirty, previewHref } = useSite();
+  const { schema, lang, setLang, content, setField, setList, setHidden, saveState, dirty, previewHref } = useSite();
   const sec = schema.sections.find((s) => s.id === params.section);
 
   useEffect(() => {
@@ -41,6 +42,8 @@ export default function SectionPage({ params }: { params: { section: string } })
     );
   }
   const values = content[sec.id] ?? {};
+  const hidden = isHidden(values);
+  const hideable = canHideSection(sec.id);
   const saveWord = saveState === "saving" ? t(lang, "saving") : saveState === "error" ? t(lang, "saveError") : saveState === "saved" ? t(lang, "saved") : "";
 
   return (
@@ -58,6 +61,21 @@ export default function SectionPage({ params }: { params: { section: string } })
         }
       />
       <main className="mx-auto max-w-3xl px-4 py-5 pb-32">
+        {/* The one layout choice a client has: a section they have no
+            content for yet can be taken off the live site and brought back
+            later. Nothing is added, removed or reordered beyond that. */}
+        {hideable ? (
+          <div className={`mb-5 flex flex-wrap items-center gap-3 rounded-2xl border p-4 ${hidden ? "border-amber-200 bg-amber-50" : "border-slate-200 bg-white"}`}>
+            <Icon name={hidden ? "visibility_off" : "visibility"} className={`text-[26px] ${hidden ? "text-amber-700" : "text-slate-500"}`} />
+            <div className="min-w-0 flex-1">
+              <div className="indic text-base font-semibold text-slate-900">{hidden ? t(lang, "hiddenTitle") : t(lang, "shownTitle")}</div>
+              <div className="indic text-sm text-slate-600">{hidden ? t(lang, "hiddenHelp") : t(lang, "shownHelp")}</div>
+            </div>
+            <Button variant={hidden ? "primary" : "secondary"} icon={hidden ? "visibility" : "visibility_off"} className="min-h-[48px]" onClick={() => setHidden(sec.id, !hidden)}>
+              {hidden ? t(lang, "showSection") : t(lang, "hideSection")}
+            </Button>
+          </div>
+        ) : null}
         {sec.fields.length ? (
           <Card className="grid min-w-0 grid-cols-1 gap-5">
             {sec.fields.map((f) => (

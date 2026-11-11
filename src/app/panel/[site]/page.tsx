@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { t } from "@/nx/i18n";
+import { useAccess } from "@/nx/panel/access";
 import { useSite } from "@/nx/panel/provider";
-import { PageTitle, PanelShell } from "@/nx/panel/shell";
+import { LockedScreen, PageTitle, PanelShell } from "@/nx/panel/shell";
 import { Button, Card, Icon, Notice, plain } from "@/nx/panel/ui";
 import type { SectionDef, SiteContent } from "@/nx/types";
-import { isListValue } from "@/nx/types";
+import { isHidden, isListValue } from "@/nx/types";
 
 /* The website screen of the panel: View, Preview, Publish, Undo, and one
    card per section of the website in page order, laid out as a grid. */
@@ -51,10 +52,22 @@ function previewLine(sec: SectionDef, content: SiteContent, itemsWord: string): 
 }
 
 export default function SiteHome() {
-  const { schema, lang, content, dirty, saveState, publish, undo, siteHref, previewHref, storage } = useSite();
+  const { schema, lang, content, dirty, saveState, publish, undo, siteHref, previewHref, storage, admin, site } = useSite();
+  const { access, loaded } = useAccess(site);
   const [msg, setMsg] = useState<{ tone: "good" | "info" | "bad"; text: string } | null>(null);
   const [busy, setBusy] = useState(false);
   const itemsWord = t(lang, "items");
+
+  // A client whose plan has no editing yet sees why, not the forms.
+  // Nexvora always gets in.
+  if (loaded && !admin && !access.edit) {
+    return (
+      <PanelShell active="website">
+        <PageTitle title={t(lang, "mySite")} sub={schema.name} />
+        <LockedScreen what="edit" />
+      </PanelShell>
+    );
+  }
 
   return (
     <PanelShell active="website">
@@ -112,13 +125,13 @@ export default function SiteHome() {
       <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {schema.sections.map((sec) => (
           <Link key={sec.id} href={`/panel/${schema.site}/${sec.id}`} className="group block min-w-0">
-            <Card className="flex h-full items-center gap-4 transition hover:border-[#2b5cff]">
-              <div className="icon-tile h-14 w-14 shrink-0">
-                <Icon name={sectionIcon(sec)} className="text-[28px]" />
+            <Card className={`flex h-full items-center gap-4 transition hover:border-[#2b5cff] ${isHidden(content[sec.id]) ? "bg-slate-50" : ""}`}>
+              <div className={`icon-tile h-14 w-14 shrink-0 ${isHidden(content[sec.id]) ? "opacity-40 grayscale" : ""}`}>
+                <Icon name={isHidden(content[sec.id]) ? "visibility_off" : sectionIcon(sec)} className="text-[28px]" />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="indic break-words text-lg font-bold leading-tight text-slate-900">{sec.label[lang]}</div>
-                <div className="indic mt-0.5 truncate text-base text-slate-500">{previewLine(sec, content, itemsWord)}</div>
+                <div className="indic mt-0.5 truncate text-base text-slate-500">{isHidden(content[sec.id]) ? t(lang, "hiddenBadge") : previewLine(sec, content, itemsWord)}</div>
               </div>
               <Icon name="chevron_right" className="text-[28px] text-slate-400 group-hover:text-[#2b5cff]" />
             </Card>

@@ -19,15 +19,43 @@
   var GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>';
   var CHEVRON = '<svg class="nx-lang__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
 
+  // The Login button is shown only when Nexvora has switched website editing
+  // on for this site (after the Run it yourself plan is paid). On the
+  // samples it is on unless the super admin switched it off. The answer
+  // comes from /api/nx/access/<site>, or from this browser's localStorage
+  // when the server keeps nothing.
   var siteMeta = document.querySelector('meta[name="nx-site"]');
-  if (siteMeta) {
+  var site = siteMeta && siteMeta.getAttribute("content");
+  // A real client site on its own domain names the Nexvora server in
+  // <meta name="nx-api">; the Login button and the access check go there.
+  var apiMeta = document.querySelector('meta[name="nx-api"]');
+  var API = (apiMeta && apiMeta.getAttribute("content") || "").replace(/\/$/, "");
+  function localAccess() {
+    try {
+      var raw = localStorage.getItem("nx:access:" + site);
+      if (!raw) return true;
+      return JSON.parse(raw).edit !== false;
+    } catch (e) {
+      return true;
+    }
+  }
+  function addLogin() {
     var login = document.createElement("a");
     login.className = "nx-login notranslate";
-    login.href = "/login/" + siteMeta.getAttribute("content");
+    login.href = API + "/login/" + site;
     login.setAttribute("aria-label", "Login or sign up");
     login.title = "Login or sign up";
     login.innerHTML = USER_ICON + "<span>Login</span>";
-    holder.appendChild(login);
+    holder.insertBefore(login, holder.firstChild);
+  }
+  if (site) {
+    fetch(API + "/api/nx/access/" + encodeURIComponent(site), { credentials: "same-origin", cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (res) {
+        var on = res && res.storage !== "browser" && res.access ? !!res.access.edit : localAccess();
+        if (on) addLogin();
+      });
   }
 
   function current() {

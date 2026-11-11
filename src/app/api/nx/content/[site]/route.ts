@@ -1,7 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { canEdit, getSession } from "@/nx/auth";
-import { getSchema, validateContent } from "@/nx/schemas";
+import { validateContent } from "@/nx/schemas";
+import { resolveSchema } from "@/nx/sites";
 import { getStore, storageMode } from "@/nx/store";
+
+// A real client site lives on its own domain and reads its published
+// content from here, so the public GET answers any origin.
+const CORS = { "Access-Control-Allow-Origin": "*" };
 
 export const dynamic = "force-dynamic";
 
@@ -14,10 +19,10 @@ export const dynamic = "force-dynamic";
 // nothing and says so, and the panel keeps the content in localStorage.
 
 export async function GET(req: NextRequest, { params }: { params: { site: string } }) {
-  const schema = getSchema(params.site);
+  const schema = await resolveSchema(params.site);
   if (!schema) return NextResponse.json({ error: "Unknown site" }, { status: 404 });
   const store = getStore();
-  if (!store) return NextResponse.json({ storage: "browser", content: null });
+  if (!store) return NextResponse.json({ storage: "browser", content: null }, { headers: CORS });
   const state = req.nextUrl.searchParams.get("state") === "draft" ? "draft" : "published";
   if (state === "draft" && !canEdit(getSession(), params.site)) {
     return NextResponse.json({ error: "Please log in" }, { status: 401 });
@@ -27,12 +32,12 @@ export async function GET(req: NextRequest, { params }: { params: { site: string
     { storage: store.mode, content },
     // No stale-while-revalidate: a client who has just pressed Publish must
     // see the change on the next load, not a cached copy for a minute.
-    { headers: state === "published" ? { "Cache-Control": "public, max-age=0, s-maxage=30, must-revalidate" } : { "Cache-Control": "no-store" } },
+    { headers: state === "published" ? { ...CORS, "Cache-Control": "public, max-age=0, s-maxage=30, must-revalidate" } : { "Cache-Control": "no-store" } },
   );
 }
 
 export async function PUT(req: NextRequest, { params }: { params: { site: string } }) {
-  const schema = getSchema(params.site);
+  const schema = await resolveSchema(params.site);
   if (!schema) return NextResponse.json({ error: "Unknown site" }, { status: 404 });
   const store = getStore();
   if (!store) return NextResponse.json({ storage: "browser" }, { status: 200 });
@@ -46,7 +51,7 @@ export async function PUT(req: NextRequest, { params }: { params: { site: string
 }
 
 export async function POST(req: NextRequest, { params }: { params: { site: string } }) {
-  const schema = getSchema(params.site);
+  const schema = await resolveSchema(params.site);
   if (!schema) return NextResponse.json({ error: "Unknown site" }, { status: 404 });
   const store = getStore();
   if (!store) return NextResponse.json({ storage: "browser" }, { status: 200 });
@@ -71,5 +76,5 @@ export async function POST(req: NextRequest, { params }: { params: { site: strin
 }
 
 export function OPTIONS() {
-  return NextResponse.json({ storage: storageMode() });
+  return NextResponse.json({ storage: storageMode() }, { headers: { ...CORS, "Access-Control-Allow-Methods": "GET, OPTIONS" } });
 }

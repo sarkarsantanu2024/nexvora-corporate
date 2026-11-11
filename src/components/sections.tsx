@@ -11,11 +11,13 @@ import {
   CARE_NOT_INCLUDED,
   CARE_OPTIONAL_NOTE,
   CARE_PLANS,
+  DASHBOARD_ADDON,
   FIRST_MONTH_FREE,
   NOT_INCLUDED,
   PACKAGES,
   PLAN_COMPARISON,
   PRICE_GROUPS,
+  SERVICE,
   rupees,
 } from "@/lib/pricing";
 import { DEMOS, DEMO_GROUPS } from "@/lib/demos";
@@ -1046,15 +1048,15 @@ export function Pricing() {
       <Reveal delay={100}>
         <div id="plans" className="mt-12 scroll-mt-32">
           <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Or take the lot together: four website plans
+            Or take the lot together: three website plans
           </h2>
           <p className="mt-3 max-w-2xl text-slate-600">
-            Every website I build is one of these four. Pick the one that
+            Every website I build is one of these three. Pick the one that
             fits, and if you are not sure, ask me and I will tell you which
             one you actually need.
           </p>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 2xl:grid-cols-4">
+          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {PACKAGES.map((p) => (
               <div
                 key={p.id}
@@ -1073,15 +1075,17 @@ export function Pricing() {
                       {p.tagline}
                     </p>
                   </div>
-                  <span
-                    className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${
-                      p.featured
-                        ? "bg-brand-600 text-white"
-                        : "bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-200"
-                    }`}
-                  >
-                    {p.label}
-                  </span>
+                  {p.label ? (
+                    <span
+                      className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wide ${
+                        p.featured
+                          ? "bg-brand-600 text-white"
+                          : "bg-brand-50 text-brand-700 ring-1 ring-inset ring-brand-200"
+                      }`}
+                    >
+                      {p.label}
+                    </span>
+                  ) : null}
                 </div>
 
                 <div className="mt-5 flex items-baseline gap-3">
@@ -1089,11 +1093,6 @@ export function Pricing() {
                     {rupees(p.price)}
                   </span>
                 </div>
-                {p.running ? (
-                  <p className="mt-2 rounded-xl bg-brand-50 px-3 py-2 text-sm font-semibold leading-snug text-brand-800">
-                    Then {rupees(p.running.monthly)}/month (or {rupees(p.running.yearly)} a year) from month {p.running.freeMonths + 1}, for {p.running.what}. The first {p.running.freeMonths} months are free.
-                  </p>
-                ) : null}
 
                 <ul className="mt-6 flex-1 space-y-2.5 border-t border-slate-100 pt-6 text-sm text-slate-700">
                   {p.includes.map((line) => (
@@ -1108,6 +1107,14 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
+                {p.highlight ? (
+                  <p className="mt-5 flex gap-2.5 rounded-xl border border-violet-200 bg-violet-50 px-3.5 py-3 text-sm font-medium leading-snug text-violet-950">
+                    <span aria-hidden="true" className="material-symbols-rounded mt-px shrink-0 text-[20px] text-violet-600">
+                      space_dashboard
+                    </span>
+                    <span>{p.highlight}</span>
+                  </p>
+                ) : null}
 
                 <a
                   href={CONTACT.whatsappHref}
@@ -1125,7 +1132,38 @@ export function Pricing() {
             ))}
           </div>
 
-          {/* The free first month, said once under all four plans rather
+          {/* The business dashboard: an add-on to Run it yourself, paid
+              monthly, so it sits under the plans rather than as a fourth
+              card. */}
+          <div className="mt-6 rounded-2xl border border-violet-200 bg-violet-50 p-6 sm:p-7">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-violet-950">
+                  <span aria-hidden="true" className="material-symbols-rounded text-[24px]">
+                    space_dashboard
+                  </span>
+                  Add-on for Run it yourself: {DASHBOARD_ADDON.name}, with the monthly service
+                </h3>
+                <p className="mt-2 max-w-2xl text-violet-950/90">{DASHBOARD_ADDON.intro}</p>
+              </div>
+              <div className="shrink-0 text-right">
+                <span className="text-3xl font-bold tracking-tight text-violet-950">{rupees(DASHBOARD_ADDON.monthly)}</span>
+                <span className="text-sm font-medium text-violet-900/80">/month</span>
+              </div>
+            </div>
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+              {DASHBOARD_ADDON.includes.map((line) => (
+                <li key={line} className="flex gap-2 rounded-xl bg-white/70 px-3.5 py-2.5 text-sm text-violet-950">
+                  <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[18px] text-violet-600">
+                    check
+                  </span>
+                  <span className="leading-snug">{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* The free first month, said once under all three plans rather
               than explained three times inside the cards. */}
           <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-7">
             <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-emerald-900">
@@ -1159,7 +1197,7 @@ export function Pricing() {
             </p>
           </div>
 
-          {/* The same four plans as a table, for the reader who wants to
+          {/* The same three plans as a table, for the reader who wants to
               compare rather than read. */}
           <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
             <table className="w-full min-w-[760px] text-sm">
@@ -1307,7 +1345,52 @@ function CarePlans() {
           website, and you can stop it whenever you like.
         </p>
 
-        <div className="mt-8 grid max-w-4xl gap-4 md:grid-cols-2">
+        {/* The monthly service: the lighter option, one price per website
+            plan. It keeps the site alive; the two Care plans below are for
+            a business that wants the content work done for it. */}
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <h3 className="text-xl font-bold tracking-tight">{SERVICE.title}</h3>
+              <p className="mt-1 max-w-3xl text-slate-600">{SERVICE.lead}</p>
+            </div>
+            <span className="whitespace-nowrap rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-700">
+              Paid monthly
+            </span>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {PACKAGES.map((p) => (
+              <div key={p.id} className={`rounded-2xl border p-5 ${p.featured ? "border-brand-200 bg-brand-50/60" : "border-slate-200 bg-slate-50"}`}>
+                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">{p.name}</p>
+                <p className="mt-2 text-3xl font-bold tracking-tight">
+                  {rupees(p.service.monthly)}
+                  <span className="text-base font-medium text-slate-500"> /month</span>
+                </p>
+                <p className="mt-0.5 text-sm text-slate-500">or {rupees(p.service.yearly)} for the year, {rupees(p.service.monthly * 12 - p.service.yearly)} less</p>
+                <p className="mt-3 leading-snug text-slate-700">{p.service.what}</p>
+              </div>
+            ))}
+          </div>
+          <ul className="mt-6 grid gap-x-6 gap-y-2.5 border-t border-slate-100 pt-6 sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICE.includes.map((line) => (
+              <li key={line} className="flex gap-2 text-sm text-slate-700">
+                <span aria-hidden="true" className="material-symbols-rounded mt-px shrink-0 text-[18px] text-brand-500">
+                  check
+                </span>
+                <span className="leading-snug">{line}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-5 flex items-start gap-2 rounded-xl bg-violet-50 px-4 py-3 text-sm font-medium text-violet-950">
+            <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[20px] text-violet-600">
+              space_dashboard
+            </span>
+            {SERVICE.dashboard}
+          </p>
+        </div>
+
+        <h3 className="mt-10 text-xl font-bold tracking-tight">Or have the content work done for you, every month</h3>
+        <div className="mt-4 grid gap-5 md:grid-cols-2">
           {CARE_PLANS.map((plan) => (
             <div
               key={plan.id}
@@ -1563,7 +1646,7 @@ export function Demos() {
         <p className="mt-3 text-slate-600">
           Every sample has a <b className="font-semibold text-slate-800">Login</b> button at the top. Log in with
           username <b className="font-semibold text-slate-800">demo</b> and password <b className="font-semibold text-slate-800">123</b> to
-          see the owner&apos;s side: the edit panel from the Run it yourself plan and the business dashboard from the Run my whole business plan, filled with sample records. Nothing you do there is saved anywhere but your own phone or computer.
+          see the owner&apos;s side: the edit panel from the Run it yourself plan and the business dashboard add-on, filled with sample records. Nothing you do there is saved anywhere but your own phone or computer.
         </p>
       </Reveal>
 

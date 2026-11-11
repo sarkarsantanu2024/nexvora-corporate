@@ -86,7 +86,23 @@ export function SiteHeader() {
               <span>{CONTACT.location}</span>
             </span>
           </div>
-          <SocialLinks tone="dark" />
+          <div className="flex items-center gap-2 sm:gap-3">
+            <SocialLinks tone="dark" />
+            {/* Santanu's door to the super admin. Quiet on purpose: a visitor
+                who taps it only meets a login screen. On a phone the strip
+                has no room, so the same link sits in the menu drawer. */}
+            <a
+              href="/admin"
+              aria-label="Nexvora admin"
+              title="Admin"
+              className="ml-2 hidden h-9 items-center gap-1.5 rounded-full border border-white/30 px-2.5 text-xs font-semibold text-white/85 transition hover:border-white hover:bg-white/10 hover:text-white md:inline-flex"
+            >
+              <span aria-hidden="true" className="material-symbols-rounded text-[18px]">
+                admin_panel_settings
+              </span>
+              Admin
+            </a>
+          </div>
         </div>
       </div>
 
@@ -228,6 +244,15 @@ export function SiteHeader() {
                   <path d={WHATSAPP_PATH} />
                 </svg>
                 Message us on WhatsApp
+              </a>
+              <a
+                href="/admin"
+                className="mb-2 flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-slate-200 text-sm font-semibold text-slate-600"
+              >
+                <span aria-hidden="true" className="material-symbols-rounded text-[20px]">
+                  admin_panel_settings
+                </span>
+                Nexvora admin
               </a>
             </div>
           </div>

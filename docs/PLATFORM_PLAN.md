@@ -12,21 +12,31 @@ place. Every client should bring in regular monthly income.
 
 ## Plans and what they switch on
 
-| Plan | One-time | Monthly after 3 free months | Website | Edit panel | Dashboard |
-|---|---|---|---|---|---|
-| Just get me started | ₹5,999 | none | 1 page | no | no |
-| Get my business online | ₹12,999 | none | 5 pages | no | no |
-| Run it yourself | ₹14,999 | ₹299 | 5 pages | yes | no |
-| Run my whole business (Platinum) | ₹24,999 | ₹999 | 5 pages | yes | yes |
+| Plan | One-time | Monthly service (optional) | Edit panel | Dashboard |
+| --- | --- | --- | --- | --- |
+| Just get me started | ₹5,999 | ₹399 | no | no |
+| Get my business online | ₹11,999 | ₹599 | no | no |
+| Run it yourself | ₹15,999 | ₹799 | yes | add-on, ₹500 a month with the service |
 
-Nexvora Care (₹1,499 / ₹2,999 a month) stays optional on top: that is
-Santanu doing the content work. The running fee is different: it keeps the
-panel or dashboard online. These numbers are a first proposal and need
-review before they go live.
+Every plan is a five-page website. Revised by Santanu on 2026-11-11: the
+Platinum plan is gone; the business dashboard is a ₹500 a month add-on for
+Run it yourself clients, paid on top of the plan's monthly service. The plan
+cards carry one price only; the monthly service (hosting, domain, backups,
+security and small changes) is shown in the Nexvora Care section, with
+the two bigger Care plans (₹1,499 / ₹2,999 a month) for content work.
 
-The code is always built with everything in. The plan only decides which
-menu items are enabled. A client who upgrades gets the extra menus switched
-on, nothing is rebuilt.
+The code is always built with everything in. Two switches per site, set by
+the super admin at /admin, decide what the client can use:
+
+- **Website editing**: switched on when Run it yourself is paid. Only then
+  does the Login button appear on the client's website. After login the
+  client lands on My website, not the dashboard.
+- **Dashboard**: switched on when the ₹500 month is paid, off if it lapses.
+  Until then every business menu shows a lock and a screen that says so.
+
+Nexvora is never locked out: the owner account (admin / 123 on the samples)
+opens every site's panel and dashboard whatever is switched on. On the
+samples both switches default to on so a prospect sees the whole product.
 
 ## The dashboard
 
@@ -67,8 +77,16 @@ plan gating are the patterns to copy.
 
 1. Done: generic edit panel for all 38 demos, storage with Neon support,
    owner and client logins, admin list of sites.
-2. Next: admin "add a client site" form (business, slug, template, plan,
-   client phone) that creates the site, the user and the WhatsApp message.
+2. Done (2026-11-11): admin "Add a client site" form (business, slug,
+   template, website address, client phone, first password) at /admin. The
+   site is stored in `nx_sites`, uses the template demo's sections, and
+   appears in the admin table with the same switches and buttons as a
+   demo; with a database the client's login is created too. The client's
+   own HTML gets its data-nx attributes from `npm run nx:annotate` run on
+   that project, plus `<meta name="nx-api" content="https://www.nexvoratechnologies.co.in">`
+   so its `nx-content.js` and `nx-lang.js` read content, access and the
+   Login link from this server (the public GETs answer with CORS).
+   Still to do: the WhatsApp message to the client with their login.
 3. Dashboard shell: signup and login from the client's site, the common Home
    with real numbers, plan-gated menu, super admin.
 4. Modules in the order clients ask: Money in and People first (every

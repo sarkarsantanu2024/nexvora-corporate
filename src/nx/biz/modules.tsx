@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import { t } from "../i18n";
 import { useSite } from "../panel/provider";
-import { PageTitle, Stat, usePlan } from "../panel/shell";
+import { useAccess } from "../panel/access";
+import { PageTitle, Stat } from "../panel/shell";
 import { Button, Card, Icon, Label, Notice, inputCls } from "../panel/ui";
 import { addMonths, duesOf, inr, monthLabel, monthOf, outstanding, sumExpenses, sumPayments, today, type Due, type Payment, type Person } from "./data";
 import { b } from "./i18n";
@@ -761,7 +762,7 @@ export function Staff() {
 export function Settings() {
   const { lang, setLang, site, storage, schema } = useSite();
   const { data, update, resetSample } = useBiz();
-  const [plan, setPlan] = usePlan(site);
+  const { access } = useAccess(site);
   return (
     <>
       <PageTitle title={b(lang, "settings")} />
@@ -788,18 +789,18 @@ export function Settings() {
         </Card>
         <Card className="grid gap-4">
           <div>
-            <Label hint={storage !== "neon" ? b(lang, "demoPlan") : undefined}>{b(lang, "plan")}</Label>
+            <Label hint={b(lang, "accessNote")}>{b(lang, "plan")}</Label>
             <div className="grid gap-2">
               {(
                 [
-                  ["self", "Run it yourself", "₹14,999 · website + edit panel"],
-                  ["business", "Run my whole business", "₹24,999 · website + edit panel + dashboard"],
+                  ["accessEdit", access.edit],
+                  ["accessDashboard", access.dashboard],
                 ] as const
-              ).map(([id, name, sub]) => (
-                <button key={id} type="button" onClick={() => setPlan(id)} className={`rounded-xl border-2 p-3 text-left ${plan === id ? "border-[#2b5cff] bg-brand-50" : "border-slate-200"}`}>
-                  <div className="text-base font-bold text-slate-900">{name}</div>
-                  <div className="text-sm text-slate-600">{sub}</div>
-                </button>
+              ).map(([key, on]) => (
+                <div key={key} className="flex items-center justify-between gap-3 rounded-xl border-2 border-slate-200 p-3">
+                  <div className="indic text-base font-semibold text-slate-900">{b(lang, key)}</div>
+                  <span className={`indic rounded-full px-3 py-1 text-sm font-bold ${on ? "bg-emerald-100 text-emerald-800" : "bg-slate-100 text-slate-500"}`}>{b(lang, on ? "on" : "off")}</span>
+                </div>
               ))}
             </div>
           </div>

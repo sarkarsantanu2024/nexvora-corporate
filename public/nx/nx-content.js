@@ -12,6 +12,10 @@
   var meta = document.querySelector('meta[name="nx-site"]');
   if (!meta) return;
   var site = meta.getAttribute("content");
+  // A real client site on its own domain names the Nexvora server in
+  // <meta name="nx-api" content="https://www.nexvoratechnologies.co.in">.
+  var apiMeta = document.querySelector('meta[name="nx-api"]');
+  var API = (apiMeta && apiMeta.getAttribute("content") || "").replace(/\/$/, "");
   var defaults = {};
   try {
     defaults = JSON.parse((document.querySelector('meta[name="nx-defaults"]') || {}).getAttribute("content") || "{}");
@@ -128,6 +132,27 @@
     });
   }
 
+  // A section the owner has hidden (no content for it yet) is taken off
+  // the page, and any menu link that only points to it goes with it.
+  function applyHidden(content) {
+    Object.keys(content).forEach(function (id) {
+      if (!content[id] || content[id]._hidden !== "1") return;
+      var secs = document.querySelectorAll('[data-nx-section="' + id + '"]');
+      Array.prototype.forEach.call(secs, function (sec) {
+        if (sec.tagName === "HEADER" || sec.tagName === "FOOTER") return;
+        sec.style.display = "none";
+        sec.setAttribute("hidden", "");
+        if (sec.id) {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href="#' + sec.id + '"]'), function (a) {
+            if (!a.closest("header, nav")) return;
+            var li = a.closest("li");
+            (li || a).style.display = "none";
+          });
+        }
+      });
+    });
+  }
+
   function applyFields(content) {
     var els = document.querySelectorAll("[data-nx]");
     Array.prototype.forEach.call(els, function (el) {
@@ -226,6 +251,7 @@
       applyFields(content);
       applyContact(content);
       applySeo(content);
+      applyHidden(content);
     } catch (e) {
       if (window.console) console.warn("nx-content: could not apply content", e);
     }
@@ -240,7 +266,7 @@
       reveal();
       banner();
     };
-    var fromServer = fetch("/api/nx/content/" + encodeURIComponent(site) + "?state=" + state, { credentials: "same-origin" })
+    var fromServer = fetch(API + "/api/nx/content/" + encodeURIComponent(site) + "?state=" + state, { credentials: "same-origin" })
       .then(function (r) {
         return r.ok ? r.json() : null;
       })

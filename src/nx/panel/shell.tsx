@@ -1,36 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { b } from "../biz/i18n";
 import { sectorForSite } from "../biz/sectors";
 import { t } from "../i18n";
+import { useAccess } from "./access";
 import { clearDemoSession } from "./demo-session";
 import { useSite } from "./provider";
 import { Button, HelpButton, Icon, TopBar } from "./ui";
 
 /* The frame around every panel screen: a sidebar on a laptop, a scrolling
    row of tabs on a phone. One menu for the website and the business, so the
-   client has a single place to go. Items outside the plan show a lock and
-   lead to a screen that says what the next plan adds. */
+   client has a single place to go. The business screens are locked until
+   Nexvora switches the dashboard on (after the monthly subscription is
+   paid); Nexvora itself is never locked out. */
 
-export type PlanId = "self" | "business";
-
-export function usePlan(site: string): [PlanId, (p: PlanId) => void] {
-  const [plan, setPlanState] = useState<PlanId>("business");
-  useEffect(() => {
-    try {
-      const v = localStorage.getItem(`nx:plan:${site}`);
-      if (v === "self" || v === "business") setPlanState(v);
-    } catch {}
-  }, [site]);
-  const setPlan = (p: PlanId) => {
-    setPlanState(p);
-    try {
-      localStorage.setItem(`nx:plan:${site}`, p);
-    } catch {}
-  };
-  return [plan, setPlan];
+/** Whether the business screens are open: switched on by Nexvora, or Nexvora looking. */
+export function useDashboardOpen(site: string, admin: boolean): boolean {
+  const { access } = useAccess(site);
+  return admin || access.dashboard;
 }
 
 export type ModuleKey = "website" | "dashboard" | "people" | "payments" | "expenses" | "items" | "reports" | "reminders" | "staff" | "settings";
@@ -59,8 +48,8 @@ export function moduleHref(site: string, key: ModuleKey) {
 }
 
 export function PanelShell({ active, title, back, children, wide = true }: { active: ModuleKey; title?: ReactNode; back?: string; children: ReactNode; wide?: boolean }) {
-  const { schema, lang, setLang, site, siteHref, storage } = useSite();
-  const [plan] = usePlan(site);
+  const { schema, lang, setLang, site, siteHref, storage, admin } = useSite();
+  const open = useDashboardOpen(site, admin);
   const menu = menuFor(site, lang);
   const logout = async () => {
     if (storage === "neon") await fetch("/api/nx/session", { method: "DELETE" });
@@ -85,7 +74,7 @@ export function PanelShell({ active, title, back, children, wide = true }: { act
         <nav className="hidden w-64 shrink-0 lg:block" aria-label="Panel menu">
           <div className="sticky top-20 rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
             {menu.map((m) => {
-              const locked = m.biz && plan !== "business";
+              const locked = m.biz && !open;
               const isActive = m.key === active;
               return (
                 <Link
@@ -107,7 +96,7 @@ export function PanelShell({ active, title, back, children, wide = true }: { act
           <div className="-mx-3 mb-4 overflow-x-auto px-3 lg:hidden">
             <div className="flex w-max gap-2">
               {menu.map((m) => {
-                const locked = m.biz && plan !== "business";
+                const locked = m.biz && !open;
                 const isActive = m.key === active;
                 return (
                   <Link
@@ -132,17 +121,20 @@ export function PanelShell({ active, title, back, children, wide = true }: { act
   );
 }
 
-export function LockedScreen() {
-  const { lang } = useSite();
+export function LockedScreen({ what = "dashboard" }: { what?: "dashboard" | "edit" }) {
+  const { lang, schema } = useSite();
+  const title = what === "edit" ? b(lang, "editLocked") : b(lang, "locked");
+  const intro = what === "edit" ? b(lang, "editLockedIntro") : b(lang, "lockedIntro");
+  const msg = what === "edit" ? `Hello, I want website editing switched on for ${schema.name}.` : `Hello, I want to start the business dashboard subscription for ${schema.name}.`;
   return (
     <div className="mx-auto max-w-2xl rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center sm:p-10">
       <div className="icon-tile mx-auto h-16 w-16">
         <Icon name="lock" className="text-[32px]" />
       </div>
-      <h1 className="indic mt-4 text-2xl font-bold text-slate-900">{b(lang, "locked")}</h1>
-      <p className="indic mt-3 text-base leading-relaxed text-slate-700">{b(lang, "lockedIntro")}</p>
+      <h1 className="indic mt-4 text-2xl font-bold text-slate-900">{title}</h1>
+      <p className="indic mt-3 text-base leading-relaxed text-slate-700">{intro}</p>
       <div className="mt-6">
-        <Button href={`https://wa.me/919804243159?text=${encodeURIComponent("Hello, I want to know about the Run my whole business plan.")}`} target="_blank" icon="chat">
+        <Button href={`https://wa.me/919804243159?text=${encodeURIComponent(msg)}`} target="_blank" icon="chat">
           {b(lang, "askUpgrade")}
         </Button>
       </div>

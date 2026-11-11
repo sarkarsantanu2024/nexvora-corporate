@@ -13,7 +13,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import type { ContentState, SiteContent, StorageMode } from "./types";
+import type { Access, ClientSite, ContentState, SiteContent, StorageMode } from "./types";
 
 export type HistoryEntry = { id: number; content: SiteContent; savedAt: string; note: string };
 
@@ -26,7 +26,26 @@ export interface ContentStore {
   undoPublish(site: string, by: string): Promise<SiteContent | null>;
   reset(site: string): Promise<void>;
   history(site: string): Promise<HistoryEntry[]>;
+  /** What is switched on for the site; the default when nothing is saved. */
+  getAccess(site: string): Promise<Access>;
+  setAccess(site: string, access: Access, by: string): Promise<void>;
+  /** The real client sites the super admin has registered. */
+  listSites(): Promise<ClientSite[]>;
+  upsertSite(s: ClientSite): Promise<void>;
+  removeSite(site: string): Promise<void>;
 }
+
+/**
+ * With a real database nothing is on until Nexvora switches it on after
+ * payment. Without one (the samples) everything is on, so a prospect sees
+ * the full product; the super admin can still switch a sample off to show
+ * what a client sees before paying.
+ */
+export const DEFAULT_ACCESS: Record<StorageMode, Access> = {
+  neon: { edit: false, dashboard: false },
+  file: { edit: true, dashboard: true },
+  browser: { edit: true, dashboard: true },
+};
 
 export function storageMode(): StorageMode {
   // NX_STORAGE forces a mode, mainly to try the browser-only path locally.
@@ -41,7 +60,7 @@ const HISTORY_LIMIT = 30;
 
 // ---------------------------------------------------------------- file store
 const DATA_DIR = path.join(process.cwd(), ".nx-data");
-type FileRecord = { draft: SiteContent | null; published: SiteContent | null; history: HistoryEntry[] };
+type FileRecord = { draft: SiteContent | null; published: SiteContent | null; history: HistoryEntry[]; access?: Access };
 
 async function readFile(site: string): Promise<FileRecord> {
   try {
@@ -90,12 +109,40 @@ const fileStore: ContentStore = {
     return prev.content;
   },
   async reset(site) {
-    await writeFile(site, { draft: null, published: null, history: [] });
+    const rec = await readFile(site);
+    await writeFile(site, { draft: null, published: null, history: [], access: rec.access });
   },
   async history(site) {
     return (await readFile(site)).history;
   },
+  async getAccess(site) {
+    return (await readFile(site)).access ?? DEFAULT_ACCESS.file;
+  },
+  async setAccess(site, access) {
+    const rec = await readFile(site);
+    rec.access = access;
+    await writeFile(site, rec);
+  },
+  async listSites() {
+    try {
+      return JSON.parse(await fs.readFile(SITES_FILE, "utf8")) as ClientSite[];
+    } catch {
+      return [];
+    }
+  },
+  async upsertSite(s) {
+    const list = (await fileStore.listSites()).filter((x) => x.site !== s.site);
+    list.push(s);
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    await fs.writeFile(SITES_FILE, JSON.stringify(list, null, 2));
+  },
+  async removeSite(site) {
+    const list = (await fileStore.listSites()).filter((x) => x.site !== site);
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    await fs.writeFile(SITES_FILE, JSON.stringify(list, null, 2));
+  },
 };
+const SITES_FILE = path.join(DATA_DIR, "_sites.json");
 
 // ---------------------------------------------------------------- neon store
 type Sql = import("@neondatabase/serverless").NeonQueryFunction<false, false>;
@@ -135,6 +182,21 @@ async function sql(): Promise<Sql> {
         locked_until timestamptz,
         created_at timestamptz NOT NULL DEFAULT now(),
         last_login_at timestamptz
+      )`;
+      await q`CREATE TABLE IF NOT EXISTS nx_sites (
+        site text PRIMARY KEY,
+        name text NOT NULL,
+        template text NOT NULL,
+        url text NOT NULL DEFAULT '',
+        phone text NOT NULL DEFAULT '',
+        created_at timestamptz NOT NULL DEFAULT now()
+      )`;
+      await q`CREATE TABLE IF NOT EXISTS nx_access (
+        site text PRIMARY KEY,
+        edit boolean NOT NULL DEFAULT false,
+        dashboard boolean NOT NULL DEFAULT false,
+        updated_by text NOT NULL DEFAULT '',
+        updated_at timestamptz NOT NULL DEFAULT now()
       )`;
       return q;
     })();
@@ -186,6 +248,30 @@ const neonStore: ContentStore = {
     const q = await sql();
     const rows = (await q`SELECT id, content, saved_at, note FROM nx_history WHERE site = ${site} ORDER BY saved_at DESC`) as unknown as { id: number; content: SiteContent; saved_at: string; note: string }[];
     return rows.map((r) => ({ id: r.id, content: r.content, savedAt: r.saved_at, note: r.note }));
+  },
+  async getAccess(site) {
+    const q = await sql();
+    const rows = (await q`SELECT edit, dashboard FROM nx_access WHERE site = ${site}`) as unknown as Access[];
+    return rows[0] ? { edit: !!rows[0].edit, dashboard: !!rows[0].dashboard } : DEFAULT_ACCESS.neon;
+  },
+  async setAccess(site, access, by) {
+    const q = await sql();
+    await q`INSERT INTO nx_access (site, edit, dashboard, updated_by) VALUES (${site}, ${access.edit}, ${access.dashboard}, ${by})
+      ON CONFLICT (site) DO UPDATE SET edit = EXCLUDED.edit, dashboard = EXCLUDED.dashboard, updated_by = EXCLUDED.updated_by, updated_at = now()`;
+  },
+  async listSites() {
+    const q = await sql();
+    const rows = (await q`SELECT site, name, template, url, phone, created_at FROM nx_sites ORDER BY created_at DESC`) as unknown as { site: string; name: string; template: string; url: string; phone: string; created_at: string }[];
+    return rows.map((r) => ({ site: r.site, name: r.name, template: r.template, url: r.url, phone: r.phone, createdAt: r.created_at }));
+  },
+  async upsertSite(s) {
+    const q = await sql();
+    await q`INSERT INTO nx_sites (site, name, template, url, phone) VALUES (${s.site}, ${s.name}, ${s.template}, ${s.url}, ${s.phone})
+      ON CONFLICT (site) DO UPDATE SET name = EXCLUDED.name, template = EXCLUDED.template, url = EXCLUDED.url, phone = EXCLUDED.phone`;
+  },
+  async removeSite(site) {
+    const q = await sql();
+    await q`DELETE FROM nx_sites WHERE site = ${site}`;
   },
 };
 

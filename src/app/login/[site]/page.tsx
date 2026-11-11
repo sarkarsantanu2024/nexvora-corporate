@@ -6,7 +6,7 @@ import { DEMOS } from "@/lib/demos";
 import { t } from "@/nx/i18n";
 import { addDemoUser, checkDemoLogin, DEMO_USER, writeDemoSession } from "@/nx/panel/demo-session";
 import { LoginForm } from "@/nx/panel/login";
-import { useLangOnly } from "@/nx/panel/provider";
+import { useClientSites, useLangOnly } from "@/nx/panel/provider";
 import { Button, Card, Icon, Label, Notice, inputCls } from "@/nx/panel/ui";
 import { getSchema } from "@/nx/schemas";
 import type { StorageMode } from "@/nx/types";
@@ -38,13 +38,18 @@ export default function DemoLoginPage({ params }: { params: { site: string } }) 
   const [lang, setLang] = useLangOnly();
   const router = useRouter();
   const search = useSearchParams();
-  const schema = getSchema(params.site);
-  const demo = DEMOS.find((d) => d.slug === params.site);
+  const clients = useClientSites();
+  const schema = clients ? getSchema(params.site, clients) : null;
+  const client = clients?.find((c) => c.site === params.site);
+  const demo = DEMOS.find((d) => d.slug === (client ? client.template : params.site));
+  const backHref = client ? client.url || "/demos" : `/demo/${params.site}`;
   const [storage, setStorage] = useState<StorageMode | null>(null);
   const [tab, setTab] = useState<"login" | "signup">("login");
   const [err, setErr] = useState<string | null>(null);
   const [f, setF] = useState({ username: "", password: "", name: "", phone: "", address: "", confirm: "" });
-  const next = search.get("next") || `/panel/${params.site}/app/dashboard`;
+  // After login the client lands on My website; the dashboard is the next
+  // menu item once it is switched on.
+  const next = search.get("next") || `/panel/${params.site}`;
   const s = (k: keyof typeof S) => S[k][lang];
 
   useEffect(() => {
@@ -54,6 +59,7 @@ export default function DemoLoginPage({ params }: { params: { site: string } }) 
       .catch(() => setStorage("browser"));
   }, []);
 
+  if (clients === null) return <div className="p-8 text-slate-500">...</div>;
   if (!schema) return <div className="p-8">Unknown website.</div>;
 
   const finish = (name: string, username: string) => {
@@ -79,7 +85,7 @@ export default function DemoLoginPage({ params }: { params: { site: string } }) 
         <div className="flex items-center justify-center p-4 sm:p-8">
           <div className="w-full max-w-md">
             <div className="mb-4 flex items-center justify-between">
-              <a href={`/demo/${params.site}`} className="indic inline-flex min-h-[44px] items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white">
+              <a href={backHref} className="indic inline-flex min-h-[44px] items-center gap-1.5 text-sm font-semibold text-white/80 hover:text-white">
                 <Icon name="arrow_back" className="text-[20px]" />
                 {s("backToSite")}
               </a>

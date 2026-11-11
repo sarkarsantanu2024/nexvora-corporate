@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { DEMOS } from "@/lib/demos";
 import { t } from "@/nx/i18n";
 import { LoginForm } from "@/nx/panel/login";
-import { useLangOnly, type Session } from "@/nx/panel/provider";
+import { useClientSites, useLangOnly, type Session } from "@/nx/panel/provider";
 import { Card, Icon, Notice, TopBar } from "@/nx/panel/ui";
 import { allSites } from "@/nx/schemas";
 import type { StorageMode } from "@/nx/types";
@@ -30,7 +30,8 @@ export default function PanelHome() {
     if (state && state.storage !== "neon") window.location.replace("/demos");
   }, [state]);
 
-  const sites = allSites();
+  const clients = useClientSites();
+  const sites = allSites(clients ?? []);
 
   return (
     <>
@@ -62,7 +63,7 @@ export default function PanelHome() {
               {sites
                 .filter((s) => state.session!.role === "owner" || state.session!.sites.includes(s.site))
                 .map((s) => {
-                  const d = DEMOS.find((x) => x.slug === s.site);
+                  const d = DEMOS.find((x) => x.slug === (s.url ? s.template : s.site));
                   return (
                     <Link key={s.site} href={`/panel/${s.site}`} className="group block min-w-0">
                       <Card className="flex items-center gap-3 transition hover:border-[#2b5cff]">

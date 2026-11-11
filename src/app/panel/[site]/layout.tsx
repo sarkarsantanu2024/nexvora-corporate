@@ -25,7 +25,7 @@ export default function SiteLayout({ children, params }: { children: React.React
       site={params.site}
       fallback={({ loading, storage, session, schema, needsDemoLogin }) => (
         <>
-          <TopBar lang={lang} setLang={setLang} title={schema?.name ?? t(lang, "panelName")} back={`/demo/${params.site}`} />
+          <TopBar lang={lang} setLang={setLang} title={schema?.name ?? t(lang, "panelName")} back={schema?.url ?? `/demo/${params.site}`} />
           <main className="mx-auto max-w-3xl px-4 py-8">
             {!schema ? (
               <Notice tone="bad">

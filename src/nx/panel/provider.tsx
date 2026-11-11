@@ -4,7 +4,31 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { Lang } from "../i18n";
 import { readDemoAdmin, readDemoSession } from "./demo-session";
 import { getSchema, siteUrl, withDefaults } from "../schemas";
-import type { FieldValue, ItemValue, SiteContent, SiteSchema, StorageMode } from "../types";
+import type { ClientSite, FieldValue, ItemValue, SiteContent, SiteSchema, StorageMode } from "../types";
+import { HIDDEN_KEY } from "../types";
+
+/** The registered client sites, so a real client's site resolves like a demo. */
+export async function fetchClientSites(): Promise<ClientSite[]> {
+  try {
+    const j = (await fetch("/api/nx/sites", { cache: "no-store" }).then((r) => r.json())) as { sites?: ClientSite[] };
+    return j.sites ?? [];
+  } catch {
+    return [];
+  }
+}
+export function useClientSites(): ClientSite[] | null {
+  const [sites, setSites] = useState<ClientSite[] | null>(null);
+  useEffect(() => {
+    let on = true;
+    fetchClientSites().then((s) => {
+      if (on) setSites(s);
+    });
+    return () => {
+      on = false;
+    };
+  }, []);
+  return sites;
+}
 
 export type Session = { id: string; name: string; role: "owner" | "client"; sites: string[]; mustChangePassword?: boolean };
 export type SaveState = "idle" | "saving" | "saved" | "error";
@@ -16,6 +40,8 @@ type Ctx = {
   setLang: (l: Lang) => void;
   storage: StorageMode;
   session: Session | null;
+  /** True for Nexvora (the owner account, or admin / 123 on the samples). */
+  admin: boolean;
   /** The draft with defaults filled in. What the panel edits. */
   content: SiteContent;
   /** The published content with defaults filled in. */
@@ -24,6 +50,8 @@ type Ctx = {
   saveState: SaveState;
   setField: (sectionId: string, key: string, value: FieldValue) => void;
   setList: (sectionId: string, key: string, items: ItemValue[]) => void;
+  /** Hides a section on the live site (no content yet), or brings it back. */
+  setHidden: (sectionId: string, hidden: boolean) => void;
   publish: () => Promise<"ok" | "nothing" | "error">;
   undo: () => Promise<"ok" | "nothing" | "error">;
   reset: () => Promise<void>;
@@ -79,7 +107,8 @@ const local = {
 };
 
 export function SiteProvider({ site, children, fallback }: { site: string; children: ReactNode; fallback: (state: { loading: boolean; storage: StorageMode; session: Session | null; schema: SiteSchema | null; needsDemoLogin?: boolean }) => ReactNode }) {
-  const schema = useMemo(() => getSchema(site), [site]);
+  const clients = useClientSites();
+  const schema = useMemo(() => (clients ? getSchema(site, clients) : null), [site, clients]);
   const [lang, setLang] = useLangOnly();
   const [storage, setStorage] = useState<StorageMode>("browser");
   const [session, setSession] = useState<Session | null>(null);
@@ -163,6 +192,16 @@ export function SiteProvider({ site, children, fallback }: { site: string; child
     (sectionId: string, key: string, items: ItemValue[]) => update((c) => ({ ...c, [sectionId]: { ...c[sectionId], [key]: { items } } })),
     [update],
   );
+  const setHidden = useCallback(
+    (sectionId: string, hidden: boolean) =>
+      update((c) => {
+        const sec = { ...c[sectionId] };
+        if (hidden) sec[HIDDEN_KEY] = "1";
+        else delete sec[HIDDEN_KEY];
+        return { ...c, [sectionId]: sec };
+      }),
+    [update],
+  );
 
   const publish = useCallback(async (): Promise<"ok" | "nothing" | "error"> => {
     if (!schema) return "error";
@@ -227,10 +266,15 @@ export function SiteProvider({ site, children, fallback }: { site: string; child
 
   // Without a database, the demo login (demo / 123 or a sign-up) is the key.
   // The super admin (admin / 123) opens every site.
-  const demoSession = storage !== "neon" && !loading ? readDemoSession(site) ?? (readDemoAdmin() ? { site, name: "Nexvora admin", username: "admin", at: Date.now() } : null) : null;
+  const demoAdmin = storage !== "neon" && !loading && readDemoAdmin();
+  const demoSession = storage !== "neon" && !loading ? readDemoSession(site) ?? (demoAdmin ? { site, name: "Nexvora admin", username: "admin", at: Date.now() } : null) : null;
   const allowed = storage === "neon" ? !!session && (session.role === "owner" || session.sites.includes(site)) : !!demoSession;
-  if (!schema || loading || !allowed || (session?.mustChangePassword && storage === "neon")) {
-    return <>{fallback({ loading, storage, session, schema, needsDemoLogin: !loading && storage !== "neon" && !demoSession })}</>;
+  const admin = storage === "neon" ? session?.role === "owner" : demoAdmin;
+  // Until the client-site list arrives the schema is unknown, so keep the
+  // "loading" state rather than saying "Unknown website" too early.
+  const stillLoading = loading || clients === null;
+  if (!schema || stillLoading || !allowed || (session?.mustChangePassword && storage === "neon")) {
+    return <>{fallback({ loading: stillLoading, storage, session, schema: clients === null ? ({} as SiteSchema) : schema, needsDemoLogin: !stillLoading && storage !== "neon" && !demoSession })}</>;
   }
 
   const href = siteUrl(schema);
@@ -241,12 +285,14 @@ export function SiteProvider({ site, children, fallback }: { site: string; child
     setLang,
     storage,
     session,
+    admin,
     content,
     published,
     dirty,
     saveState,
     setField,
     setList,
+    setHidden,
     publish,
     undo,
     reset,

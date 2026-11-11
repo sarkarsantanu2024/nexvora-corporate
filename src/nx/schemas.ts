@@ -1,19 +1,51 @@
 import { DEMO_SCHEMAS, DEMO_SLUGS } from "./demos";
-import type { SiteContent, SiteSchema, ItemValue } from "./types";
-import { isListValue } from "./types";
+import type { ClientSite, SiteContent, SiteSchema, ItemValue } from "./types";
+import { HIDDEN_KEY, isListValue } from "./types";
 
-/** Every site the panel knows. Demos today; client sites register here too. */
-export function getSchema(site: string): SiteSchema | null {
+/**
+ * Sections a client may hide from the live site when they have no content
+ * for them yet. The header, the footer and the two pseudo-sections
+ * (contact details, Google text) are never hidden.
+ */
+export function canHideSection(sectionId: string): boolean {
+  return !["header", "footer", "contact", "seo", "top"].includes(sectionId);
+}
+
+/**
+ * A real client site's schema: the template demo's sections and forms,
+ * under the client's own name and address. Null if the template is unknown.
+ */
+export function clientSchema(c: ClientSite): SiteSchema | null {
+  const base = DEMO_SCHEMAS[c.template];
+  if (!base) return null;
+  return { ...base, site: c.site, name: c.name, url: c.url || undefined };
+}
+
+/**
+ * Every site the panel knows: the demos, and the real client sites the
+ * super admin registered (passed in, since they live in the database).
+ * A client slug that clashes with a demo slug wins, so a client can keep
+ * the slug of the demo they chose.
+ */
+export function getSchema(site: string, clients: ClientSite[] = []): SiteSchema | null {
+  const c = clients.find((x) => x.site === site);
+  if (c) return clientSchema(c);
   return DEMO_SCHEMAS[site] ?? null;
 }
 
-export function allSites(): SiteSchema[] {
-  return DEMO_SLUGS.map((s) => DEMO_SCHEMAS[s]);
+export function allSites(clients: ClientSite[] = []): SiteSchema[] {
+  const own = clients.map(clientSchema).filter((s): s is SiteSchema => !!s);
+  const taken = new Set(own.map((s) => s.site));
+  return [...own, ...DEMO_SLUGS.filter((s) => !taken.has(s)).map((s) => DEMO_SCHEMAS[s])];
 }
 
 /** Where the live page for a site is served. */
 export function siteUrl(schema: SiteSchema): string {
-  return `/demo/${schema.site}`;
+  return schema.url || `/demo/${schema.site}`;
+}
+
+export function isValidSlug(s: string): boolean {
+  return /^[a-z0-9][a-z0-9-]{1,48}$/.test(s);
 }
 
 /**
@@ -29,6 +61,7 @@ export function withDefaults(schema: SiteSchema, saved: SiteContent | null | und
     const merged: Record<string, unknown> = { ...base };
     for (const f of sec.fields) if (over[f.key] !== undefined) merged[f.key] = over[f.key];
     for (const l of sec.lists) if (isListValue(over[l.key])) merged[l.key] = over[l.key];
+    if (over[HIDDEN_KEY] === "1" && canHideSection(sec.id)) merged[HIDDEN_KEY] = "1";
     out[sec.id] = merged as SiteContent[string];
   }
   return out;
@@ -108,6 +141,7 @@ export function validateContent(schema: SiteSchema, input: unknown): { ok: true;
     const inSec = src[sec.id];
     if (!inSec || typeof inSec !== "object") continue;
     const outSec: Record<string, unknown> = {};
+    if (inSec[HIDDEN_KEY] === "1" && canHideSection(sec.id)) outSec[HIDDEN_KEY] = "1";
     for (const f of sec.fields) {
       if (!(f.key in inSec)) continue;
       const v = checkValue(f.type, inSec[f.key], { social: f.social, max: f.max });
