@@ -19,9 +19,10 @@
   var GLOBE_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>';
   var CHEVRON = '<svg class="nx-lang__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
 
-  // The Login button is shown only when Nexvora has switched website editing
-  // on for this site (after the Run it yourself plan is paid). On the
-  // samples it is on unless the super admin switched it off. The answer
+  // The Login button is shown when Nexvora has switched on website editing
+  // (Run it yourself) or the business dashboard (the monthly add-on) for
+  // this site: either one gives the client something to log in to. On the
+  // samples both are on unless the super admin switched them off. The answer
   // comes from /api/nx/access/<site>, or from this browser's localStorage
   // when the server keeps nothing.
   var siteMeta = document.querySelector('meta[name="nx-site"]');
@@ -34,7 +35,8 @@
     try {
       var raw = localStorage.getItem("nx:access:" + site);
       if (!raw) return true;
-      return JSON.parse(raw).edit !== false;
+      var a = JSON.parse(raw);
+      return a.edit !== false || a.dashboard !== false;
     } catch (e) {
       return true;
     }
@@ -53,7 +55,7 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .catch(function () { return null; })
       .then(function (res) {
-        var on = res && res.storage !== "browser" && res.access ? !!res.access.edit : localAccess();
+        var on = res && res.storage !== "browser" && res.access ? !!(res.access.edit || res.access.dashboard) : localAccess();
         if (on) addLogin();
       });
   }

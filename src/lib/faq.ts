@@ -12,7 +12,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "How much will it cost?",
-    a: "Websites come as three plans: Just get me started at ₹5,999 (a five-page website with your Facebook, YouTube and Google Business Profile set up), Get my business online at ₹11,999 (the full plan, with logo, visiting card and post designs) and Run it yourself at ₹15,999 (the full plan plus a private edit panel so you can change the site yourself). On Run it yourself you can add the business dashboard for ₹500 a month on top of the monthly service, to run your customers, fees, stock and expenses from your phone. Small jobs run from ₹499. Anything bigger, like an online shop, gets its own number. You will know that number before any work starts.",
+    a: "Websites come as three plans: Just get me started at ₹5,999 (a five-page website with your Facebook, YouTube and Google Business Profile set up), Get my business online at ₹11,999 (the full plan, with logo, visiting card and post designs) and Run it yourself at ₹15,999 (the full plan plus a private edit panel so you can change the site yourself). On Get my business online or Run it yourself you can add the business dashboard for ₹500 a month on top of the monthly service, to run your customers, fees, stock and expenses from your phone. Small jobs run from ₹499. Anything bigger, like an online shop, gets its own number. You will know that number before any work starts.",
   },
   {
     q: "Can I change my website myself?",
@@ -20,7 +20,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What does the business dashboard do?",
-    a: "It is an add-on to the Run it yourself plan: ₹500 a month on top of the plan's monthly service. You and your staff log in from your own website and see one simple screen for the business: today's collection, pending fees or bills, who has not paid, expenses, stock, and a monthly or yearly report you can save as PDF. The screens change with the kind of business: a coaching centre sees students, batches and fees; a shop sees items, stock and bills; a clinic sees patients and appointments. It is made for a phone and for someone who has never used software before. One tap sends a WhatsApp reminder to anyone who owes you money.",
+    a: "It is an add-on to the Get my business online and Run it yourself plans: ₹500 a month on top of the plan's monthly service. You do not need the edit panel to have it. You and your staff log in from your own website and see one simple screen for the business: today's collection, pending fees or bills, who has not paid, expenses, stock, and a monthly or yearly report you can save as PDF. The screens change with the kind of business: a coaching centre sees students, batches and fees; a shop sees items, stock and bills; a clinic sees patients and appointments. It is made for a phone and for someone who has never used software before. One tap sends a WhatsApp reminder to anyone who owes you money.",
   },
   {
     q: "My job is very small. Will you even take it?",
@@ -36,7 +36,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What happens after the website is live? Do I have to pay every month?",
-    a: "Not unless you want to. The website is yours once it is paid for. Under Nexvora Care there is a small monthly service for each plan, from ₹399 to ₹799 a month, which is optional: it keeps the hosting, domain, backups and security in order and covers small changes as they come. The edit panel on Run it yourself is included in the plan. The business dashboard add-on on Run it yourself is ₹500 a month on top of that service, because it lives on a server and a database that I keep running, backed up and safe for you; it is switched on when the month is paid, and your website keeps working even if you stop. On top of that, what is optional is Nexvora Care, a monthly plan from ₹1,499 where I look after the hosting, the backups and the security and make the small changes as they come up: a new price, a new photograph, a new offer. If you change things every week (products, photographs, Facebook posts, YouTube videos), there is a ₹2,999 plan for that. Each plan says out loud what it includes, so nobody is guessing. Take it if you would rather not think about any of this, and leave it if you would.",
+    a: "Not unless you want to. The website is yours once it is paid for. There is one optional monthly service (AMC) for each plan: Basic at ₹399 a month with Just get me started, Gold at ₹599 with Get my business online and Platinum at ₹799 with Run it yourself. It keeps the hosting, domain, backups and security in order and covers the small changes the plan says. The edit panel on Run it yourself is included in the plan. The business dashboard add-on is ₹500 a month on top of Gold or Platinum, because it lives on a server and a database that I keep running, backed up and safe for you; it is switched on when the month is paid, and your website keeps working even if you stop. Take the monthly service if you would rather not think about any of this, and leave it if you would.",
   },
   {
     q: "Can we meet face to face?",

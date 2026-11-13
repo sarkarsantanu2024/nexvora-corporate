@@ -101,7 +101,8 @@ export function isHidden(sec: SectionContent | undefined): boolean {
 /**
  * What Nexvora has switched on for a site. Website editing is switched on
  * when the Run it yourself plan is paid; the business dashboard when the
- * monthly dashboard subscription is paid. Both are set by the super admin.
+ * monthly dashboard subscription is paid. The two are independent: a client
+ * can have the dashboard without editing. Both are set by the super admin.
  */
 export type Access = { edit: boolean; dashboard: boolean };
 

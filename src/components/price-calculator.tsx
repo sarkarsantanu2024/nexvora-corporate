@@ -109,7 +109,7 @@ export function PriceCalculator() {
     if (chosenCare) {
       lines.push(
         "",
-        `Monthly care: ${chosenCare.name}: ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
+        `Monthly service: ${chosenCare.name}: ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
       );
     }
     lines.push("", "Please tell me if this is right for what I need.");
@@ -189,7 +189,7 @@ export function PriceCalculator() {
                 [
                   ["jobs", "Jobs", picked.length],
                   ["packages", "Packages", chosenPackage ? 1 : 0],
-                  ["care", "Monthly care", chosenCare ? 1 : 0],
+                  ["care", "Monthly service", chosenCare ? 1 : 0],
                 ] as const
               ).map(([id, label, n]) => (
                 <button
@@ -379,11 +379,6 @@ export function PriceCalculator() {
                         <div className="min-w-0">
                           <p className="font-semibold tracking-tight">
                             {c.name}
-                            {c.featured && (
-                              <span className="ml-2 whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                                Most taken
-                              </span>
-                            )}
                           </p>
                           <p className="mt-0.5 text-sm text-slate-600">
                             {c.who}
@@ -412,6 +407,11 @@ export function PriceCalculator() {
                           </li>
                         ))}
                       </ul>
+                      {c.highlight && (
+                        <p className="mt-3 rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-2 text-sm font-semibold leading-snug text-violet-950">
+                          {c.highlight}
+                        </p>
+                      )}
                     </button>
                   );
                 })}

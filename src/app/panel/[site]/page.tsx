@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { t } from "@/nx/i18n";
 import { useAccess } from "@/nx/panel/access";
 import { useSite } from "@/nx/panel/provider";
@@ -57,6 +57,14 @@ export default function SiteHome() {
   const [msg, setMsg] = useState<{ tone: "good" | "info" | "bad"; text: string } | null>(null);
   const [busy, setBusy] = useState(false);
   const itemsWord = t(lang, "items");
+
+  // A client who pays for the dashboard but not for editing (Get my
+  // business online with the add-on) has nothing to do on this screen.
+  const dashboardOnly = loaded && !admin && !access.edit && access.dashboard;
+  useEffect(() => {
+    if (dashboardOnly) window.location.replace(`/panel/${site}/app/dashboard`);
+  }, [dashboardOnly, site]);
+  if (dashboardOnly) return null;
 
   // A client whose plan has no editing yet sees why, not the forms.
   // Nexvora always gets in.

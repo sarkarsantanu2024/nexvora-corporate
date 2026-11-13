@@ -41,12 +41,19 @@ export type Demo = {
   blurb: string;
   image: string;
   alt: string;
+  /**
+   * Kept off the /demos page for now. The demo itself, its login and its
+   * panel still work by direct link; delete this line to show the card again
+   * (and put the count on /demos and the home page back up by one).
+   */
+  hidden?: true;
 };
 
 export const DEMOS: Demo[] = [
   // ---- Shops -------------------------------------------------------------
   {
     slug: "sweets",
+    hidden: true,
     name: "Mohini Mishtanna Bhandar",
     kind: "Sweet shop",
     group: "Shops",
@@ -117,6 +124,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "hardware-paint",
+    hidden: true,
     name: "Bhowmick Hardware and Paints",
     kind: "Hardware and paint shop",
     group: "Shops",
@@ -159,6 +167,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "pathology-lab",
+    hidden: true,
     name: "Nabadiganta Diagnostics",
     kind: "Diagnostic and pathology lab",
     group: "Health",
@@ -169,6 +178,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "homeopathy",
+    hidden: true,
     name: "Arogya Niketan",
     kind: "Homeopathy and ayurveda clinic",
     group: "Health",
@@ -325,6 +335,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "bakery",
+    hidden: true,
     name: "Anjali Cake House",
     kind: "Cake and bakery shop",
     group: "Food and events",
@@ -377,6 +388,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "printing-press",
+    hidden: true,
     name: "Mudrika Printing Works",
     kind: "Printing press",
     group: "Services and trades",
@@ -427,6 +439,7 @@ export const DEMOS: Demo[] = [
   },
   {
     slug: "garage",
+    hidden: true,
     name: "Biswas Motor Works",
     kind: "Two-wheeler and car garage",
     group: "Services and trades",
@@ -436,3 +449,6 @@ export const DEMOS: Demo[] = [
     alt: "Sample website for a two-wheeler and car service garage",
   },
 ];
+
+/** The demos that get a card on /demos. Look-ups by slug should use DEMOS. */
+export const VISIBLE_DEMOS = DEMOS.filter((d) => !d.hidden);

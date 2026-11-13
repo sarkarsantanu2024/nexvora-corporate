@@ -15,22 +15,28 @@ place. Every client should bring in regular monthly income.
 | Plan | One-time | Monthly service (optional) | Edit panel | Dashboard |
 | --- | --- | --- | --- | --- |
 | Just get me started | ₹5,999 | ₹399 | no | no |
-| Get my business online | ₹11,999 | ₹599 | no | no |
+| Get my business online | ₹11,999 | ₹599 | no | add-on, ₹500 a month with the service |
 | Run it yourself | ₹15,999 | ₹799 | yes | add-on, ₹500 a month with the service |
 
 Every plan is a five-page website. Revised by Santanu on 2026-11-11: the
 Platinum plan is gone; the business dashboard is a ₹500 a month add-on for
 Run it yourself clients, paid on top of the plan's monthly service. The plan
 cards carry one price only; the monthly service (hosting, domain, backups,
-security and small changes) is shown in the Nexvora Care section, with
-the two bigger Care plans (₹1,499 / ₹2,999 a month) for content work.
+security and small changes) is shown in the Nexvora Care section.
+
+Revised again on 2026-11-13: the two bigger Care plans (₹1,499 / ₹2,999 a
+month, content work) are gone. The monthly service is the only AMC, one per
+plan, named Basic (₹399), Gold (₹599) and Platinum (₹799).
 
 The code is always built with everything in. Two switches per site, set by
 the super admin at /admin, decide what the client can use:
 
-- **Website editing**: switched on when Run it yourself is paid. Only then
-  does the Login button appear on the client's website. After login the
-  client lands on My website, not the dashboard.
+- **Website editing**: switched on when Run it yourself is paid. After
+  login the client lands on My website, not the dashboard.
+- Since 2026-11-13 the dashboard can be sold without editing (Get my
+  business online plus the add-on). The Login button appears when either
+  switch is on; a dashboard-only client lands on the dashboard, has no My
+  website menu, and the content API refuses their saves.
 - **Dashboard**: switched on when the ₹500 month is paid, off if it lapses.
   Until then every business menu shows a lock and a screen that says so.
 

@@ -17,10 +17,9 @@ import {
   PACKAGES,
   PLAN_COMPARISON,
   PRICE_GROUPS,
-  SERVICE,
   rupees,
 } from "@/lib/pricing";
-import { DEMOS, DEMO_GROUPS } from "@/lib/demos";
+import { VISIBLE_DEMOS, DEMO_GROUPS } from "@/lib/demos";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
 import { HeroChat } from "@/components/hero-chat";
@@ -1132,7 +1131,7 @@ export function Pricing() {
             ))}
           </div>
 
-          {/* The business dashboard: an add-on to Run it yourself, paid
+          {/* The business dashboard: an add-on to the two bigger plans, paid
               monthly, so it sits under the plans rather than as a fourth
               card. */}
           <div className="mt-6 rounded-2xl border border-violet-200 bg-violet-50 p-6 sm:p-7">
@@ -1142,7 +1141,7 @@ export function Pricing() {
                   <span aria-hidden="true" className="material-symbols-rounded text-[24px]">
                     space_dashboard
                   </span>
-                  Add-on for Run it yourself: {DASHBOARD_ADDON.name}, with the monthly service
+                  Add-on for {DASHBOARD_ADDON.for}: {DASHBOARD_ADDON.name}, with the monthly service
                 </h3>
                 <p className="mt-2 max-w-2xl text-violet-950/90">{DASHBOARD_ADDON.intro}</p>
               </div>
@@ -1318,9 +1317,7 @@ export function Pricing() {
  * price. That is the honest part: a plan that says "minor updates included"
  * and means thirty minutes is a disagreement waiting to happen.
  *
- * Two plans side by side, capped at a reading width so neither card has to
- * stretch across a wide screen. CARE_PLANS is mapped, so a third plan would
- * slot in without touching this file.
+ * Three cards, one for each website plan: Basic, Gold, Platinum.
  */
 function CarePlans() {
   return (
@@ -1333,81 +1330,28 @@ function CarePlans() {
           Want someone to look after your website every month?
         </h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
-          Building the website is only the beginning. Your phone number
-          changes. Your prices change. A new offer comes. Photographs need
-          replacing. Your Facebook page goes quiet. Sometimes a site simply
-          stops working properly and you have no idea why. You do not need
-          to learn any of that. This is me looking after the website and
-          the posting for you, week by week.
+          Building the website is only the beginning. The domain and the
+          hosting come up for renewal. Your phone number changes. Your
+          prices change. Sometimes a site simply stops working properly
+          and you have no idea why. You do not need to learn any of that.
+          There is one monthly service (AMC) for each website plan, and
+          this is me looking after the website for you.
         </p>
         <p className="mt-3 max-w-3xl font-medium text-slate-800">
           Optional, always. Nothing here is bundled into the price of a
           website, and you can stop it whenever you like.
         </p>
 
-        {/* The monthly service: the lighter option, one price per website
-            plan. It keeps the site alive; the two Care plans below are for
-            a business that wants the content work done for it. */}
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7">
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <h3 className="text-xl font-bold tracking-tight">{SERVICE.title}</h3>
-              <p className="mt-1 max-w-3xl text-slate-600">{SERVICE.lead}</p>
-            </div>
-            <span className="whitespace-nowrap rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-slate-700">
-              Paid monthly
-            </span>
-          </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {PACKAGES.map((p) => (
-              <div key={p.id} className={`rounded-2xl border p-5 ${p.featured ? "border-brand-200 bg-brand-50/60" : "border-slate-200 bg-slate-50"}`}>
-                <p className="text-sm font-semibold uppercase tracking-wide text-slate-600">{p.name}</p>
-                <p className="mt-2 text-3xl font-bold tracking-tight">
-                  {rupees(p.service.monthly)}
-                  <span className="text-base font-medium text-slate-500"> /month</span>
-                </p>
-                <p className="mt-0.5 text-sm text-slate-500">or {rupees(p.service.yearly)} for the year, {rupees(p.service.monthly * 12 - p.service.yearly)} less</p>
-                <p className="mt-3 leading-snug text-slate-700">{p.service.what}</p>
-              </div>
-            ))}
-          </div>
-          <ul className="mt-6 grid gap-x-6 gap-y-2.5 border-t border-slate-100 pt-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICE.includes.map((line) => (
-              <li key={line} className="flex gap-2 text-sm text-slate-700">
-                <span aria-hidden="true" className="material-symbols-rounded mt-px shrink-0 text-[18px] text-brand-500">
-                  check
-                </span>
-                <span className="leading-snug">{line}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-5 flex items-start gap-2 rounded-xl bg-violet-50 px-4 py-3 text-sm font-medium text-violet-950">
-            <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[20px] text-violet-600">
-              space_dashboard
-            </span>
-            {SERVICE.dashboard}
-          </p>
-        </div>
-
-        <h3 className="mt-10 text-xl font-bold tracking-tight">Or have the content work done for you, every month</h3>
-        <div className="mt-4 grid gap-5 md:grid-cols-2">
+        {/* Three monthly services, one for each website plan, in the
+            same order as the plan cards. */}
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
           {CARE_PLANS.map((plan) => (
             <div
               key={plan.id}
-              className={`flex h-full flex-col rounded-2xl border p-5 shadow-sm sm:p-6 ${
-                plan.featured
-                  ? "border-brand-500 bg-white ring-1 ring-brand-500"
-                  : "border-slate-200 bg-white"
-              }`}
+              className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
             >
-              <div className="flex items-start justify-between gap-2">
-                <h3 className="font-bold tracking-tight">{plan.name}</h3>
-                {plan.featured && (
-                  <span className="whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                    Most taken
-                  </span>
-                )}
-              </div>
+              <h3 className="text-xl font-bold tracking-tight">{plan.name}</h3>
+              <p className="mt-1 text-sm font-medium text-slate-600">{plan.who}</p>
 
               <p className="mt-3 flex items-baseline gap-1">
                 <span className="text-3xl font-bold tracking-tight">
@@ -1417,10 +1361,6 @@ function CarePlans() {
               </p>
               <p className="mt-1 text-sm text-slate-500">
                 or {rupees(plan.yearly)} for the year, {rupees(plan.monthly * 12 - plan.yearly)} less
-              </p>
-
-              <p className="mt-3 text-sm leading-snug text-slate-600">
-                {plan.who}
               </p>
 
               {/* Stated at price size, because it is as much a part of the
@@ -1443,15 +1383,20 @@ function CarePlans() {
                 ))}
               </ul>
 
+              {plan.highlight && (
+                <p className="mt-5 flex items-start gap-2 rounded-xl border border-violet-200 bg-violet-50 px-3.5 py-3 text-sm font-semibold leading-snug text-violet-950">
+                  <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[20px] text-violet-600">
+                    space_dashboard
+                  </span>
+                  {plan.highlight}
+                </p>
+              )}
+
               <a
                 href={CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-6 inline-flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition ${
-                  plan.featured
-                    ? "bg-gradient-to-br from-brand-600 to-violet-600 text-white shadow-lift hover:brightness-110"
-                    : "border border-slate-300 bg-white text-slate-800 hover:border-brand-400 hover:text-brand-700"
-                }`}
+                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-brand-400 hover:text-brand-700"
               >
                 Ask about {plan.name}
               </a>
@@ -1608,7 +1553,7 @@ export function Examples() {
           >
             Open the sample websites
           </Link>
-          {": "}a sweet shop, a clinic, a coaching centre and thirty-five more.
+          {": "}a saree shop, a clinic, a coaching centre and twenty-eight more.
         </p>
       </Reveal>
     </div>
@@ -1656,7 +1601,7 @@ export function Demos() {
           {group}
         </h3>
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {DEMOS.filter((d) => d.group === group).map((d, i) => (
+        {VISIBLE_DEMOS.filter((d) => d.group === group).map((d, i) => (
           <Reveal key={d.slug} delay={(i % 3) * 80} className="h-full">
             <div className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-brand-300 hover:shadow-lift sm:p-5">
             <a

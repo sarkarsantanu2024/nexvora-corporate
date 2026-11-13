@@ -5,7 +5,9 @@ import { useEffect } from "react";
 import { t } from "@/nx/i18n";
 import { FieldEditor } from "@/nx/panel/fields";
 import { ListEditor } from "@/nx/panel/list-editor";
+import { useAccess } from "@/nx/panel/access";
 import { useSite } from "@/nx/panel/provider";
+import { LockedScreen, PanelShell } from "@/nx/panel/shell";
 import { canHideSection } from "@/nx/schemas";
 import { Button, Card, HelpButton, Icon, Notice, TopBar } from "@/nx/panel/ui";
 import type { FieldValue, ItemValue } from "@/nx/types";
@@ -15,7 +17,8 @@ import { isHidden, isListValue } from "@/nx/types";
    as a draft by itself; the Publish button is on the home screen. */
 
 export default function SectionPage({ params }: { params: { section: string } }) {
-  const { schema, lang, setLang, content, setField, setList, setHidden, saveState, dirty, previewHref } = useSite();
+  const { schema, lang, setLang, content, setField, setList, setHidden, saveState, dirty, previewHref, site, admin } = useSite();
+  const { access, loaded } = useAccess(site);
   const sec = schema.sections.find((s) => s.id === params.section);
 
   useEffect(() => {
@@ -28,6 +31,14 @@ export default function SectionPage({ params }: { params: { section: string } })
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
   }, [saveState]);
+
+  if (loaded && !admin && !access.edit) {
+    return (
+      <PanelShell active="website">
+        <LockedScreen what="edit" />
+      </PanelShell>
+    );
+  }
 
   if (!sec) {
     return (

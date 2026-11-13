@@ -120,7 +120,7 @@ export const PRICE_GROUPS: PriceGroup[] = [
  * "launch offer" tag), Get my business online is ₹11,999, the Platinum
  * plan is gone (the business dashboard is a monthly add-on on Run it
  * yourself instead, DASHBOARD_ADDON), and the only recurring figure on a
- * card is the yearly AMC. The care plans are shown on their own cards.
+ * card is the plan price. The monthly service (AMC) has its own cards: CARE_PLANS.
  *
  * The old "worth" arithmetic (adding up the small jobs inside a bundle) is
  * gone: the website itself is no longer on the small-jobs list, so there is
@@ -138,36 +138,13 @@ export type Package = {
   featured?: boolean;
   /** One line set apart on the card, in a tinted box under the list. */
   highlight?: string;
-  /**
-   * The monthly service for this plan: optional, after the free first
-   * month, and what keeps the site alive. Shown in the Nexvora Care section
-   * (SERVICE below), never on the plan card itself: Santanu wants the cards
-   * to carry one price only. Priced for a small Kolkata business on
-   * 2026-11-11, well under the Care plans, which are about weekly content
-   * work rather than keeping the site running. The yearly price is ten
-   * months for twelve, as on the Care plans.
-   */
-  service: { monthly: number; yearly: number; what: string };
-};
-
-/** The monthly service block inside the Nexvora Care section. One price per plan, from PACKAGES. */
-export const SERVICE = {
-  title: "Monthly service: your website kept alive",
-  lead: "The light option. A small amount every month, after the free first month, and the site stays up, safe and current. Stop whenever you like.",
-  includes: [
-    "Domain and hosting renewals handled on time, in your name",
-    "Backups taken and security updates applied",
-    "A broken thing fixed when it breaks, without a new bill",
-    "Small changes as they come: a price, a phone number, a photograph",
-    "WhatsApp support from me, not a ticket queue",
-  ],
-  dashboard: `Business dashboard add-on: ${"₹500"} a month on top of the monthly service, on the Run it yourself plan.`,
 };
 
 /**
  * The business dashboard runs on Nexvora's servers and database. It is
- * ₹500 a month, paid on top of the plan's monthly service, by a Run it
- * yourself client. Nexvora switches the dashboard on once the month is
+ * ₹500 a month, paid on top of the plan's monthly service, by a Get my
+ * business online or Run it yourself client (since 2026-11-13 it no longer
+ * needs the edit panel). Nexvora switches the dashboard on once the month is
  * paid, and off if it lapses.
  */
 export const DASHBOARD_MONTHLY = 500;
@@ -191,7 +168,6 @@ export const PACKAGES: Package[] = [
       GBP_LINE,
       ACCOUNTS_LINE,
     ],
-    service: { monthly: 399, yearly: 3999, what: "hosting and domain renewals handled, backups, security updates and a small change every month" },
   },
   {
     id: "online",
@@ -213,7 +189,7 @@ export const PACKAGES: Package[] = [
       "Five social media post designs to start you off",
       ACCOUNTS_LINE,
     ],
-    service: { monthly: 599, yearly: 5999, what: "hosting and domain renewals handled, backups, security updates and up to two small changes every month" },
+    highlight: "Optional add-on: your own business management software (customers, fees, stock, expenses, reports, staff logins) for ₹500 a month on top of the monthly service, switched on whenever you want it",
   },
   {
     id: "self",
@@ -232,7 +208,6 @@ export const PACKAGES: Package[] = [
       "A short training call to show you how to use it",
     ],
     highlight: "Optional add-on: the business dashboard (customers, fees, stock, expenses, reports, staff logins) for ₹500 a month on top of the monthly service, switched on whenever you want it",
-    service: { monthly: 799, yearly: 7999, what: "everything above, plus the edit panel kept online with its photo storage and daily backups" },
   },
 ];
 
@@ -244,8 +219,8 @@ export const PACKAGES: Package[] = [
 export const DASHBOARD_ADDON = {
   name: "Business dashboard",
   monthly: DASHBOARD_MONTHLY,
-  for: "Run it yourself",
-  intro: "Run the business from your phone, from the same login as your website. Paid on top of the plan's monthly service, switched on the day the first month is paid; your website keeps working whether or not you continue.",
+  for: "Get my business online and Run it yourself",
+  intro: "Run the business from your phone, with a login on your own website. Paid on top of the plan's monthly service, switched on the day the first month is paid; your website keeps working whether or not you continue.",
   includes: [
     "A dashboard built for your kind of business: students or customers, fees or bills, stock and items, staff, expenses",
     "Collections, pending payments and expenses for today, this month and this year, in plain numbers",
@@ -268,7 +243,7 @@ export const FIRST_MONTH_FREE = {
     "Videos you send uploaded to YouTube",
   ],
   after:
-    "After the free month you choose, or not. Nexvora Care below has a small monthly service that keeps the site alive, and two bigger monthly plans for a business that wants regular content work done for it. All of it is optional.",
+    "After the free month you choose, or not. Each website plan has one monthly service (AMC) that goes with it, shown below: Basic, Gold or Platinum. It is optional.",
 };
 
 /** The comparison table under the plans. Columns follow PACKAGES order. */
@@ -277,89 +252,99 @@ export const PLAN_COMPARISON: { row: string; values: string[] }[] = [
   { row: "Facebook, YouTube and Google Business Profile, on your own email", values: ["Yes", "Yes", "Yes"] },
   { row: "Logo, visiting card and five post designs", values: ["No", "Yes", "Yes"] },
   { row: "Edit it yourself panel", values: ["No", "No", "Yes"] },
-  { row: "Business dashboard add-on: customers, fees, stock, expenses, reports, staff logins", values: ["No", "No", `Optional, ${rupees(DASHBOARD_MONTHLY)}/month with the monthly service`] },
+  { row: "Business dashboard add-on: customers, fees, stock, expenses, reports, staff logins", values: ["No", `Optional, ${rupees(DASHBOARD_MONTHLY)}/month with the monthly service`, `Optional, ${rupees(DASHBOARD_MONTHLY)}/month with the monthly service`] },
   { row: "First month of care free", values: ["Yes", "Yes", "Yes"] },
 ];
 
-/** The one line under the care plans. */
+/** The one line under the monthly service cards. */
 export const CARE_OPTIONAL_NOTE =
-  "On the Run it yourself plan you can make your own changes any time, so a Care plan is optional. The business dashboard add-on (₹500 a month, with the monthly service) is separate from Care too: it keeps the dashboard online and backed up, while Care is about me doing the content work for you.";
+  "The monthly service follows your website plan: Basic with Just get me started, Gold with Get my business online, Platinum with Run it yourself. Your own business management software is a separate add-on of ₹500 a month, on top of Gold or Platinum.";
 
 /**
- * Nexvora Care — the monthly plans. The AMC, in plain words.
+ * Nexvora Care: the monthly service (AMC). One for each website plan.
  *
- * Two plans, not a ladder. Four tiers from ₹299 to ₹1,499 were replaced on
- * 2026-11-07 because the cheap rungs only gave people a reason to buy less;
- * on 2026-11-09 a second, higher plan was added for the customer who changes
- * things every week — new products, new photographs, posts and videos —
- * because that customer was costing more than ₹1,499 of time and the plan
- * needed to say so.
+ * Santanu simplified this on 2026-11-13. Until then the section had a
+ * three-price "monthly service" block and, under it, two bigger content
+ * plans (Basic Care ₹1,499 and Active Care ₹2,999). He found the two sets
+ * of prices confusing for a customer and asked for three AMC types only,
+ * one per website plan, named Basic, Gold and Platinum. The content plans
+ * are gone; the prices are the ones the monthly service already had.
  *
- * Deliberately not sold as hosting. The moment a plan is described as hosting,
- * it is compared with a ₹100 hosting bill and loses. What is actually being
- * bought is a website and social accounts that stay alive every week without
- * the owner having to learn any of it — the same promise the rest of the site
- * makes, continued past the day the site goes live.
+ * Deliberately not sold as hosting. The moment a plan is described as
+ * hosting, it is compared with a ₹100 hosting bill and loses.
  *
- * The allowance is stated out loud, in things a shopkeeper can count: pages,
- * posts, uploads. "Minor updates included" with no number is how a plan turns
- * into unpaid development, and how the person doing the work quietly starts
- * resenting it. A stated limit protects both sides and is easier to sell than
- * a vague generosity.
+ * The allowance is stated out loud, in things a shopkeeper can count.
+ * "Minor updates included" with no number is how a plan turns into unpaid
+ * development.
  *
- * The annual price is roughly ten months for twelve. It is worth offering:
- * the customer saves real money, and the cash arrives at the start of the year
- * rather than in twelve pieces that each need chasing.
- *
- * Not called an AMC anywhere in the interface. Plenty of Indian businesses
- * know the term, but the person this site is written for may not, and "care"
- * needs no explaining.
+ * The annual price is ten months for twelve.
  */
 export type CarePlan = {
   id: string;
   name: string;
+  /** The website plan this service goes with: a Package id. */
+  planId: string;
   monthly: number;
   yearly: number;
   who: string;
   /** The allowance, stated rather than implied. */
   allowance: string;
   includes: string[];
-  featured?: boolean;
+  /** One line set apart in a tinted box under the list. */
+  highlight?: string;
 };
 
 export const CARE_PLANS: CarePlan[] = [
   {
     id: "basic",
-    name: "Basic Care",
-    monthly: 1499,
-    yearly: 14999,
-    who: "For a business whose website mostly stays the same, with a few changes a month",
-    allowance: "Up to five pages, and up to two changes a month",
+    name: "Basic",
+    planId: "starter",
+    monthly: 399,
+    yearly: 3999,
+    who: "For the Just get me started plan",
+    allowance: "One small change a month",
     includes: [
-      "Your website looked after: up to five pages kept working and up to date",
-      "Text and photographs replaced when you need, up to two times a month",
-      "A new offer or announcement banner put up",
-      "Two Facebook posts a month, designed and posted for you",
-      "WhatsApp support from me, not a ticket queue",
+      "Your domain and hosting renewed on time, in your name, so your website never goes off suddenly",
+      "Your website backed up and kept safe every month, without you having to ask",
+      "If something breaks, I fix it. You do not get a new bill for it",
+      "One small change every month: a new price, a new phone number, a new photo",
+      "Message me on WhatsApp any time. You talk to me, not to a call centre",
     ],
   },
   {
-    id: "active",
-    name: "Active Care",
-    monthly: 2999,
-    yearly: 29999,
-    who: "For a business that changes something every week: products, photographs, posts, videos",
-    featured: true,
-    allowance: "Up to five pages, weekly changes, one Facebook post and one YouTube upload a week",
+    id: "gold",
+    name: "Gold",
+    planId: "online",
+    monthly: 599,
+    yearly: 5999,
+    who: "For the Get my business online plan",
+    allowance: "Unlimited content and photo updates, and four Facebook posts a month",
     includes: [
-      "Everything in Basic Care",
-      "Products, prices, photographs and content changed every week, as often as you need",
-      "One Facebook post a week, designed and posted for you",
-      "The video you send me uploaded to your YouTube channel every week",
-      "Your Google Business Profile kept current: posts, photographs and hours",
-      "A small page for each new offer or season",
-      "Your message answered first",
+      "Your website stays fresh: text and photos updated as often as you need, with no limit",
+      "Four Facebook posts a month, designed and posted for you, so your page never goes quiet",
+      "If something breaks, I fix it. You do not get a new bill for it",
+      "Message me on WhatsApp any time. You talk to me, not to a call centre",
     ],
+    highlight: "Get your own business management software for just ₹500 a month more: customers, fees, stock, expenses and reports, all on your phone",
+  },
+  {
+    id: "platinum",
+    name: "Platinum",
+    planId: "self",
+    monthly: 799,
+    yearly: 7999,
+    who: "For the Run it yourself plan",
+    allowance: "Your edit panel kept online, so you make your own changes any time",
+    includes: [
+      "Your own admin panel: change any text or photo yourself, whenever you feel like it",
+      "Eight Facebook posts a month, designed and posted for you, so your page stays busy",
+      "Your domain and hosting renewed on time, in your name, so your website never goes off suddenly",
+      "Your website backed up and kept safe every month, without you having to ask",
+      "If something breaks, I fix it. You do not get a new bill for it",
+      "Your panel is always on, with your photos stored safely and backed up every day",
+      "Message me on WhatsApp any time. You talk to me, not to a call centre",
+    ],
+    highlight: "Get your own business management software for just ₹500 a month more: customers, fees, stock, expenses and reports, all on your phone",
   },
 ];
 
@@ -370,14 +355,14 @@ export const CARE_INCLUDED = [
   "Changing text, prices and phone numbers",
   "Swapping photographs and replacing a banner",
   "Small layout tidying on a page that already exists",
-  "Facebook posts and YouTube uploads, up to the number the plan says",
+  "Facebook posts, up to the number the plan says",
   "Keeping hosting, backups and security in order",
   "Telling you what went wrong when something breaks",
 ];
 
 export const CARE_NOT_INCLUDED = [
   "New pages beyond the five the plan covers",
-  "Shooting or editing the videos: you send the video, I upload it",
+  "Facebook posts beyond the number your plan says, and YouTube uploads, after the free first month",
   "A new feature, module or payment gateway",
   "An enquiry or contact form",
   "A booking system or anything new with a database behind it (the edit panel and the business dashboard are already part of their plans)",

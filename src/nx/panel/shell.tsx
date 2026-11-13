@@ -49,8 +49,10 @@ export function moduleHref(site: string, key: ModuleKey) {
 
 export function PanelShell({ active, title, back, children, wide = true }: { active: ModuleKey; title?: ReactNode; back?: string; children: ReactNode; wide?: boolean }) {
   const { schema, lang, setLang, site, siteHref, storage, admin } = useSite();
-  const open = useDashboardOpen(site, admin);
-  const menu = menuFor(site, lang);
+  const { access, loaded } = useAccess(site);
+  const open = admin || access.dashboard;
+  // A client with the dashboard but no editing does not see "My website".
+  const menu = menuFor(site, lang).filter((m) => m.key !== "website" || admin || !loaded || access.edit || !access.dashboard);
   const logout = async () => {
     if (storage === "neon") await fetch("/api/nx/session", { method: "DELETE" });
     else clearDemoSession(site);

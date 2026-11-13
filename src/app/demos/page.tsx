@@ -6,12 +6,12 @@ import { Demos } from "@/components/sections";
 
 export const metadata: Metadata = {
   title: "Demos: Sample Websites for Shops, Clinics, Coaching Centres and More",
-  description: "Thirty-eight sample websites you can open on your phone: a sweet shop, a jewellery shop, a dental clinic, a pathology lab, a restaurant, a caterer, a travel agent, a garage, a coaching centre, a play school and more. Pick the one closest to your business and ask for yours.",
+  description: "Thirty-one sample websites you can open on your phone: a saree shop, a jewellery shop, a dental clinic, a restaurant, a caterer, a travel agent, a coaching centre, a play school and more. Pick the one closest to your business and ask for yours.",
   alternates: { canonical: "https://www.nexvoratechnologies.co.in/demos" },
   openGraph: {
     url: "https://www.nexvoratechnologies.co.in/demos",
     title: "Demos: Sample Websites for Shops, Clinics, Coaching Centres and More",
-    description: "Thirty-eight sample websites you can open on your phone: a sweet shop, a jewellery shop, a dental clinic, a pathology lab, a restaurant, a caterer, a travel agent, a garage, a coaching centre, a play school and more. Pick the one closest to your business and ask for yours.",
+    description: "Thirty-one sample websites you can open on your phone: a saree shop, a jewellery shop, a dental clinic, a restaurant, a caterer, a travel agent, a coaching centre, a play school and more. Pick the one closest to your business and ask for yours.",
     images: [OG_IMAGE],
   },
   twitter: { images: [OG_IMAGE.url] },
@@ -24,7 +24,7 @@ export default function Page() {
         {...{
         "eyebrow": "Demos",
         "title": "See what your website could look like before you spend a rupee.",
-        "intro": "Thirty-eight sample websites, one for each kind of business I am usually asked about, grouped so you can find yours fast. Open the one closest to yours on your phone. The shops and the people in them are made up. The design, the sections and the speed are exactly what you would get, with your own name, photographs and prices.",
+        "intro": "Thirty-one sample websites, one for each kind of business I am usually asked about, grouped so you can find yours fast. Open the one closest to yours on your phone. The shops and the people in them are made up. The design, the sections and the speed are exactly what you would get, with your own name, photographs and prices.",
         "icon": "web",
         "motif": [
           "storefront",
@@ -35,8 +35,8 @@ export default function Page() {
           "child_care"
         ],
         "image": {
-          "src": "/demo/sweets/images/hero.jpg",
-          "alt": "A sample sweet shop website, one of the demos"
+          "src": "/demo/saree/images/hero.jpg",
+          "alt": "A sample saree shop website, one of the demos"
         }
       }}
       />
