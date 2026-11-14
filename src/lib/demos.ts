@@ -93,6 +93,16 @@ export const DEMOS: Demo[] = [
     alt: "Sample website for a gold and silver jewellery shop",
   },
   {
+    slug: "fashion-jewellery",
+    name: "Chumki Fashion Jewellery",
+    kind: "Fashion jewellery shop",
+    group: "Shops",
+    blurb:
+      "Imitation jewellery from ₹50 to ₹2,500: shop by budget, a price list by type, a saree colour matcher, bridal sets on rent, wholesale by the dozen and ordering on WhatsApp.",
+    image: "/demo/fashion-jewellery/images/hero.jpg",
+    alt: "Sample website for a fashion and imitation jewellery shop",
+  },
+  {
     slug: "optical",
     name: "Nayan Opticals",
     kind: "Optical shop",
@@ -111,6 +121,16 @@ export const DEMOS: Demo[] = [
       "Phones by budget with EMI and exchange, screen and battery repair in two hours, accessories and small appliances.",
     image: "/demo/mobile-shop/images/hero.jpg",
     alt: "Sample website for a mobile phone and electronics shop",
+  },
+  {
+    slug: "toy-shop",
+    name: "Khelna Bari",
+    kind: "Toy shop",
+    group: "Shops",
+    blurb:
+      "A neighbourhood toy shop: toys by age and by budget, birthday return gifts with a per-piece price table, free gift wrapping and WhatsApp ordering.",
+    image: "/demo/toy-shop/images/hero.jpg",
+    alt: "Sample website for a toy shop",
   },
   {
     slug: "furniture",

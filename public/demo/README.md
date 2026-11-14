@@ -39,6 +39,10 @@ purpose. A new demo must not be a recolour of an existing one.
   a close button, Escape to close and focus handled. The drawer markup sits
   outside the header, because a header with `backdrop-filter` becomes the
   containing block for anything `position:fixed` inside it.
+- **Arrows on every sideways strip.** A list that scrolls sideways with
+  `scroll-snap-type` gets its scrollbar hidden and a Previous / Next pair at
+  the right of that section’s heading. `/nx/nx-lang.js` does this by itself
+  for any such list, so a demo must not draw its own arrows or a "swipe" hint.
 - **A back-to-top button**, bottom-right, shown after about 700px of scroll.
 - **Indian photographs only.** Where Pexels has no Indian-subject photo for a
   scene, use a photo with no people (the room, the objects, hands) rather

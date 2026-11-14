@@ -58,3 +58,23 @@
 .goog-te-banner-frame,.skiptranslate iframe,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}
 body{top:0!important}
 .goog-tooltip,.goog-text-highlight{display:none!important;background:none!important;box-shadow:none!important}
+
+/* Sideways strips: no scrollbar, Previous / Next at the right of the heading
+   (built by the last block of nx-lang.js). */
+.nx-car{scrollbar-width:none!important;-ms-overflow-style:none}
+.nx-car::-webkit-scrollbar{display:none}
+.nx-car-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem}
+.nx-car-head>.nx-car-title{flex:1 1 auto;min-width:0}
+.nx-car-head--alone{justify-content:flex-end;margin-bottom:1rem}
+.nx-car-nav{display:flex;gap:.6rem;flex:none}
+.nx-car-nav[hidden]{display:none}
+.nx-car-btn{width:46px;height:46px;border-radius:50%;border:1.5px solid currentColor;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;padding:0;transition:background .2s,opacity .2s}
+.nx-car-btn svg{width:20px;height:20px}
+.nx-car-btn:hover:not(:disabled){background:color-mix(in srgb,currentColor 14%,transparent)}
+.nx-car-btn:disabled{opacity:.3;cursor:default}
+@media (max-width:640px){
+  .nx-car-head{flex-wrap:wrap;gap:.9rem}
+  .nx-car-head>.nx-car-title{flex-basis:100%}
+  .nx-car-nav{margin-left:auto}
+  .nx-car-btn{width:42px;height:42px}
+}

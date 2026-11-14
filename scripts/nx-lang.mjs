@@ -32,7 +32,13 @@ function closingDivPos(html, openTagEnd) {
   return -1;
 }
 
-const slugs = fs.readdirSync(DEMO_DIR).filter((s) => fs.existsSync(path.join(DEMO_DIR, s, "index.html"))).sort();
+// `npm run nx:lang toy-shop` does only the demos named; no names means all.
+const only = process.argv.slice(2);
+const slugs = fs
+  .readdirSync(DEMO_DIR)
+  .filter((s) => fs.existsSync(path.join(DEMO_DIR, s, "index.html")))
+  .filter((s) => only.length === 0 || only.includes(s))
+  .sort();
 let changed = 0;
 for (const slug of slugs) {
   const file = path.join(DEMO_DIR, slug, "index.html");

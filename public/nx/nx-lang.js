@@ -214,3 +214,96 @@
   s.defer = true;
   document.body.appendChild(s);
 })();
+
+// Sideways strips (carousels). Any list in a demo that scrolls sideways with
+// scroll-snap gets its scrollbar hidden and a Previous / Next pair placed at
+// the right of that section's heading. Nothing to mark in the HTML: a new
+// demo with a scroll-snap strip picks this up by itself. The arrows hide
+// themselves at widths where the strip is not scrolling (some demos only
+// turn a grid into a strip on phones).
+(function () {
+  var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M_"/></svg>';
+  var done = [];
+
+  function isStrip(el) {
+    var cs = getComputedStyle(el);
+    return (cs.overflowX === "auto" || cs.overflowX === "scroll") && cs.scrollSnapType && cs.scrollSnapType !== "none";
+  }
+
+  function button(dir, label) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "nx-car-btn";
+    b.setAttribute("aria-label", label);
+    b.innerHTML = ARROW.replace("M_", dir < 0 ? "M15 5l-7 7 7 7" : "M9 5l7 7-7 7");
+    return b;
+  }
+
+  function setup(el) {
+    var sec = el.closest("section") || el.parentElement;
+    var h2 = null;
+    [].forEach.call(sec.querySelectorAll("h2"), function (h) {
+      if (h.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING) h2 = h;
+    });
+
+    var nav = document.createElement("div");
+    nav.className = "nx-car-nav";
+    var prev = button(-1, "Previous");
+    var next = button(1, "Next");
+    nav.appendChild(prev);
+    nav.appendChild(next);
+
+    var row = document.createElement("div");
+    row.className = "nx-car-head";
+    if (h2) {
+      // The heading block: the piece holding the h2 that sits directly in
+      // the page-width wrapper (or beside the strip itself).
+      var block = h2;
+      while (block.parentElement && !block.parentElement.contains(el) && !block.parentElement.classList.contains("wrap")) block = block.parentElement;
+      var mb = getComputedStyle(block).marginBottom;
+      block.parentElement.insertBefore(row, block);
+      row.appendChild(block);
+      row.style.marginBottom = mb;
+      block.style.marginBottom = "0";
+      block.classList.add("nx-car-title");
+      nav.style.color = getComputedStyle(h2).color;
+    } else {
+      row.classList.add("nx-car-head--alone");
+      el.parentElement.insertBefore(row, el);
+    }
+    row.appendChild(nav);
+    el.classList.add("nx-car");
+
+    function step(dir) {
+      var first = el.firstElementChild;
+      var gap = parseFloat(getComputedStyle(el).columnGap) || 0;
+      var by = first ? first.getBoundingClientRect().width + gap : el.clientWidth * 0.8;
+      el.scrollBy({ left: dir * by, behavior: "smooth" });
+    }
+    prev.addEventListener("click", function () { step(-1); });
+    next.addEventListener("click", function () { step(1); });
+
+    function update() {
+      var max = el.scrollWidth - el.clientWidth;
+      nav.hidden = !isStrip(el) || max < 8;
+      prev.disabled = el.scrollLeft < 4;
+      next.disabled = el.scrollLeft > max - 4;
+    }
+    el.addEventListener("scroll", update, { passive: true });
+    done.push({ el: el, update: update });
+    update();
+  }
+
+  function scan() {
+    [].forEach.call(document.querySelectorAll("main ul, main ol, main div"), function (el) {
+      if (el.classList.contains("nx-car") || !isStrip(el)) return;
+      setup(el);
+    });
+    done.forEach(function (d) { d.update(); });
+  }
+
+  var t;
+  window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(scan, 150); });
+  if (document.readyState === "complete") scan();
+  else window.addEventListener("load", scan);
+})();

@@ -1553,7 +1553,7 @@ export function Examples() {
           >
             Open the sample websites
           </Link>
-          {": "}a saree shop, a clinic, a coaching centre and twenty-eight more.
+          {": "}a saree shop, a clinic, a coaching centre and thirty more.
         </p>
       </Reveal>
     </div>

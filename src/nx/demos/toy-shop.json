@@ -1,0 +1,2530 @@
+{
+  "site": "toy-shop",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Khelna Bari",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-open",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "hero-lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:902"
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "chips",
+          "label": {
+            "en": "Toy finder",
+            "bn": "Toy finder"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "chips2",
+          "label": {
+            "en": "Toy finder",
+            "bn": "Toy finder"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "chip",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ages",
+      "label": {
+        "en": "How old is the child?",
+        "bn": "How old is the child?"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "span4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1028"
+        },
+        {
+          "key": "age-tip",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1100:1661"
+        },
+        {
+          "key": "age-tip2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "age-tip3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "age-tip4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "toys",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "toys2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "toys3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "toys4",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "amt",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "label": {
+        "en": "Going to a birthday this evening?",
+        "bn": "Going to a birthday this evening?"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag-price",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag-for",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag-price2",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag-for2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tag-price3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          },
+          "html": true
+        },
+        {
+          "key": "tag-for3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "tags-note",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list5",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list6",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list7",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list8",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list9",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list10",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list11",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list12",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list13",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list14",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list15",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list16",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list17",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list18",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shelves",
+      "label": {
+        "en": "Seven shelves, floor to ceiling",
+        "bn": "Seven shelves, floor to ceiling"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "shelf",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1600:767"
+            },
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "p2",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "return-gifts",
+      "label": {
+        "en": "Return gifts in bulk. Price per piece",
+        "bn": "Return gifts in bulk. Price per piece"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "rg-notes",
+          "label": {
+            "en": "Return gifts in bulk. Price per piece",
+            "bn": "Return gifts in bulk. Price per piece"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "No time to come to the shop? Order on WhatsApp",
+        "bn": "No time to come to the shop? Order on WhatsApp"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1100:1650"
+        },
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "steps",
+          "label": {
+            "en": "No time to come to the shop? Order on WhatsApp",
+            "bn": "No time to come to the shop? Order on WhatsApp"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "text",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety",
+      "label": {
+        "en": "What we check before a toy leaves the shop",
+        "bn": "What we check before a toy leaves the shop"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "slip-big",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "clip",
+          "label": {
+            "en": "What we check before a toy leaves the shop",
+            "bn": "What we check before a toy leaves the shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Exchange",
+            "bn": "Exchange"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parents",
+      "label": {
+        "en": "From the para",
+        "bn": "From the para"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "tagline2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "summary6",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "quotes",
+          "label": {
+            "en": "From the para",
+            "bn": "From the para"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "On Rajdanga Main Road, two minutes from Kasba bus stand",
+        "bn": "On Rajdanga Main Road, two minutes from Kasba bus stand"
+      },
+      "fields": [
+        {
+          "key": "tagline",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "b2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "b3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send the age. Send the budget. Done",
+        "bn": "Send the age. Send the budget. Done"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Khelna Bari",
+      "small": "Toy shop · Kasba · since 2009"
+    },
+    "top": {
+      "hero-open": "<span></span>Open today, 10:30 am to 9:30 pm",
+      "h1": "Tell us the <em>age</em> and the <i>budget</i>. We find the toy.",
+      "hero-lede": "Khelna Bari is a toy shop on Rajdanga Main Road. Toys for babies to 12 year olds, return gifts for birthdays, cycles, school and art things. Every gift wrapped free.",
+      "photo": {
+        "src": "/demo/toy-shop/images/hero.jpg",
+        "alt": "Inside a toy shop: shelves of soft toys, elephants and teddy bears under warm lights"
+      },
+      "h2": "Toy finder",
+      "p": "Pick two things. We send three photos with prices on WhatsApp.",
+      "b": "Child’s age",
+      "b2": "Budget",
+      "chips": {
+        "items": [
+          {
+            "chip": "0 to 2"
+          },
+          {
+            "chip": "3 to 5"
+          },
+          {
+            "chip": "6 to 8"
+          },
+          {
+            "chip": "9 and up"
+          }
+        ]
+      },
+      "chips2": {
+        "items": [
+          {
+            "chip": "Under ₹199"
+          },
+          {
+            "chip": "Under ₹499"
+          },
+          {
+            "chip": "Under ₹999"
+          },
+          {
+            "chip": "Above ₹999"
+          }
+        ]
+      }
+    },
+    "ages": {
+      "tagline": "Toys by age",
+      "h2": "How old is the child?",
+      "p": "Tap an age. These are the toys parents buy most for that age, with today’s example prices.",
+      "b": "0 to 2",
+      "span": "Babies and toddlers",
+      "b2": "3 to 5",
+      "span2": "Play school years",
+      "b3": "6 to 8",
+      "span3": "Class 1 to 3",
+      "b4": "9 and up",
+      "span4": "Class 4 onwards",
+      "photo": {
+        "src": "/demo/toy-shop/images/baby-play.jpg",
+        "alt": "A baby in a red and orange dress sitting on a mat in a park with a green ball, a toy auto and a blue ride-on car"
+      },
+      "age-tip": "<b>At this age</b>Everything goes into the mouth. So no small parts, no loose batteries, and colours that are safe to chew.",
+      "photo2": {
+        "src": "/demo/toy-shop/images/tricycle.jpg",
+        "alt": "A small child in grey dungarees riding a red tricycle on a road"
+      },
+      "age-tip2": "<b>At this age</b>They copy what you do. Kitchen sets, doctor sets and anything with wheels are played with every day.",
+      "photo3": {
+        "src": "/demo/toy-shop/images/blocks.jpg",
+        "alt": "A heap of plastic building blocks in red, blue, yellow and green"
+      },
+      "age-tip3": "<b>At this age</b>They like to build, race and win. Blocks, remote-control cars and simple board games last the longest.",
+      "photo4": {
+        "src": "/demo/toy-shop/images/ludo.jpg",
+        "alt": "A Ludo board with red, blue, green and yellow pieces on a wooden floor, a hand reaching for the box"
+      },
+      "age-tip4": "<b>At this age</b>Games the whole family can play, and kits where they make something on their own.",
+      "toys": {
+        "items": [
+          {
+            "h3": "Rattle set, 5 pieces",
+            "p": "Light, easy to hold, washable",
+            "amt": "₹249"
+          },
+          {
+            "h3": "Soft cloth book",
+            "p": "Crinkle pages, animals and fruits",
+            "amt": "₹199"
+          },
+          {
+            "h3": "Stacking rings",
+            "p": "Seven rings, big to small",
+            "amt": "₹179"
+          },
+          {
+            "h3": "Bath toys, set of 6",
+            "p": "Squeeze ducks and fish",
+            "amt": "₹229"
+          },
+          {
+            "h3": "Musical cot mobile",
+            "p": "Hangs on the cot, soft tunes",
+            "amt": "₹649"
+          },
+          {
+            "h3": "Push walker with blocks",
+            "p": "For the first steps, wide base",
+            "amt": "₹1,299"
+          }
+        ]
+      },
+      "toys2": {
+        "items": [
+          {
+            "h3": "Wooden shape sorter",
+            "p": "12 shapes, smooth edges",
+            "amt": "₹349"
+          },
+          {
+            "h3": "Doctor set",
+            "p": "Stethoscope, injection, case",
+            "amt": "₹299"
+          },
+          {
+            "h3": "Kitchen set, 24 pieces",
+            "p": "Gas, kadai, plates and spoons",
+            "amt": "₹449"
+          },
+          {
+            "h3": "Big blocks, bag of 60",
+            "p": "Large pieces for small hands",
+            "amt": "₹399"
+          },
+          {
+            "h3": "Magnetic drawing slate",
+            "p": "Draw, wipe, draw again",
+            "amt": "₹249"
+          },
+          {
+            "h3": "Tricycle with push handle",
+            "p": "Fitted and checked before delivery",
+            "amt": "₹2,199"
+          }
+        ]
+      },
+      "toys3": {
+        "items": [
+          {
+            "h3": "Building blocks, 250 pieces",
+            "p": "Comes in a box with a lid",
+            "amt": "₹699"
+          },
+          {
+            "h3": "Remote-control car",
+            "p": "Rechargeable, charger in the box",
+            "amt": "₹899"
+          },
+          {
+            "h3": "Fashion doll with 3 dresses",
+            "p": "Comb and shoes included",
+            "amt": "₹399"
+          },
+          {
+            "h3": "Jigsaw puzzle, 100 pieces",
+            "p": "Map of India, animals, vehicles",
+            "amt": "₹199"
+          },
+          {
+            "h3": "Ludo and snakes and ladders",
+            "p": "Two games on one board",
+            "amt": "₹149"
+          },
+          {
+            "h3": "Magnet science kit",
+            "p": "10 small experiments, with a booklet",
+            "amt": "₹549"
+          }
+        ]
+      },
+      "toys4": {
+        "items": [
+          {
+            "h3": "Magnetic chess set",
+            "p": "Folding board, pieces do not slip",
+            "amt": "₹299"
+          },
+          {
+            "h3": "Carrom board, 26 inch",
+            "p": "With coins, striker and powder",
+            "amt": "₹1,150"
+          },
+          {
+            "h3": "Business board game",
+            "p": "Buy, sell and rent, 2 to 6 players",
+            "amt": "₹349"
+          },
+          {
+            "h3": "Speed cube, 3 x 3",
+            "p": "Smooth turning, sticker-free",
+            "amt": "₹179"
+          },
+          {
+            "h3": "Build-a-robot kit",
+            "p": "Motor, wheels and a guide book",
+            "amt": "₹1,299"
+          },
+          {
+            "h3": "Badminton set",
+            "p": "Two rackets, three shuttles, cover",
+            "amt": "₹449"
+          }
+        ]
+      }
+    },
+    "budget": {
+      "tagline": "Toys by budget",
+      "h2": "Going to a birthday this evening?",
+      "p": "Pick what you want to spend. Each list is in stock most days.",
+      "tag-price": "<small>Under</small>&#8377;199",
+      "tag-for": "A classmate’s birthday",
+      "tag-price2": "<small>Under</small>&#8377;499",
+      "tag-for2": "A close friend or a cousin",
+      "tag-price3": "<small>Under</small>&#8377;999",
+      "tag-for3": "Your own child, niece or nephew",
+      "tags-note": "Above ₹999 we have cycles, ride-on cars, carrom boards and big remote-control toys. Ask for today’s price.",
+      "list": {
+        "items": [
+          {
+            "span": "Ludo, big board"
+          },
+          {
+            "span": "₹99"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "span": "Colouring book with 12 crayons"
+          },
+          {
+            "span": "₹110"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "span": "Clay set, 12 colours"
+          },
+          {
+            "span": "₹129"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "span": "Pull-back cars, set of 4"
+          },
+          {
+            "span": "₹149"
+          }
+        ]
+      },
+      "list5": {
+        "items": [
+          {
+            "span": "Bubble gun with refill"
+          },
+          {
+            "span": "₹149"
+          }
+        ]
+      },
+      "list6": {
+        "items": [
+          {
+            "span": "Speed cube, 3 x 3"
+          },
+          {
+            "span": "₹179"
+          }
+        ]
+      },
+      "list7": {
+        "items": [
+          {
+            "span": "Doctor set"
+          },
+          {
+            "span": "₹299"
+          }
+        ]
+      },
+      "list8": {
+        "items": [
+          {
+            "span": "Jigsaw puzzle, 200 pieces"
+          },
+          {
+            "span": "₹299"
+          }
+        ]
+      },
+      "list9": {
+        "items": [
+          {
+            "span": "Die-cast cars, set of 5"
+          },
+          {
+            "span": "₹349"
+          }
+        ]
+      },
+      "list10": {
+        "items": [
+          {
+            "span": "Fashion doll with 3 dresses"
+          },
+          {
+            "span": "₹399"
+          }
+        ]
+      },
+      "list11": {
+        "items": [
+          {
+            "span": "Teddy bear, 12 inch"
+          },
+          {
+            "span": "₹399"
+          }
+        ]
+      },
+      "list12": {
+        "items": [
+          {
+            "span": "Building blocks, 100 pieces"
+          },
+          {
+            "span": "₹449"
+          }
+        ]
+      },
+      "list13": {
+        "items": [
+          {
+            "span": "Art case, 68 pieces"
+          },
+          {
+            "span": "₹649"
+          }
+        ]
+      },
+      "list14": {
+        "items": [
+          {
+            "span": "Building blocks, 250 pieces"
+          },
+          {
+            "span": "₹699"
+          }
+        ]
+      },
+      "list15": {
+        "items": [
+          {
+            "span": "Cricket set, size 4"
+          },
+          {
+            "span": "₹749"
+          }
+        ]
+      },
+      "list16": {
+        "items": [
+          {
+            "span": "Teddy bear, 24 inch"
+          },
+          {
+            "span": "₹799"
+          }
+        ]
+      },
+      "list17": {
+        "items": [
+          {
+            "span": "Remote-control car"
+          },
+          {
+            "span": "₹899"
+          }
+        ]
+      },
+      "list18": {
+        "items": [
+          {
+            "span": "Doll house, 3 rooms"
+          },
+          {
+            "span": "₹949"
+          }
+        ]
+      }
+    },
+    "shelves": {
+      "tagline": "Our shelves",
+      "h2": "Seven shelves, floor to ceiling.",
+      "p": "Slide sideways to see them all.",
+      "shelf": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/soft-toys.jpg",
+              "alt": "Orange monkey soft toys hanging on hooks beside a row of small giraffe soft toys"
+            },
+            "h3": "Soft toys",
+            "p": "Teddy bears, elephants, monkeys and rabbits. From 6 inch to 4 feet.",
+            "p2": "From <b>&#8377;149</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/dolls.jpg",
+              "alt": "Cloth dolls with bright yarn hair and printed dresses standing together"
+            },
+            "h3": "Dolls",
+            "p": "Cloth dolls, fashion dolls, baby dolls, doll houses and kitchen sets.",
+            "p2": "From <b>&#8377;199</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/cars.jpg",
+              "alt": "A blue toy police car and a red racing car on a black race track laid on a wooden table"
+            },
+            "h3": "Cars and remote-control",
+            "p": "Pull-back cars, die-cast cars, race tracks, remote-control cars and trucks.",
+            "p2": "From <b>&#8377;49</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/blocks-loose.jpg",
+              "alt": "Small plastic building blocks in many colours spread on a grey carpet, some joined into shapes"
+            },
+            "h3": "Building blocks",
+            "p": "Big blocks for small hands, small blocks for big ideas. Bags of 60 to boxes of 500.",
+            "p2": "From <b>&#8377;249</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/board-games.jpg",
+              "alt": "A snakes and ladders board resting on a word game box on a white shelf"
+            },
+            "h3": "Board games and puzzles",
+            "p": "Ludo, snakes and ladders, chess, carrom, word games and jigsaws of 24 to 500 pieces.",
+            "p2": "From <b>&#8377;99</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/kids-cycle.jpg",
+              "alt": "A child's tricycle with a duck-shaped front standing on an empty road"
+            },
+            "h3": "Cycles and ride-ons",
+            "p": "Tricycles, ride-on cars, scooters and cycles of 12, 14, 16 and 20 inch. Fitted free.",
+            "p2": "From <b>&#8377;1,499</b>"
+          },
+          {
+            "photo": {
+              "src": "/demo/toy-shop/images/art-kit.jpg",
+              "alt": "An open art case with rows of crayons, sketch pens and water colour cakes"
+            },
+            "h3": "School and art things",
+            "p": "Crayons, sketch pens, water colours, clay, pencil boxes, bottles and tiffin boxes.",
+            "p2": "From <b>&#8377;20</b>"
+          }
+        ]
+      }
+    },
+    "return-gifts": {
+      "tagline": "Birthday return gifts",
+      "h2": "Return gifts in bulk. Price per piece.",
+      "p": "Buy 10 or more of the same thing and the price drops. The more you take, the less each one costs.",
+      "th": "Return gift",
+      "th2": "10 to 24 pieces",
+      "th3": "25 to 49 pieces",
+      "th4": "50 or more",
+      "photo": {
+        "src": "/demo/toy-shop/images/gift-wrap.jpg",
+        "alt": "Two hands tying a red ribbon on a small wrapped gift box on a wooden table"
+      },
+      "h3": "Every piece wrapped free",
+      "p2": "One gift or eighty, we wrap each one in paper you choose. No charge. Tell us the number of children and your budget per child.",
+      "list": {
+        "items": [
+          {
+            "td": "Pencil box set <small>Pencil, eraser, sharpener, scale</small>",
+            "td2": "₹45",
+            "td3": "₹40",
+            "td4": "₹35"
+          },
+          {
+            "td": "Pull-back car <small>Mixed colours</small>",
+            "td2": "₹55",
+            "td3": "₹50",
+            "td4": "₹45"
+          },
+          {
+            "td": "Crayons with colouring book <small>12 crayons, 16 pages</small>",
+            "td2": "₹60",
+            "td3": "₹55",
+            "td4": "₹49"
+          },
+          {
+            "td": "Soft toy keychain <small>Bear, rabbit or puppy</small>",
+            "td2": "₹65",
+            "td3": "₹58",
+            "td4": "₹50"
+          },
+          {
+            "td": "Mini jigsaw puzzle <small>24 pieces, in a tin</small>",
+            "td2": "₹70",
+            "td3": "₹62",
+            "td4": "₹55"
+          },
+          {
+            "td": "Clay set <small>6 colours with moulds</small>",
+            "td2": "₹80",
+            "td3": "₹72",
+            "td4": "₹65"
+          },
+          {
+            "td": "Story book <small>Bengali or English</small>",
+            "td2": "₹90",
+            "td3": "₹82",
+            "td4": "₹75"
+          },
+          {
+            "td": "Water bottle with sipper <small>500 ml</small>",
+            "td2": "₹110",
+            "td3": "₹99",
+            "td4": "₹89"
+          }
+        ]
+      },
+      "rg-notes": {
+        "items": [
+          {
+            "li": "You can mix two items (say 15 cars and 15 clay sets). The price is by the total count."
+          },
+          {
+            "li": "Order 3 days before the party. Pay ₹500 to book, the rest when you collect."
+          },
+          {
+            "li": "Name sticker on each gift (“Thank you from Riya”): ₹3 per piece."
+          }
+        ]
+      }
+    },
+    "order": {
+      "photo": {
+        "src": "/demo/toy-shop/images/girl-soft-toy.jpg",
+        "alt": "A smiling girl in a school uniform holding a white soft toy dog"
+      },
+      "tagline": "Order from home",
+      "h2": "No time to come to the shop? Order on WhatsApp.",
+      "steps": {
+        "items": [
+          {
+            "h3": "Send age and budget",
+            "p": "For example: “Girl, 6 years, ₹500.” Add what she likes if you know."
+          },
+          {
+            "h3": "Get three photos",
+            "p": "We send three toys with prices. In shop hours, within 15 minutes."
+          },
+          {
+            "h3": "Pick one and pay",
+            "p": "UPI, card at the door, or cash on delivery."
+          },
+          {
+            "h3": "We wrap and deliver",
+            "p": "Same day within 3 km. ₹30 delivery, free above ₹799."
+          }
+        ]
+      }
+    },
+    "safety": {
+      "tagline": "Safety",
+      "h2": "What we check before a toy leaves the shop.",
+      "h3": "Exchange",
+      "slip-big": "7 days",
+      "p": "<strong>Child did not like it? Got the same toy twice?</strong> Bring it back.",
+      "clip": {
+        "items": [
+          {
+            "h3": "BIS (ISI) mark on the box",
+            "p": "We stock only toys that carry the mark. Ask us and we show you where it is printed."
+          },
+          {
+            "h3": "Batteries checked at the counter",
+            "p": "We put the cells in and switch the toy on in front of you. If it does not run, it does not get billed."
+          },
+          {
+            "h3": "Right age for the toy",
+            "p": "We read the age on the box and tell you if a toy has small parts not meant for a child under 3."
+          },
+          {
+            "h3": "Box opened if you ask",
+            "p": "Check the edges, the wheels and the stitching yourself before you pay."
+          },
+          {
+            "h3": "Non-toxic crayons and clay",
+            "p": "The art shelf has only colours marked non-toxic on the pack."
+          },
+          {
+            "h3": "Cycles fitted and brakes tested",
+            "p": "Our mechanic fits the cycle, sets the seat to the child’s height and tests both brakes."
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "li": "Within 7 days, with the bill"
+          },
+          {
+            "li": "Unused, in its box"
+          },
+          {
+            "li": "Take any toy of the same price or pay the difference"
+          },
+          {
+            "li": "A toy that stops working in 7 days is replaced"
+          },
+          {
+            "li": "No cash refund; no exchange on clay, crayons and balloons once opened"
+          }
+        ]
+      }
+    },
+    "parents": {
+      "tagline": "Parents say",
+      "h2": "From the para.",
+      "tagline2": "Questions",
+      "h22": "Asked at the counter every day.",
+      "summary": "Where do you deliver?",
+      "p": "Within 3 km of the shop: Kasba, Rajdanga, Bosepukur, Haltu, Ruby and Picnic Garden. Same day if you order before 7 pm. ₹30 per delivery, free above ₹799. Cycles are delivered fitted.",
+      "summary2": "Is gift wrapping really free?",
+      "p2": "Yes, for every toy bought here, one piece or eighty. You choose the paper. A small gift tag is free too.",
+      "summary3": "Do toys come with batteries?",
+      "p3": "Some do. If the box says batteries not included, we tell you before billing and you can add cells at the counter (from ₹20 a pair). Either way we test the toy before it is packed.",
+      "summary4": "How do I pay?",
+      "p4": "Cash, UPI and all cards at the shop. For home delivery: UPI in advance, or cash and UPI at the door.",
+      "summary5": "Can I exchange a gift someone else bought here?",
+      "p5": "Yes, if you have the bill or the gift slip we put inside the wrapping, and it is within 7 days.",
+      "summary6": "Do you repair cycles and remote-control toys?",
+      "p6": "Cycles bought here get one free service in the first three months. Remote-control toys have a 7 day replacement; after that we can only check the battery and charger.",
+      "quotes": {
+        "items": [
+          {
+            "p": "Sent my son’s age and a ₹500 budget at 6 in the evening. Three photos came in ten minutes. The wrapped gift reached home before the party at 8.",
+            "span": "· Kasba"
+          },
+          {
+            "p": "Took 40 return gifts for my daughter’s birthday. Each one was wrapped, with her name sticker on it. The bill matched the price they told me on the first day.",
+            "span": "· Haltu"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "tagline": "Visit the shop",
+      "h2": "On Rajdanga Main Road, two minutes from Kasba bus stand.",
+      "b": "Address",
+      "p": "41 Rajdanga Main Road, Kasba<br>Kolkata 700107",
+      "button": "Get directions →",
+      "b2": "Opening hours",
+      "b3": "Phone and WhatsApp",
+      "p2": "Photos and prices on WhatsApp in shop hours.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "10:30 am to 9:30 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "10:30 am to 10:00 pm"
+          },
+          {
+            "td": "Home delivery",
+            "td2": "11:00 am to 8:30 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Khelna Bari sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=41%20Rajdanga%20Main%20Road%2C%20Kasba%2C%20Kolkata%20700107",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Khelna Bari",
+      "small": "Toy shop · Kasba · since 2009",
+      "p": "Toys by age and by budget, return gifts in bulk, cycles, school and art things. Wrapped free, delivered nearby.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "41 Rajdanga Main Road, Kasba, Kolkata 700107",
+      "li2": "Open all seven days, 10:30 am to 9:30 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Toys by age"
+          },
+          {
+            "button": "Toys by budget"
+          },
+          {
+            "button": "Our shelves"
+          },
+          {
+            "button": "Return gifts"
+          },
+          {
+            "button": "Safety and exchange"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Khelna Bari | Toy Shop in Kasba, Kolkata",
+      "description": "Toys by age and by budget, birthday return gifts in bulk, free gift wrapping and home delivery near Kasba. Send the child's age and budget on WhatsApp and get three photos. Open 10:30 am to 9:30 pm."
+    }
+  }
+}

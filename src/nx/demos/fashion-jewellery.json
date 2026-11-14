@@ -1,0 +1,2641 @@
+{
+  "site": "fashion-jewellery",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Chumki Fashion Jewellery",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-flag",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "hero-p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1528"
+        },
+        {
+          "key": "tag",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          },
+          "html": true
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "tag2",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          },
+          "html": true
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "tag3",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          },
+          "html": true
+        }
+      ],
+      "lists": [
+        {
+          "key": "hero-facts",
+          "label": {
+            "en": "Jhumka, churi and sets, from ₹50",
+            "bn": "Jhumka, churi and sets, from ₹50"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "budget",
+      "label": {
+        "en": "Tell us how much you want to spend",
+        "bn": "Tell us how much you want to spend"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "button2",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "button3",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "small4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "button4",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Under ₹99",
+            "bn": "Under ₹99"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "₹100 to ₹199",
+            "bn": "₹100 to ₹199"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "₹200 to ₹499",
+            "bn": "₹200 to ₹499"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "list4",
+          "label": {
+            "en": "₹500 to ₹2,500",
+            "bn": "₹500 to ₹2,500"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "new",
+      "label": {
+        "en": "Came in on Tuesday",
+        "bn": "Came in on Tuesday"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "shop",
+      "label": {
+        "en": "Pick a type. See what it costs",
+        "bn": "Pick a type. See what it costs"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1143"
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo2",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1068"
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p3",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo3",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1600"
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p4",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo4",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1500"
+        },
+        {
+          "key": "h34",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p5",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo5",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1067"
+        },
+        {
+          "key": "h35",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p6",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo6",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1301"
+        },
+        {
+          "key": "h36",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p7",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "tabs",
+          "label": {
+            "en": "Pick a type. See what it costs",
+            "bn": "Pick a type. See what it costs"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "tab",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist",
+          "label": {
+            "en": "Earrings and jhumka",
+            "bn": "Earrings and jhumka"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist2",
+          "label": {
+            "en": "Kundan and AD sets",
+            "bn": "Kundan and AD sets"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist3",
+          "label": {
+            "en": "Bangles and churi",
+            "bn": "Bangles and churi"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist4",
+          "label": {
+            "en": "Oxidised jewellery",
+            "bn": "Oxidised jewellery"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist5",
+          "label": {
+            "en": "Terracotta, dokra and beads",
+            "bn": "Terracotta, dokra and beads"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "plist6",
+          "label": {
+            "en": "Hair pieces and daily wear",
+            "bn": "Hair pieces and daily wear"
+          },
+          "min": 1,
+          "max": 16,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "b",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "match",
+      "label": {
+        "en": "Which colour are you wearing?",
+        "bn": "Which colour are you wearing?"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1200:1800"
+        },
+        {
+          "key": "figcaption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "swatches",
+          "label": {
+            "en": "Which colour are you wearing?",
+            "bn": "Which colour are you wearing?"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "sw",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        },
+        {
+          "key": "picks",
+          "label": {
+            "en": "Which colour are you wearing?",
+            "bn": "Which colour are you wearing?"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bridal",
+      "label": {
+        "en": "Wear it for the wedding. Bring it back after",
+        "bn": "Wear it for the wedding. Bring it back after"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "caption",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "rent-photos",
+          "label": {
+            "en": "Wear it for the wedding. Bring it back after",
+            "bn": "Wear it for the wedding. Bring it back after"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1600:1068"
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "th",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            },
+            {
+              "key": "r",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "terms",
+          "label": {
+            "en": "Wear it for the wedding. Bring it back after",
+            "bn": "Wear it for the wedding. Bring it back after"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": {
+        "en": "Four messages and it is on its way",
+        "bn": "Four messages and it is on its way"
+      },
+      "fields": [
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "div",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "msg",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "msg2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "msg3",
+          "type": "text",
+          "label": {
+            "en": "Price",
+            "bn": "দাম"
+          }
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "msg-pics",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "photo",
+              "type": "image",
+              "label": {
+                "en": "Photo",
+                "bn": "ছবি"
+              },
+              "aspect": "1200:1800"
+            }
+          ]
+        },
+        {
+          "key": "steps",
+          "label": {
+            "en": "Four messages and it is on its way",
+            "bn": "Four messages and it is on its way"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Sub heading",
+                "bn": "উপ-শিরোনাম"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        },
+        {
+          "key": "ship",
+          "label": {
+            "en": "Four messages and it is on its way",
+            "bn": "Four messages and it is on its way"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              },
+              "html": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wholesale",
+      "label": {
+        "en": "Selling from home or a stall? Buy by the dozen",
+        "bn": "Selling from home or a stall? Buy by the dozen"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "th",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "th4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Selling from home or a stall? Buy by the dozen",
+            "bn": "Selling from home or a stall? Buy by the dozen"
+          },
+          "min": 1,
+          "max": 14,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td3",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            },
+            {
+              "key": "td4",
+              "type": "text",
+              "label": {
+                "en": "Price",
+                "bn": "দাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "How wholesale works",
+            "bn": "How wholesale works"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "facts",
+      "label": {
+        "en": "What it is, how long it lasts, and the exchange rule",
+        "bn": "What it is, how long it lasts, and the exchange rule"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "What it is made of",
+            "bn": "What it is made of"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "How long it lasts",
+            "bn": "How long it lasts"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "textarea",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list3",
+          "label": {
+            "en": "The exchange rule",
+            "bn": "The exchange rule"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "li",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-11",
+      "label": {
+        "en": "Section 11",
+        "bn": "অংশ 11"
+      },
+      "fields": [],
+      "lists": [
+        {
+          "key": "says",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            },
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Bertram Street, two minutes from the New Market clock tower",
+        "bn": "Bertram Street, two minutes from the New Market clock tower"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "small2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "small3",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "hours",
+          "label": {
+            "en": "Opening hours",
+            "bn": "Opening hours"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "td",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "td2",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Send a photo of your saree",
+        "bn": "Send a photo of your saree"
+      },
+      "fields": [
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "b",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "small",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "b": "Chumki",
+      "small": "Fashion Jewellery"
+    },
+    "top": {
+      "hero-flag": "New Market · open till 9 pm",
+      "h1": "Jhumka, churi and sets, <em>from &#8377;50.</em>",
+      "hero-p": "Oxidised, kundan, AD stone and terracotta jewellery for college, office, Pujo and weddings. Nothing here is real gold or silver, and nothing costs more than ₹2,500. Come and try it with your saree, or ask for photos on WhatsApp.",
+      "button": "Shop by budget",
+      "photo": {
+        "src": "/demo/fashion-jewellery/images/hero.jpg",
+        "alt": "A pair of long oxidised earrings with small ghungroo drops on white cloth, beside a cane ring with red and white flowers"
+      },
+      "tag": "Oxidised long jhumka<b>&#8377;220</b>",
+      "photo2": {
+        "src": "/demo/fashion-jewellery/images/mirror-jhumka.jpg",
+        "alt": "Oxidised jhumkas with mirror work and red painted panels hung on a tree trunk"
+      },
+      "tag2": "Mirror jhumka<b>&#8377;180</b>",
+      "photo3": {
+        "src": "/demo/fashion-jewellery/images/coin-jhumka.jpg",
+        "alt": "Gold-plated hoop jhumkas with stone work and coin drops hanging against red cloth"
+      },
+      "tag3": "Gold-plated coin jhumka<b>&#8377;150</b>",
+      "hero-facts": {
+        "items": [
+          {
+            "li": "<b>&#8377;50 to &#8377;2,500</b>Every piece in the shop"
+          },
+          {
+            "li": "<b>7 days</b>Exchange with the bill"
+          },
+          {
+            "li": "<b>Since 2009</b>Same lane, same counter"
+          }
+        ]
+      }
+    },
+    "budget": {
+      "kicker": "Shop by budget",
+      "h2": "Tell us how much you want to spend.",
+      "p": "Most people come with a number in mind. Here is what that number buys. Prices are fixed and printed on every card, so there is no bargaining at the counter.",
+      "small": "Pocket money",
+      "h3": "Under <span class=\"rs\">&nbsp;&#8377;</span>99",
+      "button": "See the full list →",
+      "small2": "Daily wear",
+      "h32": "<span class=\"rs\">&#8377;</span>100 to <span class=\"rs\">&nbsp;&#8377;</span>199",
+      "button2": "See the full list →",
+      "small3": "Pujo and parties",
+      "h33": "<span class=\"rs\">&#8377;</span>200 to <span class=\"rs\">&nbsp;&#8377;</span>499",
+      "button3": "See the full list →",
+      "small4": "Weddings",
+      "h34": "<span class=\"rs\">&#8377;</span>500 to <span class=\"rs\">&nbsp;&#8377;</span>2,500",
+      "button4": "See the rent rates →",
+      "list": {
+        "items": [
+          {
+            "li": "Bindi pata <b>&#8377;10</b>"
+          },
+          {
+            "li": "Hair clip, pair <b>&#8377;20</b>"
+          },
+          {
+            "li": "Nose pin, stone <b>&#8377;30</b>"
+          },
+          {
+            "li": "Small studs <b>&#8377;50</b>"
+          },
+          {
+            "li": "Glass churi, 1 dozen <b>&#8377;60</b>"
+          },
+          {
+            "li": "Saree pin <b>&#8377;40</b>"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Finger ring, adjustable <b>&#8377;100</b>"
+          },
+          {
+            "li": "Oxidised jhumka <b>&#8377;120</b>"
+          },
+          {
+            "li": "Thread bangles, set of 4 <b>&#8377;150</b>"
+          },
+          {
+            "li": "Payel, pair <b>&#8377;160</b>"
+          },
+          {
+            "li": "Gold-plated daily chain <b>&#8377;180</b>"
+          },
+          {
+            "li": "Khopa pins, set of 6 <b>&#8377;110</b>"
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Metal bangles, set of 6 <b>&#8377;240</b>"
+          },
+          {
+            "li": "AD stone earrings <b>&#8377;280</b>"
+          },
+          {
+            "li": "Terracotta set <b>&#8377;320</b>"
+          },
+          {
+            "li": "Oxidised choker <b>&#8377;350</b>"
+          },
+          {
+            "li": "Kundan earrings <b>&#8377;450</b>"
+          },
+          {
+            "li": "Tikli with stones <b>&#8377;220</b>"
+          }
+        ]
+      },
+      "list4": {
+        "items": [
+          {
+            "li": "Dokra necklace <b>&#8377;650</b>"
+          },
+          {
+            "li": "Kundan choker set <b>&#8377;950</b>"
+          },
+          {
+            "li": "AD necklace set <b>&#8377;1,400</b>"
+          },
+          {
+            "li": "Bridal set, to buy <b>&#8377;2,500</b>"
+          },
+          {
+            "li": "Bridal set, on rent <b>&#8377;800</b>"
+          },
+          {
+            "li": "Sita haar, gold-plated <b>&#8377;700</b>"
+          }
+        ]
+      }
+    },
+    "new": {
+      "kicker": "New this week",
+      "h2": "Came in on Tuesday."
+    },
+    "shop": {
+      "kicker": "Price list",
+      "h2": "Pick a type. See what it costs.",
+      "p": "These are the starting prices for each kind of piece. Bigger sizes and heavier stone work cost a little more. Ask on WhatsApp and we send photos of what is in stock today.",
+      "photo": {
+        "src": "/demo/fashion-jewellery/images/kundan-earrings.jpg",
+        "alt": "A pair of round kundan earrings with green and maroon stones and pearl drops"
+      },
+      "h3": "Earrings and jhumka",
+      "p2": "Our biggest counter. About 400 designs on the wall at any time, all on cards with the price written.",
+      "photo2": {
+        "src": "/demo/fashion-jewellery/images/kundan-choker.jpg",
+        "alt": "A kundan choker with green beads and a matching pair of earrings laid on dark blue cloth"
+      },
+      "h32": "Kundan and AD sets",
+      "p3": "Imitation kundan and American diamond (AD) stone on a gold-plated base. They look heavy and weigh very little.",
+      "photo3": {
+        "src": "/demo/fashion-jewellery/images/bangles-rack.jpg",
+        "alt": "Rows of glass churi on a rack in green, purple, blue, yellow, pink and red"
+      },
+      "h33": "Bangles and churi",
+      "p4": "Sizes 2.2, 2.4, 2.6 and 2.8 in stock. Not sure of your size? Bring one bangle that fits and we measure it.",
+      "photo4": {
+        "src": "/demo/fashion-jewellery/images/oxidised-choker.jpg",
+        "alt": "An oxidised choker of small metal flowers worn on the neck"
+      },
+      "h34": "Oxidised jewellery",
+      "p5": "Dark silver-look pieces made of brass or alloy. No silver in them. They go well with cotton, handloom and kurtis.",
+      "photo5": {
+        "src": "/demo/fashion-jewellery/images/bead-necklace.jpg",
+        "alt": "A necklace of bright painted beads with a brass fan-shaped pendant lying on green palm leaves"
+      },
+      "h35": "Terracotta, dokra and beads",
+      "p6": "Handmade pieces from Bankura, Bishnupur and Bolpur. Each one is a little different, so ask for a photo of the exact piece.",
+      "photo6": {
+        "src": "/demo/fashion-jewellery/images/oxidised-studs.jpg",
+        "alt": "A small pair of oxidised studs with green and pink stones on white cloth"
+      },
+      "h36": "Hair pieces and daily wear",
+      "p7": "Small things for every day, and the hair pieces a bride or a dancer needs.",
+      "tabs": {
+        "items": [
+          {
+            "tab": "Earrings"
+          },
+          {
+            "tab": "Kundan and AD sets"
+          },
+          {
+            "tab": "Bangles and churi"
+          },
+          {
+            "tab": "Oxidised"
+          },
+          {
+            "tab": "Terracotta and dokra"
+          },
+          {
+            "tab": "Hair and daily wear"
+          }
+        ]
+      },
+      "plist": {
+        "items": [
+          {
+            "span": "Small studs<small>Stone or pearl</small>",
+            "b": "₹50"
+          },
+          {
+            "span": "Oxidised jhumka<small>Small, medium, large</small>",
+            "b": "₹120 to ₹260"
+          },
+          {
+            "span": "Gold-plated jhumka<small>Plain or with coins</small>",
+            "b": "₹150"
+          },
+          {
+            "span": "AD stone earrings<small>White, green or ruby colour</small>",
+            "b": "₹280"
+          },
+          {
+            "span": "Kundan chandbali<small>With pearl drops</small>",
+            "b": "₹450"
+          },
+          {
+            "span": "Kaan pasha<small>Covers the full ear</small>",
+            "b": "₹380"
+          },
+          {
+            "span": "Clip-on earrings<small>For ears that are not pierced</small>",
+            "b": "₹90"
+          },
+          {
+            "span": "Thread and fabric earrings<small>Light, for long days</small>",
+            "b": "₹80"
+          }
+        ]
+      },
+      "plist2": {
+        "items": [
+          {
+            "span": "Kundan choker set<small>Choker and earrings</small>",
+            "b": "₹950"
+          },
+          {
+            "span": "Kundan choker with tikli<small>Three pieces</small>",
+            "b": "₹1,200"
+          },
+          {
+            "span": "AD necklace set<small>White stone, for reception</small>",
+            "b": "₹1,400"
+          },
+          {
+            "span": "AD pendant set<small>Chain, pendant, studs</small>",
+            "b": "₹480"
+          },
+          {
+            "span": "Sita haar, gold-plated<small>Long necklace</small>",
+            "b": "₹700"
+          },
+          {
+            "span": "Full bridal set, to buy<small>Seven pieces</small>",
+            "b": "₹2,500"
+          },
+          {
+            "span": "Mangalsutra, short<small>Black beads, AD pendant</small>",
+            "b": "₹260"
+          },
+          {
+            "span": "Nath with chain<small>Clip-on</small>",
+            "b": "₹150"
+          }
+        ]
+      },
+      "plist3": {
+        "items": [
+          {
+            "span": "Glass churi<small>1 dozen, one colour</small>",
+            "b": "₹60"
+          },
+          {
+            "span": "Glass churi, mixed box<small>4 dozen, colours of your saree</small>",
+            "b": "₹220"
+          },
+          {
+            "span": "Thread bangles<small>Set of 4</small>",
+            "b": "₹150"
+          },
+          {
+            "span": "Metal bangles, gold-plated<small>Set of 6</small>",
+            "b": "₹240"
+          },
+          {
+            "span": "Stone kada<small>Pair</small>",
+            "b": "₹320"
+          },
+          {
+            "span": "Oxidised kada<small>Single, open type</small>",
+            "b": "₹130"
+          },
+          {
+            "span": "Imitation shankha pola<small>Pair of each</small>",
+            "b": "₹180"
+          },
+          {
+            "span": "Bridal chur, gold-plated<small>Pair</small>",
+            "b": "₹550"
+          }
+        ]
+      },
+      "plist4": {
+        "items": [
+          {
+            "span": "Oxidised jhumka<small>Medium</small>",
+            "b": "₹120"
+          },
+          {
+            "span": "Mirror jhumka<small>Hand painted</small>",
+            "b": "₹180"
+          },
+          {
+            "span": "Flower choker<small>With ghungroo</small>",
+            "b": "₹350"
+          },
+          {
+            "span": "Long necklace with pendant<small>30 inch</small>",
+            "b": "₹280"
+          },
+          {
+            "span": "Nose pin, clip-on<small>No piercing needed</small>",
+            "b": "₹40"
+          },
+          {
+            "span": "Finger ring<small>Adjustable</small>",
+            "b": "₹100"
+          },
+          {
+            "span": "Payel<small>Pair</small>",
+            "b": "₹160"
+          },
+          {
+            "span": "Full oxidised set<small>Choker, jhumka, ring, nose pin</small>",
+            "b": "₹600"
+          }
+        ]
+      },
+      "plist5": {
+        "items": [
+          {
+            "span": "Terracotta earrings<small>Hand painted</small>",
+            "b": "₹90"
+          },
+          {
+            "span": "Terracotta set<small>Necklace and earrings</small>",
+            "b": "₹320"
+          },
+          {
+            "span": "Dokra pendant on thread<small>Brass, lost-wax work</small>",
+            "b": "₹250"
+          },
+          {
+            "span": "Dokra necklace<small>Brass beads and pendant</small>",
+            "b": "₹650"
+          },
+          {
+            "span": "Painted bead necklace<small>With brass pendant</small>",
+            "b": "₹220"
+          },
+          {
+            "span": "Kantha stitch necklace<small>Fabric</small>",
+            "b": "₹200"
+          },
+          {
+            "span": "Jute and shell earrings<small>Very light</small>",
+            "b": "₹70"
+          },
+          {
+            "span": "Wooden bangles, painted<small>Pair</small>",
+            "b": "₹120"
+          }
+        ]
+      },
+      "plist6": {
+        "items": [
+          {
+            "span": "Hair clip<small>Pair</small>",
+            "b": "₹20"
+          },
+          {
+            "span": "Khopa pins with stones<small>Set of 6</small>",
+            "b": "₹110"
+          },
+          {
+            "span": "Juda net with pearls<small>For a bun</small>",
+            "b": "₹60"
+          },
+          {
+            "span": "Tikli<small>With stones</small>",
+            "b": "₹220"
+          },
+          {
+            "span": "Tayra and tikli set<small>For the bride</small>",
+            "b": "₹600"
+          },
+          {
+            "span": "Gold-plated daily chain<small>18 inch</small>",
+            "b": "₹180"
+          },
+          {
+            "span": "Saree pin and brooch<small>Each</small>",
+            "b": "₹40"
+          },
+          {
+            "span": "Bindi pata<small>Each</small>",
+            "b": "₹10"
+          }
+        ]
+      }
+    },
+    "match": {
+      "kicker": "Match with your saree",
+      "h2": "Which colour are you wearing?",
+      "p": "Tap a colour to see what we would put with it. Better still, bring the saree or send a photo of it on WhatsApp. We lay three or four options on it and send the pictures back. This is free.",
+      "photo": {
+        "src": "/demo/fashion-jewellery/images/saree-earrings.jpg",
+        "alt": "A woman in an off-white saree with a black border wearing large oxidised earrings"
+      },
+      "figcaption": "Off-white saree, black blouse, oxidised earrings. The earrings cost ₹180.",
+      "swatches": {
+        "items": [
+          {
+            "sw": "<i style=\"background:#B3122F\"></i>Red or maroon"
+          },
+          {
+            "sw": "<i style=\"background:#FBF6E9\"></i>White or off-white"
+          },
+          {
+            "sw": "<i style=\"background:#F5B400\"></i>Yellow"
+          },
+          {
+            "sw": "<i style=\"background:#1E7A46\"></i>Green"
+          },
+          {
+            "sw": "<i style=\"background:#1F3F8F\"></i>Blue"
+          },
+          {
+            "sw": "<i style=\"background:#1B1B1F\"></i>Black"
+          },
+          {
+            "sw": "<i style=\"background:#E0508A\"></i>Pink"
+          }
+        ]
+      },
+      "picks": {
+        "items": [
+          {
+            "h3": "Red or maroon saree",
+            "p": "Gold-plated coin jhumka (&#8377;150) and a set of 6 gold-plated bangles (&#8377;240). For a Banarasi, add a kundan choker set (&#8377;950). <b>From &#8377;390.</b>"
+          },
+          {
+            "h3": "White or off-white saree",
+            "p": "Oxidised jhumka (&#8377;120) with an oxidised flower choker (&#8377;350). For lal paar sada saree, red glass churi, 2 dozen (&#8377;120). <b>From &#8377;470.</b>"
+          },
+          {
+            "h3": "Yellow saree",
+            "p": "Terracotta set in red and black (&#8377;320) and green glass churi, 2 dozen (&#8377;120). Good for gaye holud and Saraswati Pujo. <b>From &#8377;440.</b>"
+          },
+          {
+            "h3": "Green saree",
+            "p": "Kundan chandbali with maroon drops (&#8377;450) and gold-plated bangles, set of 6 (&#8377;240). <b>From &#8377;690.</b>"
+          },
+          {
+            "h3": "Blue saree",
+            "p": "AD white stone earrings (&#8377;280) and an AD pendant set (&#8377;480). Silver-look pieces sit better on blue than yellow ones. <b>From &#8377;280.</b>"
+          },
+          {
+            "h3": "Black saree",
+            "p": "Full oxidised set: choker, jhumka, ring and nose pin (&#8377;600). Or a dokra necklace alone (&#8377;650). <b>From &#8377;600.</b>"
+          },
+          {
+            "h3": "Pink saree",
+            "p": "AD stone and pearl earrings (&#8377;280) with a mixed box of pink and white glass churi (&#8377;220). <b>From &#8377;500.</b>"
+          }
+        ]
+      }
+    },
+    "bridal": {
+      "kicker": "Bridal sets on rent",
+      "h2": "Wear it for the wedding. Bring it back after.",
+      "p": "A bridal set is worn for one evening. Rent it for three days at about a third of the price. These are gold-plated imitation sets, cleaned and checked before every booking.",
+      "caption": "Rent rate card, for 3 days",
+      "th": "Set",
+      "th2": "Rent",
+      "th3": "Deposit",
+      "th4": "To buy",
+      "rent-photos": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/fashion-jewellery/images/bridal-set.jpg",
+              "alt": "A wide kundan choker with pearl drops and matching earrings laid on a round black tray"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/fashion-jewellery/images/jhumka-mehendi.jpg",
+              "alt": "A bride's hands with mehendi putting on an oxidised jhumka"
+            }
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "th": "Head set<small>Tikli, tayra and 6 khopa pins</small>",
+            "r": "₹200",
+            "td": "₹500",
+            "td2": "₹600"
+          },
+          {
+            "th": "Kundan choker set<small>Choker, earrings and tikli</small>",
+            "r": "₹350",
+            "td": "₹1,000",
+            "td2": "₹1,200"
+          },
+          {
+            "th": "AD reception set<small>White stone necklace, earrings, tikli, 2 kada</small>",
+            "r": "₹500",
+            "td": "₹1,500",
+            "td2": "₹1,900"
+          },
+          {
+            "th": "Full bridal set<small>Sita haar, choker, kaan, tikli, nath and a pair of chur</small>",
+            "r": "₹800",
+            "td": "₹2,000",
+            "td2": "₹2,500"
+          }
+        ]
+      },
+      "terms": {
+        "items": [
+          {
+            "li": "Book 7 days ahead with the rent paid. The deposit is paid on pickup."
+          },
+          {
+            "li": "The deposit comes back in full, in cash or UPI, when the set is returned."
+          },
+          {
+            "li": "An extra day costs ₹100."
+          },
+          {
+            "li": "A lost stone costs ₹20. A broken piece is charged at its buy price."
+          },
+          {
+            "li": "Trial at the shop is free. Bring the saree and the blouse."
+          },
+          {
+            "li": "Pickup and return at the shop only. We do not courier rented sets."
+          }
+        ]
+      }
+    },
+    "order": {
+      "span": "C",
+      "div": "Chumki Fashion Jewellery<small>Replies 11 am to 9 pm</small>",
+      "msg": "Didi, red saree for my cousin’s wedding. Jhumka and bangles, within ₹400?",
+      "msg2": "First one. Size 2.6. Behala, 700034.",
+      "msg3": "₹390 + ₹50 courier = ₹440. UPI number is this one. It goes out tomorrow.",
+      "kicker": "How to order on WhatsApp",
+      "h2": "Four messages and it is on its way.",
+      "msg-pics": {
+        "items": [
+          {
+            "photo": {
+              "src": "/demo/fashion-jewellery/images/coin-jhumka.jpg",
+              "alt": "Gold-plated coin jhumka"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/fashion-jewellery/images/kundan-earrings.jpg",
+              "alt": "Kundan earrings with maroon drops"
+            }
+          },
+          {
+            "photo": {
+              "src": "/demo/fashion-jewellery/images/thread-bangles.jpg",
+              "alt": "Thread bangles in bright colours"
+            }
+          }
+        ]
+      },
+      "steps": {
+        "items": [
+          {
+            "h3": "Say what you need and your budget",
+            "p": "The occasion, the colour of the dress and how much you want to spend. A photo of the saree helps."
+          },
+          {
+            "h3": "We send photos with prices",
+            "p": "Real photos taken at the counter that day, not catalogue pictures. Usually within 30 minutes during shop hours."
+          },
+          {
+            "h3": "Choose, and pay by UPI",
+            "p": "Send your address and bangle size. We send the total with courier. Pay by UPI and send the screenshot."
+          },
+          {
+            "h3": "We pack and courier",
+            "p": "Packed in a hard box with bubble wrap. Kolkata in 1 to 2 days, the rest of West Bengal in 3 to 5 days."
+          }
+        ]
+      },
+      "ship": {
+        "items": [
+          {
+            "li": "Kolkata courier <b>&#8377;50</b>"
+          },
+          {
+            "li": "Rest of West Bengal <b>&#8377;80</b>"
+          },
+          {
+            "li": "Orders above &#8377;999 <b>Free delivery</b>"
+          },
+          {
+            "li": "Cash on delivery <b>Not available</b>"
+          }
+        ]
+      }
+    },
+    "wholesale": {
+      "kicker": "Wholesale for resellers",
+      "h2": "Selling from home or a stall? Buy by the dozen.",
+      "p": "Many of our buyers sell on WhatsApp groups, at Pujo stalls and in their own para. Wholesale price starts from a bill of ₹2,000.",
+      "th": "Item",
+      "th2": "Shop price, each",
+      "th3": "Wholesale, per dozen",
+      "th4": "Comes to, each",
+      "h3": "How wholesale works",
+      "list": {
+        "items": [
+          {
+            "td": "Hair clips",
+            "td2": "₹20",
+            "td3": "₹144",
+            "td4": "₹12"
+          },
+          {
+            "td": "Small studs",
+            "td2": "₹50",
+            "td3": "₹360",
+            "td4": "₹30"
+          },
+          {
+            "td": "Oxidised jhumka",
+            "td2": "₹120",
+            "td3": "₹840",
+            "td4": "₹70"
+          },
+          {
+            "td": "Thread bangles, set of 4",
+            "td2": "₹150",
+            "td3": "₹1,080",
+            "td4": "₹90"
+          },
+          {
+            "td": "Gold-plated daily chain",
+            "td2": "₹180",
+            "td3": "₹1,320",
+            "td4": "₹110"
+          },
+          {
+            "td": "AD stone earrings",
+            "td2": "₹280",
+            "td3": "₹2,040",
+            "td4": "₹170"
+          },
+          {
+            "td": "Kundan earrings",
+            "td2": "₹450",
+            "td3": "₹3,360",
+            "td4": "₹280"
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Minimum bill ₹2,000. You can mix items to reach it."
+          },
+          {
+            "li": "A dozen can be 12 different designs of the same item."
+          },
+          {
+            "li": "We send a photo of every dozen before you pay."
+          },
+          {
+            "li": "GST bill given. Courier at actual cost."
+          },
+          {
+            "li": "Unsold stock is not taken back. Damaged pieces are replaced if you tell us within 3 days."
+          }
+        ]
+      }
+    },
+    "facts": {
+      "kicker": "Plain facts",
+      "h2": "What it is, how long it lasts, and the exchange rule.",
+      "h3": "What it is made of",
+      "h32": "How long it lasts",
+      "h33": "The exchange rule",
+      "list": {
+        "items": [
+          {
+            "li": "This is imitation jewellery. There is no gold or silver in any piece."
+          },
+          {
+            "li": "Gold-plated means a thin gold-colour polish on brass or alloy."
+          },
+          {
+            "li": "Oxidised means a dark silver-look finish on brass or alloy."
+          },
+          {
+            "li": "AD means American diamond, a machine-cut glass-like stone."
+          },
+          {
+            "li": "Skin reacts to metal? Ask for the nickel-free cards."
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "li": "Polish on a daily chain lasts 3 to 6 months. On pieces worn a few times a year, much longer."
+          },
+          {
+            "li": "Keep it away from water, sweat and perfume. Put it on last, take it off first."
+          },
+          {
+            "li": "Store each piece in the zip pouch we give, away from air."
+          },
+          {
+            "li": "Loose stone? We fix it at the counter for ₹10."
+          }
+        ]
+      },
+      "list3": {
+        "items": [
+          {
+            "li": "Exchange within 7 days with the bill, if the piece is unused and on its card."
+          },
+          {
+            "li": "No cash refund. You take another piece or a credit slip valid for 3 months."
+          },
+          {
+            "li": "Nose pins and sale items are not exchanged."
+          },
+          {
+            "li": "Broken in courier? Send an unboxing video within 24 hours and we replace it free."
+          }
+        ]
+      }
+    },
+    "section-11": {
+      "says": {
+        "items": [
+          {
+            "p": "I sent a photo of my green Dhakai at 2 pm. By 2:30 I had four photos of earrings laid on a green cloth, with prices. I paid ₹450 and it reached Barasat in two days.",
+            "span": "· Barasat"
+          },
+          {
+            "p": "We rented the full bridal set for my sister. ₹800 for three days and the deposit came back the same hour we returned it. Nobody at the wedding could tell.",
+            "span": "· Dum Dum"
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit the shop",
+      "h2": "Bertram Street, two minutes from the New Market clock tower.",
+      "h3": "Address",
+      "p": "41 Bertram Street, New Market<br>Kolkata 700087",
+      "button": "Get directions →",
+      "small": "Nearest Metro: Esplanade, gate 4. Seven minutes on foot.",
+      "h32": "Opening hours",
+      "small2": "Weekday mornings are quiet. Best time to try a bridal set.",
+      "h33": "Phone and WhatsApp",
+      "small3": "Photos and prices on WhatsApp from 11 am to 9 pm. We accept cash, UPI and cards.",
+      "hours": {
+        "items": [
+          {
+            "td": "Monday to Saturday",
+            "td2": "11 am to 9 pm"
+          },
+          {
+            "td": "Sunday",
+            "td2": "12 noon to 8 pm"
+          },
+          {
+            "td": "Pujo and Poila Boishakh week",
+            "td2": "Till 10:30 pm"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Chumki Fashion Jewellery sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=41%20Bertram%20Street%2C%20New%20Market%2C%20Kolkata%20700087",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "footer": {
+      "b": "Chumki",
+      "small": "Fashion Jewellery",
+      "p": "Imitation and fashion jewellery from ₹50 to ₹2,500. Oxidised, kundan, AD, terracotta, bangles, and bridal sets on rent.",
+      "h4": "Shop",
+      "h42": "Find us",
+      "li": "41 Bertram Street, New Market, Kolkata 700087",
+      "li2": "Mon to Sat 11 am to 9 pm · Sun 12 noon to 8 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Shop by budget"
+          },
+          {
+            "button": "Price list"
+          },
+          {
+            "button": "Match with your saree"
+          },
+          {
+            "button": "Bridal sets on rent"
+          },
+          {
+            "button": "Wholesale"
+          },
+          {
+            "button": "Exchange rule"
+          }
+        ]
+      }
+    },
+    "seo": {
+      "title": "Chumki Fashion Jewellery | Jhumka, churi and sets from ₹50 in New Market, Kolkata",
+      "description": "Imitation and fashion jewellery in New Market, Kolkata. Oxidised jhumka, kundan and AD sets, bangles and churi, terracotta, bridal sets on rent. Prices from ₹50 to ₹2,500. Order on WhatsApp with photos."
+    }
+  }
+}

@@ -13,31 +13,33 @@ import d9 from "./dance.json";
 import d10 from "./dental.json";
 import d11 from "./drawing.json";
 import d12 from "./event-decorator.json";
-import d13 from "./furniture.json";
-import d14 from "./garage.json";
-import d15 from "./gym.json";
-import d16 from "./hardware-paint.json";
-import d17 from "./homeopathy.json";
-import d18 from "./idol-maker.json";
-import d19 from "./jewellery.json";
-import d20 from "./mobile-shop.json";
-import d21 from "./music-school.json";
-import d22 from "./optical.json";
-import d23 from "./pathology-lab.json";
-import d24 from "./pharmacy.json";
-import d25 from "./photo-studio.json";
-import d26 from "./play-school.json";
-import d27 from "./printing-press.json";
-import d28 from "./real-estate.json";
-import d29 from "./restaurant.json";
-import d30 from "./salon.json";
-import d31 from "./saree.json";
-import d32 from "./spoken-english.json";
-import d33 from "./sweets.json";
-import d34 from "./tailor.json";
-import d35 from "./tax-consultant.json";
-import d36 from "./travel-agent.json";
-import d37 from "./yoga.json";
+import d13 from "./fashion-jewellery.json";
+import d14 from "./furniture.json";
+import d15 from "./garage.json";
+import d16 from "./gym.json";
+import d17 from "./hardware-paint.json";
+import d18 from "./homeopathy.json";
+import d19 from "./idol-maker.json";
+import d20 from "./jewellery.json";
+import d21 from "./mobile-shop.json";
+import d22 from "./music-school.json";
+import d23 from "./optical.json";
+import d24 from "./pathology-lab.json";
+import d25 from "./pharmacy.json";
+import d26 from "./photo-studio.json";
+import d27 from "./play-school.json";
+import d28 from "./printing-press.json";
+import d29 from "./real-estate.json";
+import d30 from "./restaurant.json";
+import d31 from "./salon.json";
+import d32 from "./saree.json";
+import d33 from "./spoken-english.json";
+import d34 from "./sweets.json";
+import d35 from "./tailor.json";
+import d36 from "./tax-consultant.json";
+import d37 from "./toy-shop.json";
+import d38 from "./travel-agent.json";
+import d39 from "./yoga.json";
 
 export const DEMO_SCHEMAS: Record<string, SiteSchema> = {
   "abacus": d0 as unknown as SiteSchema,
@@ -53,31 +55,33 @@ export const DEMO_SCHEMAS: Record<string, SiteSchema> = {
   "dental": d10 as unknown as SiteSchema,
   "drawing": d11 as unknown as SiteSchema,
   "event-decorator": d12 as unknown as SiteSchema,
-  "furniture": d13 as unknown as SiteSchema,
-  "garage": d14 as unknown as SiteSchema,
-  "gym": d15 as unknown as SiteSchema,
-  "hardware-paint": d16 as unknown as SiteSchema,
-  "homeopathy": d17 as unknown as SiteSchema,
-  "idol-maker": d18 as unknown as SiteSchema,
-  "jewellery": d19 as unknown as SiteSchema,
-  "mobile-shop": d20 as unknown as SiteSchema,
-  "music-school": d21 as unknown as SiteSchema,
-  "optical": d22 as unknown as SiteSchema,
-  "pathology-lab": d23 as unknown as SiteSchema,
-  "pharmacy": d24 as unknown as SiteSchema,
-  "photo-studio": d25 as unknown as SiteSchema,
-  "play-school": d26 as unknown as SiteSchema,
-  "printing-press": d27 as unknown as SiteSchema,
-  "real-estate": d28 as unknown as SiteSchema,
-  "restaurant": d29 as unknown as SiteSchema,
-  "salon": d30 as unknown as SiteSchema,
-  "saree": d31 as unknown as SiteSchema,
-  "spoken-english": d32 as unknown as SiteSchema,
-  "sweets": d33 as unknown as SiteSchema,
-  "tailor": d34 as unknown as SiteSchema,
-  "tax-consultant": d35 as unknown as SiteSchema,
-  "travel-agent": d36 as unknown as SiteSchema,
-  "yoga": d37 as unknown as SiteSchema,
+  "fashion-jewellery": d13 as unknown as SiteSchema,
+  "furniture": d14 as unknown as SiteSchema,
+  "garage": d15 as unknown as SiteSchema,
+  "gym": d16 as unknown as SiteSchema,
+  "hardware-paint": d17 as unknown as SiteSchema,
+  "homeopathy": d18 as unknown as SiteSchema,
+  "idol-maker": d19 as unknown as SiteSchema,
+  "jewellery": d20 as unknown as SiteSchema,
+  "mobile-shop": d21 as unknown as SiteSchema,
+  "music-school": d22 as unknown as SiteSchema,
+  "optical": d23 as unknown as SiteSchema,
+  "pathology-lab": d24 as unknown as SiteSchema,
+  "pharmacy": d25 as unknown as SiteSchema,
+  "photo-studio": d26 as unknown as SiteSchema,
+  "play-school": d27 as unknown as SiteSchema,
+  "printing-press": d28 as unknown as SiteSchema,
+  "real-estate": d29 as unknown as SiteSchema,
+  "restaurant": d30 as unknown as SiteSchema,
+  "salon": d31 as unknown as SiteSchema,
+  "saree": d32 as unknown as SiteSchema,
+  "spoken-english": d33 as unknown as SiteSchema,
+  "sweets": d34 as unknown as SiteSchema,
+  "tailor": d35 as unknown as SiteSchema,
+  "tax-consultant": d36 as unknown as SiteSchema,
+  "toy-shop": d37 as unknown as SiteSchema,
+  "travel-agent": d38 as unknown as SiteSchema,
+  "yoga": d39 as unknown as SiteSchema,
 };
 
 export const DEMO_SLUGS = Object.keys(DEMO_SCHEMAS);
