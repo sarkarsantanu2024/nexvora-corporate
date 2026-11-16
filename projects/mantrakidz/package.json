@@ -17,6 +17,11 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.71.0",
     "@electric-sql/pglite": "^0.3.4",
+    "@fontsource-variable/baloo-2": "^5.3.0",
+    "@fontsource-variable/baloo-da-2": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "@fontsource/hind": "^5.3.0",
+    "@fontsource/hind-siliguri": "^5.3.0",
     "@neondatabase/serverless": "^1.0.1",
     "@vercel/blob": "^1.1.1",
     "bcryptjs": "^3.0.2",

@@ -4,8 +4,13 @@
 
 @layer base {
   html {
-    --font-display: var(--font-display-latin);
-    --font-body: var(--font-body-latin);
+    /* Family names declared by the @fontsource stylesheets (see layout.tsx). */
+    --font-display-bn: 'Baloo Da 2 Variable';
+    --font-body-bn: 'Hind Siliguri';
+    --font-display-hi: 'Baloo 2 Variable';
+    --font-body-hi: 'Hind';
+    --font-display: var(--font-display-latin), 'Baloo 2 Variable';
+    --font-body: var(--font-body-latin), 'Plus Jakarta Sans Variable';
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
   }
@@ -68,12 +73,12 @@
  * html element so they win over Tailwind's utility classes.
  */
 html[data-lang='bn'] {
-  --font-display: var(--font-display-bn), var(--font-display-latin);
-  --font-body: var(--font-body-bn), var(--font-body-latin);
+  --font-display: var(--font-display-bn), var(--font-display-latin), 'Baloo 2 Variable';
+  --font-body: var(--font-body-bn), var(--font-body-latin), 'Plus Jakarta Sans Variable';
 }
 html[data-lang='hi'] {
-  --font-display: var(--font-display-hi), var(--font-display-latin);
-  --font-body: var(--font-body-hi), var(--font-body-latin);
+  --font-display: var(--font-display-hi), var(--font-display-latin), 'Baloo 2 Variable';
+  --font-body: var(--font-body-hi), var(--font-body-latin), 'Plus Jakarta Sans Variable';
 }
 html:is([data-lang='bn'], [data-lang='hi']) body {
   line-height: 1.75;
