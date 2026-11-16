@@ -61,6 +61,7 @@ npm test             # vitest, against an in-memory database
    set ADMIN_PASSWORD=<a strong one>
    npm run db:seed                     # admin login, the four programmes, academic year, head centre
    npm run db:seed -- --demo           # use this instead to also load the two sample centres for a client demo
+                                       # (PowerShell drops --demo: set $env:SEED_DEMO="1" and run npm run db:seed)
    ```
 
    The admin is asked to change the password at first login. Sample centres are removed from HQ › Settings › Remove sample data.
