@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    --font-display: var(--font-display-latin);
+    --font-body: var(--font-body-latin);
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ink-50 font-sans text-ink-800 antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink-900;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+  }
+  ::selection {
+    @apply bg-brand-200 text-brand-950;
+  }
+  /* Numbers in tables and tiles line up when every digit is the same width. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Form controls: one look everywhere. Use the <Input>/<Select>/<Textarea> components. */
+  .control {
+    @apply block w-full rounded-xl border border-ink-200 bg-white px-3.5 py-2.5 text-[15px] text-ink-900 shadow-sm transition placeholder:text-ink-400 hover:border-ink-300 focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-100 disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-500;
+  }
+  .control-invalid {
+    @apply border-accent-400 focus:border-accent-500 focus:ring-accent-100;
+  }
+  .skeleton {
+    @apply rounded-lg bg-[length:200%_100%] animate-shimmer;
+    background-image: linear-gradient(90deg, #eeeef5 25%, #f7f7fb 37%, #eeeef5 63%);
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #c5c5d6 transparent;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/*
+ * Bengali and Hindi.
+ *
+ * These scripts are taller than Latin: vowel signs sit above and below the
+ * letters and a line runs along the top. Line heights tuned for English clip
+ * them or make lines touch, and letter-spacing pulls joined letters apart.
+ * So, for these two languages only: their own typefaces, more room between
+ * lines everywhere, and no letter-spacing at all. The selectors carry the
+ * html element so they win over Tailwind's utility classes.
+ */
+html[data-lang='bn'] {
+  --font-display: var(--font-display-bn), var(--font-display-latin);
+  --font-body: var(--font-body-bn), var(--font-body-latin);
+}
+html[data-lang='hi'] {
+  --font-display: var(--font-display-hi), var(--font-display-latin);
+  --font-body: var(--font-body-hi), var(--font-body-latin);
+}
+html:is([data-lang='bn'], [data-lang='hi']) body {
+  line-height: 1.75;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+}
+html:is([data-lang='bn'], [data-lang='hi']) :is(h1, h2, h3, h4, h5, h6) {
+  line-height: 1.38;
+  letter-spacing: 0;
+}
+/* Every tight leading utility is opened up; the roomy ones get a little more. */
+html:is([data-lang='bn'], [data-lang='hi'])
+  :is(
+    [class~='leading-none'],
+    [class~='leading-tight'],
+    [class*=':leading-none'],
+    [class*=':leading-tight'],
+    [class*='leading-[0.'],
+    [class*='leading-[.'],
+    [class*='leading-[1]'],
+    [class*='leading-[1.0'],
+    [class*='leading-[1.1'],
+    [class*='leading-[1.2']
+  ) {
+  line-height: 1.38;
+}
+html:is([data-lang='bn'], [data-lang='hi']) :is([class~='leading-snug'], [class*=':leading-snug']) {
+  line-height: 1.5;
+}
+html:is([data-lang='bn'], [data-lang='hi']) [class~='leading-normal'] {
+  line-height: 1.7;
+}
+html:is([data-lang='bn'], [data-lang='hi']) [class~='leading-relaxed'] {
+  line-height: 1.85;
+}
+html:is([data-lang='bn'], [data-lang='hi']) [class~='leading-loose'] {
+  line-height: 2.1;
+}
+html:is([data-lang='bn'], [data-lang='hi']) [class*='tracking-'] {
+  letter-spacing: 0;
+}
+/* These scripts have no capitals; a forced-uppercase label only looks odd beside Latin words. */
+html:is([data-lang='bn'], [data-lang='hi']) .uppercase {
+  text-transform: none;
+}
+/* Small labels are harder to read in these scripts: never below 13px. */
+html:is([data-lang='bn'], [data-lang='hi']) :is(.text-xs, [class*='text-[10px]'], [class*='text-[11px]'], [class*='text-[12px]']) {
+  font-size: 0.8125rem;
+}
+
+/* People who ask their device for less motion get none of the decorative kind. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Receipts and reports print as plain paper: no sidebar, no buttons. */
+@media print {
+  .no-print,
+  [data-no-print] {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  .print-plain {
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+  @page {
+    margin: 14mm;
+  }
+}
