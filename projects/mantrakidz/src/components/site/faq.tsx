@@ -2,7 +2,8 @@
 
 /** Questions and answers that open and close smoothly. Each question is a real button, so it works from the keyboard. */
 import { Plus } from 'lucide-react';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useId, useState } from 'react';
 import { cn } from '@/lib/cn';
 

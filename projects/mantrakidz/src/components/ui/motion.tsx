@@ -8,7 +8,8 @@
  *   <Stagger><StaggerItem>…</StaggerItem></Stagger>   children arrive one after another
  *   <CountUp value={1250} prefix="₹" />        counts from 0 when first seen
  */
-import { animate, motion, useInView, useReducedMotion, type HTMLMotionProps } from 'motion/react';
+import { animate, motion, useInView, type HTMLMotionProps } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 
 const EASE = [0.2, 0.7, 0.2, 1] as const;

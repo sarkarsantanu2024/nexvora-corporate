@@ -4,7 +4,8 @@
  * A template is rebuilt on every navigation (a layout is not), which makes it
  * the place for the page-enter transition: each new page fades up into place.
  */
-import { motion, useReducedMotion } from 'motion/react';
+import { motion } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import type { ReactNode } from 'react';
 
 export default function SiteTemplate({ children }: { children: ReactNode }) {

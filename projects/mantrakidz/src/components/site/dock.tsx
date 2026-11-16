@@ -5,7 +5,8 @@
  * and (after some scrolling) back to top.
  */
 import { ArrowUp, Phone } from 'lucide-react';
-import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react';
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useState } from 'react';
 import { telLink, waLink } from '@/lib/wa';
 import { fill } from './i18n';

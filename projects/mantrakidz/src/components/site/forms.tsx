@@ -8,7 +8,8 @@
  * and the language is sent with the form so the server answers in it too.
  */
 import { Loader2, RotateCcw, Send } from 'lucide-react';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useRef, useState, type FormEvent, type ReactNode } from 'react';
 import { Field, Input, Select, Textarea } from '@/components/ui/core';
 import { cn } from '@/lib/cn';

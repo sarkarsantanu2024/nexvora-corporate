@@ -22,7 +22,7 @@
  *    the same fixed-shape box, so the page never jumps between slides.
  */
 import { Cake, ChevronLeft, ChevronRight, Pause, Play, Users } from 'lucide-react';
-import { useReducedMotion } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
 import { cn } from '@/lib/cn';
 import { Blob, Blocks, Cloud, Crayon, PaperPlane, Sparkle, Star, SunFace, Wave } from './art';

@@ -6,7 +6,8 @@
  * contains the child's age today.
  */
 import { ArrowRight, Search } from 'lucide-react';
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { useId, useState } from 'react';
 import { cn } from '@/lib/cn';
 import { fill, type Dict } from './i18n';

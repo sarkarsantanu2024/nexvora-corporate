@@ -5,15 +5,8 @@
  * Everything moves with transform and opacity only, and everything stands
  * still for a visitor who has asked their device for reduced motion.
  */
-import {
-  motion,
-  useMotionValue,
-  useReducedMotion,
-  useScroll,
-  useSpring,
-  useTransform,
-  type MotionValue,
-} from 'motion/react';
+import { motion, useMotionValue, useScroll, useSpring, useTransform, type MotionValue } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import { createContext, useContext, useEffect, useRef, type ReactNode } from 'react';
 import { cn } from '@/lib/cn';
 import { SQUIGGLE_PATH } from './art';

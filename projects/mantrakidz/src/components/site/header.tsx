@@ -7,7 +7,8 @@
  * that slides in from the right.
  */
 import { Check, ChevronDown, Globe, LogIn, Menu, Phone, X } from 'lucide-react';
-import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react';
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'motion/react';
+import { useReducedMotion } from '@/lib/use-reduced-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
