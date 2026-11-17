@@ -23,7 +23,7 @@ export default async function ParentFees() {
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title={t('Fees')} description={t('Bills from the centre and the receipts for what you have paid.')} />
+      <PageHeader title={t('Fees')} description={t('Bills from the school and the receipts for what you have paid.')} />
 
       <Card className={`mb-5 p-5 ${due > 0 ? 'border-accent-200 bg-accent-50' : 'border-mint-100 bg-mint-50'}`}>
         <p className="text-sm font-semibold text-ink-700">{due > 0 ? t('Amount due') : t('Nothing due')}</p>
@@ -37,7 +37,7 @@ export default async function ParentFees() {
             {centre.ready ? (
               <PayInfo details={centre.details} amount={centre.due} note={centre.bills} centreName={centre.centreName} upiLink="always">
                 <p className="mt-4 text-sm text-ink-600">
-                  {t('After paying, send the screenshot to the centre on WhatsApp; your receipt appears here once the centre records it. You can also pay at the centre office.')}
+                  {t('After paying, send the screenshot to the school on WhatsApp; your receipt appears here once the school records it. You can also pay at the school office.')}
                 </p>
                 <div className="mt-3">
                   <WhatsAppLink
@@ -48,7 +48,7 @@ export default async function ParentFees() {
                 </div>
               </PayInfo>
             ) : (
-              <p className="text-[15px] text-ink-600">{t('Pay at the centre office; your receipt appears here.')}</p>
+              <p className="text-[15px] text-ink-600">{t('Pay at the school office; your receipt appears here.')}</p>
             )}
           </CardBody>
         </Card>
@@ -56,7 +56,7 @@ export default async function ParentFees() {
 
       {due <= 0 ? (
         <Notice tone="blue" className="mb-5">
-          {t('Pay at the centre office; your receipt appears here.')}
+          {t('Pay at the school office; your receipt appears here.')}
         </Notice>
       ) : null}
 
@@ -113,7 +113,7 @@ export default async function ParentFees() {
                 })}
               </ul>
             ) : (
-              <EmptyState title={t('No bills yet')} text={t('When the centre raises a bill for your child, it shows here.')} className="py-10" />
+              <EmptyState title={t('No bills yet')} text={t('When the school raises a bill for your child, it shows here.')} className="py-10" />
             )}
           </Card>
         );
@@ -121,7 +121,7 @@ export default async function ParentFees() {
 
       {children.length === 0 ? (
         <Card>
-          <EmptyState icon={<ReceiptIndianRupee size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the centre office to link your child to your mobile number.')} />
+          <EmptyState icon={<ReceiptIndianRupee size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the school office to link your child to your mobile number.')} />
         </Card>
       ) : null}
     </div>

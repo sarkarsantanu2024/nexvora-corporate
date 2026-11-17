@@ -5,7 +5,7 @@ import { uiDict } from '@/i18n/ui';
 import { isHq, requireCentre } from '@/lib/auth';
 import { getLang } from '@/lib/lang';
 
-export const metadata: Metadata = { title: { default: 'Centre', template: '%s | Mantra Kidz' }, robots: { index: false } };
+export const metadata: Metadata = { title: { default: 'School', template: '%s | Mantra Kidz' }, robots: { index: false } };
 
 export default async function CentreLayout({ children }: { children: ReactNode }) {
   const { session, centre } = await requireCentre();

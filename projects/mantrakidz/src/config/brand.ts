@@ -11,7 +11,7 @@ export const BRAND = {
   /** Under the app icon on a phone: 12 letters or fewer. */
   shortName: 'Mantra Kidz',
   tagline: 'A Play School',
-  description: 'Admissions, attendance, fees, royalty and the website, for head office, every centre and every parent.',
+  description: 'Admissions, attendance, fees, royalty and the website, for head office, every school and every parent.',
   /** The square logo, drawn in the sidebar and on the login screen. */
   mark: '/brand/mark.png',
   /** Status bar and title bar of the installed app: brand-700. */

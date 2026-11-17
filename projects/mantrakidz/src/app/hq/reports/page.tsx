@@ -77,7 +77,7 @@ export default async function ReportsPage({ searchParams }: { searchParams: Sear
       <Card>
         <CardHeader title={t('{title}, {from} to {to}', { title: t(report.title), from: formatDate(range.from), to: formatDate(range.to) })} description={t(report.note)} className="pb-4" />
         {empty ? (
-          <EmptyState icon={<BarChart3 size={26} />} title={t('Nothing to report yet')} text={t('Once there are centres, their figures show here.')} />
+          <EmptyState icon={<BarChart3 size={26} />} title={t('Nothing to report yet')} text={t('Once there are schools, their figures show here.')} />
         ) : (
           <Table>
             <thead>
@@ -97,7 +97,7 @@ export default async function ReportsPage({ searchParams }: { searchParams: Sear
                     return (
                       <Td
                         key={column.header}
-                        className={cn('whitespace-nowrap', !column.text && 'tabular text-right', column.header === 'Centre' && 'font-semibold text-ink-900', typeof value === 'number' && value < 0 && 'text-accent-600')}
+                        className={cn('whitespace-nowrap', !column.text && 'tabular text-right', column.header === 'School' && 'font-semibold text-ink-900', typeof value === 'number' && value < 0 && 'text-accent-600')}
                       >
                         {column.text ? t(show(column, row)) : show(column, row)}
                       </Td>

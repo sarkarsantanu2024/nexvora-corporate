@@ -46,7 +46,7 @@ export async function hqNotifications(t: Translate): Promise<Notification[]> {
       kind: 'enquiry',
       tone: 'amber',
       title: t('{n} admission enquiries waiting', { n: data.tiles.enquiriesWaiting }),
-      text: t('Not yet contacted by a centre'),
+      text: t('Not yet contacted by a school'),
       href: '/hq/enquiries',
     });
   }

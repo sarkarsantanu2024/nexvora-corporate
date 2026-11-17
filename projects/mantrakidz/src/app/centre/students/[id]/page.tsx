@@ -213,7 +213,7 @@ async function ProfileTab({ ctx, row, manager, today }: { ctx: Ctx; row: Row; ma
             {student.status === 'active' ? <MoveClass studentId={student.id} currentBatchId={student.batchId ?? ''} classes={classes} /> : null}
             {manager && student.status === 'active' ? <MarkLeft studentId={student.id} name={student.name} today={today} admissionDate={student.admissionDate} /> : null}
             {manager && student.status !== 'active' ? <Readmit studentId={student.id} name={student.name} /> : null}
-            {!manager && student.status !== 'active' ? <p className="text-sm text-ink-500">{t('Only the centre head can re-admit a child.')}</p> : null}
+            {!manager && student.status !== 'active' ? <p className="text-sm text-ink-500">{t('Only the school head can re-admit a child.')}</p> : null}
             {manager ? (
               <div className="mt-2 w-full border-t border-ink-100 pt-3">
                 <DeleteStudent studentId={student.id} name={student.name} />

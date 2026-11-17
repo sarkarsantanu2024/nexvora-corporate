@@ -17,7 +17,7 @@ const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 export const isUuid = (value: unknown): value is string => typeof value === 'string' && UUID.test(value);
 
 export function requireManager(ctx: Ctx) {
-  if (!canManageCentre(ctx.session)) throw new ApiError(403, 'Only the centre head can do this');
+  if (!canManageCentre(ctx.session)) throw new ApiError(403, 'Only the school head can do this');
 }
 
 /** A child of this centre, or a 404. Never trusts the id alone. */

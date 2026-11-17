@@ -80,7 +80,7 @@ describe('admitting a child', () => {
     expect(new Set(numbers.map((n) => n.no)).size).toBe(numbers.length);
   });
 
-  it('refuses a class from another centre or another programme', async () => {
+  it('refuses a class from another school or another programme', async () => {
     const [foreign] = await db.select().from(s.batches).where(eq(s.batches.centreId, other.centre.id));
     await expect(admitStudent(head, child({ programmeId: foreign.programmeId, batchId: foreign.id }))).rejects.toThrow('Class not found');
     await expect(admitStudent(head, child({ programmeId: programmes[0].id, batchId: lakeBatches[1].id }))).rejects.toThrow('another programme');
@@ -92,8 +92,8 @@ describe('admitting a child', () => {
   });
 });
 
-describe('centre scoping', () => {
-  it('will not read or change a child of another centre', async () => {
+describe('school scoping', () => {
+  it('will not read or change a child of another school', async () => {
     const [foreign] = await db.select().from(s.students).where(eq(s.students.centreId, other.centre.id)).limit(1);
     await expect(getStudent(head, foreign.id)).rejects.toThrow('Child not found');
     await expect(moveStudent(head, foreign.id, { batchId: lakeBatches[0].id })).rejects.toThrow('Child not found');
@@ -101,7 +101,7 @@ describe('centre scoping', () => {
     await expect(getStudent(head, 'not-an-id')).rejects.toThrow('Child not found');
   });
 
-  it('lists only this centre, with class and programme names joined', async () => {
+  it('lists only this school, with class and programme names joined', async () => {
     const mine = await listStudents(head, { status: 'all' });
     const [{ n }] = await db.select({ n: count() }).from(s.students).where(eq(s.students.centreId, head.centre.id));
     expect(mine.total).toBe(n);
@@ -113,7 +113,7 @@ describe('centre scoping', () => {
     expect(found.rows.map((r) => r.name)).toContain('Admit One');
   });
 
-  it('refuses attendance for a child of another centre', async () => {
+  it('refuses attendance for a child of another school', async () => {
     const [foreign] = await db.select().from(s.students).where(and(eq(s.students.centreId, other.centre.id), eq(s.students.status, 'active'))).limit(1);
     await expect(
       saveAttendance(head, { day: todayIST(), batchId: lakeBatches[0].id, marks: [{ studentId: foreign.id, status: 'present' }] }),
@@ -183,9 +183,9 @@ describe('enquiries', () => {
 });
 
 describe('manager-only work', () => {
-  it('refuses centre staff', async () => {
+  it('refuses school staff', async () => {
     const [someone] = await db.select().from(s.students).where(and(eq(s.students.centreId, head.centre.id), eq(s.students.status, 'active'))).limit(1);
-    const denied = 'Only the centre head';
+    const denied = 'Only the school head';
     await expect(markStudentLeft(desk, someone.id, { leftOn: todayIST(), reason: 'Moved' })).rejects.toThrow(denied);
     await expect(promoteStudents(desk, { fromBatchId: lakeBatches[0].id, studentIds: [someone.id], mode: 'pass_out' })).rejects.toThrow(denied);
     await expect(createBatch(desk, { programmeId: programmes[0].id, academicYearId: lakeBatches[0].academicYearId, name: 'X', capacity: 12 })).rejects.toThrow(denied);
@@ -198,7 +198,7 @@ describe('manager-only work', () => {
     expect(still.status).toBe('active');
   });
 
-  it('lets the centre head give staff a login, but not touch a centre head login', async () => {
+  it('lets the school head give staff a login, but not touch a school head login', async () => {
     const member = await createStaff(head, { name: 'Login Tester', roleTitle: 'Teacher', monthlySalary: 9000 });
     const login = await createStaffLogin(head, member.id, { username: 'Login.Tester' });
     expect(login.username).toBe('login.tester');

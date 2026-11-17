@@ -33,7 +33,7 @@ describe('seed', () => {
     expect(rows.map((r) => r.username)).toContain('9000001005');
   });
 
-  it('has one real centre and two sample centres hidden from the website', async () => {
+  it('has one real school and two sample schools hidden from the website', async () => {
     const centres = await db.select().from(s.centres);
     expect(centres).toHaveLength(3);
     expect(centres.filter((c) => c.isDemo)).toHaveLength(2);
@@ -72,7 +72,7 @@ describe('seed', () => {
     expect(dupes).toHaveLength(0);
   });
 
-  it('raises royalty for the sample centres', async () => {
+  it('raises royalty for the sample schools', async () => {
     const rows = await db.select().from(s.royaltyInvoices);
     expect(rows).toHaveLength(6);
     for (const row of rows) expect(row.amount).toBeGreaterThan(0);

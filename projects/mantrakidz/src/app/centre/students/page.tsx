@@ -28,7 +28,7 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
     <>
       <PageHeader
         title={t('Children')}
-        description={t('Every child admitted at this centre. Open a child to see fees, attendance and family details.')}
+        description={t('Every child admitted at this school. Open a child to see fees, attendance and family details.')}
         actions={
           <>
             {canManageCentre(ctx.session) ? (

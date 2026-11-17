@@ -19,11 +19,11 @@ export default async function CentreRoyaltyPage() {
     <>
       <PageHeader
         title={t('Royalty to head office')}
-        description={t('What this centre owes head office each month, and what has been paid.')}
+        description={t('What this school owes head office each month, and what has been paid.')}
         actions={<PrintButton />}
       />
       {centre.isCompanyOwned ? (
-        <Notice className="mb-5">{t('This centre is run by head office, so it pays no royalty.')}</Notice>
+        <Notice className="mb-5">{t('This school is run by head office, so it pays no royalty.')}</Notice>
       ) : data.totals.overdue > 0 ? (
         <Notice tone="red" className="mb-5">
           {t('Some royalty is past its due date. Please pay head office and share the payment reference, so it can be recorded here.')}

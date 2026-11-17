@@ -167,7 +167,7 @@ export async function paySalaries(ctx: Ctx, input: SalaryInput) {
       .from(staff)
       .where(and(inArray(staff.id, ids), eq(staff.centreId, ctx.centre.id), isNull(staff.deletedAt)))
       .for('update');
-    if (members.length !== ids.length) throw new ApiError(404, 'A staff member was not found in this centre');
+    if (members.length !== ids.length) throw new ApiError(404, 'A staff member was not found in this school');
     const already = await tx
       .select({ staffId: expenses.staffId })
       .from(expenses)

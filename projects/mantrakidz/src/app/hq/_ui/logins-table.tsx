@@ -16,7 +16,7 @@ export async function LoginsTable({ rows, selfId, showCentre, canManage = true }
           <Th>{t('Name')}</Th>
           <Th>{t('Username')}</Th>
           <Th>{t('Role')}</Th>
-          {showCentre ? <Th>{t('Centre')}</Th> : null}
+          {showCentre ? <Th>{t('School')}</Th> : null}
           <Th>{t('Last login')}</Th>
           <Th>{t('Status')}</Th>
           {canManage ? <Th /> : null}
@@ -45,7 +45,7 @@ export async function LoginsTable({ rows, selfId, showCentre, canManage = true }
               </Td>
               {canManage ? (
                 <Td className="text-right">
-                  <LoginActions id={user.id} username={user.username} active={user.active} locked={locked} isSelf={user.id === selfId} />
+                  <LoginActions id={user.id} username={user.username} name={user.name} phone={user.phone} role={user.role} active={user.active} locked={locked} isSelf={user.id === selfId} />
                 </Td>
               ) : null}
             </Tr>

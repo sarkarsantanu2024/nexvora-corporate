@@ -216,8 +216,8 @@ export async function updateLead(session: Session, id: string, input: z.input<ty
   const set: Partial<typeof franchiseLeads.$inferInsert> = { ...details, updatedAt: new Date() };
   const stageMoves = stage !== undefined && stage !== before.stage;
   if (stageMoves) {
-    if (before.stage === 'onboarded') throw new ApiError(400, 'This lead is already a centre');
-    if (stage === 'onboarded') throw new ApiError(400, 'Use "Convert to centre" to onboard this lead');
+    if (before.stage === 'onboarded') throw new ApiError(400, 'This lead is already a school');
+    if (stage === 'onboarded') throw new ApiError(400, 'Use "Convert to school" to onboard this lead');
     if (stage === 'lost' && !lostReason) throw new ApiError(400, 'Say why this lead was lost', { lostReason: 'Give a reason' });
     set.stage = stage;
     set.lostReason = stage === 'lost' ? (lostReason ?? '') : '';
@@ -252,7 +252,7 @@ export async function deleteLead(session: Session, id: string) {
   assertAdmin(session);
   const db = await getDb();
   const { lead } = await getLead(id);
-  if (lead.convertedCentreId) throw new ApiError(400, 'This lead became a centre, so it is kept as the record of how the centre started');
+  if (lead.convertedCentreId) throw new ApiError(400, 'This lead became a school, so it is kept as the record of how the school started');
   await db.transaction(async (tx) => {
     await tx.delete(activityNotes).where(and(eq(activityNotes.entityType, 'franchise_lead'), eq(activityNotes.entityId, lead.id)));
     await tx.delete(franchiseLeads).where(eq(franchiseLeads.id, lead.id));
@@ -261,7 +261,7 @@ export async function deleteLead(session: Session, id: string) {
 }
 
 const convertInput = z.object({
-  centreName: requiredText('Centre name', 120),
+  centreName: requiredText('School name', 120),
   area: text(80),
   city: text(80),
   state: text(80),
@@ -284,7 +284,7 @@ export async function convertLead(session: Session, id: string, input: ConvertLe
   if (data.login) assertAdmin(session);
   const db = await getDb();
   const { lead } = await getLead(id);
-  if (lead.convertedCentreId || lead.stage === 'onboarded') throw new ApiError(400, 'This lead has already been converted to a centre');
+  if (lead.convertedCentreId || lead.stage === 'onboarded') throw new ApiError(400, 'This lead has already been converted to a school');
 
   const result = await db.transaction(async (tx) => {
     const centre = await insertCentre(tx, {
@@ -313,8 +313,8 @@ export async function convertLead(session: Session, id: string, input: ConvertLe
       .set({ stage: 'onboarded', convertedCentreId: centre.id, nextFollowUp: null, lostReason: '', updatedAt: new Date() })
       .where(and(eq(franchiseLeads.id, lead.id), sql`${franchiseLeads.convertedCentreId} is null`))
       .returning({ id: franchiseLeads.id });
-    if (!claimed.length) throw new ApiError(400, 'This lead has already been converted to a centre');
-    await insertNote(tx, session, 'franchise_lead', lead.id, `Converted to centre ${centre.code} ${centre.name}`);
+    if (!claimed.length) throw new ApiError(400, 'This lead has already been converted to a school');
+    await insertNote(tx, session, 'franchise_lead', lead.id, `Converted to school ${centre.code} ${centre.name}`);
     return { centre, login };
   });
 
@@ -322,7 +322,7 @@ export async function convertLead(session: Session, id: string, input: ConvertLe
     entity: 'franchise_lead',
     entityId: lead.id,
     centreId: result.centre.id,
-    summary: `${lead.name} became centre ${result.centre.code} ${result.centre.name}${result.login ? `, login ${result.login.username}` : ''}`,
+    summary: `${lead.name} became school ${result.centre.code} ${result.centre.name}${result.login ? `, login ${result.login.username}` : ''}`,
   });
   return result;
 }

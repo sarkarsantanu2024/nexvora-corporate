@@ -115,7 +115,7 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
               </Select>
             </Field>
           ) : (
-            <Field label={t('Last day at the centre')} required>
+            <Field label={t('Last day at the school')} required>
               <Input type="date" value={leftOn} max={today} onChange={(event) => setLeftOn(event.target.value)} />
             </Field>
           )}

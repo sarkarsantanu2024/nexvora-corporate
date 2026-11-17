@@ -22,7 +22,7 @@ export default async function EditProgrammePage({ params }: { params: Promise<{ 
   const colour = PROGRAMME_COLOURS.find((c) => c === programme.color) ?? 'indigo';
   return (
     <>
-      <PageHeader back={{ href: '/hq/programmes', label: t('Programmes') }} title={programme.name} description={t('Changes show on the website and in the centres as soon as you save.')} />
+      <PageHeader back={{ href: '/hq/programmes', label: t('Programmes') }} title={programme.name} description={t('Changes show on the website and in the schools as soon as you save.')} />
       <ProgrammeForm
         id={programme.id}
         canDelete={isAdmin(session)}

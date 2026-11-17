@@ -69,7 +69,7 @@ export function RoyaltyDayForm({ dueDay }: { dueDay: number }) {
 }
 
 type Fees = { dueDay: string; reminderTemplate: string; receiptFooter: string };
-const SAMPLE = { parent: 'Mrs Roy', child: 'Aarav', amount: '₹2,500', month: 'Nov 2026', centre: 'Mantra Kidz Lake Town' };
+const SAMPLE = { parent: 'Mrs Roy', child: 'Aarav', amount: '₹2,500', month: 'Nov 2026', centre: 'Mantra Kidz Lake Town', school: 'Mantra Kidz Lake Town' };
 
 export function FeeSettingsForm({ initial }: { initial: Fees }) {
   const t = useT();
@@ -88,7 +88,7 @@ export function FeeSettingsForm({ initial }: { initial: Fees }) {
         <Field
           label={t('WhatsApp fee reminder')}
           className="sm:col-span-2"
-          hint={t('These words are filled in for each child: {parent} {child} {amount} {month} {centre}')}
+          hint={t('These words are filled in for each child: {parent} {child} {amount} {month} {school}')}
           error={errors.reminderTemplate && t(errors.reminderTemplate)}
         >
           <Textarea rows={3} value={values.reminderTemplate} onChange={(e) => set('reminderTemplate', e.target.value)} invalid={Boolean(errors.reminderTemplate)} />
@@ -170,7 +170,7 @@ export function RemoveSample({ centres, leads }: { centres: number; leads: numbe
   const remove = useAction(removeSampleDataAction, {
     success: (result) =>
       t('Removed {centres} and {leads}', {
-        centres: result.centres === 1 ? t('{n} sample centre', { n: result.centres }) : t('{n} sample centres', { n: result.centres }),
+        centres: result.centres === 1 ? t('{n} sample school', { n: result.centres }) : t('{n} sample schools', { n: result.centres }),
         leads: result.leads === 1 ? t('{n} sample lead', { n: result.leads }) : t('{n} sample leads', { n: result.leads }),
       }),
     onDone: () => setOpen(false),
@@ -198,11 +198,11 @@ export function RemoveSample({ centres, leads }: { centres: number; leads: numbe
         <div className="space-y-3 text-[15px] text-ink-700">
           <p>
             {t('This deletes the {centres} with all their children, bills, receipts, attendance, expenses, royalty and logins, and the {leads}.', {
-              centres: centres === 1 ? t('{n} sample centre', { n: centres }) : t('{n} sample centres', { n: centres }),
+              centres: centres === 1 ? t('{n} sample school', { n: centres }) : t('{n} sample schools', { n: centres }),
               leads: leads === 1 ? t('{n} sample franchise lead', { n: leads }) : t('{n} sample franchise leads', { n: leads }),
             })}
           </p>
-          <p>{t('Your real centres, real leads, programmes, website and head office logins are not touched. This cannot be undone.')}</p>
+          <p>{t('Your real schools, real leads, programmes, website and head office logins are not touched. This cannot be undone.')}</p>
           <Field label={t('Type {SAMPLE_CONFIRM_WORD} to confirm', { SAMPLE_CONFIRM_WORD })} error={remove.fields.confirmation && t(remove.fields.confirmation)}>
             <Input value={typed} onChange={(e) => setTyped(e.target.value)} autoComplete="off" autoCapitalize="characters" />
           </Field>

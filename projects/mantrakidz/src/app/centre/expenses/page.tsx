@@ -30,7 +30,7 @@ export default async function ExpensesPage({ searchParams }: { searchParams: Pro
     <div className="animate-fade-up">
       <PageHeader
         title={t('Expenses')}
-        description={t('What the centre spends: rent, salaries, bills and supplies.')}
+        description={t('What the school spends: rent, salaries, bills and supplies.')}
         actions={
           <>
             <AddExpenseButton today={today} />
@@ -132,7 +132,7 @@ export default async function ExpensesPage({ searchParams }: { searchParams: Pro
             <EmptyState
               icon={<Wallet size={26} />}
               title={data.category ? t('No {category} expense in {label}', { category: t(data.category), label }) : t('No expenses in {label}', { label })}
-              text={t("Write down every rupee the centre spends, so the month's surplus is the real one.")}
+              text={t("Write down every rupee the school spends, so the month's surplus is the real one.")}
               action={<AddExpenseButton today={today} />}
             />
           )}

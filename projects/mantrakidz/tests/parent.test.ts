@@ -72,10 +72,10 @@ describe('parent corner', () => {
     expect(month.percent).toBe(kid.attendance.percent);
   });
 
-  it("sees notices of the child's centre and head office, not another centre's", async () => {
+  it("sees notices of the child's school and head office, not another school's", async () => {
     const [otherCentre] = await db.select().from(s.centres).where(and(ne(s.centres.id, parent.centreId!), eq(s.centres.isDemo, true)));
     await db.insert(s.announcements).values([
-      { audience: 'parents', centreId: otherCentre.id, title: 'Other centre only', publishOn: '2020-01-01' },
+      { audience: 'parents', centreId: otherCentre.id, title: 'Other school only', publishOn: '2020-01-01' },
       { audience: 'parents', centreId: null, title: 'From head office', publishOn: '2020-01-01' },
       { audience: 'parents', centreId: parent.centreId, title: 'Expired', publishOn: '2020-01-01', expiresOn: '2020-01-02' },
       { audience: 'centres', centreId: null, title: 'For owners', publishOn: '2020-01-01' },
@@ -83,12 +83,12 @@ describe('parent corner', () => {
     const titles = (await listNotices(parent)).map((n) => n.title);
     expect(titles).toContain('From head office');
     expect(titles).toContain('Parent-teacher meeting this Saturday');
-    expect(titles).not.toContain('Other centre only');
+    expect(titles).not.toContain('Other school only');
     expect(titles).not.toContain('Expired');
     expect(titles).not.toContain('For owners');
   });
 
-  it("shows the centre's payment details against what this family owes there", async () => {
+  it("shows the school's payment details against what this family owes there", async () => {
     const [kid] = await listChildren(parent);
     await db.insert(s.invoices).values({ centreId: kid.centreId, studentId: kid.id, invoiceNo: 'INV/TEST/1', title: 'Picnic', issueDate: '2026-01-01', dueDate: '2026-01-10', subtotal: 700, total: 700 });
     const before = await listPayInfo(parent);
@@ -98,7 +98,7 @@ describe('parent corner', () => {
     expect(before[0].due).toBe(kids.reduce((sum, k) => sum + k.due, 0));
     expect(before[0].bills).toContain('INV/TEST/1');
 
-    await db.update(s.centres).set({ meta: { payment: { upiId: 'centre@upi', payeeName: 'Centre' } } }).where(eq(s.centres.id, kid.centreId));
+    await db.update(s.centres).set({ meta: { payment: { upiId: 'centre@upi', payeeName: 'School' } } }).where(eq(s.centres.id, kid.centreId));
     const after = await listPayInfo(parent);
     expect(after[0].ready).toBe(true);
     expect(after[0].details.upiId).toBe('centre@upi');

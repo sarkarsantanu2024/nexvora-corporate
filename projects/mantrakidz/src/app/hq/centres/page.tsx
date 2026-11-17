@@ -14,7 +14,7 @@ import { enterCentre } from '@/server/session-actions';
 import { FilterBar, readSearch, type Search } from '../_ui/bits';
 import { CentreCreate } from './centre-create';
 
-export const metadata: Metadata = { title: 'Centres' };
+export const metadata: Metadata = { title: 'Schools' };
 
 function Figure({ label, value, alert }: { label: string; value: string; alert?: boolean }) {
   return (
@@ -35,10 +35,10 @@ export default async function CentresPage({ searchParams }: { searchParams: Sear
 
   return (
     <>
-      <PageHeader title={t('Centres')} description={t("Every centre with its strength, this month's collection and what is owed.")} actions={<CentreCreate />} />
+      <PageHeader title={t('Schools')} description={t("Every school with its strength, this month's collection and what is owed.")} actions={<CentreCreate />} />
 
       {params.pick ? (
-        <Notice className="mb-4">{t('Choose a centre to work in. Press "Work in this centre" on its card to open its screens as head office.')}</Notice>
+        <Notice className="mb-4">{t('Choose a school to work in. Press "Work in this school" on its card to open its screens as head office.')}</Notice>
       ) : null}
 
       <FilterBar>
@@ -63,8 +63,8 @@ export default async function CentresPage({ searchParams }: { searchParams: Sear
         <Card>
           <EmptyState
             icon={<Building2 size={26} />}
-            title={filtered ? t('No centres match') : t('No centres yet')}
-            text={filtered ? t('Try a different search or filter.') : t('Add the first centre here, or convert a franchise lead into one.')}
+            title={filtered ? t('No schools match') : t('No schools yet')}
+            text={filtered ? t('Try a different search or filter.') : t('Add the first school here, or convert a franchise lead into one.')}
             action={filtered ? <Link href="/hq/centres" className={buttonClass('secondary')}>{t('Clear filters')}</Link> : <CentreCreate />}
           />
         </Card>
@@ -118,7 +118,7 @@ export default async function CentresPage({ searchParams }: { searchParams: Sear
                   </Link>
                   <form action={enterCentre.bind(null, centre.id)} className="flex-1">
                     <button type="submit" className={buttonClass('primary', 'sm', 'w-full')}>
-                      <LogIn size={15} /> {t('Work in this centre')}
+                      <LogIn size={15} /> {t('Work in this school')}
                     </button>
                   </form>
                 </div>

@@ -17,7 +17,7 @@ export default async function NoticesPage() {
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title={t('Notices')} description={t("Notices to this centre's parents. They show in the parent corner; share one on WhatsApp too.")} actions={<AddNoticeButton today={today} />} />
+      <PageHeader title={t('Notices')} description={t("Notices to this school's parents. They show in the parent corner; share one on WhatsApp too.")} actions={<AddNoticeButton today={today} />} />
 
       <div className="grid gap-5 lg:grid-cols-3">
         <div className="min-w-0 space-y-3 lg:col-span-2">
@@ -75,7 +75,7 @@ export default async function NoticesPage() {
         </div>
 
         <Card className="min-w-0 self-start">
-          <CardHeader title={t('From head office')} description={t('Circulars to centres. Read only.')} />
+          <CardHeader title={t('From head office')} description={t('Circulars to schools. Read only.')} />
           <div className="mt-3 divide-y divide-ink-100">
             {circulars.length ? (
               circulars.map((c) => (

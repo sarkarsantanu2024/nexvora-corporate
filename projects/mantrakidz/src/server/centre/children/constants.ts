@@ -28,7 +28,7 @@ export const STAGE_LABELS: Record<EnquiryStage, string> = {
 export const GENDERS = ['Girl', 'Boy'] as const;
 export const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'] as const;
 export const TSHIRT_SIZES = ['18', '20', '22', '24', '26', '28', '30'] as const;
-export const STAFF_ROLES = ['Centre Head', 'Teacher', 'Assistant Teacher', 'Helper (Didi)', 'Front Desk', 'Other'] as const;
+export const STAFF_ROLES = ['School Head', 'Teacher', 'Assistant Teacher', 'Helper (Didi)', 'Front Desk', 'Other'] as const;
 
 /** One letter per status, for the monthly register. */
 export const ATTENDANCE_LETTER: Record<AttendanceStatus, string> = { present: 'P', absent: 'A', leave: 'L', holiday: 'H' };

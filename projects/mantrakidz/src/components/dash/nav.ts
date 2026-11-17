@@ -54,7 +54,7 @@ export const NAV: Record<Area, NavGroup[]> = {
       title: 'Franchise',
       items: [
         { href: '/hq/leads', label: 'Franchise leads', icon: Handshake, short: 'Leads' },
-        { href: '/hq/centres', label: 'Centres', icon: Building2 },
+        { href: '/hq/centres', label: 'Schools', icon: Building2 },
         { href: '/hq/royalty', label: 'Royalty', icon: BadgeIndianRupee },
         { href: '/hq/announcements', label: 'Circulars', icon: Megaphone },
       ],
@@ -105,7 +105,7 @@ export const NAV: Record<Area, NavGroup[]> = {
       ],
     },
     {
-      title: 'Centre',
+      title: 'School',
       items: [
         { href: '/centre/staff', label: 'Staff', icon: UsersRound, roles: MANAGERS },
         { href: '/centre/notices', label: 'Notices', icon: Bell },
@@ -139,8 +139,8 @@ export const TABS: Record<Area, string[]> = {
 export const ROLE_LABELS: Record<Role, string> = {
   hq_admin: 'Head office admin',
   hq_staff: 'Head office staff',
-  centre_admin: 'Centre head',
-  centre_staff: 'Centre staff',
+  centre_admin: 'School head',
+  centre_staff: 'School staff',
   parent: 'Parent',
 };
 

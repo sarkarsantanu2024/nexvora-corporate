@@ -62,12 +62,12 @@ export function SendToWhatsApp({ open, onClose, role }: { open: boolean; onClose
 
   const CHOICES: Record<Audience, { title: string; text: string }> = {
     self: { title: t('My own phone'), text: t('Put the app on the phone you carry.') },
-    centre: { title: t('Centre app'), text: t('For a centre owner or centre staff.') },
+    centre: { title: t('School app'), text: t('For a school owner or school staff.') },
     parent: { title: t('Parent app'), text: t('For the parent of a child.') },
   };
   const MESSAGES: Record<Audience, string> = {
     self: t('{name} app. Open this link on your phone, log in, then tap Install:', { name: BRAND.name }),
-    centre: t('{name} centre app. Open this link on your phone, log in with the username and password given by head office, then tap Install:', { name: BRAND.name }),
+    centre: t('{name} school app. Open this link on your phone, log in with the username and password given by head office, then tap Install:', { name: BRAND.name }),
     parent: t('{name} parent app: attendance, fees and notices of your child. Open this link on your phone, log in with your mobile number and the password given by the school, then tap Install:', { name: BRAND.name }),
   };
 

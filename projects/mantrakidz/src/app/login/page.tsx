@@ -33,9 +33,9 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
         </Link>
 
         <div className="relative max-w-md">
-          <h1 className="font-display text-4xl font-bold leading-tight text-white">{t('One place to run every centre.')}</h1>
+          <h1 className="font-display text-4xl font-bold leading-tight text-white">{t('One place to run every school.')}</h1>
           <p className="mt-4 text-lg text-brand-100">
-            {t('Admissions, attendance, fees, royalty and the website, for head office, every franchise centre and every parent.')}
+            {t('Admissions, attendance, fees, royalty and the website, for head office, every franchise school and every parent.')}
           </p>
         </div>
         <p className="relative text-sm text-brand-300">{t('A unit of Mind Mantra Abacus')}</p>

@@ -30,7 +30,7 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
       <div className="animate-fade-up">
         <PageHeader title={t('Attendance')} />
         <Card>
-          <EmptyState icon={<CalendarCheck size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the centre office to link your child to your mobile number.')} />
+          <EmptyState icon={<CalendarCheck size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the school office to link your child to your mobile number.')} />
         </Card>
       </div>
     );

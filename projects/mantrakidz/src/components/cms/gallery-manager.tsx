@@ -157,9 +157,9 @@ function CentreField({ value, onChange, centres }: { value: string; onChange: (v
   const t = useT();
   if (!centres.length) return null;
   return (
-    <Field label={t('Centre')} hint={t('Optional. Tag the centre the photos are from.')}>
+    <Field label={t('School')} hint={t('Optional. Tag the school the photos are from.')}>
       <Select value={value} onChange={(event) => onChange(event.target.value)}>
-        <option value="">{t('All centres')}</option>
+        <option value="">{t('All schools')}</option>
         {centres.map((centre) => (
           <option key={centre.id} value={centre.id}>
             {centre.name}

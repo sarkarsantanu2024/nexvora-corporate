@@ -13,7 +13,8 @@ import { DateParam } from '../_ui/date-param';
 
 export const metadata: Metadata = { title: 'Activity log' };
 
-const kindLabel = (kind: string) => kind.replace(/_/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+/** The kind is a stored code name; a centre is called a school in everything people read. */
+const kindLabel = (kind: string) => kind.replace(/_/g, ' ').replace(/\bcentre\b/g, 'school').replace(/^\w/, (c) => c.toUpperCase());
 
 export default async function AuditPage({ searchParams }: { searchParams: Search }) {
   const t = await getT();
@@ -24,13 +25,13 @@ export default async function AuditPage({ searchParams }: { searchParams: Search
 
   return (
     <>
-      <PageHeader title={t('Activity log')} description={t('Who changed what, and when: money, children, centres, logins and the website. Entries cannot be edited or removed.')} />
+      <PageHeader title={t('Activity log')} description={t('Who changed what, and when: money, children, schools, logins and the website. Entries cannot be edited or removed.')} />
 
       <FilterBar>
         <UrlSelect
           param="centre"
-          label={t('Centre')}
-          options={[{ value: '', label: t('Head office and all centres') }, { value: 'hq', label: t('Head office only') }, ...centres.map((centre) => ({ value: centre.id, label: centre.name }))]}
+          label={t('School')}
+          options={[{ value: '', label: t('Head office and all schools') }, { value: 'hq', label: t('Head office only') }, ...centres.map((centre) => ({ value: centre.id, label: centre.name }))]}
         />
         <UrlSelect param="user" label={t('Person')} options={[{ value: '', label: t('Everyone') }, ...data.people.filter((p) => p.id).map((p) => ({ value: p.id as string, label: p.name || t('No name') }))]} />
         <UrlSelect param="action" label={t('Kind of change')} options={[{ value: '', label: t('Every kind') }, ...data.kinds.map((kind) => ({ value: kind, label: kindLabel(kind) }))]} />
@@ -53,7 +54,7 @@ export default async function AuditPage({ searchParams }: { searchParams: Search
                   <Th>{t('When')}</Th>
                   <Th>{t('Who')}</Th>
                   <Th>{t('What')}</Th>
-                  <Th>{t('Centre')}</Th>
+                  <Th>{t('School')}</Th>
                   <Th>{t('Kind')}</Th>
                 </tr>
               </thead>

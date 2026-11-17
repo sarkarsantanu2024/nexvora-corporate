@@ -20,7 +20,7 @@ import { LoginsTable } from '../../_ui/logins-table';
 import { NoteForm } from '../../_ui/note-form';
 import { AgreementForm, DeleteCentre, ProfileForm, StatusActions } from './centre-forms';
 
-export const metadata: Metadata = { title: 'Centre' };
+export const metadata: Metadata = { title: 'School' };
 
 const TABS = [
   { key: 'profile', label: 'Profile' },
@@ -46,7 +46,7 @@ export default async function CentrePage({ params, searchParams }: { params: Pro
   return (
     <>
       <PageHeader
-        back={{ href: '/hq/centres', label: t('Centres') }}
+        back={{ href: '/hq/centres', label: t('Schools') }}
         title={centre.name}
         description={
           <span className="flex flex-wrap items-center gap-2">
@@ -62,7 +62,7 @@ export default async function CentrePage({ params, searchParams }: { params: Pro
             <StatusActions id={centre.id} status={centre.status} />
             <form action={enterCentre.bind(null, centre.id)}>
               <button type="submit" className={buttonClass('primary', 'lg')}>
-                <LogIn size={18} /> {t('Open this centre')}
+                <LogIn size={18} /> {t('Open this school')}
               </button>
             </form>
           </>
@@ -114,7 +114,7 @@ async function ProfileTab({ centre, session }: { centre: Centre; session: Sessio
       </Card>
       <div className="space-y-6">
         <Card>
-          <CardHeader title={centre.isCompanyOwned ? t('Centre head') : t('Owner')} />
+          <CardHeader title={centre.isCompanyOwned ? t('School head') : t('Owner')} />
           <CardBody>
             <dl className="space-y-3">
               <Detail empty={t('Not added')} label={t('Name')}>{centre.ownerName}</Detail>
@@ -128,7 +128,7 @@ async function ProfileTab({ centre, session }: { centre: Centre; session: Sessio
         </Card>
         {isAdmin(session) ? (
           <Card>
-            <CardHeader title={t('Delete this centre')} description={t('Possible only while it has no children on its records. Otherwise close it, and its history stays.')} />
+            <CardHeader title={t('Delete this school')} description={t('Possible only while it has no children on its records. Otherwise close it, and its history stays.')} />
             <CardBody>
               <DeleteCentre id={centre.id} name={centre.name} />
             </CardBody>
@@ -204,8 +204,8 @@ async function PeopleTab({ centre, session }: { centre: Centre; session: Session
   return (
     <Card>
       <CardHeader
-        title={t('Logins of this centre')}
-        description={t("The centre head and the staff who use the centre's screens. Parent logins are under Team and logins.")}
+        title={t('Logins of this school')}
+        description={t("The school head and the staff who use the school's screens. Parent logins are under Team and logins.")}
         action={admin ? <NewLogin scope={{ kind: 'centre', centreId: centre.id }} /> : null}
       />
       {admin ? null : (
@@ -219,8 +219,8 @@ async function PeopleTab({ centre, session }: { centre: Centre; session: Session
         ) : (
           <EmptyState
             title={t('No logins yet')}
-            text={t('Create a login for the centre head, so the centre can start entering enquiries, children and fees.')}
-            action={admin ? <NewLogin scope={{ kind: 'centre', centreId: centre.id }} label={t('Add the centre head')} /> : undefined}
+            text={t('Create a login for the school head, so the school can start entering enquiries, children and fees.')}
+            action={admin ? <NewLogin scope={{ kind: 'centre', centreId: centre.id }} label={t('Add the school head')} /> : undefined}
           />
         )}
       </div>
@@ -307,7 +307,7 @@ async function PerformanceTab({ centre }: { centre: Centre }) {
               </tbody>
             </Table>
           ) : (
-            <EmptyState title={t('No classes yet')} text={t('The centre sets up its classes under Classes. Seats filled shows here once it has.')} />
+            <EmptyState title={t('No classes yet')} text={t('The school sets up its classes under Classes. Seats filled shows here once it has.')} />
           )}
         </div>
       </Card>
@@ -320,7 +320,7 @@ async function NotesTab({ centre }: { centre: Centre }) {
   const notes = await listNotes('centre', centre.id);
   return (
     <Card className="max-w-3xl">
-      <CardHeader title={t('Head office notes')} description={t('Visits, calls and decisions about this centre. The centre does not see these.')} />
+      <CardHeader title={t('Head office notes')} description={t('Visits, calls and decisions about this school. The school does not see these.')} />
       <CardBody>
         <NoteForm kind="centre" id={centre.id} placeholder={t('What was discussed or decided')} />
         {notes.length ? (

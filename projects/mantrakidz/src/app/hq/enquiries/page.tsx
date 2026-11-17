@@ -32,7 +32,7 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
 
   return (
     <>
-      <PageHeader title={t('Enquiries')} description={t("Admission enquiries of every centre, and messages sent from the website's contact form.")} />
+      <PageHeader title={t('Enquiries')} description={t("Admission enquiries of every school, and messages sent from the website's contact form.")} />
 
       <TabLinks
         active={tab}
@@ -46,10 +46,10 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
         <>
           {enquiries.unassigned > 0 && params.centre !== 'none' ? (
             <Notice tone="amber" className="mb-4">
-              {rich(enquiries.unassigned === 1 ? t('{n} enquiry has no centre yet. {link}, so someone calls the parent.', { n: enquiries.unassigned }) : t('{n} enquiries have no centre yet. {link}, so someone calls the parent.', { n: enquiries.unassigned }), {
+              {rich(enquiries.unassigned === 1 ? t('{n} enquiry has no school yet. {link}, so someone calls the parent.', { n: enquiries.unassigned }) : t('{n} enquiries have no school yet. {link}, so someone calls the parent.', { n: enquiries.unassigned }), {
                 link: (
                   <Link href="/hq/enquiries?centre=none" className="font-bold underline">
-                    {enquiries.unassigned === 1 ? t('Assign it to a centre') : t('Assign them to a centre')}
+                    {enquiries.unassigned === 1 ? t('Assign it to a school') : t('Assign them to a school')}
                   </Link>
                 ),
               })}
@@ -76,8 +76,8 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
             <SearchInput placeholder={t('Search child, parent or mobile')} />
             <UrlSelect
               param="centre"
-              label={t('Centre')}
-              options={[{ value: '', label: t('All centres') }, { value: 'none', label: t('No centre yet') }, ...centres.map((centre) => ({ value: centre.id, label: centre.name }))]}
+              label={t('School')}
+              options={[{ value: '', label: t('All schools') }, { value: 'none', label: t('No school yet') }, ...centres.map((centre) => ({ value: centre.id, label: centre.name }))]}
             />
           </FilterBar>
 
@@ -89,7 +89,7 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
                     <tr>
                       <Th>{t('Child')}</Th>
                       <Th>{t('Parent')}</Th>
-                      <Th>{t('Centre')}</Th>
+                      <Th>{t('School')}</Th>
                       <Th>{t('Stage')}</Th>
                       <Th>{t('Follow-up')}</Th>
                       <Th>{t('Received')}</Th>
@@ -131,13 +131,13 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
                 title={params.q || params.centre || params.stage ? t('No enquiries match') : t('No admission enquiries yet')}
                 text={
                   params.q || params.centre || params.stage
-                    ? t('Try another stage, centre or search.')
-                    : t('Enquiries from the website and those the centres enter show here. Each centre works its own; head office watches the numbers and assigns the ones with no centre.')
+                    ? t('Try another stage, school or search.')
+                    : t('Enquiries from the website and those the schools enter show here. Each school works its own; head office watches the numbers and assigns the ones with no school.')
                 }
               />
             )}
           </Card>
-          <p className="mt-3 text-sm text-ink-500">{t('The centre follows up each enquiry from its own screens. To work one yourself, open the centre from Centres.')}</p>
+          <p className="mt-3 text-sm text-ink-500">{t('The school follows up each enquiry from its own screens. To work one yourself, open the school from Schools.')}</p>
         </>
       ) : (
         <>

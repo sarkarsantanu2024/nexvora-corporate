@@ -16,7 +16,7 @@ import { imagesFrom, uploadMany } from './upload';
 export type LibraryItem = { id: string; url: string; filename: string; alt: string; width: number; height: number; bytes: number; folder: string; createdAt: string | Date };
 type Listing = { items: LibraryItem[]; folders: { folder: string; n: number }[]; more: boolean };
 
-const FOLDER_LABELS: Record<string, string> = { website: 'Website', gallery: 'Gallery', notices: 'Notices', students: 'Children', staff: 'Staff', centres: 'Centres', general: 'General' };
+const FOLDER_LABELS: Record<string, string> = { website: 'Website', gallery: 'Gallery', notices: 'Notices', students: 'Children', staff: 'Staff', centres: 'Schools', general: 'General' };
 const folderLabel = (folder: string) => FOLDER_LABELS[folder] ?? folder.replace(/-/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
 const size = (bytes: number) => (bytes > 1024 * 1024 ? `${(bytes / 1024 / 1024).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`);
 

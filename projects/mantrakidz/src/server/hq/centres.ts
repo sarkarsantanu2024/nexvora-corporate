@@ -104,9 +104,9 @@ export async function centreOptions() {
 export async function getCentre(id: string, db?: DbOrTx): Promise<Centre> {
   const conn = db ?? (await getDb());
   const parsed = uuid.safeParse(id);
-  if (!parsed.success) throw new ApiError(404, 'Centre not found');
+  if (!parsed.success) throw new ApiError(404, 'School not found');
   const [row] = await conn.select().from(centres).where(and(eq(centres.id, parsed.data), liveCentre)).limit(1);
-  if (!row) throw new ApiError(404, 'Centre not found');
+  if (!row) throw new ApiError(404, 'School not found');
   return row;
 }
 
@@ -123,7 +123,7 @@ const checkPercent = (value: { royaltyType: string; royaltyValue: number }, ctx:
 };
 
 const profileFields = {
-  name: requiredText('Centre name', 120),
+  name: requiredText('School name', 120),
   address: text(300),
   area: text(80),
   city: text(80),
@@ -163,7 +163,7 @@ async function freeCode(db: DbOrTx) {
     const [taken] = await db.select({ id: centres.id }).from(centres).where(eq(centres.code, code)).limit(1);
     if (!taken) return code;
   }
-  throw new ApiError(500, 'Could not find a free centre code. Please try again.');
+  throw new ApiError(500, 'Could not find a free school code. Please try again.');
 }
 
 /** Inserts a centre in `onboarding` inside the caller's transaction, with the next MK code and the HQ fee templates. */
@@ -186,7 +186,7 @@ export async function createCentre(session: Session, input: CreateCentreInput) {
   assertHq(session);
   const db = await getDb();
   const centre = await db.transaction((tx) => insertCentre(tx, input));
-  await audit(session, 'centre.create', { entity: 'centre', entityId: centre.id, centreId: centre.id, summary: `Added centre ${centre.code} ${centre.name}` });
+  await audit(session, 'centre.create', { entity: 'centre', entityId: centre.id, centreId: centre.id, summary: `Added school ${centre.code} ${centre.name}` });
   return centre;
 }
 
@@ -208,7 +208,7 @@ export async function updateCentreProfile(session: Session, id: string, input: z
     centreId: centre.id,
     summary:
       before.isCompanyOwned !== data.isCompanyOwned
-        ? `Updated ${centre.name}; now ${data.isCompanyOwned ? 'company-owned (no royalty)' : 'a franchise centre'}`
+        ? `Updated ${centre.name}; now ${data.isCompanyOwned ? 'company-owned (no royalty)' : 'a franchise school'}`
         : `Updated the profile of ${centre.name}`,
   });
   return centre;
@@ -290,13 +290,13 @@ export async function deleteCentre(session: Session, id: string) {
   const centre = await getCentre(id, db);
   const [{ n }] = await db.select({ n: countInt() }).from(students).where(and(eq(students.centreId, centre.id), liveStudent));
   if (n > 0) {
-    throw new ApiError(400, `${centre.name} has ${n} ${n === 1 ? 'child' : 'children'} on its records, so it cannot be deleted. Close the centre instead; its history stays.`);
+    throw new ApiError(400, `${centre.name} has ${n} ${n === 1 ? 'child' : 'children'} on its records, so it cannot be deleted. Close the school instead; its history stays.`);
   }
   await db.transaction(async (tx) => {
     await tx.update(centres).set({ deletedAt: new Date(), showOnWebsite: false, updatedAt: new Date() }).where(eq(centres.id, centre.id));
     await tx.update(users).set({ active: false }).where(eq(users.centreId, centre.id));
   });
-  await audit(session, 'centre.delete', { entity: 'centre', entityId: centre.id, summary: `Deleted centre ${centre.code} ${centre.name}` });
+  await audit(session, 'centre.delete', { entity: 'centre', entityId: centre.id, summary: `Deleted school ${centre.code} ${centre.name}` });
 }
 
 export async function addCentreNote(session: Session, id: string, note: string) {

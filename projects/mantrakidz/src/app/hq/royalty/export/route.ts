@@ -14,7 +14,7 @@ export const GET = handle(async (req) => {
     [...rows, { centreCode: '', centreName: 'Total', ownerName: '', basisAmount: totals.basis, royaltyType: null, royaltyValue: null, amount: totals.amount, paid: totals.paid, balance: totals.balance, status: '', dueDate: '', overdue: false }],
     [
       { header: 'Code', value: (r) => r.centreCode },
-      { header: 'Centre', value: (r) => r.centreName },
+      { header: 'School', value: (r) => r.centreName },
       { header: 'Owner', value: (r) => r.ownerName },
       { header: 'Month', value: () => periodLabel(parsed.data) },
       { header: 'Fee collection', value: (r) => r.basisAmount },

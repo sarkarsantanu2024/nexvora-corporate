@@ -36,14 +36,14 @@ export function ProfileForm({ initial }: { initial: ProfileValues }) {
       setErrors(result.fields ?? {});
       return toast.error(t(result.error));
     }
-    toast.success(t('Centre details saved'));
+    toast.success(t('School details saved'));
     router.refresh();
   }
 
   return (
     <div className="space-y-4">
       <div>
-        <p className="mb-1.5 text-sm font-semibold text-ink-700">{t('Photo of the centre')}</p>
+        <p className="mb-1.5 text-sm font-semibold text-ink-700">{t('Photo of the school')}</p>
         <ImageField value={values.photo} onChange={(photo) => setValues((v) => ({ ...v, photo }))} folder="centres" shape="wide" />
       </div>
       <FormGrid>
@@ -64,7 +64,7 @@ export function ProfileForm({ initial }: { initial: ProfileValues }) {
         <Field label={t('Area')} error={errors.area && t(errors.area)} hint={t('The locality, as parents would say it.')}>
           <Input {...bind('area')} />
         </Field>
-        <Field label={t('Google Maps link')} error={errors.mapUrl && t(errors.mapUrl)} hint={t('Open the centre in Google Maps, tap Share and paste the link.')}>
+        <Field label={t('Google Maps link')} error={errors.mapUrl && t(errors.mapUrl)} hint={t('Open the school in Google Maps, tap Share and paste the link.')}>
           <Input type="url" {...bind('mapUrl')} placeholder="https://maps.app.goo.gl/..." />
         </Field>
       </FormGrid>
@@ -128,7 +128,7 @@ export function LoginActions({ userId, name, phone, active }: { userId: string; 
           {t('Switch on')}
         </LoadingButton>
       )}
-      <LoginDetails login={issued} onClose={() => setIssued(null)} area="centre dashboard" />
+      <LoginDetails login={issued} onClose={() => setIssued(null)} area="school dashboard" />
     </div>
   );
 }

@@ -14,7 +14,7 @@ export type Ctx = { session: Session; centre: Centre };
 
 /** Checked in the service, so hiding a button is never the only guard. */
 export function assertManager(ctx: Ctx) {
-  if (!canManageCentre(ctx.session)) throw new ApiError(403, 'Only the centre head can do this');
+  if (!canManageCentre(ctx.session)) throw new ApiError(403, 'Only the school head can do this');
 }
 
 export const notFound = (what: string): never => {
@@ -40,7 +40,7 @@ export const likeText = (q: string) => `%${q.replace(/[\\%_]/g, (ch) => `\\${ch}
 export type FeeSettings = { dueDay: number; reminderTemplate: string; receiptFooter: string };
 
 const DEFAULT_REMINDER =
-  'Dear {parent}, the fee of {amount} for {child} ({month}) at {centre} is due. Kindly pay at the centre office. Thank you.';
+  'Dear {parent}, the fee of {amount} for {child} ({month}) at {centre} is due. Kindly pay at the school office. Thank you.';
 
 /** Settings key `fees`, with defaults so a missing or half-filled row never breaks a bill. */
 export async function feeSettings(db?: DbOrTx): Promise<FeeSettings> {

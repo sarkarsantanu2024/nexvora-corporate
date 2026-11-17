@@ -26,7 +26,7 @@ export default async function SettingsPage() {
 
   return (
     <>
-      <PageHeader title={t('Settings')} description={t('Details of the organisation and the defaults every centre starts from.')} />
+      <PageHeader title={t('Settings')} description={t('Details of the organisation and the defaults every school starts from.')} />
 
       <div className="max-w-4xl space-y-6">
         <Card>
@@ -44,7 +44,7 @@ export default async function SettingsPage() {
         </Card>
 
         <Card>
-          <CardHeader title={t('Fee defaults')} description={t('What a centre starts with. A centre can set its own in its settings.')} />
+          <CardHeader title={t('Fee defaults')} description={t('What a school starts with. A school can set its own in its settings.')} />
           <CardBody>
             <FeeSettingsForm initial={{ dueDay: String(data.fees.dueDay), reminderTemplate: data.fees.reminderTemplate, receiptFooter: data.fees.receiptFooter }} />
           </CardBody>
@@ -79,7 +79,7 @@ export default async function SettingsPage() {
             <CardHeader
               title={t('Sample data')}
               description={t('The system came with {centres} and {leads}, so every screen could be seen working. Remove them before real work starts.', {
-                centres: data.sample.centres === 1 ? t('{n} sample centre', { n: data.sample.centres }) : t('{n} sample centres', { n: data.sample.centres }),
+                centres: data.sample.centres === 1 ? t('{n} sample school', { n: data.sample.centres }) : t('{n} sample schools', { n: data.sample.centres }),
                 leads: data.sample.leads === 1 ? t('{n} sample franchise lead', { n: data.sample.leads }) : t('{n} sample franchise leads', { n: data.sample.leads }),
               })}
             />

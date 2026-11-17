@@ -353,7 +353,7 @@ export async function createBill(ctx: Ctx, input: BillInput) {
       .select({ id: feeHeads.id })
       .from(feeHeads)
       .where(and(inArray(feeHeads.id, headIds), eq(feeHeads.centreId, ctx.centre.id)));
-    if (found.length !== headIds.length) throw new ApiError(400, 'One of the fee heads does not belong to this centre');
+    if (found.length !== headIds.length) throw new ApiError(400, 'One of the fee heads does not belong to this school');
   }
 
   const bill = await db.transaction(async (tx) => {

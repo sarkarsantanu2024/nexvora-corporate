@@ -26,7 +26,7 @@ export const franchiseTop = defineSection({
   defaults: {
     eyebrow: 'Franchise',
     heading: 'Run a Mantra Kidz play school in your neighbourhood',
-    text: 'Mantra Kidz is growing through franchise centres. If you care about young children and want a business of your own, we would like to hear from you.',
+    text: 'Mantra Kidz is growing through franchise schools. If you care about young children and want a business of your own, we would like to hear from you.',
     image: '/images/listening.webp',
     imageAlt: 'A group of small children sitting on the floor and listening',
     primaryLabel: 'Send a franchise enquiry',
@@ -37,7 +37,7 @@ export const franchiseTop = defineSection({
 export const franchiseWhy = defineSection({
   key: 'franchise.why',
   page: 'Franchise',
-  label: 'Why open a centre',
+  label: 'Why open a school',
   path: '/franchise',
   aliases: ['why franchise', 'franchise reasons', 'franchise benefits'],
   fields: [
@@ -78,7 +78,7 @@ export const franchiseWhy = defineSection({
       },
       {
         title: 'Small classes by design',
-        text: 'Twelve seats in a class, the same at every centre.',
+        text: 'Twelve seats in a class, the same at every school.',
         icon: 'users',
         color: 'mint',
       },
@@ -118,7 +118,7 @@ export const franchiseWho = defineSection({
     text: 'You do not have to be a teacher. You do have to care.',
     items: [
       { text: 'You enjoy being around small children and talking to parents' },
-      { text: 'You can give the centre your own time and attention' },
+      { text: 'You can give the school your own time and attention' },
       { text: 'You have a suitable place in mind, or are ready to look for one' },
       { text: 'You want to build something that lasts in your area' },
     ],
@@ -156,13 +156,13 @@ export const franchiseTopics = defineSection({
     eyebrow: 'The details',
     heading: 'What we will talk through with you',
     highlight: 'talk through',
-    text: 'The figures depend on your location and the size of the centre, so we share them when we speak, not on a web page. Ask us anything.',
+    text: 'The figures depend on your location and the size of the school, so we share them when we speak, not on a web page. Ask us anything.',
     items: [
-      { title: 'Investment', text: 'What it takes to start a centre and to run it. Shared on enquiry.', icon: 'rupee', color: 'sun' },
-      { title: 'Space', text: 'How much room a centre needs and what kind of place works. Shared on enquiry.', icon: 'ruler', color: 'coral' },
+      { title: 'Investment', text: 'What it takes to start a school and to run it. Shared on enquiry.', icon: 'rupee', color: 'sun' },
+      { title: 'Space', text: 'How much room a school needs and what kind of place works. Shared on enquiry.', icon: 'ruler', color: 'coral' },
       { title: 'Setting up', text: 'What has to be ready before the first child walks in.', icon: 'key', color: 'mint' },
       { title: 'Teaching', text: 'The four classes, and how your teachers get to know them.', icon: 'book', color: 'sky' },
-      { title: 'Who does what', text: 'What head office looks after and what the centre looks after.', icon: 'hand', color: 'brand' },
+      { title: 'Who does what', text: 'What head office looks after and what the school looks after.', icon: 'hand', color: 'brand' },
     ],
   },
 });
@@ -170,7 +170,7 @@ export const franchiseTopics = defineSection({
 export const franchiseSteps = defineSection({
   key: 'franchise.steps',
   page: 'Franchise',
-  label: 'Steps to open a centre',
+  label: 'Steps to open a school',
   path: '/franchise',
   aliases: ['franchise steps', 'franchise process', 'how to get a franchise'],
   fields: [
@@ -197,10 +197,10 @@ export const franchiseSteps = defineSection({
     items: [
       { title: 'Send an enquiry', text: 'Fill in the form on this page. It takes two minutes.' },
       { title: 'We call you', text: 'We ask about your plans and answer your first questions.' },
-      { title: 'We meet', text: 'We sit together and go through the investment, the space and how a centre runs.' },
+      { title: 'We meet', text: 'We sit together and go through the investment, the space and how a school runs.' },
       { title: 'We look at the place', text: 'We see the location you have in mind.' },
       { title: 'Agreement', text: 'If both sides are happy, we sign the franchise agreement.' },
-      { title: 'Set up and open', text: 'The centre is made ready and the first children come in.' },
+      { title: 'Set up and open', text: 'The school is made ready and the first children come in.' },
     ],
   },
 });
@@ -257,10 +257,10 @@ export const franchiseFaq = defineSection({
     items: [
       {
         question: 'How much do I need to invest?',
-        answer: 'It depends on the location and the size of the centre. We share the full figures when we speak, so that you get numbers that fit your case.',
+        answer: 'It depends on the location and the size of the school. We share the full figures when we speak, so that you get numbers that fit your case.',
       },
       {
-        question: 'How much space does a centre need?',
+        question: 'How much space does a school need?',
         answer: 'We will tell you when we speak, and we look at the place you have in mind before anything is signed.',
       },
       {

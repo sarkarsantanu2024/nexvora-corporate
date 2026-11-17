@@ -20,10 +20,10 @@ export default async function SettingsPage() {
 
   return (
     <>
-      <PageHeader title={t('Settings')} description={t("Your centre's contact details and who can log in.")} />
+      <PageHeader title={t('Settings')} description={t("Your school's contact details and who can log in.")} />
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
         <Card className="animate-fade-up">
-          <CardHeader title={t('Centre details')} description={t('Shown to parents on receipts, in messages and on the website.')} />
+          <CardHeader title={t('School details')} description={t('Shown to parents on receipts, in messages and on the website.')} />
           <CardBody>
             <ProfileForm
               initial={{
@@ -43,17 +43,17 @@ export default async function SettingsPage() {
           <CardHeader title={t('Set by head office')} />
           <CardBody>
             <dl className="grid grid-cols-2 gap-4">
-              <Detail empty={t('Not added')} label={t('Centre code')}>
+              <Detail empty={t('Not added')} label={t('School code')}>
                 <span className="tabular font-semibold">{centre.code}</span>
               </Detail>
-              <Detail empty={t('Not added')} label={t('Centre name')}>{centre.name}</Detail>
+              <Detail empty={t('Not added')} label={t('School name')}>{centre.name}</Detail>
               <Detail empty={t('Not added')} label={t('City')}>{[centre.city, centre.pincode].filter(Boolean).join(' ')}</Detail>
               <Detail empty={t('Not added')} label={t('Opened on')}>{formatDate(centre.openedOn)}</Detail>
               <Detail empty={t('Not added')} label={t('Agreement from')}>{formatDate(centre.agreementStart)}</Detail>
               <Detail empty={t('Not added')} label={t('Agreement until')}>{formatDate(centre.agreementEnd)}</Detail>
               <Detail empty={t('Not added')} label={t('Royalty')} className="col-span-2">
                 {centre.isCompanyOwned
-                  ? t('Company-owned centre, no royalty')
+                  ? t('Company-owned school, no royalty')
                   : centre.royaltyType === 'percent'
                     ? t("{royaltyValue}% of each month's fee collection", { royaltyValue: centre.royaltyValue })
                     : t('{royaltyValue} every month', { royaltyValue: inr(centre.royaltyValue) })}
@@ -66,7 +66,7 @@ export default async function SettingsPage() {
 
       <Card className="mt-5 animate-fade-up overflow-hidden">
         <CardHeader
-          title={t('Logins of this centre')}
+          title={t('Logins of this school')}
           description={t("Staff logins are given from the Staff screen. A parent's login is on the child's page.")}
           className="pb-4"
         />

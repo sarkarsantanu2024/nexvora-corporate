@@ -251,11 +251,11 @@ export const galleryTop = defineSection({
 
 export const centresTop = defineSection({
   key: 'centres.top',
-  page: 'Centres',
+  page: 'Schools',
   label: 'Page heading',
-  description: 'The centres themselves are managed in Centres in the dashboard.',
+  description: 'The schools themselves are managed in Schools in the dashboard.',
   path: '/centres',
-  aliases: ['centres heading', 'branches heading', 'locations'],
+  aliases: ['schools heading', 'branches heading', 'locations'],
   fields: [
     ...pageTopFields,
     { name: 'franchiseHeading', label: 'Heading of the franchise note', type: 'text', maxLength: 80 },
@@ -263,10 +263,10 @@ export const centresTop = defineSection({
     { name: 'franchiseButton', label: 'Franchise button text', type: 'text', maxLength: 30 },
   ],
   defaults: {
-    eyebrow: 'Our centres',
+    eyebrow: 'Our schools',
     heading: 'Find a Mantra Kidz near you',
-    text: 'Pick a centre to see its address, phone number and the classes it runs.',
-    franchiseHeading: 'No centre in your area yet?',
+    text: 'Pick a school to see its address, phone number and the classes it runs.',
+    franchiseHeading: 'No school in your area yet?',
     franchiseText: 'You could be the one to open it. Read about the franchise and tell us where you are.',
     franchiseButton: 'About the franchise',
   },

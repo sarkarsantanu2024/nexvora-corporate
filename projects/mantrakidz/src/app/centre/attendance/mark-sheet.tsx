@@ -132,7 +132,7 @@ export function MarkSheet({
     const result = await markHolidayAction({ day, batchId: scope === 'class' ? batch.id : null });
     setHolidayBusy(null);
     if (!result.ok) return toast.error(t(result.error));
-    toast.success(scope === 'class' ? t('Holiday marked for {name}', { name: batch.name }) : t('Holiday marked for the whole centre'));
+    toast.success(scope === 'class' ? t('Holiday marked for {name}', { name: batch.name }) : t('Holiday marked for the whole school'));
     setHolidayOpen(false);
     router.refresh();
   }
@@ -174,7 +174,7 @@ export function MarkSheet({
             {t('Only {name}', { name: batch.name })}
           </LoadingButton>
           <LoadingButton loading={holidayBusy === 'centre'} disabled={holidayBusy !== null} onClick={() => holiday('centre')}>
-            {t('The whole centre')}
+            {t('The whole school')}
           </LoadingButton>
         </div>
       </Modal>

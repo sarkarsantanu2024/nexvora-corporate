@@ -9,8 +9,8 @@ import { login, type LoginState } from '@/server/session-actions';
 /** Shown only on a machine without a real database, where the sample logins exist. */
 const DEMO_LOGINS = [
   { label: 'Head office', username: 'admin' },
-  { label: 'Franchise centre', username: 'laketown' },
-  { label: 'Centre staff', username: 'laketown.desk' },
+  { label: 'Franchise school', username: 'laketown' },
+  { label: 'School staff', username: 'laketown.desk' },
   { label: 'Parent', username: '9000001005' },
 ];
 

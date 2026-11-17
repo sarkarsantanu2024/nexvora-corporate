@@ -139,14 +139,14 @@ export async function assignEnquiry(session: Session, enquiryId: string, centreI
   assertHq(session);
   const db = await getDb();
   const [centre] = await db.select({ id: centres.id, name: centres.name }).from(centres).where(and(eq(centres.id, uuid.parse(centreId)), liveCentre)).limit(1);
-  if (!centre) throw new ApiError(404, 'Centre not found');
+  if (!centre) throw new ApiError(404, 'School not found');
   const [row] = await db
     .update(admissionEnquiries)
     .set({ centreId: centre.id, updatedAt: new Date() })
     // Only an enquiry nobody owns yet: head office does not take one away from a centre.
     .where(and(eq(admissionEnquiries.id, uuid.parse(enquiryId)), isNull(admissionEnquiries.centreId)))
     .returning();
-  if (!row) throw new ApiError(400, 'This enquiry already belongs to a centre');
+  if (!row) throw new ApiError(400, 'This enquiry already belongs to a school');
   await audit(session, 'enquiry.assign', { entity: 'admission_enquiry', entityId: row.id, centreId: centre.id, summary: `Enquiry for ${row.childName} given to ${centre.name}` });
   return row;
 }

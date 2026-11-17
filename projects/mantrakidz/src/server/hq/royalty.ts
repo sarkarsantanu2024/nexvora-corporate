@@ -328,7 +328,7 @@ export async function royaltyStatement(centreId: string) {
     db.select().from(royaltyInvoices).where(eq(royaltyInvoices.centreId, centreId)).orderBy(desc(royaltyInvoices.period)),
     db.select().from(royaltyPayments).where(eq(royaltyPayments.centreId, centreId)).orderBy(desc(royaltyPayments.paidOn), desc(royaltyPayments.createdAt)),
   ]);
-  if (!centre) throw new ApiError(404, 'Centre not found');
+  if (!centre) throw new ApiError(404, 'School not found');
 
   const reversed = new Set(paid.filter((p) => isReversal(p.reference)).map((p) => p.reference.slice(REVERSAL.length)));
   const periodOfBill = new Map(bills.map((bill) => [bill.id, bill.period]));

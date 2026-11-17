@@ -285,7 +285,7 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
       <div className="no-print">
         <PageHeader
           title={t('Reports')}
-          description={t('Where the centre stands, for any dates.')}
+          description={t('Where the school stands, for any dates.')}
           actions={
             <>
               <a href={`/centre/reports/export?report=${report}&${dates}`} className={buttonClass('secondary')}>

@@ -27,7 +27,7 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
   const { lead, centreName } = found;
   const [people, notes] = await Promise.all([hqPeople(), listNotes('franchise_lead', lead.id)]);
   const converted = lead.stage === 'onboarded';
-  const greeting = `Hello ${lead.name}, this is ${session.name} from Mantra Kidz head office. Thank you for your interest in opening a Mantra Kidz centre.`;
+  const greeting = `Hello ${lead.name}, this is ${session.name} from Mantra Kidz head office. Thank you for your interest in opening a Mantra Kidz school.`;
 
   return (
     <>
@@ -52,13 +52,13 @@ export default async function LeadPage({ params }: { params: Promise<{ id: strin
 
       {converted && centreName && lead.convertedCentreId ? (
         <Notice tone="green" className="mb-5">
-          {t('This lead became a centre:')}{' '}
+          {t('This lead became a school:')}{' '}
           <Link href={`/hq/centres/${lead.convertedCentreId}`} className="font-bold underline">
             {centreName}
           </Link>
         </Notice>
       ) : converted ? (
-        <Notice className="mb-5">{t('This lead became a centre, and that centre has since been deleted.')}</Notice>
+        <Notice className="mb-5">{t('This lead became a school, and that school has since been deleted.')}</Notice>
       ) : null}
       {lead.stage === 'lost' && lead.lostReason ? (
         <Notice tone="amber" className="mb-5">

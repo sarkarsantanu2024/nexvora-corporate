@@ -11,11 +11,11 @@ import { useAction } from '../_ui/use-action';
 export function AssignEnquiry({ id, centres }: { id: string; centres: { id: string; name: string }[] }) {
   const t = useT();
   const [centreId, setCentreId] = useState('');
-  const assign = useAction(assignEnquiryAction, { success: t('Enquiry given to the centre') });
+  const assign = useAction(assignEnquiryAction, { success: t('Enquiry given to the school') });
   return (
     <span className="flex items-center gap-1.5">
-      <select aria-label={t('Centre')} value={centreId} onChange={(e) => setCentreId(e.target.value)} className="control h-9 w-44 py-0 text-sm">
-        <option value="">{t('Choose a centre')}</option>
+      <select aria-label={t('School')} value={centreId} onChange={(e) => setCentreId(e.target.value)} className="control h-9 w-44 py-0 text-sm">
+        <option value="">{t('Choose a school')}</option>
         {centres.map((centre) => (
           <option key={centre.id} value={centre.id}>
             {centre.name}

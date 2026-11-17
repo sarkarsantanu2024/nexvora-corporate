@@ -13,7 +13,7 @@ const word = (value: string) => value.replace(/_/g, ' ').replace(/^\w/, (c) => c
 const METHOD_NAMES: Record<string, string> = { cash: 'Cash', upi: 'UPI', bank: 'Bank transfer', cheque: 'Cheque', card: 'Card' };
 
 export const REPORTS = [
-  { key: 'centres', label: 'Centre comparison' },
+  { key: 'centres', label: 'School comparison' },
   { key: 'funnel', label: 'Admissions funnel' },
   { key: 'methods', label: 'Collection by payment method' },
   { key: 'royalty', label: 'Royalty summary' },
@@ -28,7 +28,7 @@ export async function buildReport(key: ReportKey, range: Range): Promise<Report<
       title: 'Admissions funnel',
       note: 'Enquiries received in these dates, by the stage each one has reached. Conversion is admitted out of all received.',
       columns: [
-        { header: 'Centre', value: (r) => r.name, text: true },
+        { header: 'School', value: (r) => r.name, text: true },
         { header: 'Enquiries', value: (r) => r.total },
         ...ENQUIRY_STAGES.map((stage) => ({ header: word(stage), value: (r: FunnelRow) => r[stage] })),
         { header: 'Conversion', value: (r) => r.conversion, suffix: '%' },
@@ -42,7 +42,7 @@ export async function buildReport(key: ReportKey, range: Range): Promise<Report<
       title: 'Collection by payment method',
       note: 'Fees received in these dates, by how they were paid. Cancelled receipts are left out.',
       columns: [
-        { header: 'Centre', value: (r) => r.name, text: true },
+        { header: 'School', value: (r) => r.name, text: true },
         ...PAYMENT_METHODS.map((method) => ({ header: METHOD_NAMES[method], value: (r: MethodRow) => r[method], money: true })),
         { header: 'Total', value: (r) => r.total, money: true },
       ],
@@ -57,7 +57,7 @@ export async function buildReport(key: ReportKey, range: Range): Promise<Report<
       note: 'Raised is for the months inside these dates; received is money that came in during them. Outstanding and overdue are as of today, across all months.',
       columns: [
         { header: 'Code', value: (r) => r.code, text: true },
-        { header: 'Centre', value: (r) => r.name, text: true },
+        { header: 'School', value: (r) => r.name, text: true },
         { header: 'Raised', value: (r) => r.raised, money: true },
         { header: 'Received', value: (r) => r.received, money: true },
         { header: 'Outstanding', value: (r) => r.outstanding, money: true },
@@ -68,11 +68,11 @@ export async function buildReport(key: ReportKey, range: Range): Promise<Report<
   }
   const data = await centreComparison(range);
   return cast<ComparisonRow>({
-    title: 'Centre comparison',
+    title: 'School comparison',
     note: 'Children on roll, seats and fee dues are as of today. Admissions, withdrawals, collection, expenses and royalty are for the dates chosen.',
     columns: [
       { header: 'Code', value: (r) => r.code, text: true },
-      { header: 'Centre', value: (r) => r.name, text: true },
+      { header: 'School', value: (r) => r.name, text: true },
       { header: 'On roll', value: (r) => r.onRoll },
       { header: 'Seats filled', value: (r) => r.seatsFilled, suffix: '%' },
       { header: 'Admissions', value: (r) => r.admissions },

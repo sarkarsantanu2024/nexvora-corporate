@@ -307,7 +307,7 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
           </Card>
 
           <Card>
-            <CardHeader title={t('For the centres')} description={t('Defaults a centre starts from when it sets up classes and fees.')} />
+            <CardHeader title={t('For the schools')} description={t('Defaults a school starts from when it sets up classes and fees.')} />
             <CardBody>
               <div className="space-y-4">
                 <Field label={t('Seats in a class')} error={errors.seatsPerClass && t(errors.seatsPerClass)}>
@@ -316,7 +316,7 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
                 <Field label={t('Timing')} hint={t('For example: 9:00 am to 11:30 am')} error={errors.timing && t(errors.timing)}>
                   <Input value={values.timing} onChange={(e) => set('timing', e.target.value)} />
                 </Field>
-                <Field label={t('Suggested monthly fee, rupees')} hint={t('Each centre sets its own fee; this is only a guide')} error={errors.suggestedMonthlyFee && t(errors.suggestedMonthlyFee)}>
+                <Field label={t('Suggested monthly fee, rupees')} hint={t('Each school sets its own fee; this is only a guide')} error={errors.suggestedMonthlyFee && t(errors.suggestedMonthlyFee)}>
                   <Input type="number" min={0} value={values.suggestedMonthlyFee} onChange={(e) => set('suggestedMonthlyFee', e.target.value)} invalid={Boolean(errors.suggestedMonthlyFee)} />
                 </Field>
                 <Field label={t('Order in lists')} hint={t('Smaller numbers come first')} error={errors.sort && t(errors.sort)}>

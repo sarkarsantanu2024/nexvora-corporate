@@ -133,7 +133,7 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
 
       {open && hasPaymentDetails(pay) ? (
         <Card className="mt-5 print-plain">
-          <CardHeader title={t('How to pay')} description={t('{balance} to pay. After paying, send the screenshot to the centre on WhatsApp.', { balance: inr(balance) })} />
+          <CardHeader title={t('How to pay')} description={t('{balance} to pay. After paying, send the screenshot to the school on WhatsApp.', { balance: inr(balance) })} />
           <CardBody>
             <PayInfo details={pay} amount={balance} note={inv.invoiceNo} centreName={ctx.centre.name} upiLink="without-qr" />
           </CardBody>

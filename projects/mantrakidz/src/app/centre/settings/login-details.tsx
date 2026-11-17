@@ -21,7 +21,10 @@ export type LoginIssued = {
   children?: string[];
 };
 
-export function LoginDetails({ login, onClose, area }: { login: LoginIssued | null; onClose: () => void; area: 'parent corner' | 'centre dashboard' }) {
+/** Which side the login opens, for the words of the message. */
+export type LoginArea = 'parent corner' | 'school dashboard' | 'head office dashboard';
+
+export function LoginDetails({ login, onClose, area }: { login: LoginIssued | null; onClose: () => void; area: LoginArea }) {
   const t = useT();
   const toast = useToast();
   if (!login) return null;

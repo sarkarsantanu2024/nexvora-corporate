@@ -29,7 +29,7 @@ export default async function BatchesPage({ searchParams }: { searchParams: Prom
     <>
       <PageHeader
         title={t('Classes')}
-        description={data.batches.length ? t('{filled} of {seats} seats filled across {n} open classes.', { filled, seats, n: data.batches.filter((b) => b.active).length }) : t('The class sections of this centre, with their teacher and seats.')}
+        description={data.batches.length ? t('{filled} of {seats} seats filled across {n} open classes.', { filled, seats, n: data.batches.filter((b) => b.active).length }) : t('The class sections of this school, with their teacher and seats.')}
         actions={
           <>
             {existingYears.length > 1 ? (
@@ -49,7 +49,7 @@ export default async function BatchesPage({ searchParams }: { searchParams: Prom
           <EmptyState
             icon={<Shapes size={26} />}
             title={t('No classes for this year yet')}
-            text={manager ? t('Add a class for each programme you run, such as Nursery A. Children are then admitted into a class.') : t('The centre head adds the classes. Once added, they show here with their children.')}
+            text={manager ? t('Add a class for each programme you run, such as Nursery A. Children are then admitted into a class.') : t('The school head adds the classes. Once added, they show here with their children.')}
             action={addButton ?? undefined}
           />
         </Card>

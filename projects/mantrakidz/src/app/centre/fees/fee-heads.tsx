@@ -55,7 +55,7 @@ export function FeeHeads({ heads, programmes }: { heads: Head[]; programmes: { i
     <>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <p className="max-w-2xl text-sm text-ink-500">
-          {t("What this centre charges. The monthly run uses the monthly fee of a child's programme, unless the child has their own fee.")}
+          {t("What this school charges. The monthly run uses the monthly fee of a child's programme, unless the child has their own fee.")}
         </p>
         <Button onClick={() => open(blank)}>
           <Plus size={18} /> {t('Add fee head')}

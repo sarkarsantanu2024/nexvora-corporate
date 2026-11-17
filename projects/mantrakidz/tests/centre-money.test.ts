@@ -243,7 +243,7 @@ describe('who may do what', () => {
       .where(and(eq(s.payments.centreId, desk.centre.id), isNull(s.payments.voidedAt)));
     const [headRow] = await db.select().from(s.feeHeads).where(eq(s.feeHeads.centreId, desk.centre.id));
     const [bill] = await db.select().from(s.invoices).where(and(eq(s.invoices.centreId, desk.centre.id), eq(s.invoices.status, 'unpaid')));
-    const denied = /Only the centre head/;
+    const denied = /Only the school head/;
 
     await expect(voidPayment(desk, payment.id, 'Mistake')).rejects.toThrow(denied);
     await expect(saveFeeHead(desk, { id: headRow.id, name: headRow.name, kind: headRow.kind, programmeId: headRow.programmeId, amount: 1 })).rejects.toThrow(denied);
@@ -275,7 +275,7 @@ describe('who may do what', () => {
     await expect(saveFeeHead(head, { name: 'Second tuition', kind: 'monthly', programmeId: headRow.programmeId, amount: 100 })).rejects.toThrow(/already has/);
   });
 
-  it("refuses a bill, receipt, child or fee head that belongs to another centre", async () => {
+  it("refuses a bill, receipt, child or fee head that belongs to another school", async () => {
     const [bill] = await db.select().from(s.invoices).where(and(eq(s.invoices.centreId, head.centre.id), eq(s.invoices.status, 'unpaid')));
     const [payment] = await db.select().from(s.payments).where(and(eq(s.payments.centreId, head.centre.id), isNull(s.payments.voidedAt)));
     const [headRow] = await db.select().from(s.feeHeads).where(eq(s.feeHeads.centreId, head.centre.id));
@@ -393,7 +393,7 @@ describe('payment details', () => {
   const good = { upiId: 'mantrakidz@okhdfcbank', payeeName: 'Mantra Kidz Lake Town', accountName: 'Mantra Kidz', accountNumber: '123456789012', ifsc: 'hdfc0001234', bank: 'HDFC Bank', branch: 'Lake Town' };
 
   it('only a manager saves them, and bad UPI IDs and IFSC codes are refused', async () => {
-    await expect(savePaymentDetails(desk, good)).rejects.toThrow(/Only the centre head/);
+    await expect(savePaymentDetails(desk, good)).rejects.toThrow(/Only the school head/);
     await expect(savePaymentDetails(head, { ...good, upiId: 'no-at-sign' })).rejects.toThrow();
     await expect(savePaymentDetails(head, { ...good, upiId: 'two@@handles' })).rejects.toThrow();
     await expect(savePaymentDetails(head, { ...good, ifsc: 'HDFC1001234' })).rejects.toThrow();
@@ -403,7 +403,7 @@ describe('payment details', () => {
     expect(paymentDetailsOf(untouched).upiId).toBe('');
   });
 
-  it('keeps them in centres.meta.payment without touching the rest of meta, and audits', async () => {
+  it('keeps them in schools.meta.payment without touching the rest of meta, and audits', async () => {
     await db.update(s.centres).set({ meta: { royaltyTerms: [{ from: '2026-01', type: 'percent', value: 10 }] } }).where(eq(s.centres.id, head.centre.id));
     const saved = await savePaymentDetails(head, good);
     expect(saved.ifsc).toBe('HDFC0001234');

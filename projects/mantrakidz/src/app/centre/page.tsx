@@ -105,7 +105,7 @@ export default async function OverviewPage() {
                   <TodoRow
                     href={manager ? '/centre/fees/run' : '/centre/fees'}
                     icon={<FileText size={18} />}
-                    text={manager ? t('{month} bills not raised yet', { month }) : t('{month} bills not raised yet (ask the centre head)', { month })}
+                    text={manager ? t('{month} bills not raised yet', { month }) : t('{month} bills not raised yet (ask the school head)', { month })}
                     count={todo.unbilled}
                   />
                 ) : null}

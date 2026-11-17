@@ -116,7 +116,7 @@ export async function centreComparison(range: Range): Promise<{ rows: Comparison
   const totals: ComparisonRow = {
     id: 'total',
     code: '',
-    name: 'All centres',
+    name: 'All schools',
     status: '',
     onRoll: add('onRoll'),
     seats: add('seats'),
@@ -157,9 +157,9 @@ export async function admissionsFunnel(range: Range): Promise<{ rows: FunnelRow[
     return { id, name, ...stages, total: sum, conversion: percent(stages.admitted, sum) };
   };
   const rows = list.map((centre) => build(centre.id, centre.name, (id) => id === centre.id));
-  const unassigned = build('none', 'No centre chosen yet', (id) => id === null);
+  const unassigned = build('none', 'No school chosen yet', (id) => id === null);
   if (unassigned.total) rows.push(unassigned);
-  return { rows, totals: build('total', 'All centres', () => true) };
+  return { rows, totals: build('total', 'All schools', () => true) };
 }
 
 export type MethodRow = { id: string; name: string; total: number } & Record<PaymentMethod, number>;
@@ -185,7 +185,7 @@ export async function collectionByMethod(range: Range): Promise<{ rows: MethodRo
   };
   const receipts = blank();
   for (const row of live) receipts[row.method] += row.receipts;
-  return { rows: list.map((centre) => build(centre.id, centre.name, (id) => id === centre.id)), totals: build('total', 'All centres', () => true), receipts };
+  return { rows: list.map((centre) => build(centre.id, centre.name, (id) => id === centre.id)), totals: build('total', 'All schools', () => true), receipts };
 }
 
 export type RoyaltySummaryRow = { id: string; code: string; name: string; raised: number; received: number; outstanding: number; overdue: number };
@@ -220,5 +220,5 @@ export async function royaltySummary(range: Range): Promise<{ rows: RoyaltySumma
       overdue: owedBy.get(centre.id)?.overdue ?? 0,
     }));
   const add = (key: 'raised' | 'received' | 'outstanding' | 'overdue') => rows.reduce((sum, row) => sum + row[key], 0);
-  return { rows, totals: { id: 'total', code: '', name: 'All franchise centres', raised: add('raised'), received: add('received'), outstanding: add('outstanding'), overdue: add('overdue') } };
+  return { rows, totals: { id: 'total', code: '', name: 'All franchise schools', raised: add('raised'), received: add('received'), outstanding: add('outstanding'), overdue: add('overdue') } };
 }

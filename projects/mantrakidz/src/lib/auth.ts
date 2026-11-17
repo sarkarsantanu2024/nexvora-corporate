@@ -108,9 +108,9 @@ export async function requireCentre(roles: Role[] = CENTRE_SCREEN_ROLES): Promis
 export async function apiCentre(roles: Role[] = CENTRE_SCREEN_ROLES): Promise<{ session: Session; centre: Centre }> {
   const session = await apiSession(roles);
   const id = isHq(session.role) ? await actingCentreId() : session.centreId;
-  if (!id) throw new ApiError(400, 'Choose a centre first');
+  if (!id) throw new ApiError(400, 'Choose a school first');
   const centre = await loadCentre(id);
-  if (!centre) throw new ApiError(404, 'Centre not found');
+  if (!centre) throw new ApiError(404, 'School not found');
   return { session, centre };
 }
 

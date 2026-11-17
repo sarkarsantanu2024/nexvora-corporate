@@ -64,7 +64,7 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
                 {rows.map((row) => {
                   const month = row.pending.join(', ');
                   const reminder = [
-                    fillTemplate(settings.reminderTemplate, { parent: parentName(row), child: row.name, amount: inr(row.due), month, centre: ctx.centre.name }),
+                    fillTemplate(settings.reminderTemplate, { parent: parentName(row), child: row.name, amount: inr(row.due), month, centre: ctx.centre.name, school: ctx.centre.name }),
                     howToPay,
                   ]
                     .filter(Boolean)

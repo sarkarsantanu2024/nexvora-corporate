@@ -233,7 +233,7 @@ async function loadManagedLogin(ctx: Ctx, userId: string) {
     .limit(1);
   if (!user) throw new ApiError(404, 'Login not found');
   if (user.id === ctx.session.uid) throw new ApiError(403, 'Use "Change password" in the top menu for your own login');
-  if (user.role === 'centre_admin' && !isHq(ctx.session.role)) throw new ApiError(403, 'Only head office can change a centre head login');
+  if (user.role === 'centre_admin' && !isHq(ctx.session.role)) throw new ApiError(403, 'Only head office can change a school head login');
   return user;
 }
 

@@ -55,7 +55,7 @@ beforeAll(async () => {
 }, 120_000);
 
 describe('royalty run', () => {
-  it('raises one bill per franchise centre, percent and fixed, and skips the company-owned centre', async () => {
+  it('raises one bill per franchise school, percent and fixed, and skips the company-owned school', async () => {
     const result = await runRoyalty(staff, { period: PERIOD });
     expect(result.created).toBe(2);
 
@@ -157,7 +157,7 @@ describe('royalty payment', () => {
 });
 
 describe('franchise lead conversion', () => {
-  it('creates the centre and the owner login and links the lead, all together', async () => {
+  it('creates the school and the owner login and links the lead, all together', async () => {
     const lead = await createLead(staff, { name: 'Test Owner', phone: '98300 12345', city: 'Howrah', state: 'West Bengal', source: 'referral' });
     expect(lead.phone).toBe('9830012345');
     expect(lead.stage).toBe('new');
@@ -235,7 +235,7 @@ describe('programme translations', () => {
 });
 
 describe('overview', () => {
-  it('adds up from the same data as the centres', async () => {
+  it('adds up from the same data as the schools', async () => {
     const overview = await getOverview();
     expect(overview.tiles.activeCentres).toBe(3);
     const [{ n }] = await db.select({ n: count() }).from(s.students).where(eq(s.students.status, 'active'));
@@ -252,7 +252,7 @@ describe('removing sample data', () => {
     await expect(removeSampleData(staff, 'REMOVE')).rejects.toThrow(/admin/);
   });
 
-  it('removes the sample centres and leads and leaves the real centre and the admin', async () => {
+  it('removes the sample schools and leads and leaves the real school and the admin', async () => {
     const result = await removeSampleData(admin, 'REMOVE');
     expect(result.centres).toBe(2);
     expect(result.leads).toBe(9);

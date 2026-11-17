@@ -39,7 +39,7 @@ export function LeadProgress({
   return (
     <>
       <FormGrid className="sm:grid-cols-3">
-        <Field label={t('Stage')} hint={closed ? t('This lead is now a centre') : undefined}>
+        <Field label={t('Stage')} hint={closed ? t('This lead is now a school') : undefined}>
           <Select
             value={stage}
             disabled={closed || update.busy}
@@ -160,27 +160,27 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
   return (
     <>
       <Button variant="success" onClick={() => setOpen(true)}>
-        <Building2 size={18} /> {t('Convert to centre')}
+        <Building2 size={18} /> {t('Convert to school')}
       </Button>
       <Modal
         open={open}
         onClose={() => !convert.busy && setOpen(false)}
         size="lg"
-        title={t('Convert to centre')}
-        description={t('{ownerName} becomes the owner. The centre starts in onboarding; activate it when it is ready to open.', { ownerName })}
+        title={t('Convert to school')}
+        description={t('{ownerName} becomes the owner. The school starts in onboarding; activate it when it is ready to open.', { ownerName })}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={convert.busy}>
               {t('Cancel')}
             </Button>
             <LoadingButton loading={convert.busy} onClick={submit}>
-              {t('Create the centre')}
+              {t('Create the school')}
             </LoadingButton>
           </>
         }
       >
         <FormGrid>
-          <Field label={t('Centre name')} required className="sm:col-span-2" error={errors.centreName && t(errors.centreName)}>
+          <Field label={t('School name')} required className="sm:col-span-2" error={errors.centreName && t(errors.centreName)}>
             <Input value={values.centreName} onChange={(e) => set('centreName', e.target.value)} invalid={Boolean(errors.centreName)} />
           </Field>
           <Field label={t('Area')}>
@@ -198,7 +198,7 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
           <Field label={values.royaltyType === 'percent' ? t('Percent') : t('Rupees a month')} error={errors.royaltyValue && t(errors.royaltyValue)}>
             <Input type="number" min={0} value={values.royaltyValue} onChange={(e) => set('royaltyValue', e.target.value)} invalid={Boolean(errors.royaltyValue)} />
           </Field>
-          <Field label={t('Franchise fee, rupees')} hint={t('Can be filled in later on the centre')} error={errors.franchiseFee && t(errors.franchiseFee)}>
+          <Field label={t('Franchise fee, rupees')} hint={t('Can be filled in later on the school')} error={errors.franchiseFee && t(errors.franchiseFee)}>
             <Input type="number" min={0} value={values.franchiseFee} onChange={(e) => set('franchiseFee', e.target.value)} />
           </Field>
         </FormGrid>
@@ -225,7 +225,7 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
             ) : null}
           </div>
         ) : (
-          <Notice className="mt-5">{t("A head office admin can create the owner's login from the centre's People tab.")}</Notice>
+          <Notice className="mt-5">{t("A head office admin can create the owner's login from the school's People tab.")}</Notice>
         )}
       </Modal>
     </>

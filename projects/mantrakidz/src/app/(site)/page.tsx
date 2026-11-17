@@ -190,7 +190,7 @@ export default async function HomePage() {
             </StaggerItem>
             {openCentres > 0 ? (
               <StaggerItem>
-                <NumberTile tone="sky" value={openCentres} label={openCentres === 1 && lang === 'en' ? numbers.centresLabel.replace(/\bcentres\b/, 'centre') : numbers.centresLabel} icon={<MapPin aria-hidden size={24} />} />
+                <NumberTile tone="sky" value={openCentres} label={openCentres === 1 && lang === 'en' ? numbers.centresLabel.replace(/\bschools\b/, 'school') : numbers.centresLabel} icon={<MapPin aria-hidden size={24} />} />
               </StaggerItem>
             ) : null}
           </Stagger>

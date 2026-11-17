@@ -28,7 +28,7 @@ export async function StatementView({ data, canCancel = false }: { data: Stateme
         <CardHeader title={t('Terms')} />
         <CardBody>
           <dl className="grid gap-4 sm:grid-cols-3">
-            <Detail empty={t('Not added')} label={t('Royalty')}>{centre.isCompanyOwned ? t('None, company-owned centre') : royaltyRate(t, centre.royaltyType, centre.royaltyValue)}</Detail>
+            <Detail empty={t('Not added')} label={t('Royalty')}>{centre.isCompanyOwned ? t('None, company-owned school') : royaltyRate(t, centre.royaltyType, centre.royaltyValue)}</Detail>
             <Detail empty={t('Not added')} label={t('Agreement')}>
               {centre.agreementStart || centre.agreementEnd ? t('{from} to {to}', { from: formatDate(centre.agreementStart) || t('Start not set'), to: formatDate(centre.agreementEnd) || t('end not set') }) : null}
             </Detail>

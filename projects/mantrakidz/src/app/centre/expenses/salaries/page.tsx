@@ -41,7 +41,7 @@ export default async function SalariesPage({ searchParams }: { searchParams: Pro
           <EmptyState
             icon={<UsersRound size={26} />}
             title={t('No staff yet')}
-            text={t("Add the centre's teachers and helpers with their monthly salary, then pay them from here.")}
+            text={t("Add the school's teachers and helpers with their monthly salary, then pay them from here.")}
             action={<LinkButton href="/centre/staff">{t('Staff')}</LinkButton>}
           />
         </Card>

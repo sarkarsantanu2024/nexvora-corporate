@@ -35,14 +35,14 @@ export function CentreCreate() {
   return (
     <>
       <Button onClick={() => setOpen(true)}>
-        <Plus size={18} /> {t('Add centre')}
+        <Plus size={18} /> {t('Add school')}
       </Button>
       <Drawer
         open={open}
         onClose={() => !create.busy && setOpen(false)}
         wide
-        title={t('Add a centre')}
-        description={t('It starts in onboarding and gets the next MK code. A franchise lead can also be converted straight into a centre.')}
+        title={t('Add a school')}
+        description={t('It starts in onboarding and gets the next MK code. A franchise lead can also be converted straight into a school.')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={create.busy}>
@@ -52,13 +52,13 @@ export function CentreCreate() {
               loading={create.busy}
               onClick={() => create.run({ ...values, royaltyValue: Number(values.royaltyValue) || 0, franchiseFee: Number(values.franchiseFee) || 0 })}
             >
-              {t('Add centre')}
+              {t('Add school')}
             </LoadingButton>
           </>
         }
       >
         <FormGrid>
-          <Field label={t('Centre name')} required className="sm:col-span-2" error={errors.name && t(errors.name)}>
+          <Field label={t('School name')} required className="sm:col-span-2" error={errors.name && t(errors.name)}>
             <Input value={values.name} onChange={(e) => set('name', e.target.value)} invalid={Boolean(errors.name)} autoFocus />
           </Field>
           <Field label={t('Area')}>
@@ -76,10 +76,10 @@ export function CentreCreate() {
               <option value="company">{t('Head office (company-owned, no royalty)')}</option>
             </Select>
           </Field>
-          <Field label={values.isCompanyOwned ? t('Centre head') : t('Owner name')} error={errors.ownerName && t(errors.ownerName)}>
+          <Field label={values.isCompanyOwned ? t('School head') : t('Owner name')} error={errors.ownerName && t(errors.ownerName)}>
             <Input value={values.ownerName} onChange={(e) => set('ownerName', e.target.value)} />
           </Field>
-          <Field label={values.isCompanyOwned ? t('Centre head mobile') : t('Owner mobile')} error={errors.ownerPhone && t(errors.ownerPhone)}>
+          <Field label={values.isCompanyOwned ? t('School head mobile') : t('Owner mobile')} error={errors.ownerPhone && t(errors.ownerPhone)}>
             <Input value={values.ownerPhone} onChange={(e) => set('ownerPhone', e.target.value)} inputMode="tel" invalid={Boolean(errors.ownerPhone)} />
           </Field>
           <Field label={t('Email')} error={errors.ownerEmail && t(errors.ownerEmail)} className="sm:col-span-2">

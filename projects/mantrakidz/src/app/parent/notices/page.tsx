@@ -15,7 +15,7 @@ export default async function ParentNotices() {
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title={t('Notices')} description={t("From your child's centre and from head office.")} />
+      <PageHeader title={t('Notices')} description={t("From your child's school and from head office.")} />
       <div className="mx-auto max-w-2xl space-y-3">
         {notices.length ? (
           notices.map((notice) => (
@@ -40,7 +40,7 @@ export default async function ParentNotices() {
           ))
         ) : (
           <Card>
-            <EmptyState icon={<Megaphone size={26} />} title={t('No notices right now')} text={t('Holidays, meetings and events from the centre show here.')} />
+            <EmptyState icon={<Megaphone size={26} />} title={t('No notices right now')} text={t('Holidays, meetings and events from the school show here.')} />
           </Card>
         )}
       </div>

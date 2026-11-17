@@ -88,20 +88,20 @@ export const homeNumbers = defineSection({
   page: 'Home',
   label: 'Numbers strip',
   description:
-    'Four real numbers. The numbers themselves come from the programmes and centres you have set up; only the words under them are edited here.',
+    'Four real numbers. The numbers themselves come from the programmes and schools you have set up; only the words under them are edited here.',
   path: '/',
   aliases: ['numbers', 'stats', 'counters', 'figures'],
   fields: [
     { name: 'agesLabel', label: 'Words under the age range', type: 'text', maxLength: 40 },
     { name: 'seatsLabel', label: 'Words under seats per class', type: 'text', maxLength: 40 },
     { name: 'programmesLabel', label: 'Words under the number of classes', type: 'text', maxLength: 40 },
-    { name: 'centresLabel', label: 'Words under the number of centres', type: 'text', maxLength: 40 },
+    { name: 'centresLabel', label: 'Words under the number of schools', type: 'text', maxLength: 40 },
   ],
   defaults: {
     agesLabel: 'years of age',
     seatsLabel: 'seats in each class',
     programmesLabel: 'classes, Play Group to UKG',
-    centresLabel: 'centres open',
+    centresLabel: 'schools open',
   },
 });
 
@@ -261,7 +261,7 @@ export const homeFranchise = defineSection({
   key: 'home.franchise',
   page: 'Home',
   label: 'Franchise invitation',
-  description: 'The band that invites people to open a centre.',
+  description: 'The band that invites people to open a school.',
   path: '/',
   aliases: ['franchise block', 'franchise teaser', 'franchise banner'],
   fields: [

@@ -274,7 +274,7 @@ export function StaffRowActions({ row, today }: { row: StaffRow; today: string }
         </Field>
       </Modal>
 
-      <LoginDetails login={issued} onClose={() => setIssued(null)} area="centre dashboard" />
+      <LoginDetails login={issued} onClose={() => setIssued(null)} area="school dashboard" />
     </div>
   );
 }

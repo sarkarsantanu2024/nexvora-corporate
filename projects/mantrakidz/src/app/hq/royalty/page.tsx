@@ -36,7 +36,7 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
     <>
       <PageHeader
         title={t('Royalty')}
-        description={t("What each franchise centre owes head office for a month, worked out from that month's fee collection.")}
+        description={t("What each franchise school owes head office for a month, worked out from that month's fee collection.")}
         actions={
           <>
             {data.rows.length ? <ExportLink href={`/hq/royalty/export?period=${period}`} /> : null}
@@ -54,14 +54,14 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
         <Stat label={t('Raised, {label}', { label })} value={inr(data.totals.amount)} hint={t('On collection of {basis}', { basis: inr(data.totals.basis) })} />
         <Stat label={t('Received, {label}', { label })} value={inr(data.totals.paid)} tone="green" />
         <Stat label={t('Balance, {label}', { label })} value={inr(data.totals.balance)} tone={data.totals.balance > 0 ? 'amber' : 'green'} />
-        <Stat label={t('Outstanding, all months')} value={inr(outstanding)} tone={outstanding > 0 ? 'red' : 'green'} hint={t('Every centre, every month')} />
+        <Stat label={t('Outstanding, all months')} value={inr(outstanding)} tone={outstanding > 0 ? 'red' : 'green'} hint={t('Every school, every month')} />
       </div>
 
       {!data.canRaise ? (
         <Notice className="mb-4">{t("{label} is not over yet. Royalty is raised after the month ends, on that month's fee collection.", { label })}</Notice>
       ) : data.notRaised.length && data.rows.length ? (
         <Notice tone="amber" className="mb-4">
-          {t('Not yet raised for {label}: {centres}. Press "Raise royalty" to add them. Centres already billed are not touched.', { label, centres: data.notRaised.map((centre) => centre.name).join(', ') })}
+          {t('Not yet raised for {label}: {centres}. Press "Raise royalty" to add them. Schools already billed are not touched.', { label, centres: data.notRaised.map((centre) => centre.name).join(', ') })}
         </Notice>
       ) : null}
 
@@ -70,7 +70,7 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
           <Table>
             <thead>
               <tr>
-                <Th>{t('Centre')}</Th>
+                <Th>{t('School')}</Th>
                 <Th className="text-right">{t('Collection')}</Th>
                 <Th>{t('Rate')}</Th>
                 <Th className="text-right">{t('Royalty')}</Th>
@@ -142,9 +142,9 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
               data.canRaise
                 ? data.notRaised.length
                   ? data.notRaised.length === 1
-                    ? t('Raising it makes one royalty bill for each of the {n} active franchise centre, from the fee they collected in {label}.', { n: data.notRaised.length, label })
-                    : t('Raising it makes one royalty bill for each of the {n} active franchise centres, from the fee they collected in {label}.', { n: data.notRaised.length, label })
-                  : t('There is no active franchise centre to bill. Company-owned centres pay no royalty.')
+                    ? t('Raising it makes one royalty bill for each of the {n} active franchise school, from the fee they collected in {label}.', { n: data.notRaised.length, label })
+                    : t('Raising it makes one royalty bill for each of the {n} active franchise schools, from the fee they collected in {label}.', { n: data.notRaised.length, label })
+                  : t('There is no active franchise school to bill. Company-owned schools pay no royalty.')
                 : t('Pick a month that is over to raise its royalty.')
             }
             action={data.canRaise && data.notRaised.length ? <RaiseRoyalty period={period} label={label} alreadyRaised={false} /> : undefined}

@@ -96,7 +96,7 @@ export async function createCentreUser(session: Session, input: z.input<typeof c
   const { centreId, role } = centreLogin.parse(input);
   const db = await getDb();
   const [centre] = await db.select({ id: centres.id, name: centres.name }).from(centres).where(eq(centres.id, centreId)).limit(1);
-  if (!centre) throw new ApiError(404, 'Centre not found');
+  if (!centre) throw new ApiError(404, 'School not found');
   const row = await insertLogin(db, input, { role, centreId });
   await audit(session, 'user.create', { entity: 'user', entityId: row.id, centreId, summary: `Created login ${row.username} for ${row.name} at ${centre.name}` });
   return row;

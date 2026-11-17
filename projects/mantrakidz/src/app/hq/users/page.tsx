@@ -32,11 +32,11 @@ export default async function UsersPage({ searchParams }: { searchParams: Search
         </Card>
 
         <Card>
-          <CardHeader title={t('Centres')} description={t("Centre heads and centre staff. Add a centre's logins from the People tab of the centre.")} className="pb-4" />
+          <CardHeader title={t('Schools')} description={t("School heads and school staff. Add a school's logins from the People tab of the school.")} className="pb-4" />
           {data.centre.length ? (
             <LoginsTable rows={data.centre} selfId={session.uid} showCentre />
           ) : (
-            <EmptyState title={t('No centre logins yet')} text={t('Open a centre and add its centre head under People.')} />
+            <EmptyState title={t('No school logins yet')} text={t('Open a school and add its school head under People.')} />
           )}
         </Card>
 
@@ -47,7 +47,7 @@ export default async function UsersPage({ searchParams }: { searchParams: Search
               <span>
                 <span className="block text-base font-bold text-ink-900">{t('Parents')}</span>
                 <span className="mt-0.5 block text-sm text-ink-500">
-                  {data.parentTotal === 1 ? t('{n} parent login. Centres create these when they admit a child.', { n: data.parentTotal }) : t('{n} parent logins. Centres create these when they admit a child.', { n: data.parentTotal })}
+                  {data.parentTotal === 1 ? t('{n} parent login. Schools create these when they admit a child.', { n: data.parentTotal }) : t('{n} parent logins. Schools create these when they admit a child.', { n: data.parentTotal })}
                 </span>
               </span>
               <span className="text-sm font-semibold text-brand-700 group-open:hidden">{t('Show')}</span>
@@ -62,7 +62,7 @@ export default async function UsersPage({ searchParams }: { searchParams: Search
                 {data.parents.length >= data.parentLimit ? <p className="px-5 py-3 text-sm text-ink-500">{t('Showing the first {parentLimit}. Search to find a particular parent.', { parentLimit: data.parentLimit })}</p> : null}
               </>
             ) : (
-              <EmptyState className="py-8" title={searching ? t('No parent matches') : t('No parent logins yet')} text={searching ? t('Try the mobile number.') : t('They appear here once centres create them.')} />
+              <EmptyState className="py-8" title={searching ? t('No parent matches') : t('No parent logins yet')} text={searching ? t('Try the mobile number.') : t('They appear here once schools create them.')} />
             )}
           </details>
         </Card>

@@ -46,12 +46,12 @@ export function ProfileForm({ id, initial, isAdmin }: { id: string; initial: Pro
   return (
     <div className="space-y-6">
       <section>
-        <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-ink-500">{t('Centre')}</h3>
+        <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-ink-500">{t('School')}</h3>
         <FormGrid>
-          <Field label={t('Centre name')} required error={errors.name && t(errors.name)} className="sm:col-span-2">
+          <Field label={t('School name')} required error={errors.name && t(errors.name)} className="sm:col-span-2">
             <Input value={values.name} onChange={(e) => set('name', e.target.value)} invalid={Boolean(errors.name)} />
           </Field>
-          <Field label={t('Photo of the centre')} className="sm:col-span-2">
+          <Field label={t('Photo of the school')} className="sm:col-span-2">
             <ImageField value={values.photo} onChange={(url) => set('photo', url)} folder="centres" shape="wide" />
           </Field>
           {text('address', t('Address'), { className: 'sm:col-span-2' })}
@@ -62,7 +62,7 @@ export function ProfileForm({ id, initial, isAdmin }: { id: string; initial: Pro
           {text('phone', t('Phone'), { inputMode: 'tel' })}
           {text('whatsapp', t('WhatsApp number'), { inputMode: 'tel' })}
           {text('email', t('Email'), { type: 'email' })}
-          {text('mapUrl', t('Google Maps link'), { hint: t('Paste the share link of the centre from Google Maps') })}
+          {text('mapUrl', t('Google Maps link'), { hint: t('Paste the share link of the school from Google Maps') })}
           <Field label={t('Opened on')} error={errors.openedOn && t(errors.openedOn)}>
             <Input type="date" value={values.openedOn ?? ''} onChange={(e) => set('openedOn', e.target.value || null)} />
           </Field>
@@ -70,7 +70,7 @@ export function ProfileForm({ id, initial, isAdmin }: { id: string; initial: Pro
       </section>
 
       <section>
-        <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-ink-500">{values.isCompanyOwned ? t('Centre head') : t('Owner')}</h3>
+        <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-ink-500">{values.isCompanyOwned ? t('School head') : t('Owner')}</h3>
         <FormGrid>
           {text('ownerName', t('Name'))}
           {text('ownerPhone', t('Mobile number'), { inputMode: 'tel' })}
@@ -79,7 +79,7 @@ export function ProfileForm({ id, initial, isAdmin }: { id: string; initial: Pro
       </section>
 
       <section className="grid gap-3 sm:grid-cols-2">
-        <Toggle checked={values.showOnWebsite} onChange={(next) => set('showOnWebsite', next)} label={t('Show on the website')} hint={t('Lists this centre on the Centres page and in the enquiry form.')} />
+        <Toggle checked={values.showOnWebsite} onChange={(next) => set('showOnWebsite', next)} label={t('Show on the website')} hint={t('Lists this school on the Schools page and in the enquiry form.')} />
         <Toggle
           checked={values.isCompanyOwned}
           onChange={(next) => set('isCompanyOwned', next)}
@@ -138,7 +138,7 @@ export function AgreementForm({ id, initial, isAdmin, isCompanyOwned, effectiveF
       <section>
         <h3 className="mb-3 text-sm font-bold uppercase tracking-wide text-ink-500">{t('Monthly royalty')}</h3>
         {isCompanyOwned ? (
-          <Notice>{t('This centre is company-owned, so no royalty is raised for it.')}</Notice>
+          <Notice>{t('This school is company-owned, so no royalty is raised for it.')}</Notice>
         ) : (
           <>
             <FormGrid>
@@ -183,16 +183,16 @@ export function AgreementForm({ id, initial, isAdmin, isCompanyOwned, effectiveF
 }
 
 const STATUS_STEPS: Record<CentreStatus, { to: CentreStatus; label: string; title: string; text: string; danger: boolean }[]> = {
-  onboarding: [{ to: 'active', label: 'Activate', title: 'Activate this centre?', text: 'It becomes an active centre from today: royalty is raised for it and it counts in the network figures.', danger: false }],
+  onboarding: [{ to: 'active', label: 'Activate', title: 'Activate this school?', text: 'It becomes an active school from today: royalty is raised for it and it counts in the network figures.', danger: false }],
   active: [
-    { to: 'suspended', label: 'Suspend', title: 'Suspend this centre?', text: 'It stops counting as an active centre and no new royalty is raised. Its records stay as they are. You can activate it again.', danger: true },
-    { to: 'closed', label: 'Close', title: 'Close this centre?', text: 'Use this when the centre has shut for good. Its history stays for reports.', danger: true },
+    { to: 'suspended', label: 'Suspend', title: 'Suspend this school?', text: 'It stops counting as an active school and no new royalty is raised. Its records stay as they are. You can activate it again.', danger: true },
+    { to: 'closed', label: 'Close', title: 'Close this school?', text: 'Use this when the school has shut for good. Its history stays for reports.', danger: true },
   ],
   suspended: [
-    { to: 'active', label: 'Activate again', title: 'Activate this centre again?', text: 'It goes back to being an active centre.', danger: false },
-    { to: 'closed', label: 'Close', title: 'Close this centre?', text: 'Use this when the centre has shut for good. Its history stays for reports.', danger: true },
+    { to: 'active', label: 'Activate again', title: 'Activate this school again?', text: 'It goes back to being an active school.', danger: false },
+    { to: 'closed', label: 'Close', title: 'Close this school?', text: 'Use this when the school has shut for good. Its history stays for reports.', danger: true },
   ],
-  closed: [{ to: 'active', label: 'Reopen', title: 'Reopen this centre?', text: 'It goes back to being an active centre.', danger: false }],
+  closed: [{ to: 'active', label: 'Reopen', title: 'Reopen this school?', text: 'It goes back to being an active school.', danger: false }],
 };
 
 export function StatusActions({ id, status }: { id: string; status: CentreStatus }) {
@@ -220,16 +220,16 @@ export function StatusActions({ id, status }: { id: string; status: CentreStatus
 export function DeleteCentre({ id, name }: { id: string; name: string }) {
   const t = useT();
   const router = useRouter();
-  const remove = useAction(deleteCentreAction, { success: t('Centre deleted'), onDone: () => router.push('/hq/centres') });
+  const remove = useAction(deleteCentreAction, { success: t('School deleted'), onDone: () => router.push('/hq/centres') });
   return (
     <ConfirmButton
       size="sm"
       title={t('Delete {name}?', { name })}
-      text={t('Only a centre with no children on its records can be deleted. It disappears from every list and its logins stop working.')}
-      confirmLabel={t('Delete centre')}
+      text={t('Only a school with no children on its records can be deleted. It disappears from every list and its logins stop working.')}
+      confirmLabel={t('Delete school')}
       onConfirm={async () => void (await remove.run(id))}
     >
-      <Trash2 size={15} /> {t('Delete centre')}
+      <Trash2 size={15} /> {t('Delete school')}
     </ConfirmButton>
   );
 }

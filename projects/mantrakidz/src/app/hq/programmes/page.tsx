@@ -26,7 +26,7 @@ export default async function ProgrammesPage() {
 
   return (
     <>
-      <PageHeader title={t('Programmes')} description={t('The classes Mantra Kidz offers. This list drives the Programmes pages of the website and what the centres can admit children into.')} actions={add} />
+      <PageHeader title={t('Programmes')} description={t('The classes Mantra Kidz offers. This list drives the Programmes pages of the website and what the schools can admit children into.')} actions={add} />
       <Card>
         {rows.length ? (
           <Table>
@@ -66,7 +66,7 @@ export default async function ProgrammesPage() {
             </tbody>
           </Table>
         ) : (
-          <EmptyState icon={<Shapes size={26} />} title={t('No programmes yet')} text={t('Add Play Group, Nursery and the other classes the school offers. The website and the centres use this list.')} action={add} />
+          <EmptyState icon={<Shapes size={26} />} title={t('No programmes yet')} text={t('Add Play Group, Nursery and the other classes the school offers. The website and the schools use this list.')} action={add} />
         )}
       </Card>
     </>

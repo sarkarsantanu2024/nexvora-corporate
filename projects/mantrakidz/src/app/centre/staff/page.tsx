@@ -27,7 +27,7 @@ export default async function StaffPage() {
     <>
       <PageHeader
         title={t('Staff')}
-        description={working.length ? t('{n} on the staff list. Monthly salary bill {salaryBill}.', { n: working.length, salaryBill: inr(salaryBill) }) : t('Your centre head, teachers and helpers.')}
+        description={working.length ? t('{n} on the staff list. Monthly salary bill {salaryBill}.', { n: working.length, salaryBill: inr(salaryBill) }) : t('Your school head, teachers and helpers.')}
         actions={<StaffFormButton today={today} />}
       />
       <Notice className="mb-4">

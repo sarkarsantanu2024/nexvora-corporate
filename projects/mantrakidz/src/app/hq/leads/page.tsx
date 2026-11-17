@@ -48,7 +48,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
     <>
       <PageHeader
         title={t('Franchise leads')}
-        description={t('People who asked about opening a Mantra Kidz centre. Website enquiries arrive here as New.')}
+        description={t('People who asked about opening a Mantra Kidz school. Website enquiries arrive here as New.')}
         actions={
           <>
             <ExportLink href={`/hq/leads/export${query({ ...keep, stage: view === 'table' ? params.stage : '' })}`} />

@@ -34,10 +34,10 @@ async function main() {
   if (wantDemo) {
     const [{ demo }] = await db.select({ demo: count() }).from(centres).where(eq(centres.isDemo, true));
     if (demo > 0) {
-      console.log('Sample centres are already there: nothing to do.');
+      console.log('Sample schools are already there: nothing to do.');
     } else {
       await seedDemo(db);
-      console.log('Sample centres loaded.');
+      console.log('Sample schools loaded.');
     }
   }
   process.exit(0);

@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { ConfirmButton, LoadingButton, Modal } from '@/components/ui/client';
 import { Button, Field, FormGrid, Input, Select } from '@/components/ui/core';
 import { useT } from '@/components/ui/lang';
+import type { Role } from '@/db/schema';
+import { LoginDetails, type LoginArea, type LoginIssued } from '@/app/centre/settings/login-details';
 import { createCentreUserAction, createHqUserAction, resetUserPasswordAction, setUserActiveAction, unlockUserAction } from '@/server/hq/actions';
 import { useAction, useForm } from './use-action';
 
@@ -17,18 +19,34 @@ const ROLE_CHOICES = {
     { value: 'hq_admin', label: 'Head office admin' },
   ],
   centre: [
-    { value: 'centre_admin', label: 'Centre head' },
-    { value: 'centre_staff', label: 'Centre staff (teacher, front desk)' },
+    { value: 'centre_admin', label: 'School head' },
+    { value: 'centre_staff', label: 'School staff (teacher, front desk)' },
   ],
 };
 
-/** Creates a login for head office or for one centre. The password is typed once and never shown again. */
+/** Which words the login message uses, by the role of the login. */
+const AREA: Record<Role, LoginArea> = {
+  hq_admin: 'head office dashboard',
+  hq_staff: 'head office dashboard',
+  centre_admin: 'school dashboard',
+  centre_staff: 'school dashboard',
+  parent: 'parent corner',
+};
+type Issued = LoginIssued & { area: LoginArea };
+
+/**
+ * Creates a login for head office or for one centre. After saving, the
+ * username and password are shown once, with a button to send them to the
+ * person on WhatsApp.
+ */
 export function NewLogin({ scope, label }: { scope: Scope; label?: string }) {
   const t = useT();
   const [open, setOpen] = useState(false);
   const blank: NewLogin = { name: '', username: '', phone: '', email: '', role: ROLE_CHOICES[scope.kind][0].value, password: '', mustChange: true };
   const { values, set, reset } = useForm<NewLogin>(blank);
-  const done = () => {
+  const [issued, setIssued] = useState<Issued | null>(null);
+  const done = (row: { username: string }) => {
+    setIssued({ username: row.username, password: values.password, phone: values.phone, greeting: `Hello ${values.name.trim()}`, area: AREA[values.role as Role] });
     setOpen(false);
     reset(blank);
   };
@@ -50,7 +68,7 @@ export function NewLogin({ scope, label }: { scope: Scope; label?: string }) {
       <Modal
         open={open}
         onClose={() => !busy && setOpen(false)}
-        title={scope.kind === 'hq' ? t('Add a head office login') : t('Add a login for this centre')}
+        title={scope.kind === 'hq' ? t('Add a head office login') : t('Add a login for this school')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={busy}>
@@ -78,7 +96,7 @@ export function NewLogin({ scope, label }: { scope: Scope; label?: string }) {
           <Field label={t('Username')} required hint={t('Small letters and numbers, no spaces')} error={errors.username && t(errors.username)}>
             <Input value={values.username} onChange={(e) => set('username', e.target.value)} autoCapitalize="none" autoComplete="off" invalid={Boolean(errors.username)} />
           </Field>
-          <Field label={t('Starting password')} required hint={t('Shown only now. Pass it on in person.')} error={errors.password && t(errors.password)}>
+          <Field label={t('Starting password')} required hint={t('You can send it on WhatsApp after you save.')} error={errors.password && t(errors.password)}>
             <Input value={values.password} onChange={(e) => set('password', e.target.value)} autoComplete="off" invalid={Boolean(errors.password)} />
           </Field>
           <Field label={t('Mobile number')} error={errors.phone && t(errors.phone)}>
@@ -93,19 +111,27 @@ export function NewLogin({ scope, label }: { scope: Scope; label?: string }) {
           </label>
         </FormGrid>
       </Modal>
+      {issued ? <LoginDetails login={issued} onClose={() => setIssued(null)} area={issued.area} /> : null}
     </>
   );
 }
 
-/** Reset password, unlock, activate or deactivate, for one row of a logins table. */
-export function LoginActions({ id, username, active, locked, isSelf }: { id: string; username: string; active: boolean; locked: boolean; isSelf: boolean }) {
+/**
+ * Reset password, unlock, activate or deactivate, for one row of a logins
+ * table. A reset shows the new password once, with a button to send it to
+ * the person on WhatsApp. It works the same for a head office login, a
+ * centre login and a parent login.
+ */
+export function LoginActions({ id, username, name, phone, role, active, locked, isSelf }: { id: string; username: string; name: string; phone: string; role: Role; active: boolean; locked: boolean; isSelf: boolean }) {
   const t = useT();
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState('');
   const [mustChange, setMustChange] = useState(true);
+  const [issued, setIssued] = useState<Issued | null>(null);
   const reset = useAction(resetUserPasswordAction, {
     success: t('New password set for {username}', { username }),
     onDone: () => {
+      if (!isSelf) setIssued({ username, password, phone, greeting: role === 'parent' ? `Dear ${name}` : `Hello ${name}`, area: AREA[role] });
       setOpen(false);
       setPassword('');
     },
@@ -155,7 +181,7 @@ export function LoginActions({ id, username, active, locked, isSelf }: { id: str
           </>
         }
       >
-        <Field label={t('Starting password')} required hint={t('At least 6 characters. It is not shown again after you save.')} error={reset.fields.password && t(reset.fields.password)}>
+        <Field label={t('Starting password')} required hint={t('At least 6 characters. You can send it on WhatsApp after you save.')} error={reset.fields.password && t(reset.fields.password)}>
           <Input value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="off" invalid={Boolean(reset.fields.password)} autoFocus />
         </Field>
         <label className="mt-4 flex items-center gap-2.5 text-sm text-ink-700">
@@ -163,6 +189,7 @@ export function LoginActions({ id, username, active, locked, isSelf }: { id: str
           {t('Ask for a new password at the next login')}
         </label>
       </Modal>
+      {issued ? <LoginDetails login={issued} onClose={() => setIssued(null)} area={issued.area} /> : null}
     </span>
   );
 }

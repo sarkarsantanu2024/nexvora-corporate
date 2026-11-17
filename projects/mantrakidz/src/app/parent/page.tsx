@@ -18,7 +18,7 @@ export default async function ParentHome() {
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title={t('Hello, {name}', { name: session.name.split(' ')[0] })} description={t("Your child's attendance, fees and notices from the centre.")} />
+      <PageHeader title={t('Hello, {name}', { name: session.name.split(' ')[0] })} description={t("Your child's attendance, fees and notices from the school.")} />
 
       {children.length ? (
         <div className="grid gap-4 sm:grid-cols-2">
@@ -76,7 +76,7 @@ export default async function ParentHome() {
         </div>
       ) : (
         <Card>
-          <EmptyState icon={<Smile size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the centre office to link your child to your mobile number.')} />
+          <EmptyState icon={<Smile size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the school office to link your child to your mobile number.')} />
         </Card>
       )}
 
@@ -106,7 +106,7 @@ export default async function ParentHome() {
             ))}
           </ul>
         ) : (
-          <EmptyState icon={<Megaphone size={26} />} title={t('No notices right now')} text={t('Holidays, meetings and events from the centre show here.')} className="py-10" />
+          <EmptyState icon={<Megaphone size={26} />} title={t('No notices right now')} text={t('Holidays, meetings and events from the school show here.')} className="py-10" />
         )}
       </Card>
 

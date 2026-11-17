@@ -135,7 +135,7 @@ export async function markHoliday(ctx: Ctx, raw: z.input<typeof holidayInput>) {
       target: [attendance.studentId, attendance.day],
       set: { status: sql`excluded.status`, note: sql`''`, batchId: sql`excluded.batch_id`, markedBy: sql`excluded.marked_by`, createdAt: sql`now()` },
     });
-  await audit(ctx.session, 'attendance.holiday', { entity: 'centre', entityId: ctx.centre.id, centreId: ctx.centre.id, summary: `Holiday on ${formatDate(data.day)} for ${batch ? batch.name : 'the whole centre'}` });
+  await audit(ctx.session, 'attendance.holiday', { entity: 'centre', entityId: ctx.centre.id, centreId: ctx.centre.id, summary: `Holiday on ${formatDate(data.day)} for ${batch ? batch.name : 'the whole school'}` });
   return { marked: children.length };
 }
 

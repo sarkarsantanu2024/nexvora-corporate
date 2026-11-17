@@ -40,8 +40,8 @@ export function CircularForm({ circular, centres, today }: { circular?: Circular
         open={open}
         onClose={() => !save.busy && setOpen(false)}
         wide
-        title={circular ? t('Edit circular') : t('New circular to centres')}
-        description={t('It is for the centres from the first day until the last day set below.')}
+        title={circular ? t('Edit circular') : t('New circular to schools')}
+        description={t('It is for the schools from the first day until the last day set below.')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={save.busy}>
@@ -68,7 +68,7 @@ export function CircularForm({ circular, centres, today }: { circular?: Circular
           </Field>
           <Field label={t('Send to')} className="sm:col-span-2">
             <Select value={values.centreId ?? ''} onChange={(e) => set('centreId', e.target.value || null)}>
-              <option value="">{t('All centres')}</option>
+              <option value="">{t('All schools')}</option>
               {centres.map((centre) => (
                 <option key={centre.id} value={centre.id}>
                   {t('Only {name}', { name: centre.name })}
@@ -105,7 +105,7 @@ export function DeleteCircular({ id, title }: { id: string; title: string }) {
   const t = useT();
   const remove = useAction(deleteCircularAction, { success: t('Circular deleted') });
   return (
-    <ConfirmButton size="sm" title={t('Delete this circular?')} text={t('"{title}" is removed for every centre.', { title })} confirmLabel={t('Delete')} onConfirm={async () => void (await remove.run(id))}>
+    <ConfirmButton size="sm" title={t('Delete this circular?')} text={t('"{title}" is removed for every school.', { title })} confirmLabel={t('Delete')} onConfirm={async () => void (await remove.run(id))}>
       <Trash2 size={15} /> {t('Delete')}
     </ConfirmButton>
   );

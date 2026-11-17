@@ -169,7 +169,7 @@ export async function seedBase(db: DB) {
     whatsapp: '8777896483',
     royaltyType: 'fixed',
     royaltyValue: 0,
-    notes: 'Head centre. Details copied from the old website; please confirm them.',
+    notes: 'Head school. Details copied from the old website; please confirm them.',
   });
 
   await seedSite(db);
@@ -201,7 +201,7 @@ export async function seedDemo(db: DB) {
 
   await db.insert(s.users).values([
     { name: 'Head Office Staff', username: 'hqstaff', passwordHash: hash, role: 'hq_staff' },
-    { name: 'Dakshindari Centre Head', username: 'dakshindari', passwordHash: hash, role: 'centre_admin', centreId: head.id },
+    { name: 'Dakshindari School Head', username: 'dakshindari', passwordHash: hash, role: 'centre_admin', centreId: head.id },
   ]);
 
   const centreSpecs = [
@@ -247,7 +247,7 @@ export async function seedDemo(db: DB) {
         franchiseFeePaid: spec.franchiseFee,
         royaltyType: spec.royaltyType,
         royaltyValue: spec.royaltyValue,
-        notes: 'Sample centre for demonstration. Remove it from HQ › Settings.',
+        notes: 'Sample school for demonstration. Remove it from HQ › Settings.',
       })
       .returning();
 
@@ -262,7 +262,7 @@ export async function seedDemo(db: DB) {
       .insert(s.staff)
       .values(
         [
-          { name: `${pick(MOTHERS)} ${pick(SURNAMES)}`, roleTitle: 'Centre Head', monthlySalary: 18000 },
+          { name: `${pick(MOTHERS)} ${pick(SURNAMES)}`, roleTitle: 'School Head', monthlySalary: 18000 },
           { name: `${pick(MOTHERS)} ${pick(SURNAMES)}`, roleTitle: 'Teacher', monthlySalary: 12000 },
           { name: `${pick(MOTHERS)} ${pick(SURNAMES)}`, roleTitle: 'Teacher', monthlySalary: 11000 },
           { name: `${pick(MOTHERS)} ${pick(SURNAMES)}`, roleTitle: 'Assistant Teacher', monthlySalary: 8000 },
@@ -607,7 +607,7 @@ export async function seedDemo(db: DB) {
   await db.insert(s.announcements).values({
     audience: 'centres',
     title: 'Winter timetable and annual day planning',
-    body: 'All centres: the winter timetable starts on the first Monday of December. Please send your annual day date and venue to head office by the 25th.',
+    body: 'All schools: the winter timetable starts on the first Monday of December. Please send your annual day date and venue to head office by the 25th.',
     pinned: true,
     publishOn: addDays(today, -4),
     createdBy: admin.id,

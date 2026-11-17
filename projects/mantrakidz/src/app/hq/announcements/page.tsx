@@ -22,7 +22,7 @@ export default async function CircularsPage() {
     <>
       <PageHeader
         title={t('Circulars')}
-        description={t('Notices from head office to the centres: timetables, policy changes, things to send in.')}
+        description={t('Notices from head office to the schools: timetables, policy changes, things to send in.')}
         actions={<CircularForm centres={options} today={today} />}
       />
 
@@ -31,7 +31,7 @@ export default async function CircularsPage() {
           <EmptyState
             icon={<Megaphone size={26} />}
             title={t('No circulars yet')}
-            text={t('Write to all centres at once, or to one centre.')}
+            text={t('Write to all schools at once, or to one school.')}
             action={<CircularForm centres={options} today={today} />}
           />
         </Card>
@@ -51,7 +51,7 @@ export default async function CircularsPage() {
                           <Pin size={12} /> {t('Pinned')}
                         </Badge>
                       ) : null}
-                      <Badge tone={row.centreId ? 'blue' : 'neutral'}>{row.centreId ? (centreName ?? t('One centre')) : t('All centres')}</Badge>
+                      <Badge tone={row.centreId ? 'blue' : 'neutral'}>{row.centreId ? (centreName ?? t('One school')) : t('All schools')}</Badge>
                       {expired ? <Badge tone="neutral">{t('No longer shown')}</Badge> : upcoming ? <Badge tone="amber">{t('Shows from {publishOn}', { publishOn: formatDate(row.publishOn) })}</Badge> : <Badge tone="green">{t('Showing now')}</Badge>}
                     </div>
                   </div>
