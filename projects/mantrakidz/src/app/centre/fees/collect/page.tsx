@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Avatar, Card, EmptyState, LinkButton, PageHeader } from '@/components/ui/core';
 import { requireCentre } from '@/lib/auth';
 import { todayIST } from '@/lib/date';
+import { getT } from '@/lib/t';
 import { getChild, openBills } from '@/server/centre/money/bills';
 import { ChildPicker } from '../child-picker';
 import { CollectForm } from './collect-form';
@@ -11,6 +12,7 @@ import { CollectForm } from './collect-form';
 export const metadata: Metadata = { title: 'Take a payment' };
 
 export default async function CollectPage({ searchParams }: { searchParams: Promise<{ student?: string; q?: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { student, q } = await searchParams;
   const child = student ? await getChild(ctx, student) : null;
@@ -18,8 +20,8 @@ export default async function CollectPage({ searchParams }: { searchParams: Prom
   if (!child) {
     return (
       <div className="animate-fade-up">
-        <PageHeader title="Take a payment" description="Find the child first." back={{ href: '/centre/fees', label: 'Fees' }} />
-        <ChildPicker ctx={ctx} q={q ?? ''} to="/centre/fees/collect" hint="Children with the most to pay are listed first." />
+        <PageHeader title={t('Take a payment')} description={t('Find the child first.')} back={{ href: '/centre/fees', label: t('Fees') }} />
+        <ChildPicker ctx={ctx} q={q ?? ''} to="/centre/fees/collect" hint={t('Children with the most to pay are listed first.')} />
       </div>
     );
   }
@@ -27,7 +29,7 @@ export default async function CollectPage({ searchParams }: { searchParams: Prom
   const bills = await openBills(ctx, child.id);
   return (
     <div className="animate-fade-up">
-      <PageHeader title="Take a payment" back={{ href: '/centre/fees/collect', label: 'Choose another child' }} />
+      <PageHeader title={t('Take a payment')} back={{ href: '/centre/fees/collect', label: t('Choose another child') }} />
       <div className="mx-auto max-w-3xl">
         <Card className="mb-5 flex items-center gap-4 p-4">
           <Avatar name={child.name} src={child.photo} size={52} />
@@ -36,7 +38,7 @@ export default async function CollectPage({ searchParams }: { searchParams: Prom
               {child.name}
             </Link>
             <p className="truncate text-sm text-ink-500">
-              {child.batchName ?? 'No class'} · {child.admissionNo}
+              {child.batchName ?? t('No class')} · {child.admissionNo}
               {child.guardianPhone ? ` · ${child.guardianPhone}` : ''}
             </p>
           </div>
@@ -52,9 +54,9 @@ export default async function CollectPage({ searchParams }: { searchParams: Prom
           <Card>
             <EmptyState
               icon={<CheckCircle2 size={26} />}
-              title="Nothing due"
-              text={`${child.name} has no unpaid bill. To take money for something new, raise a bill first.`}
-              action={<LinkButton href={`/centre/fees/new?student=${child.id}`}>New bill</LinkButton>}
+              title={t('Nothing due')}
+              text={t('{name} has no unpaid bill. To take money for something new, raise a bill first.', { name: child.name })}
+              action={<LinkButton href={`/centre/fees/new?student=${child.id}`}>{t('New bill')}</LinkButton>}
             />
           </Card>
         )}

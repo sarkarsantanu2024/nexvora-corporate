@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useMemo, useRef, useState } from 'react';
 import { Badge, Button, Card, EmptyState, Field, Input, Select } from '@/components/ui/core';
 import { ConfirmButton, LoadingButton, Modal, useToast } from '@/components/ui/client';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { addGalleryPhotosAction, deleteGalleryItemsAction, reorderGalleryAction, updateGalleryItemAction } from '@/server/cms/actions';
 import { imagesFrom, uploadMany } from './upload';
@@ -14,6 +15,7 @@ export type GalleryRow = { id: string; url: string; caption: string; album: stri
 type Centre = { id: string; name: string };
 
 export function GalleryManager({ items, albums, centres }: { items: GalleryRow[]; albums: string[]; centres: Centre[] }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [album, setAlbum] = useState('');
@@ -33,7 +35,7 @@ export function GalleryManager({ items, albums, centres }: { items: GalleryRow[]
     setBusyId(id);
     const result = await job();
     setBusyId('');
-    if (!result.ok) toast.error(result.error);
+    if (!result.ok) toast.error(t(result.error));
     else if (done) toast.success(done);
     router.refresh();
   }
@@ -57,13 +59,13 @@ export function GalleryManager({ items, albums, centres }: { items: GalleryRow[]
                   onClick={() => setAlbum(name)}
                   className={cn('inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold transition', album === name ? 'border-brand-700 bg-brand-700 text-white' : 'border-ink-200 bg-white text-ink-700 hover:border-ink-300')}
                 >
-                  {name || 'All albums'} <span className={cn('tabular text-xs', album === name ? 'text-brand-100' : 'text-ink-400')}>{n}</span>
+                  {name || t('All albums')} <span className={cn('tabular text-xs', album === name ? 'text-brand-100' : 'text-ink-400')}>{n}</span>
                 </button>
               ))
             : null}
         </div>
         <Button onClick={() => setAdding(true)}>
-          <ImagePlus size={18} /> Add photos
+          <ImagePlus size={18} /> {t('Add photos')}
         </Button>
       </div>
 
@@ -71,16 +73,16 @@ export function GalleryManager({ items, albums, centres }: { items: GalleryRow[]
         <Card>
           <EmptyState
             icon={<Images size={26} />}
-            title="The gallery is empty"
-            text="Photos you add here appear on the Gallery page of the website, grouped into albums like Annual Day or Sports Day."
-            action={<Button onClick={() => setAdding(true)}>Add the first photos</Button>}
+            title={t('The gallery is empty')}
+            text={t('Photos you add here appear on the Gallery page of the website, grouped into albums like Annual Day or Sports Day.')}
+            action={<Button onClick={() => setAdding(true)}>{t('Add the first photos')}</Button>}
           />
         </Card>
       ) : (
         shown.map(([name, list]) => (
           <section key={name} aria-label={name}>
             <h2 className="mb-2 flex items-baseline gap-2 font-display text-lg font-bold text-ink-900">
-              {name} <span className="tabular text-sm font-medium text-ink-500">{list.length === 1 ? '1 photo' : `${list.length} photos`}</span>
+              {name} <span className="tabular text-sm font-medium text-ink-500">{list.length === 1 ? t('1 photo') : t('{n} photos', { n: list.length })}</span>
             </h2>
             <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               {list.map((item, index) => (
@@ -90,28 +92,28 @@ export function GalleryManager({ items, albums, centres }: { items: GalleryRow[]
                     <img src={item.url} alt={item.caption} loading="lazy" className={cn('h-full w-full object-cover', !item.visible && 'opacity-40 grayscale')} />
                     {!item.visible ? (
                       <Badge className="absolute left-2 top-2 bg-ink-900/80 text-white">
-                        <EyeOff size={12} /> Hidden
+                        <EyeOff size={12} /> {t('Hidden')}
                       </Badge>
                     ) : null}
                   </div>
                   <div className="px-3 pt-2">
-                    <p className={cn('truncate text-sm font-semibold', item.caption ? 'text-ink-800' : 'text-ink-400')}>{item.caption || 'No caption'}</p>
+                    <p className={cn('truncate text-sm font-semibold', item.caption ? 'text-ink-800' : 'text-ink-400')}>{item.caption || t('No caption')}</p>
                     {centreName(item.centreId) ? <p className="truncate text-xs text-ink-500">{centreName(item.centreId)}</p> : null}
                   </div>
                   <div className="flex items-center justify-between px-1.5 pb-1.5 pt-1">
                     <div className="flex">
-                      <IconButton label="Move earlier" disabled={index === 0 || busyId !== ''} onClick={() => move(list, index, -1)}>
+                      <IconButton label={t('Move earlier')} disabled={index === 0 || busyId !== ''} onClick={() => move(list, index, -1)}>
                         <ArrowLeft size={17} />
                       </IconButton>
-                      <IconButton label="Move later" disabled={index === list.length - 1 || busyId !== ''} onClick={() => move(list, index, 1)}>
+                      <IconButton label={t('Move later')} disabled={index === list.length - 1 || busyId !== ''} onClick={() => move(list, index, 1)}>
                         <ArrowRight size={17} />
                       </IconButton>
                     </div>
                     <div className="flex">
-                      <IconButton label={item.visible ? 'Hide from the website' : 'Show on the website'} disabled={busyId !== ''} onClick={() => void run(item.id, () => updateGalleryItemAction(item.id, { visible: !item.visible }))}>
+                      <IconButton label={item.visible ? t('Hide from the website') : t('Show on the website')} disabled={busyId !== ''} onClick={() => void run(item.id, () => updateGalleryItemAction(item.id, { visible: !item.visible }))}>
                         {item.visible ? <Eye size={17} /> : <EyeOff size={17} />}
                       </IconButton>
-                      <IconButton label="Edit caption and album" disabled={busyId !== ''} onClick={() => setEditing(item)}>
+                      <IconButton label={t('Edit caption and album')} disabled={busyId !== ''} onClick={() => setEditing(item)}>
                         <Pencil size={17} />
                       </IconButton>
                     </div>
@@ -138,9 +140,10 @@ function IconButton({ label, children, ...props }: { label: string; children: Re
 }
 
 function AlbumField({ value, onChange, albums }: { value: string; onChange: (value: string) => void; albums: string[] }) {
+  const t = useT();
   return (
-    <Field label="Album" hint="Type a new name, or pick one you already have.">
-      <Input value={value} onChange={(event) => onChange(event.target.value)} list="gallery-albums" maxLength={60} placeholder="Annual Day 2026" />
+    <Field label={t('Album')} hint={t('Type a new name, or pick one you already have.')}>
+      <Input value={value} onChange={(event) => onChange(event.target.value)} list="gallery-albums" maxLength={60} placeholder={t('Annual Day 2026')} />
       <datalist id="gallery-albums">
         {albums.map((name) => (
           <option key={name} value={name} />
@@ -151,11 +154,12 @@ function AlbumField({ value, onChange, albums }: { value: string; onChange: (val
 }
 
 function CentreField({ value, onChange, centres }: { value: string; onChange: (value: string) => void; centres: Centre[] }) {
+  const t = useT();
   if (!centres.length) return null;
   return (
-    <Field label="Centre" hint="Optional. Tag the centre the photos are from.">
+    <Field label={t('Centre')} hint={t('Optional. Tag the centre the photos are from.')}>
       <Select value={value} onChange={(event) => onChange(event.target.value)}>
-        <option value="">All centres</option>
+        <option value="">{t('All centres')}</option>
         {centres.map((centre) => (
           <option key={centre.id} value={centre.id}>
             {centre.name}
@@ -167,6 +171,7 @@ function CentreField({ value, onChange, centres }: { value: string; onChange: (v
 }
 
 function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[]; centres: Centre[]; startAlbum: string; onClose: () => void }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const input = useRef<HTMLInputElement>(null);
@@ -182,7 +187,7 @@ function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[];
   async function submit() {
     setProgress(files.map(() => 0));
     const { done, failed } = await uploadMany(files, 'gallery', (index, fraction) => setProgress((list) => list.map((value, at) => (at === index ? fraction : value))));
-    if (failed.length) toast.error(failed.length === 1 ? failed[0].error : `${failed.length} photos could not be uploaded. ${failed[0].error}`);
+    if (failed.length) toast.error(failed.length === 1 ? t(failed[0].error) : t('{n} photos could not be uploaded. {error}', { n: failed.length, error: t(failed[0].error) }));
     if (done.length) {
       const result = await addGalleryPhotosAction({ album, centreId, photos: done.map((photo) => ({ url: photo.url, width: photo.width, height: photo.height })) });
       if (!result.ok) {
@@ -190,7 +195,7 @@ function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[];
         setProgress([]);
         return;
       }
-      toast.success(result.data === 1 ? 'Photo added to the gallery' : `${result.data} photos added to the gallery`);
+      toast.success(result.data === 1 ? t('Photo added to the gallery') : t('{n} photos added to the gallery', { n: result.data }));
       router.refresh();
       onClose();
       return;
@@ -204,15 +209,15 @@ function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[];
     <Modal
       open
       onClose={() => !busy && onClose()}
-      title="Add photos to the gallery"
+      title={t('Add photos to the gallery')}
       size="lg"
       footer={
         <>
           <Button variant="secondary" onClick={onClose} disabled={busy}>
-            Cancel
+            {t('Cancel')}
           </Button>
           <LoadingButton loading={busy} disabled={!files.length} onClick={() => void submit()}>
-            {busy ? `Uploading ${Math.round(overall * 100)}%` : files.length > 1 ? `Add ${files.length} photos` : 'Add photo'}
+            {busy ? t('Uploading {n}%', { n: Math.round(overall * 100) }) : files.length > 1 ? t('Add {n} photos', { n: files.length }) : t('Add photo')}
           </LoadingButton>
         </>
       }
@@ -239,8 +244,8 @@ function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[];
           className={cn('flex w-full flex-col items-center gap-1 rounded-2xl border-2 border-dashed px-4 py-7 text-center transition', dragging ? 'border-brand-500 bg-brand-50' : 'border-ink-200 bg-ink-50 hover:border-brand-400')}
         >
           <UploadCloud size={26} className="text-brand-600" />
-          <span className="text-[15px] font-semibold text-ink-800">Choose photos, or drop them here</span>
-          <span className="text-sm text-ink-500">Up to 60 at a time. Each is resized for you.</span>
+          <span className="text-[15px] font-semibold text-ink-800">{t('Choose photos, or drop them here')}</span>
+          <span className="text-sm text-ink-500">{t('Up to 60 at a time. Each is resized for you.')}</span>
         </button>
         <input
           ref={input}
@@ -263,7 +268,7 @@ function AddPhotos({ albums, centres, startAlbum, onClose }: { albums: string[];
                     <span className={cn('block h-full transition-[width]', progress[index] < 0 ? 'bg-accent-500' : 'bg-brand-600')} style={{ width: `${Math.abs(progress[index] ?? 0) * 100}%` }} />
                   </span>
                 ) : (
-                  <button type="button" aria-label={`Remove ${file.name}`} onClick={() => setFiles((current) => current.filter((_, at) => at !== index))} className="absolute right-1 top-1 grid h-7 w-7 place-items-center rounded-full bg-ink-900/70 text-white hover:bg-ink-900">
+                  <button type="button" aria-label={t('Remove {name}', { name: file.name })} onClick={() => setFiles((current) => current.filter((_, at) => at !== index))} className="absolute right-1 top-1 grid h-7 w-7 place-items-center rounded-full bg-ink-900/70 text-white hover:bg-ink-900">
                     <Trash2 size={14} />
                   </button>
                 )}
@@ -284,6 +289,7 @@ function FileThumb({ file }: { file: File }) {
 }
 
 function EditPhoto({ item, albums, centres, onClose }: { item: GalleryRow; albums: string[]; centres: Centre[]; onClose: () => void }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [caption, setCaption] = useState(item.caption);
@@ -295,29 +301,29 @@ function EditPhoto({ item, albums, centres, onClose }: { item: GalleryRow; album
     <Modal
       open
       onClose={onClose}
-      title="Edit photo"
+      title={t('Edit photo')}
       footer={
         <>
           <ConfirmButton
             className="mr-auto"
-            title="Remove this photo from the gallery?"
-            text="It disappears from the website's gallery and the photo is deleted."
-            confirmLabel="Remove photo"
+            title={t('Remove this photo from the gallery?')}
+            text={t("It disappears from the website's gallery and the photo is deleted.")}
+            confirmLabel={t('Remove photo')}
             onConfirm={async () => {
               const result = await deleteGalleryItemsAction([item.id]);
               if (!result.ok) {
-                toast.error(result.error);
+                toast.error(t(result.error));
                 return;
               }
-              toast.success('Photo removed');
+              toast.success(t('Photo removed'));
               router.refresh();
               onClose();
             }}
           >
-            <Trash2 size={17} /> Remove
+            <Trash2 size={17} /> {t('Remove')}
           </ConfirmButton>
           <Button variant="secondary" onClick={onClose}>
-            Cancel
+            {t('Cancel')}
           </Button>
           <LoadingButton
             loading={saving}
@@ -326,15 +332,15 @@ function EditPhoto({ item, albums, centres, onClose }: { item: GalleryRow; album
               const result = await updateGalleryItemAction(item.id, { caption, album, centreId });
               setSaving(false);
               if (!result.ok) {
-                toast.error(result.error);
+                toast.error(t(result.error));
                 return;
               }
-              toast.success('Saved');
+              toast.success(t('Saved'));
               router.refresh();
               onClose();
             }}
           >
-            Save
+            {t('Save')}
           </LoadingButton>
         </>
       }
@@ -342,8 +348,8 @@ function EditPhoto({ item, albums, centres, onClose }: { item: GalleryRow; album
       <div className="space-y-4">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={item.url} alt="" className="max-h-56 w-full rounded-2xl bg-ink-100 object-contain" />
-        <Field label="Caption" hint="A few words shown with the photo. Optional.">
-          <Input value={caption} maxLength={160} onChange={(event) => setCaption(event.target.value)} placeholder="Sack race on Sports Day" />
+        <Field label={t('Caption')} hint={t('A few words shown with the photo. Optional.')}>
+          <Input value={caption} maxLength={160} onChange={(event) => setCaption(event.target.value)} placeholder={t('Sack race on Sports Day')} />
         </Field>
         <AlbumField value={album} onChange={setAlbum} albums={albums} />
         <CentreField value={centreId} onChange={setCentreId} centres={centres} />

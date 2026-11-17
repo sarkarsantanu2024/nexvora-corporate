@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Pagination, SearchInput, UrlSelect } from '@/components/ui/client';
 import { Avatar, buttonClass, Card, EmptyState, LinkButton, PageHeader, StatusBadge, Table, Td, Th, Tr } from '@/components/ui/core';
 import { canManageCentre, requireCentre } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { batchOptions, listProgrammes } from '@/server/centre/children/batches';
 import { listStudents } from '@/server/centre/children/students';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = { title: 'Children' };
 type Search = { q?: string; batch?: string; programme?: string; status?: string; page?: string };
 
 export default async function StudentsPage({ searchParams }: { searchParams: Promise<Search> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const params = await searchParams;
   const [data, classes, programmes] = await Promise.all([
@@ -25,42 +27,42 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
   return (
     <>
       <PageHeader
-        title="Children"
-        description="Every child admitted at this centre. Open a child to see fees, attendance and family details."
+        title={t('Children')}
+        description={t('Every child admitted at this centre. Open a child to see fees, attendance and family details.')}
         actions={
           <>
             {canManageCentre(ctx.session) ? (
               <LinkButton href="/centre/students/promote" variant="secondary">
-                <ArrowUpFromLine size={17} /> Promote a class
+                <ArrowUpFromLine size={17} /> {t('Promote a class')}
               </LinkButton>
             ) : null}
             {/* A plain link: the browser downloads the file. */}
             <a href={`/centre/students/export${exportQuery ? `?${exportQuery}` : ''}`} className={buttonClass('secondary')}>
-              <Download size={17} /> CSV
+              <Download size={17} /> {t('CSV')}
             </a>
             <LinkButton href="/centre/students/new">
-              <UserPlus size={18} /> Admit a child
+              <UserPlus size={18} /> {t('Admit a child')}
             </LinkButton>
           </>
         }
       />
 
-      <div className="mb-4 flex flex-wrap items-center gap-2">
-        <SearchInput placeholder="Search name, admission no. or mobile" />
+      <div className="mb-4 filter-bar flex flex-wrap items-center gap-2">
+        <SearchInput placeholder={t('Search name, admission no. or mobile')} />
         <UrlSelect
           param="batch"
-          label="Class"
-          options={[{ value: '', label: 'All classes' }, ...classes.map((c) => ({ value: c.id, label: `${c.name}${c.isCurrentYear ? '' : ` (${c.yearName})`}` }))]}
+          label={t('Class')}
+          options={[{ value: '', label: t('All classes') }, ...classes.map((c) => ({ value: c.id, label: `${c.name}${c.isCurrentYear ? '' : ` (${c.yearName})`}` }))]}
         />
-        <UrlSelect param="programme" label="Programme" options={[{ value: '', label: 'All programmes' }, ...programmes.map((p) => ({ value: p.id, label: p.name }))]} />
+        <UrlSelect param="programme" label={t('Programme')} options={[{ value: '', label: t('All programmes') }, ...programmes.map((p) => ({ value: p.id, label: p.name }))]} />
         <UrlSelect
           param="status"
-          label="Status"
+          label={t('Status')}
           options={[
-            { value: '', label: 'Active' },
-            { value: 'left', label: 'Left' },
-            { value: 'passed_out', label: 'Passed out' },
-            { value: 'all', label: 'Everyone' },
+            { value: '', label: t('Active') },
+            { value: 'left', label: t('Left') },
+            { value: 'passed_out', label: t('Passed out') },
+            { value: 'all', label: t('Everyone') },
           ]}
         />
       </div>
@@ -69,12 +71,12 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
         {data.rows.length === 0 ? (
           <EmptyState
             icon={<GraduationCap size={26} />}
-            title={filtered ? 'No children match' : 'No children yet'}
-            text={filtered ? 'Try a different search, or clear the filters.' : 'Admit your first child to start taking attendance and raising fee bills.'}
+            title={filtered ? t('No children match') : t('No children yet')}
+            text={filtered ? t('Try a different search, or clear the filters.') : t('Admit your first child to start taking attendance and raising fee bills.')}
             action={
               filtered ? undefined : (
                 <LinkButton href="/centre/students/new">
-                  <UserPlus size={18} /> Admit a child
+                  <UserPlus size={18} /> {t('Admit a child')}
                 </LinkButton>
               )
             }
@@ -84,11 +86,11 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
             <Table>
               <thead>
                 <tr>
-                  <Th>Child</Th>
-                  <Th>Admission no.</Th>
-                  <Th>Class</Th>
-                  <Th>Guardian mobile</Th>
-                  <Th>Status</Th>
+                  <Th>{t('Child')}</Th>
+                  <Th>{t('Admission no.')}</Th>
+                  <Th>{t('Class')}</Th>
+                  <Th>{t('Guardian mobile')}</Th>
+                  <Th>{t('Status')}</Th>
                 </tr>
               </thead>
               <tbody>
@@ -102,19 +104,19 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
                     </Td>
                     <Td className="tabular whitespace-nowrap">{row.admissionNo}</Td>
                     <Td>
-                      {row.batchName ?? <span className="text-ink-400">No class</span>}
+                      {row.batchName ?? <span className="text-ink-400">{t('No class')}</span>}
                       {row.programmeName && row.batchName && !row.batchName.startsWith(row.programmeName) ? <p className="text-xs text-ink-500">{row.programmeName}</p> : null}
                     </Td>
                     <Td className="tabular whitespace-nowrap">{row.guardianPhone}</Td>
                     <Td>
-                      <StatusBadge status={row.status} />
+                      <StatusBadge t={t} status={row.status} />
                     </Td>
                   </Tr>
                 ))}
               </tbody>
             </Table>
             <p className="px-4 pt-3 text-sm text-ink-500">
-              {data.total} {data.total === 1 ? 'child' : 'children'}
+              {data.total === 1 ? t('{n} child', { n: data.total }) : t('{n} children', { n: data.total })}
             </p>
             <Pagination page={data.page} pageSize={data.pageSize} total={data.total} />
             <div className="h-3" />

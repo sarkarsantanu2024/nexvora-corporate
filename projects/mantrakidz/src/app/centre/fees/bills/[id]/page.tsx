@@ -8,6 +8,7 @@ import { ApiError } from '@/lib/api';
 import { canManageCentre, requireCentre } from '@/lib/auth';
 import { formatDate, todayIST } from '@/lib/date';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { getBill } from '@/server/centre/money/bills';
 import { METHOD_LABELS } from '@/server/centre/money/labels';
 import { hasPaymentDetails, paymentDetailsOf } from '@/server/centre/money/payment-info';
@@ -18,6 +19,7 @@ import { BillActions } from './bill-actions';
 export const metadata: Metadata = { title: 'Bill' };
 
 export default async function BillPage({ params }: { params: Promise<{ id: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { id } = await params;
   const bill = await getBill(ctx, id).catch((error) => {
@@ -36,14 +38,14 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
     <div className="animate-fade-up">
       <div className="no-print">
         <PageHeader
-          title={`Bill ${inv.invoiceNo}`}
+          title={t('Bill {invoiceNo}', { invoiceNo: inv.invoiceNo })}
           description={`${inv.title} · ${bill.studentName}`}
-          back={{ href: '/centre/fees', label: 'Fees' }}
+          back={{ href: '/centre/fees', label: t('Fees') }}
           actions={
             <>
               {open ? (
                 <LinkButton href={`/centre/fees/collect?student=${inv.studentId}`}>
-                  <IndianRupee size={18} /> Take payment
+                  <IndianRupee size={18} /> {t('Take payment')}
                 </LinkButton>
               ) : null}
               <PrintButton />
@@ -52,23 +54,23 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
           }
         />
       </div>
-      <PrintHeading centre={ctx.centre.name} title={`Bill ${inv.invoiceNo}`} sub={[ctx.centre.address, ctx.centre.area, ctx.centre.city].filter(Boolean).join(', ')} />
+      <PrintHeading centre={ctx.centre.name} title={t('Bill {invoiceNo}', { invoiceNo: inv.invoiceNo })} sub={[ctx.centre.address, ctx.centre.area, ctx.centre.city].filter(Boolean).join(', ')} />
 
       {inv.status === 'cancelled' ? (
         <Notice tone="amber" className="mb-4">
-          This bill is cancelled. It is not owed and is left out of every total.
+          {t('This bill is cancelled. It is not owed and is left out of every total.')}
         </Notice>
       ) : null}
 
       <div className="grid gap-5 lg:grid-cols-3">
         <Card className="lg:col-span-2 print-plain">
-          <CardHeader title="What it is for" action={<StatusBadge status={inv.status} label={inv.status === 'partial' ? 'Part paid' : undefined} />} />
+          <CardHeader title={t('What it is for')} action={<StatusBadge t={t} status={inv.status} label={inv.status === 'partial' ? t('Part paid') : undefined} />} />
           <div className="mt-4">
             <Table className="!min-w-0">
               <thead>
                 <tr>
-                  <Th>Item</Th>
-                  <Th className="text-right">Amount</Th>
+                  <Th>{t('Item')}</Th>
+                  <Th className="text-right">{t('Amount')}</Th>
                 </tr>
               </thead>
               <tbody>
@@ -81,25 +83,25 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
                 {inv.discount > 0 ? (
                   <>
                     <tr>
-                      <Td className="text-right text-ink-500">Subtotal</Td>
+                      <Td className="text-right text-ink-500">{t('Subtotal')}</Td>
                       <Td className="tabular text-right">{inr(inv.subtotal)}</Td>
                     </tr>
                     <tr>
-                      <Td className="text-right text-ink-500">Discount</Td>
+                      <Td className="text-right text-ink-500">{t('Discount')}</Td>
                       <Td className="tabular text-right">- {inr(inv.discount)}</Td>
                     </tr>
                   </>
                 ) : null}
                 <tr>
-                  <Td className="text-right font-semibold">Total</Td>
+                  <Td className="text-right font-semibold">{t('Total')}</Td>
                   <Td className="tabular text-right text-base font-bold">{inr(inv.total)}</Td>
                 </tr>
                 <tr>
-                  <Td className="text-right text-ink-500">Received</Td>
+                  <Td className="text-right text-ink-500">{t('Received')}</Td>
                   <Td className="tabular text-right">{inr(inv.paid)}</Td>
                 </tr>
                 <tr>
-                  <Td className="text-right font-semibold">Balance</Td>
+                  <Td className="text-right font-semibold">{t('Balance')}</Td>
                   <Td className={`tabular text-right text-base font-bold ${balance > 0 ? 'text-accent-600' : 'text-mint-700'}`}>{inr(balance)}</Td>
                 </tr>
               </tbody>
@@ -109,21 +111,21 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
         </Card>
 
         <Card className="print-plain">
-          <CardHeader title="Details" />
+          <CardHeader title={t('Details')} />
           <CardBody>
             <dl className="grid grid-cols-2 gap-4">
-              <Detail label="Child" className="col-span-2">
+              <Detail empty={t('Not added')} label={t('Child')} className="col-span-2">
                 <Link href={`/centre/students/${inv.studentId}`} className="font-semibold text-brand-700 hover:underline">
                   {bill.studentName}
                 </Link>
               </Detail>
-              <Detail label="Class">{bill.batchName}</Detail>
-              <Detail label="Admission no">{bill.admissionNo}</Detail>
-              <Detail label="Bill date">{formatDate(inv.issueDate)}</Detail>
-              <Detail label="Due date">
+              <Detail empty={t('Not added')} label={t('Class')}>{bill.batchName}</Detail>
+              <Detail empty={t('Not added')} label={t('Admission no')}>{bill.admissionNo}</Detail>
+              <Detail empty={t('Not added')} label={t('Bill date')}>{formatDate(inv.issueDate)}</Detail>
+              <Detail empty={t('Not added')} label={t('Due date')}>
                 <span className={late ? 'font-semibold text-accent-600' : ''}>{formatDate(inv.dueDate)}</span>
               </Detail>
-              <Detail label="Mobile">{bill.guardianPhone}</Detail>
+              <Detail empty={t('Not added')} label={t('Mobile')}>{bill.guardianPhone}</Detail>
             </dl>
           </CardBody>
         </Card>
@@ -131,7 +133,7 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
 
       {open && hasPaymentDetails(pay) ? (
         <Card className="mt-5 print-plain">
-          <CardHeader title="How to pay" description={`${inr(balance)} to pay. After paying, send the screenshot to the centre on WhatsApp.`} />
+          <CardHeader title={t('How to pay')} description={t('{balance} to pay. After paying, send the screenshot to the centre on WhatsApp.', { balance: inr(balance) })} />
           <CardBody>
             <PayInfo details={pay} amount={balance} note={inv.invoiceNo} centreName={ctx.centre.name} upiLink="without-qr" />
           </CardBody>
@@ -139,18 +141,18 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
       ) : null}
 
       <Card className="mt-5 overflow-hidden print-plain">
-        <CardHeader title="Receipts against this bill" />
+        <CardHeader title={t('Receipts against this bill')} />
         <div className="mt-4">
           {bill.receipts.length ? (
             <Table>
               <thead>
                 <tr>
-                  <Th>Receipt</Th>
-                  <Th>Date</Th>
-                  <Th>Method</Th>
-                  <Th>Reference</Th>
-                  <Th>Received by</Th>
-                  <Th className="text-right">Amount</Th>
+                  <Th>{t('Receipt')}</Th>
+                  <Th>{t('Date')}</Th>
+                  <Th>{t('Method')}</Th>
+                  <Th>{t('Reference')}</Th>
+                  <Th>{t('Received by')}</Th>
+                  <Th className="text-right">{t('Amount')}</Th>
                 </tr>
               </thead>
               <tbody>
@@ -162,12 +164,12 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
                       </Link>
                       {r.voidedAt ? (
                         <Badge tone="red" className="ml-2" title={r.voidReason}>
-                          Void
+                          {t('Void')}
                         </Badge>
                       ) : null}
                     </Td>
                     <Td className="whitespace-nowrap">{formatDate(r.paidOn)}</Td>
-                    <Td>{METHOD_LABELS[r.method]}</Td>
+                    <Td>{t(METHOD_LABELS[r.method])}</Td>
                     <Td>{r.reference}</Td>
                     <Td>{r.receivedBy}</Td>
                     <Td className={`tabular text-right font-semibold ${r.voidedAt ? 'line-through' : ''}`}>{inr(r.amount)}</Td>
@@ -176,7 +178,7 @@ export default async function BillPage({ params }: { params: Promise<{ id: strin
               </tbody>
             </Table>
           ) : (
-            <p className="px-5 pb-5 text-sm text-ink-500">Nothing received on this bill yet.</p>
+            <p className="px-5 pb-5 text-sm text-ink-500">{t('Nothing received on this bill yet.')}</p>
           )}
         </div>
       </Card>

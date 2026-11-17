@@ -2,40 +2,49 @@
 import { Download, Mail, MessageCircle, Phone } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { buttonClass } from '@/components/ui/core';
+import type { RoyaltyType } from '@/db/schema';
+import type { Translate } from '@/i18n/ui';
 import { cn } from '@/lib/cn';
+import { getT } from '@/lib/t';
 import { telLink, waLink } from '@/lib/wa';
 
 /** Call, WhatsApp and email as icon buttons. Each shows only when there is something to open. */
-export function ContactLinks({ phone, email, waText, size = 'sm', labels }: { phone?: string | null; email?: string | null; waText?: string; size?: 'sm' | 'md'; labels?: boolean }) {
+export async function ContactLinks({ phone, email, waText, size = 'sm', labels }: { phone?: string | null; email?: string | null; waText?: string; size?: 'sm' | 'md'; labels?: boolean }) {
+  const t = await getT();
   const tel = telLink(phone);
   const wa = waLink(phone, waText);
   const cls = buttonClass('secondary', size, labels ? '' : 'w-9 px-0');
   return (
     <span className="no-print inline-flex items-center gap-1.5">
       {tel ? (
-        <a href={tel} className={cls} aria-label="Call" title="Call">
-          <Phone size={16} /> {labels ? 'Call' : null}
+        <a href={tel} className={cls} aria-label={t('Call')} title={t('Call')}>
+          <Phone size={16} /> {labels ? t('Call') : null}
         </a>
       ) : null}
       {wa ? (
-        <a href={wa} target="_blank" rel="noreferrer" className={cn(cls, 'text-mint-700')} aria-label="WhatsApp" title="WhatsApp">
-          <MessageCircle size={16} /> {labels ? 'WhatsApp' : null}
+        <a href={wa} target="_blank" rel="noreferrer" className={cn(cls, 'text-mint-700')} aria-label={t('WhatsApp')} title={t('WhatsApp')}>
+          <MessageCircle size={16} /> {labels ? t('WhatsApp') : null}
         </a>
       ) : null}
       {email ? (
-        <a href={`mailto:${email}`} className={cls} aria-label="Email" title="Email">
-          <Mail size={16} /> {labels ? 'Email' : null}
+        <a href={`mailto:${email}`} className={cls} aria-label={t('Email')} title={t('Email')}>
+          <Mail size={16} /> {labels ? t('Email') : null}
         </a>
       ) : null}
     </span>
   );
 }
 
+/** "12% of collection" or "₹5,000 a month", in the person's language. */
+export const royaltyRate = (t: Translate, type: RoyaltyType, value: number) =>
+  type === 'fixed' ? t('{amount} a month', { amount: `₹${value.toLocaleString('en-IN')}` }) : t('{value}% of collection', { value });
+
 /** A plain download link styled as a button; the browser saves the CSV. */
-export function ExportLink({ href, label = 'Export CSV' }: { href: string; label?: string }) {
+export async function ExportLink({ href, label }: { href: string; label?: string }) {
+  const t = await getT();
   return (
     <a href={href} className={buttonClass('secondary', 'md', 'no-print')}>
-      <Download size={18} /> {label}
+      <Download size={18} /> {label ?? t('Export CSV')}
     </a>
   );
 }
@@ -57,7 +66,7 @@ export async function readSearch(searchParams: Search): Promise<Record<string, s
 
 /** The row of filters above a list. */
 export function FilterBar({ children }: { children: ReactNode }) {
-  return <div className="no-print mb-4 flex flex-wrap items-center gap-2">{children}</div>;
+  return <div className="no-print mb-4 filter-bar flex flex-wrap items-center gap-2">{children}</div>;
 }
 
 /** A right-aligned number cell. */

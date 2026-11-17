@@ -5,7 +5,7 @@
  * English lives at the plain address (/about); Bengali and Hindi live under
  * a prefix (/bn/about, /hi/about). The middleware strips the prefix and
  * passes the language on in a request header, so there is ONE set of pages.
- * The dashboards are English only.
+ * The dashboards keep each person's language in a cookie instead (src/i18n/ui.ts).
  */
 export const LANGS = ['en', 'bn', 'hi'] as const;
 export type Lang = (typeof LANGS)[number];

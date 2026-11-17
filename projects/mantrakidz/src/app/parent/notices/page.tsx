@@ -3,17 +3,19 @@ import type { Metadata } from 'next';
 import { Badge, Card, EmptyState, PageHeader } from '@/components/ui/core';
 import { requireSession } from '@/lib/auth';
 import { formatDate } from '@/lib/date';
+import { getT } from '@/lib/t';
 import { listNotices } from '@/server/parent/service';
 
 export const metadata: Metadata = { title: 'Notices' };
 
 export default async function ParentNotices() {
+  const t = await getT();
   const session = await requireSession(['parent']);
   const notices = await listNotices(session);
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title="Notices" description="From your child's centre and from head office." />
+      <PageHeader title={t('Notices')} description={t("From your child's centre and from head office.")} />
       <div className="mx-auto max-w-2xl space-y-3">
         {notices.length ? (
           notices.map((notice) => (
@@ -21,10 +23,10 @@ export default async function ParentNotices() {
               <div className="flex flex-wrap items-center gap-2">
                 {notice.pinned ? (
                   <Badge tone="brand">
-                    <Pin size={12} /> Important
+                    <Pin size={12} /> {t('Important')}
                   </Badge>
                 ) : null}
-                <Badge tone={notice.centreId ? 'neutral' : 'violet'}>{notice.centreId ? notice.centreName : 'Head office'}</Badge>
+                <Badge tone={notice.centreId ? 'neutral' : 'violet'}>{notice.centreId ? notice.centreName : t('Head office')}</Badge>
                 <span className="text-xs text-ink-500">{formatDate(notice.publishOn)}</span>
               </div>
               <h2 className="mt-2 text-lg font-bold text-ink-900">{notice.title}</h2>
@@ -38,7 +40,7 @@ export default async function ParentNotices() {
           ))
         ) : (
           <Card>
-            <EmptyState icon={<Megaphone size={26} />} title="No notices right now" text="Holidays, meetings and events from the centre show here." />
+            <EmptyState icon={<Megaphone size={26} />} title={t('No notices right now')} text={t('Holidays, meetings and events from the centre show here.')} />
           </Card>
         )}
       </div>

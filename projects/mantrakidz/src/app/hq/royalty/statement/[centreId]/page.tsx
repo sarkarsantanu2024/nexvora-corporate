@@ -4,6 +4,7 @@ import { PrintButton } from '@/components/ui/client';
 import { PageHeader } from '@/components/ui/core';
 import { ApiError } from '@/lib/api';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { uuid } from '@/lib/validators';
 import { royaltyStatement } from '@/server/hq/royalty';
 import { isAdmin } from '@/server/hq/shared';
@@ -13,6 +14,7 @@ import { StatementView } from '../../statement-view';
 export const metadata: Metadata = { title: 'Royalty statement' };
 
 export default async function RoyaltyStatementPage({ params }: { params: Promise<{ centreId: string }> }) {
+  const t = await getT();
   const session = await requireSession(HQ_ROLES);
   const { centreId } = await params;
   if (!uuid.safeParse(centreId).success) notFound();
@@ -24,9 +26,9 @@ export default async function RoyaltyStatementPage({ params }: { params: Promise
   return (
     <>
       <PageHeader
-        back={{ href: '/hq/royalty', label: 'Royalty' }}
-        title={`Royalty statement, ${data.centre.name}`}
-        description={`${data.centre.code} · ${data.centre.ownerName || 'Owner not added'}`}
+        back={{ href: '/hq/royalty', label: t('Royalty') }}
+        title={t('Royalty statement, {name}', { name: data.centre.name })}
+        description={`${data.centre.code} · ${data.centre.ownerName || t('Owner not added')}`}
         actions={
           <>
             <ContactLinks phone={data.centre.ownerPhone} email={data.centre.ownerEmail} size="md" />

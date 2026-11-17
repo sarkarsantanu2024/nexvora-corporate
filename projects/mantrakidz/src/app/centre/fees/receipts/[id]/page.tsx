@@ -5,6 +5,7 @@ import { PrintButton } from '@/components/ui/client';
 import { Card, LinkButton, Notice, PageHeader } from '@/components/ui/core';
 import { canManageCentre, requireCentre } from '@/lib/auth';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { waLink } from '@/lib/wa';
 import { getReceipt, receiptMessage } from '@/server/centre/money/payments';
 import { WhatsAppLink } from '../../pickers';
@@ -14,6 +15,7 @@ import { VoidButton } from './void-button';
 export const metadata: Metadata = { title: 'Receipt' };
 
 export default async function ReceiptPage({ params }: { params: Promise<{ id: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { id } = await params;
   const receipt = await getReceipt(ctx, id);
@@ -25,22 +27,22 @@ export default async function ReceiptPage({ params }: { params: Promise<{ id: st
     <div className="animate-fade-up">
       <div className="no-print">
         <PageHeader
-          title="Receipt"
+          title={t('Receipt')}
           description={`${receipt.student.name} · ${inr(receipt.amount)}`}
-          back={{ href: '/centre/fees', label: 'Fees' }}
+          back={{ href: '/centre/fees', label: t('Fees') }}
           actions={
             <>
               <PrintButton />
-              {receipt.voided ? null : <WhatsAppLink href={waLink(receipt.student.guardianPhone, receiptMessage(receipt))} label="Send on WhatsApp" size="md" />}
+              {receipt.voided ? null : <WhatsAppLink href={waLink(receipt.student.guardianPhone, receiptMessage(receipt))} label={t('Send on WhatsApp')} size="md" />}
               <LinkButton href="/centre/fees/collect" variant="secondary">
-                Next payment
+                {t('Next payment')}
               </LinkButton>
             </>
           }
         />
         {receipt.voided ? (
           <Notice tone="red" className="mx-auto mb-4 max-w-2xl">
-            This receipt is void. It is kept on record and left out of every total.
+            {t('This receipt is void. It is kept on record and left out of every total.')}
           </Notice>
         ) : null}
       </div>
@@ -49,14 +51,14 @@ export default async function ReceiptPage({ params }: { params: Promise<{ id: st
 
       <div className="no-print mx-auto mt-4 flex max-w-2xl flex-wrap items-center justify-between gap-3 text-sm">
         <Link href={`/centre/fees?student=${receipt.student.id}`} className="font-semibold text-brand-700 hover:underline">
-          All bills of {receipt.student.name}
+          {t('All bills of {name}', { name: receipt.student.name })}
         </Link>
       </div>
 
       {manager && live.length ? (
         <Card className="no-print mx-auto mt-4 max-w-2xl p-4">
-          <p className="text-sm font-bold text-ink-900">Entered by mistake?</p>
-          <p className="mt-0.5 text-sm text-ink-500">Void the receipt. It stays on record marked void, and the bill goes back to unpaid.</p>
+          <p className="text-sm font-bold text-ink-900">{t('Entered by mistake?')}</p>
+          <p className="mt-0.5 text-sm text-ink-500">{t('Void the receipt. It stays on record marked void, and the bill goes back to unpaid.')}</p>
           <ul className="mt-3 space-y-2">
             {live.map((line) => (
               <li key={line.id} className="flex flex-wrap items-center justify-between gap-2">

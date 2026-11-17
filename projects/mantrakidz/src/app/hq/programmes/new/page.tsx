@@ -1,18 +1,20 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/core';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { listProgrammes } from '@/server/hq/admin';
 import { EMPTY_WORDS, ProgrammeForm } from '../programme-form';
 
 export const metadata: Metadata = { title: 'Add programme' };
 
 export default async function NewProgrammePage() {
+  const t = await getT();
   await requireSession(HQ_ROLES);
   const existing = await listProgrammes();
   const lastSort = existing.reduce((max, { row }) => Math.max(max, row.sort), 0);
   return (
     <>
-      <PageHeader back={{ href: '/hq/programmes', label: 'Programmes' }} title="Add a programme" />
+      <PageHeader back={{ href: '/hq/programmes', label: t('Programmes') }} title={t('Add a programme')} />
       <ProgrammeForm
         id={null}
         canDelete={false}

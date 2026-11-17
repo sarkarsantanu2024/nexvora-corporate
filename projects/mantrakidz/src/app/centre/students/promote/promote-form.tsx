@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { LoadingButton, Modal, useToast } from '@/components/ui/client';
 import { Avatar, Button, Card, CardBody, CardHeader, Field, Input, Notice, Select } from '@/components/ui/core';
+import { rich } from '@/i18n/rich';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { ageLabel } from '@/lib/date';
 import { promoteStudentsAction } from '@/server/centre/children/actions';
@@ -13,6 +15,7 @@ type Child = { id: string; name: string; admissionNo: string; dob: string | null
 type Target = { id: string; name: string; programmeName: string; yearName: string; capacity: number; filled: number };
 
 export function PromoteForm({ from, students, targets, today }: { from: { id: string; name: string; yearName: string }; students: Child[]; targets: Target[]; today: string }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [ticked, setTicked] = useState<Set<string>>(() => new Set(students.map((s) => s.id)));
@@ -40,8 +43,8 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
     setSaving(true);
     const result = await promoteStudentsAction({ fromBatchId: from.id, studentIds: moving.map((s) => s.id), mode, toBatchId: mode === 'move' ? toBatchId : null, leftOn });
     setSaving(false);
-    if (!result.ok) return toast.error(result.error);
-    toast.success(mode === 'move' ? `${result.data.moved} moved to ${result.data.toName}` : `${result.data.moved} marked as passed out`);
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(mode === 'move' ? t('{moved} moved to {toName}', { moved: result.data.moved, toName: result.data.toName }) : t('{moved} marked as passed out', { moved: result.data.moved }));
     router.push(mode === 'move' ? `/centre/students?batch=${toBatchId}` : '/centre/students?status=passed_out');
     router.refresh();
   }
@@ -50,11 +53,11 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
     <>
       <Card>
         <CardHeader
-          title={`Children in ${from.name}`}
-          description={`${moving.length} ticked, ${staying} staying`}
+          title={t('Children in {name}', { name: from.name })}
+          description={t('{n} ticked, {staying} staying', { n: moving.length, staying })}
           action={
             <Button variant="ghost" size="sm" onClick={() => setTicked(moving.length === students.length ? new Set() : new Set(students.map((s) => s.id)))}>
-              {moving.length === students.length ? 'Untick all' : 'Tick all'}
+              {moving.length === students.length ? t('Untick all') : t('Tick all')}
             </Button>
           }
         />
@@ -78,13 +81,13 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
       </Card>
 
       <Card>
-        <CardHeader title="Where do the ticked children go" />
+        <CardHeader title={t('Where do the ticked children go')} />
         <CardBody className="space-y-4">
           <div className="grid gap-2 sm:grid-cols-2">
             {(
               [
-                { value: 'move', title: 'Move to another class', text: 'They go up to the class you choose.' },
-                { value: 'pass_out', title: 'Passed out', text: 'For UKG children leaving for big school.' },
+                { value: 'move', title: t('Move to another class'), text: t('They go up to the class you choose.') },
+                { value: 'pass_out', title: t('Passed out'), text: t('For UKG children leaving for big school.') },
               ] as const
             ).map((option) => (
               <label
@@ -101,25 +104,25 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
           </div>
 
           {mode === 'move' ? (
-            <Field label="Move to" required hint="The class decides the programme and the academic year.">
+            <Field label={t('Move to')} required hint={t('The class decides the programme and the academic year.')}>
               <Select value={toBatchId} onChange={(event) => setToBatchId(event.target.value)}>
-                <option value="">Choose a class</option>
-                {targets.map((t) => (
-                  <option key={t.id} value={t.id}>
-                    {t.name} ({t.programmeName}, {t.yearName}): {t.filled} of {t.capacity} seats filled
+                <option value="">{t('Choose a class')}</option>
+                {targets.map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {t('{name} ({programmeName}, {yearName}): {filled} of {capacity} seats filled', { name: c.name, programmeName: c.programmeName, yearName: c.yearName, filled: c.filled, capacity: c.capacity })}
                   </option>
                 ))}
               </Select>
             </Field>
           ) : (
-            <Field label="Last day at the centre" required>
+            <Field label={t('Last day at the centre')} required>
               <Input type="date" value={leftOn} max={today} onChange={(event) => setLeftOn(event.target.value)} />
             </Field>
           )}
 
           <div className="flex justify-end">
             <Button disabled={!ready} onClick={() => setPreview(true)}>
-              Preview
+              {t('Preview')}
             </Button>
           </div>
         </CardBody>
@@ -128,15 +131,15 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
       <Modal
         open={preview}
         onClose={() => !saving && setPreview(false)}
-        title="Check before applying"
+        title={t('Check before applying')}
         size="lg"
         footer={
           <>
             <Button variant="secondary" onClick={() => setPreview(false)} disabled={saving}>
-              Go back
+              {t('Go back')}
             </Button>
             <LoadingButton loading={saving} onClick={apply}>
-              {mode === 'move' ? `Move ${moving.length} ${moving.length === 1 ? 'child' : 'children'}` : `Mark ${moving.length} as passed out`}
+              {mode === 'move' ? (moving.length === 1 ? t('Move {n} child', { n: moving.length }) : t('Move {n} children', { n: moving.length })) : t('Mark {n} as passed out', { n: moving.length })}
             </LoadingButton>
           </>
         }
@@ -144,19 +147,25 @@ export function PromoteForm({ from, students, targets, today }: { from: { id: st
         <p className="text-[15px] text-ink-700">
           {mode === 'move' ? (
             <>
-              <strong>{moving.length}</strong> {moving.length === 1 ? 'child moves' : 'children move'} from <strong>{from.name}</strong> ({from.yearName}) to{' '}
-              <strong>{target?.name}</strong> ({target?.programmeName}, {target?.yearName}).
+              {rich(moving.length === 1 ? t('{n} child moves from {from} ({fromYear}) to {to} ({toProgramme}, {toYear}).') : t('{n} children move from {from} ({fromYear}) to {to} ({toProgramme}, {toYear}).'), {
+                n: <strong>{moving.length}</strong>,
+                from: <strong>{from.name}</strong>,
+                fromYear: from.yearName,
+                to: <strong>{target?.name}</strong>,
+                toProgramme: target?.programmeName,
+                toYear: target?.yearName,
+              })}
             </>
           ) : (
             <>
-              <strong>{moving.length}</strong> {moving.length === 1 ? 'child' : 'children'} of <strong>{from.name}</strong> will be marked as passed out. They stay in your records but leave attendance and monthly bills.
+              {rich(moving.length === 1 ? t('{n} child of {from} will be marked as passed out. They stay in your records but leave attendance and monthly bills.') : t('{n} children of {from} will be marked as passed out. They stay in your records but leave attendance and monthly bills.'), { n: <strong>{moving.length}</strong>, from: <strong>{from.name}</strong> })}
             </>
           )}{' '}
-          {staying > 0 ? `${staying} not ticked ${staying === 1 ? 'stays' : 'stay'} in ${from.name}.` : 'Nobody stays behind.'}
+          {staying > 0 ? (staying === 1 ? t('{n} not ticked stays in {name}.', { n: staying, name: from.name }) : t('{n} not ticked stay in {name}.', { n: staying, name: from.name })) : t('Nobody stays behind.')}
         </p>
         {overflow > 0 && target ? (
           <Notice tone="amber" className="mt-3">
-            {target.name} has {target.capacity} seats and already holds {target.filled}. This move puts it {overflow} over.
+            {t('{name} has {capacity} seats and already holds {filled}. This move puts it {overflow} over.', { name: target.name, capacity: target.capacity, filled: target.filled, overflow })}
           </Notice>
         ) : null}
         <ul className="mt-4 grid gap-x-6 gap-y-1.5 text-sm text-ink-800 sm:grid-cols-2">

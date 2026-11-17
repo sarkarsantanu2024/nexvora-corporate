@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { LoadingButton, Modal, useToast } from '@/components/ui/client';
 import { Avatar, Button, Notice } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { formatDate, formatDateTime } from '@/lib/date';
 import { markHolidayAction, saveAttendanceAction, saveStaffAttendanceAction } from '@/server/centre/children/actions';
@@ -22,6 +23,7 @@ type Person = { id: string; name: string; sub: string; photo?: string; status: M
 
 /** Three large buttons per person; the whole row is easy to hit with a thumb. */
 function MarkList({ people, marks, onMark }: { people: Person[]; marks: Record<string, Mark | null>; onMark: (id: string, mark: Mark) => void }) {
+  const t = useT();
   return (
     <ul className="divide-y divide-ink-100">
       {people.map((person) => (
@@ -33,7 +35,7 @@ function MarkList({ people, marks, onMark }: { people: Person[]; marks: Record<s
               <p className="tabular truncate text-xs text-ink-500">{person.sub}</p>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 sm:w-[19rem]" role="group" aria-label={`Attendance for ${person.name}`}>
+          <div className="grid grid-cols-3 gap-2 sm:w-[19rem]" role="group" aria-label={t('Attendance for {name}', { name: person.name })}>
             {MARKS.map((mark) => (
               <button
                 key={mark}
@@ -45,7 +47,7 @@ function MarkList({ people, marks, onMark }: { people: Person[]; marks: Record<s
                   marks[person.id] === mark ? ON[mark] : 'border-ink-200 bg-white text-ink-600 hover:border-ink-300',
                 )}
               >
-                {LABEL[mark]}
+                {t(LABEL[mark])}
               </button>
             ))}
           </div>
@@ -71,21 +73,23 @@ function useMarks(people: Person[]) {
 }
 
 function Tally({ tally }: { tally: { present: number; absent: number; leave: number; unmarked: number } }) {
+  const t = useT();
   return (
     <p className="tabular flex flex-wrap gap-x-3 gap-y-0.5 text-sm font-semibold">
-      <span className="text-mint-700">{tally.present} present</span>
-      <span className="text-accent-700">{tally.absent} absent</span>
-      <span className="text-sun-700">{tally.leave} leave</span>
-      {tally.unmarked ? <span className="text-ink-500">{tally.unmarked} not marked</span> : null}
+      <span className="text-mint-700">{t('{present} present', { present: tally.present })}</span>
+      <span className="text-accent-700">{t('{absent} absent', { absent: tally.absent })}</span>
+      <span className="text-sun-700">{t('{leave} leave', { leave: tally.leave })}</span>
+      {tally.unmarked ? <span className="text-ink-500">{t('{unmarked} not marked', { unmarked: tally.unmarked })}</span> : null}
     </p>
   );
 }
 
 function MarkedBy({ by, at }: { by: string; at: Date | null }) {
-  if (!at) return <p className="text-sm text-ink-500">Not marked yet.</p>;
+  const t = useT();
+  if (!at) return <p className="text-sm text-ink-500">{t('Not marked yet.')}</p>;
   return (
     <p className="text-sm text-ink-500">
-      Last saved by {by || 'someone'}, {formatDateTime(at)}
+      {t('Last saved by {name}, {at}', { name: by || t('someone'), at: formatDateTime(at) })}
     </p>
   );
 }
@@ -105,6 +109,7 @@ export function MarkSheet({
   markedAt: Date | null;
   isHoliday: boolean;
 }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const { marks, tally, dirty, mark, allPresent } = useMarks(people);
@@ -117,8 +122,8 @@ export function MarkSheet({
     setSaving(true);
     const result = await saveAttendanceAction({ day, batchId: batch.id, marks: list });
     setSaving(false);
-    if (!result.ok) return toast.error(result.error);
-    toast.success(`Attendance saved for ${batch.name}`);
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(t('Attendance saved for {name}', { name: batch.name }));
     router.refresh();
   }
 
@@ -126,8 +131,8 @@ export function MarkSheet({
     setHolidayBusy(scope);
     const result = await markHolidayAction({ day, batchId: scope === 'class' ? batch.id : null });
     setHolidayBusy(null);
-    if (!result.ok) return toast.error(result.error);
-    toast.success(scope === 'class' ? `Holiday marked for ${batch.name}` : 'Holiday marked for the whole centre');
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(scope === 'class' ? t('Holiday marked for {name}', { name: batch.name }) : t('Holiday marked for the whole centre'));
     setHolidayOpen(false);
     router.refresh();
   }
@@ -143,15 +148,15 @@ export function MarkSheet({
         </div>
         <div className="flex flex-wrap gap-2">
           <Button variant="secondary" size="sm" onClick={() => setHolidayOpen(true)}>
-            <CalendarOff size={16} /> Holiday
+            <CalendarOff size={16} /> {t('Holiday')}
           </Button>
           <Button variant="secondary" size="sm" onClick={allPresent}>
-            <Check size={16} /> Mark all present
+            <Check size={16} /> {t('Mark all present')}
           </Button>
         </div>
       </div>
       {isHoliday ? (
-        <Notice className="mx-4 mb-3 sm:mx-5">This day is marked as a holiday for this class. To change that, mark the children below and save.</Notice>
+        <Notice className="mx-4 mb-3 sm:mx-5">{t('This day is marked as a holiday for this class. To change that, mark the children below and save.')}</Notice>
       ) : null}
       <div className="border-t border-ink-100">
         <MarkList people={people} marks={marks} onMark={mark} />
@@ -159,17 +164,17 @@ export function MarkSheet({
       <div className="sticky bottom-0 flex flex-wrap items-center justify-between gap-3 rounded-b-2xl border-t border-ink-200 bg-white/95 px-4 py-3 backdrop-blur sm:px-5">
         <Tally tally={tally} />
         <LoadingButton loading={saving} disabled={!dirty || tally.unmarked === people.length} onClick={save}>
-          Save attendance
+          {t('Save attendance')}
         </LoadingButton>
       </div>
 
-      <Modal open={holidayOpen} onClose={() => !holidayBusy && setHolidayOpen(false)} title={`Holiday on ${formatDate(day)}`} description="Children are marked H for the day. It does not count as present or absent." size="sm">
+      <Modal open={holidayOpen} onClose={() => !holidayBusy && setHolidayOpen(false)} title={t('Holiday on {day}', { day: formatDate(day) })} description={t('Children are marked H for the day. It does not count as present or absent.')} size="sm">
         <div className="grid gap-2">
           <LoadingButton variant="secondary" loading={holidayBusy === 'class'} disabled={holidayBusy !== null} onClick={() => holiday('class')}>
-            Only {batch.name}
+            {t('Only {name}', { name: batch.name })}
           </LoadingButton>
           <LoadingButton loading={holidayBusy === 'centre'} disabled={holidayBusy !== null} onClick={() => holiday('centre')}>
-            The whole centre
+            {t('The whole centre')}
           </LoadingButton>
         </div>
       </Modal>
@@ -178,6 +183,7 @@ export function MarkSheet({
 }
 
 export function StaffSheet({ day, people, markedBy, markedAt }: { day: string; people: Person[]; markedBy: string; markedAt: Date | null }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const { marks, tally, dirty, mark, allPresent } = useMarks(people);
@@ -188,8 +194,8 @@ export function StaffSheet({ day, people, markedBy, markedAt }: { day: string; p
     setSaving(true);
     const result = await saveStaffAttendanceAction({ day, marks: list });
     setSaving(false);
-    if (!result.ok) return toast.error(result.error);
-    toast.success('Staff attendance saved');
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(t('Staff attendance saved'));
     router.refresh();
   }
 
@@ -197,11 +203,11 @@ export function StaffSheet({ day, people, markedBy, markedAt }: { day: string; p
     <>
       <div className="flex flex-wrap items-center justify-between gap-3 px-4 pb-3 pt-4 sm:px-5">
         <div>
-          <h2 className="text-base font-bold text-ink-900">Staff, {formatDate(day)}</h2>
+          <h2 className="text-base font-bold text-ink-900">{t('Staff, {day}', { day: formatDate(day) })}</h2>
           <MarkedBy by={markedBy} at={markedAt} />
         </div>
         <Button variant="secondary" size="sm" onClick={allPresent}>
-          <Check size={16} /> Mark all present
+          <Check size={16} /> {t('Mark all present')}
         </Button>
       </div>
       <div className="border-t border-ink-100">
@@ -210,7 +216,7 @@ export function StaffSheet({ day, people, markedBy, markedAt }: { day: string; p
       <div className="sticky bottom-0 flex flex-wrap items-center justify-between gap-3 rounded-b-2xl border-t border-ink-200 bg-white/95 px-4 py-3 backdrop-blur sm:px-5">
         <Tally tally={tally} />
         <LoadingButton loading={saving} disabled={!dirty || tally.unmarked === people.length} onClick={save}>
-          Save staff attendance
+          {t('Save staff attendance')}
         </LoadingButton>
       </div>
     </>

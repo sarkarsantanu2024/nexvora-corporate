@@ -6,6 +6,7 @@ import type { AttendanceStatus } from '@/db/schema';
 import { cn } from '@/lib/cn';
 import { requireSession } from '@/lib/auth';
 import { addMonths, currentPeriod, periodLabel, todayIST, weekday } from '@/lib/date';
+import { getT } from '@/lib/t';
 import { listChildren, monthAttendance } from '@/server/parent/service';
 
 export const metadata: Metadata = { title: 'Attendance' };
@@ -19,6 +20,7 @@ const MARK: Record<AttendanceStatus, { label: string; cell: string; dot: string 
 const WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export default async function ParentAttendance({ searchParams }: { searchParams: Promise<{ child?: string; month?: string }> }) {
+  const t = await getT();
   const session = await requireSession(['parent']);
   const params = await searchParams;
   const children = await listChildren(session);
@@ -26,9 +28,9 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
   if (!children.length) {
     return (
       <div className="animate-fade-up">
-        <PageHeader title="Attendance" />
+        <PageHeader title={t('Attendance')} />
         <Card>
-          <EmptyState icon={<CalendarCheck size={26} />} title="No child is linked to this login yet" text="Please ask the centre office to link your child to your mobile number." />
+          <EmptyState icon={<CalendarCheck size={26} />} title={t('No child is linked to this login yet')} text={t('Please ask the centre office to link your child to your mobile number.')} />
         </Card>
       </div>
     );
@@ -46,7 +48,7 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
 
   return (
     <div className="animate-fade-up">
-      <PageHeader title="Attendance" description="Each school day as the class teacher marked it." />
+      <PageHeader title={t('Attendance')} description={t('Each school day as the class teacher marked it.')} />
 
       {children.length > 1 ? (
         <div className="mb-4 flex flex-wrap gap-2">
@@ -60,12 +62,12 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
 
       <Card className="mx-auto max-w-xl overflow-hidden">
         <div className="flex items-center justify-between gap-2 border-b border-ink-100 px-3 py-3">
-          <Link href={link(prev)} aria-label="Previous month" className={buttonClass('ghost', 'sm')}>
+          <Link href={link(prev)} aria-label={t('Previous month')} className={buttonClass('ghost', 'sm')}>
             <ChevronLeft size={18} />
           </Link>
           <p className="font-display text-lg font-bold text-ink-900">{periodLabel(data.period)}</p>
           {next <= currentPeriod() ? (
-            <Link href={link(next)} aria-label="Next month" className={buttonClass('ghost', 'sm')}>
+            <Link href={link(next)} aria-label={t('Next month')} className={buttonClass('ghost', 'sm')}>
               <ChevronRight size={18} />
             </Link>
           ) : (
@@ -78,20 +80,20 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
             <div className="mb-4">
               <div className="flex items-baseline justify-between">
                 <p className="text-sm font-medium text-ink-600">
-                  Present {data.counts.present} of {data.marked} school days
+                  {t('Present {present} of {marked} school days', { present: data.counts.present, marked: data.marked })}
                 </p>
                 <p className="tabular font-display text-2xl font-bold text-ink-900">{data.percent}%</p>
               </div>
               <Meter value={data.percent} tone={data.percent >= 85 ? 'green' : data.percent >= 70 ? 'amber' : 'red'} className="mt-1.5" />
             </div>
           ) : (
-            <p className="mb-4 text-sm text-ink-500">No attendance was marked for {child.name} in this month.</p>
+            <p className="mb-4 text-sm text-ink-500">{t('No attendance was marked for {name} in this month.', { name: child.name })}</p>
           )}
 
           <div className="grid grid-cols-7 gap-1.5 text-center">
             {WEEK.map((name) => (
               <p key={name} className="pb-1 text-xs font-semibold uppercase text-ink-400">
-                {name}
+                {t(name)}
               </p>
             ))}
             {Array.from({ length: blanks }, (_, i) => (
@@ -103,7 +105,7 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
               return (
                 <div
                   key={day}
-                  title={mark ? MARK[mark].label : undefined}
+                  title={mark ? t(MARK[mark].label) : undefined}
                   className={cn(
                     'tabular grid aspect-square place-items-center rounded-xl text-sm font-semibold',
                     mark ? MARK[mark].cell : 'text-ink-400',
@@ -111,7 +113,7 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
                   )}
                 >
                   {i + 1}
-                  {mark ? <span className="sr-only">{MARK[mark].label}</span> : null}
+                  {mark ? <span className="sr-only">{t(MARK[mark].label)}</span> : null}
                 </div>
               );
             })}
@@ -121,7 +123,7 @@ export default async function ParentAttendance({ searchParams }: { searchParams:
             {(Object.keys(MARK) as AttendanceStatus[]).map((status) => (
               <li key={status} className="flex items-center gap-1.5">
                 <span className={cn('h-3 w-3 rounded-full', MARK[status].dot)} />
-                {MARK[status].label} <span className="tabular font-semibold text-ink-900">{data.counts[status]}</span>
+                {t(MARK[status].label)} <span className="tabular font-semibold text-ink-900">{data.counts[status]}</span>
               </li>
             ))}
           </ul>

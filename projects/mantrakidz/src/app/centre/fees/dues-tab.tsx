@@ -4,6 +4,7 @@ import { SearchInput, UrlSelect } from '@/components/ui/client';
 import { Card, EmptyState, LinkButton, Table, Td, Th, Tr, buttonClass } from '@/components/ui/core';
 import { formatDate, todayIST } from '@/lib/date';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { fillTemplate, telLink, waLink } from '@/lib/wa';
 import { listClasses, listDues } from '@/server/centre/money/bills';
 import { paymentDetailsOf, paymentText } from '@/server/centre/money/payment-info';
@@ -11,6 +12,7 @@ import { feeSettings, parentName, type Ctx } from '@/server/centre/money/shared'
 import { WhatsAppLink } from './pickers';
 
 export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string; batch: string; q: string }) {
+  const t = await getT();
   const [rows, classes, settings] = await Promise.all([listDues(ctx, { sort, batch, q }), listClasses(ctx), feeSettings()]);
   const today = todayIST();
   // How to pay goes at the end of every reminder, when the centre has set it up.
@@ -20,20 +22,20 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
 
   return (
     <>
-      <div className="no-print mb-4 flex flex-wrap items-center gap-2">
-        <SearchInput placeholder="Child, admission no or mobile" />
-        <UrlSelect param="batch" label="Class" options={[{ value: '', label: 'All classes' }, ...classes.map((c) => ({ value: c.id, label: c.name }))]} />
+      <div className="no-print mb-4 filter-bar flex flex-wrap items-center gap-2">
+        <SearchInput placeholder={t('Child, admission no or mobile')} />
+        <UrlSelect param="batch" label={t('Class')} options={[{ value: '', label: t('All classes') }, ...classes.map((c) => ({ value: c.id, label: c.name }))]} />
         <UrlSelect
           param="sort"
-          label="Sort"
+          label={t('Sort')}
           options={[
-            { value: '', label: 'Highest amount first' },
-            { value: 'age', label: 'Oldest due first' },
+            { value: '', label: t('Highest amount first') },
+            { value: 'age', label: t('Oldest due first') },
           ]}
         />
         {rows.length ? (
           <a href={`/centre/fees/export?${query}`} className={buttonClass('secondary', 'md', 'sm:ml-auto')}>
-            <Download size={18} /> CSV
+            <Download size={18} /> {t('CSV')}
           </a>
         ) : null}
       </div>
@@ -43,18 +45,18 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
           <>
             <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-ink-100 px-4 py-3">
               <p className="text-sm font-medium text-ink-600">
-                {rows.length} {rows.length === 1 ? 'child has' : 'children have'} fees to pay
+                {rows.length === 1 ? t('{n} child has fees to pay', { n: rows.length }) : t('{n} children have fees to pay', { n: rows.length })}
               </p>
               <p className="tabular font-display text-xl font-bold text-accent-600">{inr(total)}</p>
             </div>
             <Table>
               <thead>
                 <tr>
-                  <Th>Child</Th>
-                  <Th>Pending</Th>
-                  <Th>Oldest due</Th>
-                  <Th>Mobile</Th>
-                  <Th className="text-right">Total due</Th>
+                  <Th>{t('Child')}</Th>
+                  <Th>{t('Pending')}</Th>
+                  <Th>{t('Oldest due')}</Th>
+                  <Th>{t('Mobile')}</Th>
+                  <Th className="text-right">{t('Total due')}</Th>
                   <Th />
                 </tr>
               </thead>
@@ -74,12 +76,12 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
                           {row.name}
                         </Link>
                         <span className="block text-xs text-ink-500">
-                          {row.batchName ?? 'No class'} · {row.admissionNo}
+                          {row.batchName ?? t('No class')} · {row.admissionNo}
                         </span>
                       </Td>
                       <Td>
                         <span className="tabular font-medium">
-                          {row.bills} {row.bills === 1 ? 'bill' : 'bills'}
+                          {row.bills === 1 ? t('{n} bill', { n: row.bills }) : t('{n} bills', { n: row.bills })}
                         </span>
                         <span className="block max-w-[220px] text-xs text-ink-500">{month}</span>
                       </Td>
@@ -90,15 +92,15 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
                             {row.guardianPhone}
                           </a>
                         ) : (
-                          <span className="text-ink-400">Not added</span>
+                          <span className="text-ink-400">{t('Not added')}</span>
                         )}
                       </Td>
                       <Td className="tabular text-right text-base font-bold">{inr(row.due)}</Td>
                       <Td>
                         <div className="no-print flex justify-end gap-2">
-                          <WhatsAppLink href={waLink(row.guardianPhone, reminder)} label="Remind" />
+                          <WhatsAppLink href={waLink(row.guardianPhone, reminder)} label={t('Remind')} />
                           <LinkButton href={`/centre/fees/collect?student=${row.studentId}`} size="sm">
-                            Take payment
+                            {t('Take payment')}
                           </LinkButton>
                         </div>
                       </Td>
@@ -111,8 +113,8 @@ export async function DuesTab({ ctx, sort, batch, q }: { ctx: Ctx; sort: string;
         ) : (
           <EmptyState
             icon={<PartyPopper size={26} />}
-            title={q || batch ? 'Nobody here owes anything' : 'No dues'}
-            text="Every child with an unpaid or part paid bill shows here, with a WhatsApp reminder ready to send."
+            title={q || batch ? t('Nobody here owes anything') : t('No dues')}
+            text={t('Every child with an unpaid or part paid bill shows here, with a WhatsApp reminder ready to send.')}
           />
         )}
       </Card>

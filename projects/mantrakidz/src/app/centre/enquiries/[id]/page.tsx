@@ -6,6 +6,8 @@ import { buttonClass, Card, CardBody, CardHeader, Detail, LinkButton, Notice, Pa
 import { ApiError } from '@/lib/api';
 import { canManageCentre, requireCentre } from '@/lib/auth';
 import { ageLabel, formatDate, formatDateTime, todayIST } from '@/lib/date';
+import { rich } from '@/i18n/rich';
+import { getT } from '@/lib/t';
 import { telLink, waLink } from '@/lib/wa';
 import { listProgrammes } from '@/server/centre/children/batches';
 import { sourceLabel, STAGE_LABELS } from '@/server/centre/children/constants';
@@ -17,6 +19,7 @@ import { StageControl } from './stage-control';
 export const metadata: Metadata = { title: 'Enquiry' };
 
 export default async function EnquiryPage({ params }: { params: Promise<{ id: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { id } = await params;
   const [data, programmes] = await Promise.all([
@@ -33,27 +36,27 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
   return (
     <>
       <PageHeader
-        back={{ href: '/centre/enquiries', label: 'Admission enquiries' }}
+        back={{ href: '/centre/enquiries', label: t('Admission enquiries') }}
         title={enquiry.childName}
         description={
           <span className="inline-flex flex-wrap items-center gap-2">
-            <StatusBadge status={enquiry.stage} label={STAGE_LABELS[enquiry.stage]} />
-            Asked on {formatDateTime(enquiry.createdAt)}, {sourceLabel(enquiry.source).toLowerCase()}
+            <StatusBadge status={enquiry.stage} label={t(STAGE_LABELS[enquiry.stage])} />
+            {t('Asked on {date}, {source}', { date: formatDateTime(enquiry.createdAt), source: t(sourceLabel(enquiry.source)).toLowerCase() })}
           </span>
         }
         actions={
           <>
             <a href={telLink(enquiry.phone)} className={buttonClass('secondary')}>
-              <Phone size={17} /> Call
+              <Phone size={17} /> {t('Call')}
             </a>
             {whatsapp ? (
               <a href={whatsapp} target="_blank" rel="noreferrer" className={buttonClass('secondary')}>
-                <MessageCircle size={17} /> WhatsApp
+                <MessageCircle size={17} /> {t('WhatsApp')}
               </a>
             ) : null}
             {!admitted ? (
               <LinkButton href={`/centre/students/new?enquiry=${enquiry.id}`}>
-                <GraduationCap size={18} /> Admit this child
+                <GraduationCap size={18} /> {t('Admit this child')}
               </LinkButton>
             ) : null}
           </>
@@ -62,11 +65,14 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
 
       {admitted && child ? (
         <Notice tone="green" className="mb-5">
-          Admitted as{' '}
-          <Link href={`/centre/students/${child.id}`} className="font-bold underline">
-            {child.name}
-          </Link>
-          , admission number {child.admissionNo}.
+          {rich(t('Admitted as {child}, admission number {number}.'), {
+            child: (
+              <Link href={`/centre/students/${child.id}`} className="font-bold underline">
+                {child.name}
+              </Link>
+            ),
+            number: child.admissionNo,
+          })}
         </Notice>
       ) : null}
 
@@ -74,7 +80,7 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
         <div className="space-y-5">
           <Card className="animate-fade-up">
             <CardHeader
-              title="Details"
+              title={t('Details')}
               action={
                 <EnquiryFormButton
                   programmes={programmes}
@@ -99,22 +105,22 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
             />
             <CardBody>
               <dl className="grid gap-4 sm:grid-cols-2">
-                <Detail label="Child">{enquiry.childName}</Detail>
-                <Detail label="Date of birth">{enquiry.dob ? `${formatDate(enquiry.dob)} (${ageLabel(enquiry.dob)})` : ''}</Detail>
-                <Detail label="Programme">{data.programmeName}</Detail>
-                <Detail label="Parent">{enquiry.parentName}</Detail>
-                <Detail label="Mobile">
+                <Detail empty={t('Not added')} label={t('Child')}>{enquiry.childName}</Detail>
+                <Detail empty={t('Not added')} label={t('Date of birth')}>{enquiry.dob ? `${formatDate(enquiry.dob)} (${ageLabel(enquiry.dob)})` : ''}</Detail>
+                <Detail empty={t('Not added')} label={t('Programme')}>{data.programmeName}</Detail>
+                <Detail empty={t('Not added')} label={t('Parent')}>{enquiry.parentName}</Detail>
+                <Detail empty={t('Not added')} label={t('Mobile')}>
                   <span className="tabular">{enquiry.phone}</span>
                 </Detail>
-                <Detail label="Email">{enquiry.email}</Detail>
-                <Detail label="Area">{enquiry.area}</Detail>
-                <Detail label="Visit date">{formatDate(enquiry.visitOn)}</Detail>
+                <Detail empty={t('Not added')} label={t('Email')}>{enquiry.email}</Detail>
+                <Detail empty={t('Not added')} label={t('Area')}>{enquiry.area}</Detail>
+                <Detail empty={t('Not added')} label={t('Visit date')}>{formatDate(enquiry.visitOn)}</Detail>
                 {enquiry.stage === 'lost' ? (
-                  <Detail label="Why it was lost" className="sm:col-span-2">
+                  <Detail empty={t('Not added')} label={t('Why it was lost')} className="sm:col-span-2">
                     {enquiry.lostReason}
                   </Detail>
                 ) : null}
-                <Detail label="What they asked" className="sm:col-span-2">
+                <Detail empty={t('Not added')} label={t('What they asked')} className="sm:col-span-2">
                   {enquiry.message ? <span className="whitespace-pre-line">{enquiry.message}</span> : ''}
                 </Detail>
               </dl>
@@ -123,7 +129,7 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
 
           {!admitted ? (
             <Card className="animate-fade-up">
-              <CardHeader title="Stage and follow-up" description="Move the enquiry along as you speak to the parent." />
+              <CardHeader title={t('Stage and follow-up')} description={t('Move the enquiry along as you speak to the parent.')} />
               <CardBody>
                 <StageControl
                   key={`${enquiry.stage}-${enquiry.nextFollowUp}-${enquiry.visitOn}`}
@@ -140,9 +146,9 @@ export default async function EnquiryPage({ params }: { params: Promise<{ id: st
         </div>
 
         <Card className="animate-fade-up self-start">
-          <CardHeader title="Notes" description="What was said on each call or visit." />
+          <CardHeader title={t('Notes')} description={t('What was said on each call or visit.')} />
           <CardBody>
-            <NotesTimeline kind="enquiry" id={enquiry.id} notes={notes} placeholder="Spoke to the mother, will visit on Saturday" />
+            <NotesTimeline kind="enquiry" id={enquiry.id} notes={notes} placeholder={t('Spoke to the mother, will visit on Saturday')} />
           </CardBody>
         </Card>
       </div>

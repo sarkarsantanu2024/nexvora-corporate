@@ -11,6 +11,7 @@
  */
 import { ImagePlus, Loader2, Trash2 } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { shrinkImage } from './upload';
 
@@ -25,6 +26,7 @@ export type ImageFieldProps = {
 };
 
 export function ImageField({ value, onChange, folder = 'general', shape = 'square', className }: ImageFieldProps) {
+  const t = useT();
   const input = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -41,7 +43,7 @@ export function ImageField({ value, onChange, folder = 'general', shape = 'squar
       if (!result.ok || !result.data) throw new Error(result.error || 'Upload failed');
       onChange(result.data.url);
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : 'Upload failed. Try again.');
+      setError(cause instanceof Error ? t(cause.message) : t('Upload failed. Try again.'));
     } finally {
       setBusy(false);
     }
@@ -57,7 +59,7 @@ export function ImageField({ value, onChange, folder = 'general', shape = 'squar
             'relative grid shrink-0 place-items-center overflow-hidden rounded-2xl border-2 border-dashed border-ink-200 bg-ink-50 text-ink-400 transition hover:border-brand-400 hover:text-brand-600',
             shape === 'wide' ? 'h-24 w-40' : 'h-24 w-24',
           )}
-          aria-label={value ? 'Change photo' : 'Add photo'}
+          aria-label={value ? t('Change photo') : t('Add photo')}
         >
           {value ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -73,14 +75,14 @@ export function ImageField({ value, onChange, folder = 'general', shape = 'squar
         </button>
         <div className="text-sm">
           <button type="button" onClick={() => input.current?.click()} className="font-semibold text-brand-700 hover:underline">
-            {value ? 'Change photo' : 'Add a photo'}
+            {value ? t('Change photo') : t('Add a photo')}
           </button>
           {value ? (
             <button type="button" onClick={() => onChange('')} className="ml-3 inline-flex items-center gap-1 font-medium text-ink-500 hover:text-accent-600">
-              <Trash2 size={14} /> Remove
+              <Trash2 size={14} /> {t('Remove')}
             </button>
           ) : null}
-          <p className="mt-0.5 text-ink-500">JPG or PNG. It is resized for you.</p>
+          <p className="mt-0.5 text-ink-500">{t('JPG or PNG. It is resized for you.')}</p>
           {error ? <p className="mt-0.5 font-medium text-accent-600">{error}</p> : null}
         </div>
       </div>

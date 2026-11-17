@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Drawer, LoadingButton, useToast } from '@/components/ui/client';
 import { Button, Field, FormGrid, Input, Select, Textarea } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { createEnquiryAction, updateEnquiryAction } from '@/server/centre/children/actions';
 import { ENQUIRY_SOURCES, sourceLabel } from '@/server/centre/children/constants';
 
@@ -34,6 +35,7 @@ export function EnquiryFormButton({
   /** When set, the button edits this enquiry instead of adding one. */
   edit?: { id: string; values: EnquiryValues };
 }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [open, setOpen] = useState(false);
@@ -61,9 +63,9 @@ export function EnquiryFormButton({
     setSaving(false);
     if (!result.ok) {
       setErrors(result.fields ?? {});
-      return toast.error(result.error);
+      return toast.error(t(result.error));
     }
-    toast.success(edit ? 'Enquiry saved' : 'Enquiry added');
+    toast.success(edit ? t('Enquiry saved') : t('Enquiry added'));
     setOpen(false);
     router.refresh();
   }
@@ -72,40 +74,40 @@ export function EnquiryFormButton({
     <>
       {edit ? (
         <Button variant="secondary" onClick={show}>
-          <Pencil size={17} /> Edit
+          <Pencil size={17} /> {t('Edit')}
         </Button>
       ) : (
         <Button onClick={show}>
-          <Plus size={18} /> Add enquiry
+          <Plus size={18} /> {t('Add enquiry')}
         </Button>
       )}
       <Drawer
         open={open}
         onClose={() => !saving && setOpen(false)}
-        title={edit ? 'Edit enquiry' : 'New enquiry'}
-        description={edit ? undefined : 'For a parent who walked in or called.'}
+        title={edit ? t('Edit enquiry') : t('New enquiry')}
+        description={edit ? undefined : t('For a parent who walked in or called.')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={saving}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton loading={saving} onClick={save}>
-              {edit ? 'Save' : 'Add enquiry'}
+              {edit ? t('Save') : t('Add enquiry')}
             </LoadingButton>
           </>
         }
       >
         <div className="space-y-4">
-          <Field label="Child's name" required error={errors.childName}>
+          <Field label={t("Child's name")} required error={errors.childName && t(errors.childName)}>
             <Input {...bind('childName')} autoComplete="off" />
           </Field>
           <FormGrid>
-            <Field label="Date of birth" error={errors.dob}>
+            <Field label={t('Date of birth')} error={errors.dob && t(errors.dob)}>
               <Input type="date" max={today} {...bind('dob')} />
             </Field>
-            <Field label="Programme" error={errors.programmeId}>
+            <Field label={t('Programme')} error={errors.programmeId && t(errors.programmeId)}>
               <Select {...bind('programmeId')}>
-                <option value="">Not sure yet</option>
+                <option value="">{t('Not sure yet')}</option>
                 {programmes.map((p) => (
                   <option key={p.id} value={p.id}>
                     {p.name} ({p.ageLabel})
@@ -114,35 +116,35 @@ export function EnquiryFormButton({
               </Select>
             </Field>
           </FormGrid>
-          <Field label="Parent's name" required error={errors.parentName}>
+          <Field label={t("Parent's name")} required error={errors.parentName && t(errors.parentName)}>
             <Input {...bind('parentName')} autoComplete="off" />
           </Field>
           <FormGrid>
-            <Field label="Mobile number" required error={errors.phone}>
+            <Field label={t('Mobile number')} required error={errors.phone && t(errors.phone)}>
               <Input type="tel" inputMode="numeric" {...bind('phone')} autoComplete="off" />
             </Field>
-            <Field label="Email" error={errors.email}>
+            <Field label={t('Email')} error={errors.email && t(errors.email)}>
               <Input type="email" {...bind('email')} autoComplete="off" />
             </Field>
           </FormGrid>
           <FormGrid>
-            <Field label="Area" error={errors.area}>
+            <Field label={t('Area')} error={errors.area && t(errors.area)}>
               <Input {...bind('area')} />
             </Field>
-            <Field label="How they found us" error={errors.source}>
+            <Field label={t('How they found us')} error={errors.source && t(errors.source)}>
               <Select {...bind('source')}>
                 {sources.map((source) => (
                   <option key={source} value={source}>
-                    {sourceLabel(source)}
+                    {t(sourceLabel(source))}
                   </option>
                 ))}
               </Select>
             </Field>
           </FormGrid>
-          <Field label="Next follow-up" hint="The day to call them again." error={errors.nextFollowUp}>
+          <Field label={t('Next follow-up')} hint={t('The day to call them again.')} error={errors.nextFollowUp && t(errors.nextFollowUp)}>
             <Input type="date" {...bind('nextFollowUp')} />
           </Field>
-          <Field label="What they asked" error={errors.message}>
+          <Field label={t('What they asked')} error={errors.message && t(errors.message)}>
             <Textarea {...bind('message')} maxLength={1000} />
           </Field>
         </div>

@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { ConfirmButton, Drawer, LoadingButton, useToast } from '@/components/ui/client';
 import { Button, Field, FormGrid, Input, Select } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { createBatchAction, deleteBatchAction, setBatchActiveAction, updateBatchAction } from '@/server/centre/children/actions';
 
 export type BatchValues = { programmeId: string; academicYearId: string; name: string; capacity: string; timing: string; teacherId: string };
@@ -17,6 +18,7 @@ type Options = {
 };
 
 export function BatchFormButton({ options, defaultYearId, edit }: { options: Options; defaultYearId: string; edit?: { id: string; values: BatchValues; hasChildren: boolean } }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const blank: BatchValues = { programmeId: '', academicYearId: defaultYearId, name: '', capacity: '12', timing: '', teacherId: '' };
@@ -50,9 +52,9 @@ export function BatchFormButton({ options, defaultYearId, edit }: { options: Opt
     setSaving(false);
     if (!result.ok) {
       setErrors(result.fields ?? {});
-      return toast.error(result.error);
+      return toast.error(t(result.error));
     }
-    toast.success(edit ? 'Class saved' : 'Class added');
+    toast.success(edit ? t('Class saved') : t('Class added'));
     setOpen(false);
     router.refresh();
   }
@@ -61,33 +63,33 @@ export function BatchFormButton({ options, defaultYearId, edit }: { options: Opt
     <>
       {edit ? (
         <Button variant="secondary" size="sm" onClick={() => { setValues(edit.values); setErrors({}); setOpen(true); }}>
-          <Pencil size={15} /> Edit
+          <Pencil size={15} /> {t('Edit')}
         </Button>
       ) : (
         <Button onClick={() => { setValues(blank); setErrors({}); setOpen(true); }}>
-          <Plus size={18} /> Add a class
+          <Plus size={18} /> {t('Add a class')}
         </Button>
       )}
       <Drawer
         open={open}
         onClose={() => !saving && setOpen(false)}
-        title={edit ? 'Edit class' : 'New class'}
+        title={edit ? t('Edit class') : t('New class')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={saving}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton loading={saving} onClick={save}>
-              {edit ? 'Save' : 'Add class'}
+              {edit ? t('Save') : t('Add class')}
             </LoadingButton>
           </>
         }
       >
         <div className="space-y-4">
           <FormGrid>
-            <Field label="Programme" required error={errors.programmeId} hint={edit?.hasChildren ? 'Fixed while the class has children.' : undefined}>
+            <Field label={t('Programme')} required error={errors.programmeId && t(errors.programmeId)} hint={edit?.hasChildren ? t('Fixed while the class has children.') : undefined}>
               <Select value={values.programmeId} invalid={Boolean(errors.programmeId)} disabled={edit?.hasChildren} onChange={(event) => chooseProgramme(event.target.value)}>
-                <option value="">Choose</option>
+                <option value="">{t('Choose')}</option>
                 {options.programmes.map((p) => (
                   <option key={p.id} value={p.id}>
                     {p.name}
@@ -95,31 +97,30 @@ export function BatchFormButton({ options, defaultYearId, edit }: { options: Opt
                 ))}
               </Select>
             </Field>
-            <Field label="Academic year" required error={errors.academicYearId}>
+            <Field label={t('Academic year')} required error={errors.academicYearId && t(errors.academicYearId)}>
               <Select {...bind('academicYearId')} disabled={edit?.hasChildren}>
                 {options.years.map((y) => (
                   <option key={y.id} value={y.id}>
-                    {y.name}
-                    {y.isCurrent ? ' (this year)' : ''}
+                    {y.isCurrent ? t('{name} (this year)', { name: y.name }) : y.name}
                   </option>
                 ))}
               </Select>
             </Field>
           </FormGrid>
-          <Field label="Class name" required error={errors.name} hint="For example Nursery A, or Nursery evening.">
+          <Field label={t('Class name')} required error={errors.name && t(errors.name)} hint={t('For example Nursery A, or Nursery evening.')}>
             <Input {...bind('name')} autoComplete="off" />
           </Field>
           <FormGrid>
-            <Field label="Seats" required error={errors.capacity}>
+            <Field label={t('Seats')} required error={errors.capacity && t(errors.capacity)}>
               <Input type="number" inputMode="numeric" min={1} max={60} {...bind('capacity')} />
             </Field>
-            <Field label="Timing" error={errors.timing}>
-              <Input {...bind('timing')} placeholder="9:00 am to 11:30 am" />
+            <Field label={t('Timing')} error={errors.timing && t(errors.timing)}>
+              <Input {...bind('timing')} placeholder={t('9:00 am to 11:30 am')} />
             </Field>
           </FormGrid>
-          <Field label="Class teacher" error={errors.teacherId} hint={options.teachers.length ? undefined : 'Add teachers under Staff to choose one here.'}>
+          <Field label={t('Class teacher')} error={errors.teacherId && t(errors.teacherId)} hint={options.teachers.length ? undefined : t('Add teachers under Staff to choose one here.')}>
             <Select {...bind('teacherId')}>
-              <option value="">Not assigned</option>
+              <option value="">{t('Not assigned')}</option>
               {options.teachers.map((t) => (
                 <option key={t.id} value={t.id}>
                   {t.name} ({t.roleTitle})
@@ -134,6 +135,7 @@ export function BatchFormButton({ options, defaultYearId, edit }: { options: Opt
 }
 
 export function BatchCardActions({ id, name, active, hasChildren }: { id: string; name: string; active: boolean; hasChildren: boolean }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [busy, setBusy] = useState(false);
@@ -142,8 +144,8 @@ export function BatchCardActions({ id, name, active, hasChildren }: { id: string
     setBusy(true);
     const result = await setBatchActiveAction(id, next);
     setBusy(false);
-    if (!result.ok) return toast.error(result.error);
-    toast.success(next ? `${name} reopened` : `${name} closed`);
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(next ? t('{name} reopened', { name }) : t('{name} closed', { name }));
     router.refresh();
   }
 
@@ -154,33 +156,33 @@ export function BatchCardActions({ id, name, active, hasChildren }: { id: string
           size="sm"
           variant="ghost"
           danger={false}
-          title={`Close ${name}?`}
-          text="A closed class is no longer offered for new children or on the attendance screen. Its children and history are kept, and you can reopen it."
-          confirmLabel="Close class"
+          title={t('Close {name}?', { name })}
+          text={t('A closed class is no longer offered for new children or on the attendance screen. Its children and history are kept, and you can reopen it.')}
+          confirmLabel={t('Close class')}
           onConfirm={() => setActive(false)}
         >
-          Close
+          {t('Close')}
         </ConfirmButton>
       ) : (
         <LoadingButton size="sm" variant="ghost" loading={busy} onClick={() => setActive(true)}>
-          Reopen
+          {t('Reopen')}
         </LoadingButton>
       )}
       {!hasChildren ? (
         <ConfirmButton
           size="sm"
           variant="ghost"
-          title={`Delete ${name}?`}
-          text="The class is removed for good. This is only possible because no child has ever been placed in it."
-          confirmLabel="Delete class"
+          title={t('Delete {name}?', { name })}
+          text={t('The class is removed for good. This is only possible because no child has ever been placed in it.')}
+          confirmLabel={t('Delete class')}
           onConfirm={async () => {
             const result = await deleteBatchAction(id);
-            if (!result.ok) return toast.error(result.error);
-            toast.success('Class deleted');
+            if (!result.ok) return toast.error(t(result.error));
+            toast.success(t('Class deleted'));
             router.refresh();
           }}
         >
-          Delete
+          {t('Delete')}
         </ConfirmButton>
       ) : null}
     </>

@@ -5,6 +5,7 @@ import { Badge, Card, EmptyState, LinkButton, PageHeader, Table, Td, Th, Tr } fr
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { cn } from '@/lib/cn';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { listProgrammes } from '@/server/hq/admin';
 import { NUM } from '../_ui/bits';
 
@@ -14,30 +15,31 @@ export const metadata: Metadata = { title: 'Programmes' };
 const SWATCH: Record<string, string> = { sun: 'bg-sun-400', coral: 'bg-coral-400', mint: 'bg-mint-400', sky: 'bg-sky-400', indigo: 'bg-brand-600' };
 
 export default async function ProgrammesPage() {
+  const t = await getT();
   await requireSession(HQ_ROLES);
   const rows = await listProgrammes();
   const add = (
     <LinkButton href="/hq/programmes/new">
-      <Plus size={18} /> Add programme
+      <Plus size={18} /> {t('Add programme')}
     </LinkButton>
   );
 
   return (
     <>
-      <PageHeader title="Programmes" description="The classes Mantra Kidz offers. This list drives the Programmes pages of the website and what the centres can admit children into." actions={add} />
+      <PageHeader title={t('Programmes')} description={t('The classes Mantra Kidz offers. This list drives the Programmes pages of the website and what the centres can admit children into.')} actions={add} />
       <Card>
         {rows.length ? (
           <Table>
             <thead>
               <tr>
-                <Th className="text-right">Order</Th>
-                <Th>Programme</Th>
-                <Th>Age</Th>
-                <Th>Timing</Th>
-                <Th className="text-right">Seats in a class</Th>
-                <Th className="text-right">Suggested fee</Th>
-                <Th className="text-right">Children on roll</Th>
-                <Th>Status</Th>
+                <Th className="text-right">{t('Order')}</Th>
+                <Th>{t('Programme')}</Th>
+                <Th>{t('Age')}</Th>
+                <Th>{t('Timing')}</Th>
+                <Th className="text-right">{t('Seats in a class')}</Th>
+                <Th className="text-right">{t('Suggested fee')}</Th>
+                <Th className="text-right">{t('Children on roll')}</Th>
+                <Th>{t('Status')}</Th>
               </tr>
             </thead>
             <tbody>
@@ -51,20 +53,20 @@ export default async function ProgrammesPage() {
                     </Link>
                     {row.tagline ? <p className="ml-[22px] text-xs text-ink-500">{row.tagline}</p> : null}
                   </Td>
-                  <Td className="whitespace-nowrap">{row.ageLabel || <span className="text-ink-400">Not added</span>}</Td>
-                  <Td className="whitespace-nowrap">{row.timing || <span className="text-ink-400">Not added</span>}</Td>
+                  <Td className="whitespace-nowrap">{row.ageLabel || <span className="text-ink-400">{t('Not added')}</span>}</Td>
+                  <Td className="whitespace-nowrap">{row.timing || <span className="text-ink-400">{t('Not added')}</span>}</Td>
                   <Td className={NUM}>{row.seatsPerClass}</Td>
-                  <Td className={NUM}>{row.suggestedMonthlyFee ? inr(row.suggestedMonthlyFee) : <span className="text-ink-400">Not set</span>}</Td>
+                  <Td className={NUM}>{row.suggestedMonthlyFee ? inr(row.suggestedMonthlyFee) : <span className="text-ink-400">{t('Not set')}</span>}</Td>
                   <Td className={NUM}>{children}</Td>
                   <Td>
-                    <Badge tone={row.active ? 'green' : 'neutral'}>{row.active ? 'Active' : 'Inactive'}</Badge>
+                    <Badge tone={row.active ? 'green' : 'neutral'}>{row.active ? t('Active') : t('Inactive')}</Badge>
                   </Td>
                 </Tr>
               ))}
             </tbody>
           </Table>
         ) : (
-          <EmptyState icon={<Shapes size={26} />} title="No programmes yet" text="Add Play Group, Nursery and the other classes the school offers. The website and the centres use this list." action={add} />
+          <EmptyState icon={<Shapes size={26} />} title={t('No programmes yet')} text={t('Add Play Group, Nursery and the other classes the school offers. The website and the centres use this list.')} action={add} />
         )}
       </Card>
     </>

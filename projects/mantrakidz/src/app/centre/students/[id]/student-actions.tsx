@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { ConfirmButton, LoadingButton, Modal, useToast } from '@/components/ui/client';
 import { Button, Field, Input, Select, Textarea } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import {
   createParentLoginAction,
   deleteStudentAction,
@@ -32,6 +33,7 @@ export function ParentLogin({
   parentName: string;
   size?: 'sm' | 'md';
 }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [busy, setBusy] = useState(false);
@@ -41,7 +43,7 @@ export function ParentLogin({
     setBusy(true);
     const result = kind === 'create' ? await createParentLoginAction(studentId) : await resetParentPasswordAction(studentId);
     setBusy(false);
-    if (!result.ok) return toast.error(result.error);
+    if (!result.ok) return toast.error(t(result.error));
     setIssued({ ...result.data, phone, greeting: parentName ? `Dear ${parentName}` : 'Dear parent' });
     router.refresh();
   }
@@ -53,16 +55,16 @@ export function ParentLogin({
           size={size}
           variant="secondary"
           danger={false}
-          title="Reset the parent's password?"
-          text="The old password stops working. You get a new starting password to send to the parent."
-          confirmLabel="Reset password"
+          title={t("Reset the parent's password?")}
+          text={t('The old password stops working. You get a new starting password to send to the parent.')}
+          confirmLabel={t('Reset password')}
           onConfirm={() => run('reset')}
         >
-          <KeyRound size={17} /> Reset password
+          <KeyRound size={17} /> {t('Reset password')}
         </ConfirmButton>
       ) : (
         <LoadingButton size={size} variant="secondary" loading={busy} onClick={() => run('create')}>
-          <UserPlus size={17} /> Create parent login
+          <UserPlus size={17} /> {t('Create parent login')}
         </LoadingButton>
       )}
       <LoginDetails login={issued} onClose={() => setIssued(null)} area="parent corner" />
@@ -71,6 +73,7 @@ export function ParentLogin({
 }
 
 export function MoveClass({ studentId, currentBatchId, classes }: { studentId: string; currentBatchId: string; classes: ClassOption[] }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [open, setOpen] = useState(false);
@@ -83,8 +86,8 @@ export function MoveClass({ studentId, currentBatchId, classes }: { studentId: s
     setSaving(true);
     const result = await moveStudentAction(studentId, batchId);
     setSaving(false);
-    if (!result.ok) return toast.error(result.error);
-    toast.success(`Moved to ${result.data.batchName}`);
+    if (!result.ok) return toast.error(t(result.error));
+    toast.success(t('Moved to {batchName}', { batchName: result.data.batchName }));
     setOpen(false);
     router.refresh();
   }
@@ -92,37 +95,37 @@ export function MoveClass({ studentId, currentBatchId, classes }: { studentId: s
   return (
     <>
       <Button variant="secondary" onClick={() => { setBatchId(''); setOpen(true); }}>
-        <ArrowRightLeft size={17} /> Move to another class
+        <ArrowRightLeft size={17} /> {t('Move to another class')}
       </Button>
       <Modal
         open={open}
         onClose={() => !saving && setOpen(false)}
-        title="Move to another class"
-        description="The programme and academic year follow the class you pick."
+        title={t('Move to another class')}
+        description={t('The programme and academic year follow the class you pick.')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={saving}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton loading={saving} disabled={!batchId} onClick={save}>
-              Move
+              {t('Move')}
             </LoadingButton>
           </>
         }
       >
         {options.length ? (
-          <Field label="New class" hint={chosen && chosen.filled >= chosen.capacity ? `${chosen.name} is full (${chosen.filled} of ${chosen.capacity}). You can still move the child.` : undefined}>
+          <Field label={t('New class')} hint={chosen && chosen.filled >= chosen.capacity ? t('{name} is full ({filled} of {capacity}). You can still move the child.', { name: chosen.name, filled: chosen.filled, capacity: chosen.capacity }) : undefined}>
             <Select value={batchId} onChange={(event) => setBatchId(event.target.value)}>
-              <option value="">Choose a class</option>
+              <option value="">{t('Choose a class')}</option>
               {options.map((c) => (
                 <option key={c.id} value={c.id}>
-                  {c.name} ({c.programmeName}, {c.yearName}): {c.filled} of {c.capacity} seats filled
+                  {t('{name} ({programmeName}, {yearName}): {filled} of {capacity} seats filled', { name: c.name, programmeName: c.programmeName, yearName: c.yearName, filled: c.filled, capacity: c.capacity })}
                 </option>
               ))}
             </Select>
           </Field>
         ) : (
-          <p className="text-[15px] text-ink-600">There is no other class to move to. Add one under Classes first.</p>
+          <p className="text-[15px] text-ink-600">{t('There is no other class to move to. Add one under Classes first.')}</p>
         )}
       </Modal>
     </>
@@ -130,6 +133,7 @@ export function MoveClass({ studentId, currentBatchId, classes }: { studentId: s
 }
 
 export function MarkLeft({ studentId, name, today, admissionDate }: { studentId: string; name: string; today: string; admissionDate: string }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [open, setOpen] = useState(false);
@@ -144,9 +148,9 @@ export function MarkLeft({ studentId, name, today, admissionDate }: { studentId:
     setSaving(false);
     if (!result.ok) {
       setErrors(result.fields ?? {});
-      return toast.error(result.error);
+      return toast.error(t(result.error));
     }
-    toast.success(`${name} marked as left`);
+    toast.success(t('{name} marked as left', { name }));
     setOpen(false);
     router.refresh();
   }
@@ -154,30 +158,30 @@ export function MarkLeft({ studentId, name, today, admissionDate }: { studentId:
   return (
     <>
       <Button variant="danger" onClick={() => { setErrors({}); setOpen(true); }}>
-        <LogOut size={17} /> Mark as left
+        <LogOut size={17} /> {t('Mark as left')}
       </Button>
       <Modal
         open={open}
         onClose={() => !saving && setOpen(false)}
-        title={`Mark ${name} as left`}
-        description="The child stays in your records with all bills and receipts, but no longer appears in attendance or in new monthly bills."
+        title={t('Mark {name} as left', { name })}
+        description={t('The child stays in your records with all bills and receipts, but no longer appears in attendance or in new monthly bills.')}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={saving}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton variant="accent" loading={saving} onClick={save}>
-              Mark as left
+              {t('Mark as left')}
             </LoadingButton>
           </>
         }
       >
         <div className="space-y-4">
-          <Field label="Last day" required error={errors.leftOn}>
+          <Field label={t('Last day')} required error={errors.leftOn && t(errors.leftOn)}>
             <Input type="date" value={leftOn} min={admissionDate} max={today} invalid={Boolean(errors.leftOn)} onChange={(event) => setLeftOn(event.target.value)} />
           </Field>
-          <Field label="Reason" required error={errors.reason ?? errors._}>
-            <Textarea value={reason} invalid={Boolean(errors.reason)} onChange={(event) => setReason(event.target.value)} placeholder="Family moved, joined another school" maxLength={300} />
+          <Field label={t('Reason')} required error={t(errors.reason ?? errors._ ?? '')}>
+            <Textarea value={reason} invalid={Boolean(errors.reason)} onChange={(event) => setReason(event.target.value)} placeholder={t('Family moved, joined another school')} maxLength={300} />
           </Field>
         </div>
       </Modal>
@@ -186,44 +190,46 @@ export function MarkLeft({ studentId, name, today, admissionDate }: { studentId:
 }
 
 export function Readmit({ studentId, name }: { studentId: string; name: string }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   return (
     <ConfirmButton
       variant="secondary"
       danger={false}
-      title={`Re-admit ${name}?`}
-      text="The child goes back on the active list, in the same class, and appears in attendance and monthly bills again."
-      confirmLabel="Re-admit"
+      title={t('Re-admit {name}?', { name })}
+      text={t('The child goes back on the active list, in the same class, and appears in attendance and monthly bills again.')}
+      confirmLabel={t('Re-admit')}
       onConfirm={async () => {
         const result = await readmitStudentAction(studentId);
-        if (!result.ok) return toast.error(result.error);
-        toast.success(`${name} re-admitted`);
+        if (!result.ok) return toast.error(t(result.error));
+        toast.success(t('{name} re-admitted', { name }));
         router.refresh();
       }}
     >
-      <RotateCcw size={17} /> Re-admit
+      <RotateCcw size={17} /> {t('Re-admit')}
     </ConfirmButton>
   );
 }
 
 export function DeleteStudent({ studentId, name }: { studentId: string; name: string }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   return (
     <ConfirmButton
       size="sm"
-      title={`Delete ${name}?`}
-      text="Only for a child added by mistake. A child who has bills cannot be deleted: mark the child as left instead."
-      confirmLabel="Delete child"
+      title={t('Delete {name}?', { name })}
+      text={t('Only for a child added by mistake. A child who has bills cannot be deleted: mark the child as left instead.')}
+      confirmLabel={t('Delete child')}
       onConfirm={async () => {
         const result = await deleteStudentAction(studentId);
-        if (!result.ok) return toast.error(result.error);
-        toast.success('Deleted');
+        if (!result.ok) return toast.error(t(result.error));
+        toast.success(t('Deleted'));
         router.push('/centre/students');
       }}
     >
-      Delete this record
+      {t('Delete this record')}
     </ConfirmButton>
   );
 }

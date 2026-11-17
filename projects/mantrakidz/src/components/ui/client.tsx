@@ -4,7 +4,8 @@
  * Interactive building blocks: dialogs, toasts, confirm, URL-bound filters.
  * Everything here is keyboard friendly and closes on Escape.
  */
-import { Check, ChevronLeft, ChevronRight, Loader2, Printer, Search, TriangleAlert, X } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, Loader2, Printer, Search, SlidersHorizontal, TriangleAlert, X } from 'lucide-react';
+import { AnimatePresence, motion, useDragControls } from 'motion/react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   createContext,
@@ -20,6 +21,7 @@ import {
 import { createPortal } from 'react-dom';
 import { cn } from '@/lib/cn';
 import { Button, buttonClass } from './core';
+import { useT } from './lang';
 
 /* ───────────── Modal and Drawer ───────────── */
 
@@ -45,86 +47,202 @@ function Portal({ children }: { children: ReactNode }) {
   return ready ? createPortal(children, document.body) : null;
 }
 
-export function Modal({
-  open,
-  onClose,
-  title,
-  description,
-  children,
-  footer,
-  size = 'md',
-}: {
+/** True at phone width. False on the first draw, so only use it for things opened by a tap. */
+function useIsPhone() {
+  const [phone, setPhone] = useState(false);
+  useEffect(() => {
+    const query = window.matchMedia('(max-width: 639.98px)');
+    const update = () => setPhone(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+  return phone;
+}
+
+type PanelProps = {
   open: boolean;
   onClose: () => void;
   title: ReactNode;
   description?: ReactNode;
   children: ReactNode;
   footer?: ReactNode;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-}) {
+};
+
+function PanelHead({ title, description, onClose }: Pick<PanelProps, 'title' | 'description' | 'onClose'>) {
+  const t = useT();
+  return (
+    <div className="flex items-start justify-between gap-4">
+      <div className="min-w-0">
+        <h2 className="text-lg font-bold text-ink-900">{title}</h2>
+        {description ? <p className="mt-0.5 text-sm text-ink-500">{description}</p> : null}
+      </div>
+      <button
+        type="button"
+        onClick={onClose}
+        onPointerDown={(event) => event.stopPropagation()}
+        aria-label={t('Close')}
+        className="-mr-1 grid h-9 w-9 shrink-0 place-items-center rounded-full text-ink-500 transition active:scale-90 hover:bg-ink-100"
+      >
+        <X size={20} />
+      </button>
+    </div>
+  );
+}
+
+const SPRING = { type: 'spring', stiffness: 360, damping: 36 } as const;
+const BACKDROP = 'absolute inset-0 bg-ink-900/45 backdrop-blur-[2px]';
+const fade = { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 }, transition: { duration: 0.2 } };
+
+/**
+ * A panel that slides up from the bottom of a phone. Pull its top edge up to
+ * open it to the full screen, pull it down to shrink it again or to shut it.
+ * On a phone every Modal and Drawer is drawn as one of these.
+ */
+export function BottomSheet({ open, onClose, title, description, children, footer }: PanelProps) {
+  const drag = useDragControls();
+  const [full, setFull] = useState(false);
   useOverlay(open, onClose);
-  if (!open) return null;
-  const width = { sm: 'max-w-sm', md: 'max-w-lg', lg: 'max-w-2xl', xl: 'max-w-4xl' }[size];
+  useEffect(() => {
+    if (!open) setFull(false);
+  }, [open]);
   return (
     <Portal>
-      <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4" role="dialog" aria-modal="true">
-        <div className="absolute inset-0 animate-fade-in bg-ink-900/45 backdrop-blur-[2px]" onClick={onClose} />
-        <div className={cn('relative flex max-h-[92dvh] w-full animate-scale-in flex-col rounded-t-3xl bg-white shadow-lift sm:rounded-3xl', width)}>
-          <div className="flex items-start justify-between gap-4 border-b border-ink-100 px-5 py-4">
-            <div className="min-w-0">
-              <h2 className="font-display text-xl font-bold text-ink-900">{title}</h2>
-              {description ? <p className="mt-0.5 text-sm text-ink-500">{description}</p> : null}
-            </div>
-            <button type="button" onClick={onClose} aria-label="Close" className="-mr-1 grid h-9 w-9 shrink-0 place-items-center rounded-full text-ink-500 hover:bg-ink-100">
-              <X size={20} />
-            </button>
+      <AnimatePresence>
+        {open ? (
+          <div className="no-print fixed inset-0 z-50" role="dialog" aria-modal="true">
+            <motion.div className={BACKDROP} {...fade} onClick={onClose} />
+            <motion.section
+              className={cn(
+                'absolute inset-x-0 bottom-0 mx-auto flex max-w-xl flex-col bg-white shadow-lift transition-[min-height,border-radius] duration-300',
+                full ? 'max-h-dvh min-h-dvh rounded-none pt-[env(safe-area-inset-top)]' : 'max-h-[88dvh] min-h-[30dvh] rounded-t-3xl',
+              )}
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={SPRING}
+              drag="y"
+              dragControls={drag}
+              dragListener={false}
+              dragConstraints={{ top: 0, bottom: 0 }}
+              dragElastic={{ top: full ? 0 : 0.25, bottom: 0.7 }}
+              onDragEnd={(_, info) => {
+                if (info.offset.y < -50 || info.velocity.y < -500) setFull(true);
+                else if (info.offset.y > 90 || info.velocity.y > 500) {
+                  if (full) setFull(false);
+                  else onClose();
+                }
+              }}
+            >
+              <div className="shrink-0 cursor-grab touch-none border-b border-ink-100 px-5 pb-3 pt-2.5" onPointerDown={(event) => drag.start(event)} onDoubleClick={() => setFull((value) => !value)}>
+                <span className="mx-auto mb-2.5 block h-1.5 w-11 rounded-full bg-ink-200" />
+                <PanelHead title={title} description={description} onClose={onClose} />
+              </div>
+              <div className="scrollbar-thin flex-1 overflow-y-auto overscroll-contain px-5 py-4">{children}</div>
+              {footer ? (
+                <div className="flex shrink-0 flex-wrap justify-end gap-2 border-t border-ink-100 px-5 pb-[calc(0.875rem+env(safe-area-inset-bottom))] pt-3.5 [&>*]:flex-1 sm:[&>*]:flex-none">{footer}</div>
+              ) : null}
+            </motion.section>
           </div>
-          <div className="scrollbar-thin flex-1 overflow-y-auto px-5 py-4">{children}</div>
-          {footer ? <div className="flex flex-wrap justify-end gap-2 border-t border-ink-100 px-5 py-4">{footer}</div> : null}
-        </div>
-      </div>
+        ) : null}
+      </AnimatePresence>
     </Portal>
   );
 }
 
-/** A panel that slides in from the right: for a form beside a list. */
-export function Drawer({
-  open,
-  onClose,
-  title,
-  description,
-  children,
-  footer,
-  wide,
-}: {
-  open: boolean;
-  onClose: () => void;
-  title: ReactNode;
-  description?: ReactNode;
-  children: ReactNode;
-  footer?: ReactNode;
-  wide?: boolean;
-}) {
+/** A dialog in the middle of the screen; a bottom sheet on a phone. */
+export function Modal({ size = 'md', ...props }: PanelProps & { size?: 'sm' | 'md' | 'lg' | 'xl' }) {
+  const phone = useIsPhone();
+  if (phone) return <BottomSheet {...props} />;
+  return <DeskModal size={size} {...props} />;
+}
+
+function DeskModal({ open, onClose, title, description, children, footer, size }: PanelProps & { size: 'sm' | 'md' | 'lg' | 'xl' }) {
   useOverlay(open, onClose);
-  if (!open) return null;
+  const width = { sm: 'max-w-sm', md: 'max-w-lg', lg: 'max-w-2xl', xl: 'max-w-4xl' }[size];
   return (
     <Portal>
-      <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true">
-        <div className="absolute inset-0 animate-fade-in bg-ink-900/45 backdrop-blur-[2px]" onClick={onClose} />
-        <div className={cn('relative flex h-full w-full animate-slide-in-right flex-col bg-white shadow-lift', wide ? 'max-w-2xl' : 'max-w-md')}>
-          <div className="flex items-start justify-between gap-4 border-b border-ink-100 px-5 py-4">
-            <div className="min-w-0">
-              <h2 className="font-display text-xl font-bold text-ink-900">{title}</h2>
-              {description ? <p className="mt-0.5 text-sm text-ink-500">{description}</p> : null}
-            </div>
-            <button type="button" onClick={onClose} aria-label="Close" className="-mr-1 grid h-9 w-9 shrink-0 place-items-center rounded-full text-ink-500 hover:bg-ink-100">
-              <X size={20} />
-            </button>
+      <AnimatePresence>
+        {open ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
+            <motion.div className={BACKDROP} {...fade} onClick={onClose} />
+            <motion.div
+              className={cn('relative flex max-h-[92dvh] w-full flex-col rounded-3xl bg-white shadow-lift', width)}
+              initial={{ opacity: 0, scale: 0.96, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.97, y: 8 }}
+              transition={{ duration: 0.2, ease: [0.2, 0.7, 0.2, 1] }}
+            >
+              <div className="border-b border-ink-100 px-5 py-4">
+                <PanelHead title={title} description={description} onClose={onClose} />
+              </div>
+              <div className="scrollbar-thin flex-1 overflow-y-auto px-5 py-4">{children}</div>
+              {footer ? <div className="flex flex-wrap justify-end gap-2 border-t border-ink-100 px-5 py-4">{footer}</div> : null}
+            </motion.div>
           </div>
-          <div className="scrollbar-thin flex-1 overflow-y-auto px-5 py-5">{children}</div>
-          {footer ? <div className="flex flex-wrap justify-end gap-2 border-t border-ink-100 px-5 py-4">{footer}</div> : null}
-        </div>
-      </div>
+        ) : null}
+      </AnimatePresence>
+    </Portal>
+  );
+}
+
+/**
+ * A panel for a form beside a list. Laptop: slides in from the right, and its
+ * left edge can be pulled to make it wider. Phone: a bottom sheet.
+ */
+export function Drawer({ wide, ...props }: PanelProps & { wide?: boolean }) {
+  const phone = useIsPhone();
+  if (phone) return <BottomSheet {...props} />;
+  return <SideDrawer wide={wide} {...props} />;
+}
+
+function SideDrawer({ open, onClose, title, description, children, footer, wide }: PanelProps & { wide?: boolean }) {
+  const [big, setBig] = useState(false);
+  useOverlay(open, onClose);
+  useEffect(() => {
+    if (!open) setBig(false);
+  }, [open]);
+  return (
+    <Portal>
+      <AnimatePresence>
+        {open ? (
+          <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true">
+            <motion.div className={BACKDROP} {...fade} onClick={onClose} />
+            <motion.div
+              className={cn('relative flex h-full w-full flex-col bg-white shadow-lift transition-[max-width] duration-300', big ? 'max-w-5xl' : wide ? 'max-w-2xl' : 'max-w-md')}
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={SPRING}
+            >
+              {/* the edge to pull: left to widen, right to narrow or shut */}
+              <motion.div
+                aria-hidden
+                className="group absolute inset-y-0 -left-2 z-10 flex w-4 cursor-ew-resize touch-none items-center justify-center"
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.15}
+                dragSnapToOrigin
+                onDoubleClick={() => setBig((value) => !value)}
+                onDragEnd={(_, info) => {
+                  if (info.offset.x < -40) setBig(true);
+                  else if (info.offset.x > 40) {
+                    if (big) setBig(false);
+                    else onClose();
+                  }
+                }}
+              >
+                <span className="h-12 w-1.5 rounded-full bg-ink-300 opacity-60 transition group-hover:bg-brand-500 group-hover:opacity-100" />
+              </motion.div>
+              <div className="border-b border-ink-100 px-5 py-4">
+                <PanelHead title={title} description={description} onClose={onClose} />
+              </div>
+              <div className="scrollbar-thin flex-1 overflow-y-auto px-5 py-5">{children}</div>
+              {footer ? <div className="flex flex-wrap justify-end gap-2 border-t border-ink-100 px-5 py-4">{footer}</div> : null}
+            </motion.div>
+          </div>
+        ) : null}
+      </AnimatePresence>
     </Portal>
   );
 }
@@ -146,7 +264,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <ToastContext.Provider value={api.current}>
       {children}
-      <div className="no-print pointer-events-none fixed inset-x-0 bottom-4 z-[60] flex flex-col items-center gap-2 px-4" aria-live="polite">
+      <div className="no-print pointer-events-none fixed inset-x-0 bottom-[calc(1rem+var(--dash-bottom))] z-[60] flex flex-col items-center gap-2 px-4" aria-live="polite">
         {toasts.map((toast) => (
           <div
             key={toast.id}
@@ -195,7 +313,7 @@ export function LoadingButton({
 export function ConfirmButton({
   title,
   text,
-  confirmLabel = 'Yes, continue',
+  confirmLabel,
   onConfirm,
   children,
   danger = true,
@@ -207,6 +325,7 @@ export function ConfirmButton({
   onConfirm: () => Promise<void> | void;
   danger?: boolean;
 }) {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   return (
@@ -222,7 +341,7 @@ export function ConfirmButton({
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={busy}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton
               variant={danger ? 'accent' : 'primary'}
@@ -237,21 +356,22 @@ export function ConfirmButton({
                 }
               }}
             >
-              {confirmLabel}
+              {confirmLabel ?? t('Yes, continue')}
             </LoadingButton>
           </>
         }
       >
-        <div className="text-[15px] text-ink-600">{text ?? 'This cannot be undone.'}</div>
+        <div className="text-[15px] text-ink-600">{text ?? t('This cannot be undone.')}</div>
       </Modal>
     </>
   );
 }
 
-export function PrintButton({ label = 'Print' }: { label?: string }) {
+export function PrintButton({ label }: { label?: string }) {
+  const t = useT();
   return (
     <button type="button" onClick={() => window.print()} className={buttonClass('secondary', 'md', 'no-print')}>
-      <Printer size={18} /> {label}
+      <Printer size={18} /> {label ?? t('Print')}
     </button>
   );
 }
@@ -278,8 +398,125 @@ export function useUrlParam() {
   return { get: (name: string) => params.get(name) ?? '', set, pending };
 }
 
+/**
+ * Filters on a phone.
+ *
+ * On a laptop a list's dropdowns and date pickers sit in a row above it. A
+ * phone has no room for that row, so inside a <FilterHost> (the dashboard
+ * frame is one) each <UrlSelect> and <UrlDate> hides itself at phone width
+ * and hands its choices to a round button at the bottom right. Tapping it
+ * slides up a sheet with every filter as a tick list. A screen does nothing
+ * special: it keeps placing UrlSelect and UrlDate as before.
+ */
+type FilterDef =
+  | { kind: 'select'; param: string; label: string; options: { value: string; label: string }[] }
+  | { kind: 'date'; param: string; label: string; type: 'date' | 'month'; max?: string };
+
+const FilterHostContext = createContext<((def: FilterDef) => () => void) | null>(null);
+
+function useFilterSlot(def: FilterDef): boolean {
+  const register = useContext(FilterHostContext);
+  const key = JSON.stringify(def);
+  useEffect(() => {
+    if (!register) return;
+    return register(JSON.parse(key) as FilterDef);
+  }, [register, key]);
+  return Boolean(register);
+}
+
+export function FilterHost({ children }: { children: ReactNode }) {
+  const [defs, setDefs] = useState<FilterDef[]>([]);
+  const register = useCallback((def: FilterDef) => {
+    setDefs((list) => (list.some((d) => d.param === def.param) ? list.map((d) => (d.param === def.param ? def : d)) : [...list, def]));
+    return () => setDefs((list) => list.filter((d) => d !== def));
+  }, []);
+  return (
+    <FilterHostContext.Provider value={register}>
+      {children}
+      {defs.length ? <FilterButton defs={defs} /> : null}
+    </FilterHostContext.Provider>
+  );
+}
+
+function FilterButton({ defs }: { defs: FilterDef[] }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
+  const { get, set } = useUrlParam();
+  const t = useT();
+  const [open, setOpen] = useState(false);
+  const active = defs.filter((def) => get(def.param)).length;
+
+  const clearAll = () => {
+    const next = new URLSearchParams(params.toString());
+    for (const def of defs) next.delete(def.param);
+    next.delete('page');
+    const query = next.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  };
+
+  return (
+    <>
+      <button
+        type="button"
+        aria-label={active ? `${t('Filters')}: ${active}` : t('Filters')}
+        onClick={() => setOpen(true)}
+        className="no-print fixed bottom-[calc(1rem+var(--dash-bottom))] right-4 z-30 grid h-14 w-14 place-items-center rounded-full bg-brand-700 text-white shadow-lift transition-transform active:scale-90 sm:hidden"
+      >
+        <SlidersHorizontal size={22} />
+        {active ? <span className="absolute -right-0.5 -top-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-accent-500 px-1 text-[11px] font-bold text-white ring-2 ring-white">{active}</span> : null}
+      </button>
+      <BottomSheet
+        open={open}
+        onClose={() => setOpen(false)}
+        title={t('Filters')}
+        footer={
+          <>
+            <Button variant="secondary" className="flex-1" disabled={!active} onClick={clearAll}>
+              {t('Clear all')}
+            </Button>
+            <Button className="flex-1" onClick={() => setOpen(false)}>
+              {t('Show results')}
+            </Button>
+          </>
+        }
+      >
+        <div className="space-y-5">
+          {defs.map((def) => (
+            <fieldset key={def.param}>
+              <legend className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink-500">{def.label}</legend>
+              {def.kind === 'date' ? (
+                <input type={def.type} aria-label={def.label} value={get(def.param)} max={def.max} onChange={(event) => set(def.param, event.target.value)} className="control" />
+              ) : (
+                <ul className="overflow-hidden rounded-xl border border-ink-200">
+                  {def.options.map((option) => {
+                    const checked = get(def.param) === option.value;
+                    return (
+                      <li key={option.value} className="border-b border-ink-100 last:border-b-0">
+                        <label className={cn('flex cursor-pointer items-center gap-3 px-3.5 py-3 text-[15px] active:bg-ink-50', checked ? 'font-semibold text-brand-800' : 'text-ink-800')}>
+                          <input type="checkbox" className="peer sr-only" checked={checked} onChange={() => set(def.param, option.value)} />
+                          <span className={cn('grid h-5 w-5 shrink-0 place-items-center rounded-md border-2 transition-colors', checked ? 'border-brand-700 bg-brand-700 text-white' : 'border-ink-300 bg-white text-transparent')}>
+                            <Check size={14} strokeWidth={3} />
+                          </span>
+                          {option.label}
+                        </label>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </fieldset>
+          ))}
+        </div>
+      </BottomSheet>
+    </>
+  );
+}
+
 /** Search box bound to ?q= ; waits for a pause in typing. */
-export function SearchInput({ placeholder = 'Search', param = 'q', className }: { placeholder?: string; param?: string; className?: string }) {
+export function SearchInput({ placeholder: given, param = 'q', className }: { placeholder?: string; param?: string; className?: string }) {
+  const t = useT();
+  const placeholder = given ?? t('Search');
   const { get, set, pending } = useUrlParam();
   const [value, setValue] = useState(get(param));
   const timer = useRef<number | null>(null);
@@ -317,8 +554,9 @@ export function UrlSelect({
   className?: string;
 }) {
   const { get, set } = useUrlParam();
+  const inSheet = useFilterSlot({ kind: 'select', param, label, options });
   return (
-    <select aria-label={label} value={get(param)} onChange={(event) => set(param, event.target.value)} className={cn('control w-auto min-w-[9rem] pr-9', className)}>
+    <select aria-label={label} value={get(param)} onChange={(event) => set(param, event.target.value)} className={cn('control w-auto min-w-[9rem] pr-9', inSheet && 'max-sm:hidden', className)}>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -331,10 +569,12 @@ export function UrlSelect({
 /** A date or month picker bound to a query parameter. */
 export function UrlDate({ param, type = 'date', label, className, max }: { param: string; type?: 'date' | 'month'; label: string; className?: string; max?: string }) {
   const { get, set } = useUrlParam();
-  return <input type={type} aria-label={label} value={get(param)} max={max} onChange={(event) => set(param, event.target.value)} className={cn('control w-auto', className)} />;
+  const inSheet = useFilterSlot({ kind: 'date', param, label, type, max });
+  return <input type={type} aria-label={label} value={get(param)} max={max} onChange={(event) => set(param, event.target.value)} className={cn('control w-auto', inSheet && 'max-sm:hidden', className)} />;
 }
 
 export function Pagination({ page, pageSize, total }: { page: number; pageSize: number; total: number }) {
+  const t = useT();
   const { set } = useUrlParam();
   const pages = Math.max(1, Math.ceil(total / pageSize));
   if (total <= pageSize) return null;
@@ -343,16 +583,16 @@ export function Pagination({ page, pageSize, total }: { page: number; pageSize: 
   return (
     <div className="no-print flex items-center justify-between gap-3 px-4 py-3 text-sm text-ink-500">
       <span>
-        {from} to {to} of {total}
+        {t('{from} to {to} of {total}', { from, to, total })}
       </span>
       <div className="flex items-center gap-1">
-        <Button variant="secondary" size="sm" disabled={page <= 1} onClick={() => set('page', String(page - 1))} aria-label="Previous page">
+        <Button variant="secondary" size="sm" disabled={page <= 1} onClick={() => set('page', String(page - 1))} aria-label={t('Previous page')}>
           <ChevronLeft size={16} />
         </Button>
         <span className="px-2 font-semibold text-ink-700">
           {page} / {pages}
         </span>
-        <Button variant="secondary" size="sm" disabled={page >= pages} onClick={() => set('page', String(page + 1))} aria-label="Next page">
+        <Button variant="secondary" size="sm" disabled={page >= pages} onClick={() => set('page', String(page + 1))} aria-label={t('Next page')}>
           <ChevronRight size={16} />
         </Button>
       </div>

@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useCallback, useState } from 'react';
 import { useToast } from '@/components/ui/client';
+import { useT } from '@/components/ui/lang';
 import type { ActionResult } from '@/lib/api';
 
 /**
@@ -19,6 +20,7 @@ export function useAction<A extends unknown[], T>(
 ) {
   const router = useRouter();
   const toast = useToast();
+  const t = useT();
   const [busy, setBusy] = useState(false);
   const [fields, setFields] = useState<Record<string, string>>({});
   const { success, onDone } = options;
@@ -31,7 +33,7 @@ export function useAction<A extends unknown[], T>(
         const result = await fn(...args);
         if (!result.ok) {
           setFields(result.fields ?? {});
-          toast.error(result.error);
+          toast.error(t(result.error));
           return false;
         }
         if (success) toast.success(typeof success === 'function' ? success(result.data) : success);
@@ -39,13 +41,13 @@ export function useAction<A extends unknown[], T>(
         router.refresh();
         return true;
       } catch {
-        toast.error('Could not reach the server. Check the connection and try again.');
+        toast.error(t('Could not reach the server. Check the connection and try again.'));
         return false;
       } finally {
         setBusy(false);
       }
     },
-    [fn, onDone, router, success, toast],
+    [fn, onDone, router, success, t, toast],
   );
 
   return { run, busy, fields, clearFields: () => setFields({}) };

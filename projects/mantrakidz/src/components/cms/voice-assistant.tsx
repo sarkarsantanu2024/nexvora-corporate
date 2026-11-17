@@ -20,6 +20,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ContentData } from '@/cms/types';
 import { Button } from '@/components/ui/core';
 import { LoadingButton } from '@/components/ui/client';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { formatDateTime } from '@/lib/date';
 import { LANGS, LANG_NAMES, contentKey, isLang, type Lang } from '@/lib/i18n';
@@ -90,6 +91,7 @@ const shown = (value: unknown, type?: string): string => {
 };
 
 export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; freeForm: boolean }) {
+  const t = useT();
   const router = useRouter();
   const pathname = usePathname();
   const search = useSearchParams();
@@ -747,13 +749,13 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
 
       {open ? (
         <section
-          aria-label="Voice assistant"
-          className="no-print fixed inset-x-0 bottom-0 z-40 flex max-h-[82dvh] flex-col rounded-t-3xl border border-ink-200 bg-white shadow-lift sm:inset-x-auto sm:bottom-24 sm:right-6 sm:max-h-[min(640px,calc(100dvh-8rem))] sm:w-[400px] sm:rounded-3xl"
+          aria-label={t('Voice assistant')}
+          className="no-print fixed inset-x-0 bottom-0 z-40 flex max-h-[82dvh] flex-col rounded-t-3xl border border-ink-200 bg-white shadow-lift sm:inset-x-auto sm:bottom-[calc(6rem+var(--dash-bottom))] sm:right-6 sm:max-h-[min(640px,calc(100dvh-8rem-var(--dash-bottom)))] sm:w-[400px] sm:rounded-3xl"
           style={{ animation: 'mk-voice-in .28s cubic-bezier(.2,.7,.2,1) both' }}
         >
           <header className="flex shrink-0 items-center gap-2 border-b border-ink-100 px-4 py-3">
-            <p className="min-w-0 flex-1 truncate font-display text-lg font-bold text-ink-900">Voice</p>
-            <div className="flex rounded-lg border border-ink-200 p-0.5" role="group" aria-label="Language you speak in">
+            <p className="min-w-0 flex-1 truncate font-display text-lg font-bold text-ink-900">{t('Voice')}</p>
+            <div className="flex rounded-lg border border-ink-200 p-0.5" role="group" aria-label={t('Language you speak in')}>
               {VOICE_LANGS.map((item) => (
                 <button
                   key={item.value}
@@ -772,7 +774,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
               ))}
             </div>
             <IconButton
-              label={sound ? 'Spoken replies are on' : 'Spoken replies are off'}
+              label={sound ? t('Spoken replies are on') : t('Spoken replies are off')}
               onClick={() => {
                 setSound(!sound);
                 remember(SOUND_KEY, sound ? 'off' : 'on');
@@ -781,19 +783,19 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
             >
               {sound ? <Volume2 size={18} /> : <VolumeX size={18} />}
             </IconButton>
-            <IconButton label="Examples of what to say" onClick={() => setHelp((value) => !value)}>
+            <IconButton label={t('Examples of what to say')} onClick={() => setHelp((value) => !value)}>
               <HelpCircle size={18} />
             </IconButton>
-            <IconButton label="Close" onClick={close}>
+            <IconButton label={t('Close')} onClick={close}>
               <X size={19} />
             </IconButton>
           </header>
 
           <label className="flex shrink-0 items-center gap-2 border-b border-ink-100 px-4 py-2 text-sm">
-            <span className="font-semibold text-ink-600">Changes go to</span>
+            <span className="font-semibold text-ink-600">{t('Changes go to')}</span>
             <select
               value={editLang}
-              aria-label="Which language of the website to change"
+              aria-label={t('Which language of the website to change')}
               onChange={(event) => {
                 const next = event.target.value as Lang;
                 setEditLang(next);
@@ -808,7 +810,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                 </option>
               ))}
             </select>
-            <span className="min-w-0 flex-1 truncate text-ink-500">{editLang === 'en' ? 'the English site' : 'wording only'}</span>
+            <span className="min-w-0 flex-1 truncate text-ink-500">{editLang === 'en' ? t('the English site') : t('wording only')}</span>
           </label>
 
           {/* what the mic is doing */}
@@ -830,16 +832,16 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
             ) : (
               <>
                 <Mic size={18} className="shrink-0 text-ink-400" />
-                <span className="min-w-0 flex-1 text-ink-600">{supported === null ? 'Getting ready' : 'Tap the mic and say what to change.'}</span>
+                <span className="min-w-0 flex-1 text-ink-600">{supported === null ? t('Getting ready') : t('Tap the mic and say what to change.')}</span>
               </>
             )}
-            {dictation ? <span className="shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs font-bold text-brand-800">Dictation</span> : null}
+            {dictation ? <span className="shrink-0 rounded-full bg-brand-100 px-2 py-0.5 text-xs font-bold text-brand-800">{t('Dictation')}</span> : null}
           </div>
 
           <div ref={log} className="scrollbar-thin flex-1 space-y-2 overflow-y-auto px-4 py-3">
             {entries.length === 0 && !help ? (
               <div className="py-2 text-sm text-ink-600">
-                <p className="font-semibold text-ink-800">Try saying</p>
+                <p className="font-semibold text-ink-800">{t('Try saying')}</p>
                 <ul className="mt-1.5 space-y-1.5">
                   {groups.slice(0, 3).map((group) => (
                     <li key={group.title}>
@@ -849,7 +851,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                     </li>
                   ))}
                 </ul>
-                <p className="mt-2 text-ink-500">Every change is shown to you first. Nothing happens until you say yes.</p>
+                <p className="mt-2 text-ink-500">{t('Every change is shown to you first. Nothing happens until you say yes.')}</p>
               </div>
             ) : null}
 
@@ -865,7 +867,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                   {entry.text}
                   {entry.href ? (
                     <a href={entry.href} target="_blank" rel="noreferrer" className="mt-1 flex items-center gap-1 font-semibold underline">
-                      <ExternalLink size={14} /> Open the website
+                      <ExternalLink size={14} /> {t('Open the website')}
                     </a>
                   ) : null}
                 </p>
@@ -874,13 +876,13 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
 
             {working ? (
               <p className="flex items-center gap-2 text-sm text-ink-500">
-                <Loader2 size={15} className="animate-spin" /> Working it out
+                <Loader2 size={15} className="animate-spin" /> {t('Working it out')}
               </p>
             ) : null}
 
             {help ? (
               <div className="animate-fade-up rounded-2xl border border-ink-200 p-3 text-sm">
-                <p className="font-bold text-ink-900">Things you can say</p>
+                <p className="font-bold text-ink-900">{t('Things you can say')}</p>
                 {groups.map((group) => (
                   <div key={group.title} className="mt-2">
                     <p className="text-xs font-bold uppercase tracking-wide text-ink-400">{group.title}</p>
@@ -900,7 +902,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
 
             {choice ? (
               <div className="rounded-2xl border border-brand-200 bg-brand-50 p-3" style={{ animation: 'mk-voice-in .28s cubic-bezier(.2,.7,.2,1) both' }}>
-                <p className="text-sm font-bold text-brand-900">Did you mean</p>
+                <p className="text-sm font-bold text-brand-900">{t('Did you mean')}</p>
                 <ul className="mt-2 space-y-1.5">
                   {choice.candidates.map((candidate, index) => (
                     <li key={`${candidate.section}.${candidate.field}`}>
@@ -919,17 +921,17 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                     </li>
                   ))}
                 </ul>
-                <p className="mt-2 text-xs text-brand-800">Tap one, or say “the first one”.</p>
+                <p className="mt-2 text-xs text-brand-800">{t('Tap one, or say “the first one”.')}</p>
               </div>
             ) : null}
 
             {picker ? (
               <div className="rounded-2xl border border-brand-200 bg-brand-50 p-3" style={{ animation: 'mk-voice-in .28s cubic-bezier(.2,.7,.2,1) both' }}>
-                <p className="text-sm font-bold text-brand-900">{picker.kind === 'gallery' ? `Photos for the gallery${picker.album ? `, album ${picker.album}` : ''}` : `New photo for ${targetLabel(catalogue, picker.section, picker.field)}`}</p>
+                <p className="text-sm font-bold text-brand-900">{picker.kind === 'gallery' ? (picker.album ? t('Photos for the gallery, album {album}', { album: picker.album }) : t('Photos for the gallery')) : t('New photo for {name}', { name: targetLabel(catalogue, picker.section, picker.field) })}</p>
                 {uploading !== null ? (
                   <div className="mt-3">
                     <p className="flex items-center gap-2 text-sm font-medium text-brand-900">
-                      <Loader2 size={15} className="animate-spin" /> Uploading {Math.round(uploading * 100)}%
+                      <Loader2 size={15} className="animate-spin" /> {t('Uploading {n}%', { n: Math.round(uploading * 100) })}
                     </p>
                     <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white">
                       <div className="h-full rounded-full bg-brand-600 transition-[width]" style={{ width: `${Math.max(4, uploading * 100)}%` }} />
@@ -938,18 +940,18 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                 ) : (
                   <div className="mt-2 flex flex-wrap gap-2">
                     <Button size="sm" onClick={() => fileInput.current?.click()}>
-                      <UploadCloud size={16} /> {picker.kind === 'gallery' ? 'Choose photos' : 'Choose a photo'}
+                      <UploadCloud size={16} /> {picker.kind === 'gallery' ? t('Choose photos') : t('Choose a photo')}
                     </Button>
                     <Button size="sm" variant="secondary" className="hidden [@media(pointer:coarse)]:inline-flex" onClick={() => cameraInput.current?.click()}>
-                      <Camera size={16} /> Take a photo
+                      <Camera size={16} /> {t('Take a photo')}
                     </Button>
                     {picker.kind === 'field' ? (
                       <Button size="sm" variant="secondary" onClick={() => setLibrary(true)}>
-                        <FolderOpen size={16} /> From library
+                        <FolderOpen size={16} /> {t('From library')}
                       </Button>
                     ) : null}
                     <Button size="sm" variant="ghost" onClick={() => setPicker(null)}>
-                      Cancel
+                      {t('Cancel')}
                     </Button>
                   </div>
                 )}
@@ -962,7 +964,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                   <span className="min-w-0 flex-1">{pending.title}</span>
                   {pending.guess ? (
                     <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-sun-100 px-2 py-0.5 text-xs font-bold text-sun-700">
-                      <Sparkles size={12} /> Best guess
+                      <Sparkles size={12} /> {t('Best guess')}
                     </span>
                   ) : null}
                 </p>
@@ -978,7 +980,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                     {pending.photos.before ? (
                       <>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={pending.photos.before} alt="Current photo" className="h-20 w-20 shrink-0 rounded-xl bg-ink-100 object-cover opacity-50" />
+                        <img src={pending.photos.before} alt={t('Current photo')} className="h-20 w-20 shrink-0 rounded-xl bg-ink-100 object-cover opacity-50" />
                         <span className="shrink-0 text-ink-400" aria-hidden>
                           →
                         </span>
@@ -986,15 +988,15 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                     ) : null}
                     {pending.photos.after.slice(0, 6).map((url) => (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img key={url} src={url} alt="New photo" className="h-20 w-20 shrink-0 rounded-xl bg-ink-100 object-cover ring-2 ring-brand-400" />
+                      <img key={url} src={url} alt={t('New photo')} className="h-20 w-20 shrink-0 rounded-xl bg-ink-100 object-cover ring-2 ring-brand-400" />
                     ))}
                     {pending.photos.after.length > 6 ? <span className="shrink-0 text-sm font-semibold text-ink-500">+{pending.photos.after.length - 6}</span> : null}
                   </div>
                 ) : null}
                 {pending.album ? (
                   <label className="mt-2.5 block text-sm">
-                    <span className="text-xs font-bold uppercase tracking-wide text-ink-400">Album</span>
-                    <input value={album} onChange={(event) => setAlbum(event.target.value)} maxLength={60} placeholder="General" className="control mt-1" />
+                    <span className="text-xs font-bold uppercase tracking-wide text-ink-400">{t('Album')}</span>
+                    <input value={album} onChange={(event) => setAlbum(event.target.value)} maxLength={60} placeholder={t('General')} className="control mt-1" />
                   </label>
                 ) : null}
                 {pending.warn ? <p className="mt-2.5 rounded-lg bg-sun-50 px-2.5 py-1.5 text-sm font-medium text-sun-700">{pending.warn}</p> : null}
@@ -1003,9 +1005,9 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
                     {applying ? null : <Check size={16} />} {pending.confirmLabel}
                   </LoadingButton>
                   <Button size="sm" variant="secondary" disabled={applying} onClick={() => { setPending(null); note('Cancelled. Nothing was changed.'); }}>
-                    Cancel
+                    {t('Cancel')}
                   </Button>
-                  <span className="text-xs text-ink-500">or say “yes” / “no”</span>
+                  <span className="text-xs text-ink-500">{t('or say “yes” / “no”')}</span>
                 </div>
               </div>
             ) : null}
@@ -1025,11 +1027,11 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
             <input
               value={typed}
               onChange={(event) => setTyped(event.target.value)}
-              placeholder="Or type a command"
-              aria-label="Type a command instead of speaking"
+              placeholder={t('Or type a command')}
+              aria-label={t('Type a command instead of speaking')}
               className="h-10 min-w-0 flex-1 rounded-xl border border-ink-200 bg-white px-3 text-[15px] text-ink-900 placeholder:text-ink-400 focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-100"
             />
-            <button type="submit" disabled={!typed.trim() || working} aria-label="Send the command" className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-700 text-white transition hover:bg-brand-800 disabled:opacity-40">
+            <button type="submit" disabled={!typed.trim() || working} aria-label={t('Send the command')} className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-700 text-white transition hover:bg-brand-800 disabled:opacity-40">
               <SendHorizontal size={18} />
             </button>
           </form>
@@ -1037,7 +1039,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
       ) : null}
 
       {/* the mic */}
-      <div className="no-print fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6">
+      <div className="no-print fixed bottom-[calc(1rem+var(--dash-bottom))] right-4 z-50 sm:bottom-[calc(1.5rem+var(--dash-bottom))] sm:right-6">
         {listening ? (
           <>
             <span className="absolute inset-0 animate-pulse-ring rounded-full bg-accent-400" aria-hidden />
@@ -1048,8 +1050,8 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
           type="button"
           onClick={toggleMic}
           aria-pressed={listening}
-          aria-label={listening ? 'Stop listening' : supported === false ? 'Voice assistant (type commands: voice is not available in this browser)' : 'Voice assistant: tap and speak'}
-          title={listening ? 'Stop listening' : supported === false ? UNSUPPORTED : 'Tap and say what to change'}
+          aria-label={listening ? t('Stop listening') : supported === false ? t('Voice assistant (type commands: voice is not available in this browser)') : t('Voice assistant: tap and speak')}
+          title={listening ? t('Stop listening') : supported === false ? UNSUPPORTED : t('Tap and say what to change')}
           className={cn(
             'relative grid h-16 w-16 place-items-center rounded-full text-white shadow-lift transition active:scale-95 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2',
             listening ? 'bg-accent-500 focus-visible:outline-accent-300' : supported === false ? 'bg-ink-400 focus-visible:outline-ink-300' : 'bg-brand-700 hover:bg-brand-800 focus-visible:outline-brand-300',

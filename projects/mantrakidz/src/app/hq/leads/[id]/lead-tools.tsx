@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { ConfirmButton, LoadingButton, Modal, useToast } from '@/components/ui/client';
 import { Button, Field, FormGrid, Input, Notice, Select, Textarea } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import type { FranchiseStage } from '@/db/schema';
 import { convertLeadAction, deleteLeadAction, updateLeadAction } from '@/server/hq/actions';
 import { STAGE_LABELS } from '@/server/hq/constants';
@@ -27,17 +28,18 @@ export function LeadProgress({
   assignedTo: string | null;
   people: { id: string; name: string }[];
 }) {
+  const t = useT();
   const [lostOpen, setLostOpen] = useState(false);
   const [reason, setReason] = useState('');
   const [followUp, setFollowUp] = useState(nextFollowUp ?? '');
-  const update = useAction(updateLeadAction, { success: 'Saved' });
-  const lose = useAction(updateLeadAction, { success: 'Marked as lost', onDone: () => setLostOpen(false) });
+  const update = useAction(updateLeadAction, { success: t('Saved') });
+  const lose = useAction(updateLeadAction, { success: t('Marked as lost'), onDone: () => setLostOpen(false) });
   const closed = stage === 'onboarded';
 
   return (
     <>
       <FormGrid className="sm:grid-cols-3">
-        <Field label="Stage" hint={closed ? 'This lead is now a centre' : undefined}>
+        <Field label={t('Stage')} hint={closed ? t('This lead is now a centre') : undefined}>
           <Select
             value={stage}
             disabled={closed || update.busy}
@@ -49,12 +51,12 @@ export function LeadProgress({
           >
             {FRANCHISE_STAGES.filter((s) => s !== 'onboarded' || closed).map((s) => (
               <option key={s} value={s}>
-                {STAGE_LABELS[s]}
+                {t(STAGE_LABELS[s])}
               </option>
             ))}
           </Select>
         </Field>
-        <Field label="Next follow-up">
+        <Field label={t('Next follow-up')}>
           <Input
             type="date"
             value={followUp}
@@ -65,9 +67,9 @@ export function LeadProgress({
             }}
           />
         </Field>
-        <Field label="Assigned to">
+        <Field label={t('Assigned to')}>
           <Select value={assignedTo ?? ''} disabled={update.busy} onChange={(e) => void update.run(id, { assignedTo: e.target.value || null })}>
-            <option value="">Nobody yet</option>
+            <option value="">{t('Nobody yet')}</option>
             {people.map((person) => (
               <option key={person.id} value={person.id}>
                 {person.name}
@@ -80,22 +82,22 @@ export function LeadProgress({
       <Modal
         open={lostOpen}
         onClose={() => !lose.busy && setLostOpen(false)}
-        title="Mark this lead as lost"
-        description="The reason is kept on the lead, so the same ground is not covered twice."
+        title={t('Mark this lead as lost')}
+        description={t('The reason is kept on the lead, so the same ground is not covered twice.')}
         size="sm"
         footer={
           <>
             <Button variant="secondary" onClick={() => setLostOpen(false)} disabled={lose.busy}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton variant="accent" loading={lose.busy} onClick={() => lose.run(id, { stage: 'lost', lostReason: reason })}>
-              Mark as lost
+              {t('Mark as lost')}
             </LoadingButton>
           </>
         }
       >
-        <Field label="Why was it lost" required error={lose.fields.lostReason}>
-          <Textarea value={reason} onChange={(e) => setReason(e.target.value)} placeholder="For example: could not arrange a suitable space" invalid={Boolean(lose.fields.lostReason)} autoFocus />
+        <Field label={t('Why was it lost')} required error={lose.fields.lostReason && t(lose.fields.lostReason)}>
+          <Textarea value={reason} onChange={(e) => setReason(e.target.value)} placeholder={t('For example: could not arrange a suitable space')} invalid={Boolean(lose.fields.lostReason)} autoFocus />
         </Field>
       </Modal>
     </>
@@ -118,6 +120,7 @@ type ConvertValues = {
 
 /** Turns the lead into a centre in onboarding, with the owner's login if wanted. */
 export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id: string; ownerName: string; city: string; state: string; canCreateLogin: boolean }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [open, setOpen] = useState(false);
@@ -136,7 +139,7 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
   });
   const convert = useAction(convertLeadAction, {
     onDone: ({ centre, login }) => {
-      toast.success(login ? `${centre.code} created with login ${login.username}` : `${centre.code} created`);
+      toast.success(login ? t('{code} created with login {username}', { code: centre.code, username: login.username }) : t('{code} created', { code: centre.code }));
       router.push(`/hq/centres/${centre.id}`);
     },
   });
@@ -157,45 +160,45 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
   return (
     <>
       <Button variant="success" onClick={() => setOpen(true)}>
-        <Building2 size={18} /> Convert to centre
+        <Building2 size={18} /> {t('Convert to centre')}
       </Button>
       <Modal
         open={open}
         onClose={() => !convert.busy && setOpen(false)}
         size="lg"
-        title="Convert to centre"
-        description={`${ownerName} becomes the owner. The centre starts in onboarding; activate it when it is ready to open.`}
+        title={t('Convert to centre')}
+        description={t('{ownerName} becomes the owner. The centre starts in onboarding; activate it when it is ready to open.', { ownerName })}
         footer={
           <>
             <Button variant="secondary" onClick={() => setOpen(false)} disabled={convert.busy}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton loading={convert.busy} onClick={submit}>
-              Create the centre
+              {t('Create the centre')}
             </LoadingButton>
           </>
         }
       >
         <FormGrid>
-          <Field label="Centre name" required className="sm:col-span-2" error={errors.centreName}>
+          <Field label={t('Centre name')} required className="sm:col-span-2" error={errors.centreName && t(errors.centreName)}>
             <Input value={values.centreName} onChange={(e) => set('centreName', e.target.value)} invalid={Boolean(errors.centreName)} />
           </Field>
-          <Field label="Area">
+          <Field label={t('Area')}>
             <Input value={values.area} onChange={(e) => set('area', e.target.value)} />
           </Field>
-          <Field label="City">
+          <Field label={t('City')}>
             <Input value={values.city} onChange={(e) => set('city', e.target.value)} />
           </Field>
-          <Field label="Royalty">
+          <Field label={t('Royalty')}>
             <Select value={values.royaltyType} onChange={(e) => set('royaltyType', e.target.value as ConvertValues['royaltyType'])}>
-              <option value="percent">Percent of fee collection</option>
-              <option value="fixed">Fixed amount a month</option>
+              <option value="percent">{t('Percent of fee collection')}</option>
+              <option value="fixed">{t('Fixed amount a month')}</option>
             </Select>
           </Field>
-          <Field label={values.royaltyType === 'percent' ? 'Percent' : 'Rupees a month'} error={errors.royaltyValue}>
+          <Field label={values.royaltyType === 'percent' ? t('Percent') : t('Rupees a month')} error={errors.royaltyValue && t(errors.royaltyValue)}>
             <Input type="number" min={0} value={values.royaltyValue} onChange={(e) => set('royaltyValue', e.target.value)} invalid={Boolean(errors.royaltyValue)} />
           </Field>
-          <Field label="Franchise fee, rupees" hint="Can be filled in later on the centre" error={errors.franchiseFee}>
+          <Field label={t('Franchise fee, rupees')} hint={t('Can be filled in later on the centre')} error={errors.franchiseFee && t(errors.franchiseFee)}>
             <Input type="number" min={0} value={values.franchiseFee} onChange={(e) => set('franchiseFee', e.target.value)} />
           </Field>
         </FormGrid>
@@ -204,25 +207,25 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
           <div className="mt-5 rounded-2xl border border-ink-200 p-4">
             <label className="flex items-center gap-2.5 text-sm font-semibold text-ink-800">
               <input type="checkbox" checked={values.withLogin} onChange={(e) => set('withLogin', e.target.checked)} className="h-4 w-4 accent-brand-700" />
-              Create the owner&apos;s login now
+              {t("Create the owner's login now")}
             </label>
             {values.withLogin ? (
               <FormGrid className="mt-4">
-                <Field label="Username" required error={errors['login.username'] ?? errors.username}>
+                <Field label={t('Username')} required error={t(errors['login.username'] ?? errors.username ?? '')}>
                   <Input value={values.username} onChange={(e) => set('username', e.target.value)} autoCapitalize="none" invalid={Boolean(errors['login.username'] ?? errors.username)} />
                 </Field>
-                <Field label="Starting password" required hint="Shown only now. Pass it to the owner." error={errors['login.password'] ?? errors.password}>
+                <Field label={t('Starting password')} required hint={t('Shown only now. Pass it to the owner.')} error={t(errors['login.password'] ?? errors.password ?? '')}>
                   <Input value={values.password} onChange={(e) => set('password', e.target.value)} autoComplete="off" invalid={Boolean(errors['login.password'] ?? errors.password)} />
                 </Field>
                 <label className="flex items-center gap-2.5 text-sm text-ink-700 sm:col-span-2">
                   <input type="checkbox" checked={values.mustChange} onChange={(e) => set('mustChange', e.target.checked)} className="h-4 w-4 accent-brand-700" />
-                  Ask for a new password at the first login
+                  {t('Ask for a new password at the first login')}
                 </label>
               </FormGrid>
             ) : null}
           </div>
         ) : (
-          <Notice className="mt-5">A head office admin can create the owner&apos;s login from the centre&apos;s People tab.</Notice>
+          <Notice className="mt-5">{t("A head office admin can create the owner's login from the centre's People tab.")}</Notice>
         )}
       </Modal>
     </>
@@ -230,11 +233,12 @@ export function ConvertLead({ id, ownerName, city, state, canCreateLogin }: { id
 }
 
 export function DeleteLead({ id, name }: { id: string; name: string }) {
+  const t = useT();
   const router = useRouter();
-  const remove = useAction(deleteLeadAction, { success: 'Lead deleted', onDone: () => router.push('/hq/leads') });
+  const remove = useAction(deleteLeadAction, { success: t('Lead deleted'), onDone: () => router.push('/hq/leads') });
   return (
-    <ConfirmButton title={`Delete ${name}?`} text="The lead and its notes are removed for good." confirmLabel="Delete lead" onConfirm={async () => void (await remove.run(id))}>
-      <Trash2 size={16} /> Delete
+    <ConfirmButton title={t('Delete {name}?', { name })} text={t('The lead and its notes are removed for good.')} confirmLabel={t('Delete lead')} onConfirm={async () => void (await remove.run(id))}>
+      <Trash2 size={16} /> {t('Delete')}
     </ConfirmButton>
   );
 }

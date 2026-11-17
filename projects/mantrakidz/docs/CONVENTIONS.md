@@ -37,7 +37,10 @@ Next.js 15 App Router, React 19, TypeScript strict, Tailwind 3, Drizzle ORM on P
 | `src/components/ui/charts.tsx` | `BarsChart`, `AreaTrend`, `Donut`, `CHART_COLORS`. |
 | `src/components/ui/motion.tsx` | `Reveal`, `Stagger`, `StaggerItem`, `CountUp`. |
 | `src/components/cms/image-field.tsx` | `<ImageField value onChange folder />`: photo upload with preview, for any form. |
-| `src/components/dash/nav.ts` | The sidebar menu of each area. The routes listed there are the routes to build. |
+| `src/components/dash/nav.ts` | The menu of each area (`NAV`) and the phone bottom bar (`TABS`, at most four screens). The routes listed there are the routes to build. |
+| `src/components/dash/shell.tsx` | The frame of every dashboard screen: sidebar on a laptop; bottom bar, slide-in menu and back arrow on a phone. It sets the page width (up to 1880px) for every screen, so a screen never sets its own outer width. |
+| `src/components/pwa/pwa.tsx`, `src/app/manifest.ts`, `public/sw.js` | The installable app: `usePwa()`, `<InstallApp>`, offline bar, loading bar. The service worker keeps only fixed files, never a dashboard screen or data. |
+| `src/config/brand.ts` | The client's name, logo and app colours in one place. After changing the logo run `npm run icons`. |
 | `src/cms/*` | Website content: section definitions, `content(section)` reader. |
 | `tailwind.config.ts` | Colours: `brand` (indigo), `accent` (red), `ink` (neutrals), `sun`, `mint`, `sky`, `coral`. Fonts: `font-display` (Baloo 2) for headings, `font-sans` for the rest. |
 
@@ -76,7 +79,7 @@ Lists: filters live in the URL (`?q=&status=&page=`) using `SearchInput`, `UrlSe
 
 Forms: a `Drawer` or `Modal` for short forms, a page for long ones. Show field errors from `result.fields` under the field. Disable the button while saving (`LoadingButton`). Toast on success. Confirm before anything destructive (`ConfirmButton`).
 
-Every list has an `EmptyState` that says what the screen is for and offers the first action. Every screen must work at 360px wide: tables scroll sideways inside their card (the `Table` component does this), nothing overflows the page.
+Every list has an `EmptyState` that says what the screen is for and offers the first action. Every screen must work at 360px wide: tables scroll sideways inside their card (the `Table` component does this), nothing overflows the page. Anything pinned to the bottom of the screen adds `var(--dash-bottom)` so it sits above the phone's bottom bar.
 
 ## Look and feel
 

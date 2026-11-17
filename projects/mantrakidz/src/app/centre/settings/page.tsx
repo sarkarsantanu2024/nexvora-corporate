@@ -5,12 +5,14 @@ import { Badge, Card, CardBody, CardHeader, Detail, Notice, PageHeader, Table, T
 import { canManageCentre, isHq, requireCentre } from '@/lib/auth';
 import { formatDate, formatDateTime } from '@/lib/date';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { listCentreLogins } from '@/server/centre/children/staff';
 import { LoginActions, ProfileForm } from './settings-ui';
 
 export const metadata: Metadata = { title: 'Settings' };
 
 export default async function SettingsPage() {
+  const t = await getT();
   const ctx = await requireCentre();
   if (!canManageCentre(ctx.session)) redirect('/centre');
   const { centre, session } = ctx;
@@ -18,10 +20,10 @@ export default async function SettingsPage() {
 
   return (
     <>
-      <PageHeader title="Settings" description="Your centre's contact details and who can log in." />
+      <PageHeader title={t('Settings')} description={t("Your centre's contact details and who can log in.")} />
       <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_minmax(0,24rem)]">
         <Card className="animate-fade-up">
-          <CardHeader title="Centre details" description="Shown to parents on receipts, in messages and on the website." />
+          <CardHeader title={t('Centre details')} description={t('Shown to parents on receipts, in messages and on the website.')} />
           <CardBody>
             <ProfileForm
               initial={{
@@ -38,44 +40,44 @@ export default async function SettingsPage() {
         </Card>
 
         <Card className="animate-fade-up self-start">
-          <CardHeader title="Set by head office" />
+          <CardHeader title={t('Set by head office')} />
           <CardBody>
             <dl className="grid grid-cols-2 gap-4">
-              <Detail label="Centre code">
+              <Detail empty={t('Not added')} label={t('Centre code')}>
                 <span className="tabular font-semibold">{centre.code}</span>
               </Detail>
-              <Detail label="Centre name">{centre.name}</Detail>
-              <Detail label="City">{[centre.city, centre.pincode].filter(Boolean).join(' ')}</Detail>
-              <Detail label="Opened on">{formatDate(centre.openedOn)}</Detail>
-              <Detail label="Agreement from">{formatDate(centre.agreementStart)}</Detail>
-              <Detail label="Agreement until">{formatDate(centre.agreementEnd)}</Detail>
-              <Detail label="Royalty" className="col-span-2">
+              <Detail empty={t('Not added')} label={t('Centre name')}>{centre.name}</Detail>
+              <Detail empty={t('Not added')} label={t('City')}>{[centre.city, centre.pincode].filter(Boolean).join(' ')}</Detail>
+              <Detail empty={t('Not added')} label={t('Opened on')}>{formatDate(centre.openedOn)}</Detail>
+              <Detail empty={t('Not added')} label={t('Agreement from')}>{formatDate(centre.agreementStart)}</Detail>
+              <Detail empty={t('Not added')} label={t('Agreement until')}>{formatDate(centre.agreementEnd)}</Detail>
+              <Detail empty={t('Not added')} label={t('Royalty')} className="col-span-2">
                 {centre.isCompanyOwned
-                  ? 'Company-owned centre, no royalty'
+                  ? t('Company-owned centre, no royalty')
                   : centre.royaltyType === 'percent'
-                    ? `${centre.royaltyValue}% of each month's fee collection`
-                    : `${inr(centre.royaltyValue)} every month`}
+                    ? t("{royaltyValue}% of each month's fee collection", { royaltyValue: centre.royaltyValue })
+                    : t('{royaltyValue} every month', { royaltyValue: inr(centre.royaltyValue) })}
               </Detail>
             </dl>
-            <Notice className="mt-4">Only head office can change these. Call or message head office if something here is wrong.</Notice>
+            <Notice className="mt-4">{t('Only head office can change these. Call or message head office if something here is wrong.')}</Notice>
           </CardBody>
         </Card>
       </div>
 
       <Card className="mt-5 animate-fade-up overflow-hidden">
         <CardHeader
-          title="Logins of this centre"
-          description="Staff logins are given from the Staff screen. A parent's login is on the child's page."
+          title={t('Logins of this centre')}
+          description={t("Staff logins are given from the Staff screen. A parent's login is on the child's page.")}
           className="pb-4"
         />
         <Table>
           <thead>
             <tr>
-              <Th>Name</Th>
-              <Th>Username</Th>
-              <Th>Role</Th>
-              <Th>Last login</Th>
-              <Th>Status</Th>
+              <Th>{t('Name')}</Th>
+              <Th>{t('Username')}</Th>
+              <Th>{t('Role')}</Th>
+              <Th>{t('Last login')}</Th>
+              <Th>{t('Status')}</Th>
               <Th />
             </tr>
           </thead>
@@ -87,15 +89,15 @@ export default async function SettingsPage() {
               return (
                 <Tr key={login.id}>
                   <Td className="font-semibold text-ink-900">
-                    {login.name} {self ? <Badge tone="brand">You</Badge> : null}
+                    {login.name} {self ? <Badge tone="brand">{t('You')}</Badge> : null}
                   </Td>
                   <Td className="tabular">{login.username}</Td>
-                  <Td>{ROLE_LABELS[login.role]}</Td>
-                  <Td className="whitespace-nowrap">{login.lastLoginAt ? formatDateTime(login.lastLoginAt) : <span className="text-ink-400">Never</span>}</Td>
-                  <Td>{login.active ? <Badge tone="green">On</Badge> : <Badge>Switched off</Badge>}</Td>
+                  <Td>{t(ROLE_LABELS[login.role])}</Td>
+                  <Td className="whitespace-nowrap">{login.lastLoginAt ? formatDateTime(login.lastLoginAt) : <span className="text-ink-400">{t('Never')}</span>}</Td>
+                  <Td>{login.active ? <Badge tone="green">{t('On')}</Badge> : <Badge>{t('Switched off')}</Badge>}</Td>
                   <Td>
                     {locked ? (
-                      <p className="text-right text-xs text-ink-500">{self ? 'Use Change password in the top menu' : 'Managed by head office'}</p>
+                      <p className="text-right text-xs text-ink-500">{self ? t('Use Change password in the top menu') : t('Managed by head office')}</p>
                     ) : (
                       <LoginActions userId={login.id} name={login.name} phone={login.phone} active={login.active} />
                     )}

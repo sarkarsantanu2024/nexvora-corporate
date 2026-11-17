@@ -6,11 +6,13 @@ import type { SectionDef } from '@/cms/types';
 import { SectionsIndex, type IndexSection } from '@/components/cms/sections-index';
 import { PageHeader } from '@/components/ui/core';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { getAllStates } from '@/server/cms/service';
 
 export const metadata: Metadata = { title: 'Edit website' };
 
 export default async function WebsitePage() {
+  const t = await getT();
   await requireSession(HQ_ROLES);
   const states = new Map((await getAllStates()).map((state) => [state.key, state]));
   const previewOn = (await cookies()).get(PREVIEW_COOKIE)?.value === '1';
@@ -31,7 +33,7 @@ export default async function WebsitePage() {
   });
   return (
     <>
-      <PageHeader title="Edit website" description="Pick a section to change its words and photos. Or tap the mic and say what you want changed." />
+      <PageHeader title={t('Edit website')} description={t('Pick a section to change its words and photos. Or tap the mic and say what you want changed.')} />
       <SectionsIndex sections={sections} previewOn={previewOn} />
     </>
   );

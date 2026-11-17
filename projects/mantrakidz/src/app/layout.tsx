@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
+import { PwaProvider } from '@/components/pwa/pwa';
 import { ToastProvider } from '@/components/ui/client';
+import { BRAND } from '@/config/brand';
 import { LANG_NAMES } from '@/lib/i18n';
 import { getLang } from '@/lib/lang';
 // The font files live in the project (the @fontsource packages), so a build
@@ -48,10 +50,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: 'Mantra Kidz | A Play School', template: '%s | Mantra Kidz' },
   description: 'Mantra Kidz is a play school for children from 1.5 to 5.5 years: Play Group, Nursery, LKG and UKG.',
-  icons: { icon: '/brand/icon.png', apple: '/brand/icon.png' },
+  applicationName: BRAND.name,
+  icons: { icon: '/brand/icon.png', apple: '/brand/apple-touch-icon.png' },
+  // Opens without browser bars when added to an iPhone home screen.
+  appleWebApp: { capable: true, title: BRAND.shortName, statusBarStyle: 'default' },
 };
 
-export const viewport: Viewport = { themeColor: '#3f348f', width: 'device-width', initialScale: 1 };
+// viewportFit lets the dashboard's bars reach under a phone's rounded corners
+// and home indicator; they add the safe-area padding themselves.
+export const viewport: Viewport = { themeColor: BRAND.themeColor, width: 'device-width', initialScale: 1, viewportFit: 'cover' };
 
 // Every page reads the database at request time; website content is cached
 // separately (see src/cms/content.ts), so nothing is baked in at build time.
@@ -62,7 +69,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <html lang={LANG_NAMES[lang].htmlLang} data-lang={lang} className={FONT_VARS}>
       <body>
-        <ToastProvider>{children}</ToastProvider>
+        <PwaProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </PwaProvider>
       </body>
     </html>
   );

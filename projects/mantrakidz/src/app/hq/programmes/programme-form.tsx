@@ -6,6 +6,7 @@ import { useState, type CSSProperties, type ReactNode } from 'react';
 import { ImageField } from '@/components/cms/image-field';
 import { ConfirmButton, LoadingButton } from '@/components/ui/client';
 import { Button, Card, CardBody, CardHeader, Field, FormGrid, Input, LinkButton, Notice, Textarea } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { deleteProgrammeAction, saveProgrammeAction } from '@/server/hq/actions';
 import { PROGRAMME_COLOURS } from '@/server/hq/constants';
@@ -59,13 +60,14 @@ const SWATCH: Record<ProgrammeValues['color'], string> = {
 
 /** One translated field with the English beside it for reference. */
 function Pair({ label, english, error, children }: { label: string; english: string; error?: string; children: ReactNode }) {
+  const t = useT();
   return (
     <div className="grid gap-2 border-b border-ink-100 pb-4 last:border-0 last:pb-0 sm:grid-cols-2 sm:gap-4">
       <div>
         <p className="mb-1.5 text-sm font-semibold text-ink-700">{label}</p>
-        <p className="whitespace-pre-wrap rounded-xl bg-ink-50 px-3.5 py-2.5 text-[15px] text-ink-600">{english || <span className="text-ink-400">Nothing in English yet</span>}</p>
+        <p className="whitespace-pre-wrap rounded-xl bg-ink-50 px-3.5 py-2.5 text-[15px] text-ink-600">{english || <span className="text-ink-400">{t('Nothing in English yet')}</span>}</p>
       </div>
-      <Field label="Translation" error={error}>
+      <Field label={t('Translation')} error={error && t(error)}>
         {children}
       </Field>
     </div>
@@ -73,11 +75,12 @@ function Pair({ label, english, error, children }: { label: string; english: str
 }
 
 export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; initial: ProgrammeValues; canDelete: boolean }) {
+  const t = useT();
   const router = useRouter();
   const [lang, setLang] = useState<Lang>('en');
   const { values, set } = useForm<ProgrammeValues>(initial);
-  const save = useAction(saveProgrammeAction, { success: id ? 'Programme saved' : 'Programme added', onDone: () => router.push('/hq/programmes') });
-  const remove = useAction(deleteProgrammeAction, { success: 'Programme deleted', onDone: () => router.push('/hq/programmes') });
+  const save = useAction(saveProgrammeAction, { success: id ? t('Programme saved') : t('Programme added'), onDone: () => router.push('/hq/programmes') });
+  const remove = useAction(deleteProgrammeAction, { success: t('Programme deleted'), onDone: () => router.push('/hq/programmes') });
   const errors = save.fields;
 
   const setHighlight = (index: number, text: string) => set('highlights', values.highlights.map((item, i) => (i === index ? text : item)));
@@ -116,38 +119,38 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
     const words = values.i18n[which];
     const style = SCRIPT_STYLE[which];
     const err = (key: string) => errors[`i18n.${which}.${key}`];
-    const language = LANGS.find((l) => l.key === which)?.name ?? '';
+    const language = t(LANGS.find((l) => l.key === which)?.name ?? '');
     return (
       <Card>
-        <CardHeader title={`${language} wording`} description={`Shown when a visitor reads the website in ${language}. Anything left empty shows the English text.`} />
+        <CardHeader title={t('{language} wording', { language })} description={t('Shown when a visitor reads the website in {language}. Anything left empty shows the English text.', { language })} />
         <CardBody className="space-y-4">
-          <Pair label="Name" english={values.name} error={err('name')}>
+          <Pair label={t('Name')} english={values.name} error={err('name')}>
             <Input lang={which} style={style} value={words.name} onChange={(e) => setWord(which, 'name', e.target.value)} maxLength={60} invalid={Boolean(err('name'))} />
           </Pair>
-          <Pair label="Age, as shown" english={values.ageLabel} error={err('ageLabel')}>
+          <Pair label={t('Age, as shown')} english={values.ageLabel} error={err('ageLabel')}>
             <Input lang={which} style={style} value={words.ageLabel} onChange={(e) => setWord(which, 'ageLabel', e.target.value)} maxLength={60} invalid={Boolean(err('ageLabel'))} />
           </Pair>
-          <Pair label="Tagline" english={values.tagline} error={err('tagline')}>
+          <Pair label={t('Tagline')} english={values.tagline} error={err('tagline')}>
             <Input lang={which} style={style} value={words.tagline} onChange={(e) => setWord(which, 'tagline', e.target.value)} maxLength={120} invalid={Boolean(err('tagline'))} />
           </Pair>
-          <Pair label="Description" english={values.description} error={err('description')}>
+          <Pair label={t('Description')} english={values.description} error={err('description')}>
             <Textarea lang={which} style={style} rows={6} value={words.description} onChange={(e) => setWord(which, 'description', e.target.value)} maxLength={2000} invalid={Boolean(err('description'))} />
           </Pair>
-          <Pair label="Timing" english={values.timing} error={err('timing')}>
+          <Pair label={t('Timing')} english={values.timing} error={err('timing')}>
             <Input lang={which} style={style} value={words.timing} onChange={(e) => setWord(which, 'timing', e.target.value)} maxLength={80} invalid={Boolean(err('timing'))} />
           </Pair>
           {values.highlights.length ? (
             <div>
-              <p className="mb-1 text-sm font-semibold text-ink-700">Highlights</p>
-              <p className="mb-3 text-sm text-ink-500">Translate every point, or leave them all empty to show the English points.</p>
+              <p className="mb-1 text-sm font-semibold text-ink-700">{t('Highlights')}</p>
+              <p className="mb-3 text-sm text-ink-500">{t('Translate every point, or leave them all empty to show the English points.')}</p>
               <ul className="space-y-2">
                 {values.highlights.map((english, index) => (
                   <li key={index} className="grid gap-2 sm:grid-cols-2 sm:gap-4">
-                    <p className="rounded-xl bg-ink-50 px-3.5 py-2.5 text-[15px] text-ink-600">{english || <span className="text-ink-400">Empty point</span>}</p>
+                    <p className="rounded-xl bg-ink-50 px-3.5 py-2.5 text-[15px] text-ink-600">{english || <span className="text-ink-400">{t('Empty point')}</span>}</p>
                     <Input
                       lang={which}
                       style={style}
-                      aria-label={`${language} for point ${index + 1}`}
+                      aria-label={t('{language} for point {n}', { language, n: index + 1 })}
                       maxLength={160}
                       value={words.highlights[index] ?? ''}
                       onChange={(e) => {
@@ -161,7 +164,7 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
               </ul>
             </div>
           ) : (
-            <p className="text-sm text-ink-500">Add the highlights in English first; they can then be translated here.</p>
+            <p className="text-sm text-ink-500">{t('Add the highlights in English first; they can then be translated here.')}</p>
           )}
         </CardBody>
       </Card>
@@ -171,7 +174,7 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
   return (
     <>
       <div className="mb-5 flex flex-wrap items-center gap-3">
-        <div className="inline-flex rounded-xl border border-ink-200 bg-white p-1" role="tablist" aria-label="Language">
+        <div className="inline-flex rounded-xl border border-ink-200 bg-white p-1" role="tablist" aria-label={t('Language')}>
           {LANGS.map((l) => (
             <button
               key={l.key}
@@ -184,15 +187,15 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
               className={cn('inline-flex h-9 items-center gap-2 rounded-lg px-3.5 text-sm font-semibold', lang === l.key ? 'bg-brand-700 text-white' : 'text-ink-600 hover:bg-ink-50')}
             >
               {l.label}
-              {l.key !== 'en' && filled(l.key) ? <span className={cn('h-1.5 w-1.5 rounded-full', lang === l.key ? 'bg-white' : 'bg-mint-500')} title="Has a translation" /> : null}
+              {l.key !== 'en' && filled(l.key) ? <span className={cn('h-1.5 w-1.5 rounded-full', lang === l.key ? 'bg-white' : 'bg-mint-500')} title={t('Has a translation')} /> : null}
             </button>
           ))}
         </div>
-        <p className="text-sm text-ink-500">The website is in three languages. English is the main text; Bengali and Hindi are optional.</p>
+        <p className="text-sm text-ink-500">{t('The website is in three languages. English is the main text; Bengali and Hindi are optional.')}</p>
       </div>
       {errorLangs.length && !errorLangs.some((l) => l.key === lang) ? (
         <Notice tone="red" className="mb-4">
-          Something needs correcting in the {errorLangs.map((l) => l.name).join(' and ')} wording.
+          {t('Something needs correcting in the {languages} wording.', { languages: errorLangs.map((l) => t(l.name)).join(` ${t('and')} `) })}
         </Notice>
       ) : null}
 
@@ -203,30 +206,30 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
           ) : (
             <>
               <Card>
-                <CardHeader title="What parents see" description="Shown on the Programmes pages of the website." />
+                <CardHeader title={t('What parents see')} description={t('Shown on the Programmes pages of the website.')} />
                 <CardBody>
                   <FormGrid>
-                    <Field label="Name" required error={errors.name}>
+                    <Field label={t('Name')} required error={errors.name && t(errors.name)}>
                       <Input value={values.name} onChange={(e) => set('name', e.target.value)} invalid={Boolean(errors.name)} />
                     </Field>
-                    <Field label="Web address name" hint="Small letters and dashes. Used in the link of the programme page." error={errors.slug}>
-                      <Input value={values.slug} onChange={(e) => set('slug', e.target.value)} placeholder="Made from the name if left empty" autoCapitalize="none" invalid={Boolean(errors.slug)} />
+                    <Field label={t('Web address name')} hint={t('Small letters and dashes. Used in the link of the programme page.')} error={errors.slug && t(errors.slug)}>
+                      <Input value={values.slug} onChange={(e) => set('slug', e.target.value)} placeholder={t('Made from the name if left empty')} autoCapitalize="none" invalid={Boolean(errors.slug)} />
                     </Field>
-                    <Field label="Age, as shown" hint="For example: 2.5 to 3.5 years" error={errors.ageLabel}>
+                    <Field label={t('Age, as shown')} hint={t('For example: 2.5 to 3.5 years')} error={errors.ageLabel && t(errors.ageLabel)}>
                       <Input value={values.ageLabel} onChange={(e) => set('ageLabel', e.target.value)} />
                     </Field>
                     <div className="grid grid-cols-2 gap-3">
-                      <Field label="From, months" error={errors.ageFromMonths}>
+                      <Field label={t('From, months')} error={errors.ageFromMonths && t(errors.ageFromMonths)}>
                         <Input type="number" min={0} value={values.ageFromMonths} onChange={(e) => set('ageFromMonths', e.target.value)} invalid={Boolean(errors.ageFromMonths)} />
                       </Field>
-                      <Field label="To, months" error={errors.ageToMonths}>
+                      <Field label={t('To, months')} error={errors.ageToMonths && t(errors.ageToMonths)}>
                         <Input type="number" min={0} value={values.ageToMonths} onChange={(e) => set('ageToMonths', e.target.value)} invalid={Boolean(errors.ageToMonths)} />
                       </Field>
                     </div>
-                    <Field label="Tagline" className="sm:col-span-2" error={errors.tagline}>
+                    <Field label={t('Tagline')} className="sm:col-span-2" error={errors.tagline && t(errors.tagline)}>
                       <Input value={values.tagline} onChange={(e) => set('tagline', e.target.value)} />
                     </Field>
-                    <Field label="Description" className="sm:col-span-2" error={errors.description}>
+                    <Field label={t('Description')} className="sm:col-span-2" error={errors.description && t(errors.description)}>
                       <Textarea rows={5} value={values.description} onChange={(e) => set('description', e.target.value)} />
                     </Field>
                   </FormGrid>
@@ -235,11 +238,11 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
 
               <Card>
                 <CardHeader
-                  title="Highlights"
-                  description="Short points about what children do in this programme."
+                  title={t('Highlights')}
+                  description={t('Short points about what children do in this programme.')}
                   action={
                     <Button variant="secondary" size="sm" disabled={values.highlights.length >= 12} onClick={() => set('highlights', [...values.highlights, ''])}>
-                      <Plus size={15} /> Add a point
+                      <Plus size={15} /> {t('Add a point')}
                     </Button>
                   }
                 />
@@ -248,24 +251,24 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
                     <ul className="space-y-2">
                       {values.highlights.map((item, index) => (
                         <li key={index} className="flex items-center gap-1.5">
-                          <Input value={item} onChange={(e) => setHighlight(index, e.target.value)} aria-label={`Point ${index + 1}`} />
-                          <Button variant="ghost" size="sm" className="w-9 px-0" aria-label="Move up" disabled={index === 0} onClick={() => moveHighlight(index, -1)}>
+                          <Input value={item} onChange={(e) => setHighlight(index, e.target.value)} aria-label={t('Point {n}', { n: index + 1 })} />
+                          <Button variant="ghost" size="sm" className="w-9 px-0" aria-label={t('Move up')} disabled={index === 0} onClick={() => moveHighlight(index, -1)}>
                             <ArrowUp size={16} />
                           </Button>
-                          <Button variant="ghost" size="sm" className="w-9 px-0" aria-label="Move down" disabled={index === values.highlights.length - 1} onClick={() => moveHighlight(index, 1)}>
+                          <Button variant="ghost" size="sm" className="w-9 px-0" aria-label={t('Move down')} disabled={index === values.highlights.length - 1} onClick={() => moveHighlight(index, 1)}>
                             <ArrowDown size={16} />
                           </Button>
-                          <Button variant="ghost" size="sm" className="w-9 px-0 text-accent-600" aria-label="Remove" onClick={() => set('highlights', values.highlights.filter((_, i) => i !== index))}>
+                          <Button variant="ghost" size="sm" className="w-9 px-0 text-accent-600" aria-label={t('Remove')} onClick={() => set('highlights', values.highlights.filter((_, i) => i !== index))}>
                             <Trash2 size={16} />
                           </Button>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="text-sm text-ink-500">No points yet. Add three or four short ones.</p>
+                    <p className="text-sm text-ink-500">{t('No points yet. Add three or four short ones.')}</p>
                   )}
                   {values.highlights.length && (filled('bn') || filled('hi')) ? (
-                    <p className="mt-3 text-sm text-ink-500">After adding, removing or moving a point, check the Bengali and Hindi points: they are matched to these by position.</p>
+                    <p className="mt-3 text-sm text-ink-500">{t('After adding, removing or moving a point, check the Bengali and Hindi points: they are matched to these by position.')}</p>
                   ) : null}
                 </CardBody>
               </Card>
@@ -275,14 +278,14 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
 
         <div className="space-y-6">
           <Card>
-            <CardHeader title="Look" />
+            <CardHeader title={t('Look')} />
             <CardBody className="space-y-4">
-              <Field label="Photo">
+              <Field label={t('Photo')}>
                 <ImageField value={values.image} onChange={(url) => set('image', url)} folder="programmes" shape="wide" />
               </Field>
               <div>
-                <p className="mb-1.5 text-sm font-semibold text-ink-700">Colour</p>
-                <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Colour">
+                <p className="mb-1.5 text-sm font-semibold text-ink-700">{t('Colour')}</p>
+                <div className="flex flex-wrap gap-2" role="radiogroup" aria-label={t('Colour')}>
                   {PROGRAMME_COLOURS.map((colour) => (
                     <button
                       key={colour}
@@ -295,7 +298,7 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
                         values.color === colour ? 'border-brand-700 bg-brand-50 text-brand-800' : 'border-ink-200 text-ink-700 hover:border-ink-300',
                       )}
                     >
-                      <span className={cn('h-4 w-4 rounded-full', SWATCH[colour])} /> {colour}
+                      <span className={cn('h-4 w-4 rounded-full', SWATCH[colour])} /> {t(colour)}
                     </button>
                   ))}
                 </div>
@@ -304,22 +307,22 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
           </Card>
 
           <Card>
-            <CardHeader title="For the centres" description="Defaults a centre starts from when it sets up classes and fees." />
+            <CardHeader title={t('For the centres')} description={t('Defaults a centre starts from when it sets up classes and fees.')} />
             <CardBody>
               <div className="space-y-4">
-                <Field label="Seats in a class" error={errors.seatsPerClass}>
+                <Field label={t('Seats in a class')} error={errors.seatsPerClass && t(errors.seatsPerClass)}>
                   <Input type="number" min={1} value={values.seatsPerClass} onChange={(e) => set('seatsPerClass', e.target.value)} invalid={Boolean(errors.seatsPerClass)} />
                 </Field>
-                <Field label="Timing" hint="For example: 9:00 am to 11:30 am" error={errors.timing}>
+                <Field label={t('Timing')} hint={t('For example: 9:00 am to 11:30 am')} error={errors.timing && t(errors.timing)}>
                   <Input value={values.timing} onChange={(e) => set('timing', e.target.value)} />
                 </Field>
-                <Field label="Suggested monthly fee, rupees" hint="Each centre sets its own fee; this is only a guide" error={errors.suggestedMonthlyFee}>
+                <Field label={t('Suggested monthly fee, rupees')} hint={t('Each centre sets its own fee; this is only a guide')} error={errors.suggestedMonthlyFee && t(errors.suggestedMonthlyFee)}>
                   <Input type="number" min={0} value={values.suggestedMonthlyFee} onChange={(e) => set('suggestedMonthlyFee', e.target.value)} invalid={Boolean(errors.suggestedMonthlyFee)} />
                 </Field>
-                <Field label="Order in lists" hint="Smaller numbers come first" error={errors.sort}>
+                <Field label={t('Order in lists')} hint={t('Smaller numbers come first')} error={errors.sort && t(errors.sort)}>
                   <Input type="number" min={0} value={values.sort} onChange={(e) => set('sort', e.target.value)} />
                 </Field>
-                <Toggle checked={values.active} onChange={(next) => set('active', next)} label="Active" hint="An inactive programme is hidden from the website and from new admissions. Children already in it are not affected." />
+                <Toggle checked={values.active} onChange={(next) => set('active', next)} label={t('Active')} hint={t('An inactive programme is hidden from the website and from new admissions. Children already in it are not affected.')} />
               </div>
             </CardBody>
           </Card>
@@ -328,22 +331,22 @@ export function ProgrammeForm({ id, initial, canDelete }: { id: string | null; i
             {id && canDelete ? (
               <ConfirmButton
                 size="sm"
-                title={`Delete ${initial.name}?`}
-                text="A programme that children, classes, fees or enquiries use cannot be deleted. Make it inactive instead."
-                confirmLabel="Delete programme"
+                title={t('Delete {name}?', { name: initial.name })}
+                text={t('A programme that children, classes, fees or enquiries use cannot be deleted. Make it inactive instead.')}
+                confirmLabel={t('Delete programme')}
                 onConfirm={async () => void (await remove.run(id))}
               >
-                <Trash2 size={15} /> Delete
+                <Trash2 size={15} /> {t('Delete')}
               </ConfirmButton>
             ) : (
               <span />
             )}
             <span className="flex gap-2">
               <LinkButton href="/hq/programmes" variant="secondary">
-                Cancel
+                {t('Cancel')}
               </LinkButton>
               <LoadingButton loading={save.busy} onClick={submit}>
-                {id ? 'Save programme' : 'Add programme'}
+                {id ? t('Save programme') : t('Add programme')}
               </LoadingButton>
             </span>
           </div>

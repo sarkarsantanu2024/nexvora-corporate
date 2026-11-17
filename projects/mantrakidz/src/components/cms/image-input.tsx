@@ -7,6 +7,7 @@
  */
 import { Camera, FolderOpen, ImagePlus, Loader2, Trash2, UploadCloud } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 import { MediaPicker } from './media-library';
 import { uploadImage } from './upload';
@@ -29,6 +30,7 @@ export function ImageInput({
   /** Smaller preview, for rows of a list. */
   compact?: boolean;
 }) {
+  const t = useT();
   const file = useRef<HTMLInputElement>(null);
   const camera = useRef<HTMLInputElement>(null);
   const [fraction, setFraction] = useState<number | null>(null);
@@ -44,7 +46,7 @@ export function ImageInput({
       const stored = await uploadImage(picked, folder, setFraction);
       onChange(stored.url);
     } catch (cause) {
-      setError(cause instanceof Error ? cause.message : 'The upload failed. Try again.');
+      setError(cause instanceof Error ? t(cause.message) : t('The upload failed. Try again.'));
     } finally {
       setFraction(null);
     }
@@ -56,7 +58,7 @@ export function ImageInput({
         <button
           type="button"
           onClick={() => file.current?.click()}
-          aria-label={value ? `Change ${label}` : `Add ${label}`}
+          aria-label={value ? t('Change {label}', { label }) : t('Add {label}', { label })}
           className={cn(
             'relative grid shrink-0 place-items-center overflow-hidden rounded-2xl border-2 border-dashed bg-ink-50 text-ink-400 transition hover:border-brand-400 hover:text-brand-600',
             invalid ? 'border-accent-300' : 'border-ink-200',
@@ -80,22 +82,22 @@ export function ImageInput({
         <div className="min-w-0 text-sm">
           <div className="flex flex-wrap gap-2">
             <button type="button" className={action} disabled={busy} onClick={() => file.current?.click()}>
-              <UploadCloud size={16} /> Upload
+              <UploadCloud size={16} /> {t('Upload')}
             </button>
             {/* Only a phone or tablet has a camera worth offering. */}
             <button type="button" className={cn(action, 'hidden [@media(pointer:coarse)]:inline-flex')} disabled={busy} onClick={() => camera.current?.click()}>
-              <Camera size={16} /> Take a photo
+              <Camera size={16} /> {t('Take a photo')}
             </button>
             <button type="button" className={action} disabled={busy} onClick={() => setLibrary(true)}>
-              <FolderOpen size={16} /> From library
+              <FolderOpen size={16} /> {t('From library')}
             </button>
             {value ? (
               <button type="button" className={cn(action, 'text-accent-700 hover:bg-accent-50')} disabled={busy} onClick={() => onChange('')}>
-                <Trash2 size={16} /> Remove
+                <Trash2 size={16} /> {t('Remove')}
               </button>
             ) : null}
           </div>
-          {!compact ? <p className="mt-2 text-ink-500">JPG, PNG or WebP up to 12 MB. It is resized for you.</p> : null}
+          {!compact ? <p className="mt-2 text-ink-500">{t('JPG, PNG or WebP up to 12 MB. It is resized for you.')}</p> : null}
           {error ? <p className="mt-1 font-medium text-accent-600">{error}</p> : null}
         </div>
       </div>

@@ -5,11 +5,13 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { LoadingButton, Modal, useToast } from '@/components/ui/client';
 import { Button, Field, Input, Notice, Textarea } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { inr } from '@/lib/money';
 import { cancelBillAction, discountBillAction } from '@/server/centre/money/actions';
 
 /** Corrections a centre head can make to a bill that is not fully paid. */
 export function BillActions({ id, subtotal, discount, paid, canCancel }: { id: string; subtotal: number; discount: number; paid: number; canCancel: boolean }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const [mode, setMode] = useState<'discount' | 'cancel' | null>(null);
@@ -33,10 +35,10 @@ export function BillActions({ id, subtotal, discount, paid, canCancel }: { id: s
       // A bare value that fails validation (the reason) comes back under '_'.
       const fields = result.fields ?? {};
       setErrors(fields._ ? { ...fields, reason: fields._ } : fields);
-      toast.error(result.error);
+      toast.error(t(result.error));
       return;
     }
-    toast.success(mode === 'cancel' ? 'Bill cancelled' : 'Discount saved');
+    toast.success(mode === 'cancel' ? t('Bill cancelled') : t('Discount saved'));
     setMode(null);
     router.refresh();
   }
@@ -44,43 +46,43 @@ export function BillActions({ id, subtotal, discount, paid, canCancel }: { id: s
   return (
     <>
       <Button variant="secondary" onClick={() => open('discount')}>
-        <BadgePercent size={18} /> Discount
+        <BadgePercent size={18} /> {t('Discount')}
       </Button>
       {canCancel ? (
         <Button variant="danger" onClick={() => open('cancel')}>
-          <Ban size={18} /> Cancel bill
+          <Ban size={18} /> {t('Cancel bill')}
         </Button>
       ) : null}
 
       <Modal
         open={mode !== null}
         onClose={() => !saving && setMode(null)}
-        title={mode === 'cancel' ? 'Cancel this bill?' : 'Give a discount'}
+        title={mode === 'cancel' ? t('Cancel this bill?') : t('Give a discount')}
         size="sm"
         footer={
           <>
             <Button variant="secondary" onClick={() => setMode(null)} disabled={saving}>
-              Close
+              {t('Close')}
             </Button>
             <LoadingButton variant={mode === 'cancel' ? 'accent' : 'primary'} loading={saving} onClick={submit}>
-              {mode === 'cancel' ? 'Cancel bill' : 'Save discount'}
+              {mode === 'cancel' ? t('Cancel bill') : t('Save discount')}
             </LoadingButton>
           </>
         }
       >
         <div className="space-y-4">
           {mode === 'cancel' ? (
-            <Notice tone="amber">The bill stays on record, marked cancelled, and is no longer owed. This cannot be undone.</Notice>
+            <Notice tone="amber">{t('The bill stays on record, marked cancelled, and is no longer owed. This cannot be undone.')}</Notice>
           ) : (
-            <Field label="Discount in rupees" required error={errors.discount} hint={`Bill amount ${inr(subtotal)}. At the most ${inr(most)}. Enter 0 to remove the discount.`}>
+            <Field label={t('Discount in rupees')} required error={errors.discount && t(errors.discount)} hint={t('Bill amount {subtotal}. At the most {most}. Enter 0 to remove the discount.', { subtotal: inr(subtotal), most: inr(most) })}>
               <Input type="number" inputMode="numeric" min={0} max={most} value={amount} invalid={!!errors.discount} onChange={(e) => setAmount(e.target.value)} />
             </Field>
           )}
-          <Field label="Reason" required error={errors.reason}>
+          <Field label={t('Reason')} required error={errors.reason && t(errors.reason)}>
             <Textarea
               value={reason}
               invalid={!!errors.reason}
-              placeholder={mode === 'cancel' ? 'Raised twice by mistake' : 'Sibling discount'}
+              placeholder={mode === 'cancel' ? t('Raised twice by mistake') : t('Sibling discount')}
               onChange={(e) => setReason(e.target.value)}
             />
           </Field>

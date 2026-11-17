@@ -29,6 +29,113 @@
   ::selection {
     @apply bg-brand-200 text-brand-950;
   }
+  /*
+   * The dashboard as an app. On a phone or tablet a bar sits at the bottom of
+   * the screen; anything else pinned to the bottom (messages, the voice
+   * button) adds --dash-bottom so it stays above that bar.
+   */
+  :root {
+    --dash-bottom: 0px;
+  }
+  @media (max-width: 1023.98px) {
+    :root:has(.dash-app) {
+      --dash-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+  }
+  .dash-app {
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Menus and bars are for tapping, not for selecting text or long-press menus. */
+  .dash-app :is(nav, header, aside) {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+  /*
+   * Phone layout of the pieces every dashboard screen is made of, so each
+   * screen behaves like an app without rules of its own.
+   */
+  @media (max-width: 639.98px) {
+    /* The buttons beside a screen's heading are smaller, to fit on its row. */
+    .dash-app .page-actions :is(button, a) {
+      height: 2.25rem;
+      padding-inline: 0.75rem;
+      font-size: 0.8125rem;
+    }
+    /* Search keeps its row; dropdowns and dates move to the Filters button. */
+    .dash-app .filter-bar > :has(> input[type='search']) {
+      flex: 1 1 100%;
+    }
+    .dash-app .filter-bar:not(:has(> :not(.max-sm\:hidden))) {
+      display: none;
+    }
+    /* Fingers need a taller target than a mouse. */
+    .dash-app .control {
+      min-height: 2.875rem;
+    }
+
+    /*
+     * A table becomes a list of cards: the first cell is the card's title and
+     * every other cell is a "label ... value" line. The labels are copied from
+     * the column headings by the dashboard frame (data-label).
+     */
+    .dash-app table.table-cards {
+      display: block;
+      min-width: 0;
+    }
+    .dash-app table.table-cards thead {
+      display: none;
+    }
+    .dash-app table.table-cards :is(tbody, tfoot) {
+      display: block;
+    }
+    .dash-app table.table-cards tr {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid theme('colors.ink.200');
+    }
+    .dash-app table.table-cards tr:last-child {
+      border-bottom: 0;
+    }
+    .dash-app table.table-cards td {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.2rem 0;
+      border: 0;
+      text-align: right;
+      white-space: normal;
+    }
+    .dash-app table.table-cards td:empty {
+      display: none;
+    }
+    .dash-app table.table-cards td[data-label]:not([data-label=''])::before {
+      content: attr(data-label);
+      flex-shrink: 0;
+      padding-top: 0.1rem;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: theme('colors.ink.500');
+    }
+    .dash-app table.table-cards td:first-child {
+      justify-content: flex-start;
+      padding-bottom: 0.35rem;
+      text-align: left;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: theme('colors.ink.900');
+    }
+    .dash-app table.table-cards td:first-child::before {
+      display: none;
+    }
+    /* A cell with no heading holds the row's buttons: give them the full line. */
+    .dash-app table.table-cards td:not(:first-child):is([data-label=''], :not([data-label])) {
+      justify-content: flex-end;
+      padding-top: 0.5rem;
+    }
+  }
   /* Numbers in tables and tiles line up when every digit is the same width. */
   .tabular {
     font-variant-numeric: tabular-nums;
@@ -42,6 +149,16 @@
   }
   .control-invalid {
     @apply border-accent-400 focus:border-accent-500 focus:ring-accent-100;
+  }
+  /* The thin bar across the top while the next dashboard screen loads. */
+  .route-bar {
+    @apply h-full origin-left bg-gradient-to-r from-brand-500 via-accent-400 to-sun-400;
+  }
+  .route-bar-loading {
+    animation: route-bar-grow 8s cubic-bezier(0.1, 0.6, 0.2, 1) both;
+  }
+  .route-bar-done {
+    animation: route-bar-end 0.3s ease both;
   }
   .skeleton {
     @apply rounded-lg bg-[length:200%_100%] animate-shimmer;
@@ -59,6 +176,25 @@
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@keyframes route-bar-grow {
+  from {
+    transform: scaleX(0.05);
+  }
+  to {
+    transform: scaleX(0.92);
+  }
+}
+@keyframes route-bar-end {
+  from {
+    transform: scaleX(0.92);
+    opacity: 1;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 0;
   }
 }
 
@@ -129,11 +265,47 @@ html:is([data-lang='bn'], [data-lang='hi']) :is(.text-xs, [class*='text-[10px]']
   font-size: 0.8125rem;
 }
 
-/* People who ask their device for less motion get none of the decorative kind. */
+/*
+ * The look of the working screens (dashboards, login, change password).
+ *
+ * The public website is playful: round letters, big soft corners, coloured
+ * shadows. Software people use all day should be plain and steady instead,
+ * so any page that carries the "app-ui" class gets the body typeface for
+ * headings, squarer corners and flat grey shadows. Screens do not set these
+ * themselves: they keep using font-display, rounded-2xl, shadow-card.
+ */
+html:has(.app-ui) {
+  --font-display: var(--font-body-latin), 'Plus Jakarta Sans Variable';
+  --r-lg: 0.375rem;
+  --r-xl: 0.5rem;
+  --r-2xl: 0.625rem;
+  --r-3xl: 0.875rem;
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-lift: 0 4px 8px -2px rgba(16, 24, 40, 0.08), 0 16px 32px -8px rgba(16, 24, 40, 0.14);
+}
+html[data-lang='bn']:has(.app-ui) {
+  --font-display: var(--font-body-bn), var(--font-body-latin), 'Plus Jakarta Sans Variable';
+}
+html[data-lang='hi']:has(.app-ui) {
+  --font-display: var(--font-body-hi), var(--font-body-latin), 'Plus Jakarta Sans Variable';
+}
+html:has(.app-ui) body {
+  background: #f4f5f7;
+}
+html:has(.app-ui) .font-display {
+  letter-spacing: -0.015em;
+}
+
+/*
+ * People who ask their device for less motion get none of the decorative kind
+ * on the website. The dashboards keep their short slides: there they show
+ * where a panel came from and where it goes, and the owner asked for them on
+ * every device.
+ */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  html:not(:has(.app-ui)) *,
+  html:not(:has(.app-ui)) *::before,
+  html:not(:has(.app-ui)) *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -149,6 +321,9 @@ html:is([data-lang='bn'], [data-lang='hi']) :is(.text-xs, [class*='text-[10px]']
   }
   body {
     background: #fff !important;
+  }
+  :root {
+    --dash-bottom: 0px !important;
   }
   .print-plain {
     box-shadow: none !important;

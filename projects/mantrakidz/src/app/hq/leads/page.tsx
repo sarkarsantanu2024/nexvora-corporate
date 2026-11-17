@@ -7,6 +7,7 @@ import { FRANCHISE_STAGES } from '@/db/schema';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { cn } from '@/lib/cn';
 import { formatDate, todayIST } from '@/lib/date';
+import { getT } from '@/lib/t';
 import { LEAD_SOURCES, STAGE_LABELS, sourceLabel } from '@/server/hq/constants';
 import { hqPeople, leadBoard, leadStageCounts, listLeads, type LeadRow } from '@/server/hq/leads';
 import { ContactLinks, ExportLink, FilterBar, query, readSearch, type Search } from '../_ui/bits';
@@ -14,17 +15,19 @@ import { LeadForm } from './lead-form';
 
 export const metadata: Metadata = { title: 'Franchise leads' };
 
-function FollowUp({ lead, today }: { lead: LeadRow; today: string }) {
-  if (!lead.nextFollowUp) return <span className="text-ink-400">Not set</span>;
+async function FollowUp({ lead, today }: { lead: LeadRow; today: string }) {
+  const t = await getT();
+  if (!lead.nextFollowUp) return <span className="text-ink-400">{t('Not set')}</span>;
   const late = lead.nextFollowUp < today && lead.stage !== 'onboarded' && lead.stage !== 'lost';
   return (
     <span className={cn('inline-flex items-center gap-1 whitespace-nowrap', late ? 'font-semibold text-accent-600' : 'text-ink-700')}>
-      <CalendarClock size={14} /> {lead.nextFollowUp === today ? 'Today' : formatDate(lead.nextFollowUp)}
+      <CalendarClock size={14} /> {lead.nextFollowUp === today ? t('Today') : formatDate(lead.nextFollowUp)}
     </span>
   );
 }
 
 export default async function LeadsPage({ searchParams }: { searchParams: Search }) {
+  const t = await getT();
   await requireSession(HQ_ROLES);
   const params = await readSearch(searchParams);
   const view = params.view === 'table' ? 'table' : 'board';
@@ -44,8 +47,8 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
   return (
     <>
       <PageHeader
-        title="Franchise leads"
-        description="People who asked about opening a Mantra Kidz centre. Website enquiries arrive here as New."
+        title={t('Franchise leads')}
+        description={t('People who asked about opening a Mantra Kidz centre. Website enquiries arrive here as New.')}
         actions={
           <>
             <ExportLink href={`/hq/leads/export${query({ ...keep, stage: view === 'table' ? params.stage : '' })}`} />
@@ -55,8 +58,8 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
       />
 
       <FilterBar>
-        <SearchInput placeholder="Search name, mobile or city" />
-        <UrlSelect param="source" label="Source" options={[{ value: '', label: 'All sources' }, ...LEAD_SOURCES.map((source) => ({ value: source, label: sourceLabel(source) }))]} />
+        <SearchInput placeholder={t('Search name, mobile or city')} />
+        <UrlSelect param="source" label={t('Source')} options={[{ value: '', label: t('All sources') }, ...LEAD_SOURCES.map((source) => ({ value: source, label: t(sourceLabel(source)) }))]} />
         <div className="ml-auto inline-flex rounded-xl border border-ink-200 bg-white p-1">
           {(['board', 'table'] as const).map((mode) => (
             <Link
@@ -66,7 +69,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
               aria-current={view === mode ? 'page' : undefined}
               className={cn('inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-semibold', view === mode ? 'bg-brand-700 text-white' : 'text-ink-600 hover:bg-ink-50')}
             >
-              {mode === 'board' ? <KanbanSquare size={16} /> : <List size={16} />} {mode === 'board' ? 'Board' : 'Table'}
+              {mode === 'board' ? <KanbanSquare size={16} /> : <List size={16} />} {mode === 'board' ? t('Board') : t('Table')}
             </Link>
           ))}
         </div>
@@ -76,9 +79,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
         <Card>
           <EmptyState
             icon={<Handshake size={26} />}
-            title={filtered ? 'No leads match' : 'No franchise leads yet'}
-            text={filtered ? 'Try a different search or source.' : 'Enquiries from the franchise page of the website land here. You can also add someone who called or walked in.'}
-            action={filtered ? <Link href="/hq/leads" className={buttonClass('secondary')}>Clear filters</Link> : <LeadForm people={people} />}
+            title={filtered ? t('No leads match') : t('No franchise leads yet')}
+            text={filtered ? t('Try a different search or source.') : t('Enquiries from the franchise page of the website land here. You can also add someone who called or walked in.')}
+            action={filtered ? <Link href="/hq/leads" className={buttonClass('secondary')}>{t('Clear filters')}</Link> : <LeadForm people={people} />}
           />
         </Card>
       ) : board ? (
@@ -87,9 +90,9 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
             {FRANCHISE_STAGES.map((stage) => {
               const cards = board.rows.filter((lead) => lead.stage === stage);
               return (
-                <section key={stage} className="flex w-[272px] shrink-0 flex-col rounded-2xl bg-ink-100/70 p-2.5" aria-label={STAGE_LABELS[stage]}>
+                <section key={stage} className="flex w-[272px] shrink-0 flex-col rounded-2xl bg-ink-100/70 p-2.5" aria-label={t(STAGE_LABELS[stage])}>
                   <header className="flex items-center justify-between px-1.5 pb-2.5 pt-1">
-                    <StatusBadge status={stage} label={STAGE_LABELS[stage]} />
+                    <StatusBadge status={stage} label={t(STAGE_LABELS[stage])} />
                     <span className="tabular text-sm font-bold text-ink-600">{counts[stage]}</span>
                   </header>
                   <div className="space-y-2">
@@ -97,18 +100,18 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                       <Link key={lead.id} href={`/hq/leads/${lead.id}`} className="block rounded-xl border border-ink-200/70 bg-white p-3 shadow-card transition hover:-translate-y-0.5 hover:shadow-lift">
                         <p className="truncate font-semibold text-ink-900">{lead.name}</p>
                         <p className="mt-0.5 flex items-center gap-1 truncate text-sm text-ink-500">
-                          <MapPin size={13} className="shrink-0" /> {lead.city || 'City not given'}
+                          <MapPin size={13} className="shrink-0" /> {lead.city || t('City not given')}
                         </p>
                         <div className="mt-2 flex items-center justify-between gap-2 text-xs">
                           <FollowUp lead={lead} today={today} />
-                          <span className="truncate text-ink-500">{lead.assignedName ?? 'Unassigned'}</span>
+                          <span className="truncate text-ink-500">{lead.assignedName ?? t('Unassigned')}</span>
                         </div>
                       </Link>
                     ))}
-                    {cards.length === 0 ? <p className="px-2 py-6 text-center text-sm text-ink-400">None</p> : null}
+                    {cards.length === 0 ? <p className="px-2 py-6 text-center text-sm text-ink-400">{t('None')}</p> : null}
                     {counts[stage] > cards.length ? (
                       <Link href={`/hq/leads${query({ ...keep, view: 'table', stage })}`} className="block px-2 py-1.5 text-center text-sm font-semibold text-brand-700 hover:underline">
-                        See all {counts[stage]}
+                        {t('See all {n}', { n: counts[stage] })}
                       </Link>
                     ) : null}
                   </div>
@@ -122,8 +125,8 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
           <TabLinks
             active={params.stage || 'all'}
             tabs={[
-              { key: 'all', label: 'All', count: all, href: `/hq/leads${query({ ...keep, view: 'table' })}` },
-              ...FRANCHISE_STAGES.map((stage) => ({ key: stage, label: STAGE_LABELS[stage], count: counts[stage], href: `/hq/leads${query({ ...keep, view: 'table', stage })}` })),
+              { key: 'all', label: t('All'), count: all, href: `/hq/leads${query({ ...keep, view: 'table' })}` },
+              ...FRANCHISE_STAGES.map((stage) => ({ key: stage, label: t(STAGE_LABELS[stage]), count: counts[stage], href: `/hq/leads${query({ ...keep, view: 'table', stage })}` })),
             ]}
           />
           <Card>
@@ -132,13 +135,13 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                 <Table>
                   <thead>
                     <tr>
-                      <Th>Name</Th>
-                      <Th>City</Th>
-                      <Th>Stage</Th>
-                      <Th>Follow-up</Th>
-                      <Th>Assigned to</Th>
-                      <Th>Source</Th>
-                      <Th>Received</Th>
+                      <Th>{t('Name')}</Th>
+                      <Th>{t('City')}</Th>
+                      <Th>{t('Stage')}</Th>
+                      <Th>{t('Follow-up')}</Th>
+                      <Th>{t('Assigned to')}</Th>
+                      <Th>{t('Source')}</Th>
+                      <Th>{t('Received')}</Th>
                       <Th />
                     </tr>
                   </thead>
@@ -151,15 +154,15 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                           </Link>
                           <p className="tabular text-xs text-ink-500">{lead.phone}</p>
                         </Td>
-                        <Td>{lead.city || <span className="text-ink-400">Not given</span>}</Td>
+                        <Td>{lead.city || <span className="text-ink-400">{t('Not given')}</span>}</Td>
                         <Td>
-                          <StatusBadge status={lead.stage} label={STAGE_LABELS[lead.stage]} />
+                          <StatusBadge status={lead.stage} label={t(STAGE_LABELS[lead.stage])} />
                         </Td>
                         <Td>
                           <FollowUp lead={lead} today={today} />
                         </Td>
-                        <Td>{lead.assignedName ?? <span className="text-ink-400">Unassigned</span>}</Td>
-                        <Td>{sourceLabel(lead.source)}</Td>
+                        <Td>{lead.assignedName ?? <span className="text-ink-400">{t('Unassigned')}</span>}</Td>
+                        <Td>{t(sourceLabel(lead.source))}</Td>
                         <Td className="whitespace-nowrap">{formatDate(todayIST(lead.createdAt))}</Td>
                         <Td className="text-right">
                           <ContactLinks phone={lead.phone} />
@@ -171,7 +174,7 @@ export default async function LeadsPage({ searchParams }: { searchParams: Search
                 <Pagination page={table.page} pageSize={table.pageSize} total={table.total} />
               </>
             ) : (
-              <EmptyState title="No leads at this stage" text="Pick another stage, or clear the search." />
+              <EmptyState title={t('No leads at this stage')} text={t('Pick another stage, or clear the search.')} />
             )}
           </Card>
         </>

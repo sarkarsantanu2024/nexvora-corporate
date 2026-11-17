@@ -2,6 +2,7 @@ import { CalendarPlus, FilePlus2, IndianRupee } from 'lucide-react';
 import type { Metadata } from 'next';
 import { LinkButton, PageHeader, TabLinks } from '@/components/ui/core';
 import { canManageCentre, requireCentre } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { listFeeHeads, listProgrammes } from '@/server/centre/money/bills';
 import { paymentDetailsOf } from '@/server/centre/money/payment-info';
 import { BillsTab } from './bills-tab';
@@ -16,6 +17,7 @@ type Search = Record<string, string | string[] | undefined>;
 const one = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value) ?? '';
 
 export default async function FeesPage({ searchParams }: { searchParams: Promise<Search> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const params = await searchParams;
   const manager = canManageCentre(ctx.session);
@@ -24,13 +26,13 @@ export default async function FeesPage({ searchParams }: { searchParams: Promise
   const student = one(params.student);
 
   const tabs = [
-    { key: 'bills', label: 'Bills', href: '/centre/fees' },
-    { key: 'dues', label: 'Dues', href: '/centre/fees?tab=dues' },
-    { key: 'daybook', label: 'Day book', href: '/centre/fees?tab=daybook' },
+    { key: 'bills', label: t('Bills'), href: '/centre/fees' },
+    { key: 'dues', label: t('Dues'), href: '/centre/fees?tab=dues' },
+    { key: 'daybook', label: t('Day book'), href: '/centre/fees?tab=daybook' },
     ...(manager
       ? [
-          { key: 'heads', label: 'Fee heads', href: '/centre/fees?tab=heads' },
-          { key: 'pay', label: 'Payment details', href: '/centre/fees?tab=pay' },
+          { key: 'heads', label: t('Fee heads'), href: '/centre/fees?tab=heads' },
+          { key: 'pay', label: t('Payment details'), href: '/centre/fees?tab=pay' },
         ]
       : []),
   ];
@@ -39,19 +41,19 @@ export default async function FeesPage({ searchParams }: { searchParams: Promise
     <div className="animate-fade-up">
       <div className="no-print">
         <PageHeader
-          title="Fees"
-          description="Bills raised, money received and who still has to pay."
+          title={t('Fees')}
+          description={t('Bills raised, money received and who still has to pay.')}
           actions={
             <>
               <LinkButton href={`/centre/fees/collect${student ? `?student=${student}` : ''}`}>
-                <IndianRupee size={18} /> Take a payment
+                <IndianRupee size={18} /> {t('Take a payment')}
               </LinkButton>
               <LinkButton href={`/centre/fees/new${student ? `?student=${student}` : ''}`} variant="secondary">
-                <FilePlus2 size={18} /> New bill
+                <FilePlus2 size={18} /> {t('New bill')}
               </LinkButton>
               {manager ? (
                 <LinkButton href="/centre/fees/run" variant="secondary">
-                  <CalendarPlus size={18} /> Monthly bills
+                  <CalendarPlus size={18} /> {t('Monthly bills')}
                 </LinkButton>
               ) : null}
             </>

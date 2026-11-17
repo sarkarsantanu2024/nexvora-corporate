@@ -5,6 +5,7 @@ import { Card, EmptyState, LinkButton, StatusBadge, Table, Td, Th, Tr } from '@/
 import { canManageCentre } from '@/lib/auth';
 import { addMonths, currentPeriod, formatDate, lastPeriods, periodLabel, todayIST } from '@/lib/date';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { getChild, listBills, listClasses, type BillFilter } from '@/server/centre/money/bills';
 import type { Ctx } from '@/server/centre/money/shared';
 
@@ -34,6 +35,7 @@ export function Totals({ items }: { items: { label: string; value: number; tone?
 }
 
 export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }) {
+  const t = await getT();
   const [data, classes, child] = await Promise.all([listBills(ctx, filter), listClasses(ctx), filter.student ? getChild(ctx, filter.student) : null]);
   const today = todayIST();
   const manager = canManageCentre(ctx.session);
@@ -44,22 +46,22 @@ export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }
     <>
       {child ? (
         <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-brand-100 bg-brand-50 px-4 py-2.5 text-sm font-medium text-brand-800">
-          Bills of
+          {t('Bills of')}
           <Link href={`/centre/students/${child.id}`} className="font-bold hover:underline">
             {child.name}
           </Link>
           <span className="text-brand-600">{child.admissionNo}</span>
           <Link href="/centre/fees" className="ml-auto inline-flex items-center gap-1 font-semibold hover:underline">
-            <X size={15} /> Show all children
+            <X size={15} /> {t('Show all children')}
           </Link>
         </div>
       ) : null}
 
-      <div className="no-print mb-4 flex flex-wrap items-center gap-2">
-        <SearchInput placeholder="Child, admission no or bill no" />
-        <UrlSelect param="month" label="Month" options={[{ value: '', label: 'All months' }, ...months.map((m) => ({ value: m, label: periodLabel(m) }))]} />
-        <UrlSelect param="status" label="Status" options={STATUS_OPTIONS} />
-        <UrlSelect param="batch" label="Class" options={[{ value: '', label: 'All classes' }, ...classes.map((c) => ({ value: c.id, label: c.name }))]} />
+      <div className="no-print mb-4 filter-bar flex flex-wrap items-center gap-2">
+        <SearchInput placeholder={t('Child, admission no or bill no')} />
+        <UrlSelect param="month" label={t('Month')} options={[{ value: '', label: t('All months') }, ...months.map((m) => ({ value: m, label: periodLabel(m) }))]} />
+        <UrlSelect param="status" label={t('Status')} options={STATUS_OPTIONS.map((option) => ({ ...option, label: t(option.label) }))} />
+        <UrlSelect param="batch" label={t('Class')} options={[{ value: '', label: t('All classes') }, ...classes.map((c) => ({ value: c.id, label: c.name }))]} />
       </div>
 
       <Card className="overflow-hidden">
@@ -67,22 +69,22 @@ export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }
           <>
             <Totals
               items={[
-                { label: 'Billed', value: data.totals.billed },
-                { label: 'Received', value: data.totals.received, tone: 'green' },
-                { label: 'Balance', value: data.totals.balance, tone: data.totals.balance > 0 ? 'red' : undefined },
+                { label: t('Billed'), value: data.totals.billed },
+                { label: t('Received'), value: data.totals.received, tone: 'green' },
+                { label: t('Balance'), value: data.totals.balance, tone: data.totals.balance > 0 ? 'red' : undefined },
               ]}
             />
             <Table>
               <thead>
                 <tr>
-                  <Th>Bill</Th>
-                  <Th>Child</Th>
-                  <Th>For</Th>
-                  <Th>Due</Th>
-                  <Th className="text-right">Amount</Th>
-                  <Th className="text-right">Received</Th>
-                  <Th className="text-right">Balance</Th>
-                  <Th>Status</Th>
+                  <Th>{t('Bill')}</Th>
+                  <Th>{t('Child')}</Th>
+                  <Th>{t('For')}</Th>
+                  <Th>{t('Due')}</Th>
+                  <Th className="text-right">{t('Amount')}</Th>
+                  <Th className="text-right">{t('Received')}</Th>
+                  <Th className="text-right">{t('Balance')}</Th>
+                  <Th>{t('Status')}</Th>
                   <Th />
                 </tr>
               </thead>
@@ -101,7 +103,7 @@ export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }
                         <Link href={`/centre/students/${row.studentId}`} className="font-medium text-ink-900 hover:underline">
                           {row.studentName}
                         </Link>
-                        <span className="block text-xs text-ink-500">{row.batchName ?? 'No class'}</span>
+                        <span className="block text-xs text-ink-500">{row.batchName ?? t('No class')}</span>
                       </Td>
                       <Td>{row.title}</Td>
                       <Td className={`whitespace-nowrap ${late ? 'font-semibold text-accent-600' : ''}`}>{formatDate(row.dueDate)}</Td>
@@ -109,12 +111,12 @@ export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }
                       <Td className="tabular text-right">{inr(row.paid)}</Td>
                       <Td className="tabular text-right font-semibold">{row.status === 'cancelled' ? '' : inr(row.total - row.paid)}</Td>
                       <Td>
-                        <StatusBadge status={row.status} label={row.status === 'partial' ? 'Part paid' : undefined} />
+                        <StatusBadge t={t} status={row.status} label={row.status === 'partial' ? t('Part paid') : undefined} />
                       </Td>
                       <Td className="text-right">
                         {open ? (
                           <LinkButton href={`/centre/fees/collect?student=${row.studentId}`} size="sm" variant="secondary">
-                            Take payment
+                            {t('Take payment')}
                           </LinkButton>
                         ) : null}
                       </Td>
@@ -128,21 +130,21 @@ export async function BillsTab({ ctx, filter }: { ctx: Ctx; filter: BillFilter }
         ) : (
           <EmptyState
             icon={<FileText size={26} />}
-            title={filtered ? 'No bills match' : 'No bills yet'}
+            title={filtered ? t('No bills match') : t('No bills yet')}
             text={
               filtered
-                ? 'Try another month, status or name.'
-                : 'A bill says what a child owes. Raise the monthly bills for every child in one go, or a single bill for an admission.'
+                ? t('Try another month, status or name.')
+                : t('A bill says what a child owes. Raise the monthly bills for every child in one go, or a single bill for an admission.')
             }
             action={
               filtered ? (
                 <LinkButton href="/centre/fees" variant="secondary">
-                  Clear filters
+                  {t('Clear filters')}
                 </LinkButton>
               ) : manager ? (
-                <LinkButton href="/centre/fees/run">Raise monthly bills</LinkButton>
+                <LinkButton href="/centre/fees/run">{t('Raise monthly bills')}</LinkButton>
               ) : (
-                <LinkButton href="/centre/fees/new">New bill</LinkButton>
+                <LinkButton href="/centre/fees/new">{t('New bill')}</LinkButton>
               )
             }
           />

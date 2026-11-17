@@ -10,6 +10,7 @@ import { centres, users } from '@/db/schema';
 import { ApiError, action } from '@/lib/api';
 import { audit } from '@/lib/audit';
 import { endSession, getSession, hashPassword, homeFor, isHq, requireSession, startSession, verifyPassword } from '@/lib/auth';
+import { UI_LANG_COOKIE, readUiLang } from '@/i18n/ui';
 import { ACTING_CENTRE_COOKIE } from '@/lib/session-token';
 
 const MAX_FAILS = 5;
@@ -117,4 +118,10 @@ export async function leaveCentre() {
   const jar = await cookies();
   jar.delete(ACTING_CENTRE_COOKIE);
   redirect(session && isHq(session.role) ? '/hq/centres' : '/login');
+}
+
+/** Remembers the language a person wants the dashboards in (English, Hindi or Bengali). */
+export async function setUiLang(lang: string) {
+  const store = await cookies();
+  store.set(UI_LANG_COOKIE, readUiLang(lang), { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' });
 }

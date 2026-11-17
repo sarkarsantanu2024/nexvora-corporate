@@ -6,16 +6,19 @@ import { SectionForm } from '@/components/cms/section-form';
 import { PageHeader } from '@/components/ui/core';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { contentKey, isLang } from '@/lib/i18n';
+import { getT } from '@/lib/t';
 import { getSectionState, listRevisions } from '@/server/cms/service';
 
 type Props = { params: Promise<{ key: string }>; searchParams: Promise<{ lang?: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getT();
   const def = sectionByKey(decodeURIComponent((await params).key));
-  return { title: def ? `${def.label} | Edit website` : 'Edit website' };
+  return { title: def ? `${def.label} | Edit website` : t('Edit website') };
 }
 
 export default async function SectionPage({ params, searchParams }: Props) {
+  const t = await getT();
   await requireSession(HQ_ROLES);
   const key = decodeURIComponent((await params).key);
   const def = sectionByKey(key) as SectionDef | null;
@@ -26,7 +29,7 @@ export default async function SectionPage({ params, searchParams }: Props) {
   const [state, revisions] = await Promise.all([getSectionState(rowKey), listRevisions({ key: rowKey, limit: 5 })]);
   return (
     <>
-      <PageHeader title={def.label} description={def.description} back={{ href: '/hq/website', label: `Edit website › ${def.page}` }} />
+      <PageHeader title={t(def.label)} description={def.description ? t(def.description) : undefined} back={{ href: '/hq/website', label: t('Edit website › {page}', { page: t(def.page) }) }} />
       <SectionForm
         key={rowKey}
         section={{ key: def.key, page: def.page, label: def.label, description: def.description, path: def.path, fields: def.fields as Field[] }}

@@ -4,6 +4,7 @@ import { Check, Copy, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useUrlParam } from '@/components/ui/client';
 import { buttonClass } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import { cn } from '@/lib/cn';
 
 /**
@@ -42,9 +43,10 @@ export function UrlPick({
 
 /** Opens the sender's own WhatsApp with the text ready. Shows nothing useful without a valid number. */
 export function WhatsAppLink({ href, label = 'WhatsApp', size = 'sm' }: { href: string; label?: string; size?: 'sm' | 'md' }) {
+  const t = useT();
   if (!href) {
     return (
-      <span className={buttonClass('secondary', size, 'no-print cursor-not-allowed opacity-50')} title="No mobile number on record">
+      <span className={buttonClass('secondary', size, 'no-print cursor-not-allowed opacity-50')} title={t('No mobile number on record')}>
         <MessageCircle size={16} /> {label}
       </span>
     );
@@ -58,11 +60,12 @@ export function WhatsAppLink({ href, label = 'WhatsApp', size = 'sm' }: { href: 
 
 /** Copies a UPI ID or account number, so a parent can paste it into their payment app. */
 export function CopyButton({ value, label }: { value: string; label: string }) {
+  const t = useT();
   const [done, setDone] = useState(false);
   return (
     <button
       type="button"
-      aria-label={`Copy ${label}`}
+      aria-label={t('Copy {label}', { label })}
       onClick={async () => {
         try {
           await navigator.clipboard.writeText(value);
@@ -75,7 +78,7 @@ export function CopyButton({ value, label }: { value: string; label: string }) {
       className="no-print inline-flex h-8 shrink-0 items-center gap-1 rounded-lg border border-ink-200 bg-white px-2 text-xs font-semibold text-ink-700 hover:bg-ink-50"
     >
       {done ? <Check size={14} className="text-mint-500" /> : <Copy size={14} />}
-      {done ? 'Copied' : 'Copy'}
+      {done ? t('Copied') : t('Copy')}
     </button>
   );
 }

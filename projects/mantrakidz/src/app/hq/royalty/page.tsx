@@ -5,11 +5,12 @@ import { Badge, Card, EmptyState, Notice, PageHeader, Stat, StatusBadge, Table, 
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { currentPeriod, formatDate, periodLabel, todayIST } from '@/lib/date';
 import { inr } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { period as periodSchema } from '@/lib/validators';
 import { waLink } from '@/lib/wa';
 import { lastFinishedPeriod, listRoyalty, royaltyOutstanding, type RoyaltyRow } from '@/server/hq/royalty';
-import { getSetting, isAdmin, royaltyRateLabel } from '@/server/hq/shared';
-import { ExportLink, FilterBar, NUM, readSearch, type Search } from '../_ui/bits';
+import { getSetting, isAdmin } from '@/server/hq/shared';
+import { ExportLink, FilterBar, NUM, readSearch, royaltyRate, type Search } from '../_ui/bits';
 import { MonthPicker, RaiseRoyalty, RecordPayment } from './royalty-tools';
 
 export const metadata: Metadata = { title: 'Royalty' };
@@ -22,6 +23,7 @@ function reminder(row: RoyaltyRow, orgName: string) {
 }
 
 export default async function RoyaltyPage({ searchParams }: { searchParams: Search }) {
+  const t = await getT();
   const session = await requireSession(HQ_ROLES);
   const params = await readSearch(searchParams);
   const period = periodSchema.safeParse(params.period).success && params.period <= currentPeriod() ? params.period : lastFinishedPeriod();
@@ -33,8 +35,8 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
   return (
     <>
       <PageHeader
-        title="Royalty"
-        description="What each franchise centre owes head office for a month, worked out from that month's fee collection."
+        title={t('Royalty')}
+        description={t("What each franchise centre owes head office for a month, worked out from that month's fee collection.")}
         actions={
           <>
             {data.rows.length ? <ExportLink href={`/hq/royalty/export?period=${period}`} /> : null}
@@ -45,21 +47,21 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
 
       <FilterBar>
         <MonthPicker value={period} max={currentPeriod()} />
-        <span className="text-sm text-ink-500">Showing {label}</span>
+        <span className="text-sm text-ink-500">{t('Showing {label}', { label })}</span>
       </FilterBar>
 
       <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
-        <Stat label={`Raised, ${label}`} value={inr(data.totals.amount)} hint={`On collection of ${inr(data.totals.basis)}`} />
-        <Stat label={`Received, ${label}`} value={inr(data.totals.paid)} tone="green" />
-        <Stat label={`Balance, ${label}`} value={inr(data.totals.balance)} tone={data.totals.balance > 0 ? 'amber' : 'green'} />
-        <Stat label="Outstanding, all months" value={inr(outstanding)} tone={outstanding > 0 ? 'red' : 'green'} hint="Every centre, every month" />
+        <Stat label={t('Raised, {label}', { label })} value={inr(data.totals.amount)} hint={t('On collection of {basis}', { basis: inr(data.totals.basis) })} />
+        <Stat label={t('Received, {label}', { label })} value={inr(data.totals.paid)} tone="green" />
+        <Stat label={t('Balance, {label}', { label })} value={inr(data.totals.balance)} tone={data.totals.balance > 0 ? 'amber' : 'green'} />
+        <Stat label={t('Outstanding, all months')} value={inr(outstanding)} tone={outstanding > 0 ? 'red' : 'green'} hint={t('Every centre, every month')} />
       </div>
 
       {!data.canRaise ? (
-        <Notice className="mb-4">{label} is not over yet. Royalty is raised after the month ends, on that month&apos;s fee collection.</Notice>
+        <Notice className="mb-4">{t("{label} is not over yet. Royalty is raised after the month ends, on that month's fee collection.", { label })}</Notice>
       ) : data.notRaised.length && data.rows.length ? (
         <Notice tone="amber" className="mb-4">
-          Not yet raised for {label}: {data.notRaised.map((centre) => centre.name).join(', ')}. Press &quot;Raise royalty&quot; to add them. Centres already billed are not touched.
+          {t('Not yet raised for {label}: {centres}. Press "Raise royalty" to add them. Centres already billed are not touched.', { label, centres: data.notRaised.map((centre) => centre.name).join(', ') })}
         </Notice>
       ) : null}
 
@@ -68,14 +70,14 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
           <Table>
             <thead>
               <tr>
-                <Th>Centre</Th>
-                <Th className="text-right">Collection</Th>
-                <Th>Rate</Th>
-                <Th className="text-right">Royalty</Th>
-                <Th className="text-right">Paid</Th>
-                <Th className="text-right">Balance</Th>
-                <Th>Status</Th>
-                <Th>Due</Th>
+                <Th>{t('Centre')}</Th>
+                <Th className="text-right">{t('Collection')}</Th>
+                <Th>{t('Rate')}</Th>
+                <Th className="text-right">{t('Royalty')}</Th>
+                <Th className="text-right">{t('Paid')}</Th>
+                <Th className="text-right">{t('Balance')}</Th>
+                <Th>{t('Status')}</Th>
+                <Th>{t('Due')}</Th>
                 <Th />
               </tr>
             </thead>
@@ -91,25 +93,25 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
                       <p className="tabular text-xs text-ink-500">{row.centreCode}</p>
                     </Td>
                     <Td className={NUM}>{inr(row.basisAmount)}</Td>
-                    <Td className="whitespace-nowrap">{royaltyRateLabel(row.royaltyType, row.royaltyValue)}</Td>
+                    <Td className="whitespace-nowrap">{royaltyRate(t, row.royaltyType, row.royaltyValue)}</Td>
                     <Td className={`${NUM} font-semibold`}>{inr(row.amount)}</Td>
                     <Td className={NUM}>{inr(row.paid)}</Td>
                     <Td className={`${NUM} font-semibold ${row.balance > 0 ? 'text-accent-600' : ''}`}>{inr(row.balance)}</Td>
                     <Td>
-                      <StatusBadge status={row.status} />
+                      <StatusBadge t={t} status={row.status} />
                     </Td>
                     <Td className="whitespace-nowrap">
                       {formatDate(row.dueDate)}
                       {row.overdue ? (
                         <span className="block">
-                          <Badge tone="red">Overdue</Badge>
+                          <Badge tone="red">{t('Overdue')}</Badge>
                         </span>
                       ) : null}
                     </Td>
                     <Td>
                       <span className="no-print flex items-center justify-end gap-1.5">
                         {wa ? (
-                          <a href={wa} target="_blank" rel="noreferrer" className={buttonClass('secondary', 'sm', 'w-9 px-0 text-mint-700')} title="Send a reminder on WhatsApp" aria-label="Send a reminder on WhatsApp">
+                          <a href={wa} target="_blank" rel="noreferrer" className={buttonClass('secondary', 'sm', 'w-9 px-0 text-mint-700')} title={t('Send a reminder on WhatsApp')} aria-label={t('Send a reminder on WhatsApp')}>
                             <MessageCircle size={16} />
                           </a>
                         ) : null}
@@ -122,7 +124,7 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
             </tbody>
             <tfoot>
               <tr className="bg-ink-50/60 font-bold text-ink-900">
-                <Td>Total</Td>
+                <Td>{t('Total')}</Td>
                 <Td className={NUM}>{inr(data.totals.basis)}</Td>
                 <Td />
                 <Td className={NUM}>{inr(data.totals.amount)}</Td>
@@ -135,19 +137,21 @@ export default async function RoyaltyPage({ searchParams }: { searchParams: Sear
         ) : (
           <EmptyState
             icon={<BadgeIndianRupee size={26} />}
-            title={`No royalty raised for ${label}`}
+            title={t('No royalty raised for {label}', { label })}
             text={
               data.canRaise
                 ? data.notRaised.length
-                  ? `Raising it makes one royalty bill for each of the ${data.notRaised.length} active franchise ${data.notRaised.length === 1 ? 'centre' : 'centres'}, from the fee they collected in ${label}.`
-                  : 'There is no active franchise centre to bill. Company-owned centres pay no royalty.'
-                : 'Pick a month that is over to raise its royalty.'
+                  ? data.notRaised.length === 1
+                    ? t('Raising it makes one royalty bill for each of the {n} active franchise centre, from the fee they collected in {label}.', { n: data.notRaised.length, label })
+                    : t('Raising it makes one royalty bill for each of the {n} active franchise centres, from the fee they collected in {label}.', { n: data.notRaised.length, label })
+                  : t('There is no active franchise centre to bill. Company-owned centres pay no royalty.')
+                : t('Pick a month that is over to raise its royalty.')
             }
             action={data.canRaise && data.notRaised.length ? <RaiseRoyalty period={period} label={label} alreadyRaised={false} /> : undefined}
           />
         )}
       </Card>
-      {admin ? null : <p className="mt-3 text-sm text-ink-500">Only a head office admin can record or cancel royalty payments.</p>}
+      {admin ? null : <p className="mt-3 text-sm text-ink-500">{t('Only a head office admin can record or cancel royalty payments.')}</p>}
     </>
   );
 }

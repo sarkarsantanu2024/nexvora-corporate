@@ -56,15 +56,25 @@ const config: Config = {
         display: ['var(--font-display)', 'ui-rounded', 'system-ui', 'sans-serif'],
         sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
       },
-      borderRadius: { '4xl': '2rem', '5xl': '2.75rem' },
+      // The dashboards ask for squarer corners and flatter shadows than the
+      // public website: they set these variables (see "app-ui" in globals.css).
+      borderRadius: {
+        lg: 'var(--r-lg, 0.5rem)',
+        xl: 'var(--r-xl, 0.75rem)',
+        '2xl': 'var(--r-2xl, 1rem)',
+        '3xl': 'var(--r-3xl, 1.5rem)',
+        '4xl': '2rem',
+        '5xl': '2.75rem',
+      },
       boxShadow: {
-        card: '0 1px 2px rgba(26,26,44,.05), 0 4px 16px -4px rgba(26,26,44,.08)',
-        lift: '0 2px 4px rgba(26,26,44,.06), 0 18px 40px -12px rgba(63,52,143,.28)',
+        card: 'var(--shadow-card, 0 1px 2px rgba(26,26,44,.05), 0 4px 16px -4px rgba(26,26,44,.08))',
+        lift: 'var(--shadow-lift, 0 2px 4px rgba(26,26,44,.06), 0 18px 40px -12px rgba(63,52,143,.28))',
         glow: '0 12px 40px -8px rgba(227,30,36,.35)',
       },
       keyframes: {
         'fade-up': { from: { opacity: '0', transform: 'translateY(12px)' }, to: { opacity: '1', transform: 'none' } },
         'fade-in': { from: { opacity: '0' }, to: { opacity: '1' } },
+        'page-in': { from: { opacity: '0', transform: 'translateY(8px)' }, to: { opacity: '1', transform: 'none' } },
         'scale-in': { from: { opacity: '0', transform: 'scale(.96)' }, to: { opacity: '1', transform: 'none' } },
         'slide-in-right': { from: { transform: 'translateX(100%)' }, to: { transform: 'none' } },
         'slide-in-left': { from: { transform: 'translateX(-100%)' }, to: { transform: 'none' } },
@@ -77,6 +87,7 @@ const config: Config = {
       animation: {
         'fade-up': 'fade-up .45s cubic-bezier(.2,.7,.2,1) both',
         'fade-in': 'fade-in .3s ease both',
+        'page-in': 'page-in .28s cubic-bezier(.2,.7,.2,1) both',
         'scale-in': 'scale-in .22s cubic-bezier(.2,.7,.2,1) both',
         'slide-in-right': 'slide-in-right .28s cubic-bezier(.2,.7,.2,1) both',
         float: 'float 6s ease-in-out infinite',

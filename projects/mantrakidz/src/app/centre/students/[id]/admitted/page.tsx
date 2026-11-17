@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Card, LinkButton } from '@/components/ui/core';
 import { requireCentre } from '@/lib/auth';
+import { getT } from '@/lib/t';
 import { getStudent } from '@/server/centre/children/students';
 import { orNotFound } from '../../form-data';
 import { ParentLogin } from '../student-actions';
@@ -24,6 +25,7 @@ function Step({ n, title, text, children }: { n: number; title: string; text: st
 
 /** Shown once, straight after admission: what was saved and what to do next. */
 export default async function AdmittedPage({ params }: { params: Promise<{ id: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { id } = await params;
   const row = await orNotFound(getStudent(ctx, id));
@@ -37,35 +39,35 @@ export default async function AdmittedPage({ params }: { params: Promise<{ id: s
           <span className="mb-3 grid h-14 w-14 place-items-center rounded-full bg-mint-100 text-mint-700">
             <CircleCheck size={30} />
           </span>
-          <h1 className="font-display text-2xl font-bold text-ink-900">{student.name} is admitted</h1>
+          <h1 className="font-display text-2xl font-bold text-ink-900">{t('{name} is admitted', { name: student.name })}</h1>
           <p className="mt-1 text-[15px] text-ink-600">
-            Admission number <strong className="tabular text-ink-900">{student.admissionNo}</strong>
+            {t('Admission number')} <strong className="tabular text-ink-900">{student.admissionNo}</strong>
             {row.batchName ? `, ${row.batchName}` : row.programmeName ? `, ${row.programmeName}` : ''}
           </p>
         </div>
-        <p className="border-t border-ink-100 px-5 pt-4 text-xs font-semibold uppercase tracking-wide text-ink-400">What to do next</p>
+        <p className="border-t border-ink-100 px-5 pt-4 text-xs font-semibold uppercase tracking-wide text-ink-400">{t('What to do next')}</p>
         <ol className="divide-y divide-ink-100">
-          <Step n={1} title="Raise the admission bill" text="Admission fee, kit and anything else due now.">
+          <Step n={1} title={t('Raise the admission bill')} text={t('Admission fee, kit and anything else due now.')}>
             <LinkButton href={`/centre/fees/new?student=${student.id}`}>
-              <ReceiptText size={17} /> Raise the bill
+              <ReceiptText size={17} /> {t('Raise the bill')}
             </LinkButton>
           </Step>
           <Step
             n={2}
-            title="Create parent login"
-            text={hasLogin ? `Already has one: ${row.parentUsername}. You can reset its password.` : 'So the parent can see fees, attendance and notices.'}
+            title={t('Create parent login')}
+            text={hasLogin ? t('Already has one: {username}. You can reset its password.', { username: row.parentUsername ?? '' }) : t('So the parent can see fees, attendance and notices.')}
           >
             <ParentLogin studentId={student.id} hasLogin={hasLogin} phone={student.guardianPhone} parentName={student.motherName || student.fatherName} />
           </Step>
-          <Step n={3} title="Add another child" text="A brother or sister, or the next admission.">
+          <Step n={3} title={t('Add another child')} text={t('A brother or sister, or the next admission.')}>
             <LinkButton href="/centre/students/new" variant="secondary">
-              <UserPlus size={17} /> Add another
+              <UserPlus size={17} /> {t('Add another')}
             </LinkButton>
           </Step>
         </ol>
         <div className="flex justify-center border-t border-ink-100 px-5 py-4">
           <LinkButton href={`/centre/students/${student.id}`} variant="ghost">
-            Open {student.name}&apos;s profile
+            {t("Open {name}'s profile", { name: student.name })}
           </LinkButton>
         </div>
       </Card>

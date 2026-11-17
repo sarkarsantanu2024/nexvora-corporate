@@ -14,6 +14,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { ContentData, Field as FieldDef, ListField, ScalarField } from '@/cms/types';
 import { Badge, Button, Card, Input, Notice, Select, Textarea } from '@/components/ui/core';
 import { ConfirmButton, LoadingButton, useToast } from '@/components/ui/client';
+import { useT } from '@/components/ui/lang';
+import { rich } from '@/i18n/rich';
 import type { ActionResult } from '@/lib/api';
 import { cn } from '@/lib/cn';
 import { LANGS, LANG_NAMES, localePath, type Lang } from '@/lib/i18n';
@@ -49,6 +51,7 @@ const newRowId = () => `row-${(rowSeed += 1)}`;
 const count = (text: string) => [...text].length;
 
 export function SectionForm({ section, state, revisions }: { section: FormSection; state: SectionState; revisions: RevisionRow[] }) {
+  const t = useT();
   const lang = state.lang;
   const rowKey = state.key;
   const fields = useMemo(() => editableFields(section, lang), [section, lang]);
@@ -115,7 +118,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
     const onClick = (event: MouseEvent) => {
       const link = (event.target as HTMLElement | null)?.closest('a[href]') as HTMLAnchorElement | null;
       if (!link || link.target === '_blank' || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey) return;
-      if (!window.confirm('You have changes that are not saved. Leave without saving?')) {
+      if (!window.confirm(t('You have changes that are not saved. Leave without saving?'))) {
         event.preventDefault();
         event.stopPropagation();
       }
@@ -140,7 +143,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
           for (const [list, index] of bad) if (index !== undefined) next.add(rowIds[list]?.[Number(index)] ?? '');
           return next;
         });
-        toast.error(result.error);
+        toast.error(t(result.error));
         return false;
       }
       adopt(result.data);
@@ -156,7 +159,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
       setBusy('save');
       const result = await saveDraftAction(rowKey, next ?? valuesRef.current, via);
       setBusy(null);
-      finish(result, quiet ? '' : 'Draft saved. The live site has not changed.');
+      finish(result, quiet ? '' : t('Draft saved. The live site has not changed.'));
       return result;
     },
     [finish, rowKey],
@@ -166,7 +169,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
     setBusy('publish');
     const result = await publishAction(rowKey, dirty ? values : null);
     setBusy(null);
-    finish(result, 'Published. Visitors see it now.');
+    finish(result, t('Published. Visitors see it now.'));
   }
 
   const setHidden = useCallback(
@@ -178,9 +181,9 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
         // Only the hidden marker changed: keep whatever is typed and not saved.
         setServer(result.data);
         setPreviewTick((tick) => tick + 1);
-        if (via === 'panel') toast.success(hidden ? 'Will be hidden once you publish' : 'Will show again once you publish');
+        if (via === 'panel') toast.success(hidden ? t('Will be hidden once you publish') : t('Will show again once you publish'));
         router.refresh();
-      } else toast.error(result.error);
+      } else toast.error(t(result.error));
       return result;
     },
     [router, rowKey, toast],
@@ -200,7 +203,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
       if (!list) return;
       const rows = (valuesRef.current[listName] as Row[]) ?? [];
       if (list.max && rows.length >= list.max) {
-        toast.error(`There is room for ${list.max} here. Remove one first.`);
+        toast.error(t('There is room for {max} here. Remove one first.', { max: list.max }));
         return;
       }
       const id = newRowId();
@@ -261,7 +264,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
 
     let control;
     if (field.type === 'image') {
-      control = <ImageInput value={value} onChange={onChange} label={field.label} invalid={Boolean(error)} compact={compact} />;
+      control = <ImageInput value={value} onChange={onChange} label={t(field.label)} invalid={Boolean(error)} compact={compact} />;
     } else if (field.type === 'textarea') {
       control = <Textarea id={id} value={value} invalid={Boolean(error) || over} onFocus={onFocus} onChange={(event) => onChange(event.target.value)} rows={compact ? 3 : 4} placeholder={wording ? english : undefined} {...script} />;
     } else if (field.type === 'select') {
@@ -269,7 +272,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
         <Select id={id} value={value} invalid={Boolean(error)} onChange={(event) => onChange(event.target.value)}>
           {(field.options ?? []).map((option) => (
             <option key={option.value} value={option.value}>
-              {option.label}
+              {t(option.label)}
             </option>
           ))}
         </Select>
@@ -279,7 +282,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
         <label htmlFor={id} className="flex cursor-pointer items-center gap-3">
           <input id={id} type="checkbox" checked={value === '1'} onChange={(event) => onChange(event.target.checked ? '1' : '')} className="peer sr-only" />
           <span className="relative h-7 w-12 shrink-0 rounded-full bg-ink-300 transition peer-checked:bg-brand-600 peer-focus-visible:ring-4 peer-focus-visible:ring-brand-100 after:absolute after:left-1 after:top-1 after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow after:transition peer-checked:after:translate-x-5" />
-          <span className="text-[15px] font-medium text-ink-800">{value === '1' ? 'On' : 'Off'}</span>
+          <span className="text-[15px] font-medium text-ink-800">{value === '1' ? t('On') : t('Off')}</span>
         </label>
       );
     } else {
@@ -294,7 +297,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
           invalid={Boolean(error) || over}
           onFocus={onFocus}
           onChange={(event) => onChange(event.target.value)}
-          placeholder={field.type === 'url' ? 'https://' : field.type === 'phone' ? '10 digit mobile number' : wording ? english : undefined}
+          placeholder={field.type === 'url' ? 'https://' : field.type === 'phone' ? t('10 digit mobile number') : wording ? english : undefined}
           {...script}
         />
       );
@@ -304,7 +307,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
       <div key={errorKey}>
         <div className="mb-1.5 flex items-baseline justify-between gap-3">
           <label htmlFor={field.type === 'image' ? undefined : id} className="text-sm font-semibold text-ink-700">
-            {field.label}
+            {t(field.label)}
           </label>
           {field.maxLength !== undefined && (field.type === 'text' || field.type === 'textarea') ? (
             <span className={cn('tabular shrink-0 text-xs font-medium', over ? 'text-accent-600' : length > field.maxLength * 0.9 ? 'text-sun-700' : 'text-ink-400')} aria-live={over ? 'polite' : undefined}>
@@ -313,12 +316,12 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
           ) : null}
         </div>
         {control}
-        {error ? <p className="mt-1 text-sm font-medium text-accent-600">{error}</p> : field.help && !wording ? <p className="mt-1 text-sm text-ink-500">{field.help}</p> : null}
+        {error ? <p className="mt-1 text-sm font-medium text-accent-600">{t(error)}</p> : field.help && !wording ? <p className="mt-1 text-sm text-ink-500">{t(field.help)}</p> : null}
         {wording && !compact ? (
           <p className="mt-1.5 rounded-lg bg-ink-50 px-2.5 py-1.5 text-sm text-ink-600">
-            <span className="font-semibold text-ink-500">English: </span>
-            {english ? <span className="whitespace-pre-line">{english}</span> : <span className="text-ink-400">empty</span>}
-            {!value ? <span className="mt-0.5 block text-ink-500">Left empty, the website shows the English here.</span> : null}
+            <span className="font-semibold text-ink-500">{t('English:')} </span>
+            {english ? <span className="whitespace-pre-line">{english}</span> : <span className="text-ink-400">{t('empty')}</span>}
+            {!value ? <span className="mt-0.5 block text-ink-500">{t('Left empty, the website shows the English here.')}</span> : null}
           </p>
         ) : null}
       </div>
@@ -349,19 +352,18 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
       <div key={field.name}>
         <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
           <p className="text-sm font-semibold text-ink-700">
-            {field.label}
+            {t(field.label)}
             <span className="tabular ml-2 text-xs font-medium text-ink-400">
-              {rows.length}
-              {field.max ? ` of ${field.max}` : ''}
+              {field.max ? t('{n} of {max}', { n: rows.length, max: field.max }) : rows.length}
             </span>
           </p>
           {rows.length > 1 ? (
             <button type="button" className="text-sm font-semibold text-brand-700 hover:underline" onClick={() => setOpenRows((current) => (ids.every((id) => current.has(id)) ? new Set([...current].filter((id) => !ids.includes(id))) : new Set([...current, ...ids])))}>
-              {ids.every((id) => openRows.has(id)) ? 'Close all' : 'Open all'}
+              {ids.every((id) => openRows.has(id)) ? t('Close all') : t('Open all')}
             </button>
           ) : null}
         </div>
-        {field.help ? <p className="-mt-1 mb-2 text-sm text-ink-500">{field.help}</p> : null}
+        {field.help ? <p className="-mt-1 mb-2 text-sm text-ink-500">{t(field.help)}</p> : null}
         {errors[field.name] ? <p className="mb-2 text-sm font-medium text-accent-600">{errors[field.name]}</p> : null}
 
         <ul className="space-y-2">
@@ -375,18 +377,18 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
                 <div className="flex items-center gap-1 py-1.5 pl-2 pr-1.5">
                   <button type="button" onClick={() => toggle(id)} aria-expanded={open} className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl px-2 py-2 text-left hover:bg-ink-50">
                     <span className="tabular grid h-6 w-6 shrink-0 place-items-center rounded-full bg-ink-100 text-xs font-bold text-ink-600">{index + 1}</span>
-                    <span className={cn('min-w-0 flex-1 truncate text-[15px] font-semibold', title ? 'text-ink-900' : 'text-ink-400')}>{title || `New ${field.itemLabel}`}</span>
+                    <span className={cn('min-w-0 flex-1 truncate text-[15px] font-semibold', title ? 'text-ink-900' : 'text-ink-400')}>{title || t('New {itemLabel}', { itemLabel: t(field.itemLabel) })}</span>
                     <ChevronDown size={18} className={cn('shrink-0 text-ink-400 transition', open && 'rotate-180')} />
                   </button>
-                  <button type="button" aria-label={`Move ${field.itemLabel} ${index + 1} up`} disabled={index === 0} onClick={() => move(index, index - 1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-ink-600 hover:bg-ink-100 disabled:opacity-30">
+                  <button type="button" aria-label={t('Move {itemLabel} {n} up', { itemLabel: t(field.itemLabel), n: index + 1 })} disabled={index === 0} onClick={() => move(index, index - 1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-ink-600 hover:bg-ink-100 disabled:opacity-30">
                     <ArrowUp size={18} />
                   </button>
-                  <button type="button" aria-label={`Move ${field.itemLabel} ${index + 1} down`} disabled={index === rows.length - 1} onClick={() => move(index, index + 1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-ink-600 hover:bg-ink-100 disabled:opacity-30">
+                  <button type="button" aria-label={t('Move {itemLabel} {n} down', { itemLabel: t(field.itemLabel), n: index + 1 })} disabled={index === rows.length - 1} onClick={() => move(index, index + 1)} className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-ink-600 hover:bg-ink-100 disabled:opacity-30">
                     <ArrowDown size={18} />
                   </button>
                   <button
                     type="button"
-                    aria-label={`Remove ${field.itemLabel} ${index + 1}`}
+                    aria-label={t('Remove {itemLabel} {n}', { itemLabel: t(field.itemLabel), n: index + 1 })}
                     onClick={() => setRows(field.name, rows.filter((_, at) => at !== index), ids.filter((_, at) => at !== index))}
                     className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-accent-600 hover:bg-accent-50"
                   >
@@ -414,9 +416,9 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
 
         <div className="mt-2 flex flex-wrap items-center gap-3">
           <Button variant="secondary" size="sm" disabled={full} onClick={() => appendRow(field.name, {})}>
-            <Plus size={16} /> Add {field.itemLabel}
+            <Plus size={16} /> {t('Add {itemLabel}', { itemLabel: t(field.itemLabel) })}
           </Button>
-          {full ? <span className="text-sm text-ink-500">That is the most this section holds.</span> : null}
+          {full ? <span className="text-sm text-ink-500">{t('That is the most this section holds.')}</span> : null}
         </div>
       </div>
     );
@@ -439,8 +441,8 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
     <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
       <div className="min-w-0 space-y-4">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-          <p className="text-sm font-semibold text-ink-600">Language</p>
-          <div className="flex rounded-xl border border-ink-200 bg-white p-1" role="group" aria-label="Language to edit">
+          <p className="text-sm font-semibold text-ink-600">{t('Language')}</p>
+          <div className="flex rounded-xl border border-ink-200 bg-white p-1" role="group" aria-label={t('Language to edit')}>
             {LANGS.map((code) => (
               <Link
                 key={code}
@@ -456,31 +458,31 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
         </div>
         {lang !== 'en' ? (
           <Notice tone="blue">
-            You are editing the {LANG_NAMES[lang].english} wording. Each box shows the English under it. Leave a box empty to show the English there.
+            {t('You are editing the {language} wording. Each box shows the English under it. Leave a box empty to show the English there.', { language: t(LANG_NAMES[lang].english) })}
           </Notice>
         ) : null}
         <div className="flex flex-wrap items-center gap-2">
-          {dirty ? <Badge tone="amber">Not saved yet</Badge> : server.hasDraft ? <Badge tone="blue">Draft saved, not published</Badge> : <Badge tone="green">Same as the live site</Badge>}
-          {server.hidden ? <Badge tone="neutral"><EyeOff size={12} /> Hidden on the site</Badge> : null}
-          {hiddenInDraft !== server.hidden ? <Badge tone="amber">{hiddenInDraft ? 'Will be hidden when published' : 'Will show again when published'}</Badge> : null}
+          {dirty ? <Badge tone="amber">{t('Not saved yet')}</Badge> : server.hasDraft ? <Badge tone="blue">{t('Draft saved, not published')}</Badge> : <Badge tone="green">{t('Same as the live site')}</Badge>}
+          {server.hidden ? <Badge tone="neutral"><EyeOff size={12} /> {t('Hidden on the site')}</Badge> : null}
+          {hiddenInDraft !== server.hidden ? <Badge tone="amber">{hiddenInDraft ? t('Will be hidden when published') : t('Will show again when published')}</Badge> : null}
         </div>
 
-        {Object.keys(errors).length ? <Notice tone="red">Some fields need a look. They are marked in red below.</Notice> : null}
+        {Object.keys(errors).length ? <Notice tone="red">{t('Some fields need a look. They are marked in red below.')}</Notice> : null}
 
         <Card className="space-y-5 p-5">
           {fields.map((field) =>
             field.type === 'list' ? list(field) : scalar(field, String(values[field.name] ?? ''), (value) => setField(field.name, value), field.name, { name: field.name }, false, String(server.reference?.[field.name] ?? '')),
           )}
-          {fields.length === 0 ? <p className="text-[15px] text-ink-600">This section has no wording of its own: everything in it is the same in every language. Change it under English.</p> : null}
+          {fields.length === 0 ? <p className="text-[15px] text-ink-600">{t('This section has no wording of its own: everything in it is the same in every language. Change it under English.')}</p> : null}
         </Card>
 
         {lang !== 'en' && shared.length ? (
           <Card className="p-5">
-            <p className="text-sm font-bold text-ink-900">Same in every language</p>
+            <p className="text-sm font-bold text-ink-900">{t('Same in every language')}</p>
             <p className="mt-0.5 text-sm text-ink-500">
-              Photos, links, phone numbers and choices are shared.{' '}
+              {t('Photos, links, phone numbers and choices are shared.')}{' '}
               <Link href={`/hq/website/${section.key}`} className="font-semibold text-brand-700 hover:underline">
-                Change them under English
+                {t('Change them under English')}
               </Link>
               .
             </p>
@@ -490,13 +492,13 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
                 const option = field.type === 'select' ? field.options?.find((item) => item.value === value)?.label : undefined;
                 return (
                   <div key={field.name} className="flex items-center justify-between gap-4 py-2.5">
-                    <dt className="text-sm font-semibold text-ink-700">{field.label}</dt>
+                    <dt className="text-sm font-semibold text-ink-700">{t(field.label)}</dt>
                     <dd className="min-w-0 text-right text-sm text-ink-600">
                       {field.type === 'image' && value ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={value} alt="" className="ml-auto h-12 w-20 rounded-lg bg-ink-100 object-cover" />
                       ) : (
-                        <span className="break-all">{field.type === 'toggle' ? (value === '1' ? 'On' : 'Off') : option || value || 'Empty'}</span>
+                        <span className="break-all">{field.type === 'toggle' ? (value === '1' ? t('On') : t('Off')) : option || value || t('Empty')}</span>
                       )}
                     </dd>
                   </div>
@@ -510,72 +512,72 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
         <div className="sticky bottom-0 z-10 -mx-4 border-t border-ink-200 bg-white/95 px-4 py-3 backdrop-blur sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:p-0 sm:backdrop-blur-none">
           <div className="flex flex-wrap items-center gap-2 pr-16 sm:pr-0">
             <LoadingButton variant="secondary" loading={busy === 'save'} disabled={!dirty || busy !== null} onClick={() => void save()}>
-              {busy === 'save' ? null : <Save size={18} />} Save draft
+              {busy === 'save' ? null : <Save size={18} />} {t('Save draft')}
             </LoadingButton>
             <ConfirmButton
               variant="primary"
               danger={false}
               disabled={!canPublish || busy !== null}
-              title={lang === 'en' ? `Publish "${section.label}"?` : `Publish "${section.label}" in ${LANG_NAMES[lang].english}?`}
-              text="Visitors will see these changes straight away. If it does not look right, you can go back to the earlier version from the list below."
-              confirmLabel="Publish now"
+              title={lang === 'en' ? t('Publish "{label}"?', { label: t(section.label) }) : t('Publish "{label}" in {language}?', { label: t(section.label), language: t(LANG_NAMES[lang].english) })}
+              text={t('Visitors will see these changes straight away. If it does not look right, you can go back to the earlier version from the list below.')}
+              confirmLabel={t('Publish now')}
               onConfirm={publish}
             >
-              <Send size={18} /> Publish
+              <Send size={18} /> {t('Publish')}
             </ConfirmButton>
             {section.path ? (
               <Button variant="ghost" className="xl:hidden" onClick={() => void openOnSite()}>
-                <ExternalLink size={18} /> See it on the site
+                <ExternalLink size={18} /> {t('See it on the site')}
               </Button>
             ) : null}
           </div>
         </div>
 
         <Card className="p-5">
-          <p className="text-sm font-bold text-ink-900">More</p>
+          <p className="text-sm font-bold text-ink-900">{t('More')}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {lang === 'en' ? (
               <LoadingButton variant="secondary" size="sm" loading={busy === 'hide'} disabled={busy !== null} onClick={() => void setHidden(!hiddenInDraft)}>
-                {hiddenInDraft ? <Eye size={16} /> : <EyeOff size={16} />} {hiddenInDraft ? 'Show this section' : 'Hide this section'}
+                {hiddenInDraft ? <Eye size={16} /> : <EyeOff size={16} />} {hiddenInDraft ? t('Show this section') : t('Hide this section')}
               </LoadingButton>
             ) : null}
             <ConfirmButton
               size="sm"
               variant="secondary"
               disabled={(!server.hasDraft && !dirty) || busy !== null}
-              title="Discard the draft?"
-              text="Everything changed here since the last publish is thrown away. The live site stays as it is."
-              confirmLabel="Discard draft"
+              title={t('Discard the draft?')}
+              text={t('Everything changed here since the last publish is thrown away. The live site stays as it is.')}
+              confirmLabel={t('Discard draft')}
               onConfirm={async () => {
-                finish(await discardDraftAction(rowKey), 'Draft discarded');
+                finish(await discardDraftAction(rowKey), t('Draft discarded'));
               }}
             >
-              <Undo2 size={16} /> Discard draft
+              <Undo2 size={16} /> {t('Discard draft')}
             </ConfirmButton>
             <ConfirmButton
               size="sm"
               variant="secondary"
               disabled={busy !== null}
-              title={lang === 'en' ? 'Put back the original wording?' : `Put back the built-in ${LANG_NAMES[lang].english} wording?`}
-              text="The form is filled with the wording the website was built with, as a draft. Nothing goes live until you publish."
-              confirmLabel="Reset to default"
+              title={lang === 'en' ? t('Put back the original wording?') : t('Put back the built-in {language} wording?', { language: t(LANG_NAMES[lang].english) })}
+              text={t('The form is filled with the wording the website was built with, as a draft. Nothing goes live until you publish.')}
+              confirmLabel={t('Reset to default')}
               danger={false}
               onConfirm={async () => {
-                finish(await resetToDefaultAction(rowKey), 'Original wording put back as a draft');
+                finish(await resetToDefaultAction(rowKey), t('Original wording put back as a draft'));
               }}
             >
-              <RotateCcw size={16} /> Reset to default
+              <RotateCcw size={16} /> {t('Reset to default')}
             </ConfirmButton>
           </div>
           <p className="mt-3 text-sm text-ink-500">
-            {lang === 'en' ? 'Hiding takes the whole section off the page, in every language, without losing its content. Like every change, it goes live when you publish.' : 'To hide or show this section, switch to English: a section is hidden in every language at once.'}
+            {lang === 'en' ? t('Hiding takes the whole section off the page, in every language, without losing its content. Like every change, it goes live when you publish.') : t('To hide or show this section, switch to English: a section is hidden in every language at once.')}
           </p>
         </Card>
 
         <Card className="p-5">
-          <p className="text-sm font-bold text-ink-900">Earlier versions</p>
-          <p className="mt-0.5 text-sm text-ink-500">Every publish keeps what was live before it. Restore one to undo.</p>
-          <RevisionList revisions={revisions} empty="Nothing has been published here yet." className="mt-3" />
+          <p className="text-sm font-bold text-ink-900">{t('Earlier versions')}</p>
+          <p className="mt-0.5 text-sm text-ink-500">{t('Every publish keeps what was live before it. Restore one to undo.')}</p>
+          <RevisionList revisions={revisions} empty={t('Nothing has been published here yet.')} className="mt-3" />
         </Card>
       </div>
 
@@ -584,23 +586,23 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
           <div className="sticky top-20">
             <div className="mb-2 flex items-center justify-between gap-2">
               <p className="text-sm font-bold text-ink-900">
-                Preview <span className="font-medium text-ink-500">of your saved draft</span>
+                {rich(t('Preview {rest}'), { rest: <span className="font-medium text-ink-500">{t('of your saved draft')}</span> })}
               </p>
               <div className="flex items-center gap-1">
-                <div className="flex rounded-lg border border-ink-200 bg-white p-0.5" role="group" aria-label="Preview size">
+                <div className="flex rounded-lg border border-ink-200 bg-white p-0.5" role="group" aria-label={t('Preview size')}>
                   {(['desktop', 'phone'] as const).map((kind) => (
-                    <button key={kind} type="button" aria-pressed={device === kind} aria-label={kind === 'desktop' ? 'Computer' : 'Phone'} onClick={() => setDevice(kind)} className={cn('grid h-8 w-9 place-items-center rounded-md transition', device === kind ? 'bg-brand-700 text-white' : 'text-ink-500 hover:bg-ink-100')}>
+                    <button key={kind} type="button" aria-pressed={device === kind} aria-label={kind === 'desktop' ? t('Computer') : t('Phone')} onClick={() => setDevice(kind)} className={cn('grid h-8 w-9 place-items-center rounded-md transition', device === kind ? 'bg-brand-700 text-white' : 'text-ink-500 hover:bg-ink-100')}>
                       {kind === 'desktop' ? <Monitor size={16} /> : <Smartphone size={16} />}
                     </button>
                   ))}
                 </div>
                 <Button variant="ghost" size="sm" onClick={() => void openOnSite()}>
-                  <ExternalLink size={15} /> Open
+                  <ExternalLink size={15} /> {t('Open')}
                 </Button>
               </div>
             </div>
             <PreviewFrame path={sitePath} device={device} tick={previewTick} />
-            {dirty ? <p className="mt-2 text-sm text-ink-500">Save the draft to see your latest typing here.</p> : null}
+            {dirty ? <p className="mt-2 text-sm text-ink-500">{t('Save the draft to see your latest typing here.')}</p> : null}
           </div>
         </aside>
       ) : null}
@@ -614,6 +616,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
  * width and scaled down to fit, so it looks like the site, not like a phone.
  */
 function PreviewFrame({ path, device, tick }: { path: string; device: 'desktop' | 'phone'; tick: number }) {
+  const t = useT();
   const box = useRef<HTMLDivElement>(null);
   const frame = useRef<HTMLIFrameElement>(null);
   const [width, setWidth] = useState(0);
@@ -645,7 +648,7 @@ function PreviewFrame({ path, device, tick }: { path: string; device: 'desktop' 
       <iframe
         ref={frame}
         src={path}
-        title="Preview of the page"
+        title={t('Preview of the page')}
         className="origin-top-left border-0 bg-white"
         style={{ width: natural, height: `calc((100dvh - 11rem) / ${scale})`, transform: `scale(${scale})`, marginLeft: device === 'phone' && width > natural ? (width - natural) / 2 : 0 }}
       />

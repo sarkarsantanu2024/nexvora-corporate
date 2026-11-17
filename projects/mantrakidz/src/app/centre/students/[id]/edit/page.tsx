@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/core';
 import { requireCentre } from '@/lib/auth';
 import { todayIST } from '@/lib/date';
+import { getT } from '@/lib/t';
 import { getStudent } from '@/server/centre/children/students';
 import { orNotFound, studentFormData } from '../../form-data';
 import { StudentForm } from '../../student-form';
@@ -9,6 +10,7 @@ import { StudentForm } from '../../student-form';
 export const metadata: Metadata = { title: 'Edit child' };
 
 export default async function EditStudentPage({ params }: { params: Promise<{ id: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   const { id } = await params;
   const { student } = await orNotFound(getStudent(ctx, id));
@@ -16,7 +18,7 @@ export default async function EditStudentPage({ params }: { params: Promise<{ id
 
   return (
     <>
-      <PageHeader back={{ href: `/centre/students/${student.id}`, label: student.name }} title={`Edit ${student.name}`} description={`Admission number ${student.admissionNo}`} />
+      <PageHeader back={{ href: `/centre/students/${student.id}`, label: student.name }} title={t('Edit {name}', { name: student.name })} description={t('Admission number {admissionNo}', { admissionNo: student.admissionNo })} />
       <StudentForm
         {...form}
         today={todayIST()}

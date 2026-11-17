@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import { LoadingButton, useToast } from '@/components/ui/client';
 import { Button, Card, CardBody, Field, FormGrid, Input, Select, Table, Td, Th, Tr } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import type { PaymentMethod } from '@/db/schema';
 import { formatDate } from '@/lib/date';
 import { allocatePayment, inr } from '@/lib/money';
@@ -13,6 +14,7 @@ import { METHODS, METHODS_NEEDING_REFERENCE, METHOD_LABELS, REFERENCE_HINT } fro
 type Bill = { id: string; invoiceNo: string; title: string; dueDate: string; total: number; paid: number };
 
 export function CollectForm({ studentId, bills, today }: { studentId: string; bills: Bill[]; today: string }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const due = bills.reduce((sum, bill) => sum + (bill.total - bill.paid), 0);
@@ -34,11 +36,11 @@ export function CollectForm({ studentId, bills, today }: { studentId: string; bi
 
   async function save() {
     const problems: Record<string, string> = {};
-    if (value <= 0) problems.amount = 'Enter the amount received';
-    else if (value > due) problems.amount = `Only ${inr(due)} is due`;
-    if (needsReference && !reference.trim()) problems.reference = 'Reference is required';
-    if (!paidOn) problems.paidOn = 'Pick a date';
-    else if (paidOn > today) problems.paidOn = 'Pick today or an earlier date';
+    if (value <= 0) problems.amount = t('Enter the amount received');
+    else if (value > due) problems.amount = t('Only {amount} is due', { amount: inr(due) });
+    if (needsReference && !reference.trim()) problems.reference = t('Reference is required');
+    if (!paidOn) problems.paidOn = t('Pick a date');
+    else if (paidOn > today) problems.paidOn = t('Pick today or an earlier date');
     setErrors(problems);
     if (Object.keys(problems).length) return;
 
@@ -47,10 +49,10 @@ export function CollectForm({ studentId, bills, today }: { studentId: string; bi
     if (!result.ok) {
       setSaving(false);
       setErrors(result.fields ?? {});
-      toast.error(result.error);
+      toast.error(t(result.error));
       return;
     }
-    toast.success(`${inr(result.data.amount)} received`);
+    toast.success(t('{amount} received', { amount: inr(result.data.amount) }));
     // The button stays busy until the receipt opens, so a second tap cannot save twice.
     router.push(`/centre/fees/receipts/${result.data.id}`);
   }
@@ -61,10 +63,10 @@ export function CollectForm({ studentId, bills, today }: { studentId: string; bi
         <Table className="!min-w-[520px]">
           <thead>
             <tr>
-              <Th>Bill</Th>
-              <Th>Due date</Th>
-              <Th className="text-right">Balance</Th>
-              <Th className="text-right">This payment</Th>
+              <Th>{t('Bill')}</Th>
+              <Th>{t('Due date')}</Th>
+              <Th className="text-right">{t('Balance')}</Th>
+              <Th className="text-right">{t('This payment')}</Th>
             </tr>
           </thead>
           <tbody>
@@ -84,20 +86,20 @@ export function CollectForm({ studentId, bills, today }: { studentId: string; bi
             })}
             <tr>
               <Td colSpan={2} className="text-right font-semibold">
-                Total due
+                {t('Total due')}
               </Td>
               <Td className="tabular text-right text-base font-bold text-accent-600">{inr(due)}</Td>
               <Td className="tabular text-right text-base font-bold">{inr(Math.min(value, due))}</Td>
             </tr>
           </tbody>
         </Table>
-        <p className="border-t border-ink-100 px-4 py-2.5 text-sm text-ink-500">The oldest bill is paid first.</p>
+        <p className="border-t border-ink-100 px-4 py-2.5 text-sm text-ink-500">{t('The oldest bill is paid first.')}</p>
       </Card>
 
       <Card>
         <CardBody>
           <FormGrid>
-            <Field label="Amount received" required error={errors.amount} hint={value > 0 && value < due ? `${inr(due - value)} will stay due` : undefined}>
+            <Field label={t('Amount received')} required error={errors.amount && t(errors.amount)} hint={value > 0 && value < due ? t('{amount} will stay due', { amount: inr(due - value) }) : undefined}>
               <Input
                 type="number"
                 inputMode="numeric"
@@ -109,31 +111,31 @@ export function CollectForm({ studentId, bills, today }: { studentId: string; bi
                 className="tabular text-lg font-bold"
               />
             </Field>
-            <Field label="Paid by" required>
+            <Field label={t('Paid by')} required>
               <Select value={method} onChange={(e) => setMethod(e.target.value as PaymentMethod)}>
                 {METHODS.map((m) => (
                   <option key={m} value={m}>
-                    {METHOD_LABELS[m]}
+                    {t(METHOD_LABELS[m])}
                   </option>
                 ))}
               </Select>
             </Field>
-            <Field label="Reference" required={needsReference} error={errors.reference} hint={REFERENCE_HINT[method]}>
+            <Field label={t('Reference')} required={needsReference} error={errors.reference && t(errors.reference)} hint={t(REFERENCE_HINT[method])}>
               <Input value={reference} invalid={!!errors.reference} maxLength={80} onChange={(e) => setReference(e.target.value)} />
             </Field>
-            <Field label="Date received" required error={errors.paidOn}>
+            <Field label={t('Date received')} required error={errors.paidOn && t(errors.paidOn)}>
               <Input type="date" value={paidOn} max={today} invalid={!!errors.paidOn} onChange={(e) => setPaidOn(e.target.value)} />
             </Field>
-            <Field label="Note" className="sm:col-span-2" hint="Optional. Prints on the receipt.">
+            <Field label={t('Note')} className="sm:col-span-2" hint={t('Optional. Prints on the receipt.')}>
               <Input value={note} maxLength={200} onChange={(e) => setNote(e.target.value)} />
             </Field>
           </FormGrid>
           <div className="mt-5 flex flex-wrap justify-end gap-2">
             <Button variant="secondary" onClick={() => router.back()} disabled={saving}>
-              Cancel
+              {t('Cancel')}
             </Button>
             <LoadingButton size="lg" loading={saving} onClick={save}>
-              Save and show receipt
+              {t('Save and show receipt')}
             </LoadingButton>
           </div>
         </CardBody>

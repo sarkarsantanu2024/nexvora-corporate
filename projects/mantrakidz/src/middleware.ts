@@ -1,5 +1,5 @@
 /**
- * Two jobs, both before any page runs.
+ * Three jobs, all before any page runs.
  *
  * 1. Language. /bn/about and /hi/about are the Bengali and Hindi addresses of
  *    /about. The prefix is stripped here and the language handed on in a
@@ -8,8 +8,11 @@
  * 2. First gate in front of the dashboards: no valid login cookie, no entry.
  *    (Every page and action still checks the role itself; this only saves a
  *    logged-out visitor from seeing a flash of a private screen.)
+ *
+ * 3. The dashboard language (English, Hindi, Bengali) from the person's cookie.
  */
 import { NextResponse, type NextRequest } from 'next/server';
+import { UI_LANG_COOKIE, readUiLang } from '@/i18n/ui';
 import { LANG_HEADER, splitLocale } from '@/lib/i18n';
 import { SESSION_COOKIE, homeFor, isHq, readSessionToken } from '@/lib/session-token';
 
@@ -44,10 +47,18 @@ export async function middleware(req: NextRequest) {
     return NextResponse.next({ request: { headers } });
   }
 
+  // Dashboards and login have no language in their address: each person's
+  // choice is kept in a cookie and handed on the same way as the site's.
+  const headers = new Headers(req.headers);
+  const uiLang = readUiLang(req.cookies.get(UI_LANG_COOKIE)?.value);
+  if (uiLang === 'en') headers.delete(LANG_HEADER);
+  else headers.set(LANG_HEADER, uiLang);
+  const pass = () => NextResponse.next({ request: { headers } });
+
   const session = await readSessionToken(req.cookies.get(SESSION_COOKIE)?.value);
 
   if (isLogin) {
-    return session ? NextResponse.redirect(new URL(homeFor(session.role), req.url)) : NextResponse.next();
+    return session ? NextResponse.redirect(new URL(homeFor(session.role), req.url)) : pass();
   }
 
   if (!session) {
@@ -67,10 +78,12 @@ export async function middleware(req: NextRequest) {
   if (session.mustChange && !pathname.startsWith('/account')) {
     return NextResponse.redirect(new URL('/account/password?first=1', req.url));
   }
-  return NextResponse.next();
+  return pass();
 }
 
 export const config = {
   // Everything except Next's own files and anything with a file extension.
-  matcher: ['/((?!_next/|api/|media/|brand/|images/|.*\\.[\\w]+$).*)'],
+  // The section screens of the edit panel have a dot in the address
+  // (/hq/website/home.hero) and are pages, not files, so they are named too.
+  matcher: ['/((?!_next/|api/|media/|brand/|images/|.*\\.[\\w]+$).*)', '/hq/website/:path*'],
 };

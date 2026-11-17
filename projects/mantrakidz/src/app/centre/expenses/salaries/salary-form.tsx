@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { LoadingButton, useToast } from '@/components/ui/client';
 import { Badge, Card, Field, Input, Select, Table, Td, Th, Tr } from '@/components/ui/core';
+import { useT } from '@/components/ui/lang';
 import type { PaymentMethod } from '@/db/schema';
 import { formatDate } from '@/lib/date';
 import { inr } from '@/lib/money';
@@ -19,6 +20,7 @@ type Row = {
 };
 
 export function SalaryForm({ month, label, today, rows, paidTotal }: { month: string; label: string; today: string; rows: Row[]; paidTotal: number }) {
+  const t = useT();
   const router = useRouter();
   const toast = useToast();
   const pending = rows.filter((row) => !row.paid);
@@ -33,18 +35,18 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
 
   async function pay() {
     if (chosen.some((row) => !(Number(amounts[row.id]) > 0))) {
-      toast.error('Enter an amount for every staff member you have ticked');
+      toast.error(t('Enter an amount for every staff member you have ticked'));
       return;
     }
     setSaving(true);
     const result = await paySalariesAction({ month, paidOn, method, items: chosen.map((row) => ({ staffId: row.id, amount: Math.floor(Number(amounts[row.id])) })) });
     setSaving(false);
     if (!result.ok) {
-      toast.error(result.error);
+      toast.error(t(result.error));
       router.refresh();
       return;
     }
-    toast.success(`${inr(result.data.total)} paid to ${result.data.count} staff for ${label}`);
+    toast.success(t('{total} paid to {count} staff for {label}', { total: inr(result.data.total), count: result.data.count, label }));
     setPicked({});
     router.refresh();
   }
@@ -55,10 +57,10 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
         <thead>
           <tr>
             <Th className="w-10" />
-            <Th>Staff</Th>
-            <Th className="text-right">Monthly salary</Th>
+            <Th>{t('Staff')}</Th>
+            <Th className="text-right">{t('Monthly salary')}</Th>
             <Th>{label}</Th>
-            <Th className="text-right">Pay now</Th>
+            <Th className="text-right">{t('Pay now')}</Th>
           </tr>
         </thead>
         <tbody>
@@ -68,7 +70,7 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
                 {row.paid ? null : (
                   <input
                     type="checkbox"
-                    aria-label={`Pay ${row.name}`}
+                    aria-label={t('Pay {name}', { name: row.name })}
                     className="h-5 w-5 rounded accent-brand-700"
                     checked={!!picked[row.id]}
                     onChange={(e) => setPicked({ ...picked, [row.id]: e.target.checked })}
@@ -77,19 +79,19 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
               </Td>
               <Td>
                 <span className="font-semibold text-ink-900">{row.name}</span>
-                <span className="block text-xs text-ink-500">{row.roleTitle}</span>
+                <span className="block text-xs text-ink-500">{t(row.roleTitle)}</span>
               </Td>
               <Td className="tabular text-right">{inr(row.monthlySalary)}</Td>
               <Td>
                 {row.paid ? (
                   <>
-                    <Badge tone="green">Paid {inr(row.paid.amount)}</Badge>
+                    <Badge tone="green">{t('Paid {amount}', { amount: inr(row.paid.amount) })}</Badge>
                     <span className="mt-0.5 block text-xs text-ink-500">
-                      {formatDate(row.paid.spentOn)} · {METHOD_LABELS[row.paid.method]}
+                      {formatDate(row.paid.spentOn)} · {t(METHOD_LABELS[row.paid.method])}
                     </span>
                   </>
                 ) : (
-                  <Badge tone="amber">Not paid</Badge>
+                  <Badge tone="amber">{t('Not paid')}</Badge>
                 )}
               </Td>
               <Td className="text-right">
@@ -98,7 +100,7 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
                     type="number"
                     inputMode="numeric"
                     min={1}
-                    aria-label={`Amount for ${row.name}`}
+                    aria-label={t('Amount for {name}', { name: row.name })}
                     value={amounts[row.id] ?? ''}
                     disabled={!picked[row.id]}
                     onChange={(e) => setAmounts({ ...amounts, [row.id]: e.target.value })}
@@ -115,14 +117,14 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
         {pending.length ? (
           <>
             <div className="flex flex-wrap gap-3">
-              <Field label="Paid on">
+              <Field label={t('Paid on')}>
                 <Input type="date" value={paidOn} max={today} onChange={(e) => setPaidOn(e.target.value)} className="w-auto" />
               </Field>
-              <Field label="Paid by">
+              <Field label={t('Paid by')}>
                 <Select value={method} onChange={(e) => setMethod(e.target.value as PaymentMethod)} className="w-auto">
                   {METHODS.map((m) => (
                     <option key={m} value={m}>
-                      {METHOD_LABELS[m]}
+                      {t(METHOD_LABELS[m])}
                     </option>
                   ))}
                 </Select>
@@ -130,17 +132,17 @@ export function SalaryForm({ month, label, today, rows, paidTotal }: { month: st
             </div>
             <div className="flex items-center gap-4">
               <p className="text-sm text-ink-500">
-                {chosen.length} staff
+                {t('{n} staff', { n: chosen.length })}
                 <span className="tabular ml-2 font-display text-xl font-bold text-ink-900">{inr(total)}</span>
               </p>
               <LoadingButton size="lg" loading={saving} disabled={!chosen.length || !paidOn} onClick={pay}>
-                Pay salaries
+                {t('Pay salaries')}
               </LoadingButton>
             </div>
           </>
         ) : (
           <p className="text-[15px] font-medium text-mint-700">
-            Everyone is paid for {label}: {inr(paidTotal)} in all.
+            {t('Everyone is paid for {label}: {paidTotal} in all.', { label, paidTotal: inr(paidTotal) })}
           </p>
         )}
       </div>

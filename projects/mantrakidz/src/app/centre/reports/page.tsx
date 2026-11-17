@@ -8,6 +8,7 @@ import { Card, Meter, PageHeader, TabLinks, Table, Td, Th, Tr, buttonClass } fro
 import { canManageCentre, requireCentre } from '@/lib/auth';
 import { addMonths, currentPeriod, formatDate, periodRange, todayIST } from '@/lib/date';
 import { inr, percent } from '@/lib/money';
+import { getT } from '@/lib/t';
 import { METHOD_LABELS } from '@/server/centre/money/labels';
 import { admissionsAndWithdrawals, attendanceByClass, collectionByMethod, duesAgeing, incomeStatement, rangeFrom } from '@/server/centre/money/reports';
 import type { Ctx } from '@/server/centre/money/shared';
@@ -39,50 +40,51 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
 const Empty = ({ text }: { text: string }) => <p className="px-5 py-6 text-sm text-ink-500">{text}</p>;
 
 async function Statement({ ctx, range }: { ctx: Ctx; range: { from: string; to: string } }) {
+  const t = await getT();
   const data = await incomeStatement(ctx, range);
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      <Section title="Fees collected">
+      <Section title={t('Fees collected')}>
         <Table className="!min-w-0">
           <tbody>
             {data.income.map((row) => (
               <Tr key={row.key}>
-                <Td>{row.label}</Td>
+                <Td>{t(row.label)}</Td>
                 <Money>{row.amount}</Money>
               </Tr>
             ))}
             <tr>
-              <Td className="font-semibold">Total collected</Td>
+              <Td className="font-semibold">{t('Total collected')}</Td>
               <Money bold>{data.collection}</Money>
             </tr>
           </tbody>
         </Table>
-        <p className="px-5 py-3 text-xs text-ink-500">Receipts by the date the money came in, void receipts left out. Royalty to head office is worked out on this figure.</p>
+        <p className="px-5 py-3 text-xs text-ink-500">{t('Receipts by the date the money came in, void receipts left out. Royalty to head office is worked out on this figure.')}</p>
       </Section>
-      <Section title="Expenses">
+      <Section title={t('Expenses')}>
         {data.expenses.length ? (
           <Table className="!min-w-0">
             <tbody>
               {data.expenses.map((row) => (
                 <Tr key={row.category}>
-                  <Td>{row.category}</Td>
+                  <Td>{t(row.category)}</Td>
                   <Money>{row.amount}</Money>
                 </Tr>
               ))}
               <tr>
-                <Td className="font-semibold">Total spent</Td>
+                <Td className="font-semibold">{t('Total spent')}</Td>
                 <Money bold>{data.expenseTotal}</Money>
               </tr>
             </tbody>
           </Table>
         ) : (
-          <Empty text="No expenses written down in these dates." />
+          <Empty text={t('No expenses written down in these dates.')} />
         )}
       </Section>
       <Card className={`print-plain p-5 lg:col-span-2 ${data.surplus < 0 ? 'border-accent-200 bg-accent-50' : 'border-mint-100 bg-mint-50'}`}>
         <div className="flex flex-wrap items-baseline justify-between gap-3">
           <p className="text-[15px] font-semibold text-ink-800">
-            {data.surplus < 0 ? 'Shortfall' : 'Surplus'}: collected {inr(data.collection)} less spent {inr(data.expenseTotal)}
+            {data.surplus < 0 ? t('Shortfall: collected {collected} less spent {spent}', { collected: inr(data.collection), spent: inr(data.expenseTotal) }) : t('Surplus: collected {collected} less spent {spent}', { collected: inr(data.collection), spent: inr(data.expenseTotal) })}
           </p>
           <p className={`tabular font-display text-3xl font-bold ${data.surplus < 0 ? 'text-accent-600' : 'text-mint-700'}`}>{inr(Math.abs(data.surplus))}</p>
         </div>
@@ -92,29 +94,30 @@ async function Statement({ ctx, range }: { ctx: Ctx; range: { from: string; to: 
 }
 
 async function Methods({ ctx, range }: { ctx: Ctx; range: { from: string; to: string } }) {
+  const t = await getT();
   const data = await collectionByMethod(ctx, range);
   return (
-    <Section title="Collection by method">
+    <Section title={t('Collection by method')}>
       <Table className="!min-w-[420px]">
         <thead>
           <tr>
-            <Th>Method</Th>
-            <Th className="text-right">Receipts</Th>
-            <Th className="text-right">Amount</Th>
-            <Th className="text-right">Share</Th>
+            <Th>{t('Method')}</Th>
+            <Th className="text-right">{t('Receipts')}</Th>
+            <Th className="text-right">{t('Amount')}</Th>
+            <Th className="text-right">{t('Share')}</Th>
           </tr>
         </thead>
         <tbody>
           {data.methods.map((m) => (
             <Tr key={m.method}>
-              <Td>{METHOD_LABELS[m.method]}</Td>
+              <Td>{t(METHOD_LABELS[m.method])}</Td>
               <Td className="tabular text-right">{m.count}</Td>
               <Money>{m.amount}</Money>
               <Td className="tabular text-right">{percent(m.amount, data.total)}%</Td>
             </Tr>
           ))}
           <tr>
-            <Td className="font-semibold">Total</Td>
+            <Td className="font-semibold">{t('Total')}</Td>
             <Td className="tabular text-right font-semibold">{data.count}</Td>
             <Money bold>{data.total}</Money>
             <Td />
@@ -126,19 +129,20 @@ async function Methods({ ctx, range }: { ctx: Ctx; range: { from: string; to: st
 }
 
 async function Ageing({ ctx }: { ctx: Ctx }) {
+  const t = await getT();
   const data = await duesAgeing(ctx);
   return (
-    <Section title={`Dues by age, as on ${formatDate(data.asOf)}`}>
+    <Section title={t('Dues by age, as on {asOf}', { asOf: formatDate(data.asOf) })}>
       {data.rows.length ? (
         <Table>
           <thead>
             <tr>
-              <Th>Child</Th>
-              <Th className="text-right">Not yet due</Th>
-              <Th className="text-right">0 to 30 days late</Th>
-              <Th className="text-right">31 to 60 days</Th>
-              <Th className="text-right">61 days and more</Th>
-              <Th className="text-right">Total due</Th>
+              <Th>{t('Child')}</Th>
+              <Th className="text-right">{t('Not yet due')}</Th>
+              <Th className="text-right">{t('0 to 30 days late')}</Th>
+              <Th className="text-right">{t('31 to 60 days')}</Th>
+              <Th className="text-right">{t('61 days and more')}</Th>
+              <Th className="text-right">{t('Total due')}</Th>
             </tr>
           </thead>
           <tbody>
@@ -149,7 +153,7 @@ async function Ageing({ ctx }: { ctx: Ctx }) {
                     {row.name}
                   </Link>
                   <span className="block text-xs text-ink-500">
-                    {row.batchName ?? 'No class'} · {row.guardianPhone}
+                    {row.batchName ?? t('No class')} · {row.guardianPhone}
                   </span>
                 </Td>
                 <Td className="tabular text-right">{row.notDue ? inr(row.notDue) : ''}</Td>
@@ -160,7 +164,7 @@ async function Ageing({ ctx }: { ctx: Ctx }) {
               </Tr>
             ))}
             <tr>
-              <Td className="font-semibold">Total</Td>
+              <Td className="font-semibold">{t('Total')}</Td>
               <Money>{data.totals.notDue}</Money>
               <Money>{data.totals.d0}</Money>
               <Money>{data.totals.d31}</Money>
@@ -170,22 +174,23 @@ async function Ageing({ ctx }: { ctx: Ctx }) {
           </tbody>
         </Table>
       ) : (
-        <Empty text="Nobody owes anything." />
+        <Empty text={t('Nobody owes anything.')} />
       )}
     </Section>
   );
 }
 
 async function Admissions({ ctx, range }: { ctx: Ctx; range: { from: string; to: string } }) {
+  const t = await getT();
   const data = await admissionsAndWithdrawals(ctx, range);
   const list = (rows: typeof data.admitted, kind: 'in' | 'out') => (
     <Table className="!min-w-[420px]">
       <thead>
         <tr>
-          <Th>Child</Th>
-          <Th>Class</Th>
-          <Th>{kind === 'in' ? 'Admitted on' : 'Left on'}</Th>
-          {kind === 'out' ? <Th>Reason</Th> : null}
+          <Th>{t('Child')}</Th>
+          <Th>{t('Class')}</Th>
+          <Th>{kind === 'in' ? t('Admitted on') : t('Left on')}</Th>
+          {kind === 'out' ? <Th>{t('Reason')}</Th> : null}
         </tr>
       </thead>
       <tbody>
@@ -207,32 +212,33 @@ async function Admissions({ ctx, range }: { ctx: Ctx; range: { from: string; to:
   );
   return (
     <div className="grid gap-5 lg:grid-cols-2">
-      <Section title={`Admissions: ${data.admitted.length}`}>{data.admitted.length ? list(data.admitted, 'in') : <Empty text="No child was admitted in these dates." />}</Section>
-      <Section title={`Withdrawals: ${data.left.length}`}>{data.left.length ? list(data.left, 'out') : <Empty text="No child left in these dates." />}</Section>
+      <Section title={t('Admissions: {n}', { n: data.admitted.length })}>{data.admitted.length ? list(data.admitted, 'in') : <Empty text={t('No child was admitted in these dates.')} />}</Section>
+      <Section title={t('Withdrawals: {n}', { n: data.left.length })}>{data.left.length ? list(data.left, 'out') : <Empty text={t('No child left in these dates.')} />}</Section>
     </div>
   );
 }
 
 async function AttendanceReport({ ctx, range }: { ctx: Ctx; range: { from: string; to: string } }) {
+  const t = await getT();
   const data = await attendanceByClass(ctx, range);
   return (
-    <Section title={`Attendance by class: ${data.overall}% overall`}>
+    <Section title={t('Attendance by class: {overall}% overall', { overall: data.overall })}>
       {data.rows.length ? (
         <Table>
           <thead>
             <tr>
-              <Th>Class</Th>
-              <Th className="text-right">Days marked</Th>
-              <Th className="text-right">Present</Th>
-              <Th className="text-right">Absent</Th>
-              <Th className="text-right">Leave</Th>
-              <Th className="w-56">Attendance</Th>
+              <Th>{t('Class')}</Th>
+              <Th className="text-right">{t('Days marked')}</Th>
+              <Th className="text-right">{t('Present')}</Th>
+              <Th className="text-right">{t('Absent')}</Th>
+              <Th className="text-right">{t('Leave')}</Th>
+              <Th className="w-56">{t('Attendance')}</Th>
             </tr>
           </thead>
           <tbody>
             {data.rows.map((row) => (
               <Tr key={row.batchId ?? 'none'}>
-                <Td className="font-semibold">{row.batchName ?? 'No class'}</Td>
+                <Td className="font-semibold">{row.batchName ?? t('No class')}</Td>
                 <Td className="tabular text-right">{row.days}</Td>
                 <Td className="tabular text-right">{row.present}</Td>
                 <Td className="tabular text-right">{row.absent}</Td>
@@ -248,13 +254,14 @@ async function AttendanceReport({ ctx, range }: { ctx: Ctx; range: { from: strin
           </tbody>
         </Table>
       ) : (
-        <Empty text="No attendance was marked in these dates." />
+        <Empty text={t('No attendance was marked in these dates.')} />
       )}
     </Section>
   );
 }
 
 export default async function ReportsPage({ searchParams }: { searchParams: Promise<{ report?: string; from?: string; to?: string; month?: string }> }) {
+  const t = await getT();
   const ctx = await requireCentre();
   if (!canManageCentre(ctx.session)) redirect('/centre');
   const params = await searchParams;
@@ -262,41 +269,41 @@ export default async function ReportsPage({ searchParams }: { searchParams: Prom
   const range = rangeFrom(params);
   const today = todayIST();
   const dates = `from=${range.from}&to=${range.to}`;
-  const title = REPORTS.find((r) => r.key === report)!.label;
+  const title = t(REPORTS.find((r) => r.key === report)!.label);
 
   const thisMonth = periodRange(currentPeriod());
   const lastMonth = periodRange(addMonths(currentPeriod(), -1));
   const fyStartYear = Number(today.slice(5, 7)) >= 4 ? Number(today.slice(0, 4)) : Number(today.slice(0, 4)) - 1;
   const quick = [
-    { label: 'This month', from: thisMonth.from, to: thisMonth.to },
-    { label: 'Last month', from: lastMonth.from, to: lastMonth.to },
-    { label: 'This financial year', from: `${fyStartYear}-04-01`, to: today },
+    { label: t('This month'), from: thisMonth.from, to: thisMonth.to },
+    { label: t('Last month'), from: lastMonth.from, to: lastMonth.to },
+    { label: t('This financial year'), from: `${fyStartYear}-04-01`, to: today },
   ];
 
   return (
     <div className="animate-fade-up">
       <div className="no-print">
         <PageHeader
-          title="Reports"
-          description="Where the centre stands, for any dates."
+          title={t('Reports')}
+          description={t('Where the centre stands, for any dates.')}
           actions={
             <>
               <a href={`/centre/reports/export?report=${report}&${dates}`} className={buttonClass('secondary')}>
-                <Download size={18} /> CSV
+                <Download size={18} /> {t('CSV')}
               </a>
               <PrintButton />
             </>
           }
         />
       </div>
-      <PrintHeading centre={ctx.centre.name} title={title} sub={report === 'ageing' ? `As on ${formatDate(today)}` : `${formatDate(range.from)} to ${formatDate(range.to)}`} />
-      <TabLinks active={report} tabs={REPORTS.map((r) => ({ key: r.key, label: r.label, href: `/centre/reports?report=${r.key}&${dates}` }))} />
+      <PrintHeading centre={ctx.centre.name} title={title} sub={report === 'ageing' ? t('As on {date}', { date: formatDate(today) }) : t('{from} to {to}', { from: formatDate(range.from), to: formatDate(range.to) })} />
+      <TabLinks active={report} tabs={REPORTS.map((r) => ({ key: r.key, label: t(r.label), href: `/centre/reports?report=${r.key}&${dates}` }))} />
 
       {report === 'ageing' ? null : (
         <div className="no-print mb-5 flex flex-wrap items-center gap-2">
-          <UrlPick param="from" fallback={range.from} max={range.to} label="From" />
-          <span className="text-sm text-ink-500">to</span>
-          <UrlPick param="to" fallback={range.to} max={today} label="To" />
+          <UrlPick param="from" fallback={range.from} max={range.to} label={t('From')} />
+          <span className="text-sm text-ink-500">{t('to')}</span>
+          <UrlPick param="to" fallback={range.to} max={today} label={t('To')} />
           <span className="flex flex-wrap gap-1.5 sm:ml-2">
             {quick.map((q) => {
               const active = q.from === range.from && q.to === range.to;

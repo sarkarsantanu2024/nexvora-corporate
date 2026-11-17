@@ -24,8 +24,8 @@ const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
 };
 const BUTTON_SIZES: Record<ButtonSize, string> = {
   sm: 'h-9 px-3 text-sm',
-  md: 'h-11 px-4 text-[15px]',
-  lg: 'h-12 px-6 text-base',
+  md: 'h-10 px-4 text-sm',
+  lg: 'h-11 px-5 text-[15px]',
 };
 
 export const buttonClass = (variant: ButtonVariant = 'primary', size: ButtonSize = 'md', className?: string) =>
@@ -52,7 +52,7 @@ export function LinkButton({
 /* ───────────── Card ───────────── */
 
 export function Card({ className, ...props }: ComponentProps<'div'>) {
-  return <div {...props} className={cn('rounded-2xl border border-ink-200/70 bg-white shadow-card', className)} />;
+  return <div {...props} className={cn('rounded-2xl border border-ink-200 bg-white shadow-card', className)} />;
 }
 
 export function CardHeader({
@@ -96,17 +96,19 @@ export function PageHeader({
   back?: { href: string; label: string };
 }) {
   return (
-    <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-      <div className="min-w-0">
-        {back ? (
-          <Link href={back.href} className="mb-1 inline-flex items-center gap-1 text-sm font-medium text-ink-500 hover:text-brand-700">
-            <span aria-hidden>←</span> {back.label}
-          </Link>
-        ) : null}
-        <h1 className="font-display text-2xl font-bold leading-tight text-ink-900 sm:text-[28px]">{title}</h1>
-        {description ? <p className="mt-1 max-w-2xl text-[15px] text-ink-500">{description}</p> : null}
+    <div className="page-header mb-4 sm:mb-6">
+      {back ? (
+        <Link href={back.href} className="mb-1 inline-flex items-center gap-1 text-sm font-medium text-ink-500 hover:text-brand-700 max-lg:hidden">
+          <span aria-hidden>←</span> {back.label}
+        </Link>
+      ) : null}
+      {/* The heading and the screen's buttons share one row, on a phone too. When the
+          buttons need more than half the row they drop to a row of their own. */}
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2.5">
+        <h1 className="min-w-[50%] flex-1 font-display text-[22px] font-bold leading-tight text-ink-900 sm:text-2xl">{title}</h1>
+        {actions ? <div className="page-actions no-print flex max-w-full flex-wrap items-center justify-end gap-2">{actions}</div> : null}
       </div>
-      {actions ? <div className="no-print flex flex-wrap items-center gap-2">{actions}</div> : null}
+      {description ? <p className="mt-1 max-w-2xl text-sm text-ink-500 sm:text-[15px]">{description}</p> : null}
     </div>
   );
 }
@@ -149,11 +151,14 @@ const STATUS_TONES: Record<string, Tone> = {
   agreement: 'brand', onboarded: 'green', admitted: 'green', lost: 'neutral',
 };
 
-export const statusLabel = (status: string) =>
-  status.replace(/_/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+/** The words for a status. Pass the screen's `t` to get them in the person's language. */
+export const statusLabel = (status: string, t?: (text: string) => string) => {
+  const label = status.replace(/_/g, ' ').replace(/^\w/, (c) => c.toUpperCase());
+  return t ? t(label) : label;
+};
 
-export function StatusBadge({ status, label }: { status: string; label?: string }) {
-  return <Badge tone={STATUS_TONES[status] ?? 'neutral'}>{label ?? statusLabel(status)}</Badge>;
+export function StatusBadge({ status, label, t }: { status: string; label?: string; t?: (text: string) => string }) {
+  return <Badge tone={STATUS_TONES[status] ?? 'neutral'}>{label ?? statusLabel(status, t)}</Badge>;
 }
 
 /* ───────────── Stat tile ───────────── */
@@ -174,12 +179,12 @@ export function Stat({
   href?: string;
 }) {
   const body = (
-    <Card className={cn('group h-full p-5 transition', href && 'hover:-translate-y-0.5 hover:shadow-lift')}>
+    <Card className={cn('group h-full p-5 transition', href && 'hover:border-brand-300')}>
       <div className="flex items-start justify-between gap-3">
         <p className="text-sm font-medium text-ink-500">{label}</p>
         {icon ? <span className={cn('grid h-9 w-9 shrink-0 place-items-center rounded-xl', TONES[tone])}>{icon}</span> : null}
       </div>
-      <p className="tabular mt-2 font-display text-[28px] font-bold leading-none text-ink-900">{value}</p>
+      <p className="tabular mt-2 font-display text-[26px] font-bold leading-none text-ink-900">{value}</p>
       {hint ? <p className="mt-2 text-sm text-ink-500">{hint}</p> : null}
     </Card>
   );
@@ -219,11 +224,11 @@ export function EmptyState({
 
 /* ───────────── Table ───────────── */
 
-/** Scrolls sideways on a phone instead of breaking the page. */
+/** On a phone each row is drawn as a card (see "table-cards" in globals.css); wider screens get the table. */
 export function Table({ className, children, ...props }: ComponentProps<'table'>) {
   return (
     <div className="scrollbar-thin overflow-x-auto">
-      <table {...props} className={cn('w-full min-w-[640px] border-collapse text-left text-sm', className)}>
+      <table {...props} className={cn('table-cards w-full min-w-[640px] border-collapse text-left text-sm', className)}>
         {children}
       </table>
     </div>
@@ -333,12 +338,12 @@ export function Avatar({ name, src, size = 40 }: { name: string; src?: string | 
   );
 }
 
-/** A label and a value, for detail pages. */
-export function Detail({ label, children, className }: { label: string; children: ReactNode; className?: string }) {
+/** A label and a value, for detail pages. `empty` is what shows when there is no value, in the person's language. */
+export function Detail({ label, children, className, empty = 'Not added' }: { label: string; children: ReactNode; className?: string; empty?: string }) {
   return (
     <div className={className}>
       <dt className="text-xs font-semibold uppercase tracking-wide text-ink-400">{label}</dt>
-      <dd className="mt-0.5 text-[15px] text-ink-900">{children || <span className="text-ink-400">Not added</span>}</dd>
+      <dd className="mt-0.5 text-[15px] text-ink-900">{children || <span className="text-ink-400">{empty}</span>}</dd>
     </div>
   );
 }
