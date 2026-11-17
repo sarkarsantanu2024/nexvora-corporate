@@ -1,0 +1,122 @@
+/**
+ * Every fixed word of the public website that is not editable content:
+ * menu labels, buttons, form labels and messages, screen-reader labels,
+ * page titles. English is the master copy; bn.ts and hi.ts must have exactly
+ * the same shape (the `Dict` type enforces it).
+ *
+ * `{name}`-style markers are filled in with `fill()` from ./index.
+ */
+export const en = {
+  nav: {
+    home: 'Home',
+    about: 'About',
+    gallery: 'Gallery',
+    notices: 'Notices',
+    contact: 'Contact',
+  },
+  header: {
+    skip: 'Skip to the page',
+    homeAria: '{name}, home',
+    mainNav: 'Main',
+    menu: 'Menu',
+    openMenu: 'Open the menu',
+    closeMenu: 'Close the menu',
+    call: 'Call',
+    whatsapp: 'WhatsApp',
+    loginFor: '{login} for the team',
+    language: 'Language',
+    chooseLanguage: 'Choose a language',
+  },
+  footer: {
+    explore: 'Explore',
+    reach: 'Reach us',
+    map: 'See on the map',
+    whatsapp: 'Chat on WhatsApp',
+    login: 'Login',
+    logoAlt: '{name} logo',
+    social: '{name} on {network}',
+    navAria: 'Footer',
+  },
+  dock: {
+    top: 'Back to the top',
+    call: 'Call {phone}',
+    whatsapp: 'Chat with us on WhatsApp',
+  },
+  common: {
+    breadcrumb: 'Breadcrumb',
+    important: 'Important',
+    months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  },
+  slider: {
+    region: 'Highlights',
+    slideOf: 'Slide {n} of {total}',
+    goTo: 'Go to slide {n}',
+    previous: 'Previous slide',
+    next: 'Next slide',
+    pause: 'Pause the slides',
+    play: 'Play the slides',
+    playVideo: 'Play the video',
+  },
+  gallery: {
+    albums: 'Albums',
+    photos: 'Photos',
+    open: 'Open photo: {caption}',
+    fromAlbum: 'Photo from the album {album}',
+    count: 'Photo {n} of {total}',
+    of: 'of {total}',
+    close: 'Close the photo',
+    previous: 'Previous photo',
+    next: 'Next photo',
+  },
+  pages: {
+    about: 'About us',
+    gallery: 'Gallery',
+    galleryMeta: 'Photos from {name}.',
+    notices: 'Notices and events',
+    noticesHeading: 'Current notices',
+    contact: 'Contact',
+    contactWays: 'Ways to reach us',
+    callUs: 'Call us',
+    officeHours: 'Office hours',
+    whatsapp: 'WhatsApp',
+    sendMessage: 'Send a message',
+    email: 'Email',
+  },
+  notFound: {
+    title: 'Page not found',
+    heading: 'We could not find this page',
+    text: 'We could not find the page you asked for. It may have moved, or the link may be wrong.',
+    home: 'Back to the home page',
+    contact: 'Contact us',
+  },
+  form: {
+    honeypot: 'Leave this box empty',
+    sending: 'Sending',
+    privacy: 'We use your details only to reply to you.',
+    continueWhatsapp: 'Continue on WhatsApp',
+    another: 'Send another',
+    optional: 'Optional',
+    yourName: 'Your name',
+    phone: 'Mobile number',
+    phonePlaceholder: '10 digit number',
+    email: 'Email',
+    subject: 'What is it about',
+    subjectPlaceholder: 'Price, booking, something else',
+    message: 'Your message',
+  },
+  /** Validation and server messages. Used in the browser and by the form API. */
+  errors: {
+    yourName: 'Enter your name',
+    phoneRequired: 'Enter your mobile number',
+    phone: 'Enter a 10 digit mobile number',
+    email: 'Enter a valid email',
+    message: 'Write your message',
+    tooLong: 'This is too long. Please shorten it.',
+    check: 'Please check the details and try again',
+    generic: 'Something went wrong. Please try again.',
+    network: 'We could not reach the server. Please check your internet and try again.',
+    tooMany: 'That is a lot of messages in one minute. Please wait a little and try again.',
+  },
+};
+
+export type Dict = typeof en;

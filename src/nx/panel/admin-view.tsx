@@ -177,7 +177,13 @@ export function AdminView({ mode, sites, sessionName }: { mode: StorageMode; sit
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/logo-mark.png" alt="" className="h-9 w-9 rounded-lg bg-white/10 p-1" />
         <div className="text-lg font-bold">Nexvora super admin</div>
-        <a href="/demos" className="ml-auto inline-flex min-h-[44px] items-center gap-1.5 rounded-xl border border-white/25 px-3 text-base font-semibold hover:bg-white/10">
+        {ok ? (
+          <a href="/admin/projects" className="ml-auto inline-flex min-h-[44px] items-center gap-1.5 rounded-xl border border-white/25 px-3 text-base font-semibold hover:bg-white/10">
+            <Icon name="folder_open" className="text-[20px]" />
+            <span className="hidden sm:inline">Projects</span>
+          </a>
+        ) : null}
+        <a href="/demos" className={`${ok ? "" : "ml-auto "}inline-flex min-h-[44px] items-center gap-1.5 rounded-xl border border-white/25 px-3 text-base font-semibold hover:bg-white/10`}>
           <Icon name="grid_view" className="text-[20px]" />
           <span className="hidden sm:inline">Demos</span>
         </a>
