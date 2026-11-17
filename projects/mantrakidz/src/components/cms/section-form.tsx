@@ -65,7 +65,7 @@ export function SectionForm({ section, state, revisions }: { section: FormSectio
   const [previewTick, setPreviewTick] = useState(0);
   // Rows need a name that survives reordering, for React and for "which rows are open".
   const [rowIds, setRowIds] = useState<Record<string, string[]>>(() =>
-    Object.fromEntries(fields.filter((field) => field.type === 'list').map((field) => [field.name, (((state.draft ?? state.published)[field.name] as Row[]) ?? []).map(newRowId)])),
+    Object.fromEntries(fields.filter((field) => field.type === 'list').map((field) => [field.name, (((state.draft ?? state.published)[field.name] as Row[]) ?? []).map((_, index) => `${field.name}-start-${index}`)])),
   );
   const [openRows, setOpenRows] = useState<Set<string>>(new Set());
   const focus = useRef<Focus | null>(null);

@@ -105,11 +105,13 @@ const TONES = {
 /** The notifications screen: grouped by how urgent, new ones marked with a dot. */
 export function NotificationList({ items }: { items: Notification[] }) {
   const t = useT();
-  // What was new when the screen opened keeps its dot until the person leaves.
+  // What was new when the screen opened keeps its dot until the person leaves:
+  // dots are only ever added here, also when the list is loaded again.
   const [fresh, setFresh] = useState<Set<string>>(new Set());
   useEffect(() => {
     const seen = readSeen();
-    setFresh(new Set(items.filter((item) => !seen.has(item.id)).map((item) => item.id)));
+    const unseen = items.filter((item) => !seen.has(item.id)).map((item) => item.id);
+    if (unseen.length) setFresh((current) => new Set([...current, ...unseen]));
     writeSeen(items.map((item) => item.id));
   }, [items]);
 
