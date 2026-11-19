@@ -9,3 +9,6 @@ next-env.d.ts
 public/uploads/*
 !public/uploads/.gitkeep
 test-results
+
+# Client proposal maker: holds prices and contact details, never push (the repo is public)
+docs/proposal/

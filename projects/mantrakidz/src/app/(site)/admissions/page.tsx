@@ -7,7 +7,6 @@ import { Steps } from '@/components/site/blocks';
 import { Faq } from '@/components/site/faq';
 import { AdmissionForm } from '@/components/site/forms';
 import { WhatsAppIcon } from '@/components/site/icons';
-import { Drift } from '@/components/site/motion-kit';
 import { getSite } from '@/components/site/i18n/server';
 import { PageTop } from '@/components/site/page-top';
 import { faqLd, pageMeta } from '@/components/site/seo';
@@ -64,11 +63,13 @@ export default async function AdmissionsPage({ searchParams }: Props) {
       ) : null}
 
       {!isHidden(form) ? (
-        <div className="relative bg-brand-50">
+        <div className="balloon-sky relative bg-brand-50">
           <Wave flip className="absolute inset-x-0 top-0 -mt-px text-white" />
-          <Drift className="absolute left-[3%] top-32 hidden w-12 xl:block" bob={12} duration={6} scroll={50} rotate={5}>
-            <Balloon color="#ffc83d" />
-          </Drift>
+          <div aria-hidden className="balloon-track pointer-events-none absolute inset-y-0 left-[3%] hidden w-12 pt-32 xl:block">
+            <div className="balloon-rise" style={{ ['--rise-duration' as string]: '42s' }}>
+              <div><Balloon color="#ffc83d" /></div>
+            </div>
+          </div>
           {/* scroll-mt keeps the heading clear of the fixed header when a link jumps here */}
           <Section id="enquire" className="scroll-mt-10 !pb-24 !pt-28 sm:!pt-32 lg:!pb-32 lg:!pt-40">
             <div className="grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:gap-10">

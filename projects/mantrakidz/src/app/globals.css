@@ -179,6 +179,55 @@
   }
 }
 
+/*
+ * Balloons that drift slowly up from the bottom of a band to the top of the
+ * screen, again and again.
+ *
+ * Smoothness comes from splitting the movement into layers that each move in
+ * one simple way: the rise is a steady climb at constant speed (no speeding up
+ * or slowing down), and the side-to-side sway is a slow, soft swing on its own
+ * layer. Only the small balloon moves, never a big box.
+ *
+ * - balloon-track: a still, invisible column as tall as the band; its height
+ *   (100cqh) is how far below the start point the balloon begins.
+ * - balloon-rise:  climbs from the bottom of the band to a screen height above it.
+ * - its child:     sways gently left and right.
+ *
+ * The band ("balloon-sky") sits above the sections before it, so a balloon
+ * floats over them, not behind; it hides only what falls below its own bottom
+ * edge. With reduced motion nothing moves and each balloon stays where it was drawn.
+ */
+.balloon-sky {
+  z-index: 1;
+  clip-path: inset(-300vh 0 0 0);
+}
+.balloon-track {
+  container-type: size;
+}
+.balloon-rise {
+  will-change: transform;
+  animation: balloon-rise var(--rise-duration, 40s) linear var(--rise-delay, 0s) infinite;
+}
+.balloon-rise > * {
+  animation: balloon-sway 6s ease-in-out infinite alternate;
+}
+@keyframes balloon-rise {
+  from {
+    transform: translate3d(0, 100cqh, 0);
+  }
+  to {
+    transform: translate3d(0, -110vh, 0);
+  }
+}
+@keyframes balloon-sway {
+  from {
+    transform: translateX(-12px) rotate(-5deg);
+  }
+  to {
+    transform: translateX(12px) rotate(5deg);
+  }
+}
+
 @keyframes route-bar-grow {
   from {
     transform: scaleX(0.05);

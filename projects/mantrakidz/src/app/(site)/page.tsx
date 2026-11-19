@@ -199,14 +199,18 @@ export default async function HomePage() {
 
       {/* programmes */}
       {!isHidden(progHead) && programmes.length ? (
-        <div className="relative bg-brand-50">
+        <div className="balloon-sky relative bg-brand-50">
           <Wave flip className="absolute inset-x-0 top-0 -mt-px text-white" />
-          <Drift className="absolute left-[4%] top-24 hidden w-14 lg:block" bob={12} duration={6} scroll={50} rotate={5}>
-            <Balloon color="#ff7a59" />
-          </Drift>
-          <Drift className="absolute right-[5%] top-28 hidden w-12 lg:block" bob={14} duration={7} delay={1} scroll={70} rotate={5}>
-            <Balloon color="#38b6ff" />
-          </Drift>
+          <div aria-hidden className="balloon-track pointer-events-none absolute inset-y-0 left-[4%] hidden w-14 pt-24 lg:block">
+            <div className="balloon-rise" style={{ ['--rise-duration' as string]: '38s' }}>
+              <div><Balloon color="#ff7a59" /></div>
+            </div>
+          </div>
+          <div aria-hidden className="balloon-track pointer-events-none absolute inset-y-0 right-[5%] hidden w-12 pt-28 lg:block">
+            <div className="balloon-rise" style={{ ['--rise-duration' as string]: '46s', ['--rise-delay' as string]: '-20s' }}>
+              <div><Balloon color="#38b6ff" /></div>
+            </div>
+          </div>
           <Section className="!pb-24 !pt-28 sm:!pt-32 lg:!pb-32 lg:!pt-40">
             <SectionHeading eyebrow={progHead.eyebrow} heading={progHead.heading} mark={progHead.highlight} text={progHead.text} tone="brand" />
             <div className="mt-12">
