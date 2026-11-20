@@ -257,6 +257,36 @@ export const homeTestimonials = defineSection({
   },
 });
 
+export const homeCeo = defineSection({
+  key: 'home.ceo',
+  page: 'Home',
+  label: 'CEO speaks',
+  description: 'A short message from the CEO, with photo. The wording is a sample: replace it with his own words.',
+  path: '/',
+  aliases: ['ceo', 'ceo speaks', 'ceo message', 'message from the ceo', 'chairman message'],
+  fields: [
+    { name: 'eyebrow', label: 'Small line above the heading', type: 'text', maxLength: 40 },
+    { name: 'heading', label: 'Heading', type: 'text', maxLength: 90, aliases: ['title'] },
+    { name: 'highlight', label: 'Words in the heading to underline', type: 'text', maxLength: 40 },
+    { name: 'quote', label: 'Short line in big letters', type: 'textarea', maxLength: 200, aliases: ['quote', 'headline quote'] },
+    { name: 'message', label: 'Message', type: 'textarea', maxLength: 1200, aliases: ['text', 'note', 'letter'] },
+    { name: 'name', label: 'Name', type: 'text', maxLength: 60 },
+    { name: 'role', label: 'Designation', type: 'text', maxLength: 80, aliases: ['post'] },
+    { name: 'photo', label: 'Photo', type: 'image', aliases: ['picture', 'ceo photo'] },
+  ],
+  defaults: {
+    eyebrow: 'CEO speaks',
+    heading: 'A word from our CEO',
+    highlight: 'our CEO',
+    quote: 'Every child is clever in their own way. Our job is to give them a happy place to find out how.',
+    message:
+      'When we started Mind Mantra Abacus, we wanted children to enjoy numbers instead of fearing them. Mantra Kidz grew out of the same thought: the early years should be full of play, questions and small wins.\n\nIn our schools the classes are small, the teachers are patient, and parents are always welcome. Come and visit us with your child. You will see the difference for yourself.',
+    name: 'Name of the CEO',
+    role: 'CEO, Mind Mantra Abacus',
+    photo: '/images/ceo.png',
+  },
+});
+
 export const homeFranchise = defineSection({
   key: 'home.franchise',
   page: 'Home',

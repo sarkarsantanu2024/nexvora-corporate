@@ -10,7 +10,7 @@ import { defineSection, type ContentData, type SectionDef } from '../types';
 import { aboutApproach, aboutDirector, aboutMission, aboutStory, aboutTop } from './about';
 import { admissionsFaq, admissionsForm, admissionsSteps, admissionsTop } from './admissions';
 import { franchiseFaq, franchiseForm, franchiseSteps, franchiseTop, franchiseTopics, franchiseWho, franchiseWhy } from './franchise';
-import { homeFranchise, homeGallery, homeIntro, homeMarquee, homeNotices, homeNumbers, homeProgrammes, homeTestimonials, homeWhy } from './home';
+import { homeCeo, homeFranchise, homeGallery, homeIntro, homeMarquee, homeNotices, homeNumbers, homeProgrammes, homeTestimonials, homeWhy } from './home';
 import {
   centresTop,
   contactForm,
@@ -208,6 +208,7 @@ export const SECTIONS: SectionDef<any>[] = [
   homeWhy,
   homeGallery,
   homeTestimonials,
+  homeCeo,
   homeFranchise,
   homeNotices,
   aboutTop,

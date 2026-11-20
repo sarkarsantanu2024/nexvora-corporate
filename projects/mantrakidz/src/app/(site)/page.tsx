@@ -2,6 +2,7 @@ import { Cake, GraduationCap, MapPin, Quote, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 import { content, isHidden } from '@/cms/content';
 import {
+  homeCeo,
   homeFranchise,
   homeGallery,
   homeHero,
@@ -27,7 +28,7 @@ import { Drift, Marquee, Parallax } from '@/components/site/motion-kit';
 import { NoticeCard } from '@/components/site/notices';
 import { abs, absLocale, pageMeta, postalAddress } from '@/components/site/seo';
 import { CONTAINER, TONES, type Tone } from '@/components/site/theme';
-import { Cta, JsonLd, Section, SectionHeading, SiteImage, Ticks } from '@/components/site/ui';
+import { Cta, JsonLd, Paragraphs, Section, SectionHeading, SiteImage, Ticks } from '@/components/site/ui';
 import { Reveal, Stagger, StaggerItem } from '@/components/ui/motion';
 import { LANG_NAMES } from '@/lib/i18n';
 import { getCentres, getGallery, getNotices, getProgrammes } from '@/server/site/queries';
@@ -51,7 +52,7 @@ const MARQUEE_TONES: Tone[] = ['sun', 'coral', 'mint', 'sky'];
 
 export default async function HomePage() {
   const { lang, t } = await getSite();
-  const [brand, contact, visit, hero, marquee, intro, numbers, progHead, why, galleryHead, testimonials, franchise, noticesHead, programmes, centres, photos, notices] =
+  const [brand, contact, visit, hero, marquee, intro, numbers, progHead, why, galleryHead, testimonials, franchise, noticesHead, ceo, programmes, centres, photos, notices] =
     await Promise.all([
       content(siteBrand),
       content(siteContact),
@@ -66,6 +67,7 @@ export default async function HomePage() {
       content(homeTestimonials),
       content(homeFranchise),
       content(homeNotices),
+      content(homeCeo),
       getProgrammes(),
       getCentres(),
       getGallery(),
@@ -295,6 +297,54 @@ export default async function HomePage() {
             })}
           </Stagger>
         </Section>
+      ) : null}
+
+      {/* CEO speaks */}
+      {!isHidden(ceo) && ceo.message ? (
+        <div className="relative overflow-hidden bg-brand-50">
+          <Wave flip className="absolute inset-x-0 top-0 -mt-px text-white" />
+          <Section className="!pb-24 !pt-28 sm:!pt-32 lg:!pb-32 lg:!pt-40">
+            <div className={`grid items-center gap-12 lg:gap-16 ${ceo.photo ? 'lg:grid-cols-[.8fr_1.2fr]' : ''}`}>
+              {ceo.photo ? (
+                <Reveal className="relative mx-auto w-full max-w-[460px]">
+                  <div aria-hidden className="absolute -left-[10%] -top-[8%] w-[70%] text-sky-100">
+                    <Blob variant={1} />
+                  </div>
+                  <Drift className="absolute -right-3 -top-6 z-10 w-10 text-sun-400" rotate={20} duration={5}>
+                    <Sparkle />
+                  </Drift>
+                  <div aria-hidden className="absolute -bottom-6 -right-4 w-24 text-brand-200">
+                    <Dots />
+                  </div>
+                  <Parallax amount={18}>
+                    <div className="relative rotate-2 overflow-hidden rounded-[2.5rem] border-[8px] border-white bg-sky-100 shadow-lift">
+                      <div className="relative aspect-square">
+                        <SiteImage src={ceo.photo} alt={ceo.name} sizes="(min-width: 1024px) 460px, 92vw" />
+                      </div>
+                    </div>
+                  </Parallax>
+                </Reveal>
+              ) : null}
+              <div>
+                <SectionHeading eyebrow={ceo.eyebrow} heading={ceo.heading} mark={ceo.highlight} align="left" tone="sky" />
+                <Reveal delay={0.1}>
+                  {ceo.quote ? (
+                    <blockquote className="relative mt-6 rounded-[2rem] bg-white p-6 shadow-sm sm:p-8">
+                      <Quote aria-hidden size={40} className="text-sky-400 opacity-50" fill="currentColor" strokeWidth={0} />
+                      <p className="mt-2 text-pretty font-display text-2xl font-bold leading-snug text-brand-950 sm:text-[1.7rem]">{ceo.quote}</p>
+                    </blockquote>
+                  ) : null}
+                  <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-700">
+                    <Paragraphs text={ceo.message} />
+                  </div>
+                  <p className="mt-6 font-display text-xl font-bold text-brand-800">{ceo.name}</p>
+                  {ceo.role ? <p className="text-ink-600">{ceo.role}</p> : null}
+                </Reveal>
+              </div>
+            </div>
+          </Section>
+          <Wave className="absolute inset-x-0 bottom-0 -mb-px text-white" variant={1} />
+        </div>
       ) : null}
 
       {/* notices: only when the board has something on it */}
