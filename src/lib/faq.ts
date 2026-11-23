@@ -16,7 +16,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "Can I change my website myself?",
-    a: "Yes, on the Run it yourself plan (₹15,999). Once the plan is paid, a Login button appears on your website and opens a private edit panel that matches your website section by section. You can change text, photos, prices, phone number, address and social links any time, and hide a section you have no content for yet. The design stays protected, so nothing can break. On the other plans, just WhatsApp me the change.",
+    a: "Yes, on the Run it yourself plan (₹15,999), or with any website plan if you take the Business care plan (₹1,499 a month). Once the plan is paid, a Login button appears on your website and opens a private edit panel that matches your website section by section. You can change text, photos, prices, phone number, address and social links any time, and hide a section you have no content for yet. The design stays protected, so nothing can break. Otherwise, just WhatsApp me the change.",
   },
   {
     q: "What does the business management software do?",
@@ -36,7 +36,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What happens after the website is live? Do I have to pay every month?",
-    a: "Not unless you want to. The first month is free. After that you can take a care plan: Basic at ₹499 a month keeps the domain, hosting, backups and Google Business Profile in order, with 4 changes a month. Growth at ₹999 gives 10 changes a month instead of 4, plus 8 posts a month, a review kit and a print design every month. Business at ₹1,499 adds 12 posts a month and an offer or admission campaign every 3 months. Every plan sends you a short report on WhatsApp each month. Pay for a year at once and get 2 months free. The business management software is ₹500 a month extra, only with Growth or Business. It is switched on when the month is paid, and your website keeps working even if you stop it.",
+    a: "Not unless you want to. The first month is free. After that you can take a care plan: Basic at ₹499 a month keeps the domain, hosting, backups and Google Business Profile in order, with 4 changes a month. Growth at ₹999 gives 10 changes a month instead of 4, plus 8 posts a month, a review kit and a print design every month. Business at ₹1,499 adds your own edit panel, 12 posts a month and an offer or admission campaign every 3 months. Every plan sends you a short report on WhatsApp each month. Pay for a year at once and get 2 months free. The business management software is ₹500 a month extra, only with Growth or Business. It is switched on when the month is paid, and your website keeps working even if you stop it.",
   },
   {
     q: "What happens if I don't take a monthly plan?",

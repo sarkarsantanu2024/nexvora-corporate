@@ -253,7 +253,7 @@ export const PLAN_COMPARISON: { row: string; values: string[] }[] = [
   { row: "Website pages", values: ["5", "5", "5"] },
   { row: "Facebook, YouTube and Google Business Profile, on your own email", values: ["Yes", "Yes", "Yes"] },
   { row: "Logo, visiting card and five post designs", values: ["No", "Yes", "Yes"] },
-  { row: "Edit it yourself panel", values: ["No", "No", "Yes"] },
+  { row: "Edit it yourself panel", values: ["With Business care", "With Business care", "Yes"] },
   { row: "Business management software: customers, fees, stock, expenses, reports, staff logins", values: Array(3).fill(`Optional, ${rupees(SOFTWARE_MONTHLY)}/month extra, with Growth or Business care`) },
   { row: "First month of care free", values: ["Yes", "Yes", "Yes"] },
 ];
@@ -302,6 +302,18 @@ export const MONTHLY_REPORT = {
  */
 /** Printed in bold wherever it appears in a plan's list. */
 export const REPORT_LINE = "A monthly report on WhatsApp";
+/** The Business plan's edit panel line: this lead is printed in bold. */
+const EDIT_PANEL_LEAD = "Your own edit panel:";
+
+/**
+ * Splits a care plan line into its bold part and the plain rest, so the
+ * cards on the price page and in the calculator bold the same words.
+ */
+export function careLineParts(line: string): { bold: string; rest: string } {
+  if (line.startsWith("Everything in") || line === REPORT_LINE) return { bold: line, rest: "" };
+  if (line.startsWith(EDIT_PANEL_LEAD)) return { bold: EDIT_PANEL_LEAD, rest: line.slice(EDIT_PANEL_LEAD.length) };
+  return { bold: "", rest: line };
+}
 
 export type CarePlan = {
   id: string;
@@ -327,7 +339,7 @@ export const CARE_PLANS: CarePlan[] = [
       "4 changes a month (price, timing, photo or notice), done within 24 hours",
       "Google Business Profile kept correct: hours, photos and holidays",
       REPORT_LINE,
-      "Your edit panel kept online, if your website has one",
+      "The edit panel kept online for \"Run it yourself\" (₹15,999) customers",
     ],
   },
   {
@@ -354,6 +366,7 @@ export const CARE_PLANS: CarePlan[] = [
     subtitle: "For businesses that run batches, fees or bills",
     includes: [
       "Everything in Growth, plus:",
+      `${EDIT_PANEL_LEAD} change text, photos, prices, timings and offers yourself, from your phone, for any website plan`,
       "12 posts a month instead of 8",
       "An admission or offer campaign every 3 months",
     ],
@@ -377,7 +390,7 @@ export const CARE_NOT_INCLUDED = [
   "Changes and posts beyond the number your plan says, and YouTube uploads, after the free first month",
   "A new feature, module or payment gateway",
   "An enquiry or contact form",
-  "A booking system or anything new with a database behind it (the edit panel comes with Run it yourself, and the business management software is its own add-on)",
+  "A booking system or anything new with a database behind it (the edit panel comes with Run it yourself or the Business care plan, and the business management software is its own add-on)",
   "A full redesign of the site",
   "A mobile app or custom software built from scratch",
 ];
@@ -402,7 +415,7 @@ export const NOT_INCLUDED: {
     label: "Hosting and business email",
     note: "A yearly or monthly bill paid to the hosting company, sized to what you actually use.",
     extra:
-      "The edit panel (Run it yourself) and the business management software run on Nexvora's own servers and database. The edit panel is included in its plan. The software is ₹500 a month, only with the Growth or Business care plan and paid on top of it. It is switched on when the month is paid and off if it lapses, and the website keeps working either way. If you ever leave, you get all your text, photos and business records to take with you.",
+      "The edit panel (Run it yourself) and the business management software run on Nexvora's own servers and database. The edit panel is included in Run it yourself and in the Business care plan. The software is ₹500 a month, only with the Growth or Business care plan and paid on top of it. It is switched on when the month is paid and off if it lapses, and the website keeps working either way. If you ever leave, you get all your text, photos and business records to take with you.",
   },
   {
     icon: "local_shipping",

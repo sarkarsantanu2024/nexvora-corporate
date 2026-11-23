@@ -13,7 +13,7 @@ import {
   CARE_PLANS,
   FIRST_MONTH_FREE,
   MONTHLY_REPORT,
-  REPORT_LINE,
+  careLineParts,
   SOFTWARE_ADDON,
   NOT_INCLUDED,
   PACKAGES,
@@ -1341,7 +1341,7 @@ function CarePlans() {
 
               <ul className="mt-5 flex-1 space-y-2 border-t border-slate-100 pt-5 text-sm text-slate-700">
                 {plan.includes.map((line) => {
-                  const strong = line.startsWith("Everything in") || line === REPORT_LINE;
+                  const { bold, rest } = careLineParts(line);
                   return (
                     <li key={line} className="flex gap-2">
                       <span
@@ -1350,8 +1350,9 @@ function CarePlans() {
                       >
                         check
                       </span>
-                      <span className={`leading-snug ${strong ? "font-semibold text-slate-900" : ""}`}>
-                        {line}
+                      <span className="leading-snug">
+                        {bold && <strong className="font-semibold text-slate-900">{bold}</strong>}
+                        {rest}
                       </span>
                     </li>
                   );

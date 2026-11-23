@@ -9,7 +9,7 @@ import {
   NOT_INCLUDED,
   PACKAGES,
   PRICE_GROUPS,
-  REPORT_LINE,
+  careLineParts,
   SOFTWARE_ADDON,
   SOFTWARE_WITH,
   itemById,
@@ -424,14 +424,13 @@ export function PriceCalculator() {
                             >
                               check
                             </span>
-                            <span
-                              className={`leading-snug ${
-                                line.startsWith("Everything in") || line === REPORT_LINE
-                                  ? "font-semibold text-slate-900"
-                                  : ""
-                              }`}
-                            >
-                              {line}
+                            <span className="leading-snug">
+                              {careLineParts(line).bold && (
+                                <strong className="font-semibold text-slate-900">
+                                  {careLineParts(line).bold}
+                                </strong>
+                              )}
+                              {careLineParts(line).rest}
                             </span>
                           </li>
                         ))}
