@@ -139,7 +139,7 @@ const JSON_LD = {
       founder: {
         "@type": "Person",
         name: "Santanu Sarkar",
-        jobTitle: "Founder",
+        jobTitle: "Developer",
       },
       sameAs: [
         "https://www.facebook.com/sarkarsantanu69",

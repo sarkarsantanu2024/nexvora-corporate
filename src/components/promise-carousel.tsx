@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { PROMISE_TEXTS } from "@/lib/promise";
 
-// Six sentences at a slow reading pace, in a script that may not be the
-// reader's first, plus a moment to sit with it before it changes. Erring long
-// costs nothing — the switcher is right underneath, and hovering stops the
-// rotation entirely.
-const INTERVAL = 22000;
+// Four short sentences at a slow reading pace, in a script that may not be
+// the reader's first, plus a moment to sit with it before it changes. Erring
+// long costs nothing — the switcher is right underneath, and hovering stops
+// the rotation entirely.
+const INTERVAL = 15000;
 
 export function PromiseCarousel() {
   const [index, setIndex] = useState(0);
@@ -40,7 +40,7 @@ export function PromiseCarousel() {
     >
       {/* The box is sized to the longest translation so the buttons below it
           never jump as the language changes. */}
-      <div className="relative min-h-[19rem] sm:min-h-[21rem] lg:min-h-[26rem]">
+      <div className="relative mt-6 min-h-[17rem] sm:min-h-[14rem] lg:min-h-[16rem]">
         {PROMISE_TEXTS.map((t, i) => (
           <blockquote
             key={t.code}

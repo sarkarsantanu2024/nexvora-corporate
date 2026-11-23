@@ -29,20 +29,20 @@ export const PROMISE_TEXTS: PromiseText[] = [
     label: "English",
     aria: "English",
     lang: "en-IN",
-    text: "You don't need to know anything about websites. You can simply tell me on WhatsApp what you need. A message, a voice note, a few photos, or even a rough idea is enough to start with. I will explain what can be done, what it will cost, and what is included, in simple language. No confusing quotation, and no surprise price in the middle.",
+    text: "Websites are my headache, not yours. Before any work, I want us to know and trust each other. Just tell me on WhatsApp what you need.",
   },
   {
     code: "bn",
     label: "বাংলা",
     aria: "Bengali",
     lang: "bn-IN",
-    text: "ওয়েবসাইটের ব্যাপারে আপনার কিছু জানার দরকার নেই। আপনার কী দরকার, WhatsApp-এ আমাকে বলে দিলেই হবে। একটা মেসেজ, ভয়েস নোট, কয়েকটা ছবি, এমনকি একটা মোটামুটি ধারণা হলেই শুরু করা যায়। কী কী করা সম্ভব, কত খরচ হবে আর তার মধ্যে কী কী থাকছে, সহজ ভাষায় বুঝিয়ে দেব। জটিল কোটেশন নেই, মাঝপথে হঠাৎ দাম বাড়ার ব্যাপারও নেই।",
+    text: "ওয়েবসাইটের ঝামেলা আমার, আপনার নয়। কাজের আগে চাই, আমাদের মধ্যে একটা ভরসার সম্পর্ক তৈরি হোক। কী দরকার, শুধু WhatsApp-এ বলে দিন।",
   },
   {
     code: "hi",
     label: "हिन्दी",
     aria: "Hindi",
     lang: "hi-IN",
-    text: "वेबसाइट के बारे में आपको कुछ जानने की ज़रूरत नहीं है। आपको क्या चाहिए, WhatsApp पर मुझे बता दीजिए, बस इतना ही काफी है। एक मैसेज, वॉइस नोट, कुछ तस्वीरें, या बस एक मोटा-मोटा खयाल भी चलेगा। क्या-क्या हो सकता है, कितना खर्च आएगा और उसमें क्या-क्या शामिल है, सब आसान भाषा में समझा दूँगा। उलझाने वाला कोटेशन नहीं, बीच में अचानक दाम बढ़ने वाली बात नहीं।",
+    text: "वेबसाइट की झंझट मेरी है, आपकी नहीं। काम से पहले मैं चाहता हूँ कि हमारे बीच भरोसे का रिश्ता बने। क्या चाहिए, बस WhatsApp पर बता दीजिए।",
   },
 ];
