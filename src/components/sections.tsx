@@ -8,11 +8,13 @@ import { FAQS } from "@/lib/faq";
 import { HELP_GROUPS } from "@/lib/help";
 import {
   CARE_INCLUDED,
+  CARE_INTRO,
   CARE_NOT_INCLUDED,
-  CARE_OPTIONAL_NOTE,
   CARE_PLANS,
-  DASHBOARD_ADDON,
   FIRST_MONTH_FREE,
+  MONTHLY_REPORT,
+  REPORT_LINE,
+  SOFTWARE_ADDON,
   NOT_INCLUDED,
   PACKAGES,
   PLAN_COMPARISON,
@@ -679,7 +681,7 @@ export function PromiseBand() {
           <span className="text-left">
             <span className="block font-semibold">Santanu Sarkar</span>
             <span className="block text-sm text-brand-100">
-              Founder, Nexvora Technologies
+              Developer, Nexvora Technologies
             </span>
           </span>
         </div>
@@ -1131,37 +1133,6 @@ export function Pricing() {
             ))}
           </div>
 
-          {/* The business dashboard: an add-on to the two bigger plans, paid
-              monthly, so it sits under the plans rather than as a fourth
-              card. */}
-          <div className="mt-6 rounded-2xl border border-violet-200 bg-violet-50 p-6 sm:p-7">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-violet-950">
-                  <span aria-hidden="true" className="material-symbols-rounded text-[24px]">
-                    space_dashboard
-                  </span>
-                  Add-on for {DASHBOARD_ADDON.for}: {DASHBOARD_ADDON.name}, with the monthly service
-                </h3>
-                <p className="mt-2 max-w-2xl text-violet-950/90">{DASHBOARD_ADDON.intro}</p>
-              </div>
-              <div className="shrink-0 text-right">
-                <span className="text-3xl font-bold tracking-tight text-violet-950">{rupees(DASHBOARD_ADDON.monthly)}</span>
-                <span className="text-sm font-medium text-violet-900/80">/month</span>
-              </div>
-            </div>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {DASHBOARD_ADDON.includes.map((line) => (
-                <li key={line} className="flex gap-2 rounded-xl bg-white/70 px-3.5 py-2.5 text-sm text-violet-950">
-                  <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[18px] text-violet-600">
-                    check
-                  </span>
-                  <span className="leading-snug">{line}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* The free first month, said once under all three plans rather
               than explained three times inside the cards. */}
           <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-7">
@@ -1313,11 +1284,12 @@ export function Pricing() {
  * working — because that is the argument. Nobody buys "maintenance"; they buy
  * not having to deal with any of that themselves.
  *
- * The card states its allowance in the same place, at the same size as the
- * price. That is the honest part: a plan that says "minor updates included"
- * and means thirty minutes is a disagreement waiting to happen.
+ * Each card states its allowance in numbers (changes a month, posts a
+ * month). That is the honest part: a plan that says "minor updates
+ * included" and means thirty minutes is a disagreement waiting to happen.
  *
- * Three cards, one for each website plan: Basic, Gold, Platinum.
+ * Three cards: Basic, Growth (recommended) and Business. Each includes the
+ * one before it. Under them sit the software add-on and the monthly report.
  */
 function CarePlans() {
   return (
@@ -1327,31 +1299,35 @@ function CarePlans() {
           Nexvora Care
         </p>
         <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
-          Want someone to look after your website every month?
+          {CARE_INTRO.heading}
         </h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">
-          Building the website is only the beginning. The domain and the
-          hosting come up for renewal. Your phone number changes. Your
-          prices change. Sometimes a site simply stops working properly
-          and you have no idea why. You do not need to learn any of that.
-          There is one monthly service (AMC) for each website plan, and
-          this is me looking after the website for you.
-        </p>
-        <p className="mt-3 max-w-3xl font-medium text-slate-800">
-          Optional, always. Nothing here is bundled into the price of a
-          website, and you can stop it whenever you like.
+          {CARE_INTRO.before}{" "}
+          <strong className="font-semibold text-slate-900">
+            {CARE_INTRO.bold}
+          </strong>{" "}
+          {CARE_INTRO.after}
         </p>
 
-        {/* Three monthly services, one for each website plan, in the
-            same order as the plan cards. */}
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           {CARE_PLANS.map((plan) => (
             <div
               key={plan.id}
-              className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
+              className={`relative flex h-full flex-col rounded-2xl border bg-white p-5 shadow-sm sm:p-6 ${
+                plan.badge
+                  ? "border-brand-500 ring-1 ring-brand-500"
+                  : "border-slate-200"
+              }`}
             >
-              <h3 className="text-xl font-bold tracking-tight">{plan.name}</h3>
-              <p className="mt-1 text-sm font-medium text-slate-600">{plan.who}</p>
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <h3 className="text-xl font-bold tracking-tight">{plan.name}</h3>
+                {plan.badge && (
+                  <span className="rounded-full bg-brand-600 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
+                    {plan.badge}
+                  </span>
+                )}
+              </div>
+              <p className="mt-1 text-sm font-medium text-slate-600">{plan.subtitle}</p>
 
               <p className="mt-3 flex items-baseline gap-1">
                 <span className="text-3xl font-bold tracking-tight">
@@ -1360,43 +1336,37 @@ function CarePlans() {
                 <span className="text-sm text-slate-500">/month</span>
               </p>
               <p className="mt-1 text-sm text-slate-500">
-                or {rupees(plan.yearly)} for the year, {rupees(plan.monthly * 12 - plan.yearly)} less
-              </p>
-
-              {/* Stated at price size, because it is as much a part of the
-                  offer as the price is. */}
-              <p className="mt-4 rounded-xl bg-brand-50 px-3 py-2 text-sm font-semibold text-brand-800">
-                {plan.allowance}
+                or {rupees(plan.yearly)}/year (2 months free)
               </p>
 
               <ul className="mt-5 flex-1 space-y-2 border-t border-slate-100 pt-5 text-sm text-slate-700">
-                {plan.includes.map((line) => (
-                  <li key={line} className="flex gap-2">
-                    <span
-                      aria-hidden="true"
-                      className="material-symbols-rounded mt-px shrink-0 text-[17px] text-brand-500"
-                    >
-                      check
-                    </span>
-                    <span className="leading-snug">{line}</span>
-                  </li>
-                ))}
+                {plan.includes.map((line) => {
+                  const strong = line.startsWith("Everything in") || line === REPORT_LINE;
+                  return (
+                    <li key={line} className="flex gap-2">
+                      <span
+                        aria-hidden="true"
+                        className="material-symbols-rounded mt-px shrink-0 text-[17px] text-brand-500"
+                      >
+                        check
+                      </span>
+                      <span className={`leading-snug ${strong ? "font-semibold text-slate-900" : ""}`}>
+                        {line}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
-
-              {plan.highlight && (
-                <p className="mt-5 flex items-start gap-2 rounded-xl border border-violet-200 bg-violet-50 px-3.5 py-3 text-sm font-semibold leading-snug text-violet-950">
-                  <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[20px] text-violet-600">
-                    space_dashboard
-                  </span>
-                  {plan.highlight}
-                </p>
-              )}
 
               <a
                 href={CONTACT.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-brand-400 hover:text-brand-700"
+                className={`mt-6 inline-flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition ${
+                  plan.badge
+                    ? "bg-gradient-to-br from-brand-600 to-violet-600 text-white shadow-lift hover:brightness-110"
+                    : "border border-slate-300 bg-white text-slate-800 hover:border-brand-400 hover:text-brand-700"
+                }`}
               >
                 Ask about {plan.name}
               </a>
@@ -1404,9 +1374,63 @@ function CarePlans() {
           ))}
         </div>
 
-        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-slate-600">
-          {CARE_OPTIONAL_NOTE}
-        </p>
+        {/* The software add-on: its own block, directly under the cards,
+            because it is never inside any plan's price. */}
+        <div className="mt-6 rounded-2xl border border-violet-200 bg-violet-50 p-6 sm:p-7">
+          <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-violet-950">
+            <span aria-hidden="true" className="material-symbols-rounded text-[24px]">
+              space_dashboard
+            </span>
+            {SOFTWARE_ADDON.name}: {rupees(SOFTWARE_ADDON.monthly)}/month
+          </h3>
+          <p className="mt-2 font-semibold text-violet-950">{SOFTWARE_ADDON.rule}</p>
+          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+            {SOFTWARE_ADDON.includes.map((line) => (
+              <li key={line} className="flex gap-2 rounded-xl bg-white/70 px-3.5 py-2.5 text-sm text-violet-950">
+                <span aria-hidden="true" className="material-symbols-rounded shrink-0 text-[18px] text-violet-600">
+                  check
+                </span>
+                <span className="leading-snug">{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* The monthly report: the reason people stay on a plan, so it is
+            shown, not just listed. The numbers are samples and say so. */}
+        <div className="mt-6 grid items-center gap-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-7 lg:grid-cols-2">
+          <div>
+            <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight text-emerald-950">
+              <span aria-hidden="true" className="material-symbols-rounded text-[24px] text-emerald-700">
+                monitoring
+              </span>
+              {MONTHLY_REPORT.heading}
+            </h3>
+            <p className="mt-2 leading-relaxed text-emerald-950/90">
+              {MONTHLY_REPORT.text}
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-sm">
+            <div className="rounded-2xl bg-[#efeae2] p-3 shadow-sm">
+              <div className="relative rounded-xl rounded-tl-none bg-white px-4 py-3 shadow-sm">
+                <p className="text-xs font-semibold text-emerald-700">Nexvora</p>
+                <p className="mt-1 text-sm text-slate-800">Your report for this month:</p>
+                <ul className="mt-3 grid grid-cols-2 gap-2">
+                  {MONTHLY_REPORT.sample.map((s) => (
+                    <li key={s.label} className="rounded-lg bg-slate-50 px-3 py-2">
+                      <span className="block text-2xl font-bold tabular-nums text-slate-900">{s.n}</span>
+                      <span className="block text-xs leading-snug text-slate-600">{s.label}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-right text-[11px] text-slate-400">9:30 pm ✓✓</p>
+              </div>
+            </div>
+            <p className="mt-2 text-center text-xs text-emerald-900/80">
+              {MONTHLY_REPORT.note}
+            </p>
+          </div>
+        </div>
 
         {/* The line between looking after and building. Printed, because it is
             the only thing that keeps a monthly plan from turning into a booking
@@ -1591,7 +1615,7 @@ export function Demos() {
         <p className="mt-3 text-slate-600">
           Every sample has a <b className="font-semibold text-slate-800">Login</b> button at the top. Log in with
           username <b className="font-semibold text-slate-800">demo</b> and password <b className="font-semibold text-slate-800">123</b> to
-          see the owner&apos;s side: the edit panel from the Run it yourself plan and the business dashboard add-on, filled with sample records. Nothing you do there is saved anywhere but your own phone or computer.
+          see the owner&apos;s side: the edit panel from the Run it yourself plan and the business management software, filled with sample records. Nothing you do there is saved anywhere but your own phone or computer.
         </p>
       </Reveal>
 
@@ -1896,7 +1920,7 @@ export function Founder() {
           Santanu Sarkar
         </p>
         <p className="text-sm text-slate-600">
-          Founder, Nexvora Technologies
+          Developer, Nexvora Technologies
         </p>
         <SocialLinks className="mt-4 justify-center lg:justify-start" />
       </Reveal>

@@ -304,7 +304,7 @@ export function AdminView({ mode, sites, sessionName }: { mode: StorageMode; sit
                     {access[s.site] ? (
                       <div className="flex flex-col gap-1.5">
                         <Switch on={access[s.site].edit} label="Website editing" onChange={(v) => change(s.site, { ...access[s.site], edit: v })} />
-                        <Switch on={access[s.site].dashboard} label="Dashboard (₹500/month)" onChange={(v) => change(s.site, { ...access[s.site], dashboard: v })} />
+                        <Switch on={access[s.site].dashboard} label="Business software (₹500/month)" onChange={(v) => change(s.site, { ...access[s.site], dashboard: v })} />
                       </div>
                     ) : null}
                   </td>
@@ -346,7 +346,7 @@ export function AdminView({ mode, sites, sessionName }: { mode: StorageMode; sit
         </table>
       </div>
       <p className="mt-6 text-sm text-slate-600">
-        Website editing: switch on when the Run it yourself plan is paid. Dashboard: switch on when the ₹500 monthly add-on (on top of the Gold or Platinum monthly service) is paid; switch off if it lapses. The Login button appears on the client&apos;s website when either one is on. With editing on they land on My website; with the dashboard alone they land on the dashboard and cannot change the website. Nexvora can always open every site, whatever is switched on.
+        Website editing: switch on when the Run it yourself plan is paid. Business software: switch on when the ₹500 monthly add-on (only with the Growth or Business care plan) is paid; switch off if it lapses. The Login button appears on the client&apos;s website when either one is on. With editing on they land on My website; with the software alone they land on its dashboard and cannot change the website. Nexvora can always open every site, whatever is switched on.
       </p>
       <p className="mt-2 text-sm text-slate-600">
         With a database, client logins live in the <code>nx_users</code> table and the owner is created with <code>npm run nx:seed-owner</code>.

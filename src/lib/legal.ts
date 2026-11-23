@@ -367,10 +367,10 @@ export const LEGAL_DOCS: LegalDoc[] = [
         heading: "The monthly care plans",
         blocks: [
           {
-            p: "Nexvora Care is optional and always has been. Your website is yours once it is paid for, and it keeps working whether or not you ever pay me again.",
+            p: "Nexvora Care is optional. The first month after launch is free. Your website is yours once it is paid for. If you don't take a care plan, it stays live for 1 year from launch. To keep it running after that, renew the domain and hosting in your name, or start any care plan.",
           },
           {
-            p: "Each plan states out loud how much of my time it includes each month. That allowance does not roll over into the next month. Looking after what already exists is inside the plan; building something new is not, and the price page lists exactly which is which.",
+            p: "Each plan states out loud what it includes each month: how many changes and how many posts. That allowance does not roll over into the next month. Looking after what already exists is inside the plan; building something new is not, and the price page lists exactly which is which.",
           },
           {
             p: "You can stop a plan whenever you like. See the refunds page for what happens to money already paid. If I ever have to stop offering a plan, you get a month's notice.",
@@ -546,11 +546,11 @@ export const LEGAL_DOCS: LegalDoc[] = [
             list: [
               "On a monthly plan, it runs to the end of the month you have paid for and then stops. That month is not refunded, because the hosting, the backups and the watching all ran.",
               "On a yearly plan, I refund the whole months you have not used. Part-months are not split.",
-              "The time allowance in a plan does not carry over and is not refunded if you did not use it. That is what a plan is: it is there whether you needed it that month or not.",
+              "The changes and posts in a plan do not carry over and is not refunded if you did not use it. That is what a plan is: it is there whether you needed it that month or not.",
             ],
           },
           {
-            p: "Your website does not switch off when a plan ends. It is yours, it keeps working, and I hand over whatever you need to take it elsewhere.",
+            p: "Your website does not switch off the day a plan ends. It is yours. It stays live as long as its domain and hosting are paid, and I hand over whatever you need to renew them in your name or take it elsewhere.",
           },
         ],
       },

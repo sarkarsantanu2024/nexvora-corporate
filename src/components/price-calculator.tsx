@@ -9,6 +9,9 @@ import {
   NOT_INCLUDED,
   PACKAGES,
   PRICE_GROUPS,
+  REPORT_LINE,
+  SOFTWARE_ADDON,
+  SOFTWARE_WITH,
   itemById,
   rupees,
 } from "@/lib/pricing";
@@ -38,6 +41,9 @@ export function PriceCalculator() {
   // the one-off estimate. Adding ₹1,499 to a ₹12,999 build would make the total
   // wrong in both directions at once.
   const [care, setCare] = useState<string | null>(null);
+  // The ₹500 software only goes with Growth or Business, so it is held as
+  // its own tick and counted only while one of those is the chosen plan.
+  const [software, setSoftware] = useState(false);
   // Three tabs rather than one long column. Thirty jobs, three plans and two
   // care plans stacked end to end is about six phone-screens of scrolling, and
   // the reader who came to price one poster had to travel through all of it.
@@ -69,6 +75,9 @@ export function PriceCalculator() {
 
   const chosenPackage = PACKAGES.find((p) => p.id === pkg) ?? null;
   const chosenCare = CARE_PLANS.find((c) => c.id === care) ?? null;
+  const softwareAllowed = !!chosenCare && SOFTWARE_WITH.includes(chosenCare.id);
+  const withSoftware = software && softwareAllowed;
+  const monthly = (chosenCare?.monthly ?? 0) + (withSoftware ? SOFTWARE_ADDON.monthly : 0);
 
   const total = useMemo(() => {
     const items = picked.reduce(
@@ -78,7 +87,8 @@ export function PriceCalculator() {
     return items + (chosenPackage?.price ?? 0);
   }, [picked, chosenPackage]);
 
-  const count = picked.length + (chosenPackage ? 1 : 0) + (chosenCare ? 1 : 0);
+  const count =
+    picked.length + (chosenPackage ? 1 : 0) + (chosenCare ? 1 : 0) + (withSoftware ? 1 : 0);
 
   const toggle = (id: string) =>
     setPicked((v) => (v.includes(id) ? v.filter((x) => x !== id) : [...v, id]));
@@ -87,6 +97,7 @@ export function PriceCalculator() {
     setPicked([]);
     setPkg(null);
     setCare(null);
+    setSoftware(false);
   };
 
   // The enquiry, written out the way a person would write it.
@@ -109,12 +120,16 @@ export function PriceCalculator() {
     if (chosenCare) {
       lines.push(
         "",
-        `Monthly service: ${chosenCare.name}: ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
+        `Care plan: ${chosenCare.name}: ${rupees(chosenCare.monthly)}/month (or ${rupees(chosenCare.yearly)} a year)`,
       );
+      if (withSoftware) {
+        lines.push(`${SOFTWARE_ADDON.name}: ${rupees(SOFTWARE_ADDON.monthly)}/month`);
+        lines.push(`Estimated monthly total: ${rupees(monthly)}`);
+      }
     }
     lines.push("", "Please tell me if this is right for what I need.");
     return `${CONTACT.whatsappHref}?text=${encodeURIComponent(lines.join("\n"))}`;
-  }, [chosenPackage, chosenCare, picked, total]);
+  }, [chosenPackage, chosenCare, picked, total, withSoftware, monthly]);
 
   return (
     <>
@@ -189,7 +204,7 @@ export function PriceCalculator() {
                 [
                   ["jobs", "Jobs", picked.length],
                   ["packages", "Packages", chosenPackage ? 1 : 0],
-                  ["care", "Monthly service", chosenCare ? 1 : 0],
+                  ["care", "Monthly care", (chosenCare ? 1 : 0) + (withSoftware ? 1 : 0)],
                 ] as const
               ).map(([id, label, n]) => (
                 <button
@@ -356,9 +371,10 @@ export function PriceCalculator() {
               {tab === "care" && (
                 <>
               <p className="text-sm leading-relaxed text-slate-600">
-                Optional, and separate from everything above. Your website
-                works whether or not you take one, and you can stop it
-                whenever you like.
+                Optional, and separate from everything above. The first
+                month is free. Without a plan, your website stays live for
+                1 year from launch. Pay for a year at once and get 2 months
+                free.
               </p>
               <div className="mt-4 space-y-3">
                 {CARE_PLANS.map((c) => {
@@ -379,9 +395,14 @@ export function PriceCalculator() {
                         <div className="min-w-0">
                           <p className="font-semibold tracking-tight">
                             {c.name}
+                            {c.badge ? (
+                              <span className="ml-2 whitespace-nowrap rounded-full bg-brand-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                                {c.badge}
+                              </span>
+                            ) : null}
                           </p>
                           <p className="mt-0.5 text-sm text-slate-600">
-                            {c.who}
+                            {c.subtitle}
                           </p>
                         </div>
                         <div className="shrink-0 text-right">
@@ -392,7 +413,7 @@ export function PriceCalculator() {
                         </div>
                       </div>
                       <p className="mt-3 rounded-lg bg-white/70 px-2.5 py-1.5 text-xs font-semibold text-brand-800">
-                        {c.allowance} · or {rupees(c.yearly)} a year
+                        or {rupees(c.yearly)}/year (2 months free)
                       </p>
                       <ul className="mt-3 space-y-1.5 border-t border-slate-200 pt-3 text-sm text-slate-700">
                         {c.includes.map((line) => (
@@ -403,19 +424,58 @@ export function PriceCalculator() {
                             >
                               check
                             </span>
-                            <span className="leading-snug">{line}</span>
+                            <span
+                              className={`leading-snug ${
+                                line.startsWith("Everything in") || line === REPORT_LINE
+                                  ? "font-semibold text-slate-900"
+                                  : ""
+                              }`}
+                            >
+                              {line}
+                            </span>
                           </li>
                         ))}
                       </ul>
-                      {c.highlight && (
-                        <p className="mt-3 rounded-lg border border-violet-200 bg-violet-50 px-2.5 py-2 text-sm font-semibold leading-snug text-violet-950">
-                          {c.highlight}
-                        </p>
-                      )}
                     </button>
                   );
                 })}
               </div>
+
+              {/* Only offered once Growth or Business is chosen. With Basic
+                  or no plan it shows, greyed out, saying why. */}
+              <label
+                className={`mt-4 flex items-start gap-3 rounded-2xl border p-4 transition sm:p-5 ${
+                  !softwareAllowed
+                    ? "cursor-not-allowed border-slate-200 bg-slate-50 opacity-60"
+                    : withSoftware
+                      ? "cursor-pointer border-violet-500 bg-violet-50 ring-1 ring-violet-500"
+                      : "cursor-pointer border-violet-200 bg-white hover:border-violet-400"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={withSoftware}
+                  disabled={!softwareAllowed}
+                  onChange={(e) => setSoftware(e.target.checked)}
+                  className="mt-1 h-4 w-4 shrink-0 accent-violet-600"
+                />
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-start justify-between gap-3">
+                    <span className="font-semibold tracking-tight text-violet-950">
+                      {SOFTWARE_ADDON.name}
+                    </span>
+                    <span className="shrink-0 font-bold text-violet-950">
+                      +{rupees(SOFTWARE_ADDON.monthly)}
+                      <span className="text-xs font-medium text-slate-500">/month</span>
+                    </span>
+                  </span>
+                  <span className="mt-1 block text-sm leading-snug text-slate-600">
+                    {softwareAllowed
+                      ? SOFTWARE_ADDON.rule
+                      : "Choose Growth or Business above to add this."}
+                  </span>
+                </span>
+              </label>
 
               <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm">
                 <p className="font-semibold text-slate-800">
@@ -509,7 +569,7 @@ export function PriceCalculator() {
                     </p>
                     {chosenCare && (
                       <p className="text-xl font-bold tracking-tight text-brand-700">
-                        + {rupees(chosenCare.monthly)}
+                        + {rupees(monthly)}
                         <span className="ml-1 text-sm font-medium text-slate-500">
                           a month
                         </span>

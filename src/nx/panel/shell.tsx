@@ -127,7 +127,7 @@ export function LockedScreen({ what = "dashboard" }: { what?: "dashboard" | "edi
   const { lang, schema } = useSite();
   const title = what === "edit" ? b(lang, "editLocked") : b(lang, "locked");
   const intro = what === "edit" ? b(lang, "editLockedIntro") : b(lang, "lockedIntro");
-  const msg = what === "edit" ? `Hello, I want website editing switched on for ${schema.name}.` : `Hello, I want to start the business dashboard subscription for ${schema.name}.`;
+  const msg = what === "edit" ? `Hello, I want website editing switched on for ${schema.name}.` : `Hello, I want to start the business management software for ${schema.name}.`;
   return (
     <div className="mx-auto max-w-2xl rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center sm:p-10">
       <div className="icon-tile mx-auto h-16 w-16">
