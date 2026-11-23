@@ -12,3 +12,6 @@ test-results
 
 # Client proposal maker: holds prices and contact details, never push (the repo is public)
 docs/proposal/
+
+# Client presentation, screenshots, PDFs and other marketing files: kept local only
+marketing/
