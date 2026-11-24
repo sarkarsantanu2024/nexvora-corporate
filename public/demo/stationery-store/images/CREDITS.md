@@ -76,7 +76,7 @@ All images are WebP files made with sharp from Pexels originals: each product ph
 | pr-memento-d | 6532587 | https://www.pexels.com/photo/6532587/ |
 | pr-cert | 8177925 | https://www.pexels.com/photo/8177925/ |
 | pr-cert-d | 37012315 | https://www.pexels.com/photo/37012315/ |
-| pr-badge | 6020369 | https://www.pexels.com/photo/6020369/ |
+| pr-badge | 8066708 | https://www.pexels.com/photo/8066708/ |
 | pr-ribbon | 37845924 | https://www.pexels.com/photo/37845924/ |
 | bg-bag | 41168128 | https://www.pexels.com/photo/41168128/ |
 | bg-bag-d | 40966094 | https://www.pexels.com/photo/40966094/ |

@@ -392,7 +392,7 @@
       desc: "Round pin badges with a safety pin back. For prefects, house captains, volunteers and election days.",
       specs: [["Size", "58 mm"], ["Back", "Safety pin"]],
       variants: [v("one", "58 mm", "", 30, 25, 15, 1000, "pr-badge", { bp: 12 })],
-      pr: { blend: "print", kind: "school", sides: [side("face", "Badge face", "pr-badge", .3, .3, .4, .4, 0, "circle", "#ffffff")], methods: [m("digital", 10, 5, 0, 1)] } },
+      pr: { blend: "print", kind: "school", sides: [side("face", "Badge face", "pr-badge", .1, .325, .35, .35, 0, "circle", "")], methods: [m("digital", 10, 5, 0, 1)] } },
     { slug: "prize-rosette-ribbon", name: "Prize Rosette Ribbon", cat: "prizes", buyers: ["school", "event"], unit: "pc", min: 1, step: 1, wq: 25,
       imgs: ["pr-ribbon", "pr-medals-d"], rating: 4.5, reviews: 45, tags: ["rosette", "ribbon", "prize", "sports day"], created: "2026-08-24", rank: 33.5,
       desc: "A pleated paper rosette with tails, for first, second and third prizes. Print the event name in the centre.",
