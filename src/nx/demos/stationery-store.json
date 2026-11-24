@@ -1,0 +1,547 @@
+{
+  "site": "stationery-store",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Kolom Khata Stationers",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "sr",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "badge",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "badge2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "lbl",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "badge3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "hero",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          }
+        },
+        {
+          "key": "hero-lede",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "link",
+          "type": "link",
+          "label": {
+            "en": "Button and link",
+            "bn": "বোতাম ও লিংক"
+          }
+        },
+        {
+          "key": "link2",
+          "type": "link",
+          "label": {
+            "en": "Button and link",
+            "bn": "বোতাম ও লিংক"
+          }
+        },
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1000"
+        },
+        {
+          "key": "ticket",
+          "type": "textarea",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h22",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h23",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "link",
+          "type": "link",
+          "label": {
+            "en": "Button and link",
+            "bn": "বোতাম ও লিংক"
+          }
+        },
+        {
+          "key": "link2",
+          "type": "link",
+          "label": {
+            "en": "Button and link",
+            "bn": "বোতাম ও লিংক"
+          }
+        },
+        {
+          "key": "link3",
+          "type": "link",
+          "label": {
+            "en": "Button and link",
+            "bn": "বোতাম ও লিংক"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "pay",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Business name",
+                "bn": "ব্যবসার নাম"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list",
+          "label": {
+            "en": "Shop",
+            "bn": "Shop"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "link",
+              "type": "link",
+              "label": {
+                "en": "Button and link",
+                "bn": "বোতাম ও লিংক"
+              }
+            }
+          ]
+        },
+        {
+          "key": "list2",
+          "label": {
+            "en": "Help",
+            "bn": "Help"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "link",
+              "type": "link",
+              "label": {
+                "en": "Button and link",
+                "bn": "বোতাম ও লিংক"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "brand-name": "Kolom Khata",
+      "brand-sub": "Stationers · College Street · Since 1979",
+      "sr": "Search products",
+      "badge": "0",
+      "badge2": "0",
+      "lbl": "Cart",
+      "badge3": "0"
+    },
+    "hero": {
+      "kicker": "College Street, Kolkata · Since 1979",
+      "h1": "One pencil or a thousand, at a fair price.",
+      "hero-lede": "Shop price for one, wholesale price for many. Stationery, toys, prizes and school supplies for homes, schools, shops and offices, with your name printed on almost anything.",
+      "link": {
+        "text": "Shop all products",
+        "href": "/demo/stationery-store/shop"
+      },
+      "link2": {
+        "text": "Print your name on it",
+        "href": "/demo/stationery-store/shop?print=1"
+      },
+      "photo": {
+        "src": "/demo/stationery-store/images/hero.jpg",
+        "alt": "Pencils, an open spiral notebook, binder clips and markers on a bright desk"
+      },
+      "ticket": "HB pencil <b class=\"notranslate\">₹6</b> each<br><span class=\"notranslate\">₹4</span> each from 50"
+    },
+    "footer": {
+      "brand-name": "Kolom Khata Stationers",
+      "brand-sub": "Retail and wholesale · College Street · Since 1979",
+      "h2": "Shop",
+      "h22": "Help",
+      "h23": "Store",
+      "link": {
+        "text": "My account",
+        "href": "/demo/stationery-store/account"
+      },
+      "link2": {
+        "text": "Cart",
+        "href": "/demo/stationery-store/cart"
+      },
+      "link3": {
+        "text": "Owner's dashboard",
+        "href": "/demo/stationery-store/admin"
+      },
+      "pay": {
+        "items": [
+          {
+            "span": "UPI"
+          },
+          {
+            "span": "Cards"
+          },
+          {
+            "span": "Netbanking"
+          },
+          {
+            "span": "NEFT / RTGS"
+          },
+          {
+            "span": "Cash on delivery"
+          }
+        ]
+      },
+      "list": {
+        "items": [
+          {
+            "link": {
+              "text": "School stationery",
+              "href": "/demo/stationery-store/shop/school"
+            }
+          },
+          {
+            "link": {
+              "text": "Office stationery",
+              "href": "/demo/stationery-store/shop/office"
+            }
+          },
+          {
+            "link": {
+              "text": "Play school materials",
+              "href": "/demo/stationery-store/shop/play"
+            }
+          },
+          {
+            "link": {
+              "text": "Prizes and trophies",
+              "href": "/demo/stationery-store/shop/prizes"
+            }
+          },
+          {
+            "link": {
+              "text": "Calendars and diaries",
+              "href": "/demo/stationery-store/shop/calendars"
+            }
+          },
+          {
+            "link": {
+              "text": "Print your name",
+              "href": "/demo/stationery-store/shop?print=1"
+            }
+          }
+        ]
+      },
+      "list2": {
+        "items": [
+          {
+            "link": {
+              "text": "Track your order",
+              "href": "/demo/stationery-store/track"
+            }
+          },
+          {
+            "link": {
+              "text": "Bulk quote",
+              "href": "/demo/stationery-store/quote"
+            }
+          },
+          {
+            "link": {
+              "text": "Delivery",
+              "href": "/demo/stationery-store/policies/shipping"
+            }
+          },
+          {
+            "link": {
+              "text": "Returns",
+              "href": "/demo/stationery-store/policies/returns"
+            }
+          },
+          {
+            "link": {
+              "text": "Privacy",
+              "href": "/demo/stationery-store/policies/privacy"
+            }
+          },
+          {
+            "link": {
+              "text": "Terms of sale",
+              "href": "/demo/stationery-store/policies/terms"
+            }
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Kolom Khata Stationers sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=College%20Street%2C%20Kolkata%20700009",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Kolom Khata Stationers | Retail and Wholesale Stationery, College Street",
+      "description": "A sample online stationery store with shop prices for one piece and wholesale prices for many: school and office stationery, toys, prizes, bags, caps and calendars, with a design studio to print your name and logo, bulk quotes and an owner dashboard."
+    }
+  }
+}

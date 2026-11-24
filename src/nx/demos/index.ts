@@ -36,12 +36,13 @@ import d32 from "./restaurant.json";
 import d33 from "./salon.json";
 import d34 from "./saree.json";
 import d35 from "./spoken-english.json";
-import d36 from "./sweets.json";
-import d37 from "./tailor.json";
-import d38 from "./tax-consultant.json";
-import d39 from "./toy-shop.json";
-import d40 from "./travel-agent.json";
-import d41 from "./yoga.json";
+import d36 from "./stationery-store.json";
+import d37 from "./sweets.json";
+import d38 from "./tailor.json";
+import d39 from "./tax-consultant.json";
+import d40 from "./toy-shop.json";
+import d41 from "./travel-agent.json";
+import d42 from "./yoga.json";
 
 export const DEMO_SCHEMAS: Record<string, SiteSchema> = {
   "abacus": d0 as unknown as SiteSchema,
@@ -80,12 +81,13 @@ export const DEMO_SCHEMAS: Record<string, SiteSchema> = {
   "salon": d33 as unknown as SiteSchema,
   "saree": d34 as unknown as SiteSchema,
   "spoken-english": d35 as unknown as SiteSchema,
-  "sweets": d36 as unknown as SiteSchema,
-  "tailor": d37 as unknown as SiteSchema,
-  "tax-consultant": d38 as unknown as SiteSchema,
-  "toy-shop": d39 as unknown as SiteSchema,
-  "travel-agent": d40 as unknown as SiteSchema,
-  "yoga": d41 as unknown as SiteSchema,
+  "stationery-store": d36 as unknown as SiteSchema,
+  "sweets": d37 as unknown as SiteSchema,
+  "tailor": d38 as unknown as SiteSchema,
+  "tax-consultant": d39 as unknown as SiteSchema,
+  "toy-shop": d40 as unknown as SiteSchema,
+  "travel-agent": d41 as unknown as SiteSchema,
+  "yoga": d42 as unknown as SiteSchema,
 };
 
 export const DEMO_SLUGS = Object.keys(DEMO_SCHEMAS);

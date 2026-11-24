@@ -6,7 +6,7 @@
 <title>Kolom Khata Stationers | Retail and Wholesale Stationery, College Street</title>
 <meta name="description" content="A sample online stationery store with shop prices for one piece and wholesale prices for many: school and office stationery, toys, prizes, bags, caps and calendars, with a design studio to print your name and logo, bulk quotes and an owner dashboard.">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#FBF8F1">
+<meta name="theme-color" content="#FFFFFF">
 <script>
 (function(){var p=location.pathname.replace(/\/+$/,"");if(p==="/demo/stationery-store"){document.documentElement.setAttribute("data-route","home");
 var l=document.createElement("link");l.rel="preload";l.as="image";l.href="/demo/stationery-store/images/hero-m.webp";l.media="(max-width: 899px)";l.setAttribute("fetchpriority","high");document.head.appendChild(l);
@@ -15,20 +15,20 @@ if(p.indexOf("/demo/stationery-store/design/")===0)document.documentElement.clas
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Zilla+Slab:wght@600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Zilla+Slab:wght@600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Zilla+Slab:wght@600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Montserrat:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Montserrat:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=Montserrat:wght@600;700&display=swap"></noscript>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%23FFC928%22/%3E%3Cpath d=%22M16 5l5 12-5 10-5-10z%22 fill=%22%231D3F8F%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%222%22 fill=%22%23FFC928%22/%3E%3C/svg%3E">
 <style>
 :root{
-  --paper:#FAF8F3; --card:#FFFFFF; --ink:#1B2333; --muted:#545B69; --blue:#1D3F8F; --blue-deep:#142E6B; --blue-soft:#EEF2FA;
+  --paper:#FFFFFF; --card:#FFFFFF; --ink:#111111; --muted:#5C5C5C; --blue:#111111; --blue-deep:#000000; --blue-soft:#F2F2F0; --soft:#F5F4F1;
   --accent:#F2B705; --accent-soft:#FFF7DB; --red:#B42318; --green:#1D6B3B; --green-soft:#E8F3EC;
-  --line:#E6E1D6; --line-strong:#8B8576; --warn:#7A4E00; --err:#B42318;
-  --head:"Zilla Slab",Rockwell,Georgia,serif; --sans:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:12px; --r-sm:8px; --wrap:1320px; --gutter:clamp(1rem,3.5vw,2rem);
+  --line:#E8E6E1; --line-strong:#8A8780; --warn:#7A4E00; --err:#B42318;
+  --head:"Montserrat","Segoe UI",system-ui,Arial,sans-serif; --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --r:22px; --r-sm:12px; --pill:999px; --ease:cubic-bezier(.22,1,.36,1); --wrap:1920px; --gutter:clamp(1rem,3vw,3rem);
   --t13:.8125rem; --t15:.9375rem; --t17:1.0625rem; --t20:1.25rem; --t24:1.5rem; --t32:2rem; --t40:2.5rem;
-  --shadow:0 12px 32px -16px rgba(27,35,51,.28);
-  --nxs-toast-bg:#1B2333; --nxs-radius:8px; --nxs-font:"Hanken Grotesk",system-ui,sans-serif;
+  --shadow:0 18px 40px -22px rgba(0,0,0,.35);
+  --nxs-toast-bg:#111111; --nxs-radius:12px; --nxs-font:"DM Sans",system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:150px;scroll-behavior:smooth}
@@ -93,6 +93,7 @@ button{background:none;border:0;cursor:pointer;padding:0}
 /* announcement and header */
 .topline{background:var(--card);border-bottom:1px solid var(--line);color:var(--ink);font-size:var(--t13)}
 .topline .wrap{padding-block:.35rem;text-align:center}
+.topline__in{display:flex;align-items:center;justify-content:center;gap:1rem}
 .topline .more{display:none}
 @media (min-width:700px){.topline .more{display:inline}}
 .header{position:sticky;top:0;z-index:100;background:var(--card);border-bottom:1px solid var(--line)}
@@ -106,11 +107,13 @@ button{background:none;border:0;cursor:pointer;padding:0}
 .hsearch input{flex:1;min-width:0;border:0;background:transparent;min-height:42px;padding:.35rem .75rem;font-size:var(--t15);outline:none}
 .hsearch button[type=submit]{display:grid;place-items:center;width:44px;color:var(--ink);border-radius:0 6px 6px 0}
 .hsearch button svg{width:20px;height:20px}
-@media (min-width:760px){.hsearch{order:0;flex:1 1 280px;max-width:480px;margin-left:1rem}}
+@media (min-width:1100px){.hsearch{order:0;flex:1 1 280px;max-width:520px;margin-inline:1rem auto}}
+@media (min-width:640px) and (max-width:1099px){.header__in>.nx-lang{margin-left:auto}}
 .nav{display:none}
 .nav>ul{display:flex;align-items:center;gap:.1rem}
-.nav a{display:inline-flex;align-items:center;min-height:44px;padding:.3rem .6rem;border-radius:var(--r-sm);font-weight:500;font-size:var(--t15);color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav a{font-size:var(--t13);display:inline-flex;align-items:center;min-height:32px;padding:.15rem .6rem;border-radius:var(--r-sm);font-weight:500;font-size:var(--t15);color:var(--ink);text-decoration:none;white-space:nowrap}
 .nav a:hover,.nav a[aria-current="page"]{background:var(--blue-soft)}
+@media (min-width:1100px){.topline__in{justify-content:space-between}.topline .wrap{padding-block:.1rem}}
 .header__cta{display:flex;align-items:center;gap:.1rem;flex:none}
 .cartbtn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;height:44px;min-width:44px;padding:0 .65rem;border-radius:var(--r-sm);color:var(--ink);text-decoration:none;font-weight:600;font-size:var(--t15)}
 .cartbtn:hover{background:var(--blue-soft)}
@@ -125,6 +128,7 @@ button{background:none;border:0;cursor:pointer;padding:0}
 @media (max-width:419px){.hide-xs{display:none!important}.brand__sub{display:none}.icon-btn,.cartbtn{width:40px;min-width:40px;padding:0}}
 @media (min-width:640px){.header__cta .hide-sm{display:inline-grid!important}}
 @media (min-width:1100px){.nav{display:block}.burger{display:none}.cartbtn .lbl{display:inline}}
+@media (max-width:639px){.header__in>.nx-lang{margin-left:auto}}
 .sdrop{position:absolute;left:-1px;right:-1px;top:calc(100% + 6px);z-index:150;background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:.4rem;max-height:min(70vh,520px);overflow-y:auto}
 .sres{display:flex;gap:.7rem;align-items:center;min-height:56px;padding:.35rem .4rem;border-radius:var(--r-sm);text-decoration:none;color:var(--ink)}
 .sres:hover,.sres:focus-visible{background:var(--blue-soft)}
@@ -136,12 +140,12 @@ button{background:none;border:0;cursor:pointer;padding:0}
 .catnav__all{display:none;align-items:center;gap:.35rem;min-height:44px;padding:0 .75rem 0 0;font-weight:600;font-size:var(--t15);color:var(--ink);white-space:nowrap}
 .catnav__all svg{width:16px;height:16px;transition:transform .2s}
 .catnav__all[aria-expanded="true"] svg{transform:rotate(180deg)}
-#catbar{display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;padding:.45rem 0}
+#catbar{display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;padding:.45rem 0;min-height:calc(36px + .9rem)}
 #catbar::-webkit-scrollbar{display:none}
 #catbar li{flex:none}
 #catbar a{display:inline-flex;align-items:center;min-height:36px;padding:.2rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:var(--t13);font-weight:600;white-space:nowrap}
 #catbar a[aria-current="page"]{background:var(--ink);border-color:var(--ink);color:#fff}
-@media (pointer:coarse){#catbar a{min-height:40px}}
+@media (pointer:coarse){#catbar a{min-height:40px}#catbar{min-height:calc(40px + .9rem)}}
 .catnav{display:none}
 body.show-cats .catnav{display:block}
 @media (min-width:1100px){
@@ -318,6 +322,8 @@ html:not([data-route="home"]) .static-hero{display:none}
 @media (min-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (min-width:1100px){.coll .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (min-width:1400px){.coll .grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1600px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}.coll .grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1800px){.coll .grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 .grid>li{min-width:0}
 .pc{position:relative;display:flex;flex-direction:column;height:100%;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .15s,box-shadow .15s}
 .pc:hover{border-color:#CFC8B8;box-shadow:var(--shadow)}
@@ -425,6 +431,7 @@ fieldset.fgroup{border-left:0;border-right:0;border-top:0;margin:0;padding-inlin
 @media (min-width:900px){.pdp{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:3rem;align-items:start}}
 .gal{display:grid;gap:.6rem;min-width:0}
 @media (min-width:900px){.gal{grid-template-columns:72px minmax(0,1fr);position:sticky;top:130px}.gal .thumbs{order:-1;flex-direction:column}}
+@media (min-width:600px) and (max-width:899px){.gal{width:min(100%,520px);margin-inline:auto}}
 .gal__main{position:relative;margin:0;border-radius:var(--r);overflow:hidden;background:#F3F0EA;aspect-ratio:1;cursor:zoom-in;padding:0;border:0;display:block;width:100%}
 .gal__main img{width:100%;height:100%;object-fit:cover}
 .thumbs{display:flex;gap:.5rem}
@@ -773,7 +780,7 @@ html:not(.drawn) #view{min-height:100vh}
 @media (max-width:699px){.fbt__foot{position:sticky;bottom:0;background:var(--paper);padding:.6rem 0;z-index:2}}
 .qaitem{padding:.8rem 0;border-bottom:1px solid var(--line)}
 .qaitem p+p{margin-top:.25rem}
-.sgwrap{overflow-x:auto;max-width:100%;margin-top:.5rem}
+.sgwrap{position:relative;overflow-x:auto;max-width:100%;margin-top:.5rem}
 .sgt{border-collapse:collapse;font-size:var(--t13);min-width:100%}
 .sgt caption{text-align:left;padding-bottom:.4rem;color:var(--muted)}
 .sgt th,.sgt td{padding:.4rem .5rem;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
@@ -821,43 +828,127 @@ body.has-bar .chatbtn{bottom:calc(132px + env(safe-area-inset-bottom,0px))}
 html.is-studio .chatbtn,body.focus .chatbtn{display:none}
 @media (max-width:599px){.chatbtn span:not(.chatbtn__dot){display:none}.chatbtn{width:44px;padding:0;justify-content:center}}
 [tabindex="-1"]:focus{outline:none}
+
+/* ---------- Theme: bold type, black and white, pill buttons, motion ---------- */
+h1,h2{font-family:var(--head);font-weight:700;letter-spacing:-.02em;line-height:1.15}
+h1{font-size:clamp(2rem,6.4vw,2.6rem)}
+@media (min-width:900px){h1{font-size:clamp(2.6rem,3.6vw,3.6rem)}}
+h2{font-size:clamp(1.45rem,3.2vw,2.1rem)}
+h3{font-weight:600}
+.kicker{display:inline-flex;align-items:center;gap:.5rem;letter-spacing:.06em;color:var(--ink)}
+.kicker::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--accent-soft),0 0 0 4px var(--accent)}
+.sec{padding-block:clamp(2.75rem,7vw,5.5rem)}
+.sec--white{background:var(--soft);border-block:0}
+.sec-head{margin-bottom:clamp(1.25rem,3vw,2rem)}
+.sec-head>a,.sec-head .more{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;color:var(--ink);text-underline-offset:5px}
+
+.btn{border-radius:var(--pill);min-height:48px;padding:.6rem 1.45rem;font-weight:600;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease),box-shadow .25s var(--ease)}
+.btn--sm{min-height:40px;padding:.35rem 1rem}
+.btn--icon{border-radius:50%}
+.btn--blue{background:var(--ink);color:#fff}
+.btn--blue:hover{background:#000;transform:translateY(-2px);box-shadow:0 12px 22px -14px rgba(0,0,0,.6)}
+.btn--yellow,.btn--line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--yellow:hover,.btn--line:hover{background:var(--ink);color:#fff}
+.btn--ghost{border-radius:var(--pill)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-row{gap:.75rem;margin-top:1.6rem}
+.chip,.icon-btn{transition:background .2s,border-color .2s,color .2s}
+.icon-btn{border-radius:50%}
+.badge{background:var(--ink);box-shadow:0 0 0 2px var(--card)}
+
+.topline{background:var(--soft);border-bottom:0}
+.topline .nav a{color:var(--ink)}
+.topline .nav a:hover{background:#E8E6E1}
+.header{border-bottom-color:transparent;transition:box-shadow .3s var(--ease),border-color .3s}
+body:not(.near-top) .header{box-shadow:0 8px 24px -18px rgba(0,0,0,.45);border-bottom-color:var(--line)}
+.brand__name{font-family:var(--head);font-weight:700;letter-spacing:-.02em}
+.hsearch{border-radius:var(--pill);border-width:1px;background:var(--soft);padding-left:.4rem}
+.hsearch:focus-within{background:var(--card);border-color:var(--ink);box-shadow:0 0 0 3px rgba(17,17,17,.12)}
+.hsearch button[type=submit]{border-radius:0 var(--pill) var(--pill) 0}
+@media (min-width:1100px){.cartbtn{background:var(--ink);color:#fff;border-radius:var(--pill);padding:0 1.15rem;margin-left:.35rem}.cartbtn:hover{background:#000}.cartbtn .badge{box-shadow:0 0 0 2px var(--ink);background:var(--accent);color:var(--ink)}}
+#catbar a{border-color:var(--line)}
+#catbar a:hover{border-color:var(--ink)}
+@media (min-width:1100px){#catbar a{position:relative;border:0;border-radius:0;background:none}#catbar a::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:2px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}#catbar a:hover::after,#catbar a[aria-current="page"]::after{transform:scaleX(1)}#catbar a[aria-current="page"]{background:none;color:var(--ink)}}
+
+.hero{border-bottom:0}
+.hero__in{padding-block:clamp(1.5rem,5vw,4.5rem) clamp(2rem,5vw,4.5rem);gap:clamp(1.5rem,4vw,3.5rem)}
+.hero h1{max-width:16ch;margin-top:.9rem}
+.hero__lede{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--ink);opacity:.8;margin-top:1.1rem}
+.hero__ph{border-radius:28px;aspect-ratio:4/3.4}
+@media (min-width:900px){.hero__ph{aspect-ratio:auto;height:min(66vh,620px)}}
+.hero__ph img{transition:transform 1.2s var(--ease)}
+.hero__ph:hover img{transform:scale(1.04)}
+.ticket{border-radius:16px;padding:.7rem 1rem;left:1rem;bottom:1rem}
+.hero__facts svg{color:var(--ink)}
+
+.cattiles{gap:clamp(.75rem,2vw,1.25rem)}
+.cattile__ph{position:relative;border-radius:var(--r);background:var(--soft)}
+.cattile__ph::after{content:"";position:absolute;top:.7rem;right:.7rem;width:38px;height:38px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/16px no-repeat;transform:scale(.6);opacity:0;transition:transform .35s var(--ease),opacity .35s var(--ease)}
+.cattile:hover .cattile__ph::after,.cattile:focus-visible .cattile__ph::after{transform:scale(1);opacity:1}
+.cattile__ph img{transition:transform .7s var(--ease)}
+.cattile:hover img{transform:scale(1.06)}
+.cattile b{font-family:var(--head);font-weight:700;letter-spacing:-.01em;margin-top:.7rem}
+@media (hover:none){.cattile__ph::after{transform:scale(.8);opacity:1}}
+
+.pc{border:0;border-radius:var(--r);background:var(--card);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.pc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(0,0,0,.4);border-color:transparent}
+.pc__ph{border-radius:var(--r);overflow:hidden;background:var(--soft)}
+.pc__ph img{transition:transform .7s var(--ease)}
+.pc:hover .pc__ph img{transform:scale(1.06)}
+.pc__b{padding:.8rem .35rem .4rem}
+.pc__links a,.pc__links button{color:var(--ink)}
+.sec--white .pc{background:transparent}
+
+.gal__main{border-radius:var(--r);overflow:hidden}
+.footer{background:#0B0B0B}
+/* Header bars run the full screen width with side padding only. */
+.topline .wrap,.header .wrap,.catnav .wrap,.footer .wrap{max-width:none}
+@media (min-width:1800px){.grid{grid-template-columns:repeat(6,minmax(0,1fr))}.coll .grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+
+/* Scroll-in reveal. Added only to elements that start below the fold, so the
+   first screen paints at once and nothing shifts layout. */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--rvd,0s)}
+.rv.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn,.pc,.pc__ph img,.cattile__ph img,.hero__ph img{transition:none!important;transform:none!important}html{scroll-behavior:auto}}
+@media print{.rv{opacity:1!important;transform:none!important}}
 </style>
+<script id="kkPre">(function(){var m={"smooth-ball-pen":"of-pens","gel-pen-pack-10":"of-gelpens","a4-copier-paper-ream":"of-paper","stapler-with-pins":"of-stapler","box-file-foolscap":"of-files","sticky-notes-3x3":"of-notes","long-register-khata":"of-register","highlighter-set-5":"of-highlighter","hb-pencils":"sc-pencils","ruled-notebook-172":"sc-notebooks","eraser-sharpener-combo":"sc-eraser","geometry-box":"sc-geometry","wooden-scale-30cm":"sc-scale","exam-clip-board":"sc-clipboard","chart-paper":"sc-chart","brown-cover-roll":"sc-cover","wax-crayons":"ac-crayons","watercolour-cakes-12":"ac-paints","paint-brush-set-6":"ac-brushes","colour-craft-paper-a4":"ac-paper","glitter-glue-set-6":"ac-glue","sketch-pens-12":"ac-sketch","drawing-book-36":"ac-drawbook","kids-craft-kit":"ac-craft","flash-card-set":"pl-cards","wooden-alphabet-puzzle":"pl-alphabet","wooden-building-blocks":"pl-blocks","bead-counting-frame":"pl-abacus","play-dough-6":"pl-clay","puzzle-cube-3x3":"ty-cube","ludo-snakes-ladders":"ty-board","pull-back-toy-car":"ty-cars","teddy-bear":"ty-teddy","soft-play-balls-25":"ty-balls","jigsaw-puzzle-100":"ty-jigsaw","gift-wrap-sheets":"gf-wrap","metal-pen-gift-box":"gf-penset","white-ceramic-mug":"gf-mug","wooden-doll-keychain":"gf-keychain","photo-frame-5x7":"gf-frame","sports-medal-50mm":"pr-medals","trophy-cup":"pr-cup","wooden-award-shield":"pr-shield","star-award-memento":"pr-memento","certificate-sheets-a4":"pr-cert","pin-badge-58mm":"pr-badge","prize-rosette-ribbon":"pr-ribbon","school-backpack":"bg-bag","steel-water-bottle-750":"bg-bottle","lunch-box-3-compartment":"bg-lunch","zip-pencil-pouch":"bg-pouch","cotton-cap-printed":"un-cap","id-card-holder-lanyard":"un-idcard","school-tie-striped":"un-tie","school-belt":"un-belt","wall-calendar-2027":"cl-wall","custom-photo-calendar":"cl-photo","desk-calendar-2027":"cl-desk","diary-2027-a5":"cl-diary","white-school-shirt-half":"un-shirt-white","white-school-shirt-full":"un-shirt-full","light-blue-school-shirt":"un-shirt-blue","house-polo-tshirt":"un-tshirt","school-trousers-navy":"un-trousers","school-half-pant-grey":"un-halfpant","pleated-skirt-navy":"un-skirt","salwar-kameez-uniform-set":"un-salwar","primary-frock-check":"un-frock","school-sweater-v-neck":"un-sweater","school-blazer-navy":"un-blazer","school-track-suit":"un-tracksuit","school-socks":"un-socks","black-school-shoes":"un-shoes-black","white-canvas-pt-shoes":"un-shoes-white","school-raincoat":"un-raincoat","hair-ribbons-bands":"un-ribbon","lab-coat":"of-labcoat","slate-with-chalk":"sc-slate","whiteboard-markers":"of-markers","classroom-whiteboard":"of-whiteboard","school-globe":"sc-globe","wall-map-india-world":"sc-map","alphabet-wall-chart":"sc-alphachart","attendance-register":"of-attendance","report-cards-printed":"pr-reportcard","admission-forms-printed":"of-forms","answer-sheet-paper":"of-paper-d","custom-rubber-stamp":"of-stamp","printed-envelopes":"of-envelope","visiting-cards":"of-cards","cash-book-voucher-pad":"of-register-d","tape-and-rubber-bands":"of-tape","school-umbrella":"bg-umbrella","school-football":"sp-football","cricket-set":"sp-cricket","badminton-set":"sp-badminton","skipping-rope":"sp-rope","carrom-board":"sp-carrom","chess-set":"sp-chess","training-cones":"sp-cones","whistle-stopwatch":"sp-whistle","house-flags-sashes":"ev-flags","sports-day-bibs":"un-bibs","balloons-pack":"ev-balloons","haal-khata-lal-khata":"kk-lalkhata","bengali-panjika-1433":"kk-panjika","bengali-wall-calendar":"cl-bengali","hate-khori-set":"sc-hatekhori","saraswati-puja-decoration-kit":"kk-decor","alpana-stencils-colour":"kk-alpana","bengali-alphabet-flash-cards":"pl-bnletters","bengali-practice-copy":"sc-practice","bengali-calligraphy-pens":"of-pens-d","kites-bundle":"kk-kite","manja-reel":"kk-manja","club-shield-sarbojanin":"pr-clubshield","puja-committee-memento":"pr-memento2","sarbojanin-trophy-cup":"pr-cup-d","bijoya-greeting-cards":"kk-greeting","wedding-card-printing":"kk-wedding","rakhi-wholesale-pack":"kk-rakhi","holi-gulal-pack":"kk-gulal","terracotta-return-gift":"kk-terracotta","sholapith-return-gift":"kk-sholapith","kalighat-pat-print":"kk-pat","gamchha-gift-set":"kk-gamchha","jute-bag-printed":"kk-jute","clay-diyas-kali-puja":"kk-diya"},a=location.pathname.split("/"),k=a[1]==="demo"&&a[2]==="stationery-store"&&a[3]==="products"&&m[a[4]];if(!k||location.search.indexOf("v=")>=0)return;var I="/demo/stationery-store/images/"+k,l=document.createElement("link");l.rel="preload";l.as="image";l.setAttribute("imagesrcset",I+"-400.webp 400w, "+I+"-800.webp 800w");l.setAttribute("imagesizes","(min-width: 900px) 46vw, 100vw");l.setAttribute("fetchpriority","high");document.head.appendChild(l)})()</script>
 <link rel="stylesheet" href="/nx/nx-demo.css">
 <meta name="nx-site" content="stationery-store">
 <meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
 </head>
 <body>
+<script>if(/^\/demo\/stationery-store\/?(shop(\/.*)?)?$/.test(location.pathname))document.body.classList.add("show-cats")</script>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="nx-strip"><div class="nx-strip__wrap"><span class="nx-strip__text">Sample website by <a href="https://www.nexvoratechnologies.co.in/">Nexvora Technologies</a></span><a class="nx-strip__all" href="/demos" aria-label="See all sample websites" title="See all sample websites"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>All samples</span></a></div></div>
 
-<div class="topline"><div class="wrap">Free delivery above <span class="notranslate">₹799</span><span class="more"> · Cash on delivery in West Bengal · GST bill on request</span></div></div>
-
-<header class="header" id="header">
-  <div class="wrap header__in">
-    <a class="brand" href="/demo/stationery-store" aria-label="Kolom Khata Stationers, home">
-      <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="9" fill="#1D3F8F"/><path d="M22 8l7 14-7 14-7-14z" fill="#F2B705"/><path d="M22 22v14" stroke="#1D3F8F" stroke-width="1.6"/><circle cx="22" cy="21" r="2.4" fill="#1D3F8F"/></svg>
-      <span><span class="brand__name notranslate">Kolom Khata</span><span class="brand__sub">Stationers · College Street · Since 1979</span></span>
-    </a>
-    <form class="hsearch" role="search" id="searchForm" novalidate>
-      <label class="sr" for="searchInput">Search products</label>
-      <input id="searchInput" type="search" autocomplete="off" placeholder="Search pencils, medals, notebooks" enterkeyhint="search" aria-controls="searchRes" aria-expanded="false">
-      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
-      <div class="sdrop" id="searchRes" hidden></div>
-    </form>
-    <nav class="nav" aria-label="Main">
+<div class="topline"><div class="wrap topline__in"><p>Free delivery above <span class="notranslate">₹799</span><span class="more"> · Cash on delivery in West Bengal · GST bill on request</span></p><nav class="nav" aria-label="Quick links">
       <ul>
         <li><a href="/demo/stationery-store/shop?print=1">Print your name</a></li>
         <li><a href="/demo/stationery-store/quote">Bulk quote</a></li>
         <li><a href="/demo/stationery-store/track">Track order</a></li>
       </ul>
-    </nav>
+    </nav></div></div>
+
+<header data-nx-section="header" class="header" id="header">
+  <div class="wrap header__in">
+    <a class="brand" href="/demo/stationery-store" aria-label="Kolom Khata Stationers, home">
+      <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="9" fill="#1D3F8F"/><path d="M22 8l7 14-7 14-7-14z" fill="#F2B705"/><path d="M22 22v14" stroke="#1D3F8F" stroke-width="1.6"/><circle cx="22" cy="21" r="2.4" fill="#1D3F8F"/></svg>
+      <span><span data-nx="header.brand-name" class="brand__name notranslate">Kolom Khata</span><span data-nx="header.brand-sub" class="brand__sub">Stationers · College Street · Since 1979</span></span>
+    </a>
+    <form class="hsearch" role="search" id="searchForm" novalidate>
+      <label data-nx="header.sr" class="sr" for="searchInput">Search products</label>
+      <input id="searchInput" type="search" role="combobox" aria-autocomplete="list" autocomplete="off" placeholder="Search pencils, medals, notebooks" enterkeyhint="search" aria-controls="searchRes" aria-expanded="false">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <div class="sdrop" id="searchRes" hidden></div>
+    </form>
     <span class="nx-lang"></span>
     <div class="header__cta">
-      <a class="icon-btn hide-xs" href="/demo/stationery-store/quote" aria-label="Quote list, 0 items" data-quote-link><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><span class="badge notranslate" data-quote-count data-n="0">0</span></a>
-      <a class="icon-btn hide-xs" href="/demo/stationery-store/wishlist" aria-label="Wishlist, 0 items" data-wish-link><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20Z"/></svg><span class="badge notranslate" data-wish-count data-n="0">0</span></a>
+      <a class="icon-btn hide-xs" href="/demo/stationery-store/quote" aria-label="Quote list, 0 items" data-quote-link><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg><span data-nx="header.badge" class="badge notranslate" data-quote-count data-n="0">0</span></a>
+      <a class="icon-btn hide-xs" href="/demo/stationery-store/wishlist" aria-label="Wishlist, 0 items" data-wish-link><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.3a4.3 4.3 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20Z"/></svg><span data-nx="header.badge2" class="badge notranslate" data-wish-count data-n="0">0</span></a>
       <a class="icon-btn hide-sm" href="/demo/stationery-store/account" aria-label="Your account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></a>
-      <a class="cartbtn" href="/demo/stationery-store/cart" data-open-cart aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.5l2.2 11h10.6L20.5 7H7"/><circle cx="9.5" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg><span class="lbl">Cart</span><span class="badge notranslate" data-cart-count data-n="0">0</span></a>
+      <a class="cartbtn" href="/demo/stationery-store/cart" data-open-cart aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.5l2.2 11h10.6L20.5 7H7"/><circle cx="9.5" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg><span data-nx="header.lbl" class="lbl">Cart</span><span data-nx="header.badge3" class="badge notranslate" data-cart-count data-n="0">0</span></a>
     </div>
     <span class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Secure checkout</span>
     <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span><span></span></button>
@@ -892,15 +983,15 @@ html.is-studio .chatbtn,body.focus .chatbtn{display:none}
 
 <main id="main">
   <div id="view">
-    <section class="hero static-hero" id="hero">
+    <section data-nx-section="hero" class="hero static-hero" id="hero">
       <div class="wrap hero__in">
         <div>
-          <span class="kicker">College Street, Kolkata · Since 1979</span>
-          <h1 tabindex="-1">One pencil or a thousand, at a fair price.</h1>
-          <p class="hero__lede">Shop price for one, wholesale price for many. Stationery, toys, prizes and school supplies for homes, schools, shops and offices, with your name printed on almost anything.</p>
+          <span data-nx="hero.kicker" class="kicker">College Street, Kolkata · Since 1979</span>
+          <h1 data-nx="hero.h1" tabindex="-1">One pencil or a thousand, at a fair price.</h1>
+          <p data-nx="hero.hero-lede" class="hero__lede">Shop price for one, wholesale price for many. Stationery, toys, prizes and school supplies for homes, schools, shops and offices, with your name printed on almost anything.</p>
           <div class="btn-row">
-            <a class="btn btn--blue" href="/demo/stationery-store/shop">Shop all products</a>
-            <a class="btn btn--line" href="/demo/stationery-store/shop?print=1">Print your name on it</a>
+            <a data-nx="hero.link" class="btn btn--blue" href="/demo/stationery-store/shop">Shop all products</a>
+            <a data-nx="hero.link2" class="btn btn--line" href="/demo/stationery-store/shop?print=1">Print your name on it</a>
           </div>
           <p class="hero__facts"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>GST bills</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>COD across West Bengal</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Delivery across India</span></p>
         </div>
@@ -908,52 +999,52 @@ html.is-studio .chatbtn,body.focus .chatbtn{display:none}
           <picture>
             <source media="(max-width: 899px)" srcset="/demo/stationery-store/images/hero-m.webp" type="image/webp" width="600" height="750">
             <source srcset="/demo/stationery-store/images/hero.webp" type="image/webp" width="1600" height="1000">
-            <img src="/demo/stationery-store/images/hero.jpg" alt="Pencils, an open spiral notebook, binder clips and markers on a bright desk" width="1600" height="1000" fetchpriority="high" decoding="async">
+            <img data-nx="hero.photo" src="/demo/stationery-store/images/hero.jpg" alt="Pencils, an open spiral notebook, binder clips and markers on a bright desk" width="1600" height="1000" fetchpriority="high" decoding="async">
           </picture>
-          <figcaption class="ticket">HB pencil <b class="notranslate">₹6</b> each<br><span class="notranslate">₹4</span> each from 50</figcaption>
+          <figcaption data-nx="hero.ticket" class="ticket">HB pencil <b class="notranslate">₹6</b> each<br><span class="notranslate">₹4</span> each from 50</figcaption>
         </figure>
       </div>
     </section>
   </div>
 </main>
 
-<footer class="footer">
+<footer data-nx-section="footer" class="footer">
   <div class="wrap">
     <div class="footer__cols">
       <div class="footer__brand">
-        <span class="brand__name notranslate">Kolom Khata Stationers</span>
-        <span class="brand__sub">Retail and wholesale · College Street · Since 1979</span>
+        <span data-nx="footer.brand-name" class="brand__name notranslate">Kolom Khata Stationers</span>
+        <span data-nx="footer.brand-sub" class="brand__sub">Retail and wholesale · College Street · Since 1979</span>
         <p style="margin-top:1rem">18 College Row, College Street, Kolkata 700009<br><a class="notranslate" href="tel:+919804243159" style="text-decoration:underline;text-underline-offset:3px">+91 98042 43159</a> · Mon to Sat, 9:30 am to 8 pm</p>
-        <div class="pay" aria-label="Payment methods"><span>UPI</span><span>Cards</span><span>Netbanking</span><span>NEFT / RTGS</span><span>Cash on delivery</span></div>
+        <div data-nx-list="footer.pay" class="pay" aria-label="Payment methods"><span data-nx-f="span" data-nx-item>UPI</span><span data-nx-f="span" data-nx-item>Cards</span><span data-nx-f="span" data-nx-item>Netbanking</span><span data-nx-f="span" data-nx-item>NEFT / RTGS</span><span data-nx-f="span" data-nx-item>Cash on delivery</span></div>
       </div>
       <div>
-        <h2>Shop</h2>
-        <ul>
-          <li><a href="/demo/stationery-store/shop/school">School stationery</a></li>
-          <li><a href="/demo/stationery-store/shop/office">Office stationery</a></li>
-          <li><a href="/demo/stationery-store/shop/play">Play school materials</a></li>
-          <li><a href="/demo/stationery-store/shop/prizes">Prizes and trophies</a></li>
-          <li><a href="/demo/stationery-store/shop/calendars">Calendars and diaries</a></li>
-          <li><a href="/demo/stationery-store/shop?print=1">Print your name</a></li>
+        <h2 data-nx="footer.h2">Shop</h2>
+        <ul data-nx-list="footer.list">
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop/school">School stationery</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop/office">Office stationery</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop/play">Play school materials</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop/prizes">Prizes and trophies</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop/calendars">Calendars and diaries</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/shop?print=1">Print your name</a></li>
         </ul>
       </div>
       <div>
-        <h2>Help</h2>
-        <ul>
-          <li><a href="/demo/stationery-store/track">Track your order</a></li>
-          <li><a href="/demo/stationery-store/quote">Bulk quote</a></li>
-          <li><a href="/demo/stationery-store/policies/shipping">Delivery</a></li>
-          <li><a href="/demo/stationery-store/policies/returns">Returns</a></li>
-          <li><a href="/demo/stationery-store/policies/privacy">Privacy</a></li>
-          <li><a href="/demo/stationery-store/policies/terms">Terms of sale</a></li>
+        <h2 data-nx="footer.h22">Help</h2>
+        <ul data-nx-list="footer.list2">
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/track">Track your order</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/quote">Bulk quote</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/policies/shipping">Delivery</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/policies/returns">Returns</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/policies/privacy">Privacy</a></li>
+          <li data-nx-item><a data-nx-f="link" href="/demo/stationery-store/policies/terms">Terms of sale</a></li>
         </ul>
       </div>
       <div>
-        <h2>Store</h2>
+        <h2 data-nx="footer.h23">Store</h2>
         <ul>
-          <li><a href="/demo/stationery-store/account">My account</a></li>
-          <li><a href="/demo/stationery-store/cart">Cart</a></li>
-          <li><a href="/demo/stationery-store/admin">Owner's dashboard</a></li>
+          <li><a data-nx="footer.link" href="/demo/stationery-store/account">My account</a></li>
+          <li><a data-nx="footer.link2" href="/demo/stationery-store/cart">Cart</a></li>
+          <li><a data-nx="footer.link3" href="/demo/stationery-store/admin">Owner's dashboard</a></li>
           <li><a href="https://wa.me/919804243159?text=Hello%2C%20I%20saw%20the%20Kolom%20Khata%20Stationers%20sample%20website%20and%20want%20one%20like%20it%20for%20my%20business." target="_blank" rel="noopener">WhatsApp us</a></li>
         </ul>
       </div>
@@ -1008,5 +1099,16 @@ html.is-studio .chatbtn,body.focus .chatbtn{display:none}
 <script src="/demo/stationery-store/app.js" defer></script>
 <script src="/nx/nx-content.js" defer></script>
 <script src="/nx/nx-lang.js" defer></script>
+<script>
+/* Scroll-in reveal for sections and cards the app renders into #view. */
+(function(){
+  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var SEL=".sec-head,.cattile,.pc,.hero__ph,.psec,.sec .card,.sec blockquote,.strip",io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add("is-in");io.unobserve(el);setTimeout(function(){el.classList.remove("rv","is-in");el.style.removeProperty("--rvd");},1200);}});},{rootMargin:"0px 0px -8% 0px",threshold:.08});
+  function tag(root){var h=innerHeight,n=0;(root.querySelectorAll?root:document).querySelectorAll(SEL).forEach(function(el){if(el.classList.contains("rv")||el.closest(".rv:not(.is-in)")||(el.parentElement&&el.parentElement.closest(".strip")))return;var r=el.getBoundingClientRect();if(r.top<h||r.width===0)return;el.classList.add("rv");var sib=el.parentElement&&el.parentElement.children.length>1?Array.prototype.indexOf.call(el.parentElement.children,el)%4:0;el.style.setProperty("--rvd",(sib*.07)+"s");io.observe(el);n++;});}
+  var v=document.getElementById("view");if(!v)return;
+  var t=0;new MutationObserver(function(){if(t)return;t=requestAnimationFrame(function(){t=0;tag(v);});}).observe(v,{childList:true,subtree:true});
+  addEventListener("load",function(){tag(v);});
+})();
+</script>
 </body>
 </html>

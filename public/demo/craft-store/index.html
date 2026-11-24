@@ -23,7 +23,7 @@ var d=document.createElement("link");d.rel="preload";d.as="image";d.href="/demo/
   --bg:#FAF6F0; --ink:#1F1B18; --muted:#5E554D; --terra:#B5532D; --terra-deep:#93401F; --indigo:#2B3A67; --indigo-deep:#1E2A4D;
   --sand:#EFE6DA; --sand-2:#E6DACB; --card:#FFFDF9; --line:#E0D5C6; --line-strong:#8A7F74; --ok:#2E6A3A; --err:#A3261B; --warn:#8A5A00;
   --serif:"Newsreader",Georgia,"Times New Roman",serif; --sans:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:12px; --r-sm:8px; --wrap:1280px; --gutter:clamp(1rem,4vw,2.5rem); --hh:68px;
+  --r:12px; --r-sm:8px; --wrap:1920px; --gutter:clamp(1rem,4vw,2.5rem); --hh:68px;
   --nxs-toast-bg:#1F1B18; --nxs-radius:12px; --nxs-font:"Manrope",system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -370,6 +370,7 @@ fieldset.fgroup{border-left:0;border-right:0;border-top:0;margin:0;padding-inlin
 /* product page */
 .pdp{display:grid;gap:1.5rem;padding-bottom:2rem}
 @media (min-width:900px){.pdp{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:3rem;align-items:start}}
+@media (min-width:1500px){.pdp{grid-template-columns:minmax(0,880px) minmax(0,620px);justify-content:center;gap:5rem}}
 .gal{position:relative;min-width:0}
 @media (min-width:900px){.gal{position:sticky;top:calc(var(--hh) + 16px)}}
 .gal__track{margin:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--r);background:var(--sand);scrollbar-width:none}
@@ -622,6 +623,11 @@ html:not(.drawn) #view{min-height:100vh}
 /* Sections below the screen are only laid out when the visitor gets near them. */
 #view .sec{content-visibility:auto;contain-intrinsic-size:auto 640px}
 @media print{#view .sec{content-visibility:visible}}
+
+/* Full-width bars */
+.header .wrap,.mega .wrap,.footer .wrap{max-width:none}
+@media (min-width:1280px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:1700px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 </style>
 <link rel="stylesheet" href="/nx/nx-demo.css">
 <meta name="nx-site" content="craft-store">

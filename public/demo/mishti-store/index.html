@@ -26,7 +26,7 @@
   --r:16px; --r-sm:10px;
   --shadow:0 1px 2px rgba(90,40,10,.06),0 10px 28px -14px rgba(90,40,10,.28);
   --shadow-lg:0 24px 60px -24px rgba(60,20,5,.45);
-  --wrap:1280px; --gutter:clamp(1rem,4vw,2.5rem);
+  --wrap:1920px; --gutter:clamp(1rem,4vw,2.5rem);
   --head-h:112px;
   --nxs-toast-bg:#2A1A14; --nxs-font:var(--body); --nxs-radius:999px;
 }
@@ -549,6 +549,11 @@ html.ovl-open .nxs-toast{bottom:auto;top:calc(14px + env(safe-area-inset-top,0px
 .tl li.done-step .dot svg{display:block}
 @media (max-width:899px){.hero .wrap{min-height:clamp(430px,calc(100svh - 200px),600px);padding-block:1.5rem 1.75rem}}
 @media print{.dock,.to-top,.owner-pill,.cartbar{display:none!important}}
+
+/* Full-width bars */
+.header .wrap,.subbar .wrap,.footer .wrap{max-width:none}
+@media (min-width:1500px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (min-width:1800px){.grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
 </style>
 <meta name="nx-site" content="mishti-store">
 <meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
