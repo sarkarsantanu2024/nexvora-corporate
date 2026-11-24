@@ -25,7 +25,7 @@ if(p.indexOf("/demo/stationery-store/design/")===0)document.documentElement.clas
   --accent:#F2B705; --accent-soft:#FFF7DB; --red:#B42318; --green:#1D6B3B; --green-soft:#E8F3EC;
   --line:#E8E6E1; --line-strong:#8A8780; --warn:#7A4E00; --err:#B42318;
   --head:"Montserrat","Segoe UI",system-ui,Arial,sans-serif; --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  --r:22px; --r-sm:12px; --pill:999px; --ease:cubic-bezier(.22,1,.36,1); --wrap:1920px; --gutter:clamp(1rem,3vw,3rem);
+  --r:22px; --r-sm:12px; --pill:999px; --ease:cubic-bezier(.22,1,.36,1); --wrap:1920px; --gutter:clamp(1.25rem,5vw,6rem);
   --t13:.8125rem; --t15:.9375rem; --t17:1.0625rem; --t20:1.25rem; --t24:1.5rem; --t32:2rem; --t40:2.5rem;
   --shadow:0 18px 40px -22px rgba(0,0,0,.35);
   --nxs-toast-bg:#111111; --nxs-radius:12px; --nxs-font:"DM Sans",system-ui,sans-serif;
@@ -720,7 +720,7 @@ body.has-bar .owner-pill,body.has-bar .to-top{bottom:calc(76px + env(safe-area-i
 @media (max-width:959px){.owner-pill{transition:bottom .25s,opacity .2s,visibility .2s}body.near-top .owner-pill{opacity:0;visibility:hidden}}
 
 @media print{
-  .nx-strip,.topline,.header,.catnav,.footer,.dock,.to-top,.owner-pill,.inv-acts,.nx-lang,.skip,.crumbs{display:none!important}
+  .chatbtn,.cmptray,.nx-strip,.topline,.header,.catnav,.footer,.dock,.to-top,.owner-pill,.inv-acts,.nx-lang,.skip,.crumbs{display:none!important}
   body{background:#fff}
   .inv{border:0;margin:0;padding:0;max-width:none}
 }
@@ -905,12 +905,101 @@ body:not(.near-top) .header{box-shadow:0 8px 24px -18px rgba(0,0,0,.45);border-b
 .topline .wrap,.header .wrap,.catnav .wrap,.footer .wrap{max-width:none}
 @media (min-width:1800px){.grid{grid-template-columns:repeat(6,minmax(0,1fr))}.coll .grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 
-/* Scroll-in reveal. Added only to elements that start below the fold, so the
-   first screen paints at once and nothing shifts layout. */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--rvd,0s)}
-.rv.is-in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.btn,.pc,.pc__ph img,.cattile__ph img,.hero__ph img{transition:none!important;transform:none!important}html{scroll-behavior:auto}}
-@media print{.rv{opacity:1!important;transform:none!important}}
+@media (prefers-reduced-motion:reduce){.btn,.pc,.pc__ph img,.cattile__ph img,.hero__ph img{transition:none!important;transform:none!important}html{scroll-behavior:auto}}
+
+/* ---------- After the order: cancel, return, invoice ---------- */
+.st--Cancelled,.st--Rejected{background:#F7E1DD;color:#8A2418}
+.st--Requested,.st--Refund-started{background:#E7ECF7;color:#1D3270}
+.st--Picked-up,.st--Received,.st--Checked,.st--Out-for-delivery{background:#E1EDF7;color:#134770}
+.st--Refunded{background:#E1F1E5;color:#1E5A2E}
+.docs{display:grid;gap:.6rem;margin-top:.8rem}
+.doc{border:1px solid var(--line);border-radius:var(--r-sm);padding:.8rem .9rem;background:var(--soft)}
+.doc .tl{margin-top:.5rem}
+.doc .tl li{padding-bottom:.8rem}
+.mform{display:grid;gap:.8rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--line)}
+.mform h3{font-family:var(--head);font-size:var(--t18,1.1rem)}
+.mset{border:0;padding:0;margin:0;display:grid;gap:.4rem}
+.mset legend{font-weight:600;margin-bottom:.3rem}
+.mset .chips{margin-top:0;flex-direction:column;align-items:flex-start;gap:0}
+.mlines{display:grid;gap:.2rem}
+.mlines>li{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:flex-start;justify-content:space-between;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.mlines>li:last-child{border-bottom:0}
+.mline__t{display:flex;gap:.7rem;align-items:flex-start;flex:1 1 260px;min-width:0}
+.mline__t img{width:48px;height:48px;border-radius:8px;object-fit:cover;flex:none}
+.mline__t span{min-width:0}
+.mline__q{flex:0 0 150px}
+.mline__q .inp{max-width:150px}
+.msum{background:var(--soft);border-radius:var(--r-sm);padding:.8rem 1rem}
+.msum ul{display:grid;gap:.2rem;padding-left:1.1rem;list-style:disc}
+.mthumb{width:72px;height:72px;object-fit:cover;border-radius:8px;margin-top:.4rem}
+.inv-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-bottom:1rem;border-bottom:2px solid var(--ink)}
+.inv-seller{text-align:right;line-height:1.5}
+.inv-dl{display:grid;grid-template-columns:auto 1fr;gap:.15rem .8rem}
+.inv-dl dt{font-weight:600}
+.inv-dl dd{margin:0}
+.inv table caption{text-align:left;font-weight:600;padding:.8rem 0 .3rem}
+.inv-sums{display:grid;gap:1rem;margin-top:.4rem}
+@media (min-width:760px){.inv-sums{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start}.inv-sums .inv-words{grid-column:1/-1}}
+.inv .inv-tot{margin-top:1rem}
+.inv .inv-tot th{background:none;font-size:var(--t13);text-align:right;font-weight:600}
+.inv .inv-tot .grand th,.inv .inv-tot .grand td{font-size:var(--t15);border-top:2px solid var(--ink)}
+.inv-words{margin-top:.2rem}
+.inv-cn{margin-top:.8rem;padding:.7rem .9rem;background:var(--soft);border-radius:var(--r-sm)}
+.inv-cn ul{margin-top:.3rem;display:grid;gap:.2rem}
+.inv-foot{margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--line);display:grid;gap:.6rem}
+.inv-sign{text-align:right;font-weight:600}
+@media print{
+  @page{size:A4;margin:12mm}
+  .inv{font-size:9.5pt}
+  .inv th,.inv td{padding:.2rem .3rem}
+  .inv-wrap{overflow:visible}
+  .inv-cn a{color:inherit;text-decoration:none}
+  .inv tr,.inv-foot{break-inside:avoid}
+  .sample-tag{border:1px solid #999}
+}
+
+/* ---------- Customer photos ---------- */
+.rvgal{margin-bottom:1rem}
+.rvgal__row{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem 0 .4rem;scrollbar-width:thin}
+.rvgal__row li{flex:none}
+.rvgal__row button{position:relative;display:block;width:96px;height:96px;border-radius:12px;overflow:hidden;padding:0;border:0;cursor:zoom-in;background:var(--soft)}
+.rvgal__row img{width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.rvgal__row button:hover img{transform:scale(1.06)}
+.rvgal__more{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.55);color:#fff;font-weight:700;font-size:1.1rem}
+.rvphotos{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.5rem}
+.rvphotos .rvphoto{margin-top:0}
+.rvup{display:grid;gap:.15rem;justify-items:center}
+.rvup img{width:72px;height:72px;object-fit:cover;border-radius:8px}
+.zoom__bar{align-items:center;gap:1rem}
+.zoom__count{color:#fff;font-weight:600;margin-right:auto;padding-left:.5rem}
+.zoom__img--g{position:relative}
+.zoom__nav{position:absolute;top:50%;width:48px;height:48px;margin-top:-24px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#111;display:grid;place-items:center;cursor:pointer}
+.zoom__nav svg{width:22px;height:22px}
+.zoom__nav--p{left:1rem}.zoom__nav--p svg{transform:rotate(90deg)}
+.zoom__nav--n{right:1rem}.zoom__nav--n svg{transform:rotate(-90deg)}
+.zoom__cap{background:#fff;color:#111;padding:.8rem 1rem calc(.8rem + env(safe-area-inset-bottom,0px));font-size:var(--t15)}
+.zoom__cap .textbtn{min-height:0}
+
+.gal__vid{background:#000}
+.gal__vid video{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:cover}
+.thumb--reel img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- Specifications ---------- */
+.spec-acts{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.spec-ph{display:none}
+@media print{
+  body.print-specs #view>*{display:none!important}
+  body.print-specs #view>.wrap:has(#specs){display:block!important}
+  body.print-specs #view .psec:not(#specs),body.print-specs .spec-acts,body.print-specs #specs>h2,body.print-specs #specs .small.muted{display:none!important}
+  body.print-specs .spec-ph{display:block;font-weight:700;font-size:14pt;margin-bottom:.6rem}
+  body.print-specs .dock,body.print-specs .owner-pill,body.print-specs .cmptray{display:none!important}
+}
+
+.dlang{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem}
+.dlang .chip[aria-busy=true]{opacity:.6}
+#descBox [lang=bn],#specBox [lang=bn]{font-family:"Noto Sans Bengali","Nirmala UI",var(--sans)}
+/* Touch targets on the home lanes */
+.lane h3 a{display:inline-block;min-height:24px;padding-block:1px}
 </style>
 <script id="kkPre">(function(){var m={"smooth-ball-pen":"of-pens","gel-pen-pack-10":"of-gelpens","a4-copier-paper-ream":"of-paper","stapler-with-pins":"of-stapler","box-file-foolscap":"of-files","sticky-notes-3x3":"of-notes","long-register-khata":"of-register","highlighter-set-5":"of-highlighter","hb-pencils":"sc-pencils","ruled-notebook-172":"sc-notebooks","eraser-sharpener-combo":"sc-eraser","geometry-box":"sc-geometry","wooden-scale-30cm":"sc-scale","exam-clip-board":"sc-clipboard","chart-paper":"sc-chart","brown-cover-roll":"sc-cover","wax-crayons":"ac-crayons","watercolour-cakes-12":"ac-paints","paint-brush-set-6":"ac-brushes","colour-craft-paper-a4":"ac-paper","glitter-glue-set-6":"ac-glue","sketch-pens-12":"ac-sketch","drawing-book-36":"ac-drawbook","kids-craft-kit":"ac-craft","flash-card-set":"pl-cards","wooden-alphabet-puzzle":"pl-alphabet","wooden-building-blocks":"pl-blocks","bead-counting-frame":"pl-abacus","play-dough-6":"pl-clay","puzzle-cube-3x3":"ty-cube","ludo-snakes-ladders":"ty-board","pull-back-toy-car":"ty-cars","teddy-bear":"ty-teddy","soft-play-balls-25":"ty-balls","jigsaw-puzzle-100":"ty-jigsaw","gift-wrap-sheets":"gf-wrap","metal-pen-gift-box":"gf-penset","white-ceramic-mug":"gf-mug","wooden-doll-keychain":"gf-keychain","photo-frame-5x7":"gf-frame","sports-medal-50mm":"pr-medals","trophy-cup":"pr-cup","wooden-award-shield":"pr-shield","star-award-memento":"pr-memento","certificate-sheets-a4":"pr-cert","pin-badge-58mm":"pr-badge","prize-rosette-ribbon":"pr-ribbon","school-backpack":"bg-bag","steel-water-bottle-750":"bg-bottle","lunch-box-3-compartment":"bg-lunch","zip-pencil-pouch":"bg-pouch","cotton-cap-printed":"un-cap","id-card-holder-lanyard":"un-idcard","school-tie-striped":"un-tie","school-belt":"un-belt","wall-calendar-2027":"cl-wall","custom-photo-calendar":"cl-photo","desk-calendar-2027":"cl-desk","diary-2027-a5":"cl-diary","white-school-shirt-half":"un-shirt-white","white-school-shirt-full":"un-shirt-full","light-blue-school-shirt":"un-shirt-blue","house-polo-tshirt":"un-tshirt","school-trousers-navy":"un-trousers","school-half-pant-grey":"un-halfpant","pleated-skirt-navy":"un-skirt","salwar-kameez-uniform-set":"un-salwar","primary-frock-check":"un-frock","school-sweater-v-neck":"un-sweater","school-blazer-navy":"un-blazer","school-track-suit":"un-tracksuit","school-socks":"un-socks","black-school-shoes":"un-shoes-black","white-canvas-pt-shoes":"un-shoes-white","school-raincoat":"un-raincoat","hair-ribbons-bands":"un-ribbon","lab-coat":"of-labcoat","slate-with-chalk":"sc-slate","whiteboard-markers":"of-markers","classroom-whiteboard":"of-whiteboard","school-globe":"sc-globe","wall-map-india-world":"sc-map","alphabet-wall-chart":"sc-alphachart","attendance-register":"of-attendance","report-cards-printed":"pr-reportcard","admission-forms-printed":"of-forms","answer-sheet-paper":"of-paper-d","custom-rubber-stamp":"of-stamp","printed-envelopes":"of-envelope","visiting-cards":"of-cards","cash-book-voucher-pad":"of-register-d","tape-and-rubber-bands":"of-tape","school-umbrella":"bg-umbrella","school-football":"sp-football","cricket-set":"sp-cricket","badminton-set":"sp-badminton","skipping-rope":"sp-rope","carrom-board":"sp-carrom","chess-set":"sp-chess","training-cones":"sp-cones","whistle-stopwatch":"sp-whistle","house-flags-sashes":"ev-flags","sports-day-bibs":"un-bibs","balloons-pack":"ev-balloons","haal-khata-lal-khata":"kk-lalkhata","bengali-panjika-1433":"kk-panjika","bengali-wall-calendar":"cl-bengali","hate-khori-set":"sc-hatekhori","saraswati-puja-decoration-kit":"kk-decor","alpana-stencils-colour":"kk-alpana","bengali-alphabet-flash-cards":"pl-bnletters","bengali-practice-copy":"sc-practice","bengali-calligraphy-pens":"of-pens-d","kites-bundle":"kk-kite","manja-reel":"kk-manja","club-shield-sarbojanin":"pr-clubshield","puja-committee-memento":"pr-memento2","sarbojanin-trophy-cup":"pr-cup-d","bijoya-greeting-cards":"kk-greeting","wedding-card-printing":"kk-wedding","rakhi-wholesale-pack":"kk-rakhi","holi-gulal-pack":"kk-gulal","terracotta-return-gift":"kk-terracotta","sholapith-return-gift":"kk-sholapith","kalighat-pat-print":"kk-pat","gamchha-gift-set":"kk-gamchha","jute-bag-printed":"kk-jute","clay-diyas-kali-puja":"kk-diya"},a=location.pathname.split("/"),k=a[1]==="demo"&&a[2]==="stationery-store"&&a[3]==="products"&&m[a[4]];if(!k||location.search.indexOf("v=")>=0)return;var I="/demo/stationery-store/images/"+k,l=document.createElement("link");l.rel="preload";l.as="image";l.setAttribute("imagesrcset",I+"-400.webp 400w, "+I+"-800.webp 800w");l.setAttribute("imagesizes","(min-width: 900px) 46vw, 100vw");l.setAttribute("fetchpriority","high");document.head.appendChild(l)})()</script>
 <link rel="stylesheet" href="/nx/nx-demo.css">
@@ -1096,19 +1185,10 @@ body:not(.near-top) .header{box-shadow:0 8px 24px -18px rgba(0,0,0,.45);border-b
 </script>
 <script src="/nx/nx-shop.js" defer></script>
 <script src="/demo/stationery-store/data.js" defer></script>
+<script src="/demo/stationery-store/specs.js" defer></script>
 <script src="/demo/stationery-store/app.js" defer></script>
 <script src="/nx/nx-content.js" defer></script>
 <script src="/nx/nx-lang.js" defer></script>
-<script>
-/* Scroll-in reveal for sections and cards the app renders into #view. */
-(function(){
-  if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-  var SEL=".sec-head,.cattile,.pc,.hero__ph,.psec,.sec .card,.sec blockquote,.strip",io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target;el.classList.add("is-in");io.unobserve(el);setTimeout(function(){el.classList.remove("rv","is-in");el.style.removeProperty("--rvd");},1200);}});},{rootMargin:"0px 0px -8% 0px",threshold:.08});
-  function tag(root){var h=innerHeight,n=0;(root.querySelectorAll?root:document).querySelectorAll(SEL).forEach(function(el){if(el.classList.contains("rv")||el.closest(".rv:not(.is-in)")||(el.parentElement&&el.parentElement.closest(".strip")))return;var r=el.getBoundingClientRect();if(r.top<h||r.width===0)return;el.classList.add("rv");var sib=el.parentElement&&el.parentElement.children.length>1?Array.prototype.indexOf.call(el.parentElement.children,el)%4:0;el.style.setProperty("--rvd",(sib*.07)+"s");io.observe(el);n++;});}
-  var v=document.getElementById("view");if(!v)return;
-  var t=0;new MutationObserver(function(){if(t)return;t=requestAnimationFrame(function(){t=0;tag(v);});}).observe(v,{childList:true,subtree:true});
-  addEventListener("load",function(){tag(v);});
-})();
-</script>
+
 </body>
 </html>

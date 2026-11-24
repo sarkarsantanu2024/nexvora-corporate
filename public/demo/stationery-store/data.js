@@ -730,7 +730,9 @@
     { no: "KKS-200298", mobile: "9876543210", name: "Arjun M.", biz: "", city: "Siliguri", state: "West Bengal", pin: "734001", hoursAgo: 30, stage: 2, pay: "cod",
       items: [["smooth-ball-pen", "blue", 50]] },
     { no: "KKS-200305", mobile: "9123456780", name: "Sneha P.", biz: "", city: "Patna", state: "Bihar", pin: "800001", hoursAgo: 5, stage: 1, pay: "upi",
-      items: [["geometry-box", "blue", 1], ["ruled-notebook-172", "single", 6]] }
+      items: [["geometry-box", "blue", 1], ["ruled-notebook-172", "single", 6]] },
+    { no: "KKS-200318", mobile: "9831122334", name: "Moumita D.", biz: "Kheyal Tuition Centre", city: "Kolkata", state: "West Bengal", pin: "700032", hoursAgo: 1, stage: 0, pay: "upi",
+      items: [["hb-pencils", "one", 100], ["ruled-notebook-172", "single", 30], ["white-school-shirt-half", "s26", 2]] }
   ];
 
   /** Extra orders for the owner's dashboard: [no, name, city, hoursAgo, status, pay, items, buyer type]. */
@@ -882,7 +884,7 @@
       if (p.best && stars < 4 && i % 2) stars = 4;
       out.push({ id: p.slug + "-r" + i, name: NAMES[(h + i * 5) % NAMES.length], town: TOWNS[(h + i * 11) % TOWNS.length], type: t[3], stars: stars, title: t[1],
         text: t[2].replace("{q}", q + " " + unit), qty: q + " " + unit + (whole ? " (wholesale)" : " (retail)"),
-        photo: i % 4 === 1 ? p.imgs[i % p.imgs.length] : "", days: 2 + i * 9 + (h % 7), helpful: Math.floor(seeded(h + i) * 24), verified: i % 5 !== 4 });
+        photo: i === 1 || i === 2 ? "rv-" + p.slug + "-" + i : "", days: 2 + i * 9 + (h % 7), helpful: Math.floor(seeded(h + i) * 24), verified: i % 5 !== 4 });
     }
     REVIEWS[p.slug] = out;
   });
@@ -927,7 +929,47 @@
     "clay-diyas-kali-puja": ["alpana-stencils-colour"], "hate-khori-set": ["bengali-alphabet-flash-cards", "bengali-practice-copy"], "school-football": ["training-cones", "whistle-stopwatch"]
   };
 
+  /**
+   * GST on the bill: [HSN, rate %] by category, then products that differ from their category.
+   * Rates as we understand them after the September 2025 GST changes. Sample only: a real
+   * shop confirms every HSN and rate with its CA before billing.
+   */
+  var TAX = {
+    cat: { office: ["4820", 18], school: ["4820", 0], art: ["3213", 5], play: ["9503", 5], toys: ["9503", 5], gifts: ["6912", 5], prizes: ["8306", 5],
+      bags: ["4202", 18], uniform: ["6505", 5], calendars: ["4910", 5], schoolwear: ["6206", 5], sports: ["9506", 5], festive: ["4820", 18] },
+    slug: {
+      "smooth-ball-pen": ["9608", 18], "gel-pen-pack-10": ["9608", 18], "highlighter-set-5": ["9608", 18], "whiteboard-markers": ["9608", 18], "a4-copier-paper-ream": ["4802", 18],
+      "stapler-with-pins": ["8472", 18], "box-file-foolscap": ["3926", 18], "custom-rubber-stamp": ["9611", 18], "printed-envelopes": ["4817", 18], "visiting-cards": ["4911", 18], "tape-and-rubber-bands": ["3919", 18],
+      "hb-pencils": ["9609", 0], "eraser-sharpener-combo": ["4016", 0], "ruled-notebook-172": ["4820", 0], "bengali-practice-copy": ["4820", 0], "answer-sheet-paper": ["4820", 0],
+      "geometry-box": ["9017", 5], "wooden-scale-30cm": ["9017", 5], "exam-clip-board": ["4420", 18], "chart-paper": ["4802", 18], "brown-cover-roll": ["4823", 18], "slate-with-chalk": ["9610", 5],
+      "classroom-whiteboard": ["9610", 18], "school-globe": ["4905", 0], "wall-map-india-world": ["4905", 0], "report-cards-printed": ["4911", 18], "admission-forms-printed": ["4911", 18],
+      "wax-crayons": ["9609", 0], "paint-brush-set-6": ["9603", 18], "colour-craft-paper-a4": ["4802", 18], "glitter-glue-set-6": ["3506", 18], "sketch-pens-12": ["9608", 18], "drawing-book-36": ["4820", 0],
+      "kids-craft-kit": ["9503", 5], "bengali-calligraphy-pens": ["9608", 18], "flash-card-set": ["4903", 0], "bengali-alphabet-flash-cards": ["4903", 0], "alphabet-wall-chart": ["4905", 0], "play-dough-6": ["3407", 5],
+      "ludo-snakes-ladders": ["9504", 5], "gift-wrap-sheets": ["4823", 18], "metal-pen-gift-box": ["9608", 18], "wooden-doll-keychain": ["4420", 5], "photo-frame-5x7": ["4414", 5], "bijoya-greeting-cards": ["4909", 5],
+      "wedding-card-printing": ["4909", 5], "terracotta-return-gift": ["6913", 5], "sholapith-return-gift": ["4602", 5], "kalighat-pat-print": ["4911", 5], "gamchha-gift-set": ["6302", 5],
+      "wooden-award-shield": ["4420", 5], "certificate-sheets-a4": ["4911", 18], "pin-badge-58mm": ["8308", 18], "prize-rosette-ribbon": ["5808", 5],
+      "steel-water-bottle-750": ["7323", 5], "lunch-box-3-compartment": ["3924", 5], "school-umbrella": ["6601", 5], "jute-bag-printed": ["4202", 5],
+      "id-card-holder-lanyard": ["3926", 18], "school-tie-striped": ["6215", 5], "school-belt": ["4203", 18], "diary-2027-a5": ["4820", 18],
+      "house-polo-tshirt": ["6105", 5], "school-trousers-navy": ["6203", 5], "school-half-pant-grey": ["6203", 5], "pleated-skirt-navy": ["6204", 5], "salwar-kameez-uniform-set": ["6211", 5],
+      "primary-frock-check": ["6204", 5], "school-sweater-v-neck": ["6110", 5], "school-blazer-navy": ["6203", 5], "school-track-suit": ["6112", 5], "school-socks": ["6115", 5],
+      "black-school-shoes": ["6402", 5], "white-canvas-pt-shoes": ["6404", 5], "school-raincoat": ["6210", 5], "hair-ribbons-bands": ["5808", 5], "lab-coat": ["6211", 5],
+      "carrom-board": ["9504", 5], "chess-set": ["9504", 5], "whistle-stopwatch": ["9102", 18], "house-flags-sashes": ["6307", 5], "sports-day-bibs": ["6307", 5], "balloons-pack": ["9505", 18],
+      "bengali-panjika-1433": ["4901", 0], "hate-khori-set": ["9610", 5], "saraswati-puja-decoration-kit": ["9505", 5], "alpana-stencils-colour": ["3213", 5], "kites-bundle": ["9503", 5],
+      "manja-reel": ["5607", 5], "rakhi-wholesale-pack": ["5808", 5], "holi-gulal-pack": ["3204", 5], "clay-diyas-kali-puja": ["6913", 0]
+    },
+    /** GST state codes, for the place of supply on the bill. */
+    states: { "Andaman and Nicobar Islands": "35", "Andhra Pradesh": "37", "Arunachal Pradesh": "12", "Assam": "18", "Bihar": "10", "Chandigarh": "04", "Chhattisgarh": "22", "Delhi": "07", "Goa": "30", "Gujarat": "24",
+      "Haryana": "06", "Himachal Pradesh": "02", "Jammu and Kashmir": "01", "Jharkhand": "20", "Karnataka": "29", "Kerala": "32", "Ladakh": "38", "Lakshadweep": "31", "Madhya Pradesh": "23", "Maharashtra": "27",
+      "Manipur": "14", "Meghalaya": "17", "Mizoram": "15", "Nagaland": "13", "Odisha": "21", "Puducherry": "34", "Punjab": "03", "Rajasthan": "08", "Sikkim": "11", "Tamil Nadu": "33", "Telangana": "36",
+      "Tripura": "16", "Uttar Pradesh": "09", "Uttarakhand": "05", "West Bengal": "19" }
+  };
+  /** Real video clips (Pexels, see videos/CREDITS.md): slug -> [file key, seconds, what it shows]. Only where the clip truly shows this kind of item. */
+  var VIDEOS = {"smooth-ball-pen":["pen-writing",6.9,"A hand writing in a notebook with a pink ball pen"],"ruled-notebook-172":["notebook-writing",7.6,"A hand writing with a pen in an open ruled notebook"],"diary-2027-a5":["diary-writing",8,"A hand writing in a bound notebook diary"],"wax-crayons":["crayons-rainbow",9,"Hands colouring a rainbow with wax crayons, more crayons lying beside"],"paint-brush-set-6":["watercolour-brush",8.5,"A hand painting leaves in watercolour with a thin round brush"],"play-dough-6":["play-dough",8,"Small hands shaping coloured modelling dough, crayons on the table"],"jigsaw-puzzle-100":["jigsaw-hands",8,"Hands fitting jigsaw puzzle pieces together on a table"],"chess-set":["chess-move",8,"Hands moving wooden chess pieces on a board"],"school-globe":["globe-spin",8.5,"A hand spinning a classroom globe on its stand"],"sports-medal-50mm":["medal-ribbon",8,"A gold medal on a blue ribbon on a dark sparkly surface, then a hand picks it up"],"white-ceramic-mug":["mug-pour",7.4,"Coffee being poured into a white ceramic mug"],"brown-cover-roll":["brown-paper-wrap",8,"Hands rolling out brown paper from a roll and wrapping a box in it"],"gift-wrap-sheets":["gift-ribbon",8,"Hands tying a ribbon around a gift box wrapped in orange paper"],"balloons-pack":["balloons-float",6.4,"Coloured rubber balloons drifting down through the air"],"wall-calendar-2027":["calendar-marking",8.9,"A hand circling a date on a printed calendar page"],"clay-diyas-kali-puja":["clay-diyas",8,"Rows of lit clay diyas on the floor"],"school-umbrella":["umbrella-open",8,"Inside of a black umbrella after it opens, ribs and canopy"],"badminton-set":["badminton-shuttle",6.9,"A shuttlecock placed on a badminton racket"],"holi-gulal-pack":["holi-colours",7.9,"Bowls heaped with green, orange and blue colour powder"],"kites-bundle":["kites-sky",8,"Many small diamond paper kites flying in a blue sky"]};
+
+  function taxOf(p) { return TAX.slug[p.slug] || TAX.cat[p.cat] || ["4820", 18]; }
+
   window.KK = {
+    TAX: TAX, taxOf: taxOf, VIDEOS: VIDEOS,
     QAS: QAS, SEED_QUESTIONS: SEED_QUESTIONS, FBT: FBT, returnPolicy: returnPolicy,
     NAMES: NAMES, TOWNS: TOWNS, REVIEWS: REVIEWS, DELIVERY: DELIVERY, MARKETS: MARKETS, SIZE: SIZE,
     CATS: CATS, BUYERS: BUYERS, BUDGETS: BUDGETS, METHODS: METHODS, PRODUCTS: PRODUCTS, REVIEW_POOL: REVIEW_POOL, QA: QA, PINS: PINS, STATES: STATES,

@@ -20,7 +20,7 @@
   var ALT = {
     "cotton-cap-printed": { red: { front: ["un-cap-d", { x: .25, y: .28, w: .3, h: .14, r: -4 }] }, navy: { front: ["un-cap-d", { x: .25, y: .28, w: .3, h: .14, r: -4 }] } },
     "school-backpack": { red: { front: ["bg-bag-d", { x: .4, y: .3, w: .34, h: .26 }], pocket: ["bg-bag-d", { x: .28, y: .74, w: .5, h: .14 }] }, black: { front: ["bg-bag-d", { x: .4, y: .3, w: .34, h: .26 }], pocket: ["bg-bag-d", { x: .28, y: .74, w: .5, h: .14 }] } },
-    "steel-water-bottle-750": { red: { front: ["bg-bottle-d", { x: .225, y: .6, w: .12, h: .2 }] }, teal: { front: ["bg-bottle-d", { x: .6, y: .6, w: .13, h: .2 }] } },
+    "steel-water-bottle-750": { red: { front: ["bg-bottle-d", { x: .24, y: .6, w: .12, h: .2 }] }, teal: { front: ["bg-bottle-d", { x: .6, y: .6, w: .13, h: .2 }] } },
     "sports-medal-50mm": { silver: { face: ["pr-medals-d", { x: .33, y: .63, w: .15, h: .15, shape: "circle", plate: "plate" }] } },
     "diary-2027-a5": { blue: { cover: ["cl-diary-d", { x: .25, y: .3, w: .34, h: .36, r: -14 }] } }
   };
@@ -56,11 +56,116 @@
     if (p.pr.months) return MONTHS.map(function (m, i) { var s = p.pr.sides[0]; return { id: "m" + i, name: m, img: s.img, area: s.area, month: i }; });
     return p.pr.sides;
   }
+  /**
+   * How each print surface sits in its photo, keyed "photo|side" or "photo".
+   * quad: the four corners (top left, top right, bottom right, bottom left) as fractions of the photo, for surfaces seen at an angle.
+   * curve: degrees of a round surface facing us (mug 100, bottle 110, pen 140); the design squeezes towards the edges.
+   * bow: how far the middle of the design dips (+) or rises (-), as a fraction of its height, as a round surface seen from above or below.
+   */
+  var WARP = {
+    "of-pens": {"quad":[[0.582,0.226],[0.633,0.379],[0.595,0.391],[0.544,0.238]]},
+    "of-files-d": {"quad":[[0.539,0.545],[0.827,0.725],[0.721,0.895],[0.433,0.715]]},
+    "sc-pencils-d": {"quad":[[0.24,0.59],[0.55,0.7],[0.55,0.9],[0.24,0.78]]},
+    "ac-drawbook": {"quad":[[0.49,0.27],[0.679,0.175],[0.937,0.342],[0.725,0.461]]},
+    "gf-mug|front": {"quad":[[0.3,0.3],[0.61,0.3],[0.61,0.66],[0.3,0.66]],"curve":85,"bow":0.05},
+    "gf-mug-d|back": {"quad":[[0.555,0.3],[0.895,0.3],[0.895,0.68],[0.555,0.68]],"curve":78,"bow":0.06},
+    "gf-frame": {"quad":[[0.293,0.345],[0.656,0.345],[0.651,0.857],[0.298,0.857]]},
+    "pr-cup": {"quad":[[0.41,0.31],[0.61,0.31],[0.61,0.43],[0.41,0.43]],"curve":70,"bow":0.04},
+    "pr-memento": {"quad":[[0.29,0.9],[0.51,0.9],[0.51,0.965],[0.29,0.965]]},
+    "pr-cert": {"quad":[[0.201,0.219],[0.565,0.329],[0.519,0.481],[0.155,0.371]]},
+    "pr-ribbon": {"quad":[[0.497,0.284],[0.697,0.284],[0.697,0.5],[0.497,0.5]]},
+    "bg-bag|front": {"quad":[[0.305,0.28],[0.665,0.28],[0.675,0.56],[0.295,0.56]],"curve":60},
+    "bg-bag|pocket": {"quad":[[0.2,0.845],[0.8,0.845],[0.8,0.965],[0.2,0.965]],"curve":60},
+    "bg-bag-d|front": {"quad":[[0.36,0.25],[0.71,0.26],[0.72,0.52],[0.36,0.53]],"curve":60},
+    "bg-bag-d|pocket": {"quad":[[0.3,0.77],[0.78,0.745],[0.785,0.925],[0.3,0.94]]},
+    "bg-bottle": {"quad":[[0.555,0.58],[0.7,0.58],[0.7,0.82],[0.555,0.82]],"curve":95,"bow":0.03},
+    "bg-bottle-d": {"curve":90,"bow":0.05},
+    "un-cap": {"quad":[[0.272,0.527],[0.508,0.485],[0.528,0.593],[0.292,0.635]],"curve":100,"bow":0.06},
+    "un-cap-d": {"quad":[[0.13,0.42],[0.44,0.405],[0.445,0.535],[0.135,0.55]],"curve":80,"bow":0.04},
+    "cl-wall": {"quad":[[0.43,0.4],[0.84,0.34],[0.85,0.44],[0.44,0.51]]},
+    "cl-desk": {"quad":[[0.04,0.14],[0.66,0.13],[0.64,0.33],[0.03,0.275]]},
+    "cl-diary-d": {"quad":[[0.276,0.437],[0.564,0.328],[0.659,0.547],[0.362,0.667]]},
+    "un-shirt-white|lchest": {"quad":[[0.495,0.315],[0.615,0.31],[0.615,0.44],[0.495,0.445]]},
+    "un-shirt-white|rchest": {"quad":[[0.19,0.22],[0.33,0.22],[0.33,0.33],[0.19,0.335]]},
+    "un-shirt-blue": {"quad":[[0.32,0.2],[0.48,0.2],[0.48,0.31],[0.32,0.31]]},
+    "un-sweater": {"quad":[[0.5,0.27],[0.68,0.27],[0.68,0.38],[0.5,0.38]]},
+    "un-blazer": {"quad":[[0.665,0.325],[0.79,0.295],[0.8,0.42],[0.675,0.45]]},
+    "of-labcoat": {"quad":[[0.745,0.25],[0.9,0.25],[0.9,0.33],[0.745,0.33]]},
+    "kk-jute": {"quad":[[0.29,0.42],[0.71,0.42],[0.71,0.76],[0.29,0.76]]},
+    "pr-medals-d": {"quad":[[0.275,0.736],[0.475,0.736],[0.475,0.876],[0.275,0.876]]},
+    "gf-penset": {"quad":[[0.015,0.352],[0.19,0.345],[0.19,0.393],[0.015,0.4]]},
+    "pr-medals": {"quad":[[0.414,0.793],[0.61,0.793],[0.61,0.953],[0.414,0.953]]},
+    "bg-umbrella": {"quad":[[0.06,0.245],[0.38,0.35],[0.38,0.415],[0.06,0.405]]}
+  }, GRID = false;
+  try { GRID = localStorage.getItem("kk:warpgrid") === "1"; } catch (e) {}
+  try { var dev = JSON.parse(localStorage.getItem("kk:warpdev") || "null"); if (dev) for (var dk in dev) WARP[dk] = dev[dk]; } catch (e) {}
+  function withWarp(img, sd, area) {
+    var w = WARP[img + "|" + sd.id] || WARP[img];
+    if (!w) return area;
+    var a = {}; for (var k in area) a[k] = area[k]; for (var k2 in w) a[k2] = w[k2];
+    if (a.quad) {
+      var q = a.quad, d = function (i, j) { return Math.hypot(q[i][0] - q[j][0], q[i][1] - q[j][1]); };
+      var aw = (d(0, 1) + d(3, 2)) / 2, ah = (d(0, 3) + d(1, 2)) / 2, cx = (q[0][0] + q[1][0] + q[2][0] + q[3][0]) / 4, cy = (q[0][1] + q[1][1] + q[2][1] + q[3][1]) / 4;
+      a.w = aw; a.h = ah; a.x = cx - aw / 2; a.y = cy - ah / 2; a.r = Math.atan2(q[1][1] - q[0][1], q[1][0] - q[0][0]) * 180 / Math.PI;
+    }
+    return a;
+  }
   function sideFor(p, v, sd) {
     var alt = ALT[p.slug] && ALT[p.slug][v.id] && ALT[p.slug][v.id][sd.id];
-    if (!alt) return { img: sd.img, area: sd.area, tint: v.tint };
+    if (!alt) return { img: sd.img, area: withWarp(sd.img, sd, sd.area), tint: v.tint };
     var a = {}; for (var k in sd.area) a[k] = sd.area[k]; for (var k2 in alt[1]) a[k2] = alt[1][k2];
-    return { img: alt[0], area: a, tint: v.tint && alt[0] === sd.img ? v.tint : (v.tint && v.id === "navy" || v.id === "black" ? v.tint : "") };
+    return { img: alt[0], area: withWarp(alt[0], sd, a), tint: v.tint && alt[0] === sd.img ? v.tint : (v.tint && v.id === "navy" || v.id === "black" ? v.tint : "") };
+  }
+  function warped(area) { return !!(area.quad || area.curve || area.bow); }
+  /** Maps a point (u, v) of the flat design, 0..1 each way, to the photo in pixels. */
+  function warpFn(area, W) {
+    var g = geom(area, W), H = area.quad ? homography(area.quad) : null, cv = area.curve || 0, bow = area.bow || 0;
+    return function (u, v) {
+      if (cv) { var th = cv * Math.PI / 180; u = .5 + Math.sin((u - .5) * th) / (2 * Math.sin(th / 2)); }
+      if (bow) v += bow * (1 - Math.pow(2 * u - 1, 2));
+      if (H) { var p = H(u, v); return [p[0] * W, p[1] * W]; }
+      var lx = (u - .5) * g.aw, ly = (v - .5) * g.ah, c = Math.cos(g.rot), sn = Math.sin(g.rot);
+      return [g.cx + c * lx - sn * ly, g.cy + sn * lx + c * ly];
+    };
+  }
+  /** Projective map from the unit square to a quad (corners TL, TR, BR, BL). */
+  function homography(q) {
+    var x0 = q[0][0], y0 = q[0][1], x1 = q[1][0], y1 = q[1][1], x2 = q[2][0], y2 = q[2][1], x3 = q[3][0], y3 = q[3][1];
+    var dx1 = x1 - x2, dx2 = x3 - x2, dy1 = y1 - y2, dy2 = y3 - y2, sx = x0 - x1 + x2 - x3, sy = y0 - y1 + y2 - y3, den = dx1 * dy2 - dx2 * dy1;
+    var g = den ? (sx * dy2 - dx2 * sy) / den : 0, h = den ? (dx1 * sy - sx * dy1) / den : 0;
+    var a = x1 - x0 + g * x1, b = x3 - x0 + h * x3, c = x0, d = y1 - y0 + g * y1, e = y3 - y0 + h * y3, f = y0;
+    return function (u, v) { var w = g * u + h * v + 1; return [(a * u + b * v + c) / w, (d * u + e * v + f) / w]; };
+  }
+  /** Draw src onto ctx through the warp, as a mesh of small triangles. Returns the bounding box drawn. */
+  function warpDraw(ctx, src, F, nx, ny) {
+    var sw = src.width, sh = src.height, pts = [], bb = [1e9, 1e9, -1e9, -1e9];
+    for (var j = 0; j <= ny; j++) { pts.push([]); for (var i = 0; i <= nx; i++) { var p = F(i / nx, j / ny); pts[j].push(p); bb[0] = Math.min(bb[0], p[0]); bb[1] = Math.min(bb[1], p[1]); bb[2] = Math.max(bb[2], p[0]); bb[3] = Math.max(bb[3], p[1]); } }
+    for (var y = 0; y < ny; y++) for (var x = 0; x < nx; x++) {
+      var u0 = x / nx * sw, u1 = (x + 1) / nx * sw, v0 = y / ny * sh, v1 = (y + 1) / ny * sh, a = pts[y][x], b = pts[y][x + 1], c = pts[y + 1][x + 1], d = pts[y + 1][x];
+      tri(ctx, src, u0, v0, u1, v0, u1, v1, a, b, c); tri(ctx, src, u0, v0, u1, v1, u0, v1, a, c, d);
+    }
+    return bb;
+  }
+  function tri(ctx, img, sx0, sy0, sx1, sy1, sx2, sy2, d0, d1, d2) {
+    var dx0 = d0[0], dy0 = d0[1], dx1 = d1[0], dy1 = d1[1], dx2 = d2[0], dy2 = d2[1];
+    var mx = (dx0 + dx1 + dx2) / 3, my = (dy0 + dy1 + dy2) / 3, gr = function (x, y) { var l = Math.hypot(x - mx, y - my) || 1; return [x + (x - mx) / l * .7, y + (y - my) / l * .7]; };
+    var e0 = gr(dx0, dy0), e1 = gr(dx1, dy1), e2 = gr(dx2, dy2);
+    ctx.save(); ctx.beginPath(); ctx.moveTo(e0[0], e0[1]); ctx.lineTo(e1[0], e1[1]); ctx.lineTo(e2[0], e2[1]); ctx.closePath(); ctx.clip();
+    var den = sx0 * (sy2 - sy1) - sx1 * sy2 + sx2 * sy1 + (sx1 - sx2) * sy0; if (!den) { ctx.restore(); return; }
+    var m11 = -(sy0 * (dx2 - dx1) - sy1 * dx2 + sy2 * dx1 + (sy1 - sy2) * dx0) / den, m12 = (sy1 * dy2 + sy0 * (dy1 - dy2) - sy2 * dy1 + (sy2 - sy1) * dy0) / den;
+    var m21 = (sx0 * (dx2 - dx1) - sx1 * dx2 + sx2 * dx1 + (sx1 - sx2) * dx0) / den, m22 = -(sx1 * dy2 + sx0 * (dy1 - dy2) - sx2 * dy1 + (sx2 - sx1) * dy0) / den;
+    var tx = (sx0 * (sy2 * dx1 - sy1 * dx2) + sy0 * (sx1 * dx2 - sx2 * dx1) + (sx2 * sy1 - sx1 * sy2) * dx0) / den, ty = (sx0 * (sy2 * dy1 - sy1 * dy2) + sy0 * (sx1 * dy2 - sx2 * dy1) + (sx2 * sy1 - sx1 * sy2) * dy0) / den;
+    ctx.transform(m11, m12, m21, m22, tx, ty); ctx.drawImage(img, 0, 0); ctx.restore();
+  }
+  /** Let the photo's folds and light show through ink on a dark surface, for an already warped design. */
+  function shadeWarped(ctx, wc, bb, W) {
+    try {
+      var bx = Math.max(0, Math.floor(bb[0])), by = Math.max(0, Math.floor(bb[1])), bw = Math.min(W, Math.ceil(bb[2])) - bx, bh = Math.min(W, Math.ceil(bb[3])) - by; if (bw < 2 || bh < 2) return;
+      var base = ctx.getImageData(bx, by, bw, bh).data, wx = wc.getContext("2d"), d = wx.getImageData(bx, by, bw, bh), p = d.data, mean = 0, cnt = 0;
+      for (var i = 0; i < base.length; i += 16) { mean += .2126 * base[i] + .7152 * base[i + 1] + .0722 * base[i + 2]; cnt++; } mean = Math.max(8, mean / cnt);
+      for (var k = 0; k < p.length; k += 4) { if (!p[k + 3]) continue; var f = clamp((.2126 * base[k] + .7152 * base[k + 1] + .0722 * base[k + 2]) / mean, .55, 1.25); p[k] = clamp(p[k] * f, 0, 255); p[k + 1] = clamp(p[k + 1] * f, 0, 255); p[k + 2] = clamp(p[k + 2] * f, 0, 255); }
+      wx.putImageData(d, bx, by);
+    } catch (e) {}
   }
   function geom(area, W) { var aw = area.w * W, ah = area.h * W; return { cx: (area.x + area.w / 2) * W, cy: (area.y + area.h / 2) * W, aw: aw, ah: ah, rot: (area.r || 0) * Math.PI / 180, shape: area.shape || "rect" }; }
   /** Size of a layer in area pixels. */
@@ -146,8 +251,16 @@
     if (sf.tint) recolour(ctx, W, o.p.pr.tintArea || [0, 0, 1, 1], sf.area, sf.tint);
     var area = sf.area;
     function clipShape(c, pad) { c.beginPath(); if (g.shape === "circle") c.ellipse(0, 0, g.aw / 2 - (pad || 0), g.ah / 2 - (pad || 0), 0, 0, Math.PI * 2); else if (g.shape === "label") roundRect(c, -g.aw / 2 + (pad || 0), -g.ah / 2 + (pad || 0), g.aw - 2 * (pad || 0), g.ah - 2 * (pad || 0), Math.min(g.aw, g.ah) * .12); else c.rect(-g.aw / 2 + (pad || 0), -g.ah / 2 + (pad || 0), g.aw - 2 * (pad || 0), g.ah - 2 * (pad || 0)); }
+    var WP = warped(area), WF = WP ? warpFn(area, W) : null, NX = Math.max(8, Math.min(24, Math.round(g.aw / 18))), NY = Math.max(4, Math.min(12, Math.round(g.ah / 18)));
+    function maskFlat(c, w, h) { var x = c.getContext("2d"); x.save(); x.globalCompositeOperation = "destination-in"; x.translate(w / 2, h / 2); var gg = g; g = { aw: w, ah: h, shape: gg.shape }; clipShape(x); g = gg; x.fillStyle = "#000"; x.fill(); x.restore(); }
     // Plate or label under the design.
-    if (area.plate) {
+    if (area.plate && WP) {
+      var plc = document.createElement("canvas"); plc.width = Math.max(2, Math.round(g.aw)); plc.height = Math.max(2, Math.round(g.ah)); var plx = plc.getContext("2d");
+      var pcw = area.plate === "plate" ? (o.v.plate || "#D8B65A") : area.plate;
+      if (area.plate === "plate") { var grw = plx.createRadialGradient(plc.width * .35, plc.height * .3, plc.width * .05, plc.width / 2, plc.height / 2, plc.width * .6); grw.addColorStop(0, shade(pcw, .35)); grw.addColorStop(1, shade(pcw, -.2)); plx.fillStyle = grw; } else plx.fillStyle = pcw;
+      plx.fillRect(0, 0, plc.width, plc.height); maskFlat(plc, plc.width, plc.height);
+      ctx.save(); if (g.shape === "label") { ctx.shadowColor = "rgba(0,0,0,.28)"; ctx.shadowBlur = W * .012; ctx.shadowOffsetY = W * .004; } warpDraw(ctx, plc, WF, NX, NY); ctx.restore();
+    } else if (area.plate) {
       ctx.save(); ctx.translate(g.cx, g.cy); ctx.rotate(g.rot);
       if (g.shape === "label") { ctx.shadowColor = "rgba(0,0,0,.28)"; ctx.shadowBlur = W * .012; ctx.shadowOffsetY = W * .004; }
       var pc = area.plate === "plate" ? (o.v.plate || "#D8B65A") : area.plate;
@@ -167,6 +280,21 @@
       dx.fillText(MONTHS[o.sd.month].toUpperCase() + " 2027", dc.width * .04, dc.height * .91);
     }
     (o.layers || []).forEach(function (l) { drawLayer(dx, l, dc.width, dc.height, o.images || {}, engrave, o.nameText, o.redraw); });
+    if (GRID) { dx.save(); dx.strokeStyle = "rgba(230,0,90,.9)"; dx.lineWidth = Math.max(1, dc.width / 150); for (var gi = 0; gi <= 8; gi++) { dx.beginPath(); dx.moveTo(dc.width * gi / 8, 0); dx.lineTo(dc.width * gi / 8, dc.height); dx.stroke(); } for (var gj = 0; gj <= 4; gj++) { dx.beginPath(); dx.moveTo(0, dc.height * gj / 4); dx.lineTo(dc.width, dc.height * gj / 4); dx.stroke(); } dx.restore(); }
+    if (WP) {
+      maskFlat(dc, dc.width, dc.height);
+      var wc = document.createElement("canvas"); wc.width = wc.height = W; var wcx = wc.getContext("2d"), bb = warpDraw(wcx, dc, WF, NX, NY);
+      ctx.save();
+      if (engrave) {
+        var lightW = L < .45, colW = lightW ? "#ECE6D6" : "rgba(58,42,16,.86)";
+        var mkW = document.createElement("canvas"); mkW.width = mkW.height = W; var mkx = mkW.getContext("2d"); mkx.drawImage(wc, 0, 0); mkx.globalCompositeOperation = "source-in"; mkx.fillStyle = colW; mkx.fillRect(0, 0, W, W);
+        var shW = document.createElement("canvas"); shW.width = shW.height = W; var shx = shW.getContext("2d"); shx.drawImage(wc, 0, 0); shx.globalCompositeOperation = "source-in"; shx.fillStyle = lightW ? "rgba(0,0,0,.8)" : "rgba(255,250,235,.9)"; shx.fillRect(0, 0, W, W);
+        var offW = Math.max(1, W / 700); ctx.globalAlpha = .55; ctx.drawImage(shW, offW, offW); ctx.globalAlpha = 1; ctx.drawImage(mkW, 0, 0);
+      } else if (L > .5 || area.plate) { ctx.globalCompositeOperation = "multiply"; ctx.drawImage(wc, 0, 0); }
+      else { shadeWarped(ctx, wc, bb, W); ctx.globalAlpha = .96; ctx.drawImage(wc, 0, 0); }
+      ctx.restore();
+      return g;
+    }
     ctx.save(); ctx.translate(g.cx, g.cy); ctx.rotate(g.rot); clipShape(ctx);  ctx.clip();
     if (engrave) {
       var light = L < .45, col = light ? "#ECE6D6" : "rgba(58,42,16,.86)";
@@ -548,8 +676,7 @@
       } else {
         h = '<div class="drop" id="stDrop" tabindex="0" role="button" aria-label="Upload a logo or image: PNG, JPG, SVG or WebP up to 5 MB">' + I.upload + '<b>Drop your logo here, or tap to choose</b><span class="small muted">PNG, JPG, SVG or WebP, up to 5 MB</span></div>';
         if (l && l.type === "image") {
-          h += '<div class="field"><label for="stW">Logo size</label><input type="range" id="stW" min="5" max="120" value="' + Math.round(l.w * 100) + '" data-prop="w"></div>' +
-            (l.custom ? '<label class="check"><input type="checkbox" data-nobg' + (l.nobg ? " checked" : "") + "><span>Remove white background</span></label>" : '<p class="small muted">This is the sample crest. Upload your own logo to replace it.</p>');
+          h += (l.custom ? '<label class="check"><input type="checkbox" data-nobg' + (l.nobg ? " checked" : "") + "><span>Remove white background</span></label>" : '<p class="small muted">This is the sample crest. Upload your own logo to replace it.</p>');
         }
         h += '<p class="small muted">Tip: a logo with a clear or white background works best. For engraving, dark parts of the logo are cut into the metal.</p>';
       }
@@ -632,6 +759,11 @@
   }
   function pDown(e) {
     if (!st || st.preview) return;
+    // Placement is fixed by the shop. A tap only opens the editor for the text or logo.
+    var ls0 = layers(), pt0 = local(e), hit0 = null;
+    for (var i0 = ls0.length - 1; i0 >= 0; i0--) if (!ls0[i0].hidden && ls0[i0].type !== "shape" && inLayer(ls0[i0], pt0, 6 * pt0.k).hit) { hit0 = ls0[i0]; break; }
+    if (hit0) { st.sel = hit0.id; st.tab = hit0.type === "text" ? "text" : "logo"; tabs(); panel(); var f0 = hit0.type === "text" ? $("#tx-" + hit0.id) : $("#stFile"); if (f0 && hit0.type === "text") f0.focus(); A.announce(hit0.type === "text" ? "Editing the line " + hit0.text : "Logo"); }
+    return;
     var pt = local(e), W = $("#stCanvas").width, hs = Math.max(7, W / 55) * (e.pointerType === "touch" ? 1.8 : 1.1), lw = Math.max(1, W / 500), sl = selLayer();
     if (sl && !sl.locked && !sl.hidden) {
       var h = inLayer(sl, pt, 0);
@@ -666,6 +798,7 @@
   }
   function pUp() { if (!drag) return; drag = null; guides = null; draw(); commit(); order(); if (st.tab === "text" || st.tab === "logo" || st.tab === "shapes") panel(); checkRes(); }
   function cKey(e) {
+    return;
     var l = selLayer(); if (!l || l.locked) return;
     var step = e.shiftKey ? 10 : 1, k = $("#stCanvas").width / $("#stCanvas").getBoundingClientRect().width, dx = 0, dy = 0;
     if (e.key === "ArrowLeft") dx = -step; else if (e.key === "ArrowRight") dx = step; else if (e.key === "ArrowUp") dy = -step; else if (e.key === "ArrowDown") dy = step;
@@ -738,7 +871,7 @@
     var sl = selLayer();
     if (sl && sl.type === "image" && !sl.custom) { sl.src = info.id; sl.ar = ar; sl.custom = true; sl.nat = info.nat; st.sel = sl.id; commit(); draw(); panel(); order(); }
     else { var hasImg = layers().filter(function (x) { return x.type === "image"; })[0]; if (hasImg) { hasImg.src = info.id; hasImg.ar = ar; hasImg.custom = true; hasImg.nat = info.nat; var maxH = st.g.ah * .9; if (hasImg.w * st.g.aw * ar > maxH) hasImg.w = maxH / (st.g.aw * ar); commit(); draw(); panel(); order(); } else { st.layers[st.side] = template("school", sideFor(st.p, st.v, sd()).area); var im2 = layers().filter(function (x) { return x.type === "image"; })[0]; im2.src = info.id; im2.ar = ar; im2.custom = true; im2.nat = info.nat; commit(); draw(); panel(); order(); } }
-    st.tab = "logo"; tabs(); panel(); checkRes(); A.announce("Logo uploaded"); A.toast("Logo added. Drag it into place.");
+    st.tab = "logo"; tabs(); panel(); checkRes(); A.announce("Logo uploaded"); A.toast("Logo added in its place on the product.");
   }
   function readMonths(files) {
     var list = Array.prototype.slice.call(files, 0, 12), start = st.sides.map(function (s) { return s.id; }).indexOf(st.side), done = 0;

@@ -238,3 +238,7 @@ The owner said the earlier uniform pictures were wrong, so 19 uniform keys were 
   - un-tie: red, navy and white striped school tie on a white half-sleeve shirt, a student cropped below the chin; a bit of a red pinwheel at the bottom edge.
   - un-tie-d2: close-up of the stripes of the same tie.
   - un-belt: red and white striped elastic school belts with metal crest buckles on navy school trousers, a hand in a pocket and an ID card on a red lanyard.
+
+## Sample customer photos
+
+`rv-<product slug>-1.webp` and `rv-<product slug>-2.webp` (480 px) are made from that product's own photo above: a tighter crop at a slight angle, with phone-like colour. They stand in for photos buyers would upload with their reviews. Made with sharp by `_scratch-stationery/tools/rvphotos.cjs`.

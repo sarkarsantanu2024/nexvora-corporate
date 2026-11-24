@@ -1,0 +1,153 @@
+{
+  "clips": {
+    "pen-writing": {
+      "w": 720,
+      "h": 720,
+      "secs": 6.9,
+      "shows": "A hand writing in a notebook with a pink ball pen"
+    },
+    "notebook-writing": {
+      "w": 720,
+      "h": 720,
+      "secs": 7.6,
+      "shows": "A hand writing with a pen in an open ruled notebook"
+    },
+    "diary-writing": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "A hand writing in a bound notebook diary"
+    },
+    "crayons-rainbow": {
+      "w": 720,
+      "h": 720,
+      "secs": 9,
+      "shows": "Hands colouring a rainbow with wax crayons, more crayons lying beside"
+    },
+    "watercolour-brush": {
+      "w": 720,
+      "h": 720,
+      "secs": 8.5,
+      "shows": "A hand painting leaves in watercolour with a thin round brush"
+    },
+    "calligraphy-pen": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "A hand writing calligraphy letters with a nib pen and ink"
+    },
+    "play-dough": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Small hands shaping coloured modelling dough, crayons on the table"
+    },
+    "jigsaw-hands": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Hands fitting jigsaw puzzle pieces together on a table"
+    },
+    "chess-move": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Hands moving wooden chess pieces on a board"
+    },
+    "globe-spin": {
+      "w": 720,
+      "h": 720,
+      "secs": 8.5,
+      "shows": "A hand spinning a classroom globe on its stand"
+    },
+    "medal-ribbon": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "A gold medal on a blue ribbon on a dark sparkly surface, then a hand picks it up"
+    },
+    "mug-pour": {
+      "w": 720,
+      "h": 720,
+      "secs": 7.4,
+      "shows": "Coffee being poured into a white ceramic mug"
+    },
+    "brown-paper-wrap": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Hands rolling out brown paper from a roll and wrapping a box in it"
+    },
+    "gift-ribbon": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Hands tying a ribbon around a gift box wrapped in orange paper"
+    },
+    "balloons-float": {
+      "w": 720,
+      "h": 720,
+      "secs": 6.4,
+      "shows": "Coloured rubber balloons drifting down through the air"
+    },
+    "calendar-marking": {
+      "w": 720,
+      "h": 720,
+      "secs": 8.9,
+      "shows": "A hand circling a date on a printed calendar page"
+    },
+    "clay-diyas": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Rows of lit clay diyas on the floor"
+    },
+    "umbrella-open": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Inside of a black umbrella after it opens, ribs and canopy"
+    },
+    "badminton-shuttle": {
+      "w": 720,
+      "h": 720,
+      "secs": 6.9,
+      "shows": "A shuttlecock placed on a badminton racket"
+    },
+    "holi-colours": {
+      "w": 720,
+      "h": 720,
+      "secs": 7.9,
+      "shows": "Bowls heaped with green, orange and blue colour powder"
+    },
+    "kites-sky": {
+      "w": 720,
+      "h": 720,
+      "secs": 8,
+      "shows": "Many small diamond paper kites flying in a blue sky"
+    }
+  },
+  "products": {
+    "smooth-ball-pen": "pen-writing",
+    "ruled-notebook-172": "notebook-writing",
+    "diary-2027-a5": "diary-writing",
+    "wax-crayons": "crayons-rainbow",
+    "paint-brush-set-6": "watercolour-brush",
+    "bengali-calligraphy-pens": "calligraphy-pen",
+    "play-dough-6": "play-dough",
+    "jigsaw-puzzle-100": "jigsaw-hands",
+    "chess-set": "chess-move",
+    "school-globe": "globe-spin",
+    "sports-medal-50mm": "medal-ribbon",
+    "white-ceramic-mug": "mug-pour",
+    "brown-cover-roll": "brown-paper-wrap",
+    "gift-wrap-sheets": "gift-ribbon",
+    "balloons-pack": "balloons-float",
+    "wall-calendar-2027": "calendar-marking",
+    "clay-diyas-kali-puja": "clay-diyas",
+    "school-umbrella": "umbrella-open",
+    "badminton-set": "badminton-shuttle",
+    "holi-gulal-pack": "holi-colours",
+    "kites-bundle": "kites-sky"
+  }
+}
