@@ -628,6 +628,10 @@ html:not(.drawn) #view{min-height:100vh}
 .header .wrap,.mega .wrap,.footer .wrap{max-width:none}
 @media (min-width:1280px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (min-width:1700px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+
+/* Header bars: own, smaller side padding */
+:root{--hgutter:clamp(1rem,2.2vw,2.5rem)}
+.header .wrap,.mega .wrap,.footer .wrap{padding-inline:var(--hgutter)}
 </style>
 <link rel="stylesheet" href="/nx/nx-demo.css">
 <meta name="nx-site" content="craft-store">

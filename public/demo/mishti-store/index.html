@@ -554,6 +554,10 @@ html.ovl-open .nxs-toast{bottom:auto;top:calc(14px + env(safe-area-inset-top,0px
 .header .wrap,.subbar .wrap,.footer .wrap{max-width:none}
 @media (min-width:1500px){.grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media (min-width:1800px){.grid{grid-template-columns:repeat(6,minmax(0,1fr))}}
+
+/* Header bars: own, smaller side padding */
+:root{--hgutter:clamp(1rem,2.2vw,2.5rem)}
+.header .wrap,.subbar .wrap,.footer .wrap{padding-inline:var(--hgutter)}
 </style>
 <meta name="nx-site" content="mishti-store">
 <meta name="nx-defaults" content='{"phone":"+919804243159","phoneDisplay":"+91 98042 43159","whatsapp":"919804243159"}'>
