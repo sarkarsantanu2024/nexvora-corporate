@@ -21,7 +21,7 @@ import {
   PRICE_GROUPS,
   rupees,
 } from "@/lib/pricing";
-import { VISIBLE_DEMOS, DEMO_GROUPS } from "@/lib/demos";
+import { VISIBLE_DEMOS, DEMO_GROUPS, NEW_DEMO_GROUPS } from "@/lib/demos";
 import { PRODUCTS } from "@/lib/products";
 import { SERVICES } from "@/lib/services";
 import { HeroChat } from "@/components/hero-chat";
@@ -1578,7 +1578,7 @@ export function Examples() {
           >
             Open the sample websites
           </Link>
-          {": "}a saree shop, a clinic, a coaching centre and thirty more.
+          {": "}a saree shop, a clinic, a coaching centre and thirty-three more.
         </p>
       </Reveal>
     </div>
@@ -1622,8 +1622,13 @@ export function Demos() {
 
       {DEMO_GROUPS.map((group) => (
       <div key={group} className="mt-12 first-of-type:mt-11">
-        <h3 className="text-xl font-semibold tracking-tight sm:text-2xl">
+        <h3 className="flex items-center gap-3 text-xl font-semibold tracking-tight sm:text-2xl">
           {group}
+          {NEW_DEMO_GROUPS.has(group) && (
+            <span className="rounded-full bg-brand-600 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-white">
+              New
+            </span>
+          )}
         </h3>
       <div className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {VISIBLE_DEMOS.filter((d) => d.group === group).map((d, i) => (

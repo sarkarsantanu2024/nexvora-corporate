@@ -1,0 +1,889 @@
+{
+  "site": "mishti-store",
+  "template": "demo-html",
+  "version": 1,
+  "name": "Nolen Mishti Ghar",
+  "sections": [
+    {
+      "id": "header",
+      "label": {
+        "en": "Top bar",
+        "bn": "উপরের বার"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "notranslate",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          },
+          "html": true
+        },
+        {
+          "key": "subbar-hours",
+          "type": "text",
+          "label": {
+            "en": "Timings",
+            "bn": "সময়"
+          }
+        },
+        {
+          "key": "link",
+          "type": "text",
+          "label": {
+            "en": "Link text",
+            "bn": "লিংকের লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "top",
+      "label": {
+        "en": "Top banner",
+        "bn": "উপরের ব্যানার"
+      },
+      "fields": [
+        {
+          "key": "hero-img",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "1600:1000"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h1",
+          "type": "text",
+          "label": {
+            "en": "Main heading",
+            "bn": "মূল শিরোনাম"
+          },
+          "html": true
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "span",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "trust",
+      "label": {
+        "en": "Section 3",
+        "bn": "অংশ 3"
+      },
+      "fields": [],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Items in this list",
+            "bn": "এই তালিকার আইটেম"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "menu",
+      "label": {
+        "en": "Our menu",
+        "bn": "Our menu"
+      },
+      "fields": [
+        {
+          "key": "sr",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "boxes",
+      "label": {
+        "en": "Festival boxes, ready to gift",
+        "bn": "Festival boxes, ready to gift"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "bulk",
+      "label": {
+        "en": "Need 200 pieces or more?",
+        "bn": "Need 200 pieces or more?"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "label",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label3",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label4",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "label5",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "bulk-points",
+          "label": {
+            "en": "Need 200 pieces or more?",
+            "bn": "Need 200 pieces or more?"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "span",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reviews",
+      "label": {
+        "en": "What the para says",
+        "bn": "What the para says"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "story",
+      "label": {
+        "en": "Three generations at one stove",
+        "bn": "Three generations at one stove"
+      },
+      "fields": [
+        {
+          "key": "photo",
+          "type": "image",
+          "label": {
+            "en": "Photo",
+            "bn": "ছবি"
+          },
+          "aspect": "900:675"
+        },
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "sign",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "faq",
+      "label": {
+        "en": "Before you order",
+        "bn": "Before you order"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Before you order",
+            "bn": "Before you order"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "h3",
+              "type": "text",
+              "label": {
+                "en": "Text",
+                "bn": "লেখা"
+              }
+            },
+            {
+              "key": "p",
+              "type": "textarea",
+              "label": {
+                "en": "Paragraph",
+                "bn": "অনুচ্ছেদ"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visit",
+      "label": {
+        "en": "Come for a hot singara",
+        "bn": "Come for a hot singara"
+      },
+      "fields": [
+        {
+          "key": "kicker",
+          "type": "text",
+          "label": {
+            "en": "Small label",
+            "bn": "ছোট লেবেল"
+          }
+        },
+        {
+          "key": "h2",
+          "type": "text",
+          "label": {
+            "en": "Heading",
+            "bn": "শিরোনাম"
+          }
+        },
+        {
+          "key": "h3",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "button",
+          "type": "text",
+          "label": {
+            "en": "Button text",
+            "bn": "বোতামের লেখা"
+          }
+        },
+        {
+          "key": "h32",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "p2",
+          "type": "text",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          },
+          "html": true
+        },
+        {
+          "key": "h33",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "footer",
+      "label": {
+        "en": "Bottom of the page",
+        "bn": "পাতার নিচের অংশ"
+      },
+      "fields": [
+        {
+          "key": "brand-name",
+          "type": "text",
+          "label": {
+            "en": "Business name",
+            "bn": "ব্যবসার নাম"
+          }
+        },
+        {
+          "key": "brand-sub",
+          "type": "text",
+          "label": {
+            "en": "Line under the name",
+            "bn": "নামের নিচের লাইন"
+          }
+        },
+        {
+          "key": "p",
+          "type": "textarea",
+          "label": {
+            "en": "Paragraph",
+            "bn": "অনুচ্ছেদ"
+          }
+        },
+        {
+          "key": "h4",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "h42",
+          "type": "text",
+          "label": {
+            "en": "Sub heading",
+            "bn": "উপ-শিরোনাম"
+          }
+        },
+        {
+          "key": "li",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        },
+        {
+          "key": "li2",
+          "type": "text",
+          "label": {
+            "en": "Text",
+            "bn": "লেখা"
+          }
+        }
+      ],
+      "lists": [
+        {
+          "key": "list",
+          "label": {
+            "en": "Order",
+            "bn": "Order"
+          },
+          "min": 1,
+          "max": 12,
+          "fields": [
+            {
+              "key": "button",
+              "type": "text",
+              "label": {
+                "en": "Link text",
+                "bn": "লিংকের লেখা"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Phone, WhatsApp, map and social links",
+        "bn": "ফোন, হোয়াটসঅ্যাপ, মানচিত্র ও সোশ্যাল লিংক"
+      },
+      "fields": [
+        {
+          "key": "phone",
+          "type": "phone",
+          "label": {
+            "en": "Phone number for calls",
+            "bn": "কল করার ফোন নম্বর"
+          },
+          "help": {
+            "en": "Every call button on the website uses this number.",
+            "bn": "ওয়েবসাইটের সব কল বোতামে এই নম্বর ব্যবহার হয়।"
+          }
+        },
+        {
+          "key": "whatsapp",
+          "type": "whatsapp",
+          "label": {
+            "en": "WhatsApp number",
+            "bn": "হোয়াটসঅ্যাপ নম্বর"
+          },
+          "help": {
+            "en": "Every WhatsApp button on the website opens a chat with this number.",
+            "bn": "ওয়েবসাইটের সব হোয়াটসঅ্যাপ বোতাম এই নম্বরে চ্যাট খোলে।"
+          }
+        },
+        {
+          "key": "whatsappText",
+          "type": "textarea",
+          "label": {
+            "en": "Ready-made WhatsApp message",
+            "bn": "আগে থেকে লেখা হোয়াটসঅ্যাপ বার্তা"
+          },
+          "help": {
+            "en": "The message a customer sees typed out when they tap a WhatsApp button.",
+            "bn": "গ্রাহক হোয়াটসঅ্যাপ বোতামে চাপ দিলে এই বার্তা লেখা থাকবে।"
+          }
+        },
+        {
+          "key": "maps",
+          "type": "map",
+          "label": {
+            "en": "Google Maps link",
+            "bn": "গুগল ম্যাপ লিংক"
+          },
+          "help": {
+            "en": "Open Google Maps, find your shop, tap Share and paste the link here.",
+            "bn": "গুগল ম্যাপে আপনার দোকান খুঁজে Share চেপে লিংকটি এখানে বসান।"
+          }
+        },
+        {
+          "key": "facebook",
+          "type": "social",
+          "social": "facebook",
+          "label": {
+            "en": "Facebook page link",
+            "bn": "ফেসবুক পেজের লিংক"
+          }
+        },
+        {
+          "key": "instagram",
+          "type": "social",
+          "social": "instagram",
+          "label": {
+            "en": "Instagram link",
+            "bn": "ইনস্টাগ্রাম লিংক"
+          }
+        },
+        {
+          "key": "youtube",
+          "type": "social",
+          "social": "youtube",
+          "label": {
+            "en": "YouTube channel link",
+            "bn": "ইউটিউব চ্যানেলের লিংক"
+          }
+        }
+      ],
+      "lists": []
+    },
+    {
+      "id": "seo",
+      "label": {
+        "en": "Google title and description",
+        "bn": "গুগলের শিরোনাম ও বিবরণ"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "type": "text",
+          "max": 70,
+          "label": {
+            "en": "Title shown in Google",
+            "bn": "গুগলে দেখানো শিরোনাম"
+          }
+        },
+        {
+          "key": "description",
+          "type": "textarea",
+          "max": 170,
+          "label": {
+            "en": "Short description shown in Google",
+            "bn": "গুগলে দেখানো ছোট বিবরণ"
+          }
+        }
+      ],
+      "lists": []
+    }
+  ],
+  "defaults": {
+    "header": {
+      "brand-name": "Nolen Mishti Ghar",
+      "brand-sub": "Dum Dum · Since 1987",
+      "notranslate": "0",
+      "button": "Order now",
+      "span": "Delivering to: <b id=\"areaName\">Nagerbazar</b>",
+      "subbar-hours": "Delivery 10 am to 9 pm",
+      "link": "Track my order"
+    },
+    "top": {
+      "hero-img": {
+        "src": "/demo/mishti-store/images/hero.jpg",
+        "alt": "A steel plate of Bengali sweets with marigold flowers, held out for guests"
+      },
+      "kicker": "Dum Dum, Kolkata · Since 1987",
+      "h1": "Order fresh mishti for <em>home delivery</em>",
+      "p": "Fresh sweets from our kitchen to your door, since 1987. Pick your sweets, choose a delivery time, pay by UPI or cash.",
+      "span": "Order by 6 pm for delivery today"
+    },
+    "trust": {
+      "list": {
+        "items": [
+          {
+            "span": "Made fresh every morning"
+          },
+          {
+            "span": "Cash on delivery"
+          },
+          {
+            "span": "Delivery in 2 hours"
+          },
+          {
+            "span": "Since 1987"
+          }
+        ]
+      }
+    },
+    "menu": {
+      "sr": "Our menu"
+    },
+    "boxes": {
+      "kicker": "Gifting",
+      "h2": "Festival boxes, ready to gift",
+      "p": "Packed fresh on the day, in a box that closes properly. Add a gift message and we write it on the card inside."
+    },
+    "bulk": {
+      "kicker": "Pujo, weddings and office events",
+      "h2": "Need 200 pieces or more?",
+      "p": "Tell us the event and the date. We send you a price on WhatsApp, with what fits your budget and how we will pack it.",
+      "label": "Event",
+      "label2": "Date",
+      "label3": "About how many pieces?",
+      "label4": "Your name",
+      "label5": "Mobile number",
+      "p2": "We reply within the hour, 7 am to 10 pm.",
+      "bulk-points": {
+        "items": [
+          {
+            "span": "Special rates from 200 pieces"
+          },
+          {
+            "span": "Boxes printed with your name or logo"
+          },
+          {
+            "span": "Delivered to the venue on time"
+          }
+        ]
+      }
+    },
+    "reviews": {
+      "kicker": "From our customers",
+      "h2": "What the para says"
+    },
+    "story": {
+      "photo": {
+        "src": "/demo/mishti-store/images/story-900.webp",
+        "alt": "Trays and boxes of sweets on the shop counter"
+      },
+      "kicker": "Our story",
+      "h2": "Three generations at one stove",
+      "p": "Haren Das opened a small sweet counter on Dum Dum Road in 1987 with one big karai and a recipe for rosogolla he learnt from his uncle. The karai is still in use, and so is the recipe.",
+      "p2": "Today his son and granddaughter run the shop. Chhena is made in our kitchen every morning, nolen gur comes from the same family in Joynagar every winter, and nothing is kept for the next day. We started home delivery because our regulars moved to flats and asked us to.",
+      "sign": "The Das family"
+    },
+    "faq": {
+      "kicker": "Questions",
+      "h2": "Before you order",
+      "list": {
+        "items": [
+          {
+            "h3": "Where do you deliver, and what does it cost?",
+            "p": "Dum Dum, Nagerbazar, Lake Town, Baguiati, Kestopur, Ultadanga and Belgachia. Delivery is ₹30 to Dum Dum, Nagerbazar and Belgachia, and ₹50 to the others. It is free on orders above ₹499. The smallest order we deliver is ₹199."
+          },
+          {
+            "h3": "How fresh are the sweets?",
+            "p": "Everything is made the same morning. Chhena sweets are best within two days, so please keep them in the fridge. We never send yesterday’s sweets."
+          },
+          {
+            "h3": "Can I pay cash on delivery?",
+            "p": "Yes. Pay cash or scan our UPI QR when the sweets reach you. You can also pay by UPI while ordering."
+          },
+          {
+            "h3": "Can I cancel or change my order?",
+            "p": "Call or WhatsApp us before your order is packed and we will change or cancel it. Once it is out for delivery we cannot take it back, because sweets cannot be resold."
+          },
+          {
+            "h3": "Do you take bulk orders for pujo and weddings?",
+            "p": "Yes, from 200 pieces. Fill in the bulk order form above and we reply on WhatsApp within the hour with a price. Please give us two days for large orders."
+          },
+          {
+            "h3": "Do you have sugar-free sweets?",
+            "p": "Yes. Sugar-free sandesh and kaju barfi, made with a natural sweetener or dates. They still have milk and nuts, so please check with your doctor if you are diabetic."
+          }
+        ]
+      }
+    },
+    "visit": {
+      "kicker": "Visit us",
+      "h2": "Come for a hot singara",
+      "h3": "Address",
+      "p": "42 Dum Dum Road, Kolkata 700030. Two minutes from Dum Dum metro, opposite the bus stand.",
+      "button": "Open in Google Maps",
+      "h32": "Hours",
+      "p2": "Shop: every day, 7 am to 10 pm.<br>Home delivery: 10 am to 9 pm.<br>Jilipi from 4 pm.",
+      "h33": "Call or WhatsApp"
+    },
+    "footer": {
+      "brand-name": "Nolen Mishti Ghar",
+      "brand-sub": "Dum Dum · Since 1987",
+      "p": "Fresh sweets from our kitchen to your door, since 1987. Rosogolla, sandesh, nolen gur specials, mishti doi and snacks.",
+      "h4": "Order",
+      "h42": "Shop",
+      "li": "42 Dum Dum Road, Kolkata 700030",
+      "li2": "Every day, 7 am to 10 pm",
+      "list": {
+        "items": [
+          {
+            "button": "Menu"
+          },
+          {
+            "button": "Festival boxes"
+          },
+          {
+            "button": "Bulk orders"
+          },
+          {
+            "button": "Track my order"
+          }
+        ]
+      }
+    },
+    "contact": {
+      "phone": "9804243159",
+      "whatsapp": "9804243159",
+      "whatsappText": "Hello, I saw the Nolen Mishti Ghar sample website and want one like it for my business.",
+      "maps": "https://www.google.com/maps?q=42%20Dum%20Dum%20Road%2C%20Kolkata%20700030",
+      "facebook": "https://www.facebook.com/",
+      "instagram": "https://www.instagram.com/",
+      "youtube": "https://www.youtube.com/"
+    },
+    "seo": {
+      "title": "Nolen Mishti Ghar | Order Bengali Sweets Online for Home Delivery, Dum Dum",
+      "description": "Order rosogolla, sandesh, nolen gur sweets, mishti doi and snacks for home delivery in Dum Dum, Nagerbazar, Lake Town and nearby. Pick a pack size and a delivery slot, pay by UPI or cash on delivery."
+    }
+  }
+}

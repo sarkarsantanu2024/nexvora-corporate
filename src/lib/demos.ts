@@ -23,6 +23,7 @@
 export type DemoGroup = (typeof DEMO_GROUPS)[number];
 
 export const DEMO_GROUPS = [
+  "Online stores",
   "Shops",
   "Health",
   "Classes and schools",
@@ -30,6 +31,11 @@ export const DEMO_GROUPS = [
   "Food and events",
   "Services and trades",
 ] as const;
+
+/** Groups that carry a small "New" badge next to their heading on /demos. */
+export const NEW_DEMO_GROUPS: ReadonlySet<DemoGroup> = new Set<DemoGroup>([
+  "Online stores",
+]);
 
 export type Demo = {
   slug: string;
@@ -50,6 +56,40 @@ export type Demo = {
 };
 
 export const DEMOS: Demo[] = [
+  // ---- Online stores -----------------------------------------------------
+  // Working sample shops with a cart and checkout that never leave the
+  // browser: no real orders, no real payments, nothing posted anywhere.
+  {
+    slug: "mishti-store",
+    name: "Nolen Mishti Ghar",
+    kind: "Sample online sweet shop · Starter Store",
+    group: "Online stores",
+    blurb:
+      "Order sweets and snacks for home delivery: pick a pack size, choose a delivery slot, pay by UPI or cash on delivery.",
+    image: "/demo/mishti-store/images/hero.jpg",
+    alt: "Sample online sweet shop for home delivery",
+  },
+  {
+    slug: "craft-store",
+    name: "Mati Kotha Crafts",
+    kind: "Sample online handicraft store · Pro Store",
+    group: "Online stores",
+    blurb:
+      "A full online store shipping across India: filters, sizes and colours, PIN code delivery check, coupons, order tracking and an owner dashboard.",
+    image: "/demo/craft-store/images/hero.jpg",
+    alt: "Sample online store for Bengal handicrafts",
+  },
+  {
+    slug: "stationery-store",
+    name: "Kolom Khata Stationers",
+    kind: "Sample online stationery and gift store · Pro Store",
+    group: "Online stores",
+    blurb:
+      "Retail and Kolkata wholesale-market prices on stationery, school uniforms, toys, play school materials, prizes, medals, shields, bags and calendars, with your own logo printed and a live preview before you order.",
+    image: "/demo/stationery-store/images/hero.jpg",
+    alt: "Sample online store for stationery, gifts and school supplies, retail and wholesale",
+  },
+
   // ---- Shops -------------------------------------------------------------
   {
     slug: "sweets",

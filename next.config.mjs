@@ -32,7 +32,17 @@ const nextConfig = {
   // file — a stylesheet, a photograph inside the demo folder — is always
   // served as itself and never rewritten.
   async rewrites() {
-    return [{ source: "/demo/:slug", destination: "/demo/:slug/index.html" }];
+    return [
+      { source: "/demo/:slug", destination: "/demo/:slug/index.html" },
+      // The Pro Store sample is a multi-page shop (/demo/craft-store/shop,
+      // /products/<slug>, /checkout, /admin ...) run by one page with a
+      // client-side router. Real files in its folder (photos, scripts) are
+      // still served as themselves, because rewrites run after the
+      // filesystem check.
+      { source: "/demo/craft-store/:path*", destination: "/demo/craft-store/index.html" },
+      // Same arrangement for the stationery and gifts store.
+      { source: "/demo/stationery-store/:path*", destination: "/demo/stationery-store/index.html" },
+    ];
   },
 
   // Demos are for sending to a customer, not for Google. Twelve near-identical
