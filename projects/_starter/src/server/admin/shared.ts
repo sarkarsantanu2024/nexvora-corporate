@@ -30,6 +30,15 @@ export const pageOf = (value: unknown) => Math.max(1, Math.floor(Number(value)) 
 
 export type OrgSettings = { name: string; legalName: string; phone: string; email: string; address: string };
 
+/** Set by Nexvora only (src/server/platform.ts). Plain strings here so this file needs nothing from there. */
+export type PlatformSettings = { plan: 'website' | 'panel' | 'platinum'; status: 'active' | 'suspended'; note: string; changedAt: string };
+
+/** Which reminders are switched on, and their wording (src/server/reminders). Empty wording means the default. */
+export type ReminderSettings = { enabled: Record<string, boolean>; templates: Record<string, string>; daysBefore: number };
+
+/** When the daily job last ran and what it did (src/server/jobs.ts). */
+export type JobsSettings = { lastRunAt: string; lastResult: string[] };
+
 /**
  * Every group of settings and what it holds before anyone saves it.
  * A business module adds its own group here (say `billing`), and the same
@@ -37,6 +46,9 @@ export type OrgSettings = { name: string; legalName: string; phone: string; emai
  */
 export const SETTING_DEFAULTS = {
   org: { name: BRAND.name, legalName: '', phone: '', email: '', address: '' } as OrgSettings,
+  platform: { plan: 'platinum', status: 'active', note: '', changedAt: '' } as PlatformSettings,
+  reminders: { enabled: {}, templates: {}, daysBefore: 3 } as ReminderSettings,
+  jobs: { lastRunAt: '', lastResult: [] } as JobsSettings,
 };
 type SettingKey = keyof typeof SETTING_DEFAULTS;
 

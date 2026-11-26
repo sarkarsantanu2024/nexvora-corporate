@@ -41,10 +41,22 @@ export type OrgSettings = { name: string; legalName: string; phone: string; emai
 export type RoyaltySettings = { dueDay: number };
 export type FeeSettings = { dueDay: number; reminderTemplate: string; receiptFooter: string };
 
+/** Set by Nexvora only (src/server/platform.ts). Plain strings here so this file needs nothing from there. */
+export type PlatformSettings = { plan: 'website' | 'panel' | 'platinum'; status: 'active' | 'suspended'; note: string; changedAt: string };
+
+/** Which reminders are switched on, their wording, and how many days before a due date (src/server/reminders). Empty wording means the default. */
+export type ReminderSettings = { enabled: Record<string, boolean>; templates: Record<string, string>; daysBefore: number };
+
+/** When the daily job last ran and what it did (src/server/jobs.ts). */
+export type JobsSettings = { lastRunAt: string; lastResult: string[] };
+
 export const SETTING_DEFAULTS = {
   org: { name: 'Mantra Kidz', legalName: '', phone: '', email: '', address: '' } as OrgSettings,
   royalty: { dueDay: 10 } as RoyaltySettings,
   fees: { dueDay: 10, reminderTemplate: '', receiptFooter: '' } as FeeSettings,
+  platform: { plan: 'platinum', status: 'active', note: '', changedAt: '' } as PlatformSettings,
+  reminders: { enabled: {}, templates: {}, daysBefore: 3 } as ReminderSettings,
+  jobs: { lastRunAt: '', lastResult: [] } as JobsSettings,
 };
 type SettingKey = keyof typeof SETTING_DEFAULTS;
 

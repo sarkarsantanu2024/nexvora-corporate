@@ -2,12 +2,15 @@ import { MessageSquareText } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Pagination, SearchInput } from '@/components/ui/client';
+import { ImportButton } from '@/components/ui/import';
 import { Card, EmptyState, PageHeader, StatusBadge, Table, Td, Th, Tr } from '@/components/ui/core';
 import { ENQUIRY_STATUSES } from '@/db/schema';
 import { TEAM_ROLES, requireSession } from '@/lib/auth';
 import { cn } from '@/lib/cn';
 import { formatDateTime } from '@/lib/date';
 import { getT } from '@/lib/t';
+import { isAdmin } from '@/server/admin/shared';
+import { importEnquiriesAction } from '@/server/enquiries/actions';
 import { STATUS_LABELS } from '@/server/enquiries/constants';
 import { listEnquiries } from '@/server/enquiries/service';
 import { ContactLinks, FilterBar, query, readSearch, type Search } from '../_ui/bits';
@@ -16,7 +19,7 @@ export const metadata: Metadata = { title: 'Enquiries' };
 
 export default async function EnquiriesPage({ searchParams }: { searchParams: Search }) {
   const t = await getT();
-  await requireSession(TEAM_ROLES);
+  const session = await requireSession(TEAM_ROLES);
   const params = await readSearch(searchParams);
   const data = await listEnquiries({ q: params.q, status: params.status, page: params.page });
   const all = ENQUIRY_STATUSES.reduce((sum, status) => sum + data.counts[status], 0);
@@ -24,7 +27,26 @@ export default async function EnquiriesPage({ searchParams }: { searchParams: Se
 
   return (
     <>
-      <PageHeader title={t('Enquiries')} description={t('Messages sent from the contact form of the website. Reply by call, WhatsApp or email, then mark the enquiry contacted or closed.')} />
+      <PageHeader
+        title={t('Enquiries')}
+        description={t('Messages sent from the contact form of the website. Reply by call, WhatsApp or email, then mark the enquiry contacted or closed.')}
+        actions={
+          isAdmin(session) ? (
+            <ImportButton
+              title={t('Import enquiries')}
+              description={t('An old list of contacts from a spreadsheet. They come in marked contacted; a mobile number already in the list is left out.')}
+              onImport={importEnquiriesAction}
+              fields={[
+                { key: 'name', label: 'Name', required: true, aliases: ['full name', 'customer', 'customer name', 'contact'] },
+                { key: 'phone', label: 'Mobile', aliases: ['phone', 'mobile number', 'mobile no', 'phone number', 'contact number', 'whatsapp'] },
+                { key: 'email', label: 'Email', aliases: ['email id', 'e-mail', 'mail'] },
+                { key: 'subject', label: 'Subject', aliases: ['about', 'topic', 'interest'] },
+                { key: 'message', label: 'Message', aliases: ['notes', 'note', 'remarks', 'details'] },
+              ]}
+            />
+          ) : undefined
+        }
+      />
 
       <div className="no-print mb-4 flex flex-wrap gap-2">
         {[{ key: '', label: t('All'), n: all }, ...ENQUIRY_STATUSES.map((status) => ({ key: status as string, label: t(STATUS_LABELS[status]), n: data.counts[status] }))].map((item) => (

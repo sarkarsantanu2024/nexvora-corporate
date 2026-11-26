@@ -37,6 +37,10 @@ export type Role = (typeof ROLES)[number];
 export const ENQUIRY_STATUSES = ['new', 'contacted', 'closed'] as const;
 export type EnquiryStatus = (typeof ENQUIRY_STATUSES)[number];
 
+/** A reminder waits until someone sends it on WhatsApp or sets it aside. */
+export const OUTBOX_STATUSES = ['waiting', 'sent', 'dismissed'] as const;
+export type OutboxStatus = (typeof OUTBOX_STATUSES)[number];
+
 /* ───────────────────────────── people ───────────────────────────── */
 
 export const users = pgTable(
@@ -76,6 +80,8 @@ export const enquiries = pgTable(
     meta: meta(),
     createdAt: createdAt(),
     updatedAt: updatedAt(),
+    /** Set when moved to the Trash; such a row is left out of every list and count. */
+    deletedAt: timestamp('deleted_at', { withTimezone: true }),
   },
   (t) => [index('enquiries_status_idx').on(t.status, t.createdAt)],
 );
@@ -113,6 +119,39 @@ export const announcements = pgTable(
     createdAt: createdAt(),
   },
   (t) => [index('announcements_publish_idx').on(t.publishOn)],
+);
+
+/**
+ * WhatsApp reminders waiting to be sent: a reply to a new enquiry, a fee
+ * falling due, a birthday. The daily job (and opening the Reminders screen)
+ * fills it; a person sends each one from their own WhatsApp.
+ *
+ * `dedupeKey` names the thing and the occasion ('enquiry_reply:<id>',
+ * 'birthday:<id>:2026'), so the same reminder is never queued twice however
+ * often the job runs.
+ */
+export const messageOutbox = pgTable(
+  'message_outbox',
+  {
+    id: id(),
+    kind: text('kind').notNull(),
+    dedupeKey: text('dedupe_key').notNull(),
+    toName: text('to_name').notNull().default(''),
+    phone: text('phone').notNull(),
+    body: text('body').notNull(),
+    status: text('status').$type<OutboxStatus>().notNull().default('waiting'),
+    /** What the reminder is about, so it can be set aside once that is dealt with. */
+    entity: text('entity').notNull().default(''),
+    entityId: text('entity_id').notNull().default(''),
+    /** The screen where the thing itself is seen. */
+    href: text('href').notNull().default(''),
+    dueOn: date('due_on').notNull(),
+    doneAt: timestamp('done_at', { withTimezone: true }),
+    doneBy: uuid('done_by').references(() => users.id, { onDelete: 'set null' }),
+    doneByName: text('done_by_name').notNull().default(''),
+    createdAt: createdAt(),
+  },
+  (t) => [uniqueIndex('message_outbox_dedupe_uq').on(t.dedupeKey), index('message_outbox_status_idx').on(t.status, t.dueOn)],
 );
 
 /* ───────────────────────────── website content ───────────────────────────── */
@@ -216,3 +255,4 @@ export type Announcement = typeof announcements.$inferSelect;
 export type MediaItem = typeof media.$inferSelect;
 export type GalleryItem = typeof galleryItems.$inferSelect;
 export type AuditEntry = typeof auditLog.$inferSelect;
+export type OutboxMessage = typeof messageOutbox.$inferSelect;

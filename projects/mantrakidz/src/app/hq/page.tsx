@@ -3,19 +3,21 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BarsChart, Donut } from '@/components/ui/charts';
 import { Badge, Card, CardBody, CardHeader, EmptyState, LinkButton, PageHeader, Stat, StatusBadge } from '@/components/ui/core';
+import { SuggestionList } from '@/components/dash/suggestions';
 import { CountUp } from '@/components/ui/motion';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { formatDate, formatDateTime, periodLabel, todayIST } from '@/lib/date';
 import { getT } from '@/lib/t';
 import { getOverview } from '@/server/hq/overview';
+import { hqSuggestions } from '@/server/suggestions';
 import { ContactLinks } from './_ui/bits';
 
 export const metadata: Metadata = { title: 'Overview' };
 
 export default async function OverviewPage() {
   const t = await getT();
-  await requireSession(HQ_ROLES);
-  const data = await getOverview();
+  const session = await requireSession(HQ_ROLES);
+  const [data, suggestions] = await Promise.all([getOverview(), hqSuggestions(session, t)]);
   const { tiles } = data;
   const month = periodLabel(data.period);
   const today = todayIST();
@@ -46,6 +48,8 @@ export default async function OverviewPage() {
           href="/hq/enquiries?stage=new"
         />
       </div>
+
+      <SuggestionList items={suggestions} title={t('What to do next')} className="mt-6" />
 
       <div className="mt-6 grid gap-6 xl:grid-cols-3 [&>*]:min-w-0">
         <Card className="xl:col-span-2">

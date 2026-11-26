@@ -57,12 +57,12 @@ export function NoteForm({ id }: { id: string }) {
 export function DeleteEnquiry({ id, name }: { id: string; name: string }) {
   const t = useT();
   const router = useRouter();
-  const remove = useAction(deleteEnquiryAction, { success: t('Enquiry deleted'), onDone: () => router.push('/admin/enquiries') });
+  const remove = useAction(deleteEnquiryAction, { success: t('Moved to the Trash'), onDone: () => router.push('/admin/enquiries') });
   return (
     <ConfirmButton
       size="sm"
       title={t('Delete the enquiry from {name}?', { name })}
-      text={t('Use this for spam and test entries only. The message and its notes are removed for good.')}
+      text={t('Use this for spam and test entries only. It goes to the Trash, where an admin can bring it back.')}
       confirmLabel={t('Delete')}
       onConfirm={async () => void (await remove.run(id))}
     >

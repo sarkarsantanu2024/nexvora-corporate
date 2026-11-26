@@ -8,10 +8,13 @@ import type { SectionDef } from '@/cms/types';
 import { VoiceAssistant } from '@/components/cms/voice-assistant';
 import { VoiceBridgeProvider } from '@/components/cms/voice-bridge';
 import { TEAM_ROLES, requireSession } from '@/lib/auth';
+import { requirePlan } from '@/server/platform';
 import { buildCatalogue } from '@/voice/catalogue';
 
 export default async function WebsiteLayout({ children }: { children: ReactNode }) {
   await requireSession(TEAM_ROLES);
+  // The edit panel is part of the "panel" plan and above.
+  await requirePlan('panel');
   return (
     <VoiceBridgeProvider>
       {children}

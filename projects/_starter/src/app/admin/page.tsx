@@ -2,6 +2,7 @@ import { Image as ImageIcon, Megaphone, MessageSquareText, Users } from 'lucide-
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardHeader, EmptyState, LinkButton, PageHeader, Stat, StatusBadge } from '@/components/ui/core';
+import { SuggestionList } from '@/components/dash/suggestions';
 import { CountUp } from '@/components/ui/motion';
 import { TEAM_ROLES, requireSession } from '@/lib/auth';
 import { formatDateTime } from '@/lib/date';
@@ -9,6 +10,7 @@ import { getT } from '@/lib/t';
 import { getOverview } from '@/server/admin/service';
 import { isAdmin } from '@/server/admin/shared';
 import { STATUS_LABELS } from '@/server/enquiries/constants';
+import { listSuggestions } from '@/server/suggestions';
 import { ContactLinks } from './_ui/bits';
 
 export const metadata: Metadata = { title: 'Overview' };
@@ -16,7 +18,7 @@ export const metadata: Metadata = { title: 'Overview' };
 export default async function OverviewPage() {
   const t = await getT();
   const session = await requireSession(TEAM_ROLES);
-  const data = await getOverview();
+  const [data, suggestions] = await Promise.all([getOverview(), listSuggestions(session, t)]);
   const { tiles } = data;
 
   return (
@@ -36,6 +38,8 @@ export default async function OverviewPage() {
         <Stat label={t('Gallery photos')} value={<CountUp value={tiles.photos} />} hint={t('In the photo gallery')} icon={<ImageIcon size={18} />} tone="violet" href="/admin/website/gallery" />
         <Stat label={t('Team logins')} value={<CountUp value={tiles.users} />} hint={t('Active')} icon={<Users size={18} />} href={isAdmin(session) ? '/admin/users' : undefined} />
       </div>
+
+      <SuggestionList items={suggestions} title={t('What to do next')} className="mt-6" />
 
       <div className="mt-6 grid gap-6 xl:grid-cols-2 [&>*]:min-w-0">
         <Card>

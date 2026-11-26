@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import { Badge, Card, CardBody, CardHeader, PageHeader, Table, Td, Th, Tr } from '@/components/ui/core';
 import { requireSession } from '@/lib/auth';
-import { formatDate } from '@/lib/date';
+import { formatDate, formatDateTime } from '@/lib/date';
+import { PLAN_LABELS, PLATFORM_CONTACT } from '@/lib/plans';
 import { getT } from '@/lib/t';
 import { loadSettings } from '@/server/hq/admin';
-import { AddYear, FeeSettingsForm, MakeCurrent, OrgForm, RemoveSample, RoyaltyDayForm } from './settings-forms';
+import { getSetting } from '@/server/hq/shared';
+import { getPlatform } from '@/server/platform';
+import { loadReminderSettings } from '@/server/reminders/service';
+import { AddYear, FeeSettingsForm, MakeCurrent, OrgForm, ReminderForm, RemoveSample, RoyaltyDayForm } from './settings-forms';
 
 export const metadata: Metadata = { title: 'Settings' };
 
@@ -21,7 +25,7 @@ function nextYear(latest?: { startDate: string; endDate: string }) {
 export default async function SettingsPage() {
   const t = await getT();
   await requireSession(['hq_admin']);
-  const data = await loadSettings();
+  const [data, reminders, platform, jobs] = await Promise.all([loadSettings(), loadReminderSettings(), getPlatform(), getSetting('jobs')]);
   const hasSample = data.sample.centres > 0 || data.sample.leads > 0;
 
   return (
@@ -50,6 +54,13 @@ export default async function SettingsPage() {
           </CardBody>
         </Card>
 
+        <Card id="reminders">
+          <CardHeader title={t('WhatsApp reminders to parents')} description={t("Which reminders every school gets each day, and what they say. They wait on the school's Reminders screen until someone sends them.")} />
+          <CardBody>
+            <ReminderForm initial={reminders} />
+          </CardBody>
+        </Card>
+
         <Card>
           <CardHeader title={t('Academic years')} description={t('One year is current. New classes and admissions go into it.')} action={<AddYear suggestion={nextYear(data.years[0])} />} className="pb-4" />
           <Table className="min-w-[480px]">
@@ -72,6 +83,21 @@ export default async function SettingsPage() {
               ))}
             </tbody>
           </Table>
+        </Card>
+
+        <Card>
+          <CardHeader title={t('Your plan')} />
+          <CardBody className="space-y-2 text-[15px] text-ink-700">
+            <p className="flex flex-wrap items-center gap-2">
+              <Badge tone="violet">{t(PLAN_LABELS[platform.plan])}</Badge>
+              {t('To change the plan, contact {name}.', { name: PLATFORM_CONTACT.name })}
+            </p>
+            <p className="text-sm text-ink-500">
+              {jobs.lastRunAt
+                ? t('The daily check last ran on {date}.', { date: formatDateTime(jobs.lastRunAt) })
+                : t('The daily check has not run yet. It runs by itself once the website is live.')}
+            </p>
+          </CardBody>
         </Card>
 
         {hasSample ? (

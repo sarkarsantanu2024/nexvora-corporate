@@ -13,7 +13,7 @@ import { UI_BN } from '@/i18n/ui-bn';
 import { UI_HI } from '@/i18n/ui-hi';
 
 const SRC = path.resolve(__dirname, '../src');
-const SCANNED = ['app/hq', 'app/centre', 'app/parent', 'app/account', 'app/login', 'components/ui', 'components/cms', 'components/pwa', 'components/dash'];
+const SCANNED = ['app/hq', 'app/centre', 'app/parent', 'app/account', 'app/login', 'app/suspended', 'app/upgrade', 'components/ui', 'components/cms', 'components/pwa', 'components/dash', 'server'];
 const DICTS: [string, Record<string, string>][] = [
   ['Hindi', UI_HI],
   ['Bengali', UI_BN],

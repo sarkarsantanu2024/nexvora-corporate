@@ -2,10 +2,12 @@ import { ArrowUpFromLine, Download, GraduationCap, UserPlus } from 'lucide-react
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Pagination, SearchInput, UrlSelect } from '@/components/ui/client';
+import { ImportButton } from '@/components/ui/import';
 import { Avatar, buttonClass, Card, EmptyState, LinkButton, PageHeader, StatusBadge, Table, Td, Th, Tr } from '@/components/ui/core';
 import { canManageCentre, requireCentre } from '@/lib/auth';
 import { getT } from '@/lib/t';
 import { batchOptions, listProgrammes } from '@/server/centre/children/batches';
+import { importChildrenAction } from '@/server/centre/children/actions';
 import { listStudents } from '@/server/centre/children/students';
 
 export const metadata: Metadata = { title: 'Children' };
@@ -35,6 +37,28 @@ export default async function StudentsPage({ searchParams }: { searchParams: Pro
               <LinkButton href="/centre/students/promote" variant="secondary">
                 <ArrowUpFromLine size={17} /> {t('Promote a class')}
               </LinkButton>
+            ) : null}
+            {canManageCentre(ctx.session) ? (
+              <ImportButton
+                title={t('Import children')}
+                description={t('Children already at the school, from a spreadsheet. Each gets an admission number. Write the class as it is named here, or the programme. Dates as DD-MM-YYYY.')}
+                onImport={importChildrenAction}
+                fields={[
+                  { key: 'name', label: "Child's name", required: true, aliases: ['name', 'child', 'student', 'student name', 'child name'] },
+                  { key: 'phone', label: 'Parent mobile', required: true, aliases: ['mobile', 'phone', 'mobile number', 'contact', 'contact number', 'whatsapp', 'guardian phone'] },
+                  { key: 'className', label: 'Class', aliases: ['batch', 'section', 'class name'] },
+                  { key: 'programme', label: 'Programme', aliases: ['course', 'level'] },
+                  { key: 'dob', label: 'Date of birth', aliases: ['dob', 'birth date', 'birthday'] },
+                  { key: 'gender', label: 'Gender', aliases: ['sex', 'boy/girl'] },
+                  { key: 'fatherName', label: "Father's name", aliases: ['father', 'father name'] },
+                  { key: 'motherName', label: "Mother's name", aliases: ['mother', 'mother name'] },
+                  { key: 'altPhone', label: 'Other mobile', aliases: ['alternate mobile', 'alt phone', 'second mobile'] },
+                  { key: 'email', label: 'Email', aliases: ['email id', 'e-mail'] },
+                  { key: 'address', label: 'Address', aliases: ['home address'] },
+                  { key: 'admissionDate', label: 'Admission date', aliases: ['date of admission', 'joined', 'joining date'] },
+                  { key: 'monthlyFee', label: 'Monthly fee', hint: 'Leave empty to use the class fee', aliases: ['fee', 'monthly fees'] },
+                ]}
+              />
             ) : null}
             {/* A plain link: the browser downloads the file. */}
             <a href={`/centre/students/export${exportQuery ? `?${exportQuery}` : ''}`} className={buttonClass('secondary')}>

@@ -22,6 +22,12 @@ export type Project = {
   adminUser: string;
   /** What is in it, one short line each. */
   has: string[];
+  /**
+   * The name of this site's environment variable that holds the project's
+   * control key (the same value as PLATFORM_SECRET in the project). The key
+   * itself is never written here.
+   */
+  secretEnv: string;
 };
 
 export const PROJECTS: Project[] = [
@@ -36,5 +42,6 @@ export const PROJECTS: Project[] = [
     loginPath: "/login",
     adminUser: "admin",
     has: ["Website in English, Bengali and Hindi", "Edit panel, by hand or by voice", "Head office, centre and parent dashboards", "Phone app with install, bell and notifications"],
+    secretEnv: "PLATFORM_SECRET_MANTRAKIDZ",
   },
 ];

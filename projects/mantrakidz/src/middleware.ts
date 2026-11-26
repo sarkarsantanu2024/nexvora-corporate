@@ -18,7 +18,7 @@ import { SESSION_COOKIE, homeFor, isHq, readSessionToken } from '@/lib/session-t
 
 const PRIVATE = /^\/(hq|centre|parent|account)(\/|$)/;
 /** Never translated: dashboards, login, APIs and files. */
-const NO_LOCALE = /^\/(hq|centre|parent|account|login|api|media|brand|images)(\/|$)/;
+const NO_LOCALE = /^\/(hq|centre|parent|account|login|suspended|upgrade|api|media|brand|images)(\/|$)/;
 
 export async function middleware(req: NextRequest) {
   const { lang, path } = splitLocale(req.nextUrl.pathname);
@@ -39,7 +39,9 @@ export async function middleware(req: NextRequest) {
 
   const pathname = path;
   const isLogin = pathname === '/login';
-  if (!isLogin && !PRIVATE.test(pathname)) {
+  // "Account paused" and "not in your plan" speak the dashboard language but need no login.
+  const isOpenDash = pathname === '/suspended' || pathname === '/upgrade';
+  if (!isLogin && !isOpenDash && !PRIVATE.test(pathname)) {
     // A plain English site page. Drop any language header a client sent by hand.
     if (!req.headers.has(LANG_HEADER)) return NextResponse.next();
     const headers = new Headers(req.headers);
@@ -54,6 +56,7 @@ export async function middleware(req: NextRequest) {
   if (uiLang === 'en') headers.delete(LANG_HEADER);
   else headers.set(LANG_HEADER, uiLang);
   const pass = () => NextResponse.next({ request: { headers } });
+  if (isOpenDash) return pass();
 
   const session = await readSessionToken(req.cookies.get(SESSION_COOKIE)?.value);
 

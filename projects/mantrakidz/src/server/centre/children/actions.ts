@@ -87,6 +87,12 @@ export const deleteStudentAction = action(async (id: string) => {
   refresh('/centre');
 });
 
+export const importChildrenAction = action(async (rows: Record<string, string>[]) => {
+  const result = await students.importChildren(await requireCentre(), rows);
+  refresh('/centre');
+  return result;
+});
+
 export const addStudentNoteAction = action(async (id: string, note: string) => {
   await students.addStudentNote(await requireCentre(), id, { note });
   refresh('/centre/students');

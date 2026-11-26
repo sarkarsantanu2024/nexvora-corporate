@@ -64,6 +64,10 @@ export type PaymentMethod = (typeof PAYMENT_METHODS)[number];
 export const ANNOUNCEMENT_AUDIENCES = ['public', 'centres', 'parents'] as const;
 export type AnnouncementAudience = (typeof ANNOUNCEMENT_AUDIENCES)[number];
 
+/** A reminder waits until someone sends it on WhatsApp or sets it aside. */
+export const OUTBOX_STATUSES = ['waiting', 'sent', 'dismissed'] as const;
+export type OutboxStatus = (typeof OUTBOX_STATUSES)[number];
+
 /* ───────────────────────────── people & centres ───────────────────────────── */
 
 export const centres = pgTable(
@@ -552,6 +556,40 @@ export const announcements = pgTable(
   (t) => [index('announcements_audience_idx').on(t.audience, t.centreId)],
 );
 
+/**
+ * WhatsApp reminders waiting to be sent: a fee falling due, a fee overdue, a
+ * child absent today, a birthday. The daily job (and opening the Reminders
+ * screen) fills it; someone at the school sends each from their own WhatsApp.
+ *
+ * `dedupeKey` names the thing and the occasion ('fee_due:<billId>',
+ * 'birthday:<childId>:2026'), so the same reminder is never queued twice
+ * however often the job runs.
+ */
+export const messageOutbox = pgTable(
+  'message_outbox',
+  {
+    id: id(),
+    centreId: uuid('centre_id').references(() => centres.id, { onDelete: 'cascade' }),
+    kind: text('kind').notNull(),
+    dedupeKey: text('dedupe_key').notNull(),
+    toName: text('to_name').notNull().default(''),
+    phone: text('phone').notNull(),
+    body: text('body').notNull(),
+    status: text('status').$type<OutboxStatus>().notNull().default('waiting'),
+    /** What the reminder is about, so it can be set aside once that is dealt with. */
+    entity: text('entity').notNull().default(''),
+    entityId: text('entity_id').notNull().default(''),
+    /** The screen where the thing itself is seen. */
+    href: text('href').notNull().default(''),
+    dueOn: date('due_on').notNull(),
+    doneAt: timestamp('done_at', { withTimezone: true }),
+    doneBy: uuid('done_by').references(() => users.id, { onDelete: 'set null' }),
+    doneByName: text('done_by_name').notNull().default(''),
+    createdAt: createdAt(),
+  },
+  (t) => [uniqueIndex('message_outbox_dedupe_uq').on(t.dedupeKey), index('message_outbox_centre_status_idx').on(t.centreId, t.status, t.dueOn)],
+);
+
 /* ───────────────────────────── website content ───────────────────────────── */
 
 /**
@@ -667,6 +705,7 @@ export type Invoice = typeof invoices.$inferSelect;
 export type InvoiceItem = typeof invoiceItems.$inferSelect;
 export type Payment = typeof payments.$inferSelect;
 export type Expense = typeof expenses.$inferSelect;
+export type OutboxMessage = typeof messageOutbox.$inferSelect;
 export type RoyaltyInvoice = typeof royaltyInvoices.$inferSelect;
 export type RoyaltyPayment = typeof royaltyPayments.$inferSelect;
 export type Announcement = typeof announcements.$inferSelect;

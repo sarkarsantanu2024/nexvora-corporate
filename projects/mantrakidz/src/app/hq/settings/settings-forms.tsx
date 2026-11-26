@@ -6,6 +6,7 @@ import { LoadingButton, Modal } from '@/components/ui/client';
 import { Button, Field, FormGrid, Input, Textarea } from '@/components/ui/core';
 import { useT } from '@/components/ui/lang';
 import { fillTemplate } from '@/lib/wa';
+import { saveReminderSettingsAction } from '@/server/reminders/actions';
 import {
   addAcademicYearAction,
   removeSampleDataAction,
@@ -208,6 +209,50 @@ export function RemoveSample({ centres, leads }: { centres: number; leads: numbe
           </Field>
         </div>
       </Modal>
+    </>
+  );
+}
+
+type ReminderKindSetting = { key: string; label: string; description: string; placeholders: string[]; defaultTemplate: string; enabled: boolean; template: string };
+
+/** Which WhatsApp reminders every school gets, and their wording: one switch and one box per kind. */
+export function ReminderForm({ initial }: { initial: { daysBefore: number; kinds: ReminderKindSetting[] } }) {
+  const t = useT();
+  const [kinds, setKinds] = useState(initial.kinds);
+  const [daysBefore, setDaysBefore] = useState(String(initial.daysBefore));
+  const save = useAction(saveReminderSettingsAction, { success: t('Reminder settings saved') });
+  const change = (key: string, patch: Partial<ReminderKindSetting>) => setKinds((list) => list.map((kind) => (kind.key === key ? { ...kind, ...patch } : kind)));
+  return (
+    <>
+      <div className="space-y-6">
+        <Field label={t('Days before the due date')} hint={t('How early the "Fee due soon" reminder is made.')} error={save.fields.daysBefore && t(save.fields.daysBefore)} className="max-w-xs">
+          <Input type="number" min={1} max={15} inputMode="numeric" value={daysBefore} onChange={(e) => setDaysBefore(e.target.value)} invalid={Boolean(save.fields.daysBefore)} />
+        </Field>
+        {kinds.map((kind) => (
+          <div key={kind.key} className="space-y-2">
+            <label className="flex cursor-pointer items-start gap-3">
+              <input type="checkbox" className="mt-1 size-4 accent-brand-700" checked={kind.enabled} onChange={(e) => change(kind.key, { enabled: e.target.checked })} />
+              <span>
+                <span className="block font-semibold text-ink-900">{t(kind.label)}</span>
+                <span className="block text-sm text-ink-500">{t(kind.description)}</span>
+              </span>
+            </label>
+            <Field label={t('Message')} hint={t('Words in curly brackets are filled in for each person: {list}', { list: kind.placeholders.map((word) => `{${word}}`).join(' ') })}>
+              <Textarea rows={3} value={kind.template} disabled={!kind.enabled} onChange={(e) => change(kind.key, { template: e.target.value })} />
+            </Field>
+            {kind.template !== kind.defaultTemplate ? (
+              <button type="button" className="text-sm font-semibold text-brand-700 hover:underline" onClick={() => change(kind.key, { template: kind.defaultTemplate })}>
+                {t('Use the original wording')}
+              </button>
+            ) : null}
+          </div>
+        ))}
+      </div>
+      <div className="mt-4 flex justify-end">
+        <LoadingButton loading={save.busy} onClick={() => save.run({ daysBefore: Number(daysBefore), kinds: kinds.map(({ key, enabled, template }) => ({ key, enabled, template })) })}>
+          {t('Save')}
+        </LoadingButton>
+      </div>
     </>
   );
 }

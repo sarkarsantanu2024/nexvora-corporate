@@ -11,7 +11,8 @@
  *                 and every centre that needs attention (royalty overdue,
  *                 agreement ending, no fees collected, attendance not marked)
  *   a centre:     attendance not marked, enquiry follow-ups, children not yet
- *                 billed, bills past the due date, circulars from head office
+ *                 billed, bills past the due date, WhatsApp reminders to send,
+ *                 circulars from head office
  *   a parent:     fees due for each child, notices from the school
  */
 import type { Translate } from '@/i18n/ui';
@@ -23,8 +24,9 @@ import { listCirculars } from './centre/money/notices';
 import type { Ctx } from './centre/money/shared';
 import { getOverview } from './hq/overview';
 import { listChildren, listNotices } from './parent/service';
+import { countWaiting } from './reminders/service';
 
-export type NotificationKind = 'money' | 'attendance' | 'enquiry' | 'lead' | 'notice' | 'centre';
+export type NotificationKind = 'money' | 'attendance' | 'enquiry' | 'lead' | 'notice' | 'centre' | 'reminder';
 export type Notification = {
   /** Stable while the thing is unchanged, so "already seen" can be remembered. */
   id: string;
@@ -86,7 +88,7 @@ export async function hqNotifications(t: Translate): Promise<Notification[]> {
 }
 
 export async function centreNotifications(ctx: Ctx, t: Translate): Promise<Notification[]> {
-  const [data, circulars] = await Promise.all([centreOverview(ctx), listCirculars(ctx)]);
+  const [data, circulars, reminders] = await Promise.all([centreOverview(ctx), listCirculars(ctx), countWaiting(ctx.centre.id)]);
   const out: Notification[] = [];
   const { todo } = data;
   if (todo.attendancePending.length > 0) {
@@ -126,6 +128,16 @@ export async function centreNotifications(ctx: Ctx, t: Translate): Promise<Notif
       tone: 'amber',
       title: t('{n} children not billed for {month}', { n: todo.unbilled, month: periodLabel(data.month) }),
       href: '/centre/fees/run',
+    });
+  }
+  if (reminders > 0) {
+    out.push({
+      id: `centre-reminders-${data.today}-${reminders}`,
+      kind: 'reminder',
+      tone: 'amber',
+      title: reminders === 1 ? t('1 WhatsApp reminder to send') : t('{n} WhatsApp reminders to send', { n: reminders }),
+      text: t('They wait on the Reminders screen'),
+      href: '/centre/reminders',
     });
   }
   for (const circular of circulars.slice(0, 5)) {

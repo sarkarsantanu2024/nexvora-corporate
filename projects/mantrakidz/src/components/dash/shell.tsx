@@ -29,7 +29,8 @@ import { InstallApp, OfflineBar, RouteProgress, usePwa } from '../pwa/pwa';
 import { FilterHost } from '../ui/client';
 import { LangMenu, UiLangProvider, useT } from '../ui/lang';
 import { Avatar } from '../ui/core';
-import { NAV, ROLE_LABELS, TABS, type Area, type NavItem } from './nav';
+import type { Plan } from '@/lib/plans';
+import { NAV, ROLE_LABELS, TABS, canOpen, type Area, type NavItem } from './nav';
 import { NotificationBell } from './notifications';
 
 export type ShellUser = { name: string; username: string; role: Role };
@@ -42,15 +43,15 @@ function isActive(pathname: string, item: NavItem) {
 }
 
 /** Every menu entry this role may open, in menu order. */
-const itemsFor = (area: Area, role: Role) => NAV[area].flatMap((group) => group.items).filter((item) => !item.roles || item.roles.includes(role));
+const itemsFor = (area: Area, role: Role, plan: Plan) => NAV[area].flatMap((group) => group.items).filter((item) => canOpen(item, role, plan));
 
-function Menu_({ area, role, onNavigate }: { area: Area; role: Role; onNavigate?: () => void }) {
+function Menu_({ area, role, plan, onNavigate }: { area: Area; role: Role; plan: Plan; onNavigate?: () => void }) {
   const pathname = usePathname();
   const t = useT();
   return (
     <nav className="scrollbar-thin flex-1 space-y-4 overflow-y-auto overscroll-contain px-3 py-3">
       {NAV[area].map((group, index) => {
-        const items = group.items.filter((item) => !item.roles || item.roles.includes(role));
+        const items = group.items.filter((item) => canOpen(item, role, plan));
         if (!items.length) return null;
         return (
           <div key={group.title ?? index}>
@@ -116,7 +117,7 @@ const TILE = 'grid h-14 w-14 place-items-center rounded-2xl transition-transform
  * "More" on a phone: every screen the person may open, as a grid of icons
  * under the same group names as the laptop sidebar.
  */
-function MenuSheet({ area, role, subtitle, onClose }: { area: Area; role: Role; subtitle: string; onClose: () => void }) {
+function MenuSheet({ area, role, plan, subtitle, onClose }: { area: Area; role: Role; plan: Plan; subtitle: string; onClose: () => void }) {
   const pathname = usePathname();
   const t = useT();
   const drag = useDragControls();
@@ -164,7 +165,7 @@ function MenuSheet({ area, role, subtitle, onClose }: { area: Area; role: Role; 
         {/* One even grid, four to a row, in menu order: no half-empty rows. */}
         <div className="scrollbar-thin flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-1">
           <ul className="grid grid-cols-4 gap-y-4">
-            {itemsFor(area, role).map((item) => {
+            {itemsFor(area, role, plan).map((item) => {
               const active = isActive(pathname, item);
               const Icon = item.icon;
               return (
@@ -190,10 +191,10 @@ function MenuSheet({ area, role, subtitle, onClose }: { area: Area; role: Role; 
 }
 
 /** The bottom bar of the phone layout. */
-function TabBar({ area, role, onMore, moreOpen }: { area: Area; role: Role; onMore: () => void; moreOpen: boolean }) {
+function TabBar({ area, role, plan, onMore, moreOpen }: { area: Area; role: Role; plan: Plan; onMore: () => void; moreOpen: boolean }) {
   const pathname = usePathname();
   const t = useT();
-  const all = itemsFor(area, role);
+  const all = itemsFor(area, role, plan);
   const tabs = TABS[area].map((href) => all.find((item) => item.href === href)).filter((item): item is NavItem => Boolean(item));
   const hasMore = all.length > tabs.length;
   const activeHref = tabs.find((item) => isActive(pathname, item))?.href;
@@ -244,6 +245,8 @@ type ShellProps = {
   user: ShellUser;
   /** Under the logo: "Head office" or the centre's name. */
   subtitle: string;
+  /** The plan this client bought: screens above it are left out of the menu. */
+  plan?: Plan;
   /** Set when a head-office user has stepped into a centre. */
   actingCentre?: string;
   children: ReactNode;
@@ -258,7 +261,7 @@ export function DashShell({ lang, dict, ...props }: ShellProps & { lang: Lang; d
   );
 }
 
-function Frame({ area, user, subtitle, actingCentre, children }: ShellProps) {
+function Frame({ area, user, subtitle, actingCentre, plan = 'platinum', children }: ShellProps) {
   const t = useT();
   const [menuOpen, setMenuOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
@@ -269,7 +272,7 @@ function Frame({ area, user, subtitle, actingCentre, children }: ShellProps) {
   const { installed } = usePwa();
 
   // The screen's name for the phone top bar, and whether this is a screen inside it.
-  const current = itemsFor(area, user.role)
+  const current = itemsFor(area, user.role, plan)
     .filter((item) => isActive(pathname, item))
     .sort((a, b) => b.href.length - a.href.length)[0];
   const inner = Boolean(current) && pathname !== current.href;
@@ -346,13 +349,13 @@ function Frame({ area, user, subtitle, actingCentre, children }: ShellProps) {
         {/* sidebar, laptop */}
         <aside className="no-print fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-ink-200 bg-white lg:flex">
           <Brand subtitle={subtitle} />
-          <Menu_ area={area} role={user.role} />
+          <Menu_ area={area} role={user.role} plan={plan} />
           <SideFooter />
         </aside>
 
         {/* every screen as a grid of icons, phone: slides up, can be pulled down to shut */}
         <AnimatePresence>
-          {menuOpen ? <MenuSheet area={area} role={user.role} subtitle={subtitle} onClose={() => setMenuOpen(false)} /> : null}
+          {menuOpen ? <MenuSheet area={area} role={user.role} plan={plan} subtitle={subtitle} onClose={() => setMenuOpen(false)} /> : null}
         </AnimatePresence>
 
         {/* top bar */}
@@ -452,7 +455,7 @@ function Frame({ area, user, subtitle, actingCentre, children }: ShellProps) {
           </FilterHost>
         </main>
 
-        <TabBar area={area} role={user.role} moreOpen={menuOpen} onMore={() => setMenuOpen((open) => !open)} />
+        <TabBar area={area} role={user.role} plan={plan} moreOpen={menuOpen} onMore={() => setMenuOpen((open) => !open)} />
       </div>
     </MotionConfig>
   );

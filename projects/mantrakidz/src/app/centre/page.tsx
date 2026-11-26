@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { BarsChart, CHART_COLORS } from '@/components/ui/charts';
 import { Card, CardBody, CardHeader, EmptyState, LinkButton, PageHeader, Stat, Table, Td, Th, Tr } from '@/components/ui/core';
+import { SuggestionList } from '@/components/dash/suggestions';
 import { CountUp } from '@/components/ui/motion';
 import { requireCentre } from '@/lib/auth';
 import { formatDate, periodLabel } from '@/lib/date';
@@ -11,6 +12,7 @@ import { inr } from '@/lib/money';
 import { getT } from '@/lib/t';
 import { METHOD_LABELS } from '@/server/centre/money/labels';
 import { centreOverview } from '@/server/centre/money/overview';
+import { schoolSuggestions } from '@/server/suggestions';
 
 export const metadata: Metadata = { title: 'Overview' };
 
@@ -28,7 +30,7 @@ function TodoRow({ href, icon, text, count }: { href: string; icon: ReactNode; t
 export default async function OverviewPage() {
   const t = await getT();
   const ctx = await requireCentre();
-  const data = await centreOverview(ctx);
+  const [data, suggestions] = await Promise.all([centreOverview(ctx), schoolSuggestions(ctx, t)]);
   const { tiles, todo, manager } = data;
   const month = periodLabel(data.month);
   const nothingToDo = !todo.attendancePending.length && !todo.followUps && !todo.unbilled && !todo.overdue;
@@ -81,6 +83,8 @@ export default async function OverviewPage() {
         ) : null}
         <Stat label={t('Seats free')} value={<CountUp value={tiles.seatsFree} />} hint={t('Across all classes')} icon={<Armchair size={18} />} tone="violet" href="/centre/batches" />
       </div>
+
+      <SuggestionList items={suggestions} title={t('What to do next')} className="mt-5" />
 
       <div className="mt-5 grid gap-5 lg:grid-cols-3">
         <Card className="min-w-0 lg:col-span-1">

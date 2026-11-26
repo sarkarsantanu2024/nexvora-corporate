@@ -11,7 +11,8 @@ import type { Session } from './session-token';
  *   });
  */
 export async function audit(
-  session: Pick<Session, 'uid' | 'name'> | null,
+  /** The person; `uid: null` with a name for changes made by the system or by Nexvora. */
+  session: (Pick<Session, 'name'> & { uid: string | null }) | null,
   action: string,
   details: {
     entity?: string;

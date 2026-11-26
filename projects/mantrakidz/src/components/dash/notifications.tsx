@@ -8,7 +8,7 @@
  * kept on their own device, the bell counts the ones that are not in that
  * list, and opening the notifications screen marks them all as seen.
  */
-import { Bell, BellOff, Building2, CalendarCheck, ChevronRight, Handshake, IndianRupee, Megaphone, MessageSquareText, type LucideIcon } from 'lucide-react';
+import { Bell, BellOff, Building2, CalendarCheck, ChevronRight, Handshake, IndianRupee, Megaphone, MessageSquareText, Send, type LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -95,6 +95,7 @@ const ICONS: Record<NotificationKind, LucideIcon> = {
   lead: Handshake,
   notice: Megaphone,
   centre: Building2,
+  reminder: Send,
 };
 const TONES = {
   red: { chip: 'bg-accent-50 text-accent-700', group: 'Needs you today' },

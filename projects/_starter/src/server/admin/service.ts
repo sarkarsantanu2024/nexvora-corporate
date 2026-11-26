@@ -10,6 +10,7 @@ import { audit } from '@/lib/audit';
 import { addDays, todayIST } from '@/lib/date';
 import type { Session } from '@/lib/session-token';
 import { day, optionalEmail, optionalPhone, requiredText, text, uuid } from '@/lib/validators';
+import { notTrashed } from '../enquiries/service';
 import { PAGE_SIZE, assertAdmin, countInt, getSetting, pageOf, putSetting } from './shared';
 
 /* ───────────── overview ───────────── */
@@ -17,14 +18,15 @@ import { PAGE_SIZE, assertAdmin, countInt, getSetting, pageOf, putSetting } from
 export async function getOverview() {
   const db = await getDb();
   const [[open], [allEnquiries], [notices], [photos], [logins], latest, activity] = await Promise.all([
-    db.select({ n: countInt() }).from(enquiries).where(eq(enquiries.status, 'new')),
-    db.select({ n: countInt() }).from(enquiries),
+    db.select({ n: countInt() }).from(enquiries).where(and(eq(enquiries.status, 'new'), notTrashed)),
+    db.select({ n: countInt() }).from(enquiries).where(notTrashed),
     db.select({ n: countInt() }).from(announcements),
     db.select({ n: countInt() }).from(galleryItems),
     db.select({ n: countInt() }).from(users).where(eq(users.active, true)),
     db
       .select({ id: enquiries.id, name: enquiries.name, phone: enquiries.phone, subject: enquiries.subject, message: enquiries.message, status: enquiries.status, createdAt: enquiries.createdAt })
       .from(enquiries)
+      .where(notTrashed)
       .orderBy(desc(enquiries.createdAt))
       .limit(5),
     db

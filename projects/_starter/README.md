@@ -21,6 +21,13 @@ Also built in:
 - **Three languages for the team**: each person can read the dashboard in English, Hindi or Bengali, chosen from the top bar.
 - **Two roles**: `admin` does everything; `staff` cannot open Team and logins, the Activity log or Settings.
 - **Activity log**: who changed what, and when.
+- **Reminders**: WhatsApp messages that fall due (a thank-you to a new enquiry; a module adds fee due, birthdays and so on) wait on one screen. Send opens the person's own WhatsApp with the text ready. The wording and on/off switches are in Settings.
+- **Trash**: what is deleted can be brought back by an admin, or removed for good.
+- **Import from a spreadsheet**: a CSV file or cells pasted from Excel, with the columns matched on screen and bad rows listed with the reason (Enquiries has it; a module reuses `ImportButton` and `runImport`).
+- **What to do next**: cards on the overview from plain rules (business details missing, sample photos still up, the daily job stopped).
+- **Plan and pause**: the client gets everything; the plan (`website`, `panel`, `platinum`) decides which screens open. Nexvora changes it, or pauses the dashboard, through `/api/platform` with `PLATFORM_SECRET`. A paused account keeps its website up.
+- **Daily job**: at 9:00 India time Vercel calls `/api/cron/daily` (`vercel.json`), which makes the reminders and clears old ones.
+- **Security headers** on every page (`next.config.ts`).
 
 Work that is special to this client (billing, stock, bookings, members and so on) is added as a business module. See `docs/CONVENTIONS.md`, "Adding a business module".
 
@@ -60,6 +67,8 @@ npm test             # vitest, against an in-memory database
    | `SESSION_SECRET` | any long random string (for example from `openssl rand -base64 48`) |
    | `NEXT_PUBLIC_SITE_URL` | the live address, for example `https://www.example.com` |
    | `BLOB_READ_WRITE_TOKEN` | added for you in step 3 |
+   | `CRON_SECRET` | any random string of 32 characters or more: turns on the daily job (reminders, clean-up) |
+   | `PLATFORM_SECRET` | another random string of 32 characters or more: Nexvora's key for the plan and pausing (`/api/platform`) |
    | `ANTHROPIC_API_KEY` | optional: lets the voice assistant understand free-form sentences |
 
    Redeploy after adding or changing a variable.

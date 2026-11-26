@@ -20,7 +20,9 @@ import {
   MessageSquareText,
   ReceiptIndianRupee,
   School,
+  Send,
   Settings,
+  Trash2,
   UserCog,
   UserPlus,
   Users,
@@ -29,6 +31,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import type { Role } from '@/db/schema';
+import { planAllows, type Plan } from '@/lib/plans';
 
 export type NavItem = {
   href: string;
@@ -36,6 +39,8 @@ export type NavItem = {
   icon: LucideIcon;
   /** Shown only to these roles; everyone in the area when omitted. */
   roles?: Role[];
+  /** The lowest plan that opens this screen (see src/server/platform.ts); every plan when omitted. */
+  plan?: Plan;
   /** Match only the exact path (for the area's home). */
   exact?: boolean;
   /** A shorter name for the bottom bar on a phone, where there is room for one word. */
@@ -53,26 +58,26 @@ export const NAV: Record<Area, NavGroup[]> = {
     {
       title: 'Franchise',
       items: [
-        { href: '/hq/leads', label: 'Franchise leads', icon: Handshake, short: 'Leads' },
-        { href: '/hq/centres', label: 'Schools', icon: Building2 },
-        { href: '/hq/royalty', label: 'Royalty', icon: BadgeIndianRupee },
-        { href: '/hq/announcements', label: 'Circulars', icon: Megaphone },
+        { href: '/hq/leads', label: 'Franchise leads', icon: Handshake, short: 'Leads', plan: 'platinum' },
+        { href: '/hq/centres', label: 'Schools', icon: Building2, plan: 'platinum' },
+        { href: '/hq/royalty', label: 'Royalty', icon: BadgeIndianRupee, plan: 'platinum' },
+        { href: '/hq/announcements', label: 'Circulars', icon: Megaphone, plan: 'platinum' },
       ],
     },
     {
       title: 'School',
       items: [
         { href: '/hq/enquiries', label: 'Enquiries', icon: MessageSquareText },
-        { href: '/hq/programmes', label: 'Programmes', icon: BookOpen },
-        { href: '/hq/reports', label: 'Reports', icon: BarChart3 },
+        { href: '/hq/programmes', label: 'Programmes', icon: BookOpen, plan: 'platinum' },
+        { href: '/hq/reports', label: 'Reports', icon: BarChart3, plan: 'platinum' },
       ],
     },
     {
       title: 'Website',
       items: [
-        { href: '/hq/website', label: 'Edit website', icon: Globe },
-        { href: '/hq/website/gallery', label: 'Gallery', icon: Images },
-        { href: '/hq/website/notices', label: 'Notices and events', icon: CalendarDays },
+        { href: '/hq/website', label: 'Edit website', icon: Globe, plan: 'panel' },
+        { href: '/hq/website/gallery', label: 'Gallery', icon: Images, plan: 'panel' },
+        { href: '/hq/website/notices', label: 'Notices and events', icon: CalendarDays, plan: 'panel' },
       ],
     },
     {
@@ -80,6 +85,7 @@ export const NAV: Record<Area, NavGroup[]> = {
       items: [
         { href: '/hq/users', label: 'Team and logins', icon: UserCog, roles: HQ_ADMIN },
         { href: '/hq/audit', label: 'Activity log', icon: History, roles: HQ_ADMIN },
+        { href: '/hq/trash', label: 'Trash', icon: Trash2, roles: HQ_ADMIN },
         { href: '/hq/settings', label: 'Settings', icon: Settings, roles: HQ_ADMIN },
       ],
     },
@@ -93,6 +99,7 @@ export const NAV: Record<Area, NavGroup[]> = {
         { href: '/centre/students', label: 'Children', icon: Baby },
         { href: '/centre/batches', label: 'Classes', icon: School },
         { href: '/centre/attendance', label: 'Attendance', icon: CalendarCheck },
+        { href: '/centre/reminders', label: 'Reminders', icon: Send },
       ],
     },
     {
@@ -109,6 +116,7 @@ export const NAV: Record<Area, NavGroup[]> = {
       items: [
         { href: '/centre/staff', label: 'Staff', icon: UsersRound, roles: MANAGERS },
         { href: '/centre/notices', label: 'Notices', icon: Bell },
+        { href: '/centre/trash', label: 'Trash', icon: Trash2, roles: MANAGERS },
         { href: '/centre/settings', label: 'Settings', icon: Settings, roles: MANAGERS },
       ],
     },
@@ -135,6 +143,9 @@ export const TABS: Record<Area, string[]> = {
   centre: ['/centre', '/centre/students', '/centre/attendance', '/centre/fees'],
   parent: ['/parent', '/parent/fees', '/parent/attendance', '/parent/notices'],
 };
+
+/** May this person, on this plan, open this menu entry? */
+export const canOpen = (item: NavItem, role: Role, plan: Plan) => (!item.roles || item.roles.includes(role)) && (!item.plan || planAllows(plan, item.plan));
 
 export const ROLE_LABELS: Record<Role, string> = {
   hq_admin: 'Head office admin',

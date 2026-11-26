@@ -15,6 +15,13 @@
       "when": 1794772467800,
       "tag": "0001_small_hammerhead",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795676097435,
+      "tag": "0002_quiet_rocket_racer",
+      "breakpoints": true
     }
   ]
 }

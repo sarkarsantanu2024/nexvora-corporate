@@ -293,7 +293,10 @@ export async function deleteCentre(session: Session, id: string) {
     throw new ApiError(400, `${centre.name} has ${n} ${n === 1 ? 'child' : 'children'} on its records, so it cannot be deleted. Close the school instead; its history stays.`);
   }
   await db.transaction(async (tx) => {
-    await tx.update(centres).set({ deletedAt: new Date(), showOnWebsite: false, updatedAt: new Date() }).where(eq(centres.id, centre.id));
+    // Which logins were open and whether it was on the website are kept, so the Trash can bring it back as it was.
+    const open = await tx.select({ id: users.id }).from(users).where(and(eq(users.centreId, centre.id), eq(users.active, true)));
+    const trashed = { showOnWebsite: centre.showOnWebsite, activeUserIds: open.map((row) => row.id) };
+    await tx.update(centres).set({ deletedAt: new Date(), showOnWebsite: false, updatedAt: new Date(), meta: { ...centre.meta, trashed } }).where(eq(centres.id, centre.id));
     await tx.update(users).set({ active: false }).where(eq(users.centreId, centre.id));
   });
   await audit(session, 'centre.delete', { entity: 'centre', entityId: centre.id, summary: `Deleted school ${centre.code} ${centre.name}` });

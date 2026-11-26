@@ -14,7 +14,7 @@ import { UI_HI } from '@/i18n/ui-hi';
 
 const SRC = path.resolve(__dirname, '../src');
 // A business module adds its own folders here (say 'app/shop'), so its screens are checked too.
-const SCANNED = ['app/admin', 'app/account', 'app/login', 'components/ui', 'components/cms', 'components/pwa', 'components/dash', 'server'];
+const SCANNED = ['app/admin', 'app/account', 'app/login', 'app/suspended', 'components/ui', 'components/cms', 'components/pwa', 'components/dash', 'server'];
 const DICTS: [string, Record<string, string>][] = [
   ['Hindi', UI_HI],
   ['Bengali', UI_BN],

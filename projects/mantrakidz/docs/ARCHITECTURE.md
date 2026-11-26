@@ -81,6 +81,16 @@ Languages use address prefixes (`/bn/about`, `/hi/about`). The middleware strips
 - Uploads are re-encoded by the server; local file serving refuses path tricks.
 - The activity log records logins, money changes, child records, centre changes and website publishes.
 
+## Shared with every Nexvora client app (added 26 Nov 2026)
+
+- **WhatsApp reminders to parents** (`src/server/reminders`): fee due soon, fee overdue, absent today, birthday. Made each morning by the daily job and whenever a school opens its Reminders screen; each is made once only (a key per bill, child and day) and set aside by itself when the bill is paid or the child is marked present. Nothing is sent by the app: the school presses Send and its own WhatsApp opens. Head office sets the switches, the wording and how many days before the due date in Settings. Table `message_outbox`, one school per row.
+- **Trash** (`src/server/trash`): a school head brings back deleted children, staff and expenses of that school; head office brings back deleted schools with the logins they had. Expenses and schools are never removed for good.
+- **Import children** from a CSV file or cells pasted from Excel (Children screen, school head only). Each row is admitted the normal way; refused rows are listed with the reason.
+- **What to do next** cards on both overviews (`src/server/suggestions.ts`).
+- **Plan and pause** (`src/server/platform.ts`): Mantra Kidz is on Platinum. Nexvora reads the plan and usage, changes the plan or pauses the dashboards through `/api/platform` with `PLATFORM_SECRET`, from the Projects page of the corporate super admin. A paused account shows `/suspended`; the website stays up.
+- **Daily job** at 9:00 India time (`vercel.json` → `/api/cron/daily`, `CRON_SECRET`).
+- **Security headers** on every page (`next.config.ts`).
+
 ## Checks
 
 `npm run typecheck`, `npm test` (203 tests: seed consistency, admissions, attendance, billing, payments, voids, royalty, lead conversion, parent access, content publishing, voice commands, translations), `next build`. A browser sweep of 136 screen visits across all roles at laptop and phone width passed with no errors on 16 Nov 2026.

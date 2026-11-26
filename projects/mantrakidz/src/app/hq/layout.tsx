@@ -5,6 +5,7 @@ import { uiDict } from '@/i18n/ui';
 import { HQ_ROLES, requireSession } from '@/lib/auth';
 import { getLang } from '@/lib/lang';
 import { getT } from '@/lib/t';
+import { getPlatform } from '@/server/platform';
 
 export const metadata: Metadata = { title: { default: 'Head office', template: '%s | Mantra Kidz HQ' }, robots: { index: false } };
 
@@ -12,11 +13,13 @@ export default async function HqLayout({ children }: { children: ReactNode }) {
   const session = await requireSession(HQ_ROLES);
   const lang = await getLang();
   const t = await getT();
+  const { plan } = await getPlatform();
   return (
     <DashShell
       lang={lang}
       dict={uiDict(lang)}
       area="hq"
+      plan={plan}
       subtitle={t('Head office')}
       user={{ name: session.name, username: session.username, role: session.role }}>
       {children}

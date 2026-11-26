@@ -8,6 +8,7 @@ import bcrypt from 'bcryptjs';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import type { Role } from '@/db/schema';
+import { getPlatform } from '@/server/platform';
 import { ApiError } from './api';
 import { SESSION_COOKIE, SESSION_HOURS, homeFor, readSessionToken, signSession, type Session } from './session-token';
 
@@ -43,11 +44,15 @@ export async function endSession() {
   jar.delete(SESSION_COOKIE);
 }
 
-/** For pages and server actions. Sends the visitor to /login, or to their own home if the role is wrong. */
+/**
+ * For pages and server actions. Sends the visitor to /login, or to their own
+ * home if the role is wrong, or to /suspended while Nexvora has paused the account.
+ */
 export async function requireSession(roles?: Role[]): Promise<Session> {
   const session = await getSession();
   if (!session) redirect('/login');
   if (roles && !roles.includes(session.role)) redirect(homeFor(session.role));
+  if ((await getPlatform()).status === 'suspended') redirect('/suspended');
   return session;
 }
 
@@ -56,5 +61,6 @@ export async function apiSession(roles?: Role[]): Promise<Session> {
   const session = await getSession();
   if (!session) throw new ApiError(401, 'Please log in');
   if (roles && !roles.includes(session.role)) throw new ApiError(403, 'You do not have access to this');
+  if ((await getPlatform()).status === 'suspended') throw new ApiError(403, 'This account is paused. Please contact Nexvora.');
   return session;
 }

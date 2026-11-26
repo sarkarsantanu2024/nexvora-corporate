@@ -1,6 +1,6 @@
 # Starting a new client project
 
-A checklist. Work down it in order. Commands are typed in a terminal opened at the top folder of the repository (`nexvora-corporate`).
+A checklist. Work down it in order. The full picture (architecture, EduFlow features to add, module catalogue, plans, and a prompt to paste) is in `BLUEPRINT.md`. Commands are typed in a terminal opened at the top folder of the repository (`nexvora-corporate`).
 
 ## 1. Make the project
 
@@ -72,7 +72,9 @@ Full steps are in `README.md`, "Put it live". In short:
 - [ ] **Neon**: new project, copy the pooled connection string.
 - [ ] **Vercel**: new project, Root Directory `projects/<slug>`, Build Command `npm run vercel-build`.
 - [ ] **Blob store**: create it as **Public**, connect it to the project with the read-write token box ticked.
-- [ ] **Environment variables**: `DATABASE_URL`, `SESSION_SECRET`, `NEXT_PUBLIC_SITE_URL` (and `ANTHROPIC_API_KEY` if voice should understand free sentences).
+- [ ] **Environment variables**: `DATABASE_URL`, `SESSION_SECRET`, `NEXT_PUBLIC_SITE_URL`, `CRON_SECRET` and `PLATFORM_SECRET` (two different random strings of 32 characters or more; keep the platform one in your own records), and `ANTHROPIC_API_KEY` if voice should understand free sentences.
+- [ ] **Plan**: the app starts on Platinum. If the client bought less, set it: `curl -X POST https://<site>/api/platform -H "Authorization: Bearer <PLATFORM_SECRET>" -H "Content-Type: application/json" -d '{"plan":"panel"}'`.
+- [ ] **Daily job**: the next morning, Settings › Your plan should say when the daily check last ran.
 - [ ] **Seed**: with `DATABASE_URL` and `ADMIN_PASSWORD` set in your terminal, run `npm run db:seed` once.
 - [ ] Log in on the live site and change the admin password when asked.
 - [ ] Open the live site on a phone, tap Install on the black bar, and check the app opens from its icon. Send the app link to the owner from the person menu, "Send app link to WhatsApp".

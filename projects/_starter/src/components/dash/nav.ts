@@ -13,8 +13,9 @@
  * Labels are written in English here. The frame passes them through t(), so
  * add each new label, title and short name to src/i18n/ui-hi.ts and ui-bn.ts.
  */
-import { CalendarDays, Globe, History, House, Images, MessageSquareText, Settings, UserCog, type LucideIcon } from 'lucide-react';
+import { CalendarDays, Globe, History, House, Images, MessageSquareText, Send, Settings, Trash2, UserCog, type LucideIcon } from 'lucide-react';
 import type { Role } from '@/db/schema';
+import { planAllows, type Plan } from '@/lib/plans';
 
 export type NavItem = {
   href: string;
@@ -22,6 +23,8 @@ export type NavItem = {
   icon: LucideIcon;
   /** Shown only to these roles; everyone in the area when omitted. */
   roles?: Role[];
+  /** The lowest plan that opens this screen (see src/server/platform.ts); every plan when omitted. */
+  plan?: Plan;
   /** Match only the exact path (for the area's home). */
   exact?: boolean;
   /** A shorter name for the bottom bar and the icon grid on a phone, where there is room for one word. */
@@ -38,14 +41,15 @@ export const NAV: Record<Area, NavGroup[]> = {
       items: [
         { href: '/admin', label: 'Overview', icon: House, exact: true, short: 'Home' },
         { href: '/admin/enquiries', label: 'Enquiries', icon: MessageSquareText },
+        { href: '/admin/reminders', label: 'Reminders', icon: Send, plan: 'panel' },
       ],
     },
     {
       title: 'Website',
       items: [
-        { href: '/admin/website', label: 'Edit website', icon: Globe, short: 'Website' },
-        { href: '/admin/website/gallery', label: 'Gallery', icon: Images },
-        { href: '/admin/website/notices', label: 'Notices and events', icon: CalendarDays, short: 'Notices' },
+        { href: '/admin/website', label: 'Edit website', icon: Globe, short: 'Website', plan: 'panel' },
+        { href: '/admin/website/gallery', label: 'Gallery', icon: Images, plan: 'panel' },
+        { href: '/admin/website/notices', label: 'Notices and events', icon: CalendarDays, short: 'Notices', plan: 'panel' },
       ],
     },
     {
@@ -53,11 +57,15 @@ export const NAV: Record<Area, NavGroup[]> = {
       items: [
         { href: '/admin/users', label: 'Team and logins', icon: UserCog, roles: ADMIN, short: 'Team' },
         { href: '/admin/audit', label: 'Activity log', icon: History, roles: ADMIN, short: 'Activity' },
+        { href: '/admin/trash', label: 'Trash', icon: Trash2, roles: ADMIN },
         { href: '/admin/settings', label: 'Settings', icon: Settings, roles: ADMIN },
       ],
     },
   ],
 };
+
+/** May this person, on this plan, open this menu entry? */
+export const canOpen = (item: NavItem, role: Role, plan: Plan) => (!item.roles || item.roles.includes(role)) && (!item.plan || planAllows(plan, item.plan));
 
 /**
  * The bottom bar on a phone: the screens a person opens most, in order, at

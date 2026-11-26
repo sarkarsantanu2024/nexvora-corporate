@@ -120,6 +120,21 @@ The starter shows: enquiries nobody answered for more than two days (red), other
 
 To add your own, open `src/server/notifications.ts`. Write one function that takes the session and `t` and returns a list of lines, then add it to `SOURCES` at the bottom. The bell, the count and the screen pick it up. A new kind of line needs an icon in `src/components/dash/notifications.tsx`. The note at the top of the server file has the details.
 
+## Common features a module plugs into
+
+Each of these is a list in one file. A module adds its entry there; the screens, the bell and the daily job pick it up.
+
+| Feature | Add your entry to | Example |
+|---|---|---|
+| WhatsApp reminders | `REMINDER_KINDS` in `src/server/reminders/kinds.ts` | fee due in 3 days, birthday today. Give each a `dedupeKey` naming the thing and the occasion, and a `resolved` check so a paid fee's reminder is set aside by itself. |
+| Trash | `SOURCES` in `src/server/trash/service.ts` | a customer, a product. Set `deletedAt` instead of deleting, leave such rows out of every list, and make `purge` refuse when money records hang off the row. |
+| Import from a spreadsheet | `<ImportButton fields onImport>` on the screen (`src/components/ui/import.tsx`), and `runImport(rows, schema, save)` in the service (`src/server/import.ts`) | customers, products. Each row is checked with zod; a refused row is listed with its reason. |
+| "What to do next" cards | `RULES` in `src/server/suggestions.ts` | "this month's costs are higher than the takings". Plain rules over counts, never a guess. |
+| Daily job | `JOBS` in `src/server/jobs.ts` | the monthly bill run. Must be safe to run twice. |
+| Plan | `plan: 'platinum'` on the menu item in `nav.ts`, and `await requirePlan('platinum')` at the top of the page | every business screen is Platinum; website editing is `panel`. |
+
+The plan and the paused account (`src/server/platform.ts`, `src/lib/plans.ts`) are set only by Nexvora through `/api/platform`. `requireSession` already sends everyone to `/suspended` while the account is paused, so a module does nothing for that.
+
 ## Website content
 
 The site is cut into sections declared in `src/cms/sections/`. Each declaration lists its fields and default text, and from it come the page's typed content, the edit panel's form and the voice assistant's vocabulary.

@@ -27,12 +27,14 @@
  */
 import { and, desc, eq, gte, isNull, lt, lte, or } from 'drizzle-orm';
 import { getDb } from '@/db';
-import { announcements, enquiries } from '@/db/schema';
+import { announcements, enquiries, messageOutbox } from '@/db/schema';
 import type { Translate } from '@/i18n/ui';
 import { addDays, formatDate, todayIST } from '@/lib/date';
 import type { Session } from '@/lib/session-token';
 import { countInt } from './admin/shared';
+import { planAllows } from '@/lib/plans';
 import { keysWithDraft } from './cms/service';
+import { getPlatform } from './platform';
 
 export type NotificationKind = 'enquiry' | 'website' | 'notice' | 'money' | 'task';
 export type Notification = {
@@ -58,7 +60,7 @@ const NOTICE_DAYS = 7;
 const enquiryItems: NotificationSource = async (_session, t) => {
   const db = await getDb();
   const lateBefore = new Date(Date.now() - LATE_AFTER_DAYS * 24 * 60 * 60 * 1000);
-  const isNew = eq(enquiries.status, 'new');
+  const isNew = and(eq(enquiries.status, 'new'), isNull(enquiries.deletedAt));
   const [[late], [recent], [newest]] = await Promise.all([
     db.select({ n: countInt() }).from(enquiries).where(and(isNew, lt(enquiries.createdAt, lateBefore))),
     db.select({ n: countInt() }).from(enquiries).where(and(isNew, gte(enquiries.createdAt, lateBefore))),
@@ -123,8 +125,29 @@ const noticeItems: NotificationSource = async (_session, t) => {
   }));
 };
 
+/** WhatsApp reminders that are due and nobody has sent yet (src/server/reminders). */
+const reminderItems: NotificationSource = async (_session, t) => {
+  if (!planAllows((await getPlatform()).plan, 'panel')) return [];
+  const db = await getDb();
+  const [[waiting], [newest]] = await Promise.all([
+    db.select({ n: countInt() }).from(messageOutbox).where(eq(messageOutbox.status, 'waiting')),
+    db.select({ id: messageOutbox.id }).from(messageOutbox).where(eq(messageOutbox.status, 'waiting')).orderBy(desc(messageOutbox.createdAt)).limit(1),
+  ]);
+  if (!waiting.n) return [];
+  return [
+    {
+      id: `reminders-${waiting.n}-${newest?.id ?? ''}`,
+      kind: 'task',
+      tone: 'amber',
+      title: waiting.n === 1 ? t('1 WhatsApp reminder to send') : t('{n} WhatsApp reminders to send', { n: waiting.n }),
+      text: t('They wait on the Reminders screen'),
+      href: '/admin/reminders',
+    },
+  ];
+};
+
 /** Every part of the list, in the order it is asked. A business module adds its own here. */
-const SOURCES: NotificationSource[] = [enquiryItems, websiteItems, noticeItems];
+const SOURCES: NotificationSource[] = [enquiryItems, reminderItems, websiteItems, noticeItems];
 
 /** The bell's list for one person, most urgent first. */
 export async function listNotifications(session: Session, t: Translate): Promise<Notification[]> {

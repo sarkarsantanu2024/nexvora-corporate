@@ -15,9 +15,17 @@ export function waLink(phone: string | null | undefined, text = ''): string {
   return `https://wa.me/${to}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
 }
 
-/** "Hello {name}" + { name: 'Riya' } → "Hello Riya" */
-export const fillTemplate = (template: string, values: Record<string, string | number>) =>
-  template.replace(/\{(\w+)\}/g, (_, key: string) => String(values[key] ?? ''));
+/**
+ * "Hello {name}" + { name: 'Riya' } → "Hello Riya". A {word} with no value is
+ * left as it is, so a typing mistake in the owner's wording shows up in the
+ * message instead of silently disappearing.
+ */
+export function fillTemplate(template: string, values: Record<string, string | number | null | undefined>): string {
+  return template.replace(/\{(\w+)\}/g, (whole, key: string) => {
+    const value = values[key];
+    return value === undefined || value === null ? whole : String(value);
+  });
+}
 
 export const telLink = (phone: string | null | undefined) => {
   const digits = (phone ?? '').replace(/[^\d+]/g, '');

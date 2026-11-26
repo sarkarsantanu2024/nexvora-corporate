@@ -52,6 +52,8 @@ npm test             # vitest, against an in-memory database
    | `NEXT_PUBLIC_SITE_URL` | `https://www.mantrakidz.com` |
    | `BLOB_READ_WRITE_TOKEN` | added for you when you create a Blob store under Storage (photo uploads) |
    | `ANTHROPIC_API_KEY` | optional: lets the voice assistant understand free-form sentences |
+   | `CRON_SECRET` | any random string of 32 characters or more: turns on the daily job (reminders to parents, clean-up) |
+   | `PLATFORM_SECRET` | another random string of 32 characters or more: Nexvora's key for the plan and pausing (`/api/platform`). Put the same value on the corporate site as `PLATFORM_SECRET_MANTRAKIDZ`. |
    | `ADMIN_PASSWORD` | the starting password of the `admin` login (used once, by the seed) |
 
 4. Load the first data once, from your machine:

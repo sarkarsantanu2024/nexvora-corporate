@@ -130,7 +130,11 @@ export async function deleteStaff(ctx: Ctx, id: string) {
   if (paid.n + marked.n + teaches.n > 0 || member.userId) {
     fail('This person has salary, attendance, a class or a login on record. Mark them as left instead.');
   }
-  await db.update(staff).set({ deletedAt: new Date(), active: false }).where(and(eq(staff.id, id), eq(staff.centreId, ctx.centre.id)));
+  // Whether they were active is kept, so the Trash can bring them back as they were.
+  await db
+    .update(staff)
+    .set({ deletedAt: new Date(), active: false, meta: { ...member.meta, trashed: { active: member.active } } })
+    .where(and(eq(staff.id, id), eq(staff.centreId, ctx.centre.id)));
   await audit(ctx.session, 'staff.delete', { entity: 'staff', entityId: id, centreId: ctx.centre.id, summary: `${member.name} deleted` });
 }
 

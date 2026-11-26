@@ -20,7 +20,9 @@ import { hashPassword } from '@/lib/auth';
 import { addMonths, currentPeriod, formatDate, periodRange, todayIST } from '@/lib/date';
 import { percent } from '@/lib/money';
 import { nextAdmissionNo } from '@/lib/numbering';
+import { sheetDate } from '@/lib/csv';
 import { day, optionalDay, optionalEmail, optionalPhone, optionalUuid, phone, requiredText, rupees, text, uuid } from '@/lib/validators';
+import { runImport, type ImportResult } from '../../import';
 import { currentYear } from './batches';
 import { loadEnquiry } from './enquiries';
 import { insertNote, isUuid, likeTerm, loadBatch, loadStudent, requireManager, startingPassword, type Ctx } from './shared';
@@ -261,7 +263,8 @@ export async function deleteStudent(ctx: Ctx, id: string) {
   if (n > 0) fail('This child has bills, so the record is kept. Mark the child as left instead.');
   await db
     .update(students)
-    .set({ deletedAt: new Date(), status: 'left', batchId: null })
+    // What it was is kept, so the Trash can bring it back as it was.
+    .set({ deletedAt: new Date(), status: 'left', batchId: null, meta: { ...child.meta, trashed: { status: child.status, batchId: child.batchId } } })
     .where(and(eq(students.id, id), eq(students.centreId, ctx.centre.id)));
   await audit(ctx.session, 'student.delete', { entity: 'student', entityId: id, centreId: ctx.centre.id, summary: `${child.name} (${child.admissionNo}) deleted` });
 }
@@ -502,4 +505,85 @@ export async function studentAttendance(ctx: Ctx, studentId: string) {
     return { month, present, schoolDays, percent: percent(present, schoolDays) };
   });
   return { period, days: rows.filter((r) => r.day.startsWith(period)), summary };
+}
+
+/* ───────────── import from a spreadsheet ───────────── */
+
+const sheetText = (max: number) => z.string().trim().max(max).default('');
+const importRow = z.object({
+  name: z.string().trim().min(1, "Child's name is required").max(80),
+  dob: sheetText(20),
+  gender: sheetText(10),
+  className: sheetText(80),
+  programme: sheetText(80),
+  fatherName: sheetText(80),
+  motherName: sheetText(80),
+  phone: sheetText(20),
+  altPhone: sheetText(20),
+  email: sheetText(120),
+  address: sheetText(300),
+  admissionDate: sheetText(20),
+  monthlyFee: sheetText(12),
+});
+
+const GENDERS: Record<string, 'Girl' | 'Boy'> = { girl: 'Girl', f: 'Girl', female: 'Girl', boy: 'Boy', m: 'Boy', male: 'Boy' };
+
+/**
+ * Children from a spreadsheet, each admitted the normal way (an admission
+ * number of its own, the same checks as the form). The class is matched by
+ * its name in this school; without a class, the programme name is enough.
+ * A child already on the list (same name and mobile) is left out.
+ */
+export async function importChildren(ctx: Ctx, rows: unknown): Promise<ImportResult> {
+  requireManager(ctx);
+  const db = await getDb();
+  const [classList, programmeList, existing] = await Promise.all([
+    db.select({ id: batches.id, name: batches.name, programmeId: batches.programmeId }).from(batches).where(and(eq(batches.centreId, ctx.centre.id), eq(batches.active, true))),
+    db.select({ id: programmes.id, name: programmes.name }).from(programmes),
+    db.select({ name: students.name, phone: students.guardianPhone }).from(students).where(and(eq(students.centreId, ctx.centre.id), isNull(students.deletedAt))),
+  ]);
+  const key = (text: string) => text.trim().toLowerCase().replace(/\s+/g, ' ');
+  const classByName = new Map(classList.map((row) => [key(row.name), row]));
+  const programmeByName = new Map(programmeList.map((row) => [key(row.name), row]));
+  const seen = new Set(existing.map((row) => `${key(row.name)}|${row.phone}`));
+
+  const result = await runImport(rows, importRow, async (row) => {
+    const placed = row.className ? classByName.get(key(row.className)) : undefined;
+    if (row.className && !placed) fail(`No class called "${row.className}" at this school`);
+    const programmeId = placed?.programmeId ?? (row.programme ? programmeByName.get(key(row.programme))?.id : undefined);
+    if (!programmeId) fail(row.programme ? `No programme called "${row.programme}"` : 'Write the class or the programme');
+    const dob = sheetDate(row.dob);
+    if (dob === null) fail('Write the date of birth as DD-MM-YYYY');
+    const admitted = sheetDate(row.admissionDate);
+    if (admitted === null) fail('Write the admission date as DD-MM-YYYY');
+    const fee = row.monthlyFee.replace(/[₹,\s]/g, '').replace(/^Rs\.?/i, '');
+    const input: StudentInput = {
+      name: row.name,
+      dob: dob || '',
+      gender: GENDERS[key(row.gender)] ?? '',
+      photo: '',
+      programmeId: programmeId as string,
+      batchId: placed?.id ?? '',
+      admissionDate: admitted || todayIST(),
+      // "₹1,500" → 1500; empty means the class fee. Anything else is refused by the form's own check.
+      monthlyFee: fee === '' ? '' : Number(fee),
+      fatherName: row.fatherName,
+      motherName: row.motherName,
+      guardianPhone: row.phone,
+      altPhone: row.altPhone,
+      email: row.email,
+      address: row.address,
+      bloodGroup: '',
+      medicalNotes: '',
+      pickupPerson: '',
+      tshirtSize: '',
+    };
+    const data = studentInput.parse(input);
+    const dedupe = `${key(data.name)}|${data.guardianPhone}`;
+    if (seen.has(dedupe)) fail('This child is already on the list');
+    await admitStudent(ctx, data);
+    seen.add(dedupe);
+  });
+  await audit(ctx.session, 'student.import', { entity: 'student', centreId: ctx.centre.id, summary: `Imported ${result.added} children from a spreadsheet` });
+  return result;
 }

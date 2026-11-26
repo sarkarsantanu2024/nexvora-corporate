@@ -111,12 +111,16 @@ describe('working an enquiry', () => {
     await expect(addEnquiryNote(admin, '00000000-0000-4000-8000-000000000000', 'x')).rejects.toMatchObject({ status: 404 });
   });
 
-  it('lets only an admin delete, and the notes go with the enquiry', async () => {
+  it('lets only an admin delete, which moves the enquiry to the Trash with its notes', async () => {
     const [target] = (await listEnquiries({ q: 'Bimal' })).rows;
     await expect(deleteEnquiry(staff, target.id)).rejects.toMatchObject({ status: 403 });
     await deleteEnquiry(admin, target.id);
     expect(await getEnquiry(target.id)).toBeNull();
-    expect(await db.select().from(s.enquiryNotes).where(eq(s.enquiryNotes.enquiryId, target.id))).toEqual([]);
     expect((await listEnquiries()).total).toBe(1);
+    expect((await getOverview()).tiles.enquiries).toBe(1);
+    // Still there, so it can be brought back from the Trash.
+    expect(await db.select().from(s.enquiryNotes).where(eq(s.enquiryNotes.enquiryId, target.id))).toHaveLength(1);
+    await expect(setEnquiryStatus(admin, target.id, 'closed')).rejects.toMatchObject({ status: 404 });
+    await expect(deleteEnquiry(admin, target.id)).rejects.toMatchObject({ status: 404 });
   });
 });

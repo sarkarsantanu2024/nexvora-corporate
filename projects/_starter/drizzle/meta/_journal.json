@@ -8,6 +8,13 @@
       "when": 1794882865034,
       "tag": "0000_blue_pretty_boy",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795674583768,
+      "tag": "0001_abnormal_wendigo",
+      "breakpoints": true
     }
   ]
 }

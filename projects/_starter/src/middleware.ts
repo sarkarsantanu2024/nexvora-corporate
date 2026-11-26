@@ -19,7 +19,7 @@ import { SESSION_COOKIE, homeFor, readSessionToken } from '@/lib/session-token';
 // A business module with its own area (say /shop) adds it to both lists.
 const PRIVATE = /^\/(admin|account)(\/|$)/;
 /** Never translated: dashboards, login, APIs and files. */
-const NO_LOCALE = /^\/(admin|account|login|api|media|brand|images)(\/|$)/;
+const NO_LOCALE = /^\/(admin|account|login|suspended|api|media|brand|images)(\/|$)/;
 
 export async function middleware(req: NextRequest) {
   const { lang, path } = splitLocale(req.nextUrl.pathname);
@@ -40,7 +40,9 @@ export async function middleware(req: NextRequest) {
 
   const pathname = path;
   const isLogin = pathname === '/login';
-  if (!isLogin && !PRIVATE.test(pathname)) {
+  // The "account paused" page speaks the dashboard language but needs no login.
+  const isPaused = pathname === '/suspended';
+  if (!isLogin && !isPaused && !PRIVATE.test(pathname)) {
     // A plain English site page. Drop any language header a client sent by hand.
     if (!req.headers.has(LANG_HEADER)) return NextResponse.next();
     const headers = new Headers(req.headers);
@@ -55,6 +57,7 @@ export async function middleware(req: NextRequest) {
   if (uiLang === 'en') headers.delete(LANG_HEADER);
   else headers.set(LANG_HEADER, uiLang);
   const pass = () => NextResponse.next({ request: { headers } });
+  if (isPaused) return pass();
 
   const session = await readSessionToken(req.cookies.get(SESSION_COOKIE)?.value);
 
