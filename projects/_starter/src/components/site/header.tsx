@@ -156,7 +156,7 @@ function LanguageMenu({ path }: { path: string }) {
 
 export function SiteHeader({ brand, nav, enquireLabel, loginLabel, phone, whatsapp, whatsappMessage }: Props) {
   const { lang, t } = useSite();
-  // The address bar shows /bn/about; the menu compares against /about.
+  // The address bar shows /en/about; the menu compares against /about.
   const path = splitLocale(usePathname()).path;
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();

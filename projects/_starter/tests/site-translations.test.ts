@@ -3,6 +3,7 @@
  * are easy to make and hard to see: a translation for a section or field
  * that does not exist, a list row missing a field, an underline phrase that
  * is no longer in its heading, a dictionary key left in English by accident.
+ * Only the languages in use (src/config/languages.ts) are checked.
  */
 import { describe, expect, it } from 'vitest';
 import { SECTIONS } from '@/cms/sections';
@@ -12,12 +13,17 @@ import type { ContentData, ListField } from '@/cms/types';
 import { bn } from '@/components/site/i18n/bn';
 import { en } from '@/components/site/i18n/en';
 import { hi } from '@/components/site/i18n/hi';
+import { LANGS } from '@/lib/i18n';
 import { buildSlides, isMp4, youtubeId } from '@/components/site/hero';
 
-const LAYERS: [string, Record<string, ContentData>][] = [
+const LAYERS = ([
   ['bn', BN],
   ['hi', HI],
-];
+] as const).filter(([code]) => LANGS.includes(code)) as [string, Record<string, ContentData>][];
+const SITE_DICTS = ([
+  ['bn', bn],
+  ['hi', hi],
+] as const).filter(([code]) => LANGS.includes(code));
 // Text that is rightly the same in every language (names, real quotes, the header button labels are not).
 const UNTRANSLATED_OK = new Set(['home.testimonials:items']);
 const TEXT_TYPES = new Set(['text', 'textarea']);
@@ -86,7 +92,7 @@ describe('section translations', () => {
   it('use Latin digits only', () => {
     const other = /[০-৯०-९]/;
     for (const [lang, layer] of LAYERS) expect(other.test(JSON.stringify(layer)), `${lang}: Bengali or Devanagari digits found`).toBe(false);
-    expect(other.test(JSON.stringify(bn) + JSON.stringify(hi))).toBe(false);
+    for (const [, dict] of SITE_DICTS) expect(other.test(JSON.stringify(dict))).toBe(false);
   });
 });
 
@@ -103,10 +109,7 @@ describe('site dictionaries', () => {
   };
   const english = flat(en);
 
-  it.each([
-    ['bn', bn],
-    ['hi', hi],
-  ])('%s has every key, keeps every {marker}, and is translated', (_lang, dict) => {
+  it.each(SITE_DICTS)('%s has every key, keeps every {marker}, and is translated', (_lang, dict) => {
     const words = flat(dict);
     expect(Object.keys(words).sort()).toEqual(Object.keys(english).sort());
     for (const [key, text] of Object.entries(english)) {

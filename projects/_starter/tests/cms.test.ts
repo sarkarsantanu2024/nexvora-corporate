@@ -22,6 +22,7 @@ import type { ContentData, ListField, ScalarField, SectionDef } from '@/cms/type
 import { getDb, type DB } from '@/db';
 import * as s from '@/db/schema';
 import { ApiError } from '@/lib/api';
+import { EXTRA_LANGS } from '@/lib/i18n';
 import * as gallery from '@/server/cms/gallery';
 import { deleteMedia, listMedia, storeImage, updateMediaAlt } from '@/server/cms/media';
 import * as cms from '@/server/cms/service';
@@ -237,7 +238,8 @@ describe('other languages', () => {
 
   it('resolves suffixed keys to the section, and nothing else', async () => {
     expect(cms.resolveKey(BN)).toMatchObject({ lang: 'bn', key: BN });
-    expect(cms.resolveKey(`${CONTACT}@hi`)?.def.key).toBe(CONTACT);
+    // Hindi rows exist only while Hindi is switched on in src/config/languages.ts.
+    expect(cms.resolveKey(`${CONTACT}@hi`)?.def.key).toBe(EXTRA_LANGS.includes('hi') ? CONTACT : undefined);
     expect(cms.resolveKey(CONTACT)?.lang).toBe('en');
     for (const bad of [`${CONTACT}@fr`, `${CONTACT}@`, `${CONTACT}@bn@hi`, '@bn', 'no.such@bn', `${CONTACT}@BN`, `${CONTACT} @bn`]) {
       expect(cms.resolveKey(bad), bad).toBeNull();
@@ -340,16 +342,19 @@ describe('other languages', () => {
   });
 
   it('publishes every language with "publish all"', async () => {
-    await cms.saveDraft(actor, BN, { hours: 'বাংলা সময়' });
-    await cms.saveDraft(actor, `${CONTACT}@hi`, { hours: 'हिंदी समय' });
-    await cms.saveDraft(actor, CONTACT, { hours: 'English hours' });
-    expect((await cms.getAllStates()).find((item) => item.key === CONTACT)?.draftLangs).toEqual(['en', 'bn', 'hi']);
+    // Every language in use (src/config/languages.ts); English is the base row.
+    const words = { en: 'English hours', bn: 'বাংলা সময়', hi: 'हिंदी समय' } as const;
+    const langs = ['en' as const, ...EXTRA_LANGS];
+    const keys = langs.map((code) => (code === 'en' ? CONTACT : `${CONTACT}@${code}`));
+    // The translations first, then English, as an editor would.
+    for (const i of [...langs.keys()].reverse()) await cms.saveDraft(actor, keys[i], { hours: words[langs[i]] });
+    expect((await cms.getAllStates()).find((item) => item.key === CONTACT)?.draftLangs).toEqual(langs);
     const published = await cms.publishAll(actor);
-    expect(published.map((item) => item.key).sort()).toEqual([CONTACT, BN, `${CONTACT}@hi`].sort());
+    expect(published.map((item) => item.key).sort()).toEqual([...keys].sort());
     const read = await live();
-    expect([read('en').hours, read('bn').hours, read('hi').hours]).toEqual(['English hours', 'বাংলা সময়', 'हिंदी समय']);
+    expect(langs.map((code) => read(code).hours)).toEqual(langs.map((code) => words[code]));
     // Leave the section as it started for the tests that follow.
-    for (const key of [BN, `${CONTACT}@hi`, CONTACT]) {
+    for (const key of [...keys.slice(1), CONTACT]) {
       await cms.resetToDefault(actor, key);
       await cms.publishSection(actor, key);
     }

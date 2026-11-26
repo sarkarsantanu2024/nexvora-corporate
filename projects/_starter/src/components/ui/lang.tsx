@@ -9,10 +9,10 @@ import { useRouter } from 'next/navigation';
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useTransition, type ReactNode } from 'react';
 import { makeT, type Translate, type UiDict } from '@/i18n/ui';
 import { cn } from '@/lib/cn';
-import { LANGS, LANG_NAMES, type Lang } from '@/lib/i18n';
+import { DEFAULT_LANG, LANGS, LANG_NAMES, type Lang } from '@/lib/i18n';
 import { setUiLang } from '@/server/session-actions';
 
-const UiLangContext = createContext<{ lang: Lang; t: Translate }>({ lang: 'en', t: makeT(null) });
+const UiLangContext = createContext<{ lang: Lang; t: Translate }>({ lang: DEFAULT_LANG, t: makeT(null) });
 
 /** The dashboard frame wraps every screen in this; `dict` is empty for English. */
 export function UiLangProvider({ lang, dict, children }: { lang: Lang; dict: UiDict | null; children: ReactNode }) {
@@ -25,7 +25,8 @@ export const useUiLang = (): Lang => useContext(UiLangContext).lang;
 
 /**
  * The language dropdown of the top bar. Each language is written in its own
- * script, so a person can find theirs whatever the screen is set to.
+ * script, so a person can find theirs whatever the screen is set to. Only the
+ * languages in src/config/languages.ts, in that order.
  */
 export function LangMenu() {
   const lang = useUiLang();
@@ -34,7 +35,6 @@ export function LangMenu() {
   const [open, setOpen] = useState(false);
   const [pending, start] = useTransition();
   const ref = useRef<HTMLDivElement>(null);
-  const order: Lang[] = (['en', 'hi', 'bn'] as const).filter((code) => LANGS.includes(code));
 
   useEffect(() => {
     if (!open) return;
@@ -74,7 +74,7 @@ export function LangMenu() {
       </button>
       {open ? (
         <ul role="listbox" aria-label={t('Language')} className="absolute right-0 top-full z-10 mt-2 w-44 origin-top-right animate-scale-in rounded-xl border border-ink-200 bg-white p-1 shadow-lift">
-          {order.map((code) => (
+          {LANGS.map((code) => (
             <li key={code} role="option" aria-selected={lang === code}>
               <button
                 type="button"

@@ -1,6 +1,9 @@
 /**
  * Guards the Hindi and Bengali wording of the dashboards (src/i18n).
  *
+ * Only the languages in use (src/config/languages.ts) must cover every screen.
+ * While both are in use the two files must also hold the same sentences.
+ *
  * The English sentence is the key, so the easy mistakes are: a sentence added
  * to one language and not the other, a value left empty, a {name} dropped from
  * a translation (the number or name would vanish from the screen), and a
@@ -11,14 +14,17 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { UI_BN } from '@/i18n/ui-bn';
 import { UI_HI } from '@/i18n/ui-hi';
+import { LANGS } from '@/lib/i18n';
 
 const SRC = path.resolve(__dirname, '../src');
 // A business module adds its own folders here (say 'app/shop'), so its screens are checked too.
 const SCANNED = ['app/admin', 'app/account', 'app/login', 'app/suspended', 'components/ui', 'components/cms', 'components/pwa', 'components/dash', 'server'];
-const DICTS: [string, Record<string, string>][] = [
-  ['Hindi', UI_HI],
-  ['Bengali', UI_BN],
-];
+const DICTS = ([
+  ['hi', 'Hindi', UI_HI],
+  ['bn', 'Bengali', UI_BN],
+] as const)
+  .filter(([code]) => LANGS.includes(code))
+  .map(([, name, dict]): [string, Record<string, string>] => [name, dict]);
 
 const placeholders = (text: string) => text.match(/\{\w+\}/g) ?? [];
 
@@ -45,7 +51,7 @@ function keysInCode(): { key: string; file: string }[] {
 }
 
 describe('dashboard wording in Hindi and Bengali', () => {
-  it('has the same sentences in both languages', () => {
+  it.skipIf(!LANGS.includes('hi') || !LANGS.includes('bn'))('has the same sentences in both languages', () => {
     const hi = Object.keys(UI_HI);
     const bn = new Set(Object.keys(UI_BN));
     const hiSet = new Set(hi);

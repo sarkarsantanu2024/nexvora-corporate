@@ -1,0 +1,14 @@
+node_modules
+.next
+.next-*
+.data
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+public/uploads/*
+!public/uploads/.gitkeep
+test-results
+
+# Neon connection string of this school, kept out of .env.local on purpose
+.env.neon

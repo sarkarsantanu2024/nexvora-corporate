@@ -9,3 +9,6 @@ next-env.d.ts
 public/uploads/*
 !public/uploads/.gitkeep
 test-results
+
+# A Neon connection string kept out of .env.local on purpose
+.env.neon

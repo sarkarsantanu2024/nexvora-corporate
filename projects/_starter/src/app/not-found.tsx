@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
 /**
  * Shown for any address that does not exist, in the dashboards as well as on
  * the website, so it stands on its own: no header, no database read. It
- * speaks the language of the address that was asked for (/bn/…, /hi/…).
+ * speaks the language of the address that was asked for (/en/…, /bn/…).
  */
 export default async function NotFound() {
   const { lang, t } = await getSite();

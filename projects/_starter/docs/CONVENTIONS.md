@@ -100,7 +100,9 @@ The dashboard must feel like an app on a phone, not a small web page. The shared
 
 ## Dashboard languages
 
-The dashboard, the login screen and the password screen can be read in English (the default), Hindi or Bengali. Each person picks from the dropdown in the top bar; the choice is kept in the `ui_lang` cookie for a year. The dropdown stays in the top bar, never inside the menu.
+Which languages a client uses, and which one is the default, is set in one file: `src/config/languages.ts`. The starter uses English (the default), Bengali and Hindi. A language left out of that file shows up nowhere; its word files stay in the code so it can be switched back on.
+
+The dashboard, the login screen and the password screen can be read in each of those languages, and open in the default one until a person picks another. Each person picks from the dropdown in the top bar; the choice is kept in the `ui_lang` cookie for a year. The dropdown stays in the top bar, never inside the menu.
 
 - The English sentence is the key. Write `t('Add login')`; the Hindi and Bengali files say what that is. Nothing to register.
 - Server component: `const t = await getT();` Client component: `const t = useT();`
@@ -143,7 +145,7 @@ To add an editable block: declare it with `defineSection`, add it to `SECTIONS` 
 
 Fixed words of the website (menu labels, form labels, error messages) live in `src/components/site/i18n/en.ts`, `bn.ts` and `hi.ts`. All three must have the same keys.
 
-Bengali and Hindi pages are the same pages under `/bn` and `/hi`. The middleware strips the prefix and passes the language on. The dashboard does not use the address for its language; see "Dashboard languages" above.
+The default language is at the plain address (`/about`); every other language is the same page under its prefix (`/bn/about`, `/hi/about`, or `/en/about` when English is not the default). The middleware strips the prefix and passes the language on; a prefix of the default language is sent to the plain address. The languages come from `src/config/languages.ts`. The stored wording does not change with the default: English is always the base, the other languages a layer over it. The dashboard does not use the address for its language; see "Dashboard languages" above.
 
 ## Look and feel
 

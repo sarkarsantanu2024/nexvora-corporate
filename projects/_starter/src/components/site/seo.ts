@@ -1,7 +1,7 @@
-/** Page titles, descriptions and structured data for search engines, in all three languages. */
+/** Page titles, descriptions and structured data for search engines, in each language in use. */
 import type { Metadata } from 'next';
 import { BRAND } from '@/config/brand';
-import { LANG_NAMES, LANGS, localePath, type Lang } from '@/lib/i18n';
+import { DEFAULT_LANG, LANG_NAMES, LANGS, localePath, type Lang } from '@/lib/i18n';
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3400').replace(/\/$/, '');
 
@@ -11,11 +11,11 @@ export const abs = (path: string) => (/^https?:\/\//.test(path) ? path : `${SITE
 /** The full address of a site page in one language. */
 export const absLocale = (lang: Lang, path: string) => abs(localePath(lang, path));
 
-/** hreflang → address, for <link rel="alternate"> and the sitemap. English is also the x-default. */
+/** hreflang → address, for <link rel="alternate"> and the sitemap. The default language is also the x-default. */
 export function languageAlternates(path: string): Record<string, string> {
   const out: Record<string, string> = {};
   for (const lang of LANGS) out[LANG_NAMES[lang].htmlLang] = absLocale(lang, path);
-  out['x-default'] = absLocale('en', path);
+  out['x-default'] = absLocale(DEFAULT_LANG, path);
   return out;
 }
 

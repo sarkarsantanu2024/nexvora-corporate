@@ -1,5 +1,6 @@
 /**
- * The language of the dashboard: English (the default), Hindi and Bengali.
+ * The language of the dashboard: the languages set in src/config/languages.ts
+ * (English, Bengali, Hindi). With no cookie it opens in the default language.
  *
  * The English sentence itself is the key. A screen writes t('Add login') and
  * the Hindi and Bengali files say what that is in their language. A sentence
@@ -25,7 +26,7 @@ export const UI_LANG_COOKIE = 'ui_lang';
 export type UiDict = Record<string, string>;
 const DICTS: Record<ExtraLang, UiDict> = { bn: UI_BN, hi: UI_HI };
 
-/** The translations for a language; nothing for English. */
+/** The translations for a language; nothing for English (the sentences are English already). */
 export const uiDict = (lang: Lang): UiDict | null => (lang === 'en' ? null : DICTS[lang]);
 
 export const readUiLang = (value: string | null | undefined): Lang => (isLang(value) ? value : DEFAULT_LANG);

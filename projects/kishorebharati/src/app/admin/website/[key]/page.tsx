@@ -1,0 +1,41 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { sectionByKey } from '@/cms/content';
+import type { Field, SectionDef } from '@/cms/types';
+import { SectionForm } from '@/components/cms/section-form';
+import { PageHeader } from '@/components/ui/core';
+import { TEAM_ROLES, requireSession } from '@/lib/auth';
+import { contentKey, isLang } from '@/lib/i18n';
+import { getT } from '@/lib/t';
+import { getSectionState, listRevisions } from '@/server/cms/service';
+
+type Props = { params: Promise<{ key: string }>; searchParams: Promise<{ lang?: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const t = await getT();
+  const def = sectionByKey(decodeURIComponent((await params).key));
+  return { title: def ? `${def.label} | Edit website` : t('Edit website') };
+}
+
+export default async function SectionPage({ params, searchParams }: Props) {
+  const t = await getT();
+  await requireSession(TEAM_ROLES);
+  const key = decodeURIComponent((await params).key);
+  const def = sectionByKey(key) as SectionDef | null;
+  if (!def) notFound();
+  // English is the row named after the section; Bengali and Hindi each have their own row, draft and history.
+  const asked = (await searchParams).lang;
+  const rowKey = contentKey(def.key, isLang(asked) ? asked : 'en');
+  const [state, revisions] = await Promise.all([getSectionState(rowKey), listRevisions({ key: rowKey, limit: 5 })]);
+  return (
+    <>
+      <PageHeader title={t(def.label)} description={def.description ? t(def.description) : undefined} back={{ href: '/admin/website', label: t('Edit website › {page}', { page: t(def.page) }) }} />
+      <SectionForm
+        key={rowKey}
+        section={{ key: def.key, page: def.page, label: def.label, description: def.description, path: def.path, fields: def.fields as Field[] }}
+        state={state}
+        revisions={revisions}
+      />
+    </>
+  );
+}

@@ -195,7 +195,8 @@ function TabBar({ area, role, plan, onMore, moreOpen }: { area: Area; role: Role
   const pathname = usePathname();
   const t = useT();
   const all = itemsFor(area, role, plan);
-  const tabs = TABS[area].map((href) => all.find((item) => item.href === href)).filter((item): item is NavItem => Boolean(item));
+  // TABS may list screens for several roles: each person gets the first four they may open.
+  const tabs = TABS[area].map((href) => all.find((item) => item.href === href)).filter((item): item is NavItem => Boolean(item)).slice(0, 4);
   const hasMore = all.length > tabs.length;
   const activeHref = tabs.find((item) => isActive(pathname, item))?.href;
   const moreActive = moreOpen || (hasMore && !activeHref);

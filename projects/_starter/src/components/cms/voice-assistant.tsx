@@ -40,7 +40,7 @@ import { findField, findSection, targetLabel, type Catalogue } from '@/voice/cat
 import { cueDone } from '@/voice/cue';
 import { UNSUPPORTED, VOICE_ERRORS } from '@/voice/errors';
 import { parseCommand } from '@/voice/grammar';
-import { intentSchema, VOICE_LANGS, type Intent, type IntentOf, type Target, type VoiceLang } from '@/voice/intent';
+import { DEFAULT_VOICE_LANG, intentSchema, VOICE_LANGS, type Intent, type IntentOf, type Target, type VoiceLang } from '@/voice/intent';
 import { EXAMPLES, REPLIES } from '@/voice/phrases';
 import { speak, useVoice } from '@/voice/useVoice';
 import { MediaPicker } from './media-library';
@@ -98,7 +98,7 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
   const bridge = useVoiceBridge();
 
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState<VoiceLang>('en-IN');
+  const [lang, setLang] = useState<VoiceLang>(DEFAULT_VOICE_LANG);
   /** Which language's wording spoken changes go to. Not the language spoken in. */
   const [editLang, setEditLang] = useState<Lang>('en');
   const [sound, setSound] = useState(true);
@@ -643,6 +643,8 @@ export function VoiceAssistant({ catalogue, freeForm }: { catalogue: Catalogue; 
           return say(`Opening ${intent.label}.`, replies.opening(intent.label));
         }
         case 'editLanguage': {
+          // A language this website does not use (src/config/languages.ts).
+          if (!LANGS.includes(intent.lang)) return note(`This website is not in ${LANG_NAMES[intent.lang].english}.`, { tone: 'warn' });
           clearCards();
           setEditLang(intent.lang);
           if (currentRef.current) router.push(sectionHref(currentRef.current, intent.lang));

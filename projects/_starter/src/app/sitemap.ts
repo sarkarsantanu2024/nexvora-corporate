@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { absLocale, languageAlternates } from '@/components/site/seo';
-import { LANGS } from '@/lib/i18n';
+import { DEFAULT_LANG, LANGS } from '@/lib/i18n';
 import { getNotices } from '@/server/site/queries';
 
 /**
- * Every public page in all three languages. Each entry lists its
+ * Every public page in each language in use (src/config/languages.ts). Each entry lists its
  * other-language versions, so a search engine can offer the right one.
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -25,8 +25,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: absLocale(lang, page.path),
       lastModified: now,
       changeFrequency: page.changeFrequency,
-      // English is the main version; the translations rank a little below it.
-      priority: lang === 'en' ? page.priority : Math.round(page.priority * 90) / 100,
+      // The default language is the main version; the others rank a little below it.
+      priority: lang === DEFAULT_LANG ? page.priority : Math.round(page.priority * 90) / 100,
       alternates: { languages: languageAlternates(page.path) },
     })),
   );

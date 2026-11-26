@@ -6,6 +6,7 @@
  * identically: nothing is changed until the person confirms.
  */
 import { z } from 'zod';
+import { DEFAULT_LANG, LANGS } from '@/lib/i18n';
 
 const target = z.object({ section: z.string(), field: z.string() });
 export type Target = z.infer<typeof target>;
@@ -63,9 +64,14 @@ export type Intent = z.infer<typeof intentSchema>;
 export type IntentKind = Intent['kind'];
 export type IntentOf<K extends IntentKind> = Extract<Intent, { kind: K }>;
 
-export const VOICE_LANGS = [
-  { value: 'en-IN', label: 'English', short: 'EN' },
-  { value: 'hi-IN', label: 'हिन्दी', short: 'हि' },
-  { value: 'bn-IN', label: 'বাংলা', short: 'বা' },
+/** Every language the assistant can listen in. */
+const ALL_VOICE_LANGS = [
+  { value: 'en-IN', lang: 'en', label: 'English', short: 'EN' },
+  { value: 'hi-IN', lang: 'hi', label: 'हिन्दी', short: 'हि' },
+  { value: 'bn-IN', lang: 'bn', label: 'বাংলা', short: 'বা' },
 ] as const;
-export type VoiceLang = (typeof VOICE_LANGS)[number]['value'];
+export type VoiceLang = (typeof ALL_VOICE_LANGS)[number]['value'];
+/** The ones this client uses (src/config/languages.ts), in its menu order. */
+export const VOICE_LANGS = LANGS.flatMap((code) => ALL_VOICE_LANGS.filter((item) => item.lang === code));
+/** What the assistant listens in until the person picks: the default language. */
+export const DEFAULT_VOICE_LANG: VoiceLang = (VOICE_LANGS.find((item) => item.lang === DEFAULT_LANG) ?? ALL_VOICE_LANGS[0]).value;
